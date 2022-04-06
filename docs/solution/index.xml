@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Solutions on 罗潇阳的博客</title>
+    <link>http://ccviolett.github.io/solution/</link>
+    <description>Recent content in Solutions on 罗潇阳的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 04 Apr 2022 15:35:31 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/solution/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>洛谷 P1312 [NOIP2011 提高组] Mayan 游戏</title>
+      <link>http://ccviolett.github.io/solution/luogup1312/</link>
+      <pubDate>Mon, 04 Apr 2022 15:35:31 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup1312/</guid>
+      <description>一、题意    题目链接：Problem
+二、题解    大模拟，记忆化搜索。
+坑点：局面相同时，可能因为层数不同而导致结果不同，记忆化搜索时，不要剪掉了答案的枝。
+三、代码    通过链接：Submission
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; // 对于代码量偏大的程序，尽可能将功能拆分  // 整体思路： // 拖动 // 掉落 // while(检查) //	消除 //	掉落  struct State { // 在不同层的状态，即使局面相同，也可能有不同的结果 	// 因为有时候需要浪费步数 	int level; int color[10][10]; bool mark[10][10]; // 说明：输入数据 	void read() { for (int i = 0; i &amp;lt; 5; ++i) { for (int j = 0; true; ++j) { scanf(&amp;#34;%d&amp;#34;, &amp;amp;color[i][j]); if (color[i][j] == 0) break; } } } // 说明：输出数据 	void print() { for (int j = 6; j &amp;gt;= 0; --j) { for (int i = 0; i &amp;lt; 5; ++i) { printf(&amp;#34;%d &amp;#34;, color[i][j]); } puts(&amp;#34;&amp;#34;); } puts(&amp;#34;&amp;#34;); } // 说明：将 (x, y) 往方向 d 拖动 	// 问题：我们需要知道，某一次拖动是否可行，以此来判断是否能够做这一步 	// 方法：给这个函数一个返回值，表示是否能拖动 	bool drag(int x, int y, int d) { if (d == 1) { if (x == 4) return false; swap(color[x][y], color[x + 1][y]); } if (d == -1) { if (x == 0) return false; swap(color[x][y], color[x - 1][y]); } all_fall(); while (check()) { clean(); all_fall(); // print(); 	} return true; } // 说明：位置 (x, y) 向下掉落 	void single_fall(int x, int y) { while (y &amp;gt; 0 &amp;amp;&amp;amp; color[x][y - 1] == 0) { swap(color[x][y], color[x][y - 1]); // 这种写法也行 	// color[x][y - 1] = color[x][y]; 	// color[x][y] = 0;  y--; } } // 说明：检查当前状态中，是否有能够消除的 	// 问题：我们需要知道还有没有能够消除的，以便进入下一次拖动 	// 方法：函数返回一个值，表示是否存在 	bool check() { // 清空标记 	for (int i = 0; i &amp;lt; 5; ++i) { for (int j = 0; j &amp;lt; 7; ++j) mark[i][j] = false; } // 记录有没有能够消除的 	bool have = false; // 枚举每个格子 	for (int i = 0; i &amp;lt; 5; ++i) { for (int j = 0; j &amp;lt; 7; ++j) { if (color[i][j] == 0) continue; // printf(&amp;#34;(%d, %d)%d &amp;#34;, i, j, color[i][j]);  // 计算向右有 t 个相连的 	int t = 1; while (i + t &amp;lt; 5 &amp;amp;&amp;amp; color[i][j] == color[i + t][j]) t++; t--; // printf(&amp;#34;t_right: %d &amp;#34;, t);  // 如果大于 3 个相连即可标记为消除 	if (t &amp;gt;= 2) { for (int k = 0; k &amp;lt;= t; ++k) { mark[i + k][j] = true; } have = true; } // =============================  // 计算向上有 t 个相连的 	t = 1; while (j + t &amp;lt; 5 &amp;amp;&amp;amp; color[i][j] == color[i][j + t]) t++; t--; // printf(&amp;#34;t_up: %d\n&amp;#34;, t);  // 如果大于 3 个相连即可标记为消除 	if (t &amp;gt;= 2) { for (int k = 0; k &amp;lt;= t; ++k) { mark[i][j + k] = true; } have = true; } } } return have; } // 说明：清除被标记的连续的块 	void clean() { // for (int j = 6; j &amp;gt;= 0; --j) { 	// for (int i = 0; i &amp;lt; 5; ++i) { 	// printf(&amp;#34;%d &amp;#34;, mark[i][j]); 	// } 	// puts(&amp;#34;&amp;#34;); 	// } 	// puts(&amp;#34;&amp;#34;);  for (int i = 0; i &amp;lt; 5; ++i) { for (int j = 0; j &amp;lt; 7; ++j) { if (mark[i][j]) { color[i][j] = 0; } } } } // 说明：让整个图下落到不需要下落为止 	void all_fall() { for (int i = 0; i &amp;lt; 5; ++i) { for (int j = 0; j &amp;lt; 7; ++j) { // 如果是空格子就不用下落 	if (color[i][j] == 0) continue; single_fall(i, j); } } } // 说明：查询图的结果 	bool result() { for (int i = 0; i &amp;lt; 5; ++i) { for (int j = 0; j &amp;lt; 7; ++j) { if (color[i][j] !</description>
+    </item>
+    
+    <item>
+      <title>洛谷 P1315 [NOIP2011 提高组] 观光公交</title>
+      <link>http://ccviolett.github.io/solution/luogup1315/</link>
+      <pubDate>Fri, 01 Apr 2022 17:37:13 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup1315/</guid>
+      <description>一、题意    题目链接：Problem
+一条路上从左往右有 n 个车站，一辆车从 1 号车站往 n 号车站开，从 $i$ 号车站到 $i + 1$ 号车站需要 $D_i$ 分钟。
+给开 m 个人，在 $T_i$ 时刻从 $A_i$ 上车，希望在 $B_i$ 下车，保证 $A_i &amp;lt; B_i$。
+车到了某个车站必须等所有人上车了才能发车。
+现在有 k 次机会选定 $D_i$ 将其减小 1，问如何分配 k 此机会，使得所有人在车上呆的总时间最少。
+二、题解    考虑拆分贡献，要求所有人在车上呆的总时间最少，设下车时间为 $T&#39;$，则总时间为 $\sum_{i = 1}^{m} (T&#39;_i - T_i)$，拆分为 $\sum T&#39;_i - \sum T_i$，其中 $\sum T_i$ 为定值，故我们只需最小化 $\sum T&#39;_i$。
+我们设在第 i 站下车的人数为 $cntto_i$，到达第 i 站的时间为 $arrive_i$，则 $\sum\limits_{i = 1}^m T&#39;_i = \sum\limits_{i = 1}^n (cntto_i * arrive_i)$，其中 $cntto_i$ 是固定的，所以我们只需要最小化到达每个点的时间。</description>
+    </item>
+    
+    <item>
+      <title>CF380C. Sereja and Brackets</title>
+      <link>http://ccviolett.github.io/solution/cf380c/</link>
+      <pubDate>Sun, 06 Mar 2022 13:28:04 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/cf380c/</guid>
+      <description>一、题意    题目链接：Problem
+给定一个括号序列，每次询问一个区间内合法的括号序列长度。
+二、题解    考虑线段树，每个节点维护区间内向左未匹配的括号数量、向右未匹配的括号数量和合法括号序列的数量，每次合并的时候，将左右区间未匹配的括号匹配即可。
+三、代码    通过链接：Submission
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int N = 1e6 + 10; int n; struct Node { int lhave, rhave, val; friend Node operator + (Node a, Node b) { if (a.rhave &amp;gt;= b.lhave) { return (Node) { a.lhave, b.rhave + (a.rhave - b.lhave), a.val + b.val + b.lhave }; } return (Node) { a.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>solution on 罗潇阳的博客</title>
+    <link>http://ccviolett.github.io/tags/solution/</link>
+    <description>Recent content in solution on 罗潇阳的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 26 Feb 2022 20:05:05 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/tags/solution/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何解决 Github Page 仓库更新后页面无变化的问题？</title>
+      <link>http://ccviolett.github.io/posts/3-nojekyll/</link>
+      <pubDate>Sat, 26 Feb 2022 20:05:05 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/3-nojekyll/</guid>
+      <description>我们可以在仓库页面上看见最近一次地 push 左边有个红叉，右侧边栏 Environments 中显示 github-pages (Failure)。
+这是因为 Github Page 不会直接展示上传的裸的静态文件，而会默认使用 Jekyll 渲染一次，这样在 Build 环节就会出现问题，后续的 Deploy 环节也就会出问题，于是无论怎么往仓库 Push 都不能改变页面。
+需要在仓库中新建一个 .nojekyll 的空文件来指明不需要 Github 自作主张地用 Jekyll 渲染。
+相关链接：Static site generators</description>
+    </item>
+    
+  </channel>
+</rss>

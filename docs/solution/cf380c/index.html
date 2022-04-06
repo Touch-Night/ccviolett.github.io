@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="zh-cn" http-equiv="Content-Language"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="罗潇阳" name="author"/>
+<meta content="一、题意    题目链接：Problem
+给定一个括号序列，每次询问一个区间内合法的括号序列长度。
+二、题解    考虑线段树，每个节点维护区间内向左未匹配的括号数量、向右未匹配的括号数量和合法括号序列的数量，每次合并的时候，将左右区间未匹配的括号匹配即可。
+三、代码    通过链接：Submission
+#include &lt;bits/stdc++.h&gt; using namespace std; const int N = 1e6 + 10; int n; struct Node { int lhave, rhave, val; friend Node operator + (Node a, Node b) { if (a.rhave &gt;= b.lhave) { return (Node) { a.lhave, b.rhave + (a.rhave - b.lhave), a.val + b.val + b.lhave }; } return (Node) { a." name="description"/>
+<meta content="博客,开发者,个人" name="keywords"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="CF380C. Sereja and Brackets" name="twitter:title"/>
+<meta content="一、题意    题目链接：Problem
+给定一个括号序列，每次询问一个区间内合法的括号序列长度。
+二、题解    考虑线段树，每个节点维护区间内向左未匹配的括号数量、向右未匹配的括号数量和合法括号序列的数量，每次合并的时候，将左右区间未匹配的括号匹配即可。
+三、代码    通过链接：Submission
+#include &lt;bits/stdc++.h&gt; using namespace std; const int N = 1e6 + 10; int n; struct Node { int lhave, rhave, val; friend Node operator + (Node a, Node b) { if (a.rhave &gt;= b.lhave) { return (Node) { a.lhave, b.rhave + (a.rhave - b.lhave), a.val + b.val + b.lhave }; } return (Node) { a." name="twitter:description"/>
+<meta content="CF380C. Sereja and Brackets" property="og:title"/>
+<meta content="一、题意    题目链接：Problem
+给定一个括号序列，每次询问一个区间内合法的括号序列长度。
+二、题解    考虑线段树，每个节点维护区间内向左未匹配的括号数量、向右未匹配的括号数量和合法括号序列的数量，每次合并的时候，将左右区间未匹配的括号匹配即可。
+三、代码    通过链接：Submission
+#include &lt;bits/stdc++.h&gt; using namespace std; const int N = 1e6 + 10; int n; struct Node { int lhave, rhave, val; friend Node operator + (Node a, Node b) { if (a.rhave &gt;= b.lhave) { return (Node) { a.lhave, b.rhave + (a.rhave - b.lhave), a.val + b.val + b.lhave }; } return (Node) { a." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="http://ccviolett.github.io/solution/cf380c/" property="og:url"/><meta content="solution" property="article:section"/>
+<meta content="2022-03-06T13:28:04+08:00" property="article:published_time"/>
+<meta content="2022-03-06T13:28:04+08:00" property="article:modified_time"/>
+<title>
+  CF380C. Sereja and Brackets · 罗潇阳的博客
+</title>
+<link href="http://ccviolett.github.io/solution/cf380c/" rel="canonical"/>
+<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
+<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="Hugo 0.92.0" name="generator"/>
+</head>
+<body class="preload-transitions colorscheme-auto">
+<div class="float-container">
+<a class="colorscheme-toggle" id="dark-mode-toggle">
+<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
+</a>
+</div>
+<main class="wrapper">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?90bcdb8127c31d4d27ebb95576bc8474";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<nav class="navigation">
+<section class="container">
+<a class="navigation-title" href="/">
+      罗潇阳的博客
+    </a>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button float-right" for="menu-toggle">
+<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
+</label>
+<ul class="navigation-list">
+<li class="navigation-item">
+<a class="navigation-link" href="/">首页</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/posts/">文章</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/solution/">题解</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/contact/">联系</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/about/">关于</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class="navigation-item">
+<a href="http://ccviolett.github.io/en/">🇬🇧</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class="content">
+<section class="container page">
+<article>
+<header>
+<h1 class="title">
+<a class="title-link" href="http://ccviolett.github.io/solution/cf380c/">
+          CF380C. Sereja and Brackets
+        </a>
+</h1>
+</header>
+<h3 id="一题意">
+  一、题意
+  <a class="heading-link" href="#%e4%b8%80%e9%a2%98%e6%84%8f">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>题目链接：<a href="https://codeforces.com/problemset/problem/380/C">Problem</a></p>
+<p>给定一个括号序列，每次询问一个区间内合法的括号序列长度。</p>
+<h3 id="二题解">
+  二、题解
+  <a class="heading-link" href="#%e4%ba%8c%e9%a2%98%e8%a7%a3">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>考虑线段树，每个节点维护区间内向左未匹配的括号数量、向右未匹配的括号数量和合法括号序列的数量，每次合并的时候，将左右区间未匹配的括号匹配即可。</p>
+<h3 id="三代码">
+  三、代码
+  <a class="heading-link" href="#%e4%b8%89%e4%bb%a3%e7%a0%81">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>通过链接：<a href="https://codeforces.com/contest/380/submission/148518351">Submission</a></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-cpp" data-lang="cpp"><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;bits/stdc++.h&gt;</span><span style="color:#888;font-weight:bold">
+</span><span style="color:#888;font-weight:bold"></span>
+<span style="font-weight:bold;text-decoration:underline">using</span> <span style="font-weight:bold;text-decoration:underline">namespace</span> std;
+
+<span style="font-weight:bold;text-decoration:underline">const</span> <span style="font-weight:bold;text-decoration:underline">int</span> N = 1e6 + 10;
+
+<span style="font-weight:bold;text-decoration:underline">int</span> n;
+
+<span style="font-weight:bold;text-decoration:underline">struct</span> <span style="color:#666;font-weight:bold;font-style:italic">Node</span> {
+	<span style="font-weight:bold;text-decoration:underline">int</span> lhave, rhave, val;
+	<span style="font-weight:bold;text-decoration:underline">friend</span> Node <span style="font-weight:bold;text-decoration:underline">operator</span> + (Node a, Node b) {
+		<span style="font-weight:bold;text-decoration:underline">if</span> (a.rhave &gt;= b.lhave) {
+			<span style="font-weight:bold;text-decoration:underline">return</span> (Node) {
+				a.lhave, b.rhave + (a.rhave - b.lhave), a.val + b.val + b.lhave
+			};
+		}
+		<span style="font-weight:bold;text-decoration:underline">return</span> (Node) {
+			a.lhave + (b.lhave - a.rhave), b.rhave, a.val + b.val + a.rhave
+		};
+	}
+};
+
+<span style="font-weight:bold;text-decoration:underline">struct</span> <span style="color:#666;font-weight:bold;font-style:italic">SegTree</span> {
+<span style="color:#888;font-weight:bold">#define init int t = 1, int l = 1, int r = n
+</span><span style="color:#888;font-weight:bold">#define mid ((l + r) &gt;&gt; 1)
+</span><span style="color:#888;font-weight:bold">#define lson t &lt;&lt; 1, l, mid
+</span><span style="color:#888;font-weight:bold">#define rson t &lt;&lt; 1 | 1, mid + 1, r
+</span><span style="color:#888;font-weight:bold"></span>	Node node[N &lt;&lt; 4];
+
+	<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">Build</span>(<span style="font-weight:bold;text-decoration:underline">int</span> *v, init) {
+		<span style="font-weight:bold;text-decoration:underline">if</span> (l == r) {
+			<span style="font-weight:bold;text-decoration:underline">if</span> (v[mid]) node[t].lhave = 1;
+			<span style="font-weight:bold;text-decoration:underline">else</span> node[t].rhave = 1;
+			<span style="font-weight:bold;text-decoration:underline">return</span> ;
+		}
+		Build(v, lson), Build(v, rson);
+		node[t] = node[t &lt;&lt; 1] + node[t &lt;&lt; 1 | 1];
+	}
+
+	Node <span style="color:#666;font-weight:bold;font-style:italic">Query</span>(<span style="font-weight:bold;text-decoration:underline">int</span> x, <span style="font-weight:bold;text-decoration:underline">int</span> y, init) {
+		<span style="font-weight:bold;text-decoration:underline">if</span> (x &gt; r || y &lt; l) <span style="font-weight:bold;text-decoration:underline">return</span> (Node) {0, 0, 0};
+		<span style="font-weight:bold;text-decoration:underline">if</span> (x &lt;= l &amp;&amp; r &lt;= y) <span style="font-weight:bold;text-decoration:underline">return</span> node[t];
+		<span style="font-weight:bold;text-decoration:underline">return</span> Query(x, y, lson) + Query(x, y, rson);
+	}
+} tree;
+
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">read</span>() {
+	<span style="font-weight:bold;text-decoration:underline">int</span> t;
+	scanf(<span style="color:#666;font-style:italic">"%d"</span>, &amp;t);
+	<span style="font-weight:bold;text-decoration:underline">return</span> t;
+}
+
+<span style="font-weight:bold;text-decoration:underline">char</span> s[N];
+<span style="font-weight:bold;text-decoration:underline">int</span> v[N];
+
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">main</span>() {
+	scanf(<span style="color:#666;font-style:italic">"%s"</span>, s + 1);
+	n = strlen(s + 1);
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i) v[i] = s[i] == <span style="color:#666;font-style:italic">')'</span>;
+	tree.Build(v);
+	<span style="font-weight:bold;text-decoration:underline">int</span> T = read();
+
+	<span style="font-weight:bold;text-decoration:underline">while</span> (T--) {
+		<span style="font-weight:bold;text-decoration:underline">int</span> l = read(), r = read();
+		printf(<span style="color:#666;font-style:italic">"%d</span><span style="color:#666;font-style:italic">\n</span><span style="color:#666;font-style:italic">"</span>, tree.Query(l, r).val * 2);
+	}
+	<span style="font-weight:bold;text-decoration:underline">return</span> 0;
+}
+</code></pre></div>
+</article>
+</section>
+</div>
+<footer class="footer">
+<section class="container">
+<p>愿你成为自己的太阳，无需借助别人的光。</p>
+      
+      
+        ©
+        
+        2022
+         罗潇阳 
+      
+      
+         · 
+        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+        
+      
+    </section>
+</footer>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
+<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+</main>
+<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
+</body>
+</html>

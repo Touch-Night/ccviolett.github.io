@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on 罗潇阳的博客</title>
+    <link>http://ccviolett.github.io/tags/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on 罗潇阳的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 01 Mar 2022 10:22:18 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何运用群论计算本质不同的方案数？</title>
+      <link>http://ccviolett.github.io/posts/6-grouptheoryinoi/</link>
+      <pubDate>Tue, 01 Mar 2022 10:22:18 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/6-grouptheoryinoi/</guid>
+      <description>零、群    定义：$(S, .)$ 由集合 S 和操作 . 构成群。
+一个群需要满足以下的四个性质：
+  封闭性
+群中的任意两个元素进行运算之后得到的结果，还是群中的元素。
+  结合律
+任意两个元素先运算或后运算不影响最终结果。
+  单位元
+群中存在元素，其他元素与其进行运算后不变。
+  逆元
+对于群中的任意一个元素，都存在一个元素与其运算后得到单位元。
+  构造的置换满足群的性质才能使用 Burnside 引理和 Polya 定理。
+一、Burnside 引理    $$ 本质不同的方案数 = \frac{1}{置换数} \sum_{每一种置换} 在当前置换下等价的方案数 $$
+难点在于求每种置换下等价的方案数，以及化简式子。
+二、Polya 定理    $$ 本质不同的方案数 = \frac{1}{置换数} \sum_{每一种置换} 颜色数量^{该置换中环的数量} $$
+难点在于求每种置换中环的数量，以及化简式子。
+ Tips: 环
+ 一个置换中环的数量，就是将置换进行无数次也不会互相影响的部分数量。 如 (1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 1) 是一个环，(1 -&amp;gt; 3 -&amp;gt; 1)(2 -&amp;gt; 4 -&amp;gt; 2) 是两个环，(1 -&amp;gt; 1)(2 -&amp;gt; 3 -&amp;gt; 2)(4 -&amp;gt; 4) 是三个环。   三、例题      给一个 n 个点的环染 m 种颜色，问有多少种本质不同的染色方案。定义本质相同的方案可以通过旋转得到。</description>
+    </item>
+    
+  </channel>
+</rss>

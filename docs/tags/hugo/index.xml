@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on 罗潇阳的博客</title>
+    <link>http://ccviolett.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on 罗潇阳的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 17 Jan 2022 11:24:56 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 的使用&amp;配置中有那些技巧与坑？</title>
+      <link>http://ccviolett.github.io/posts/1-hugousage/</link>
+      <pubDate>Mon, 17 Jan 2022 11:24:56 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/1-hugousage/</guid>
+      <description>零、安装 一、使用 二、配置 三、踩坑 四、技巧     零、安装    这里以 Windows 下安装为例。
+直接在 Release 页面 下载对应平台压缩包，解压后将路径添加到系统 PATH 中，或者直接将 hugo.exe 扔进 C:\Windows\System 中。
+一、使用    新建网站：hugo new site myblog
+新建文章：hugo new posts/xxxx.md
+本地服务器预览：hugo server，随后可以通过访问本地端口预览。
+生成静态文件：hugo，随后可在 public 文件夹中得到渲染好的静态文件。
+二、配置    下载主题 Coder，将其以文件夹形式解压至 themes 文件夹下，并复命名为 hugo-coder，随后将其中 exampleSite 文件夹下的文件复制到博客文件夹下。
+代码高亮配置    官方文档：Syntax Highlighting
+Hugo 中集成了 Chroma 来进行代码高亮。
+TLDR：将下列设置复制到配置文件中（以 TOML 为例）
+[markup] [markup.</description>
+    </item>
+    
+  </channel>
+</rss>

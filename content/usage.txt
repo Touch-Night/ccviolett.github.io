@@ -1,0 +1,72 @@
+### Shortcode
+
+#### fdlink
+
+``` html
+{{< fdlink "张紫琪" "我的好女友！" "/images/gf_avatar.jpg" "/her">}}
+```
+
+#### codecaption
+
+![Captioned codeblock](/images/codecaption1.png)
+
+``` html
+{{< codecaption lang="html" title="Code caption shortcode" >}}
+<figure class="code">
+  <figcaption>
+    <span>{{ .Get "title" }}</span>
+  </figcaption>
+  <div class="codewrapper">
+    {{ highlight .Inner (.Get "lang") "linenos=true" }}
+  </div>
+</figure>
+{{< /codecaption >}}
+```
+
+#### gallery-slider
+
+[Demo](https://tbiering.github.io/hugo-slider-shortcode/demo/)
+
+| Variable | Default | Description |
+| -------------- | ------- | ----------- |
+| `dir` | *`none`* | Path to image-folder *(mandatory)* |
+| `width` | `500px` | Width of the slider area |
+| `height` | `300px` | Height of the slider area |
+| `arrow-left` | `fa-chevron-left` | Defines the left icon (See info below) |
+| `arrow-right` | `fa-chevron-right` | Defines the right icon |
+| `no-fa` | `false` | Toggles dependency inclusion for FontAwesome |
+| `no-jquery` | `false` | Toggles dependency inclusion for JQuery |
+| `auto-slide` | `0` | Set automatic sliding duration in ms |
+
+Example:
+
+```html
+<!-- Default use-case -->
+{{< gallery-slider dir="/img/portfolio/">}}
+
+<!-- Set width and height -->
+{{< gallery-slider dir="/img/portfolio/" width="800px" height="350px" >}}
+
+<!-- Set left and right icon -->
+{{< gallery-slider dir="/img/portfolio/" arrow-left="fa-angle-double-left" arrow-right="fa-angle-double-right" >}}
+
+<!-- Set automatic sliding duration -->
+{{< gallery-slider dir="/img/portfolio/" auto-slide="2000" >}}
+```
+#### hugo-encryptor
+
+[中文文档](https://github.com/Li4n0/hugo_encryptor/blob/master/README-zh_CN.md)
+
+Example:
+
+```html
+{{% hugo-encryptor "PASSWORD" %}}
+
+# 这里是你要加密的内容!
+
+这里是你要加密的内容!
+
+**别忘了闭合 `hugo-encryptor` shortcode 标签:**
+
+{{% /hugo-encryptor %}}
+```

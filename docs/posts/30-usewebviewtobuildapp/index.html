@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="zh-cn" http-equiv="Content-Language"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="罗潇阳" name="author"/>
+<meta content='零、前期准备    安装 Android Studio，安装对应版本 SDK Tools，新建项目。
+一、代码修改    修改 app/java/{创建时指定的包名}/MainActivity.java 如下：
+ 注意！代码第一行要改为你的包名，中间的链接要改为自己的网页链接
+ package {创建时指定的包名}; import androidx.appcompat.app.AppCompatActivity; import android.annotation.SuppressLint; import android.os.Bundle; import android.view.View; import android.view.KeyEvent; import android.webkit.WebView; import android.webkit.WebViewClient; public class MainActivity extends AppCompatActivity { @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); setContentView(R.layout.activity_main); this.createWebView(); } @SuppressLint("SetJavaScriptEnabled") private void createWebView() { final WebView webView = (WebView) findViewById(R.id.webview); webView.getSettings().setJavaScriptEnabled(true); webView.setWebViewClient(new WebViewClient()); String url = "{你要套壳的网页链接}"; webView.loadUrl(url); webView.' name="description"/>
+<meta content="博客,开发者,个人" name="keywords"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="如何使用 WebView 来制作 Web 套壳 APP？" name="twitter:title"/>
+<meta content='零、前期准备    安装 Android Studio，安装对应版本 SDK Tools，新建项目。
+一、代码修改    修改 app/java/{创建时指定的包名}/MainActivity.java 如下：
+ 注意！代码第一行要改为你的包名，中间的链接要改为自己的网页链接
+ package {创建时指定的包名}; import androidx.appcompat.app.AppCompatActivity; import android.annotation.SuppressLint; import android.os.Bundle; import android.view.View; import android.view.KeyEvent; import android.webkit.WebView; import android.webkit.WebViewClient; public class MainActivity extends AppCompatActivity { @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); setContentView(R.layout.activity_main); this.createWebView(); } @SuppressLint("SetJavaScriptEnabled") private void createWebView() { final WebView webView = (WebView) findViewById(R.id.webview); webView.getSettings().setJavaScriptEnabled(true); webView.setWebViewClient(new WebViewClient()); String url = "{你要套壳的网页链接}"; webView.loadUrl(url); webView.' name="twitter:description"/>
+<meta content="如何使用 WebView 来制作 Web 套壳 APP？" property="og:title"/>
+<meta content='零、前期准备    安装 Android Studio，安装对应版本 SDK Tools，新建项目。
+一、代码修改    修改 app/java/{创建时指定的包名}/MainActivity.java 如下：
+ 注意！代码第一行要改为你的包名，中间的链接要改为自己的网页链接
+ package {创建时指定的包名}; import androidx.appcompat.app.AppCompatActivity; import android.annotation.SuppressLint; import android.os.Bundle; import android.view.View; import android.view.KeyEvent; import android.webkit.WebView; import android.webkit.WebViewClient; public class MainActivity extends AppCompatActivity { @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); setContentView(R.layout.activity_main); this.createWebView(); } @SuppressLint("SetJavaScriptEnabled") private void createWebView() { final WebView webView = (WebView) findViewById(R.id.webview); webView.getSettings().setJavaScriptEnabled(true); webView.setWebViewClient(new WebViewClient()); String url = "{你要套壳的网页链接}"; webView.loadUrl(url); webView.' property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="http://ccviolett.github.io/posts/30-usewebviewtobuildapp/" property="og:url"/><meta content="posts" property="article:section"/>
+<meta content="2022-03-25T17:56:46+08:00" property="article:published_time"/>
+<meta content="2022-03-25T17:56:46+08:00" property="article:modified_time"/>
+<title>
+  如何使用 WebView 来制作 Web 套壳 APP？ · 罗潇阳的博客
+</title>
+<link href="http://ccviolett.github.io/posts/30-usewebviewtobuildapp/" rel="canonical"/>
+<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
+<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="Hugo 0.92.0" name="generator"/>
+</head>
+<body class="preload-transitions colorscheme-auto">
+<div class="float-container">
+<a class="colorscheme-toggle" id="dark-mode-toggle">
+<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
+</a>
+</div>
+<main class="wrapper">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?90bcdb8127c31d4d27ebb95576bc8474";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<nav class="navigation">
+<section class="container">
+<a class="navigation-title" href="/">
+      罗潇阳的博客
+    </a>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button float-right" for="menu-toggle">
+<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
+</label>
+<ul class="navigation-list">
+<li class="navigation-item">
+<a class="navigation-link" href="/">首页</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/posts/">文章</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/solution/">题解</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/contact/">联系</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/about/">关于</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class="navigation-item">
+<a href="http://ccviolett.github.io/en/">🇬🇧</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class="content">
+<section class="container post">
+<article>
+<header>
+<div class="post-title">
+<h1 class="title">
+<a class="title-link" href="http://ccviolett.github.io/posts/30-usewebviewtobuildapp/">
+              如何使用 WebView 来制作 Web 套壳 APP？
+            </a>
+</h1>
+</div>
+<div class="post-meta">
+<div class="date">
+<span class="posted-on">
+<i aria-hidden="true" class="fa fa-calendar"></i>
+<time datetime="2022-03-25T17:56:46+08:00">
+                2022 年 3 月 25 日
+              </time>
+</span>
+<span class="reading-time">
+<i aria-hidden="true" class="fa fa-clock-o"></i>
+              阅读时间：2 分钟
+            </span>
+</div>
+<div class="authors">
+<i aria-hidden="true" class="fa fa-user"></i>
+<a href="/authors/ccviolett/">ccviolett</a></div>
+</div>
+</header>
+<div>
+<h2 id="零前期准备">
+  零、前期准备
+  <a class="heading-link" href="#%e9%9b%b6%e5%89%8d%e6%9c%9f%e5%87%86%e5%a4%87">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p>安装 Android Studio，安装对应版本 <code>SDK Tools</code>，新建项目。</p>
+<h2 id="一代码修改">
+  一、代码修改
+  <a class="heading-link" href="#%e4%b8%80%e4%bb%a3%e7%a0%81%e4%bf%ae%e6%94%b9">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p>修改 <code>app/java/{创建时指定的包名}/MainActivity.java</code> 如下：</p>
+<blockquote>
+<p>注意！代码第一行要改为你的包名，中间的链接要改为自己的网页链接</p>
+</blockquote>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-java" data-lang="java"><span style="font-weight:bold;text-decoration:underline">package</span> <span style="">{</span><span style="color:#666;font-weight:bold;font-style:italic">创建时指定的包名</span>};
+
+<span style="font-weight:bold;text-decoration:underline">import</span> <span style="color:#666;font-weight:bold;font-style:italic">androidx.appcompat.app.AppCompatActivity</span>;
+
+<span style="font-weight:bold;text-decoration:underline">import</span> <span style="color:#666;font-weight:bold;font-style:italic">android.annotation.SuppressLint</span>;
+<span style="font-weight:bold;text-decoration:underline">import</span> <span style="color:#666;font-weight:bold;font-style:italic">android.os.Bundle</span>;
+<span style="font-weight:bold;text-decoration:underline">import</span> <span style="color:#666;font-weight:bold;font-style:italic">android.view.View</span>;
+<span style="font-weight:bold;text-decoration:underline">import</span> <span style="color:#666;font-weight:bold;font-style:italic">android.view.KeyEvent</span>;
+<span style="font-weight:bold;text-decoration:underline">import</span> <span style="color:#666;font-weight:bold;font-style:italic">android.webkit.WebView</span>;
+<span style="font-weight:bold;text-decoration:underline">import</span> <span style="color:#666;font-weight:bold;font-style:italic">android.webkit.WebViewClient</span>;
+
+<span style="font-weight:bold;font-style:italic;text-decoration:underline">public</span> <span style="font-weight:bold;font-style:italic;text-decoration:underline">class</span> <span style="color:#666;font-weight:bold;font-style:italic">MainActivity</span> <span style="font-weight:bold;font-style:italic;text-decoration:underline">extends</span> AppCompatActivity {
+
+    @Override
+    <span style="font-weight:bold;font-style:italic;text-decoration:underline">protected</span> <span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">onCreate</span>(Bundle savedInstanceState) {
+        <span style="font-weight:bold;font-style:italic;text-decoration:underline">super</span>.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_main);
+
+        <span style="font-weight:bold;text-decoration:underline">this</span>.createWebView();
+    }
+
+    @SuppressLint(<span style="color:#666;font-style:italic">"SetJavaScriptEnabled"</span>)
+    <span style="font-weight:bold;font-style:italic;text-decoration:underline">private</span> <span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">createWebView</span>() {
+        <span style="font-weight:bold;font-style:italic;text-decoration:underline">final</span> WebView webView = (WebView) findViewById(R.id.webview);
+        webView.getSettings().setJavaScriptEnabled(<span style="font-weight:bold;text-decoration:underline">true</span>);
+        webView.setWebViewClient(<span style="font-weight:bold;text-decoration:underline">new</span> WebViewClient());
+        String url = <span style="color:#666;font-style:italic">"{你要套壳的网页链接}"</span>;
+        webView.loadUrl(url);
+
+        webView.setOnKeyListener(<span style="font-weight:bold;text-decoration:underline">new</span> View.OnKeyListener() {
+            @Override
+            <span style="font-weight:bold;font-style:italic;text-decoration:underline">public</span> <span style="font-weight:bold;text-decoration:underline">boolean</span> <span style="color:#666;font-weight:bold;font-style:italic">onKey</span>(View v, <span style="font-weight:bold;text-decoration:underline">int</span> keyCode, KeyEvent event) {
+                <span style="font-weight:bold;text-decoration:underline">if</span> (keyCode == KeyEvent.KEYCODE_BACK &amp;&amp; webView.canGoBack()) {
+                    webView.goBack();
+                    <span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;text-decoration:underline">true</span>;
+                }
+                <span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;text-decoration:underline">false</span>;
+            }
+        });
+    }
+}
+</code></pre></div><p>修改 <code>app/res/layout/activity_main.xml</code> 如下：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-xml" data-lang="xml"><span style="color:#888;font-weight:bold">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android=<span style="color:#666;font-style:italic">"http://schemas.android.com/apk/res/android"</span>
+    xmlns:app=<span style="color:#666;font-style:italic">"http://schemas.android.com/apk/res-auto"</span>
+    xmlns:tools=<span style="color:#666;font-style:italic">"http://schemas.android.com/tools"</span>
+    android:layout_width=<span style="color:#666;font-style:italic">"match_parent"</span>
+    android:layout_height=<span style="color:#666;font-style:italic">"match_parent"</span>
+    tools:context=<span style="color:#666;font-style:italic">".MainActivity"</span>&gt;
+
+    &lt;WebView
+        android:id=<span style="color:#666;font-style:italic">"@+id/webview"</span>
+        android:layout_width=<span style="color:#666;font-style:italic">"match_parent"</span>
+        android:layout_height=<span style="color:#666;font-style:italic">"match_parent"</span> /&gt;
+
+&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;
+</code></pre></div><p>修改 <code>app/minifests/AndroidMinifests.xml</code> 如下：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-xml" data-lang="xml"><span style="color:#888;font-weight:bold">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+&lt;manifest xmlns:android=<span style="color:#666;font-style:italic">"http://schemas.android.com/apk/res/android"</span>
+    package=<span style="color:#666;font-style:italic">"top.voluntalk.mobile"</span>&gt;
+
+    &lt;uses-permission android:name=<span style="color:#666;font-style:italic">"android.permission.INTERNET"</span> /&gt;
+
+    &lt;application
+        android:allowBackup=<span style="color:#666;font-style:italic">"true"</span>
+        android:icon=<span style="color:#666;font-style:italic">"@drawable/logo"</span>
+        android:label=<span style="color:#666;font-style:italic">"@string/app_name"</span>
+        android:roundIcon=<span style="color:#666;font-style:italic">"@drawable/logo"</span>
+        android:supportsRtl=<span style="color:#666;font-style:italic">"true"</span>
+        android:usesCleartextTraffic=<span style="color:#666;font-style:italic">"true"</span>
+        android:theme=<span style="color:#666;font-style:italic">"@style/Theme.Voluntalk"</span>&gt;
+        &lt;activity
+            android:name=<span style="color:#666;font-style:italic">".MainActivity"</span>
+            android:exported=<span style="color:#666;font-style:italic">"true"</span>&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name=<span style="color:#666;font-style:italic">"android.intent.action.MAIN"</span> /&gt;
+
+                &lt;category android:name=<span style="color:#666;font-style:italic">"android.intent.category.LAUNCHER"</span> /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;
+</code></pre></div><p>修改 <code>app/res/values/styles.xml</code> （或 <code>values/Theme</code> 目录下的文件）如下：</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-xml" data-lang="xml">&lt;resources xmlns:tools=<span style="color:#666;font-style:italic">"http://schemas.android.com/tools"</span>&gt;
+    <span style="color:#888;font-style:italic">&lt;!-- Base application theme. --&gt;</span>
+    &lt;style name=<span style="color:#666;font-style:italic">"Theme.Voluntalk"</span> parent=<span style="color:#666;font-style:italic">"Theme.MaterialComponents.DayNight.DarkActionBar"</span>&gt;
+        <span style="color:#888;font-style:italic">&lt;!-- Primary brand color. --&gt;</span>
+        &lt;item name=<span style="color:#666;font-style:italic">"colorPrimary"</span>&gt;@color/purple_500&lt;/item&gt;
+        &lt;item name=<span style="color:#666;font-style:italic">"colorPrimaryVariant"</span>&gt;@color/purple_700&lt;/item&gt;
+        &lt;item name=<span style="color:#666;font-style:italic">"colorOnPrimary"</span>&gt;@color/white&lt;/item&gt;
+        <span style="color:#888;font-style:italic">&lt;!-- Secondary brand color. --&gt;</span>
+        &lt;item name=<span style="color:#666;font-style:italic">"colorSecondary"</span>&gt;@color/teal_200&lt;/item&gt;
+        &lt;item name=<span style="color:#666;font-style:italic">"colorSecondaryVariant"</span>&gt;@color/teal_700&lt;/item&gt;
+        &lt;item name=<span style="color:#666;font-style:italic">"colorOnSecondary"</span>&gt;@color/black&lt;/item&gt;
+        <span style="color:#888;font-style:italic">&lt;!-- Status bar color. --&gt;</span>
+        &lt;item name=<span style="color:#666;font-style:italic">"android:statusBarColor"</span> tools:targetApi=<span style="color:#666;font-style:italic">"l"</span>&gt;?attr/colorPrimaryVariant&lt;/item&gt;
+        <span style="color:#888;font-style:italic">&lt;!-- Customize your theme here. --&gt;</span>
+
+        &lt;item name=<span style="color:#666;font-style:italic">"windowNoTitle"</span>&gt;true&lt;/item&gt;
+        &lt;item name=<span style="color:#666;font-style:italic">"windowActionBar"</span>&gt;false&lt;/item&gt;
+    &lt;/style&gt;
+&lt;/resources&gt;
+</code></pre></div><h2 id="二配置图标">
+  二、配置图标
+  <a class="heading-link" href="#%e4%ba%8c%e9%85%8d%e7%bd%ae%e5%9b%be%e6%a0%87">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p>将图片复命名为 <code>logo.jpg</code> 或 <code>logo.png</code> 放入文件夹 <code>res/drawable</code> 下。</p>
+<h2 id="三打包发布">
+  三、打包发布
+  <a class="heading-link" href="#%e4%b8%89%e6%89%93%e5%8c%85%e5%8f%91%e5%b8%83">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p>顶栏 Build -&gt; Generate Signed Bundle / APK… -&gt; APK</p>
+<p>随后选择一个存储 Key 的位置，输入密码配置好，即可生成 release 包。</p>
+<h2 id="四参考资料">
+  四、参考资料
+  <a class="heading-link" href="#%e5%9b%9b%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<ol>
+<li><a href="https://blog.csdn.net/iFasWind/article/details/107776950">用安卓 WebView 做一个“套壳”应用</a></li>
+<li><a href="https://blog.csdn.net/NYH19961125/article/details/88656695">Android Studio进行APP图标更改的两种方式总结</a></li>
+<li><a href="https://blog.csdn.net/qq_38436214/article/details/112288954">Android Studio 打包APK（详细版）</a></li>
+</ol>
+<p>出现问题：</p>
+<ul>
+<li><a href="https://blog.csdn.net/u013466454/article/details/108275334">Android Studio Build窗口出现中文乱码问题</a></li>
+</ul>
+</div>
+<footer>
+</footer>
+</article>
+</section>
+</div>
+<footer class="footer">
+<section class="container">
+<p>愿你成为自己的太阳，无需借助别人的光。</p>
+      
+      
+        ©
+        
+        2022
+         罗潇阳 
+      
+      
+         · 
+        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+        
+      
+    </section>
+</footer>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
+<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+</main>
+<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
+</body>
+</html>

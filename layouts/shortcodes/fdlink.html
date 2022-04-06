@@ -1,0 +1,55 @@
+<style>
+.fdlink {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    flex: 0 0 30%;
+    max-width: 30%;
+    position: relative;
+    transition: all .3s;
+    border-radius: 8px;
+    box-shadow: 0 0 2px;
+}
+.fdlink a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.fdlink .avatar {
+    margin: 10px;
+    transition: all .5s;
+}
+.fdlink .name {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+.fdlink .intro {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #1f2d3d;
+    width: 100%;
+}
+.fdlink .text {
+    display: none;
+}
+@media screen and (min-width: 600px) {
+    .fdlink .text {
+        display: inline;
+    }
+}
+</style>
+
+<div class="fdlink">
+    <a target="_blank" href="{{.Get 3}}">
+        <div class="avatar">
+            <img src="{{.Get 2}}" style="max-width: 100%;"/>
+        </div>
+        <div class="text" style="width: 100%; z-index: 10;">
+            <div class="name">{{.Get 0}}</div>
+            <div class="intro">{{.Get 1}}</div>
+        </div>
+    </a>
+</div>

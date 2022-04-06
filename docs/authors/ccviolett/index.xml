@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ccviolett on 罗潇阳的博客</title>
+    <link>http://ccviolett.github.io/authors/ccviolett/</link>
+    <description>Recent content in ccviolett on 罗潇阳的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 04 Apr 2022 12:09:50 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/authors/ccviolett/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何加工一个螺丝？</title>
+      <link>http://ccviolett.github.io/posts/40-mechanicalpartsscrew/</link>
+      <pubDate>Mon, 04 Apr 2022 12:09:50 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/40-mechanicalpartsscrew/</guid>
+      <description>一、认识零件    二维模型（带螺帽）
+三维模型
+实物模型
+二、分析零件    螺栓是和螺母配合使用的一类机械零件，可以用来紧固连接两个带有通孔的零件，因为将螺母从螺栓上旋下后，能够重新使得两个零件分开，所以螺栓连接属于可拆卸连接。
+螺栓由头部和螺杆两部分组成，螺杆是带有外螺纹的圆柱体，头部则根据不同的需求有不同的形状。
+三、加工工艺规程    （一）退火工艺     将原材料放入炉内，用炉盖封闭 缓慢升温至规定温度，约3-4个小时 将温度缓慢将至550度，约3-4个小时 让产品自然冷却到常温得到盘元。  （二）酸洗工艺     将盘元浸入常温、浓度为20~25%的三个盐酸槽中数分钟，除去线材的氧化膜， 清水洗去表面的盐酸。 浸入草酸中，增加金属活性，使得皮膜更加致密。 浸入磷酸盐中在表面形成皮膜。 清水洗去表面残留物 增加润滑剂，便于加工  （三）抽线工艺    进行精抽和粗抽将圆盘冷拉至所需线径粗度，得到线材。
+（四）成型工艺     冷镦：通过冷镦机将线材裁切成所需程度，同时打出螺帽和标识 通过四模四冲、三模三冲或一模二冲的方式得到胚料 对胚料进行热打，包括加热、成型和束杆三个步骤  （五）碾牙工艺    通过碾制或者攻丝将已经成型的半成品达到所需要的螺纹。
+（六）热处理工艺     高温渗碳，增加硬度 淬火后低温或高温回火， 根据对象和目的的不同而选择不同的具体温度与方式。  （七）表面处理工艺    电镀或热侵镀锌，在产品表面形成覆盖层，使产品表面美观，达到防腐的效果。</description>
+    </item>
+    
+    <item>
+      <title>关于机械工程机械结构设计的论述</title>
+      <link>http://ccviolett.github.io/posts/39-machineryreport-structuredesign/</link>
+      <pubDate>Mon, 04 Apr 2022 09:56:35 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/39-machineryreport-structuredesign/</guid>
+      <description>一、概述  （一）什么是机械结构设计？ （二）机械结构设计有什么用？ （三）机械结构设计有什么特点？   二、技术简述——机械结构设计的工作步骤 三、技术组成  （一）自由度分析——满足运动要求的结构设计准则 （二）结构方案设计——尽可能多种结构方案实现 （三）最优方案选择——准确选出最优的结构设计方案   四、技术原理——机械结构设计的准则  （一）提高强度、刚度和延长疲劳寿命的设计准则 （二）提高耐磨性的结构设计准则 （三）提高抗腐蚀性的结构设计 （四）提高精度的结构设计准则 （五）符合人机工程学的设计准则 （六）避免或减少对人损害的结构设计准则   五、技术要点  （一）结构方案的选择和评价 （二）结构件设计的注意点   六、发展历史  （一）阶段划分 （二）特点论证   七、外来展望  （一）虚拟化发展趋势 （二）集成化发展趋势 （三）环境友好型发展趋势 （四）智能化发展     一、概述    （一）什么是机械结构设计？    机械结构设计是机械设计中重要的一步，是机械设计实际落地的重要步骤。
+机械设计是根据使用要求，对机械的工作原理、结构、力的传递、材料等进行构思、分析和计算，并将其转化为具体的描述，以辅助制造。
+在机械设计过程中，完成机械原理方案设计以后，就要进行机械结构设计，得出全部结构设计图，作为生产的依据。
+（二）机械结构设计有什么用？    机械结构设计的任务是在总体设计的基础上，根据所确定的原理方案，确定并绘出具体的结构图，以体现所要求的功能。
+机械结构设计将抽象的工作原理具体化为某类构件或零部件，确定结构件的材料、形状、尺寸、公差、精度、毛胚及其制作、热处理方式和表面状况，同时还考虑其加工工艺、强度、刚度、精度以及与其它零件相互之间关系等问题。
+（三）机械结构设计有什么特点？    （1）机械结构设计是集思考、绘图、计算（有时进行必要的实验）于一体的设计过程，是机械设计中涉及的问题最多、最具体、工作量最大的工作阶段，在整个机械设计过程中，平均约80%的时间用于结构设计，对机械设计的成败起着举足轻重的作用。</description>
+    </item>
+    
+    <item>
+      <title>公共基础课程 | 逻辑学导论</title>
+      <link>http://ccviolett.github.io/posts/38-lesson-logic/</link>
+      <pubDate>Mon, 04 Apr 2022 07:56:27 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/38-lesson-logic/</guid>
+      <description>1. 引论：走进逻辑学  1.1 逻辑学是什么 1.2 逻辑与法律：普罗泰戈拉悖论 1.3 逻辑学的功能和研究范围 1.4 认识“非西方逻辑”   2. 论证  2.1 论证的关键概念 2.2 命题、陈述与语句 2.3 经验命题与必然命题 2.4 论证的含义与类型     每一个直言命题都由四个要素构成：量项-主项-联项-谓项
+如：量项(所有) 主项(艺术家) 联项(都是) 谓项(人)
+直言命题的四种形式：
+ A：所有 S 都是 P E：所有 S 都不是 P I：有些 S 是 P O：有些 S 不是 P  直言命题的量：根据直言命题的量项，分为 全称命题 与 特称命题。
+直言命题的质：根据直言命题的联项，分为 肯定命题 与 否定命题。
+文恩图： （1）留空白：表示区域未知 （2）画阴影：表示区域空缺 （3）画星号“*”：表示区域内存在元素 文恩图表示四种直言命题： 1. 引论：走进逻辑学    1.</description>
+    </item>
+    
+    <item>
+      <title>如何证明自己的学生身份？</title>
+      <link>http://ccviolett.github.io/posts/34-howtoprovetobestudent/</link>
+      <pubDate>Sat, 02 Apr 2022 23:37:23 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/34-howtoprovetobestudent/</guid>
+      <description>学信网在线验证码     首先进入学信网，找到登录界面并登录。  进入 在线验证报告 界面，首先验证自己的身份。  验证完成后，点击“申请”进入申请页面。  确认无误信息后，再次点击“申请”按钮生成在线验证码。  随后会自动返回在线验证报告界面，即可看到自己的在线验证码，可以用来证明自己的学生身份。  </description>
+    </item>
+    
+    <item>
+      <title>洛谷 P1315 [NOIP2011 提高组] 观光公交</title>
+      <link>http://ccviolett.github.io/solution/luogup1315/</link>
+      <pubDate>Fri, 01 Apr 2022 17:37:13 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup1315/</guid>
+      <description>一、题意    题目链接：Problem
+一条路上从左往右有 n 个车站，一辆车从 1 号车站往 n 号车站开，从 $i$ 号车站到 $i + 1$ 号车站需要 $D_i$ 分钟。
+给开 m 个人，在 $T_i$ 时刻从 $A_i$ 上车，希望在 $B_i$ 下车，保证 $A_i &amp;lt; B_i$。
+车到了某个车站必须等所有人上车了才能发车。
+现在有 k 次机会选定 $D_i$ 将其减小 1，问如何分配 k 此机会，使得所有人在车上呆的总时间最少。
+二、题解    考虑拆分贡献，要求所有人在车上呆的总时间最少，设下车时间为 $T&#39;$，则总时间为 $\sum_{i = 1}^{m} (T&#39;_i - T_i)$，拆分为 $\sum T&#39;_i - \sum T_i$，其中 $\sum T_i$ 为定值，故我们只需最小化 $\sum T&#39;_i$。
+我们设在第 i 站下车的人数为 $cntto_i$，到达第 i 站的时间为 $arrive_i$，则 $\sum\limits_{i = 1}^m T&#39;_i = \sum\limits_{i = 1}^n (cntto_i * arrive_i)$，其中 $cntto_i$ 是固定的，所以我们只需要最小化到达每个点的时间。</description>
+    </item>
+    
+    <item>
+      <title>学习机械制图</title>
+      <link>http://ccviolett.github.io/posts/33-learnmechanicaldrawing/</link>
+      <pubDate>Wed, 30 Mar 2022 19:26:48 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/33-learnmechanicaldrawing/</guid>
+      <description>一、标准件 二、常用件 三、螺纹的要素 四、螺纹的规定画法 五、普通螺纹的标注 六、常用螺纹紧固件     前置知识：画法几何
+一、标准件    定义：在结构、尺寸、画法、标注等各个方面，直到成品质量，都由国家或行业批准发布了标准，按标准由专业厂生产的机件。
+注意点：
+ 不单独画出零件图或部件图 标准结构不需按真实投影画出，只要根据标准规定的画法、代号和标记进行绘画和标注，它们的结构和尺寸可查阅相应的国家标准或机械零件手册得出。  例子：
+ 螺钉 螺栓 螺母 垫圈 键 销  二、常用件    定义：应用广泛、结构定型、某些部分的结构形状与尺寸已标准化的一般零件。
+例子：
+ 齿轮 花键  三、螺纹的要素      牙型
+螺纹的轮廓形状
+  公称直径
+代表螺纹尺寸的直径，指大径。
+ 大径：外围圆柱的直径，d（外螺纹）或 D（内螺纹）表示。
+小径：内围圆柱的直径，$d_1$（外螺纹）或 $D_1$（内螺纹） 表示。
+   线数 n
+螺旋线数量
+  螺距 P</description>
+    </item>
+    
+    <item>
+      <title>如何用 JS 写一个 JS 解释器？</title>
+      <link>http://ccviolett.github.io/posts/32-usejstobuildjs/</link>
+      <pubDate>Mon, 28 Mar 2022 22:57:37 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/32-usejstobuildjs/</guid>
+      <description>为什么在程序中可以修改变量名而不能修改关键字？    因为变量名定义在程序内，而关键字定义在编译器解释器内。
+我们无法在程序中去维护关键字的相同、不同关系。
+ AST 简介    AST 和代码是同一种东西的两种不同表示方式，代码方便人看的，AST 方便电脑看的。所以两个东西相互转换的时候不会丢失信息，会一一对应。
+AST 实际存在于内存之中，但是为了方便人们理解，常常使用 JSON 格式来表示。
+JS AST 在线浏览工具：https://astexplorer.net/ JS 语法树标准 ESTree：https://github.com/estree/estree
+转换工具： acronjs 代码 -&amp;gt; AST https://github.com/acornjs/acorn astring AST -&amp;gt; 代码 https://github.com/davidbonnet/astring
+编译的分类    编译分为编译前端和编译后端，其中前端一般负责解析和转换，后端负责执行和编译到目标平台。
+其间存在一个中间表示叫 AR，还需要中间优化。
+后端技术：JIT
+编译中的悖论    当你能够理解编译原理的时候，说明你已经掌握基本知识了，你是去研究一门编程语言的，研究其是如何解释、如何解析、如何分析、如何生成代码、最后如何执行的，所以首先就要对编程语言这个东西有足够多的理解。
+而深入理解编程语言又需要有足够的编译原理知识。
+推荐书籍《计算的本质》《计算机程序的构造和解释》，属于偏理论方面的书籍，而不是像其他编译原理的书籍偏向于工程。
+可以去尝试写写 lisp 解释器，lisp 作为一门语法极其简单的早期编程语言，很好实现。</description>
+    </item>
+    
+    <item>
+      <title>学习 React</title>
+      <link>http://ccviolett.github.io/posts/31-learnreact/</link>
+      <pubDate>Fri, 25 Mar 2022 19:48:19 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/31-learnreact/</guid>
+      <description>一些问题     无法使用 JSX，报错 Unexpected token &#39;&amp;lt;&#39;  https://react.docschina.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
+将 HTML 代码复制到 JSX 中报错  记得删掉 style 属性，并将 HTML 代码中标签的 class 改为 className。
+onClick 自动触发  将 onClick = {func()} 改为 onClick = {() =&amp;gt; {func()}} 即可。</description>
+    </item>
+    
+    <item>
+      <title>如何使用 WebView 来制作 Web 套壳 APP？</title>
+      <link>http://ccviolett.github.io/posts/30-usewebviewtobuildapp/</link>
+      <pubDate>Fri, 25 Mar 2022 17:56:46 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/30-usewebviewtobuildapp/</guid>
+      <description>零、前期准备    安装 Android Studio，安装对应版本 SDK Tools，新建项目。
+一、代码修改    修改 app/java/{创建时指定的包名}/MainActivity.java 如下：
+ 注意！代码第一行要改为你的包名，中间的链接要改为自己的网页链接
+ package {创建时指定的包名}; import androidx.appcompat.app.AppCompatActivity; import android.annotation.SuppressLint; import android.os.Bundle; import android.view.View; import android.view.KeyEvent; import android.webkit.WebView; import android.webkit.WebViewClient; public class MainActivity extends AppCompatActivity { @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); setContentView(R.layout.activity_main); this.createWebView(); } @SuppressLint(&amp;#34;SetJavaScriptEnabled&amp;#34;) private void createWebView() { final WebView webView = (WebView) findViewById(R.id.webview); webView.getSettings().setJavaScriptEnabled(true); webView.setWebViewClient(new WebViewClient()); String url = &amp;#34;{你要套壳的网页链接}&amp;#34;; webView.loadUrl(url); webView.</description>
+    </item>
+    
+    <item>
+      <title>算法中有那种容易写错但是不易发现的 BUG？</title>
+      <link>http://ccviolett.github.io/posts/29-myalgorithmbug/</link>
+      <pubDate>Thu, 24 Mar 2022 22:07:50 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/29-myalgorithmbug/</guid>
+      <description>1. 默认 $t * 2$ 和 $t * 2 + 1$ 建二叉树    在链的情况下，空间会被卡到 $2^n$。
+解决方法：使用 lson 和 rson 来存储
+例题：通过先序遍历和中序遍历，输出层序遍历。</description>
+    </item>
+    
+    <item>
+      <title>Powershell 中会遇到的一些问题</title>
+      <link>http://ccviolett.github.io/posts/27-probleminpowershell/</link>
+      <pubDate>Tue, 22 Mar 2022 19:01:42 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/27-probleminpowershell/</guid>
+      <description>无法加载文件 XXX，因为在此系统上禁止运行脚本。    在计算机上启动 Windows PowerShell 时，执行策略很可能是 Restricted（默认设置）。
+ Restricted 执行策略不允许任何脚本运行。
+AllSigned 和 RemoteSigned 执行策略可防止 Windows PowerShell 运行没有数字签名的脚本。
+本主题说明如何运行所选未签名脚本（即使在执行策略为 RemoteSigned 的情况下），还说明如何对 脚本进行签名以便您自己使用。
+有关 Windows PowerShell 执行策略的详细信息，请参阅 about_Execution_Policy。
+ 以管理员身份打开PowerShell 输入 set-executionpolicy remotesigned</description>
+    </item>
+    
+    <item>
+      <title>学习 Electron</title>
+      <link>http://ccviolett.github.io/posts/26-learnelectron/</link>
+      <pubDate>Tue, 22 Mar 2022 17:49:02 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/26-learnelectron/</guid>
+      <description>Electron 可以理解为一个被 Javascript 控制的精简版的 Chromium 浏览器
+安装 cnmp 加速：npmmirror 中国镜像站</description>
+    </item>
+    
+    <item>
+      <title>如何解决微分方程相关问题？</title>
+      <link>http://ccviolett.github.io/posts/21-solvede/</link>
+      <pubDate>Wed, 16 Mar 2022 19:45:28 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/21-solvede/</guid>
+      <description>1. $y&#39;= f(x, y)$ 型 2. $y^{(n)} = f(x)$ 型 3. $y&#39;&#39; = f(x, y&#39;)$ 型 4. $y&#39;&#39; = f(y, y&#39;)$ 型 $y&#39;&#39; + py&#39; + qy = 0$ 型 - 二阶常系数齐次线性微分方程 5. $y&#39;&#39; + py&#39; + qy = e^{\lambda x}P_m(x)$ 型   一、解微分方程    1. $y&#39;= f(x, y)$ 型    转化为 $y&#39; + P(x)y = Q(x)$ 的形式，套用公式：
+$$ y = e^{-\int P(x) dx} \left(\int Q(x) e^{\int P(x) dx} dx + C \right) $$</description>
+    </item>
+    
+    <item>
+      <title>【大数据-初级】MapReduce: Distributed System 实验报告</title>
+      <link>http://ccviolett.github.io/posts/19-bitedancebigdataa/</link>
+      <pubDate>Tue, 15 Mar 2022 11:31:59 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/19-bitedancebigdataa/</guid>
+      <description>2022 年 3 月 15 - 16 日：通读 MapReduce 论文，了解分布式计算的基本思想。
+项目：Lab 1: MapReduce</description>
+    </item>
+    
+    <item>
+      <title>如何制作一份好的简历？</title>
+      <link>http://ccviolett.github.io/posts/18-howtomakeresume/</link>
+      <pubDate>Sat, 12 Mar 2022 13:09:48 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/18-howtomakeresume/</guid>
+      <description>一、基本原则  （一）篇幅 （二）排版 倒 L 布局（慎用） 什么是 ATS 系统？   二、表述方法——STAR法则 三、具体写法  （一）工作经历 （二）专业技能 （三）个人简介   四、相关链接 附件1：什么是ATS？如何写一个简历打败机器人   一、基本原则    海选阶段，大部分简历都只会扫上一眼，所以我们需要让 HR 在一眼之内尽可能看到更多的内容。
+各种花里胡哨的排版或是视觉效果，只会干扰 HR 迅速在简历上筛选有用信息，HR 不会在意你的简历用了什么模板，只会在意你的简历是否易读。
+所以我们要尽可能站在 HR 的角度去写简历，多多换位思考。
+ 零经验同学常见的误区：
+用样式丰富的简历，试图掩饰简历上实习经验的欠缺。 但 HR 的关注点始终是简历内容与岗位的匹配度。推荐没有实习经验的同学把自己的课上项目变成优势内容，从而更顺利地获得 offer。
+ 这里有一些基本的原则：
+（一）篇幅    设计简历的时候就要默认使用竖向 A4 大小的版面，并且保证所有的内容正好在一页内呈现。
+太少了会显得准备不够充分、没有足够的能力；太多了会使得 HR 在看简历时比较麻烦、不能一下子抓住重点。
+关于各个部分的篇幅，学生写简历最容易犯的错误之一就是大篇的自我总结、奖项、活动、研究论文、课程、技能描述，然后工作实习经历写一点点。
+作为学生的我们都认为那些奖项、论文都很有含金量，很值得自豪。但HR最在乎的是你以前做过的工作内容，其他学业上的成绩基本上看个GPA就能知道你的学习情况了。
+推荐简历的教育经历篇幅不推荐超过1/3，工作、实习经历最好能占到整个简历的一半以上。
+公司、学校名称等关键信息需要加粗，因为这是HR在5秒钟之内需要在简历上找到的信息，但是不推荐推荐使用过多加粗、下划线、斜体，更不要用别的颜色画出重点，真正重要的信息可以往前提。
+过多的重点等于没有重点。
+（二）排版    尽量简洁，做减法而不是加法。
+不要五颜六色的图标和分界线，不要有大块大块地留白去展示排版艺术，不要乱使用可视化去展示模糊、主管的信息。
+那些花花绿绿的布局只会分散掉简历内容的重点，格式统一、规范、白纸黑字、重点清晰的模板就是好模板。</description>
+    </item>
+    
+    <item>
+      <title>如何快速掌握 CAD？</title>
+      <link>http://ccviolett.github.io/posts/16-learncad/</link>
+      <pubDate>Wed, 09 Mar 2022 09:05:25 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/16-learncad/</guid>
+      <description>快捷键     单击左键：矩形选择 长按左键：套索选择 鼠标中键：拖拽 F8：正交  命令集     多段线（PL）：选择起始点，输入 W 设置线宽，分别输入起始宽度和端点宽度（宽度不同则可绘制梯形或三角形），输入长度 线段（L）：带角度的线段：输入 @ 指定线段长度，再输入 &amp;lt; 指定角度，随后空格确认 圆（C) 偏移（O） 旋转（RO）：选择要旋转的对象，空格确认，再选择基准点，输入角度 倒角（F）：直接连接：R -&amp;gt; 0 -&amp;gt; 选择两个对象 移除（TR）：先选择用来限制的边界，空格确认后，单击需要移除的部分，即可去掉限制边界内或外部分的线条 正方形（POL）：选择中心 弧（ARC）：先选择弧的一个点，输入 E，选择另一个端点，随后继续操作，会在逆时针方向生成弧，按 Ctrl 可切换方向 复制（CO） 等分（DIV） 对齐（AL）：可以将做好的部分缩放对接到其他部分去 曲线（SPL）：多点拟合曲线，可用于作局部剖视图 打断（BR） 填充（HAT） 倒角（CHA） 圆角（FIL） 镜像（MI） 阵列（AR） 箭头（LE）：可以输入 S 来设置箭头类型 公差（TOL） 缩放（SC) 块（B）与分解（X）：打包成块方便多次重复使用、分解便于根据情况修改细节 坐标系（UCS） 编辑文本（ED）  标注上下误差    输入 上标^下标，然后键入回车
+参数化    （一）绘制特定长度三角形     绘制任意三角形，并将其框选中 点击 自动约束，三角的顶点将变成约束点 点击 标注 中的 对其，选择要规范的线段的两个端点，单击确认尺寸线位置 在尺寸线的标注中输入指定的长度  （二）绘制带角度的直线     绘制一条任意直线，随后绘制一条水平线作为基准线 将其框选并点击 自动约束，端点将变成约束点 点击 标注 中的 角度，先选择基准线，然后选择要调整的直线，单击确认尺寸线位置 在尺寸线的标注中输入指定的角度  操作    绘制表面粗糙度     将“极轴追踪（F10）”打开，并在“草图设置”（可以从“对象捕捉”设置中进入）中将极轴角的增量设度为 30。 绘制两条直线。 绘制圆，输入 c，随后光标移至折处，向上出现延长线追踪，输入需要向上的高度即可确定圆心，随后通过垂足追踪与直线切即可。  绘制两圆的公切线     输入 L，输入 tan 后选择第一个圆圆弧，再输入 tan 后选择第二个圆圆弧。  标注非圆视图直径    选择标注命令，输入 M 或 T，输入 %%C尺寸 得到带直接符号的尺寸标注</description>
+    </item>
+    
+    <item>
+      <title>跟着 JetBrains Academy 学习 Java</title>
+      <link>http://ccviolett.github.io/posts/15-learnjavawithjba/</link>
+      <pubDate>Wed, 09 Mar 2022 08:31:03 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/15-learnjavawithjba/</guid>
+      <description>学习地址：JetBrains Academy，通过 edu 邮箱验证后，可获得 3 个月免费使用时间，通过第一个项目后可额外获得 2 个月免费使用时间。
+一个好用的在线 Java 编辑器：Json.cn 在线运行 Java
+一、命令行输入输出    输入：创建 Scanner 对象，接受从控制台的输入，通过 next() 获取下一个字符串（由空格或回车隔开），通过 nextLine() 读入一行数据。
+Scanner input = new Scanner(System.in); String str1 = input.next(); String str2 = input.nextLine(); int val1 = input.nextInt(); int val2 = Interger.parseInt(input.next()); 输出：
+System.out.println(str); System.out.println(val); System.out.printf(&amp;#34;%d&amp;#34;, val); 二、字符串处理    注意，Java 中字符串下标从 0 开始。
+字符串长度：int length()
+字符串匹配：
+  int indexOf(String str, int startIndex = 0)：从指定的索引处开始，返回第一次出现的指定子字符串在此字符串中的索引。   int lastIndexOf(String str, int startIndex = 0) ：从指定的索引处开始向后搜索，返回在此字符串中最后一次出现的指定子字符串的索引。</description>
+    </item>
+    
+    <item>
+      <title>HP 笔记本突然黑屏无法充电无法启动怎么解决？</title>
+      <link>http://ccviolett.github.io/posts/14-howtofixhp/</link>
+      <pubDate>Tue, 08 Mar 2022 10:01:47 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/14-howtofixhp/</guid>
+      <description>笔记本突然无法启动、无法启动，除去收到了严重外界损坏的情况，大概率是因为换季时空气干燥引起的静电堆积，导致笔记本启动的电源锁。
+所以我们需要做的就是除去静电。
+而 HP 电脑除静电的方式比较奇葩，同时按下 Win + v + 电源键 一分钟左右，即可清理完毕，能正常开机。</description>
+    </item>
+    
+    <item>
+      <title>CF380C. Sereja and Brackets</title>
+      <link>http://ccviolett.github.io/solution/cf380c/</link>
+      <pubDate>Sun, 06 Mar 2022 13:28:04 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/cf380c/</guid>
+      <description>一、题意    题目链接：Problem
+给定一个括号序列，每次询问一个区间内合法的括号序列长度。
+二、题解    考虑线段树，每个节点维护区间内向左未匹配的括号数量、向右未匹配的括号数量和合法括号序列的数量，每次合并的时候，将左右区间未匹配的括号匹配即可。
+三、代码    通过链接：Submission
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int N = 1e6 + 10; int n; struct Node { int lhave, rhave, val; friend Node operator + (Node a, Node b) { if (a.rhave &amp;gt;= b.lhave) { return (Node) { a.lhave, b.rhave + (a.rhave - b.lhave), a.val + b.val + b.lhave }; } return (Node) { a.</description>
+    </item>
+    
+    <item>
+      <title>如何利用好 edu 邮箱？</title>
+      <link>http://ccviolett.github.io/posts/13-makegooduseofedu/</link>
+      <pubDate>Fri, 04 Mar 2022 08:16:29 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/13-makegooduseofedu/</guid>
+      <description>一、JetBrains 全家桶    价值：上千美元
+Free Educational Licenses
+附赠 JetBrains Academy for Students 以学习各种课程。</description>
+    </item>
+    
+    <item>
+      <title>我的未来该去向何方？（二）——职业兴趣报告</title>
+      <link>http://ccviolett.github.io/posts/11-myfuturecareer2/</link>
+      <pubDate>Thu, 03 Mar 2022 16:05:14 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/11-myfuturecareer2/</guid>
+      <description>本文摘自我的“北森生涯一体化平台”职业兴趣报告。
+   零、总论 一、我的特点 二、我的状况 三、不怎么感兴趣的事      零、总论    你最强的两类兴趣为：现实型、艺术型，你最弱的兴趣为：企业型。
+这三个兴趣的含义分别如下：
+  兴趣类型：现实型 特点：手脚灵活，擅操作，爱运动 最热衷的事：摆弄机器或工具 最讨厌的事：大型社交活动     兴趣类型：艺术型 特点：理想化，崇尚美、个性、创新、激情 最热衷的事：创造有美感的新事物 最讨厌的事：单调重复，按部就班     兴趣类型：企业型 特点：喜欢竞争，追求掌控感 最热衷的事：在辩论中获胜，或组织、指导 最讨厌的事：复杂深奥的纯理论研究   一、我的特点    你很喜欢动手从事某些艺术创作，习惯于用电脑、机械、仪器、多媒体、网页、美工素材等来展示你的创意才华。你虽然喜欢艺术性的工作，但不喜欢把美感停留在理念中，而是希望实现在具体的事务和过程中，特别是在具体的材料对象的操作中体现自己的创造性，把丰富的想象力和眼前的事物或活动联系起来。你爱好各种实实在在的操作类工具，乐于动手使用工具或者机器设备，你的想法不受传统的限制，喜欢琢磨和观察，善于积累经验，习惯于思考和开发物品的更多用途，对具体的结构之美特别有兴趣。
+你做事认真执着，注重结果和个人标准，常为一个细节而百折不挠，但并不过于追求长远期望；你喜欢独立工作，希望将来从事能够体现一技之长的实在的职业。
+你是一个务实、谦逊、朴素、真诚的人。你的生活品味和行为举止很有个性，生活随意而不注重规范。你不太喜欢交际，与朋友的来往话也不多，更喜欢言简意赅的表达和坦率直言。
+二、我的状况     使你如鱼得水的环境：操作性强并能发挥创造性能力的环境，与人打交道不多的工作 你乐衷的活动或课程：美术、雕塑、模型、手工艺、电脑绘图等 你特别钟爱的专业有：美术、设计、建筑等。 你可能喜欢的职业有：建筑师、土木工程师、城市规划、工业设计师、工艺或者美术设计师等。  三、不怎么感兴趣的事    你对经济性事务不感兴趣，不好说服、影响和领导他人，因此，在职业生涯规划过程中，你可能要避免一些对领导力要求较高的发展方向，如经营管理、政府官员、外事外交等。</description>
+    </item>
+    
+    <item>
+      <title>我的未来该去向何方？（一）——职业性格报告</title>
+      <link>http://ccviolett.github.io/posts/10-myfuturecareer1/</link>
+      <pubDate>Thu, 03 Mar 2022 16:04:14 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/10-myfuturecareer1/</guid>
+      <description>本文摘自我的“北森生涯一体化平台”职业性格报告。
+   零、总论 一、你的特点 二、生活中的你 三、优势 四、岗位特质 五、不足和改进 六、成功秘诀      零、总论    你的类型是公关型——天下没有不可能的事情。
+一、你的特点     你对周围的人和事物观察得相当透彻，能够洞察现在和未来。随时可以发现事物的深层含义和意义，并能看到他人看不到的事物内在的抽象联系。 你崇尚和谐善意、情感丰富、热情、友好、体贴、情绪强烈，需要他人的肯定，也乐于称赞和帮助他人。总是避免矛盾，更在意维护人际关系，愿意花费很多心思，结交各种各样的人，而不是做事。 你富有活力，待人宽厚，有同情心，有风度，喜欢让人高兴。只要可能，你就会使自己适应他人的需要和期望。你倾向于运用情感作出判断，决策时通常考虑他人的感受。 你有丰富的想象力，善于创新，自信，富有灵感和新思想，善于寻找新方法，更注重理解，而不是判断。你喜欢提出计划，并大力将其付诸实践。你特别善于替别人发现机会，并有能力且愿意帮助他们采取行动抓住机会。  二、生活中的你     重视个人价值，崇尚理想 不遵守传统，甚至对之毫无敬意，也不尊重权威和规则 穿着打扮显得非常有创意，有一副艺术家的派头，不在乎别人的意见 爱好广泛，外向，友好，喜欢置身于人群当中，善于用话语抓住人们的注意力 言谈时语言辛辣，同时又充满幽默和比喻  三、优势     能统观全局，能看出行为和思想之间的潜在含义；能够打破常规思考，考虑事情发展可能出现的新情况 敢于冒险、敢于尝试新事物，能克服障碍，能够在任何你真正感兴趣的领域中成功 适应能力强，能迅速改变自己的行事速度及目标，兴趣广泛、对自己感兴趣的东西接受能力强 对收集自己所需信息有一种天然的求知欲和技能 交际能力强，能以有感染力的热诚和精力激励他人 能洞察别人，能理解他们的需要和动机 能够把自己的天赋与别人的兴趣和能力结合起来，善于赋予合适的人以合适的职位/任务 富于创造，是相当棒的问题解决者  四、岗位特质     工作环境轻松，人际友好，能与不同特点的人一起工作，避免冲突和矛盾 工作充满乐趣，富于挑战，允许你自由发挥灵感和创造力，参与冒险 可以创造新的想法、产品、服务或帮助别人，然后看到计划变为现实 工作环境与你的理念、个人价值观一致 规则和限制少，能够自己安排工作的进程和节奏 工作不要求处理太多重复性、程序性、常规性、琐碎的事物  五、不足和改进     你过分关注事物之间的联系、可能性，忽视当下事物的具体细节、过程，因此建议你关注重要的细节，避免总是丢三落四 你非常理想化，容易忽略现实和事物的逻辑，只要感兴趣，什么都去做。你常常喜欢着手许多事情，无法专注于一件事情，对事情步入正轨后的常规部分不感兴趣，也不喜欢重复和例行的事物，很少能把事情“从头做到尾”。你总能看到太多的可能性，因此无法确定哪些事情是自己真正追求的。建议你认真选择一个目标，善始善终，以免浪费时间和挥霍自己的天赋。 你喜欢即兴发挥，不愿意筹备和计划，做事没有条理，或不善于分清主次顺序，独自工作时经常效率较低。如果你要有所作为，应尽量使自己的新思路现实，可操作。与更实际的人一起工作会对你很有帮助，这也符合你的特点，因为你不喜欢独自工作。因此，还建议你提升时间管理能力。 你组织纪律性比较弱，不肯服从，不能容忍过于严谨的机构或个人。因此，倘若你在制度比较完善的企事业单位工作或遇到要求严格的上级，建议你尽可能地规范自己的工作态度。  六、成功秘诀     判断和把握事情轻重，优先处理重要的事情 集中精力于某一目标，尽量将事情和计划落实 减少外界无关因素的干扰，对自己接受的事情坚持到底，不要轻易妥协  </description>
+    </item>
+    
+    <item>
+      <title>有那些常用的 PS 操作？</title>
+      <link>http://ccviolett.github.io/posts/9-howtouseps/</link>
+      <pubDate>Thu, 03 Mar 2022 14:24:34 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/9-howtouseps/</guid>
+      <description>一、将照片适当裁剪缩放成指定像素    选择 顶栏-&amp;gt;图像-&amp;gt;图像大小，先在锁定长宽比的情况下，使其中一个符合指定像素，将图像缩放到指定大小。
+随后选择 左栏-&amp;gt;裁剪工具，在上边栏中，选择 宽 x 高 x 分辨率，在随后的第一个空中输入宽，第二个空中输入高，第三个空中输入分辨率，拖动图像至合适位置按 Enter 键裁剪即可。
+注意：关于这里的分辨率，可以通过底栏查看原分辨率，推荐不要降低分辨率，直接填上原来的数字即可。</description>
+    </item>
+    
+    <item>
+      <title>有哪些想看的书籍&amp;电影&amp;电视剧&amp;纪录片？</title>
+      <link>http://ccviolett.github.io/posts/8-wanttowatch/</link>
+      <pubDate>Tue, 01 Mar 2022 19:20:44 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/8-wanttowatch/</guid>
+      <description>一、值得思考的纪录片 《为什么贫穷？ Why Poverty?》    推荐理由：[TODO]
+豆瓣链接：为什么贫穷？ Why Poverty?
+观看地址：https://youtu.be/TxbmjDngois
+二、空难电影三部曲《迫降航班》《萨利机长》《中国机长》    推荐理由：看了一些讲解，想去看看原片。
+豆瓣链接：迫降航班、萨利机长、中国机长
+观看地址：在腾讯视频上均能看</description>
+    </item>
+    
+    <item>
+      <title>如何运用群论计算本质不同的方案数？</title>
+      <link>http://ccviolett.github.io/posts/6-grouptheoryinoi/</link>
+      <pubDate>Tue, 01 Mar 2022 10:22:18 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/6-grouptheoryinoi/</guid>
+      <description>零、群    定义：$(S, .)$ 由集合 S 和操作 . 构成群。
+一个群需要满足以下的四个性质：
+  封闭性
+群中的任意两个元素进行运算之后得到的结果，还是群中的元素。
+  结合律
+任意两个元素先运算或后运算不影响最终结果。
+  单位元
+群中存在元素，其他元素与其进行运算后不变。
+  逆元
+对于群中的任意一个元素，都存在一个元素与其运算后得到单位元。
+  构造的置换满足群的性质才能使用 Burnside 引理和 Polya 定理。
+一、Burnside 引理    $$ 本质不同的方案数 = \frac{1}{置换数} \sum_{每一种置换} 在当前置换下等价的方案数 $$
+难点在于求每种置换下等价的方案数，以及化简式子。
+二、Polya 定理    $$ 本质不同的方案数 = \frac{1}{置换数} \sum_{每一种置换} 颜色数量^{该置换中环的数量} $$
+难点在于求每种置换中环的数量，以及化简式子。
+ Tips: 环
+ 一个置换中环的数量，就是将置换进行无数次也不会互相影响的部分数量。 如 (1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 1) 是一个环，(1 -&amp;gt; 3 -&amp;gt; 1)(2 -&amp;gt; 4 -&amp;gt; 2) 是两个环，(1 -&amp;gt; 1)(2 -&amp;gt; 3 -&amp;gt; 2)(4 -&amp;gt; 4) 是三个环。   三、例题      给一个 n 个点的环染 m 种颜色，问有多少种本质不同的染色方案。定义本质相同的方案可以通过旋转得到。</description>
+    </item>
+    
+    <item>
+      <title>【持续更新】跟着创新实验班学 Web 开发</title>
+      <link>http://ccviolett.github.io/posts/5-learnwithteam/</link>
+      <pubDate>Sun, 27 Feb 2022 22:38:37 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/5-learnwithteam/</guid>
+      <description>一、Git入门  配置基本用户信息 初始化本地仓库 关联远程仓库 从远程服务器克隆一个仓库 显示当前工作目录下的提交状态（类似于GitKraken中右边的窗口） 将指定文件Stage（标记为将要被提交的文件） 将指定文件Unstage（取消标记） 创建一个提交并附上提交信息 显示提交历史（类似GitKraken中间的窗口） 向远程仓库推送（Push） 从远程仓库拉取（Pull） 分支（branch） 签出（check out）   二、HCJ（HTML + CSS + Javascript) 快速入门  （一）HTML （二）CSS （三）JavaScript   三、安装mysql和php   一、Git入门    视频教程：Git + GitHub 10分钟完全入门
+配置基本用户信息    git config --global user.name &amp;lt;你的用户名&amp;gt;
+git config --global user.email &amp;lt;你的邮箱地址&amp;gt;
+初始化本地仓库    git init
+关联远程仓库    git remote add &amp;lt;自定义仓库名&amp;gt; &amp;lt;远程仓库地址&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>如何使用 Hugo Shortcodes 来复用代码或嵌入 HTML？</title>
+      <link>http://ccviolett.github.io/posts/4-hugoshortcodes/</link>
+      <pubDate>Sat, 26 Feb 2022 21:46:10 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/4-hugoshortcodes/</guid>
+      <description>官方学习链接：https://gohugo.io/templates/shortcode-templates/
+一、新建 Shortcode    假设要新建的 Shortcode 名称为 test。
+在博客文件夹下的 layouts/shortcodes/ 文件夹（不存在则新建）中创建文件 test.html，在文件中写入 Shortcode 片段即可。
+二、调用与传参    由于渲染的原因，无法在文章里完整演示，需要自行在以下标签之外添加两层大括号，
+  单标签调用：&amp;lt;test&amp;gt;。
+  变量名传参调用：&amp;lt;test name1=&amp;quot;arg1&amp;quot; name2=&amp;quot;arg2&amp;quot;&amp;gt;；引用参数： .Get &amp;quot;name1&amp;quot; 得到 arg1， .Get &amp;quot;name2&amp;quot; 得到 arg2。
+  顺序传参调用：&amp;lt;test arg1 arg2&amp;gt;；引用参数：.Get 0 得到 arg1，.Get 1 得到 arg2。
+  双标签内部文本调用：&amp;lt;test&amp;gt; xxxxx &amp;lt;/test&amp;gt;；引用参数：.Inner 得到纯文本 xxxxx。
+  双标签内部渲染调用：%test% xxxxx %/test%；引用参数：.Inner 得到经过 Markdown 渲染后的 xxxxx。
+  </description>
+    </item>
+    
+    <item>
+      <title>如何解决 Github Page 仓库更新后页面无变化的问题？</title>
+      <link>http://ccviolett.github.io/posts/3-nojekyll/</link>
+      <pubDate>Sat, 26 Feb 2022 20:05:05 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/3-nojekyll/</guid>
+      <description>我们可以在仓库页面上看见最近一次地 push 左边有个红叉，右侧边栏 Environments 中显示 github-pages (Failure)。
+这是因为 Github Page 不会直接展示上传的裸的静态文件，而会默认使用 Jekyll 渲染一次，这样在 Build 环节就会出现问题，后续的 Deploy 环节也就会出问题，于是无论怎么往仓库 Push 都不能改变页面。
+需要在仓库中新建一个 .nojekyll 的空文件来指明不需要 Github 自作主张地用 Jekyll 渲染。
+相关链接：Static site generators</description>
+    </item>
+    
+    <item>
+      <title>Windows 有哪些好用的隐藏功能？</title>
+      <link>http://ccviolett.github.io/posts/2-windowshidefun/</link>
+      <pubDate>Fri, 25 Feb 2022 17:56:43 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/2-windowshidefun/</guid>
+      <description>一、自带截图    Win + Shift + S 即可唤出自带的截图软件。
+二、自带 Linux 子系统    依次打开控制面板 -&amp;gt; Windows 功能 -&amp;gt; 适用于 Linux 的 Windows 子系统，勾选上，重启电脑。
+随后在 Microsoft Store 中搜索想要安装的 Linux 子系统，如 Ubuntu，点击 获取，随后跟随指示完成即可。</description>
+    </item>
+    
+    <item>
+      <title>Hugo 的使用&amp;配置中有那些技巧与坑？</title>
+      <link>http://ccviolett.github.io/posts/1-hugousage/</link>
+      <pubDate>Mon, 17 Jan 2022 11:24:56 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/1-hugousage/</guid>
+      <description>零、安装 一、使用 二、配置 三、踩坑 四、技巧     零、安装    这里以 Windows 下安装为例。
+直接在 Release 页面 下载对应平台压缩包，解压后将路径添加到系统 PATH 中，或者直接将 hugo.exe 扔进 C:\Windows\System 中。
+一、使用    新建网站：hugo new site myblog
+新建文章：hugo new posts/xxxx.md
+本地服务器预览：hugo server，随后可以通过访问本地端口预览。
+生成静态文件：hugo，随后可在 public 文件夹中得到渲染好的静态文件。
+二、配置    下载主题 Coder，将其以文件夹形式解压至 themes 文件夹下，并复命名为 hugo-coder，随后将其中 exampleSite 文件夹下的文件复制到博客文件夹下。
+代码高亮配置    官方文档：Syntax Highlighting
+Hugo 中集成了 Chroma 来进行代码高亮。
+TLDR：将下列设置复制到配置文件中（以 TOML 为例）
+[markup] [markup.</description>
+    </item>
+    
+    <item>
+      <title>为什么我要重新开始写博客？</title>
+      <link>http://ccviolett.github.io/posts/0-resume/</link>
+      <pubDate>Mon, 17 Jan 2022 08:05:59 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/0-resume/</guid>
+      <description>一切都应该重新开始了……
+一、从前    我叫罗潇阳，曾就读于长沙市第一中学，是一个普通的 OIer，现就读于东北大学秦皇岛分校，是一个普通的 ACMer，也是一名普通的机械类学生。
+我在高中时，对写博客很是痴迷，或者说是对折腾博客很痴迷。那时零零散散写了很多博客，每每学到什么就一定要写出来，长短不一，质量参差，花掉了数倍于学习的时间。
+后来写博客疲乏了，就去折腾折腾主题、往博客上加小功能。虽说这间接地为我打开了前端的大门，可又是耗掉数倍于学习的时间，至于博客也没怎么写了。
+惭愧说来，那时真正一门心思钻研竞赛题目的时间，是少之又少。
+那时候写博客没有一个尺度，难的要写，简单的也要写，一个铺天盖地的东西，反反复复写来写去，满足了小小的虚荣，挥霍了大把时光。
+无意间便被一个又一个人超过。
+折腾博客则更是杀时间，一个人胡乱摸索，零零碎碎地啃着，又满足于浅表，干了很多码农活，杂乱的功能、网站，一个又一个的轮子。
+于是被甩去很远。
+想想当时顶着老师施加的高压在写博客、折腾博客，还很不理解，现在大概能感悟些什么了。
+在一次约谈后，我的博客正式关停了，自此，有什么想法都往一个个 .md 里写，不再去分类归档，不用再去考虑内容质量，写的东西越来越混乱，记录、创作的欲望也便一再减弱。
+后来终于不再想写东西了。
+空间到期了，没有钱、没有时间、没了需求，也没有冲动去续费了。
+域名就放在那里腐烂，落得破败，如今不仅已不属于我，还被糟蹋得不堪入目，以至于迫使我改掉了我的网名。
+写的文章也忘了备份，以前的笔记不知道丢失到了哪里，总之也是些幼稚的东西。
+然而我终究是回来了，重新开始了，我再次搭起了我的博客。
+二、混沌    我不知道是什么时候开始的，学东西没了安全感。
+可能是因为我忘记了看过的一本本书里面讲了什么；可能是因为我又到处在百度 CSS 选择器的用法；可能是因为我看着以前的一堆 TODO-List，对里面的技术栈已经印象模糊；可能是因为我想要学、需要学的东西越来越多，而我却发现我已经忘了很多。
+仔细想想，我能够接受我会忘记所有，我只是害怕时间虚度。我现在变得格外害怕时间的逝去，然而我又什么都不想做、不敢做，我觉得我无论做什么，过了一个月、半年、一年后，我忘记了，这些投入的时间便都浪费了。
+大概是高考前的那一两个月，后期极度的高效和前期无论怎么努力都无法提分的对比，让我对于低效的学习方法产生了恐惧。提问式总结与高度浓缩的知识点让我对所有学习的东西都有强烈的总结欲望。
+我的学习思维和方式被那一两个月彻底改变了，使得我后来学习东西，变得害怕像是前期的学习那样，以为自己学会了，实际上一无所知。
+于是我什么都没学了，停滞了。只有大学那几门课，套用高中后期传统的方法，拿笔拿纸，一笔一划写，花了几天时间过掉了，拿了一个不高不低的分，除去高数失误，排名在 10%，加上之后就掉到 40% 去了。
+然而当我学习其他东西的时候，我不愿意再用传统的纸笔去做，总觉得还是低效，无法保留下来，修改查询还是要花费很多时间，诸如此类。
+但我又没了码字的激情和兴趣。
+于是什么学习都没能进行下来。
+三、回归    前天和阔别已经的一个同学见面，在房间里聊了很多，他去了一个好大学内卷，我只在一个末流 985 混日子。两个人聊着聊着，隐隐约约有些沟壑，我能够很明显地感受到，他在向前走，在源源不断地学习，虽然我不知道学习的效果怎么样，但是他确实已经走在我的前面了。
+我在想着如何诉说我的苦衷，我是如何如何无法进行我的学习，说着说着，思路反而忽然明了了，我所需要的就是我从前心心念念的博客。
+和他聊完之后，我前所未有地充满了折腾的动力，我终于关掉了我的 Windows，回到了我的 ArchLinux，虽然已经有些陌生了，不过很快便找回了那种亲切感——我果然还是属于这里。
+从前的习惯逐渐恢复，折腾的乐趣又开始让我满足，不过这次我不再沉迷于其中了，花了点时间选了个好的框架，搭建好，以后便认真创作了，我终于没有了不再学习的借口。
+能够将自己的知识沉淀，便是有意义的。去做有意义的事情，便有了动力，便不会心慌。
+希望我以后能认认真真创作内容，少些花里胡哨的东西，踏踏实实地做点什么。
+四、自我介绍    以前的英文名不再使用，现在改为了 Carmine Carlo，这是搭建博客的时候，临时在一个国外的宝宝起名网站上找的。
+其中，Carmine 是上帝后花园的意思，Carlo 是自由人的意思，选这两个词，主要是为了凑齐 CC （笑）。
+我的全称是 ccviolett，前面的 cc 是我为了方便注册域名随便加的，然后去凑了英文名 Carmine Carlo，所以里面的 Violett 才是关键。至于 Violett 是什么嘛……我从我的女朋友名字中取了一个“紫”字，然后翻译为了德语，便有了 Violett。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ccvilett on 罗潇阳的博客</title>
+    <link>http://ccviolett.github.io/authors/ccvilett/</link>
+    <description>Recent content in ccvilett on 罗潇阳的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 01 Mar 2022 11:18:17 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/authors/ccvilett/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>怎么成为一个牛客网出题人？</title>
+      <link>http://ccviolett.github.io/posts/7-nowcoderup/</link>
+      <pubDate>Tue, 01 Mar 2022 11:18:17 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/7-nowcoderup/</guid>
+      <description>首先看到牛客网发布的招募文档原创编程题出题官招募，了解出题流程、出题人要求、出题要求以及薪资。
+  关于报酬结算的独立文档：兼职人员劳务报酬结算规则
+  关于出题要求的独立文档：编程题出题流程与要求，包含了对知识点、原创性、出题模式、题目描述、样例和数据要求的简要说明。
+  关于出题要求的完整博客：牛客出题文档须知
+  简单看完之后，就可以去填写报名链接：牛客出题人信息统计。
+准备出校招题的可以再看看另一份出题文档：校招出题方案与价格，较 编程题出题流程与要求 更为详细。
+大概一小时左右，如果你符合要求，根据你填报信息中，准备投递题目的类型，会有不同的官方人员来联系你。
+ 牛客系列赛由王清楚（QQ234186389）负责 校招题目由牛栏山（QQ243440415）负责  一、校招出题人    官方人员会再次和你说明投题的具体流程：
+  您先提供5道题为一套，按照这个要求，符合知识点范围，绝对原创https://docs.qq.com/doc/DQllTeHJkS25kVnl3
+  相比竞赛出题，校招出题的要求
+ 第一是数据采用oi比赛梯度制（比如5大5小），因为校招有部分分 第二是大数不要超过1e14的范围，会让js语言爆精度 第三是复杂度最终不要超过1e7，比如卡n方出到2e5到3e5左右就可以了，2e5以上的输入或者输出要开2秒，输入输出不能到1e6数量级第四 尽量多考代码，可以出板子题魔改（只要不是原板子就行），少出思维比较难的3. 您把出好的题目放在腾讯线上文档上，包含：题面、题解、样例，就像这样：第六套    把文档发给我就可以啦，我这边找人审核
+  审核通过，您就把题目录入到题库中
+  我这边找人验题，您提供标程和数据
+  验题完成，您就可以在月底拿到该题薪酬啦
+  随后官方人员会发一个文件《牛客试题采购协议》，并发送一个协议链接，在其中填写好个人信息。注意：此步需要提供本人的银行卡卡号，由于接收后续的报酬。
+官方人员会将你拉进牛客出题人的群。
+在几小时之后，就会收到提醒签署电子协议的短信，根据短信中的链接，在线签署协议。注意：此步需要提供本人身份证正反面照片，用于身份确认。
+二、系列赛出题人    系列赛出题文档：牛客系列赛难度参考</description>
+    </item>
+    
+  </channel>
+</rss>
