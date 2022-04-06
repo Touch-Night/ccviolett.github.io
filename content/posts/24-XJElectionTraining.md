@@ -13,7 +13,7 @@ series = []
 
 {{<toc>}}
 
-{{% hugo-encryptor "xzf" %}}
+{{% hugo-encryptor "wzf" %}}
 
 ## 零、基本信息
 
