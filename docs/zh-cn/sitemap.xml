@@ -74,11 +74,39 @@
     <loc>http://ccviolett.github.io/posts/39-machineryreport-structuredesign/</loc>
     <lastmod>2022-04-04T09:56:35+08:00</lastmod>
   </url><url>
+    <loc>http://ccviolett.github.io/categories/</loc>
+    <lastmod>2022-04-04T07:56:27+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://ccviolett.github.io/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="http://ccviolett.github.io/categories/"
+                />
+  </url><url>
     <loc>http://ccviolett.github.io/tags/%E5%85%AC%E5%85%B1%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/</loc>
+    <lastmod>2022-04-04T07:56:27+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/tags/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/</loc>
+    <lastmod>2022-04-04T07:56:27+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-04-04T07:56:27+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/posts/38-lesson-logic/</loc>
     <lastmod>2022-04-04T07:56:27+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/posts/37-lesson-epistemology/</loc>
+    <lastmod>2022-04-04T07:55:58+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/posts/36-lesson-semiotics/</loc>
+    <lastmod>2022-04-04T07:54:42+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/posts/35-lesson-microfilm/</loc>
+    <lastmod>2022-04-04T07:54:06+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/todo/220404/</loc>
     <lastmod>2022-04-04T07:39:36+08:00</lastmod>
@@ -113,7 +141,10 @@
     <loc>http://ccviolett.github.io/posts/29-myalgorithmbug/</loc>
     <lastmod>2022-03-24T22:07:50+08:00</lastmod>
   </url><url>
-    <loc>http://ccviolett.github.io/posts/28-learncppinclass/</loc>
+    <loc>http://ccviolett.github.io/posts/28-lesson-cpp/</loc>
+    <lastmod>2022-03-23T20:46:47+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/tags/%E6%95%B0%E5%AD%A6%E4%B8%8E%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E7%B1%BB/</loc>
     <lastmod>2022-03-23T20:46:47+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/posts/27-probleminpowershell/</loc>
@@ -163,19 +194,6 @@
   </url><url>
     <loc>http://ccviolett.github.io/posts/14-howtofixhp/</loc>
     <lastmod>2022-03-08T10:01:47+08:00</lastmod>
-  </url><url>
-    <loc>http://ccviolett.github.io/categories/</loc>
-    <lastmod>2022-03-06T13:28:04+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://ccviolett.github.io/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="http://ccviolett.github.io/categories/"
-                />
   </url><url>
     <loc>http://ccviolett.github.io/tags/cf2000%E5%88%86%E8%AE%A1%E5%88%92/</loc>
     <lastmod>2022-03-06T13:28:04+08:00</lastmod>

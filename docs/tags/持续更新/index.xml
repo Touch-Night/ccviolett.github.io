@@ -37,18 +37,5 @@
 八、生态系统观    问：</description>
     </item>
     
-    <item>
-      <title>【持续更新】跟着创新实验班学 Web 开发</title>
-      <link>http://ccviolett.github.io/posts/5-learnwithteam/</link>
-      <pubDate>Sun, 27 Feb 2022 22:38:37 +0800</pubDate>
-      
-      <guid>http://ccviolett.github.io/posts/5-learnwithteam/</guid>
-      <description>一、Git入门  配置基本用户信息 初始化本地仓库 关联远程仓库 从远程服务器克隆一个仓库 显示当前工作目录下的提交状态（类似于GitKraken中右边的窗口） 将指定文件Stage（标记为将要被提交的文件） 将指定文件Unstage（取消标记） 创建一个提交并附上提交信息 显示提交历史（类似GitKraken中间的窗口） 向远程仓库推送（Push） 从远程仓库拉取（Pull） 分支（branch） 签出（check out）   二、HCJ（HTML + CSS + Javascript) 快速入门  （一）HTML （二）CSS （三）JavaScript   三、安装mysql和php   一、Git入门    视频教程：Git + GitHub 10分钟完全入门
-配置基本用户信息    git config --global user.name &amp;lt;你的用户名&amp;gt;
-git config --global user.email &amp;lt;你的邮箱地址&amp;gt;
-初始化本地仓库    git init
-关联远程仓库    git remote add &amp;lt;自定义仓库名&amp;gt; &amp;lt;远程仓库地址&amp;gt;</description>
-    </item>
-    
   </channel>
 </rss>

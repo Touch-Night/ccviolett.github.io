@@ -1,12 +1,12 @@
 +++ 
 draft = false
 date = 2022-03-23T20:46:47+08:00
-title = "跟着大学课程学习 C++"
+title = "学习笔记 | C++"
 description = ""
 slug = ""
-authors = []
-tags = []
-categories = []
+authors = ["ccviolett"]
+tags = ["大学课程","数学与自然科学类"]
+categories = ["学习笔记"]
 externalLink = ""
 series = []
 +++

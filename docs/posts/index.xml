@@ -52,17 +52,42 @@ D：保守力做功并不会影响系统的机械能，会和保守势能相互�
     </item>
     
     <item>
-      <title>公共基础课程 | 逻辑学导论</title>
+      <title>学习笔记 | 逻辑学导论</title>
       <link>http://ccviolett.github.io/posts/38-lesson-logic/</link>
       <pubDate>Mon, 04 Apr 2022 07:56:27 +0800</pubDate>
       
       <guid>http://ccviolett.github.io/posts/38-lesson-logic/</guid>
-      <description>1. 引论：走进逻辑学  1.1 逻辑学是什么 1.2 逻辑与法律：普罗泰戈拉悖论 1.3 逻辑学的功能和研究范围 1.4 认识“非西方逻辑”   2. 论证  2.1 论证的关键概念 2.2 命题、陈述与语句 2.3 经验命题与必然命题 2.4 论证的含义与类型     每一个直言命题都由四个要素构成：量项-主项-联项-谓项
+      <description>直言命题 文恩图 欧拉图 周延性 对当方阵（逻辑方阵） 对当关系论证   1. 引论：走进逻辑学  1.1 逻辑学是什么 1.2 逻辑与法律：普罗泰戈拉悖论 1.3 逻辑学的功能和研究范围 1.4 认识“非西方逻辑”   2. 论证  2.1 论证的关键概念 2.2 命题、陈述与语句 2.3 经验命题与必然命题 2.4 论证的含义与类型     直言命题    每一个直言命题都由四个要素构成：量项-主项-联项-谓项
 如：量项(所有) 主项(艺术家) 联项(都是) 谓项(人)
 直言命题的四种形式：
- A：所有 S 都是 P E：所有 S 都不是 P I：有些 S 是 P O：有些 S 不是 P  直言命题的量：根据直言命题的量项，分为 全称命题 与 特称命题。
-直言命题的质：根据直言命题的联项，分为 肯定命题 与 否定命题。
-文恩图： （1）留空白：表示区域未知 （2）画阴影：表示区域空缺 （3）画星号“*”：表示区域内存在元素 文恩图表示四种直言命题： 1. 引论：走进逻辑学    1.</description>
+ A：所有 S 都是 P E：所有 S 都不是 P I：有些 S 是 P O：有些 S 不是 P  直言命题的量：根据直言命题的量项，分为 全称命题 与 特称命题。</description>
+    </item>
+    
+    <item>
+      <title>学习笔记 | 知识论导论：我们能知道什么？</title>
+      <link>http://ccviolett.github.io/posts/37-lesson-epistemology/</link>
+      <pubDate>Mon, 04 Apr 2022 07:55:58 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/37-lesson-epistemology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>学习笔记 | 意义生活：符号学导论</title>
+      <link>http://ccviolett.github.io/posts/36-lesson-semiotics/</link>
+      <pubDate>Mon, 04 Apr 2022 07:54:42 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/36-lesson-semiotics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>学习笔记 | 宋崇导演教你拍摄微电影</title>
+      <link>http://ccviolett.github.io/posts/35-lesson-microfilm/</link>
+      <pubDate>Mon, 04 Apr 2022 07:54:06 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/35-lesson-microfilm/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -163,11 +188,11 @@ onClick 自动触发  将 onClick = {func()} 改为 onClick = {() =&amp;gt; {fun
     </item>
     
     <item>
-      <title>跟着大学课程学习 C&#43;&#43;</title>
-      <link>http://ccviolett.github.io/posts/28-learncppinclass/</link>
+      <title>学习笔记 | C&#43;&#43;</title>
+      <link>http://ccviolett.github.io/posts/28-lesson-cpp/</link>
       <pubDate>Wed, 23 Mar 2022 20:46:47 +0800</pubDate>
       
-      <guid>http://ccviolett.github.io/posts/28-learncppinclass/</guid>
+      <guid>http://ccviolett.github.io/posts/28-lesson-cpp/</guid>
       <description>静态变量    问题：请问下列程序会输出什么？
 #include &amp;lt;iostream&amp;gt; using namespace std; int fun() { static int x = 1; x *= 2; return x; } int main() { int i, s = 1; for (i = 1; i &amp;lt;= 3; ++i) s *= fun(); cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl; } 答案：64</description>
     </item>
@@ -473,16 +498,13 @@ Free Educational Licenses
     </item>
     
     <item>
-      <title>【持续更新】跟着创新实验班学 Web 开发</title>
+      <title>跟着创新实验班学 Web 开发</title>
       <link>http://ccviolett.github.io/posts/5-learnwithteam/</link>
       <pubDate>Sun, 27 Feb 2022 22:38:37 +0800</pubDate>
       
       <guid>http://ccviolett.github.io/posts/5-learnwithteam/</guid>
-      <description>一、Git入门  配置基本用户信息 初始化本地仓库 关联远程仓库 从远程服务器克隆一个仓库 显示当前工作目录下的提交状态（类似于GitKraken中右边的窗口） 将指定文件Stage（标记为将要被提交的文件） 将指定文件Unstage（取消标记） 创建一个提交并附上提交信息 显示提交历史（类似GitKraken中间的窗口） 向远程仓库推送（Push） 从远程仓库拉取（Pull） 分支（branch） 签出（check out）   二、HCJ（HTML + CSS + Javascript) 快速入门  （一）HTML （二）CSS （三）JavaScript   三、安装mysql和php   一、Git入门    视频教程：Git + GitHub 10分钟完全入门
-配置基本用户信息    git config --global user.name &amp;lt;你的用户名&amp;gt;
-git config --global user.email &amp;lt;你的邮箱地址&amp;gt;
-初始化本地仓库    git init
-关联远程仓库    git remote add &amp;lt;自定义仓库名&amp;gt; &amp;lt;远程仓库地址&amp;gt;</description>
+      <description>一、Git入门 二、HCJ（HTML + CSS + Javascript) 快速入门  （一）HTML （二）CSS （三）JavaScript   三、安装mysql和php 四、岗位了解 五、前期知识 六、分流   一、Git入门    视频教程：Git + GitHub 10分钟完全入门
+ 配置基本用户信息  git config --global user.name &amp;lt;你的用户名&amp;gt; git config --global user.email &amp;lt;你的邮箱地址&amp;gt; 初始化本地仓库 git init 关联远程仓库 git remote add &amp;lt;自定义仓库名&amp;gt; &amp;lt;远程仓库地址&amp;gt; 从远程服务器克隆一个仓库 git clone &amp;lt;远程仓库的url&amp;gt; 显示当前工作目录下的提交状态 git status 将指定文件Stage（标记为将要被提交的文件） git add &amp;lt;文件路径&amp;gt; 将指定文件Unstage（取消标记） git reset &amp;lt;文件路径&amp;gt; 创建一个提交并附上提交信息 git commit -m &amp;quot;提交信息&amp;quot; 显示提交历史 git log 向远程仓库推送（Push） git push 从远程仓库拉取（Pull） git pull 分支（branch）  master是主分支（默认），分支在不合并的情况下是相互独立的 git branch 查看所有分支 git branch &amp;lt;分支名字&amp;gt; 新建分支 git checkout &amp;lt;分支名字&amp;gt; 切换分支 git branch -m &amp;lt;旧名字&amp;gt; &amp;lt;新名字&amp;gt; 修改分支名 git branch -d &amp;lt;分支名字&amp;gt; 删除分支   签出（check out） git checkout &amp;lt;提交的hash&amp;gt;  如果一开始不太熟悉命令行操作，建议使用 GitKraken，第一次启动会提示登录，然后填写签名信息（随便填，不一定要真实），就可以点左上角的文件夹-&amp;gt;Init创建代码仓库（Repository）了。</description>
     </item>
     
     <item>

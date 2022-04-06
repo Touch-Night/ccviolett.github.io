@@ -6,24 +6,21 @@
 <meta content="zh-cn" http-equiv="Content-Language"/>
 <meta content="light dark" name="color-scheme"/>
 <meta content="罗潇阳" name="author"/>
-<meta content="静态变量    问题：请问下列程序会输出什么？
-#include &lt;iostream&gt; using namespace std; int fun() { static int x = 1; x *= 2; return x; } int main() { int i, s = 1; for (i = 1; i &lt;= 3; ++i) s *= fun(); cout &lt;&lt; s &lt;&lt; endl; } 答案：64" name="description"/>
+<meta content="罗潇阳的个人网站" name="description"/>
 <meta content="博客,开发者,个人" name="keywords"/>
 <meta content="summary" name="twitter:card"/>
-<meta content="跟着大学课程学习 C++" name="twitter:title"/>
-<meta content="静态变量    问题：请问下列程序会输出什么？
-#include &lt;iostream&gt; using namespace std; int fun() { static int x = 1; x *= 2; return x; } int main() { int i, s = 1; for (i = 1; i &lt;= 3; ++i) s *= fun(); cout &lt;&lt; s &lt;&lt; endl; } 答案：64" name="twitter:description"/>
-<meta content="跟着大学课程学习 C++" property="og:title"/>
-<meta content="静态变量    问题：请问下列程序会输出什么？
-#include &lt;iostream&gt; using namespace std; int fun() { static int x = 1; x *= 2; return x; } int main() { int i, s = 1; for (i = 1; i &lt;= 3; ++i) s *= fun(); cout &lt;&lt; s &lt;&lt; endl; } 答案：64" property="og:description"/>
+<meta content="学习笔记 | 知识论导论：我们能知道什么？" name="twitter:title"/>
+<meta content="" name="twitter:description"/>
+<meta content="学习笔记 | 知识论导论：我们能知道什么？" property="og:title"/>
+<meta content="" property="og:description"/>
 <meta content="article" property="og:type"/>
-<meta content="http://ccviolett.github.io/posts/28-learncppinclass/" property="og:url"/><meta content="posts" property="article:section"/>
-<meta content="2022-03-23T20:46:47+08:00" property="article:published_time"/>
-<meta content="2022-03-23T20:46:47+08:00" property="article:modified_time"/>
+<meta content="http://ccviolett.github.io/posts/37-lesson-epistemology/" property="og:url"/><meta content="posts" property="article:section"/>
+<meta content="2022-04-04T07:55:58+08:00" property="article:published_time"/>
+<meta content="2022-04-04T07:55:58+08:00" property="article:modified_time"/>
 <title>
-  跟着大学课程学习 C++ · 罗潇阳的博客
+  学习笔记 | 知识论导论：我们能知道什么？ · 罗潇阳的博客
 </title>
-<link href="http://ccviolett.github.io/posts/28-learncppinclass/" rel="canonical"/>
+<link href="http://ccviolett.github.io/posts/37-lesson-epistemology/" rel="canonical"/>
 <link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
 <link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
 <link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
@@ -89,8 +86,8 @@ var _hmt = _hmt || [];
 <header>
 <div class="post-title">
 <h1 class="title">
-<a class="title-link" href="http://ccviolett.github.io/posts/28-learncppinclass/">
-              跟着大学课程学习 C++
+<a class="title-link" href="http://ccviolett.github.io/posts/37-lesson-epistemology/">
+              学习笔记 | 知识论导论：我们能知道什么？
             </a>
 </h1>
 </div>
@@ -98,43 +95,29 @@ var _hmt = _hmt || [];
 <div class="date">
 <span class="posted-on">
 <i aria-hidden="true" class="fa fa-calendar"></i>
-<time datetime="2022-03-23T20:46:47+08:00">
-                2022 年 3 月 23 日
+<time datetime="2022-04-04T07:55:58+08:00">
+                2022 年 4 月 4 日
               </time>
 </span>
 <span class="reading-time">
 <i aria-hidden="true" class="fa fa-clock-o"></i>
-              阅读时间：1 分钟
+              阅读时间：0 分钟
             </span>
 </div>
+<div class="authors">
+<i aria-hidden="true" class="fa fa-user"></i>
+<a href="/authors/ccviolett/">ccviolett</a></div>
+<div class="categories">
+<i aria-hidden="true" class="fa fa-folder"></i>
+<a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></div>
+<div class="tags">
+<i aria-hidden="true" class="fa fa-tag"></i>
+<span class="tag">
+<a href="/tags/%E5%85%AC%E5%85%B1%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/">公共基础课程</a>
+</span></div>
 </div>
 </header>
 <div>
-<h3 id="静态变量">
-  静态变量
-  <a class="heading-link" href="#%e9%9d%99%e6%80%81%e5%8f%98%e9%87%8f">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
-</h3>
-<p>问题：请问下列程序会输出什么？</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-cpp" data-lang="cpp"><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;iostream&gt;</span><span style="color:#888;font-weight:bold">
-</span><span style="color:#888;font-weight:bold"></span>
-<span style="font-weight:bold;text-decoration:underline">using</span> <span style="font-weight:bold;text-decoration:underline">namespace</span> std;
-
-<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">fun</span>() {
-	<span style="font-weight:bold;text-decoration:underline">static</span> <span style="font-weight:bold;text-decoration:underline">int</span> x = 1;
-	x *= 2;
-	<span style="font-weight:bold;text-decoration:underline">return</span> x;
-}
-
-<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">main</span>() {
-	<span style="font-weight:bold;text-decoration:underline">int</span> i, s = 1;
-	<span style="font-weight:bold;text-decoration:underline">for</span> (i = 1; i &lt;= 3; ++i)
-		s *= fun();
-	cout &lt;&lt; s &lt;&lt; endl;
-}
-
-</code></pre></div><p>答案：64</p>
 </div>
 <footer>
 </footer>
@@ -143,7 +126,7 @@ var _hmt = _hmt || [];
 </div>
 <footer class="footer">
 <section class="container">
-<p>愿你成为自己的太阳，无需借助别人的光。</p>
+<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
       
       
         ©

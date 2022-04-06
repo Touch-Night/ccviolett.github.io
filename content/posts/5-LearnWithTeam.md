@@ -1,11 +1,11 @@
 +++ 
 draft = false
 date = 2022-02-27T22:38:37+08:00
-title = "【持续更新】跟着创新实验班学 Web 开发"
+title = "跟着创新实验班学 Web 开发"
 description = ""
 slug = ""
 authors = ["ccviolett"]
-tags = ["持续更新"]
+tags = []
 categories = []
 externalLink = ""
 series = []
@@ -17,74 +17,31 @@ series = []
 
 视频教程：[Git + GitHub 10分钟完全入门](https://www.bilibili.com/video/BV1KD4y1S7FL)
 
-### 配置基本用户信息
+1. 配置基本用户信息
 
-`git config --global user.name <你的用户名>`
+```bash
+git config --global user.name <你的用户名>
+git config --global user.email <你的邮箱地址>
+```
 
-`git config --global user.email <你的邮箱地址>`
-
-### 初始化本地仓库
-
-`git init`
-
-### 关联远程仓库
-
-`git remote add <自定义仓库名> <远程仓库地址>`
-
-### 从远程服务器克隆一个仓库
-
-`git clone <远程仓库的url>`
-
-### 显示当前工作目录下的提交状态（类似于GitKraken中右边的窗口）
-
-`git status`
-
-### 将指定文件Stage（标记为将要被提交的文件）
-
-`git add <文件路径>`
-
-### 将指定文件Unstage（取消标记）
-
-`git reset <文件路径>`
-
-### 创建一个提交并附上提交信息
-
-`git commit -m "提交信息"`
-
-### 显示提交历史（类似GitKraken中间的窗口）
-
-`git log`
-
-按q退出
-
-### 向远程仓库推送（Push）
-
-`git push`
-
-### 从远程仓库拉取（Pull）
-
-`git pull`
-
-### 分支（branch）
-
-master是主分支（默认），分支在不合并的情况下是相互独立的
-
-`git branch` 查看所有分支
-
-`git branch <分支名字>` 新建分支
-
-`git checkout <分支名字>` 切换分支
-
-`git branch -m <旧名字> <新名字>` 修改分支名
-
-`git branch -d <分支名字>` 删除分支
-
-### 签出（check out）
-
-`git checkout <提交的hash>`
-
-
---- 
+2. 初始化本地仓库 `git init`
+3. 关联远程仓库 `git remote add <自定义仓库名> <远程仓库地址>`
+4. 从远程服务器克隆一个仓库 `git clone <远程仓库的url>`
+5. 显示当前工作目录下的提交状态 `git status`
+6. 将指定文件Stage（标记为将要被提交的文件） `git add <文件路径>`
+7. 将指定文件Unstage（取消标记） `git reset <文件路径>`
+8. 创建一个提交并附上提交信息 `git commit -m "提交信息"`
+9. 显示提交历史 `git log`
+10. 向远程仓库推送（Push） `git push`
+11. 从远程仓库拉取（Pull） `git pull`
+12. 分支（branch）
+    - master是主分支（默认），分支在不合并的情况下是相互独立的
+    - `git branch` 查看所有分支
+    - `git branch <分支名字>` 新建分支
+    - `git checkout <分支名字>` 切换分支
+    - `git branch -m <旧名字> <新名字>` 修改分支名
+    - `git branch -d <分支名字>` 删除分支
+13. 签出（check out） `git checkout <提交的hash>`
 
 如果一开始不太熟悉命令行操作，建议使用 [GitKraken](https://www.gitkraken.com/)，第一次启动会提示登录，然后填写签名信息（随便填，不一定要真实），就可以点左上角的`文件夹->Init`创建代码仓库（Repository）了。
 
@@ -96,41 +53,20 @@ master是主分支（默认），分支在不合并的情况下是相互独立�
 
 ### （一）HTML
 
-`<!DOCTYPE html>` html5标准网页声明，是命令，不是标签
-
-下面是一些非常常见的标签
-
-`<html>` 根标签
-
-`<head>` 头标签，描述了文档的各种属性和信息
-
-`<body>` 定义网页正文，构成显示的主要内容
-
-`<h1> <h2> <h3> <h4> <h5> <h6>` 标题标签，跟word里面的标题差不多，由1到6字体依次减小
-
-`<p>` 段落标签，表示一个段落，段与段间有空行，可通过align属性设置对齐方式
-
-`<br>` 换行标签
-
-`<hr/>` 画一条水平线，有width、size、color等属性
-
-`<div>` 块标签，表面上没什么用，其实大大方便了布局
-
-`<font>` 字体标签，定义标签内的字体，有size、color、face等属性。
-
-`<img />` 图片标签，有src(图片地址)、width、height、align等属性
-
- `<a>` 链接标签，有href(后跟跳转地址，若是其他网址需带协议)、target(\_blank表示新窗口打开，\_self表示原窗口打开，默认为新窗口打开)等属性
-
-此外，还有可设置加粗、删除线等文字格式化标签（内容很多），列表标签等，感兴趣可深入学习。
-
-**下面是个人认为及其重要的标签**
-
-`<table> <tr> <th> <td>` table是表格的根标签，tr定义行，th定义列名，td定义列内容
-
----
-
-`<form> <input>` 表单标签，form主要需要设置action、method、enctype属性
+- `<!DOCTYPE html>` html5标准网页声明，是命令，不是标签
+- `<html>` 根标签
+- `<head>` 头标签，描述了文档的各种属性和信息
+- `<body>` 定义网页正文，构成显示的主要内容
+- `<h1> <h2> <h3> <h4> <h5> <h6>` 标题标签，跟word里面的标题差不多，由1到6字体依次减小
+- `<p>` 段落标签，表示一个段落，段与段间有空行，可通过align属性设置对齐方式
+- `<br>` 换行标签
+- `<hr/>` 画一条水平线，有width、size、color等属性
+- `<div>` 块标签，表面上没什么用，其实大大方便了布局
+- `<font>` 字体标签，定义标签内的字体，有size、color、face等属性。
+- `<img />` 图片标签，有src(图片地址)、width、height、align等属性
+- `<a>` 链接标签，有href(后跟跳转地址，若是其他网址需带协议)、target(\_blank表示新窗口打开，\_self表示原窗口打开，默认为新窗口打开)等属性
+- `<table> <tr> <th> <td>` table是表格的根标签，tr定义行，th定义列名，td定义列内容
+- `<form> <input>` 表单标签，form主要需要设置action、method、enctype属性
 
 > \<form> 的属性
 >
@@ -143,8 +79,6 @@ master是主分支（默认），分支在不合并的情况下是相互独立�
 > \<input> 的属性
 >
 > 主要是type属性，定义了~~emmmm控件的类型？~~，看演示吧
-
-form+table经常用到
 
 ### （二）CSS
 
@@ -230,6 +164,7 @@ apt-get update #更新软件源缓存
 apt install php7.3-fpm php7.3-mysql php7.3-curl php7.3-gd php7.3-mbstring php7.3-xml php7.3-xmlrpc php7.3-zip php7.3-opcache -y
 sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/' /etc/php/7.3/fpm/php.ini  #出于安全考虑
 ```
+
 配置nginx：
 
 注释掉默认的服务器配置，添加自定义内容：
@@ -290,3 +225,37 @@ server {
 到浏览器访问一下
 
 这样LNMP环境就搭建好了
+
+## 四、岗位了解
+
+课程链接：[5分钟带你了解互联网岗位职责和关系](https://www.bilibili.com/video/BV1Ng4y167Ya?from=search&seid=5991464712572853506&spm_id_from=333.337.0.0)
+
+## 五、前期知识
+
+HTML:
+- [黑马程序员pink老师前端入门教程]https://www.bilibili.com/video/av80149248
+- [HTML+CSS 前端入门视频教程](https://www.bilibili.com/video/BV1CK411G7m4)
+
+Java：
+- [零基础学Java语言](https://www.icourse163.org/course/ZJU-1001541001)
+- [Java核心技术](https://www.icourse163.org/course/ECNU-1002842004)
+- [Java核心技术(进阶)](https://www.icourse163.org/course/ECNU-1003718005)
+- [Java核心技术(高阶)](https://www.icourse163.org/course/ECNU-1206500807)
+
+## 六、分流
+
+1. 前端：
+- [web前端零基础html5+css3+前端项目视频教程](https://www.bilibili.com/video/BV1Kg411T7t9)
+- [黑马程序员 Javascript 全套教程](https://www.bilibili.com/video/BV1ux411d75J)
+
+2. 后端：
+- [JavaWeb从入门到项目实战](https://www.bilibili.com/video/BV1qv4y1o79t)
+- [MySQL 数据库简介](http://www.imooc.com/wiki/mysqllesson/mysqlinfo.html)
+
+3. Android:
+- [Android（安卓）开发零基础入门课程](https://www.bilibili.com/video/BV13y4y1E7pF)
+- [Android 入门教程](http://www.imooc.com/wiki/androidlesson)
+
+4. 产品经理
+- [2022最新版产品经理入门到精通](https://www.bilibili.com/video/BV1hZ4y1A7GG)
+
