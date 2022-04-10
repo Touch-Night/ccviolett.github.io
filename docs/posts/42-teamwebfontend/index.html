@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="zh-cn" http-equiv="Content-Language"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="罗潇阳" name="author"/>
+<meta content="相关链接 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位   案例实现  选中框     相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果
+若干浮动的元素会按照横向排列
+元素只会在父级元素中浮动，但是浮动元素不占据空间，无法撑开父元素。可以通过设置父元素 overflow: auto，使得其自动调整大小以适应溢出元素。还可以设置 clear: left/right/both 来使得当前元素不受到浮动的影响。" name="description"/>
+<meta content="博客,开发者,个人" name="keywords"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="创新实验班 Web 开发 | 前端" name="twitter:title"/>
+<meta content="相关链接 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位   案例实现  选中框     相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果
+若干浮动的元素会按照横向排列
+元素只会在父级元素中浮动，但是浮动元素不占据空间，无法撑开父元素。可以通过设置父元素 overflow: auto，使得其自动调整大小以适应溢出元素。还可以设置 clear: left/right/both 来使得当前元素不受到浮动的影响。" name="twitter:description"/>
+<meta content="创新实验班 Web 开发 | 前端" property="og:title"/>
+<meta content="相关链接 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位   案例实现  选中框     相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果
+若干浮动的元素会按照横向排列
+元素只会在父级元素中浮动，但是浮动元素不占据空间，无法撑开父元素。可以通过设置父元素 overflow: auto，使得其自动调整大小以适应溢出元素。还可以设置 clear: left/right/both 来使得当前元素不受到浮动的影响。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="http://ccviolett.github.io/posts/42-teamwebfontend/" property="og:url"/><meta content="posts" property="article:section"/>
+<meta content="2022-04-10T10:15:53+08:00" property="article:published_time"/>
+<meta content="2022-04-10T10:15:53+08:00" property="article:modified_time"/>
+<title>
+  创新实验班 Web 开发 | 前端 · 罗潇阳的博客
+</title>
+<link href="http://ccviolett.github.io/posts/42-teamwebfontend/" rel="canonical"/>
+<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
+<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="Hugo 0.92.0" name="generator"/>
+</head>
+<body class="preload-transitions colorscheme-auto">
+<div class="float-container">
+<a class="colorscheme-toggle" id="dark-mode-toggle">
+<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
+</a>
+</div>
+<main class="wrapper">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?90bcdb8127c31d4d27ebb95576bc8474";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<nav class="navigation">
+<section class="container">
+<a class="navigation-title" href="/">
+      罗潇阳的博客
+    </a>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button float-right" for="menu-toggle">
+<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
+</label>
+<ul class="navigation-list">
+<li class="navigation-item">
+<a class="navigation-link" href="/">首页</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/posts/">文章</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/solution/">题解</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/contact/">联系</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/about/">关于</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class="navigation-item">
+<a href="http://ccviolett.github.io/en/">🇬🇧</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class="content">
+<section class="container post">
+<article>
+<header>
+<div class="post-title">
+<h1 class="title">
+<a class="title-link" href="http://ccviolett.github.io/posts/42-teamwebfontend/">
+              创新实验班 Web 开发 | 前端
+            </a>
+</h1>
+</div>
+<div class="post-meta">
+<div class="date">
+<span class="posted-on">
+<i aria-hidden="true" class="fa fa-calendar"></i>
+<time datetime="2022-04-10T10:15:53+08:00">
+                2022 年 4 月 10 日
+              </time>
+</span>
+<span class="reading-time">
+<i aria-hidden="true" class="fa fa-clock-o"></i>
+              阅读时间：2 分钟
+            </span>
+</div>
+<div class="authors">
+<i aria-hidden="true" class="fa fa-user"></i>
+<a href="/authors/ccviolett/">ccviolett</a></div>
+<div class="categories">
+<i aria-hidden="true" class="fa fa-folder"></i>
+<a href="/categories/%E5%88%9B%E6%96%B0%E5%AE%9E%E9%AA%8C%E7%8F%AD-web-%E5%BC%80%E5%8F%91/">创新实验班 Web 开发</a></div>
+</div>
+</header>
+<div>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#相关链接">相关链接</a></li>
+<li><a href="#知识点">知识点</a>
+<ul>
+<li><a href="#浮动">浮动</a></li>
+<li><a href="#定位">定位</a></li>
+<li><a href="#语义化标签">语义化标签</a></li>
+<li><a href="#bfc">BFC</a></li>
+<li><a href="#扩展-css">扩展 CSS</a></li>
+<li><a href="#伪元素">伪元素</a></li>
+<li><a href="#css-3d-效果">CSS 3D 效果</a></li>
+<li><a href="#dpr">DPR</a></li>
+<li><a href="#rem-单位">REM 单位</a></li>
+</ul>
+</li>
+<li><a href="#案例实现">案例实现</a>
+<ul>
+<li><a href="#选中框">选中框</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<h2 id="相关链接">
+  相关链接
+  <a class="heading-link" href="#%e7%9b%b8%e5%85%b3%e9%93%be%e6%8e%a5">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<ul>
+<li><a href="https://blog.csdn.net/weixin_43885459/article/details/84671565">HTML智能表单</a></li>
+<li><a href="https://www.w3school.com.cn/cssref/css_selectors.asp">CSS 选择器</a></li>
+<li><a href="http://c.biancheng.net/view/7216.html">CSS选择器的优先级（精讲版）</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Shorthand_properties">CSS 简写属性</a></li>
+<li><a href="http://m.biancheng.net/css3/sprite.html">CSS 精灵图</a>：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline">CSS outline</a>：轮廓</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/resize">CSS resize</a>：可调整大小</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/linear-gradient">CSS linear-gradient()</a>：设置渐变</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition">CSS transition</a>：样式过渡动画设置</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform">CSS transform</a>：制作简单动画</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Media_queries">CSS 媒体查询</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes">CSS 关键帧</a></li>
+</ul>
+<h2 id="知识点">
+  知识点
+  <a class="heading-link" href="#%e7%9f%a5%e8%af%86%e7%82%b9">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<h3 id="浮动">
+  浮动
+  <a class="heading-link" href="#%e6%b5%ae%e5%8a%a8">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果</p>
+<p>若干浮动的元素会按照横向排列</p>
+<p>元素只会在父级元素中浮动，但是浮动元素不占据空间，无法撑开父元素。可以通过设置父元素 <code>overflow: auto</code>，使得其自动调整大小以适应溢出元素。还可以设置 <code>clear: left/right/both</code> 来使得当前元素不受到浮动的影响。</p>
+<p>通过清除浮动实现聊天框：</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410103535.png"/></p>
+<p>浮动元素在排列时，只参考前一个元素的位置</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410103938.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410103730.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410103958.png"/></p>
+<p>右浮动顺序问题：最先开始浮动的元素会在最右边</p>
+<h3 id="定位">
+  定位
+  <a class="heading-link" href="#%e5%ae%9a%e4%bd%8d">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>在子元素设置 <code>position: aboslute</code> 进行绝对定位，参考系为最近一个 <code>position: relative</code> 的父级元素</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410111711.png"/></p>
+<p>设置 <code>positoin: fixed</code> 进行固定定位，参考系为屏幕。</p>
+<h3 id="语义化标签">
+  语义化标签
+  <a class="heading-link" href="#%e8%af%ad%e4%b9%89%e5%8c%96%e6%a0%87%e7%ad%be">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410113338.png"/></p>
+<h3 id="bfc">
+  BFC
+  <a class="heading-link" href="#bfc">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>Formatting context(格式化上下文) 是 W3C CSS2.1 规范中的一个概念。它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。</p>
+<p>BFC 即 Block Formatting Contexts (块级格式化上下文)，具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，以及一些其他特性。</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/25321647">10 分钟理解 BFC 原理</a></li>
+<li><a href="https://blog.csdn.net/sinat_36422236/article/details/88763187">什么是BFC？看这一篇就够了</a></li>
+<li><a href="https://juejin.cn/post/6950082193632788493">面试官：请说说什么是BFC？大白话讲清楚</a></li>
+</ul>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410114123.png"/></p>
+<h3 id="扩展-css">
+  扩展 CSS
+  <a class="heading-link" href="#%e6%89%a9%e5%b1%95-css">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Webkit_Extensions">WebKit CSS extensions</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS extensions</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Microsoft_Extensions">Microsoft CSS extensions</a></li>
+</ul>
+<h3 id="伪元素">
+  伪元素
+  <a class="heading-link" href="#%e4%bc%aa%e5%85%83%e7%b4%a0">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<h3 id="css-3d-效果">
+  CSS 3D 效果
+  <a class="heading-link" href="#css-3d-%e6%95%88%e6%9e%9c">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>使用 transform 中的 perspective 属性设置观察距离，再进行动画操作。</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410122121.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410122140.png"/></p>
+<p>给父元素添加观察距离，则会以父元素的中心为基准来产生效果。</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410131334.png"/></p>
+<p>设置 <a href="https://www.runoob.com/cssref/css3-pr-perspective-origin.html">perspective-origin</a> 来改变观察视角。</p>
+<h3 id="dpr">
+  DPR
+  <a class="heading-link" href="#dpr">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>设备像素比：<code>物理像素</code>与<code>设备独立像素</code>的比值，使得元素看起来不那么小。</p>
+<p>通过设置 <code>viewport</code> 来缩放网页，可以消除移动设备上 DPR 的影响。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-html" data-lang="html">&lt;meta name=<span style="color:#666;font-style:italic">"viewport"</span> content=<span style="color:#666;font-style:italic">"width=device-width, initial-scale=1/dpr"</span>&gt;
+</code></pre></div><p>其中的 <code>1/dpr</code> 需要改写成具体的数值。</p>
+<h3 id="rem-单位">
+  REM 单位
+  <a class="heading-link" href="#rem-%e5%8d%95%e4%bd%8d">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>以根元素（<code>html</code> 标签）的 <code>font-size</code> 属性为基础，假设其值为 <code>a</code>，则 <code>1 rem = a xp</code>。</p>
+<h2 id="案例实现">
+  案例实现
+  <a class="heading-link" href="#%e6%a1%88%e4%be%8b%e5%ae%9e%e7%8e%b0">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<h3 id="选中框">
+  选中框
+  <a class="heading-link" href="#%e9%80%89%e4%b8%ad%e6%a1%86">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<style>
+    #checkBoxDiv input[type='checkbox'] {
+        -webkit-appearance: none;
+        margin: 50px;
+        border: 10px solid #c1c1c1;
+        border-radius: 50px;
+        width: 170px; height: 70px;
+        background: #888;
+        position: relative;
+        box-shadow: 0 0 10px 1px #3f3f3f inset;
+        transition: 0.6s;
+    }
+    #checkBoxDiv input[type='checkbox']:checked {
+        background: #6FB500;
+    }
+    #checkBoxDiv input[type='checkbox']::after {
+        content: "";
+        display: block;
+        width: 60px; height: 60px;
+        position: absolute;
+        left: -5px; top: -5px;
+        border-radius: 30px;
+        background: linear-gradient(to bottom, #d3d3d3, #9e9e9e);
+        box-shadow: 0px 2px 2px 0px #eee inset, 2px 1px 2px 0px #333;
+        transition: 0.6s;
+    }
+    #checkBoxDiv input[type='checkbox']:checked::after {
+        left: 95px;
+    }
+</style>
+<div id="checkBoxDiv">
+<input type="checkbox"/>
+</div>
+</div>
+<footer>
+</footer>
+</article>
+</section>
+</div>
+<footer class="footer">
+<section class="container">
+<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
+      
+      
+        ©
+        
+        2022
+         罗潇阳 
+      
+      
+         · 
+        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+        
+      
+    </section>
+</footer>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
+<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+</main>
+<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
+</body>
+</html>

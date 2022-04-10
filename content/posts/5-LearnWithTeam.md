@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2022-02-27T22:38:37+08:00
-title = "跟着创新实验班学 Web 开发"
+title = "创新实验班 Web 开发教学计划"
 description = ""
 slug = ""
 authors = ["ccviolett"]
@@ -233,7 +233,7 @@ server {
 ## 五、前期知识
 
 HTML:
-- [黑马程序员pink老师前端入门教程]https://www.bilibili.com/video/av80149248
+- [黑马程序员pink老师前端入门教程](https://www.bilibili.com/video/av80149248)
 - [HTML+CSS 前端入门视频教程](https://www.bilibili.com/video/BV1CK411G7m4)
 
 Java：
@@ -244,18 +244,25 @@ Java：
 
 ## 六、分流
 
-1. 前端：
+- [王道计算机考研 计算机网络](https://www.bilibili.com/video/BV19E411D78Q)
+- 
+
+### 1. 前端：
 - [web前端零基础html5+css3+前端项目视频教程](https://www.bilibili.com/video/BV1Kg411T7t9)
 - [黑马程序员 Javascript 全套教程](https://www.bilibili.com/video/BV1ux411d75J)
+- [黑马程序员JavaScript核心教程，前端基础教程，JS必会的DOM BOM操作](https://www.bilibili.com/video/BV1k4411w7sV)
 
-2. 后端：
+### 2. 后端：
 - [JavaWeb从入门到项目实战](https://www.bilibili.com/video/BV1qv4y1o79t)
 - [MySQL 数据库简介](http://www.imooc.com/wiki/mysqllesson/mysqlinfo.html)
 
-3. Android:
+### 3. Android:
 - [Android（安卓）开发零基础入门课程](https://www.bilibili.com/video/BV13y4y1E7pF)
 - [Android 入门教程](http://www.imooc.com/wiki/androidlesson)
 
-4. 产品经理
+### 4. 产品经理
 - [2022最新版产品经理入门到精通](https://www.bilibili.com/video/BV1hZ4y1A7GG)
+- [产品经理C端内容项目设计实战教程](https://www.bilibili.com/video/BV1i4411Y7H6)
 
+### 5. UI
+- [传智教育墨刀教程全套，高保真交互式原型设计教程](https://www.bilibili.com/video/BV1Q54y1b7DP)

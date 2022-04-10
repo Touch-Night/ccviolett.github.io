@@ -6,7 +6,30 @@
     <description>Recent content in ccviolett on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 04 Apr 2022 12:09:50 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/authors/ccviolett/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Apr 2022 15:16:34 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/authors/ccviolett/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode33. 搜索旋转排序数组</title>
+      <link>http://ccviolett.github.io/solution/leetcode33/</link>
+      <pubDate>Sun, 10 Apr 2022 15:16:34 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/leetcode33/</guid>
+      <description>一、题意    题目链接：Problem
+二、题解    因为原来是升序的，可以二分找到分段点，随后在两段内再二分一次即可。
+三、代码    通过链接：Submission
+class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: l = 0 r = len(nums) - 1 while l &amp;lt; r: mid = (l + r + 1) &amp;gt;&amp;gt; 1 if nums[mid] &amp;lt; nums[0]: r = mid - 1 else: l = mid p = l l = p + 1 r = len(nums) - 1 while l &amp;lt;= r: mid = (l + r) &amp;gt;&amp;gt; 1 if nums[mid] &amp;lt; target: l = mid + 1 if nums[mid] &amp;gt; target: r = mid - 1 if nums[mid] == target: return mid l = 0 r = p while l &amp;lt;= r: mid = (l + r) &amp;gt;&amp;gt; 1 if nums[mid] &amp;lt; target: l = mid + 1 if nums[mid] &amp;gt; target: r = mid - 1 if nums[mid] == target: return mid return -1 </description>
+    </item>
+    
+    <item>
+      <title>创新实验班 Web 开发 | 前端</title>
+      <link>http://ccviolett.github.io/posts/42-teamwebfontend/</link>
+      <pubDate>Sun, 10 Apr 2022 10:15:53 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/42-teamwebfontend/</guid>
+      <description>相关链接 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位   案例实现  选中框     相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果
+若干浮动的元素会按照横向排列
+元素只会在父级元素中浮动，但是浮动元素不占据空间，无法撑开父元素。可以通过设置父元素 overflow: auto，使得其自动调整大小以适应溢出元素。还可以设置 clear: left/right/both 来使得当前元素不受到浮动的影响。</description>
+    </item>
+    
     <item>
       <title>如何加工一个螺丝？</title>
       <link>http://ccviolett.github.io/posts/40-mechanicalpartsscrew/</link>
@@ -394,12 +417,12 @@ Free Educational Licenses
     </item>
     
     <item>
-      <title>跟着创新实验班学 Web 开发</title>
+      <title>创新实验班 Web 开发教学计划</title>
       <link>http://ccviolett.github.io/posts/5-learnwithteam/</link>
       <pubDate>Sun, 27 Feb 2022 22:38:37 +0800</pubDate>
       
       <guid>http://ccviolett.github.io/posts/5-learnwithteam/</guid>
-      <description>一、Git入门 二、HCJ（HTML + CSS + Javascript) 快速入门  （一）HTML （二）CSS （三）JavaScript   三、安装mysql和php 四、岗位了解 五、前期知识 六、分流   一、Git入门    视频教程：Git + GitHub 10分钟完全入门
+      <description>一、Git入门 二、HCJ（HTML + CSS + Javascript) 快速入门  （一）HTML （二）CSS （三）JavaScript   三、安装mysql和php 四、岗位了解 五、前期知识 六、分流  1. 前端： 2. 后端： 3. Android: 4. 产品经理 5. UI     一、Git入门    视频教程：Git + GitHub 10分钟完全入门
  配置基本用户信息  git config --global user.name &amp;lt;你的用户名&amp;gt; git config --global user.email &amp;lt;你的邮箱地址&amp;gt; 初始化本地仓库 git init 关联远程仓库 git remote add &amp;lt;自定义仓库名&amp;gt; &amp;lt;远程仓库地址&amp;gt; 从远程服务器克隆一个仓库 git clone &amp;lt;远程仓库的url&amp;gt; 显示当前工作目录下的提交状态 git status 将指定文件Stage（标记为将要被提交的文件） git add &amp;lt;文件路径&amp;gt; 将指定文件Unstage（取消标记） git reset &amp;lt;文件路径&amp;gt; 创建一个提交并附上提交信息 git commit -m &amp;quot;提交信息&amp;quot; 显示提交历史 git log 向远程仓库推送（Push） git push 从远程仓库拉取（Pull） git pull 分支（branch）  master是主分支（默认），分支在不合并的情况下是相互独立的 git branch 查看所有分支 git branch &amp;lt;分支名字&amp;gt; 新建分支 git checkout &amp;lt;分支名字&amp;gt; 切换分支 git branch -m &amp;lt;旧名字&amp;gt; &amp;lt;新名字&amp;gt; 修改分支名 git branch -d &amp;lt;分支名字&amp;gt; 删除分支   签出（check out） git checkout &amp;lt;提交的hash&amp;gt;  如果一开始不太熟悉命令行操作，建议使用 GitKraken，第一次启动会提示登录，然后填写签名信息（随便填，不一定要真实），就可以点左上角的文件夹-&amp;gt;Init创建代码仓库（Repository）了。</description>
     </item>
     

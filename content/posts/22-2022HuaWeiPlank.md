@@ -1,42 +1,22 @@
 +++ 
 draft = true
 date = 2022-03-16T23:04:04+08:00
-title = "2022 华为软件精英挑战赛 | 笔记"
+title = "如何用 Python 做算法题？"
 description = ""
 slug = ""
-authors = []
+authors = ["ccviolett"]
 tags = []
 categories = []
 externalLink = ""
 series = []
 +++
 
-### 题意描述
 
-给定 N (N <= 135) 个服务器节点和 M (M <= 35) 个用户节点，每个服务器有一个带宽上限 $w_i$，每个服务器都与若干用户相连。
-
-有 T (T <= 8928) 个时间点，每个时间点给出每个用户需要的带宽 $v_i$，你可以将用户的需要的带宽分摊到与其相连的服务器上，服务器承受的总带宽不能超过其带宽上限。
-
-每一个时间点独立，即上一次分摊到某个服务器的带宽会在下一次分摊前清零。
-
-对 M 个点进行完 T 次分摊之后，我们计算每个服务器 T 个时刻中分配到的第 K 大的带宽的累和。
-
-最小化这个累和并给出每一个时间点的分配方案。
-
-### 问题分析
-
-- 每个服务器节点都有相同固定数量的，可以跑满的带宽，且不影响答案。（数量为 K - 1 个）
-- 我们的目的是通过把这 $M * (K - 1)$ 次跑满的宽带，分到 $N * T$ 次请求中去，使得分完之后，转化为最小化最大值的累和问题。
-
-## 具体实现
-
-#### 处理 csv 文件
-
-#### 不换行输出
+### 不换行输出
 
 在 `print()` 函数中加上 `end=""` 参数来指定末尾字符串。
 
-#### 列表生成法创建二维数组
+### 列表生成法创建二维数组
 
 ```python
 test = [[0 for j in range(m)] for i in range(n)]
@@ -44,7 +24,7 @@ test = [[0 for j in range(m)] for i in range(n)]
 
 创建了一个 n 行 m 列的二位数组
 
-#### 创建函数
+### 创建函数
 
 ```python
 def functionname( parameters ):
@@ -57,7 +37,7 @@ def functionname( parameters ):
 
 因此，最好的方法是把程序的入口都放在代码最下方。
 
-#### 在函数内修改全局变量
+### 在函数内修改全局变量
 
 在修改前用关键字 `global` 声明为全局变量，否则就会新建局部变量。
 
@@ -69,7 +49,7 @@ def func():
 
 若不存在同名局部变量，则读取无需声明全局变量。
 
-#### 条件语句
+### 条件语句
 
 ```python
 if [exp]:
@@ -78,14 +58,14 @@ else:
     ...
 ```
 
-#### 向上取整
+### 向上取整
 
 ```python
 import math
 v = math.ceil(3.5)
 ```
 
-#### 随机数
+### 随机数
 
 ```python
 import random
@@ -94,7 +74,7 @@ v = random.randint(a, b) # a~b
 random.shuffle([1, 3, 5, 7, 9]) # 打乱数组
 ```
 
-#### 类
+### 类
 
 ```python
 #类定义
@@ -117,15 +97,19 @@ p = people('runoob',10,30)
 p.speak()
 ```
 
-#### range
+### range
 
 循环时 `for i in range(a, b)` 可以让 `i` 按顺序取到 `[a, b - 1]`
 
-#### 大小比较
+### 大小比较
 
 在进行变量数值比较时，一定要记得转为 `int` 类型后再比较，否则可能出现类似于 `"400" < "80"` 为真的情况。
 
-### 相关链接
+### 浅拷贝与深拷贝
+
+数组之间存在浅拷贝与深拷贝的区别
+
+## 相关链接
 
 - [python处理ini格式文件](https://blog.csdn.net/suic009/article/details/120540919)
 - [python 解析csv文件](https://www.jianshu.com/p/5ded6c329df2)
@@ -136,3 +120,5 @@ p.speak()
 - [【python】详解queue队列（一）](https://blog.csdn.net/brucewong0516/article/details/84025027)
 - [Python 列表(List)](https://www.runoob.com/python/python-lists.html)
 - [Python 列表 sort() 方法](https://www.w3school.com.cn/python/ref_list_sort.asp)
+
+- [蓝桥杯python组 国赛一等奖 经验贴](https://zhuanlan.zhihu.com/p/376499519)
