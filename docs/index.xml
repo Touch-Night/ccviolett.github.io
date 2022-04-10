@@ -58,18 +58,18 @@ class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: l 
 元素只会在父级元素中浮动，但是浮动元素不占据空间，无法撑开父元素。可以通过设置父元素 overflow: auto，使得其自动调整大小以适应溢出元素。还可以设置 clear: left/right/both 来使得当前元素不受到浮动的影响。</description>
 </item>
 <item>
-<title>220410</title>
+<title>CSS 还不够熟练 &amp; 好久没写算法题了</title>
 <link>http://ccviolett.github.io/todo/220410/</link>
 <pubDate>Sun, 10 Apr 2022 09:07:47 +0800</pubDate>
 <guid>http://ccviolett.github.io/todo/220410/</guid>
 <description>每日任务：
  (v) 扇贝英语单词 (&amp;gt;) 新疆省选备课讲课  每周任务：
- ( ) 工程实训周报  ddl: 4 月 10 日 update: mon   (v) 青年大学习  ddl: 4 月 10 日 update: mon    定时任务：无
+ (v) 工程实训周报  ddl: 4 月 10 日 update: mon   (v) 青年大学习  ddl: 4 月 10 日 update: mon    定时任务：无
 重要任务：
- ( ) 更正机械制图作业 (-) 公共基础课-逻辑学导论  ddl: 5 月 30 日 prog: 61/89   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   ( ) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日   ( ) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日   ( ) 大学物理作业 第三章 刚体定轴转动作业  ddl: 4 月 30 日 17:00    空闲任务：</description>
+ ( ) 更正机械制图作业 (-) 公共基础课-逻辑学导论  ddl: 5 月 30 日 prog: 61/89   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   (-) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日 prg: 14/111   (-) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日 prg: 4/109   ( ) 大学物理作业 第三章 刚体定轴转动作业  ddl: 4 月 30 日 17:00    空闲任务：</description>
 </item>
 <item>
-<title>220409</title>
+<title>答辩考试连轴转 &amp; 咖啡好像很有意思</title>
 <link>http://ccviolett.github.io/todo/220409/</link>
 <pubDate>Sat, 09 Apr 2022 16:24:05 +0800</pubDate>
 <guid>http://ccviolett.github.io/todo/220409/</guid>
@@ -80,7 +80,7 @@ class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: l 
  ( ) 更正机械制图作业 (-) 公共基础课-逻辑学导论  ddl: 5 月 30 日 prog: 61/89   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   ( ) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日   ( ) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日   ( ) 大学物理作业 第三章 刚体定轴转动作业  ddl: 4 月 30 日 17:00   ( ) 安徽集训-省选模拟题题解理解  ddl: 4 月 9 日 18:00 prog: 0/6    空闲任务：</description>
 </item>
 <item>
-<title>220408</title>
+<title>机械制图生死时速 &amp; UI 设计真好玩</title>
 <link>http://ccviolett.github.io/todo/220408/</link>
 <pubDate>Fri, 08 Apr 2022 09:08:49 +0800</pubDate>
 <guid>http://ccviolett.github.io/todo/220408/</guid>
@@ -91,7 +91,7 @@ class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: l 
  (-) 公共基础课-逻辑学导论  ddl: 5 月 30 日 prog: 61/89   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   ( ) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日   ( ) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日   ( ) 大学物理作业 第三章 刚体定轴转动作业  ddl: 4 月 30 日 17:00   ( ) 安徽集训-省选模拟题题解理解  ddl: 4 月 9 日 18:00 prog: 0/6    空闲任务：</description>
 </item>
 <item>
-<title>220407</title>
+<title>刷课第一天 &amp; 初探 UI 设计的世界</title>
 <link>http://ccviolett.github.io/todo/220407/</link>
 <pubDate>Thu, 07 Apr 2022 07:20:57 +0800</pubDate>
 <guid>http://ccviolett.github.io/todo/220407/</guid>
@@ -102,7 +102,7 @@ class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: l 
  (-) 公共基础课-逻辑学导论  ddl: 5 月 30 日 prog: 61/89   ( ) 机械制图作业  ddl: 4 月 8 日   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   ( ) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日   ( ) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日   ( ) 大学物理作业 第三章 刚体定轴转动作业  ddl: 4 月 30 日 17:00   ( ) 安徽集训-省选模拟题题解理解  ddl: 4 月 9 日 18:00 prog: 0/6    空闲任务：</description>
 </item>
 <item>
-<title>220406</title>
+<title>折腾博客真的是费心费力</title>
 <link>http://ccviolett.github.io/todo/220406/</link>
 <pubDate>Wed, 06 Apr 2022 09:09:23 +0800</pubDate>
 <guid>http://ccviolett.github.io/todo/220406/</guid>
@@ -124,7 +124,7 @@ D：保守力做功并不会影响系统的机械能，会和保守势能相互�
 两质量分别为m1、m2的小球，用一劲度系数为k的轻弹簧相连，放在水平光滑桌面上，如图所示．今以等值反向的力分别作用于两小球，则两小球和弹簧这系统的（B）   A 动量守恒，机械能守恒． B 动量守恒，机械能不守恒． C 动量不守恒，机械能守恒． D 动量不守恒，机械能不守恒．  弹性系数为k的轻弹簧，一端与倾角为α的斜面上的固定挡板A相接，另一端与质量为m的物体B相连．O点为弹簧没有连物体、原长时的端点位置，a点为物体B的平衡位置．现在将物体B由a点沿斜面向上移动到b点(见下图)．设a点与O点，a点与b点之间距离分别为x1和x2，则在此过程中，由弹簧、物体B和地球组成的系统势能的增加为(　)   A $\frac{1}{2}kx_2^2 + mgx_2sin a$ B $\frac{1}{2}k(x_2 - x_1)^2 + mg(x_2 - x_1)sin a$ C $\frac{1}{2}k(x_2 - x_1)^2 - \frac{1}{2}kx_1^2 + mgx_2sin a$ D $\frac{1}{2}k(x_2 - x_1)^2 - mg(x_2 - x_1)sin a$  弹性势能公式：$W = \frac{1}{2}kx^2$</description>
 </item>
 <item>
-<title>220405</title>
+<title>我好想要运动相机QAQ &amp; 大物也没这么难</title>
 <link>http://ccviolett.github.io/todo/220405/</link>
 <pubDate>Tue, 05 Apr 2022 12:00:33 +0800</pubDate>
 <guid>http://ccviolett.github.io/todo/220405/</guid>
@@ -202,7 +202,7 @@ D：保守力做功并不会影响系统的机械能，会和保守势能相互�
 <description/>
 </item>
 <item>
-<title>220404</title>
+<title>我是选了四门公共基础课得小丑</title>
 <link>http://ccviolett.github.io/todo/220404/</link>
 <pubDate>Mon, 04 Apr 2022 07:39:36 +0800</pubDate>
 <guid>http://ccviolett.github.io/todo/220404/</guid>
@@ -212,7 +212,7 @@ D：保守力做功并不会影响系统的机械能，会和保守势能相互�
  ( ) 大学物理作业  ddl: 4 月 8 日   ( ) 完成字节大数据项目 ( ) 学习 Flutter 开发 ( ) 挑战杯策划案撰写  ddl: 4 月 6 日   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   ( ) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日   ( ) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日   (-) 公共基础课-逻辑学导论  ddl: 5 月 30 日 prog: 27/89   ( ) 高数第四次作业  ddl: 4 月 8 日 22:00    日志：</description>
 </item>
 <item>
-<title>220403</title>
+<title>机械类导论结课报告写得肝疼</title>
 <link>http://ccviolett.github.io/todo/220403/</link>
 <pubDate>Sun, 03 Apr 2022 08:02:31 +0800</pubDate>
 <guid>http://ccviolett.github.io/todo/220403/</guid>
