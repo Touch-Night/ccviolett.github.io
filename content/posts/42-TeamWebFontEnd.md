@@ -84,6 +84,8 @@ BFC 即 Block Formatting Contexts (块级格式化上下文)，具有 BFC 特性
 
 ### 伪元素
 
+实际上不存在的一类元素，但是可以在 CSS 中使用选择器选中，并且具有和不同元素一样的属性，可以进行调节、设置。
+
 ### CSS 3D 效果
 
 使用 transform 中的 perspective 属性设置观察距离，再进行动画操作。
@@ -114,9 +116,29 @@ BFC 即 Block Formatting Contexts (块级格式化上下文)，具有 BFC 特性
 
 以根元素（`html` 标签）的 `font-size` 属性为基础，假设其值为 `a`，则 `1 rem = a xp`。
 
+### inline-block
+
+两个相邻 `inline-block` 元素若在代码中换行，则会在中间产生一个空隙。
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220411101333.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220411101403.png)
+
+### flex 布局
+
+在 flex 容器中 `float` 和 `vertical-align` 属性失效，通过 `justify-content` 来设置主轴（默认为水平方向）上元素的对齐方式，通过 `align-items` 来设置交叉轴（默认为竖直方向）上元素的对齐方式。
+
+可以通过 `flex-direction` 设置主轴方向
+
+通过设置 `flex-wrap` 使得元素可以换行
+
+通过设置 `flex-grow` 使得元素按照指定比例分配父元素剩余空间
+
 ## 案例实现
 
-### 选中框
+### （一）选中框
+
+#### 1. 效果
 
 <style>
     #checkBoxDiv input[type='checkbox'] {
@@ -151,3 +173,263 @@ BFC 即 Block Formatting Contexts (块级格式化上下文)，具有 BFC 特性
 <div id="checkBoxDiv">
     <input type="checkbox">
 </div>
+
+#### 2. 代码
+
+```html
+<style>
+    #checkBoxDiv input[type='checkbox'] {
+        -webkit-appearance: none;
+        margin: 50px;
+        border: 10px solid #c1c1c1;
+        border-radius: 50px;
+        width: 170px; height: 70px;
+        background: #888;
+        position: relative;
+        box-shadow: 0 0 10px 1px #3f3f3f inset;
+        transition: 0.6s;
+    }
+    #checkBoxDiv input[type='checkbox']:checked {
+        background: #6FB500;
+    }
+    #checkBoxDiv input[type='checkbox']::after {
+        content: "";
+        display: block;
+        width: 60px; height: 60px;
+        position: absolute;
+        left: -5px; top: -5px;
+        border-radius: 30px;
+        background: linear-gradient(to bottom, #d3d3d3, #9e9e9e);
+        box-shadow: 0px 2px 2px 0px #eee inset, 2px 1px 2px 0px #333;
+        transition: 0.6s;
+    }
+    #checkBoxDiv input[type='checkbox']:checked::after {
+        left: 95px;
+    }
+</style>
+<div id="checkBoxDiv">
+    <input type="checkbox">
+</div>
+```
+
+### （二）跳动的心
+
+#### 1. 效果
+
+<style>
+    #heartDiv span {
+        display: inline-block;
+    }
+    #heartDiv #heart-left, #heart-right {
+        width: 50px; height: 80px;
+        background-color: red;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    #heartDiv #heart-left {
+        transform: rotateZ(-45deg);
+    }
+    #heartDiv #heart-right {
+        transform: translateX(-28px) rotateZ(45deg);
+    }
+    #heart {
+        animation: heartBeats 1.5s infinite;
+    }
+    @keyframes heartBeats {
+        30% { transform: scale(1.3); }
+        100% { transform: scale(1); }
+    }
+</style>
+<div id="heartDiv">
+    <span id="heart">
+        <span id="heart-left"></span><span id="heart-right"></span>
+    </span>
+</div>
+
+#### 2. 代码
+
+```html
+<style>
+    #heartDiv span {
+        display: inline-block;
+    }
+    #heartDiv #heart-left, #heart-right {
+        width: 50px; height: 80px;
+        background-color: red;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    #heartDiv #heart-left {
+        transform: rotateZ(-45deg);
+    }
+    #heartDiv #heart-right {
+        transform: translateX(-28px) rotateZ(45deg);
+    }
+    #heart {
+        animation: heartBeats 1.5s infinite;
+    }
+    @keyframes heartBeats {
+        30% { transform: scale(1.3); }
+        100% { transform: scale(1); }
+    }
+</style>
+<div id="heartDiv">
+    <span id="heart">
+        <span id="heart-left"></span><span id="heart-right"></span>
+    </span>
+</div>
+```
+
+#### 3. 问题
+
+当`block`元素中内包含`inline-block`时，进行缩放（`scale`）会使得整体位移。
+
+<style>
+    #inner {
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        display: inline-block;
+    }
+    #outer {
+        margin: 4px;
+        padding: 4px;
+        border: 1px dotted black;
+        animation: Scale 1.5s infinite;
+    }
+    @keyframes Scale {
+        30% { transform: scale(1.3); }
+        100% { transform: scale(1);}
+    }
+</style>
+
+<div id="outer">
+    <div id="inner"></div>
+</div>
+
+问题原因：由上述示例可知（外层元素边框被标出），`block`元素宽度默认为一行，故进行缩放会使得整个页面被撑开，使得内部元素相对发生了位移。
+
+```html
+<style>
+    #inner {
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        display: inline-block;
+    }
+    #outer {
+        margin: 4px;
+        padding: 4px;
+        border: 1px dotted black;
+        animation: Scale 1.5s infinite;
+    }
+    @keyframes Scale {
+        30% { transform: scale(1.3); }
+        100% { transform: scale(1);}
+    }
+</style>
+
+<div id="outer">
+    <div id="inner"></div>
+</div>
+```
+
+解决方法：将要进行缩放的 `block` 元素改为 `inline-block`。
+
+<div id="outer" style="display: inline-block;">
+    <div id="inner"></div>
+</div>
+
+### （三）涟漪效果
+
+#### 1. 效果
+
+<style>
+    #rippleDiv {
+        margin: 80px;
+    }
+    .point {
+        width: 10px; height: 10px;
+        background: #6AD7E9;
+        border-radius: 50%;
+        position: relative;
+    }
+    .ripple-base {
+        width: 120px; height: 120px;
+        border: 2px solid #00cfec;
+        border-radius: 50%;
+        transform: scale(0.01);
+        position: absolute;
+        left: -55px;
+        top: -55px;
+    }
+    #ripple1 {
+        animation: Ripple 4500ms 225ms infinite;
+    }
+    #ripple2 {
+        animation: Ripple 4500ms 1075ms infinite;
+    }
+    #ripple3 {
+        animation: Ripple 4500ms 1925ms infinite;
+    }
+
+    @keyframes Ripple {
+        80% { opacity: 0.2; transform: scale(0.7);}
+        100% { opacity: 0; transform: scale(1);}
+    }
+</style>
+
+<div id="rippleDiv">
+    <div class="point">
+        <div class="ripple-base" id="ripple1"></div>
+        <div class="ripple-base" id="ripple2"></div>
+        <div class="ripple-base" id="ripple3"></div>
+    </div>
+</div>
+
+#### 2. 代码
+
+```html
+<style>
+    #rippleDiv {
+        margin: 80px;
+    }
+    .point {
+        width: 10px; height: 10px;
+        background: #6AD7E9;
+        border-radius: 50%;
+        position: relative;
+    }
+    .ripple-base {
+        width: 120px; height: 120px;
+        border: 2px solid #00cfec;
+        border-radius: 50%;
+        transform: scale(0.01);
+        position: absolute;
+        left: -55px;
+        top: -55px;
+    }
+    #ripple1 {
+        animation: Ripple 4500ms 225ms infinite;
+    }
+    #ripple2 {
+        animation: Ripple 4500ms 1075ms infinite;
+    }
+    #ripple3 {
+        animation: Ripple 4500ms 1925ms infinite;
+    }
+
+    @keyframes Ripple {
+        80% { opacity: 0.2; transform: scale(0.7);}
+        100% { opacity: 0; transform: scale(1);}
+    }
+</style>
+
+<div id="rippleDiv">
+    <div class="point">
+        <div class="ripple-base" id="ripple1"></div>
+        <div class="ripple-base" id="ripple2"></div>
+        <div class="ripple-base" id="ripple3"></div>
+    </div>
+</div>
+```

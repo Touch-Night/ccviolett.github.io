@@ -686,12 +686,23 @@ int main() {
 2. 完成课上 NOIP2012 的例题
 3. 完成国王游戏的同类题 [P2123 皇后游戏](https://www.luogu.com.cn/problem/P2123)
 
-### 2022 年 4 月 6 日 第 11 节课总结
+### 2022 年 4 月 11 日 第 11 节课总结
 
 知识点：
+1. next_permutation 的使用
+2. 枚举、搜索与暴力
+3. 如何快速甄别题目可做性
+4. 冒泡排序于逆序数对
+5. 并查集
+6. 最小生成树算法
+7. 倍增思想求树上最小值
 
 例题：
+1. [P1966 [NOIP2013 提高组] 火柴排队](https://www.luogu.com.cn/problem/P1966)
+2. [P1967 [NOIP2013 提高组] 货车运输](https://www.luogu.com.cn/problem/P1967)
 
 作业：
+- 完成 [P1967 [NOIP2013 提高组] 货车运输](https://www.luogu.com.cn/problem/P1967)
+- 完成题目阅读训练（八套），并计算能得的部分分
 
 {{% /hugo-encryptor %}}
