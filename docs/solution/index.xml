@@ -6,7 +6,20 @@
     <description>Recent content in Solutions on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 10 Apr 2022 16:40:28 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/solution/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Apr 2022 18:48:16 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/solution/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LuoguP1967 [NOIP2013 提高组] 货车运输</title>
+      <link>http://ccviolett.github.io/solution/luogup1967/</link>
+      <pubDate>Tue, 12 Apr 2022 18:48:16 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup1967/</guid>
+      <description>一、题意    题目链接：Problem
+二、题解    首先是一个最大生成树，随后是一个树上路径最小值查询。
+是一个锻炼 Kruskal/Prim + 树剖/倍增 的板子。
+三、代码    通过链接：Submission
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; int read() { int a; scanf(&amp;#34;%d&amp;#34;, &amp;amp;a); return a; } struct Edge { int u, v, w; }; const int N = 1e5 + 100; const int M = 1e5 + 100; int n, m; Edge edge[M]; int fa[N]; int top, fi[N], ne[M &amp;lt;&amp;lt; 1], to[M &amp;lt;&amp;lt; 1], co[M &amp;lt;&amp;lt; 1]; int Find(int t) { if (fa[t] !</description>
+    </item>
+    
     <item>
       <title>Leetcode31. 下一个排列</title>
       <link>http://ccviolett.github.io/solution/leetcode31/</link>
