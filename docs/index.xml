@@ -6,7 +6,24 @@
 <description>Recent content on 罗潇阳的博客</description>
 <generator>Hugo -- gohugo.io</generator>
 <language>zh-cn</language>
-<lastBuildDate>Tue, 12 Apr 2022 18:48:16 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<lastBuildDate>Thu, 14 Apr 2022 00:01:07 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>Leetcode41. 缺失的第一个正数</title>
+<link>http://ccviolett.github.io/solution/leetcode41/</link>
+<pubDate>Thu, 14 Apr 2022 00:01:07 +0800</pubDate>
+<guid>http://ccviolett.github.io/solution/leetcode41/</guid>
+<description>一、题意    题目链接：Problem
+二、题解    三、代码    通过链接：Submission
+class Solution: def firstMissingPositive(self, nums: List[int]) -&amp;gt; int: for i in range(len(nums)): v = nums[i] while v &amp;gt; 0 and v &amp;lt;= len(nums) and (v - 1) != i and v != nums[v - 1]: nums[i] = nums[v - 1] nums[v - 1] = v v = nums[i] print(len(nums)) for i in range(len(nums)): print(nums[i], end=&amp;#34; &amp;#34;) for i in range(len(nums)): if nums[i] !</description>
+</item>
+<item>
+<title>220413</title>
+<link>http://ccviolett.github.io/todo/220413/</link>
+<pubDate>Wed, 13 Apr 2022 08:27:50 +0800</pubDate>
+<guid>http://ccviolett.github.io/todo/220413/</guid>
+<description>定时任务：
+ ( ) “力扣杯”春季编程大赛-个人赛  dur: 4 月 16 日 15:00 - 17:30   ( ) ICPC2021 昆明站热身赛  dur: 4 月 16 日 18:30 - 21:00   ( ) ICPC2021 昆明站正式赛  dur: 4 月 17 日 11:30 - 16:30   ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
+</item>
 <item>
 <title>LuoguP1967 [NOIP2013 提高组] 货车运输</title>
 <link>http://ccviolett.github.io/solution/luogup1967/</link>

@@ -6,7 +6,18 @@
     <description>Recent content in Solutions on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 12 Apr 2022 18:48:16 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/solution/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Apr 2022 00:01:07 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/solution/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode41. 缺失的第一个正数</title>
+      <link>http://ccviolett.github.io/solution/leetcode41/</link>
+      <pubDate>Thu, 14 Apr 2022 00:01:07 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/leetcode41/</guid>
+      <description>一、题意    题目链接：Problem
+二、题解    三、代码    通过链接：Submission
+class Solution: def firstMissingPositive(self, nums: List[int]) -&amp;gt; int: for i in range(len(nums)): v = nums[i] while v &amp;gt; 0 and v &amp;lt;= len(nums) and (v - 1) != i and v != nums[v - 1]: nums[i] = nums[v - 1] nums[v - 1] = v v = nums[i] print(len(nums)) for i in range(len(nums)): print(nums[i], end=&amp;#34; &amp;#34;) for i in range(len(nums)): if nums[i] !</description>
+    </item>
+    
     <item>
       <title>LuoguP1967 [NOIP2013 提高组] 货车运输</title>
       <link>http://ccviolett.github.io/solution/luogup1967/</link>
