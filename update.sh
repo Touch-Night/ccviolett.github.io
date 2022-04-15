@@ -9,6 +9,7 @@ fi
 rm -r public
 
 hugo
+touch public/.nojekyell
 python plugin/hugo_encryptor/hugo-encryptor.py
 rm -r docs
 mv public docs
