@@ -10,6 +10,8 @@ rm -r public
 
 hugo
 python plugin/hugo_encryptor/hugo-encryptor.py
+touch public/.nojekyll
+
 rm -r docs
 mv public docs
 git add .
