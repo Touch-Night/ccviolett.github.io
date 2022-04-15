@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="zh-cn" http-equiv="Content-Language"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="罗潇阳" name="author"/>
+<meta content="一、速率相关性能指标  1. 速率 2. 带宽 3. 吞吐量   二、时延相关指标  1. 时延 2. 时延带宽积 3. 往返时延RTT 4. 利用率   三、分层结构  1. 必要性 2. 介绍   四、参考模型  1. OSI 七层模型 2. TCP/IP 四层模型 3. 五层模型     一、速率相关性能指标    1. 速率    连接在计算机网络上的主机在数字信道上传送数据位数的速率
+单位:b/s,Kb/s,Mb/s,Tb/s，如果用字节表示，则是B/s,KB/s,MB/s,TB/s，其中 1Byte=8Bit
+2. 带宽    在计算机网络中，指的是网络设备所支持的最高速度，单位同速率，是理想条件下最高速率
+3. 吞吐量    单位时间内通过某个网络的数据总量
+二、时延相关指标    1." name="description"/>
+<meta content="博客,开发者,个人" name="keywords"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="创新实验班 Web 开发 | 计算机网络 Part0 概述" name="twitter:title"/>
+<meta content="一、速率相关性能指标  1. 速率 2. 带宽 3. 吞吐量   二、时延相关指标  1. 时延 2. 时延带宽积 3. 往返时延RTT 4. 利用率   三、分层结构  1. 必要性 2. 介绍   四、参考模型  1. OSI 七层模型 2. TCP/IP 四层模型 3. 五层模型     一、速率相关性能指标    1. 速率    连接在计算机网络上的主机在数字信道上传送数据位数的速率
+单位:b/s,Kb/s,Mb/s,Tb/s，如果用字节表示，则是B/s,KB/s,MB/s,TB/s，其中 1Byte=8Bit
+2. 带宽    在计算机网络中，指的是网络设备所支持的最高速度，单位同速率，是理想条件下最高速率
+3. 吞吐量    单位时间内通过某个网络的数据总量
+二、时延相关指标    1." name="twitter:description"/>
+<meta content="创新实验班 Web 开发 | 计算机网络 Part0 概述" property="og:title"/>
+<meta content="一、速率相关性能指标  1. 速率 2. 带宽 3. 吞吐量   二、时延相关指标  1. 时延 2. 时延带宽积 3. 往返时延RTT 4. 利用率   三、分层结构  1. 必要性 2. 介绍   四、参考模型  1. OSI 七层模型 2. TCP/IP 四层模型 3. 五层模型     一、速率相关性能指标    1. 速率    连接在计算机网络上的主机在数字信道上传送数据位数的速率
+单位:b/s,Kb/s,Mb/s,Tb/s，如果用字节表示，则是B/s,KB/s,MB/s,TB/s，其中 1Byte=8Bit
+2. 带宽    在计算机网络中，指的是网络设备所支持的最高速度，单位同速率，是理想条件下最高速率
+3. 吞吐量    单位时间内通过某个网络的数据总量
+二、时延相关指标    1." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="http://ccviolett.github.io/posts/43-teamwebnetwork1/" property="og:url"/><meta content="posts" property="article:section"/>
+<meta content="2022-04-15T15:56:31+08:00" property="article:published_time"/>
+<meta content="2022-04-15T15:56:31+08:00" property="article:modified_time"/>
+<title>
+  创新实验班 Web 开发 | 计算机网络 Part0 概述 · 罗潇阳的博客
+</title>
+<link href="http://ccviolett.github.io/posts/43-teamwebnetwork1/" rel="canonical"/>
+<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
+<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="Hugo 0.92.0" name="generator"/>
+</head>
+<body class="preload-transitions colorscheme-auto">
+<div class="float-container">
+<a class="colorscheme-toggle" id="dark-mode-toggle">
+<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
+</a>
+</div>
+<main class="wrapper">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?90bcdb8127c31d4d27ebb95576bc8474";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<nav class="navigation">
+<section class="container">
+<a class="navigation-title" href="/">
+      罗潇阳的博客
+    </a>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button float-right" for="menu-toggle">
+<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
+</label>
+<ul class="navigation-list">
+<li class="navigation-item">
+<a class="navigation-link" href="/">首页</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/posts/">文章</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/solution/">题解</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/contact/">联系</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/about/">关于</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class="navigation-item">
+<a href="http://ccviolett.github.io/en/">🇬🇧</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class="content">
+<section class="container post">
+<article>
+<header>
+<div class="post-title">
+<h1 class="title">
+<a class="title-link" href="http://ccviolett.github.io/posts/43-teamwebnetwork1/">
+              创新实验班 Web 开发 | 计算机网络 Part0 概述
+            </a>
+</h1>
+</div>
+<div class="post-meta">
+<div class="date">
+<span class="posted-on">
+<i aria-hidden="true" class="fa fa-calendar"></i>
+<time datetime="2022-04-15T15:56:31+08:00">
+                2022 年 4 月 15 日
+              </time>
+</span>
+<span class="reading-time">
+<i aria-hidden="true" class="fa fa-clock-o"></i>
+              阅读时间：1 分钟
+            </span>
+</div>
+</div>
+</header>
+<div>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#一速率相关性能指标">一、速率相关性能指标</a>
+<ul>
+<li><a href="#1-速率">1. 速率</a></li>
+<li><a href="#2-带宽">2. 带宽</a></li>
+<li><a href="#3-吞吐量">3. 吞吐量</a></li>
+</ul>
+</li>
+<li><a href="#二时延相关指标">二、时延相关指标</a>
+<ul>
+<li><a href="#1-时延">1. 时延</a></li>
+<li><a href="#2-时延带宽积">2. 时延带宽积</a></li>
+<li><a href="#3-往返时延rtt">3. 往返时延RTT</a></li>
+<li><a href="#4-利用率">4. 利用率</a></li>
+</ul>
+</li>
+<li><a href="#三分层结构">三、分层结构</a>
+<ul>
+<li><a href="#1-必要性">1. 必要性</a></li>
+<li><a href="#2-介绍">2. 介绍</a></li>
+</ul>
+</li>
+<li><a href="#四参考模型">四、参考模型</a>
+<ul>
+<li><a href="#1-osi-七层模型">1. OSI 七层模型</a></li>
+<li><a href="#2-tcpip-四层模型">2. TCP/IP 四层模型</a></li>
+<li><a href="#3-五层模型">3. 五层模型</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<h2 id="一速率相关性能指标">
+  一、速率相关性能指标
+  <a class="heading-link" href="#%e4%b8%80%e9%80%9f%e7%8e%87%e7%9b%b8%e5%85%b3%e6%80%a7%e8%83%bd%e6%8c%87%e6%a0%87">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<h3 id="1-速率">
+  1. 速率
+  <a class="heading-link" href="#1-%e9%80%9f%e7%8e%87">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>连接在计算机网络上的主机在数字信道上传送数据位数的速率</p>
+<p>单位:b/s,Kb/s,Mb/s,Tb/s，如果用字节表示，则是B/s,KB/s,MB/s,TB/s，其中 1Byte=8Bit</p>
+<h3 id="2-带宽">
+  2. 带宽
+  <a class="heading-link" href="#2-%e5%b8%a6%e5%ae%bd">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>在计算机网络中，指的是网络设备所支持的最高速度，单位同速率，是理想条件下最高速率</p>
+<h3 id="3-吞吐量">
+  3. 吞吐量
+  <a class="heading-link" href="#3-%e5%90%9e%e5%90%90%e9%87%8f">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>单位时间内通过某个网络的数据总量</p>
+<h2 id="二时延相关指标">
+  二、时延相关指标
+  <a class="heading-link" href="#%e4%ba%8c%e6%97%b6%e5%bb%b6%e7%9b%b8%e5%85%b3%e6%8c%87%e6%a0%87">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<h3 id="1-时延">
+  1. 时延
+  <a class="heading-link" href="#1-%e6%97%b6%e5%bb%b6">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">计算公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">发送时延</td>
+<td style="text-align:center">数据从主机到信道上所用的时间</td>
+<td style="text-align:center">发送的数据长度/发送速率</td>
+</tr>
+<tr>
+<td style="text-align:center">传播时延</td>
+<td style="text-align:center">数据在信道上传播所花费的时间</td>
+<td style="text-align:center">信道长度/电磁波在信道上传播的速率</td>
+</tr>
+<tr>
+<td style="text-align:center">排队时延</td>
+<td style="text-align:center">数据在路由器前等待前面数据处理的时间</td>
+<td style="text-align:center">无</td>
+</tr>
+<tr>
+<td style="text-align:center">处理时延</td>
+<td style="text-align:center">数据在路由器中处理需求的时间</td>
+<td style="text-align:center">无</td>
+</tr>
+</tbody>
+</table>
+<p>使用高速链路(提高网速)，只能减小发送时延，无法减少其他三个时延</p>
+<h3 id="2-时延带宽积">
+  2. 时延带宽积
+  <a class="heading-link" href="#2-%e6%97%b6%e5%bb%b6%e5%b8%a6%e5%ae%bd%e7%a7%af">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>时延带宽积=传播时延x带宽，意思是链路上有多少比特的数据</p>
+<h3 id="3-往返时延rtt">
+  3. 往返时延RTT
+  <a class="heading-link" href="#3-%e5%be%80%e8%bf%94%e6%97%b6%e5%bb%b6rtt">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>发送端发送数据开始，到发送端收到来自接收端的确认（接收端收到数据后便立即发送确认），总共经历的时延 RTT=传播时延x2+处理时间(有时可能直接忽略)</p>
+<h3 id="4-利用率">
+  4. 利用率
+  <a class="heading-link" href="#4-%e5%88%a9%e7%94%a8%e7%8e%87">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">信道利用率</td>
+<td style="text-align:center">有数据通过时间/有+无数据通过时间</td>
+</tr>
+<tr>
+<td style="text-align:center">网络利用率</td>
+<td style="text-align:center">所有信道利用率加权求平均值</td>
+</tr>
+<tr>
+<td style="text-align:center">时延和利用率的关系图</td>
+<td style="text-align:center"><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20200626203643244.png"/></td>
+</tr>
+</tbody>
+</table>
+<h2 id="三分层结构">
+  三、分层结构
+  <a class="heading-link" href="#%e4%b8%89%e5%88%86%e5%b1%82%e7%bb%93%e6%9e%84">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<h3 id="1-必要性">
+  1. 必要性
+  <a class="heading-link" href="#1-%e5%bf%85%e8%a6%81%e6%80%a7">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<ul>
+<li>发起通信的计算机必须将数据通信的通路进行激活。</li>
+<li>要告诉网络如何识别目的主机。</li>
+<li>发起通信的计算机要查明目的主机是否开机，并且与网络连接正常。</li>
+<li>发起通信的计算机要弄清楚，对方计算机中文件管理程序是否已经做好准备工作。</li>
+<li>确保差错和意外可以解决。</li>
+</ul>
+<h3 id="2-介绍">
+  2. 介绍
+  <a class="heading-link" href="#2-%e4%bb%8b%e7%bb%8d">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20200626204724293.png"/></p>
+<h2 id="四参考模型">
+  四、参考模型
+  <a class="heading-link" href="#%e5%9b%9b%e5%8f%82%e8%80%83%e6%a8%a1%e5%9e%8b">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<h3 id="1-osi-七层模型">
+  1. OSI 七层模型
+  <a class="heading-link" href="#1-osi-%e4%b8%83%e5%b1%82%e6%a8%a1%e5%9e%8b">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">英文</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">应用层</td>
+<td style="text-align:center">Application Layer</td>
+<td style="text-align:center">直接为用户的应用进程（例如电子邮件、文件传输和终端仿真）提供服务。如HTTP、SMTP、FTP、DNS等</td>
+</tr>
+<tr>
+<td style="text-align:center">表示层</td>
+<td style="text-align:center">Presentation Layer</td>
+<td style="text-align:center">把数据转换为能与接收者的系统格式兼容并适合传输的格式，即让两个系统可以交换信息</td>
+</tr>
+<tr>
+<td style="text-align:center">会话层</td>
+<td style="text-align:center">Session Layer</td>
+<td style="text-align:center">负责在数据传输中设置和维护计算机网络中两台计算机之间的通信连接</td>
+</tr>
+<tr>
+<td style="text-align:center">传输层</td>
+<td style="text-align:center">Transport Layer</td>
+<td style="text-align:center">负责端到端通讯，可靠传输，不可靠传输 ，流量控制，复用分用</td>
+</tr>
+<tr>
+<td style="text-align:center">网络层</td>
+<td style="text-align:center">Network Layer</td>
+<td style="text-align:center">负责选择路由最佳路径，规划IP地址(ipv4和ipv6变化只会影响网络层)，拥塞控制</td>
+</tr>
+<tr>
+<td style="text-align:center">数据链路层</td>
+<td style="text-align:center">Data Link Layer</td>
+<td style="text-align:center">帧的开始和结束，还有透明传输，差错校验(纠错由传输层解决)</td>
+</tr>
+<tr>
+<td style="text-align:center">物理层</td>
+<td style="text-align:center">Physical Layer</td>
+<td style="text-align:center">定义网络设备接口标准，电气标准(电压)，如何在物理链路上传输的更快</td>
+</tr>
+</tbody>
+</table>
+<p>网络层及以上，每一层都要对上一层发送的数据进行处理（加个头部）</p>
+<p>数据链路层不仅需要加头部，还需要加尾部</p>
+<p>物理层什么都不加，只管发送数据（比特流）</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20200626205152756.png"/></p>
+<h3 id="2-tcpip-四层模型">
+  2. TCP/IP 四层模型
+  <a class="heading-link" href="#2-tcpip-%e5%9b%9b%e5%b1%82%e6%a8%a1%e5%9e%8b">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20200626205911885.png"/></p>
+<h3 id="3-五层模型">
+  3. 五层模型
+  <a class="heading-link" href="#3-%e4%ba%94%e5%b1%82%e6%a8%a1%e5%9e%8b">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20200626210125977.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20200626210211625.png"/></p>
+</div>
+<footer>
+</footer>
+</article>
+</section>
+</div>
+<footer class="footer">
+<section class="container">
+<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
+      
+      
+        ©
+        
+        2022
+         罗潇阳 
+      
+      
+         · 
+        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+        
+      
+    </section>
+</footer>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
+<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+</main>
+<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
+</body>
+</html>

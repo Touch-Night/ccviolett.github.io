@@ -6,16 +6,107 @@
 <description>Recent content on 罗潇阳的博客</description>
 <generator>Hugo -- gohugo.io</generator>
 <language>zh-cn</language>
-<lastBuildDate>Thu, 14 Apr 2022 10:14:57 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<lastBuildDate>Fri, 15 Apr 2022 23:04:36 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <item>
-<title>创新实验班 Web 开发 | 计算机网络</title>
-<link>http://ccviolett.github.io/posts/43-teamwebnetwork/</link>
-<pubDate>Thu, 14 Apr 2022 10:14:57 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/43-teamwebnetwork/</guid>
-<description/>
+<title>LuoguP3373 【模板】线段树 2</title>
+<link>http://ccviolett.github.io/solution/luogup3373/</link>
+<pubDate>Fri, 15 Apr 2022 23:04:36 +0800</pubDate>
+<guid>http://ccviolett.github.io/solution/luogup3373/</guid>
+<description>一、题意    题目链接：Problem
+二、题解    三、代码    通过链接：Submission
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long var; const int N = 5e5 + 100; const int MOD = 571373; var read() { var s = 0, a = 0, c = getchar(); while (!isdigit(c)) s |= c == &amp;#39;-&amp;#39;, c = getchar(); while (isdigit(c)) a = a * 10 + c - &amp;#39;0&amp;#39;, c = getchar(); return s ?</description>
 </item>
 <item>
-<title>220414</title>
+<title>LuoguP3379 【模板】最近公共祖先（LCA）</title>
+<link>http://ccviolett.github.io/solution/luogup3379/</link>
+<pubDate>Fri, 15 Apr 2022 23:03:48 +0800</pubDate>
+<guid>http://ccviolett.github.io/solution/luogup3379/</guid>
+<description>一、题意    题目链接：Problem
+二、题解    三、代码    通过链接：Submission
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long var; const int N = 5e5 + 10; const int M = 5e5 + 10; var read() { var s = 0, a = 0, c = getchar(); while (!isdigit(c)) s |= c == &amp;#39;-&amp;#39;, c = getchar(); while (isdigit(c)) a = a * 10 + c - &amp;#39;0&amp;#39;, c = getchar(); return s ?</description>
+</item>
+<item>
+<title>LuoguP3382 【模板】三分法</title>
+<link>http://ccviolett.github.io/solution/luogup3382/</link>
+<pubDate>Fri, 15 Apr 2022 23:02:20 +0800</pubDate>
+<guid>http://ccviolett.github.io/solution/luogup3382/</guid>
+<description>一、题意    题目链接：Problem
+二、题解    三、代码    通过链接：Submission
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long var; typedef long double let; const int N = 20; const let eps = 1e-8; int n; double a[N]; let Calc(let x) { let res = 0, tx = 1; for (int i = n; i &amp;gt;= 0; --i) { res += tx * a[i]; tx *= x; } return res; } int main() { let l, r; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; l &amp;gt;&amp;gt; r; for (int i = 0; i &amp;lt;= n; ++i) cin &amp;gt;&amp;gt; a[i]; while (l + eps &amp;lt; r) { let lp = l + (r - l) / 3, rp = r - (r - l) / 3; let lv = Calc(lp), rv = Calc(rp); if (lv &amp;lt; rv) l = lp; else r = rp; } cout &amp;lt;&amp;lt; setprecision(5) &amp;lt;&amp;lt; fixed &amp;lt;&amp;lt; l &amp;lt;&amp;lt; endl; return 0; } </description>
+</item>
+<item>
+<title>LuoguP3370 【模板】字符串哈希</title>
+<link>http://ccviolett.github.io/solution/luogup3370/</link>
+<pubDate>Fri, 15 Apr 2022 23:01:13 +0800</pubDate>
+<guid>http://ccviolett.github.io/solution/luogup3370/</guid>
+<description>一、题意    题目链接：Problem
+二、题解    三、代码    通过链接：Submission
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long var; struct SHash { const int BASE = 107; const int MOD = 1e9 + 7; var val; SHash() { val = 0; } void add(int v) { ((val *= BASE) += v) %= MOD; } }; struct DHash { const int BASE1 = 107; const int MOD1 = 1e9 + 7; const int BASE2 = 109; const int MOD2 = 1e9 + 9; var val1, val2; DHash() { val1 = 0, val2 = 0; } void add(int v) { ((val1 *= BASE1) += v) %= MOD1; ((val2 *= BASE2) += v) %= MOD2; } var val() { return val1 * MOD2 + val2; } }; const int N = 1e4 + 1; const int M = 1501; char s[M]; map&amp;lt;var, bool&amp;gt; have; int main() { int n; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); int res = 0; for (int i = 1; i &amp;lt;= n; ++i) { scanf(&amp;#34;%s&amp;#34;, s); int len = strlen(s); DHash h; for (int j = 0; j &amp;lt; len; ++j) h.</description>
+</item>
+<item>
+<title>LuoguP3366 【模板】最小生成树</title>
+<link>http://ccviolett.github.io/solution/luogup3366/</link>
+<pubDate>Fri, 15 Apr 2022 23:00:14 +0800</pubDate>
+<guid>http://ccviolett.github.io/solution/luogup3366/</guid>
+<description>一、题意    题目链接：Problem
+二、题解    三、代码    通过链接：Submission
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int N = 5e3 + 100; const int M = 2e5 + 100; struct Edge { int u, v, w; }; int n, m; int fa[N]; Edge edge[M]; int Find(int t) { if (fa[t] != t) fa[t] = Find(fa[t]); return fa[t]; } bool Check(int x, int y) { return Find(x) == Find(y); } int Link(int x, int y) { fa[Find(x)] = Find(y); } int main() { scanf(&amp;#34;%d%d&amp;#34;, &amp;amp;n, &amp;amp;m); for (int i = 1; i &amp;lt;= n; ++i) fa[i] = i; for (int i = 1; i &amp;lt;= m; ++i) { int x, y, z; scanf(&amp;#34;%d%d%d&amp;#34;, &amp;amp;x, &amp;amp;y, &amp;amp;z); edge[i] = (Edge) {x, y, z}; } sort(edge + 1, edge + m + 1, [=] (Edge a, Edge b) { return a.</description>
+</item>
+<item>
+<title>LuoguP3383 【模板】线性筛素数</title>
+<link>http://ccviolett.github.io/solution/luogup3383/</link>
+<pubDate>Fri, 15 Apr 2022 22:58:49 +0800</pubDate>
+<guid>http://ccviolett.github.io/solution/luogup3383/</guid>
+<description>一、题意    题目链接：Problem
+二、题解    三、代码    通过链接：Submission
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long var; const int N = 1e8 + 1; bool notprime[N]; int cnt, prime[N]; int main() { int n, q; scanf(&amp;#34;%d%d&amp;#34;, &amp;amp;n, &amp;amp;q); for (int i = 2; i &amp;lt;= n; ++i) { if (!notprime[i]) prime[++cnt] = i; for (int j = 1; j &amp;lt;= cnt; ++j) { if (1ll * i * prime[j] &amp;gt; n) break; notprime[i * prime[j]] = true; if (!</description>
+</item>
+<item>
+<title>LuoguP1226 【模板】快速幂||取余运算</title>
+<link>http://ccviolett.github.io/solution/luogup1226/</link>
+<pubDate>Fri, 15 Apr 2022 22:56:13 +0800</pubDate>
+<guid>http://ccviolett.github.io/solution/luogup1226/</guid>
+<description>一、题意    题目链接：Problem
+二、题解    三、代码    通过链接：Submission
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long var; var qpow(var x, var y, var p) { var res = 1; while (y) { if (y &amp;amp; 1) (res *= x) %= p; (x *= x) %= p; y &amp;gt;&amp;gt;= 1; } return res; } int main() { int a, b, p; scanf(&amp;#34;%d%d%d&amp;#34;, &amp;amp;a, &amp;amp;b, &amp;amp;p); printf(&amp;#34;%d^%d mod %d=%lld\n&amp;#34;, a, b, p, qpow(a, b, p)); return 0; } </description>
+</item>
+<item>
+<title>LuoguP3367 【模板】并查集</title>
+<link>http://ccviolett.github.io/solution/luogup3367/</link>
+<pubDate>Fri, 15 Apr 2022 21:33:24 +0800</pubDate>
+<guid>http://ccviolett.github.io/solution/luogup3367/</guid>
+<description>一、题意    题目链接：Problem
+二、题解    三、代码    通过链接：Submission
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int N = 1e4 + 1; const int M = 2e5 + 1; int n, m; int fa[N]; int Find(int t) { if (t != fa[t]) fa[t] = Find(fa[t]); return fa[t]; } int Check(int x, int y) { x = Find(x), y = Find(y); return x == y; } void Link(int x, int y) { x = Find(x), y = Find(y); fa[x] = y; } int main() { scanf(&amp;#34;%d%d&amp;#34;, &amp;amp;n, &amp;amp;m); for (int i = 1; i &amp;lt;= n; ++i) fa[i] = i; for (int i = 1; i &amp;lt;= m; ++i) { int z, x, y; scanf(&amp;#34;%d%d%d&amp;#34;, &amp;amp;z, &amp;amp;x, &amp;amp;y); if (z == 1) { if (!</description>
+</item>
+<item>
+<title>创新实验班 Web 开发 | 计算机网络 Part1 物理层</title>
+<link>http://ccviolett.github.io/posts/44-teamwebnetwork2/</link>
+<pubDate>Fri, 15 Apr 2022 18:14:58 +0800</pubDate>
+<guid>http://ccviolett.github.io/posts/44-teamwebnetwork2/</guid>
+<description> </description>
+</item>
+<item>
+<title>创新实验班 Web 开发 | 计算机网络 Part0 概述</title>
+<link>http://ccviolett.github.io/posts/43-teamwebnetwork1/</link>
+<pubDate>Fri, 15 Apr 2022 15:56:31 +0800</pubDate>
+<guid>http://ccviolett.github.io/posts/43-teamwebnetwork1/</guid>
+<description>一、速率相关性能指标  1. 速率 2. 带宽 3. 吞吐量   二、时延相关指标  1. 时延 2. 时延带宽积 3. 往返时延RTT 4. 利用率   三、分层结构  1. 必要性 2. 介绍   四、参考模型  1. OSI 七层模型 2. TCP/IP 四层模型 3. 五层模型     一、速率相关性能指标    1. 速率    连接在计算机网络上的主机在数字信道上传送数据位数的速率
+单位:b/s,Kb/s,Mb/s,Tb/s，如果用字节表示，则是B/s,KB/s,MB/s,TB/s，其中 1Byte=8Bit
+2. 带宽    在计算机网络中，指的是网络设备所支持的最高速度，单位同速率，是理想条件下最高速率
+3. 吞吐量    单位时间内通过某个网络的数据总量
+二、时延相关指标    1.</description>
+</item>
+<item>
+<title>220415</title>
+<link>http://ccviolett.github.io/todo/220415/</link>
+<pubDate>Fri, 15 Apr 2022 09:10:39 +0800</pubDate>
+<guid>http://ccviolett.github.io/todo/220415/</guid>
+<description>定时任务：
+ ( ) “力扣杯”春季编程大赛-个人赛  dur: 4 月 16 日 15:00 - 17:30   ( ) ICPC2021 昆明站热身赛  dur: 4 月 16 日 18:30 - 21:00   ( ) ICPC2021 昆明站正式赛  dur: 4 月 17 日 11:30 - 16:30   ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 团队程序设计天梯赛  dur: 4 月 23 日 13:30 - 16:30   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
+</item>
+<item>
+<title>初探计算机网络</title>
 <link>http://ccviolett.github.io/todo/220414/</link>
 <pubDate>Thu, 14 Apr 2022 07:38:29 +0800</pubDate>
 <guid>http://ccviolett.github.io/todo/220414/</guid>
@@ -118,7 +209,7 @@ class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: l 
 <link>http://ccviolett.github.io/posts/42-teamwebfontend/</link>
 <pubDate>Sun, 10 Apr 2022 10:15:53 +0800</pubDate>
 <guid>http://ccviolett.github.io/posts/42-teamwebfontend/</guid>
-<description>相关链接 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果</description>
+<description>相关链接 CSS 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  CSS 知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果</description>
 </item>
 <item>
 <title>CSS 还不够熟练 &amp; 好久没写算法题了</title>
@@ -451,15 +542,11 @@ AllSigned 和 RemoteSigned 执行策略可防止 Windows PowerShell 运行没有
 笠翁对韵</description>
 </item>
 <item>
-<title>新疆省选训练记录</title>
+<title>2022 新疆省选训练记录</title>
 <link>http://ccviolett.github.io/posts/24-xjelectiontraining/</link>
 <pubDate>Thu, 17 Mar 2022 20:55:55 +0800</pubDate>
 <guid>http://ccviolett.github.io/posts/24-xjelectiontraining/</guid>
-<description>文章的部分内容被密码保护：
-  --- DON'T MODIFY THIS LINE --- 零、基本信息    学员姓名：王梓沣
-一、竞争分析    从 100、200 分为三段，200 以上的只有 2 人，基本预定省队。
- 赵思铭 男 克拉玛依市第一中学 高二 209 100 45 32 32 杜宇丰 男 新疆生产建设兵团第二中学 高二 200 100 100 0 0  女队一定会从下面二人中产生。
- 邓亦珊 女 新疆生产建设兵团第二中学 高二 70 70 0 0 0 王雨卓 女 乌鲁木齐市第七十中学 高一 70 70 0 0 0  由于 1/3 限制，新疆生产建设兵团第二中学 出 2 个省队， 乌鲁木齐市第一中学 只能出 2 个省队（还不一定），将其剩下的剔除。</description>
+<description>零、基本信息 一、竞争分析 二、契机与心态 三、考场策略  整体策略   四、课程安排  快速幂 矩阵乘法 矩阵快速幂 矩阵快速幂优化 DP 逆元 gcd 重载运算直接访问结构体内部数组 区间 DP 树型 DP DAG（有向无环图）DP 线段树 hash 算法 回文串 KMP 三分 树 倍增求 LCA Kruskal 求最小生成树 DAG 拓扑排序 组合数学八题 树链剖分   五、考场须知  1. 技巧 2. 警告 3. 注意   六、考前准备 七、每日记录  2022 年 3 月 17 日 第 1 节课总结 2022 年 3 月 18 日 第 2 节课总结 2022 年 3 月 21 日 第 3 节课总结 2022 年 3 月 21 日 第 4 节课总结 2022 年 3 月 24 日 第 5 节课总结 2022 年 3 月 25 日 第 6 节课总结 2022 年 3 月 28 日 第 7 节课总结 2022 年 3 月 30 日 第 8 节课总结 2022 年 4 月 1 日 第 9 节课总结 2022 年 4 月 4 日 第 10 节课总结 2022 年 4 月 11 日 第 11 节课总结 2022 年 4 月 12 日 第 12 节课总结 2022 年 4 月 13 日 第 13 节课总结 2022 年 4 月 14 日 第 14 节课总结 2022 年 4 月 15 日 第 15 节课总结     零、基本信息    学员姓名：王梓沣</description>
 </item>
 <item>
 <title>如何解决微分方程相关问题？</title>
@@ -682,7 +769,7 @@ Free Educational Licenses
 <link>http://ccviolett.github.io/record/</link>
 <pubDate>Mon, 28 Feb 2022 21:19:44 +0800</pubDate>
 <guid>http://ccviolett.github.io/record/</guid>
-<description>报错： Error: Please make sure the libxml2 and libxslt development packages are installed.
+<description>Markdown 表格生成  报错： Error: Please make sure the libxml2 and libxslt development packages are installed.
 解决方案：安装 libxml2、libxslt 和 libxslt-devel
 人脸验证 API：Face ID
 pip 设置国内源：

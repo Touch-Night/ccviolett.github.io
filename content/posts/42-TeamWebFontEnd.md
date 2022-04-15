@@ -28,7 +28,7 @@ series = []
 - [CSS 媒体查询](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Media_queries)
 - [CSS 关键帧](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes)
 
-## 知识点
+## CSS 知识点
 
 ### 浮动
 

@@ -25,7 +25,7 @@ class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: l 
       <pubDate>Sun, 10 Apr 2022 10:15:53 +0800</pubDate>
       
       <guid>http://ccviolett.github.io/posts/42-teamwebfontend/</guid>
-      <description>相关链接 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果</description>
+      <description>相关链接 CSS 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  CSS 知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果</description>
     </item>
     
     <item>
