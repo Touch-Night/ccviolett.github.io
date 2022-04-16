@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计算机网络 on 罗潇阳的博客</title>
+    <link>http://ccviolett.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+    <description>Recent content in 计算机网络 on 罗潇阳的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 15 Apr 2022 18:14:58 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算机网络 | Part1 物理层</title>
+      <link>http://ccviolett.github.io/posts/44-teamwebnetwork2/</link>
+      <pubDate>Fri, 15 Apr 2022 18:14:58 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/44-teamwebnetwork2/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>计算机网络 | Part0 概述</title>
+      <link>http://ccviolett.github.io/posts/43-teamwebnetwork1/</link>
+      <pubDate>Fri, 15 Apr 2022 15:56:31 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/43-teamwebnetwork1/</guid>
+      <description>一、速率相关性能指标  1. 速率 2. 带宽 3. 吞吐量   二、时延相关指标  1. 时延 2. 时延带宽积 3. 往返时延RTT 4. 利用率   三、分层结构  1. 必要性 2. 介绍   四、参考模型  1. OSI 七层模型 2. TCP/IP 四层模型 3. 五层模型     一、速率相关性能指标    1. 速率    连接在计算机网络上的主机在数字信道上传送数据位数的速率
+单位:b/s,Kb/s,Mb/s,Tb/s，如果用字节表示，则是B/s,KB/s,MB/s,TB/s，其中 1Byte=8Bit
+2. 带宽    在计算机网络中，指的是网络设备所支持的最高速度，单位同速率，是理想条件下最高速率
+3. 吞吐量    单位时间内通过某个网络的数据总量
+二、时延相关指标    1.</description>
+    </item>
+    
+  </channel>
+</rss>
