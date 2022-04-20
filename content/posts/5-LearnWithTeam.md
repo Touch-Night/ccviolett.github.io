@@ -250,6 +250,7 @@ Java：
 - [web前端零基础html5+css3+前端项目视频教程](https://www.bilibili.com/video/BV1Kg411T7t9)
 - [黑马程序员 Javascript 全套教程](https://www.bilibili.com/video/BV1ux411d75J)
 - [黑马程序员JavaScript核心教程，前端基础教程，JS必会的DOM BOM操作](https://www.bilibili.com/video/BV1k4411w7sV)
+- [黑马程序员AJAX零基础到精通_整合Git核心内容全套教程](https://www.bilibili.com/video/BV1zs411h74a)
 
 ### 2. 后端
 - [JavaWeb从入门到项目实战](https://www.bilibili.com/video/BV1qv4y1o79t)

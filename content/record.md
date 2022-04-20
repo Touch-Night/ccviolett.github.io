@@ -11,6 +11,8 @@ externalLink = ""
 series = []
 +++
 
+- [颜文字JS](https://utf-8.jp/public/aaencode.html)
+- [PDF 提权破解](http://www.pdfwork.cn/)
 - [Markdown 表格生成](https://www.tablesgenerator.com/markdown_tables)
 
 报错： `Error: Please make sure the libxml2 and libxslt development packages are installed.`
