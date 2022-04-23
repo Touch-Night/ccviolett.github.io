@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2022-03-30T19:26:48+08:00
-title = "学习机械制图"
+title = "机械制图 | 螺纹"
 description = ""
 slug = ""
 authors = ["ccviolett"]
@@ -11,35 +11,7 @@ externalLink = ""
 series = []
 +++
 
-{{<toc>}}
-
-前置知识：画法几何
-
-### 一、标准件
-
-定义：在结构、尺寸、画法、标注等各个方面，直到成品质量，都由国家或行业批准发布了标准，按标准由专业厂生产的机件。
-
-注意点：
-- 不单独画出零件图或部件图
-- 标准结构不需按真实投影画出，只要根据标准规定的画法、代号和标记进行绘画和标注，它们的结构和尺寸可查阅相应的国家标准或机械零件手册得出。
-
-例子：
-- 螺钉
-- 螺栓
-- 螺母
-- 垫圈
-- 键
-- 销
-
-### 二、常用件
-
-定义：应用广泛、结构定型、某些部分的结构形状与尺寸已标准化的一般零件。
-
-例子：
-- 齿轮
-- 花键
-
-### 三、螺纹的要素
+### 一、螺纹的要素
 
 1. 牙型
 
@@ -74,7 +46,7 @@ series = []
 
     省略标注时默认为 RH。
 
-### 四、螺纹的规定画法
+### 二、螺纹的规定画法
 
 外螺纹：大径粗实小径虚
 
@@ -86,16 +58,15 @@ series = []
 
 螺纹副旋合部分画外螺纹，其余部分各画各。
 
-![](https://s2.loli.net/2022/03/30/LWG1H3MJXPED6aq.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/LWG1H3MJXPED6aq.png)
 
-### 五、普通螺纹的标注
+### 三、普通螺纹的标注
 
 (螺纹特征代号)(尺寸代号)-(公差带代号)-(旋合长度代号)-(旋向代号)
 
 可以去这里看看各种螺纹：[奥展旗舰店](https://aozhan.tmall.com/)
 
 1. 螺纹特征代号
-
     - 普通螺纹：M
     - $55^\circ$ 非密封管螺纹：G
     - $55^\circ$ 密封管螺纹：
@@ -144,7 +115,7 @@ series = []
 
     左旋标注 LH，右旋不标注旋向代号。
 
-### 六、常用螺纹紧固件
+### 四、常用螺纹紧固件
 
 常见的螺纹紧固件有螺钉、螺栓、螺柱、螺母、垫圈等
 
@@ -155,50 +126,51 @@ series = []
 
 下面是课本上给出的几个常用螺纹紧固件，以下图片均来自[易紧通紧固件网](https://www.164580.com/)。
 
+
 1. 开槽盘头螺钉 
 
 螺钉 [GB/T 64-2008](https://www.164580.com/info_29954.html)
 
-![](https://s2.loli.net/2022/03/30/WUFf91YGxQmvrLb.jpg)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/6FbycP8E4etu5Ir.png)
 
 2. 内六角圆柱头螺钉 
 
 螺钉 [GB /T 70.1 - 2008](https://www.164580.com/info_30447.html)
 
-![](https://s2.loli.net/2022/03/30/6FbycP8E4etu5Ir.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/WUFf91YGxQmvrLb.jpg)
 
 3. 开槽锥端紧定螺钉 
 
 螺钉 [GB /T 71 - 2018](https://www.164580.com/info_344862.html)
 
-![](https://s2.loli.net/2022/03/30/lTJ7xptPe4oRWGs.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/lTJ7xptPe4oRWGs.png)
 
 4. 六角头螺栓 
 
 螺栓 [GB /T 5782 - 2000](https://www.164580.com/info_6460.html)
 
-![](https://s2.loli.net/2022/03/30/Qvt2yUzPrpT1YC6.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/Qvt2yUzPrpT1YC6.png)
 
 5. 双头螺柱
 
 螺柱 [GB 899](https://www.164580.com/info_765.html)
 
-![](https://s2.loli.net/2022/03/30/skDYA9CWuqogXQf.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/skDYA9CWuqogXQf.png)
 
 6. 1型六角螺母 
 
 螺母 [GB /T 6170 - 2000](https://www.164580.com/info_12529.html)
 
-![](https://s2.loli.net/2022/03/30/6SbTN198AwylzMO.jpg)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/6SbTN198AwylzMO.jpg)
 
 7. 平垫圈 A级 
 
 垫圈 [GB /T 97.1 - 2002](https://www.164580.com/info_29155.html)
 
-![](https://s2.loli.net/2022/03/30/d9sDw51NMkXyzit.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/d9sDw51NMkXyzit.png)
 
 8. 标准型弹簧垫圈 
 
 垫圈 [GB 93 - 1987](https://www.164580.com/info_1037.html)
 
-![](https://s2.loli.net/2022/03/30/2KPyMuI3JSiFsLT.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/2KPyMuI3JSiFsLT.png)

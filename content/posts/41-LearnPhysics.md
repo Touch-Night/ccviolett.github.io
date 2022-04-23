@@ -5,7 +5,6 @@ title = "大学物理分析"
 description = ""
 slug = ""
 authors = []
-tags = []
 categories = []
 externalLink = ""
 series = []
@@ -37,7 +36,7 @@ D：保守力做功并不会影响系统的机械能，会和保守势能相互�
 
 4. 两质量分别为m1、m2的小球，用一劲度系数为k的轻弹簧相连，放在水平光滑桌面上，如图所示．今以等值反向的力分别作用于两小球，则两小球和弹簧这系统的（B）
 
-![](https://s2.loli.net/2022/04/05/IwCMW946eqtGZb2.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/IwCMW946eqtGZb2.png)
 
 - A 动量守恒，机械能守恒．
 - B 动量守恒，机械能不守恒．
@@ -46,7 +45,7 @@ D：保守力做功并不会影响系统的机械能，会和保守势能相互�
 
 5. 弹性系数为k的轻弹簧，一端与倾角为α的斜面上的固定挡板A相接，另一端与质量为m的物体B相连．O点为弹簧没有连物体、原长时的端点位置，a点为物体B的平衡位置．现在将物体B由a点沿斜面向上移动到b点(见下图)．设a点与O点，a点与b点之间距离分别为x1和x2，则在此过程中，由弹簧、物体B和地球组成的系统势能的增加为(　　)
 
-![](https://s2.loli.net/2022/04/05/3nNyO1Kos56L7Tl.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/3nNyO1Kos56L7Tl.png)
 
 - A $\frac{1}{2}kx_2^2 + mgx_2sin a$
 - B $\frac{1}{2}k(x_2 - x_1)^2 + mg(x_2 - x_1)sin a$

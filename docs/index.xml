@@ -6,9 +6,53 @@
 <description>Recent content on 罗潇阳的博客</description>
 <generator>Hugo -- gohugo.io</generator>
 <language>zh-cn</language>
-<lastBuildDate>Wed, 20 Apr 2022 08:23:15 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<lastBuildDate>Sat, 23 Apr 2022 10:31:24 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <item>
-<title>220420</title>
+<title/>
+<link>http://ccviolett.github.io/posts/48-teamwebnetwork6/</link>
+<pubDate>Sat, 23 Apr 2022 10:31:24 +0800</pubDate>
+<guid>http://ccviolett.github.io/posts/48-teamwebnetwork6/</guid>
+<description/>
+</item>
+<item>
+<title/>
+<link>http://ccviolett.github.io/posts/47-teamwebnetwork5/</link>
+<pubDate>Sat, 23 Apr 2022 10:31:06 +0800</pubDate>
+<guid>http://ccviolett.github.io/posts/47-teamwebnetwork5/</guid>
+<description/>
+</item>
+<item>
+<title/>
+<link>http://ccviolett.github.io/posts/46-teamwebnetwork4/</link>
+<pubDate>Sat, 23 Apr 2022 10:31:01 +0800</pubDate>
+<guid>http://ccviolett.github.io/posts/46-teamwebnetwork4/</guid>
+<description/>
+</item>
+<item>
+<title/>
+<link>http://ccviolett.github.io/posts/45-teamwebnetwork3/</link>
+<pubDate>Sat, 23 Apr 2022 10:30:51 +0800</pubDate>
+<guid>http://ccviolett.github.io/posts/45-teamwebnetwork3/</guid>
+<description/>
+</item>
+<item>
+<title>告别机械</title>
+<link>http://ccviolett.github.io/todo/220422/</link>
+<pubDate>Fri, 22 Apr 2022 17:02:35 +0800</pubDate>
+<guid>http://ccviolett.github.io/todo/220422/</guid>
+<description>定时任务：
+ ( ) 物理模拟测试  dur: 4 月 23 日 19:00 - 20:00   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 团队程序设计天梯赛  dur: 4 月 23 日 13:30 - 16:30 desc: 电脑桌面上尽可能干净   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
+</item>
+<item>
+<title>复习机械制图第二天</title>
+<link>http://ccviolett.github.io/todo/220421/</link>
+<pubDate>Thu, 21 Apr 2022 09:50:16 +0800</pubDate>
+<guid>http://ccviolett.github.io/todo/220421/</guid>
+<description>定时任务：
+ ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 团队程序设计天梯赛  dur: 4 月 23 日 13:30 - 16:30 desc: 电脑桌面上尽可能干净   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
+</item>
+<item>
+<title>复习机械制图第一天</title>
 <link>http://ccviolett.github.io/todo/220420/</link>
 <pubDate>Wed, 20 Apr 2022 08:23:15 +0800</pubDate>
 <guid>http://ccviolett.github.io/todo/220420/</guid>
@@ -124,7 +168,15 @@
 <link>http://ccviolett.github.io/posts/44-teamwebnetwork2/</link>
 <pubDate>Fri, 15 Apr 2022 18:14:58 +0800</pubDate>
 <guid>http://ccviolett.github.io/posts/44-teamwebnetwork2/</guid>
-<description> </description>
+<description>一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
+  机械特性：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况。
+  电气特性：规定传输二进制位时，线路上信号的电压范围、阻抗匹配、传输速率和距离限制等。
+  功能特性：指明某条线上出现的某一电平表示何种意义、接口部件的信号线的用途。
+  规格特性：定义各条物理线路的工作规程和时序问题。
+  二、数据通信    （一）相关术语    数据：传送信号的实体，通常是有意义的符号序列。
+信号：数据的电气、电磁表现，是数据在传输过程中的存在形式。
+ 数字信号：代表信息的参数取值是离散的。 模拟信号：代表信号的参数取值是连续的。  信源：产生和发送数据的源头。
+信宿：接收数据的终点。</description>
 </item>
 <item>
 <title>计算机网络 | Part0 概述</title>
@@ -429,7 +481,24 @@ D：保守力做功并不会影响系统的机械能，会和保守势能相互�
 <link>http://ccviolett.github.io/posts/34-howtoprovetobestudent/</link>
 <pubDate>Sat, 02 Apr 2022 23:37:23 +0800</pubDate>
 <guid>http://ccviolett.github.io/posts/34-howtoprovetobestudent/</guid>
-<description>学信网在线验证码     首先进入学信网，找到登录界面并登录。  进入 在线验证报告 界面，首先验证自己的身份。  验证完成后，点击“申请”进入申请页面。  确认无误信息后，再次点击“申请”按钮生成在线验证码。  随后会自动返回在线验证报告界面，即可看到自己的在线验证码，可以用来证明自己的学生身份。  </description>
+<description>学信网在线验证码     首先进入学信网，找到登录界面并登录。  进入 在线验证报告 界面，首先验证自己的身份。  验证完成后，点击“申请”进入申请页面。  确认无误信息后，再次点击“申请”按钮生成在线验证码。  随后会自动返回在线验证报告界面，即可看到自己的在线验证码。  将在线验证码提供给需要验证的地方，即可通过在线验证证明自己的学生身份。  </description>
+</item>
+<item>
+<title>画完第一幅装配图的自豪</title>
+<link>http://ccviolett.github.io/todo/220402/</link>
+<pubDate>Sat, 02 Apr 2022 18:30:20 +0800</pubDate>
+<guid>http://ccviolett.github.io/todo/220402/</guid>
+<description>也算是人生中第一次画出看起来这么“专业”（其实并没有）的图，勉勉强强能够抄一些别人画好的简单的机械图纸了吧。
+当装配完成的那一刻，还是很有成就感的。
+就像一个作品的诞生。
+要交上去的作业里面不用画零件的具体尺寸，但是我总不能白标了是不（doge），在这里展示展示。</description>
+</item>
+<item>
+<title>我爱愚人节带来的流量</title>
+<link>http://ccviolett.github.io/todo/220401/</link>
+<pubDate>Fri, 01 Apr 2022 18:37:45 +0800</pubDate>
+<guid>http://ccviolett.github.io/todo/220401/</guid>
+<description>不多说，直接上图，我希望天天都是愚人节，能够多多整活。</description>
 </item>
 <item>
 <title>洛谷 P1315 [NOIP2011 提高组] 观光公交</title>
@@ -453,17 +522,11 @@ D：保守力做功并不会影响系统的机械能，会和保守势能相互�
  setTimeout(() = { window.location.href="https://www.bilibili.com/video/BV1GJ411x7h7" }, 800);  </description>
 </item>
 <item>
-<title>学习机械制图</title>
-<link>http://ccviolett.github.io/posts/33-learnmechanicaldrawing/</link>
+<title>机械制图 | 螺纹</title>
+<link>http://ccviolett.github.io/posts/33-mechanicaldrawingthread/</link>
 <pubDate>Wed, 30 Mar 2022 19:26:48 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/33-learnmechanicaldrawing/</guid>
-<description>一、标准件 二、常用件 三、螺纹的要素 四、螺纹的规定画法 五、普通螺纹的标注 六、常用螺纹紧固件     前置知识：画法几何
-一、标准件    定义：在结构、尺寸、画法、标注等各个方面，直到成品质量，都由国家或行业批准发布了标准，按标准由专业厂生产的机件。
-注意点：
- 不单独画出零件图或部件图 标准结构不需按真实投影画出，只要根据标准规定的画法、代号和标记进行绘画和标注，它们的结构和尺寸可查阅相应的国家标准或机械零件手册得出。  例子：
- 螺钉 螺栓 螺母 垫圈 键 销  二、常用件    定义：应用广泛、结构定型、某些部分的结构形状与尺寸已标准化的一般零件。
-例子：
- 齿轮 花键  三、螺纹的要素      牙型
+<guid>http://ccviolett.github.io/posts/33-mechanicaldrawingthread/</guid>
+<description>一、螺纹的要素      牙型
 螺纹的轮廓形状
   公称直径
 代表螺纹尺寸的直径，指大径。
@@ -471,19 +534,27 @@ D：保守力做功并不会影响系统的机械能，会和保守势能相互�
 小径：内围圆柱的直径，$d_1$（外螺纹）或 $D_1$（内螺纹） 表示。
    线数 n
 螺旋线数量
-  螺距 P</description>
+  螺距 P
+螺纹相邻两牙在中径线上对应两点间的轴向距离。
+  导程 Ph
+同一条螺纹线上的相邻两牙在中径线上对应两点间的轴向距离。
+$$ Ph = nP $$
+  旋向
+ 顺时针旋转时旋入的螺纹称为右旋螺纹（RH） 逆时针旋转时旋入的螺纹成为左旋螺纹（LH）  省略标注时默认为 RH。
+  二、螺纹的规定画法    外螺纹：大径粗实小径虚
+内螺纹：小径粗实大径虚，不通孔有 120 度钻孔
+小径约为大径 0.85 倍，虚圈只画 3/4 圈
+螺纹副：内、外螺纹旋合到一起后的部件
+螺纹副旋合部分画外螺纹，其余部分各画各。
+三、普通螺纹的标注    (螺纹特征代号)(尺寸代号)-(公差带代号)-(旋合长度代号)-(旋向代号)</description>
 </item>
 <item>
-<title>一些日记</title>
-<link>http://ccviolett.github.io/diary/</link>
-<pubDate>Wed, 30 Mar 2022 17:33:13 +0800</pubDate>
-<guid>http://ccviolett.github.io/diary/</guid>
-<description>2022 年 04 月 02 日 画完第一幅装配图的自豪    也算是人生中第一次画出看起来这么“专业”（其实并没有）的图，勉勉强强能够抄一些别人画好的简单的机械图纸了吧。
-当装配完成的那一刻，还是很有成就感的。
-就像一个作品的诞生。
-要交上去的作业里面不用画零件的具体尺寸，但是我总不能白标了是不（doge），在这里展示展示。
-2022 年 04 月 01 日 我爱愚人节带来的流量    不多说，直接上图，我希望天天都是愚人节，能够多多整活。
-2022 年 03 月 30 日 公共基础课程之我是大冤种    我承认我是冲动了，当我看到四门 公共基础课程 出现在我的课程表中，而且我还得为每一学分支付 100 元的费用时，我知道我不仅仅挥霍了时间，我还挥霍了金钱。
+<title>公共基础课程之我是大冤种</title>
+<link>http://ccviolett.github.io/todo/220330/</link>
+<pubDate>Wed, 30 Mar 2022 18:36:59 +0800</pubDate>
+<guid>http://ccviolett.github.io/todo/220330/</guid>
+<description>公共基础课程之我是大冤种
+我承认我是冲动了，当我看到四门 公共基础课程 出现在我的课程表中，而且我还得为每一学分支付 100 元的费用时，我知道我不仅仅挥霍了时间，我还挥霍了金钱。
 更加令人心痛的是，本来可以额外增加了一次退改课的机会：
 但是被我完全忘掉了，直到今天的课程通知下来：
 我就是个纯纯的大冤种。</description>
@@ -817,21 +888,22 @@ Free Educational Licenses
 <link>http://ccviolett.github.io/record/</link>
 <pubDate>Mon, 28 Feb 2022 21:19:44 +0800</pubDate>
 <guid>http://ccviolett.github.io/record/</guid>
-<description>颜文字JS PDF 提权破解 Markdown 表格生成  报错： Error: Please make sure the libxml2 and libxslt development packages are installed.
-解决方案：安装 libxml2、libxslt 和 libxslt-devel
-人脸验证 API：Face ID
-pip 设置国内源：
-pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ 国内读研建议    留在国内读研，最好能走这样一条路，本科选个好专业（感兴趣的），考研考个好学校，面试通过能找到个好导师，导师手上正好有个非常不错的项目（科研类或者工程类），项目中能担任不错的角色，最后项目出了成果能分到一杯羹，项目中能在行业中小试牛刀，初露锋芒，认识一些行业大佬或者职能部门领导，这个是工程类，考虑进入职场的路线。如果是科研类，就继续读博，博导是行业领军人物，协助博导完成几项国家级以上项目，在博士期间就能半工半读，积累大量人脉资源和项目经验。博士期间发表高水平（SCI 二类以上）论文，毕业后能够在行业独当一面。当然也存在这样一条路，在国内读研主要目的是为了拿到学历学位证，其他时间可以考虑创业等事宜，利用自己和父母的人脉资源，做出一番事业。另外，也已考公务员，在行政系统大展才华。这些就是出国留学所不能及，如果有这样的想法和目的的，就不建议出国了，因为会走很多弯路，错过很多机会。
-安迪-比尔定律    “安迪-比尔定律”，&amp;ldquo;Andy gives, Bill takes away.&amp;quot;，所有的硬件提升，都会被软件迭代吃掉。这个定律以前是对广大消费者有益的，软件的不断升级更新促使了硬件的告诉发展，可是现在软件体验没有足够的提升，只是无谓地在迭代，硬件为了满足这些无用地迭代又要升级，最后还是消费者为这个烂摊子买单。
-急救指南：set、env、type
-Word 转 Markdown 的网站：word2md
-Markdown 符号：https://blog.csdn.net/liyuanbhu/article/details/50636416
-思维导图软件：draw.io
-益智小游戏：
-  数织
-  AGC039D
-  AGC020F
-  LNR #2 黄金矿工</description>
+<description>位移：$\Delta \vec{r} = \vec{r}(t + \Delta t) - \vec{r}(t)$
+速度：$\vec{v} = \frac{d\vec{r}}{dt} = v_x\vec{i} + v_y\vec{j} + v_z\vec{k}$
+加速度：$\vec{a} = \frac{d\vec{v}}{dt} = a_x\vec{i} + a_y\vec{j} + a_z\vec{k}$
+用自然坐标表示速度和加速度：
+$\vec{v} = \frac{ds}{dt} \vec{\tau}$
+$\vec{a} = a_n\vec{n} + a_ \vec{\tau}$
+匀加速直线运动：
+$v = v_0 + at$
+圆周运动：
+$\Delta s = r \Delta \theta$
+$v = r\frac{d\theta}{dt} = r \omega$
+$a_{\tau} = \frac{dv}{dt}r\frac{d\omega}{dt} = r\alpha$
+$a_n$
+伽利略变换：
+$\vec{v} = \vec{v'} + \vec{u}$
+$\vec{a}_a = \vec{a}_r + \vec{a}_e$</description>
 </item>
 <item>
 <title>创新实验班 Web 开发教学计划</title>

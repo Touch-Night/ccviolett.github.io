@@ -15,15 +15,15 @@ series = []
 
 二维模型（带螺帽）
 
-![图片 4.png](https://s2.loli.net/2022/04/04/2emUHblBIOLqitP.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/Qvt2yUzPrpT1YC6.png)
 
 三维模型
 
-![图片 3.png](https://s2.loli.net/2022/04/04/JDcC9plwsbWOGi4.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/JDcC9plwsbWOGi4.png)
 
 实物模型
 
-![图片 1.png](https://s2.loli.net/2022/04/04/7Q5LuT4Yvk2bAPj.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/7Q5LuT4Yvk2bAPj.png)
 
 
 ## 二、分析零件

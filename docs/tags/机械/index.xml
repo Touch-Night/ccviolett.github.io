@@ -38,18 +38,12 @@
     </item>
     
     <item>
-      <title>学习机械制图</title>
-      <link>http://ccviolett.github.io/posts/33-learnmechanicaldrawing/</link>
+      <title>机械制图 | 螺纹</title>
+      <link>http://ccviolett.github.io/posts/33-mechanicaldrawingthread/</link>
       <pubDate>Wed, 30 Mar 2022 19:26:48 +0800</pubDate>
       
-      <guid>http://ccviolett.github.io/posts/33-learnmechanicaldrawing/</guid>
-      <description>一、标准件 二、常用件 三、螺纹的要素 四、螺纹的规定画法 五、普通螺纹的标注 六、常用螺纹紧固件     前置知识：画法几何
-一、标准件    定义：在结构、尺寸、画法、标注等各个方面，直到成品质量，都由国家或行业批准发布了标准，按标准由专业厂生产的机件。
-注意点：
- 不单独画出零件图或部件图 标准结构不需按真实投影画出，只要根据标准规定的画法、代号和标记进行绘画和标注，它们的结构和尺寸可查阅相应的国家标准或机械零件手册得出。  例子：
- 螺钉 螺栓 螺母 垫圈 键 销  二、常用件    定义：应用广泛、结构定型、某些部分的结构形状与尺寸已标准化的一般零件。
-例子：
- 齿轮 花键  三、螺纹的要素      牙型
+      <guid>http://ccviolett.github.io/posts/33-mechanicaldrawingthread/</guid>
+      <description>一、螺纹的要素      牙型
 螺纹的轮廓形状
   公称直径
 代表螺纹尺寸的直径，指大径。
@@ -57,7 +51,19 @@
 小径：内围圆柱的直径，$d_1$（外螺纹）或 $D_1$（内螺纹） 表示。
    线数 n
 螺旋线数量
-  螺距 P</description>
+  螺距 P
+螺纹相邻两牙在中径线上对应两点间的轴向距离。
+  导程 Ph
+同一条螺纹线上的相邻两牙在中径线上对应两点间的轴向距离。
+$$ Ph = nP $$
+  旋向
+ 顺时针旋转时旋入的螺纹称为右旋螺纹（RH） 逆时针旋转时旋入的螺纹成为左旋螺纹（LH）  省略标注时默认为 RH。
+  二、螺纹的规定画法    外螺纹：大径粗实小径虚
+内螺纹：小径粗实大径虚，不通孔有 120 度钻孔
+小径约为大径 0.85 倍，虚圈只画 3/4 圈
+螺纹副：内、外螺纹旋合到一起后的部件
+螺纹副旋合部分画外螺纹，其余部分各画各。
+三、普通螺纹的标注    (螺纹特征代号)(尺寸代号)-(公差带代号)-(旋合长度代号)-(旋向代号)</description>
     </item>
     
     <item>

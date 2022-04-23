@@ -6,13 +6,37 @@
 <meta content="zh-cn" http-equiv="Content-Language"/>
 <meta content="light dark" name="color-scheme"/>
 <meta content="罗潇阳" name="author"/>
-<meta content=" " name="description"/>
+<meta content="一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
+  机械特性：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况。
+  电气特性：规定传输二进制位时，线路上信号的电压范围、阻抗匹配、传输速率和距离限制等。
+  功能特性：指明某条线上出现的某一电平表示何种意义、接口部件的信号线的用途。
+  规格特性：定义各条物理线路的工作规程和时序问题。
+  二、数据通信    （一）相关术语    数据：传送信号的实体，通常是有意义的符号序列。
+信号：数据的电气、电磁表现，是数据在传输过程中的存在形式。
+ 数字信号：代表信息的参数取值是离散的。 模拟信号：代表信号的参数取值是连续的。  信源：产生和发送数据的源头。
+信宿：接收数据的终点。" name="description"/>
 <meta content="博客,开发者,个人" name="keywords"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="计算机网络 | Part1 物理层" name="twitter:title"/>
-<meta content=" " name="twitter:description"/>
+<meta content="一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
+  机械特性：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况。
+  电气特性：规定传输二进制位时，线路上信号的电压范围、阻抗匹配、传输速率和距离限制等。
+  功能特性：指明某条线上出现的某一电平表示何种意义、接口部件的信号线的用途。
+  规格特性：定义各条物理线路的工作规程和时序问题。
+  二、数据通信    （一）相关术语    数据：传送信号的实体，通常是有意义的符号序列。
+信号：数据的电气、电磁表现，是数据在传输过程中的存在形式。
+ 数字信号：代表信息的参数取值是离散的。 模拟信号：代表信号的参数取值是连续的。  信源：产生和发送数据的源头。
+信宿：接收数据的终点。" name="twitter:description"/>
 <meta content="计算机网络 | Part1 物理层" property="og:title"/>
-<meta content=" " property="og:description"/>
+<meta content="一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
+  机械特性：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况。
+  电气特性：规定传输二进制位时，线路上信号的电压范围、阻抗匹配、传输速率和距离限制等。
+  功能特性：指明某条线上出现的某一电平表示何种意义、接口部件的信号线的用途。
+  规格特性：定义各条物理线路的工作规程和时序问题。
+  二、数据通信    （一）相关术语    数据：传送信号的实体，通常是有意义的符号序列。
+信号：数据的电气、电磁表现，是数据在传输过程中的存在形式。
+ 数字信号：代表信息的参数取值是离散的。 模拟信号：代表信号的参数取值是连续的。  信源：产生和发送数据的源头。
+信宿：接收数据的终点。" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="http://ccviolett.github.io/posts/44-teamwebnetwork2/" property="og:url"/><meta content="posts" property="article:section"/>
 <meta content="2022-04-15T18:14:58+08:00" property="article:published_time"/>
@@ -101,7 +125,7 @@ var _hmt = _hmt || [];
 </span>
 <span class="reading-time">
 <i aria-hidden="true" class="fa fa-clock-o"></i>
-              阅读时间：0 分钟
+              阅读时间：1 分钟
             </span>
 </div>
 <div class="tags">
@@ -112,7 +136,280 @@ var _hmt = _hmt || [];
 </div>
 </header>
 <div>
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#一基本概念">一、基本概念</a></li>
+<li><a href="#二数据通信">二、数据通信</a>
+<ul>
+<li><a href="#一相关术语">（一）相关术语</a></li>
+<li><a href="#二通讯方式">（二）通讯方式</a></li>
+<li><a href="#三数据传输方式">（三）数据传输方式</a></li>
+<li><a href="#四奈式准则nyquist">（四）奈式准则(Nyquist)</a></li>
+<li><a href="#五香农公式shannon">（五）香农公式(Shannon)</a></li>
+<li><a href="#六编码">（六）编码</a></li>
+<li><a href="#七调制">（七）调制</a></li>
+</ul>
+</li>
+<li><a href="#三物理层传输介质">三、物理层传输介质</a>
+<ul>
+<li><a href="#一-导向性传输介质">（一） 导向性传输介质</a></li>
+<li><a href="#二非导向型传输介质">（二）非导向型传输介质</a></li>
+</ul>
+</li>
+<li><a href="#四物理层设备">四、物理层设备</a>
+<ul>
+<li><a href="#一中继器rp-repeater">（一）中继器(RP repeater)</a></li>
+<li><a href="#二集线器hub">（二）集线器(Hub)</a></li>
+<li><a href="#5-4-3-规则">5-4-3 规则</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<h2 id="一基本概念">
+  一、基本概念
+  <a class="heading-link" href="#%e4%b8%80%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p>物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。</p>
+<ol>
+<li>
+<p>机械特性：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况。</p>
+</li>
+<li>
+<p>电气特性：规定传输二进制位时，线路上信号的电压范围、阻抗匹配、传输速率和距离限制等。</p>
+</li>
+<li>
+<p>功能特性：指明某条线上出现的某一电平表示何种意义、接口部件的信号线的用途。</p>
+</li>
+<li>
+<p>规格特性：定义各条物理线路的工作规程和时序问题。</p>
+</li>
+</ol>
+<h2 id="二数据通信">
+  二、数据通信
+  <a class="heading-link" href="#%e4%ba%8c%e6%95%b0%e6%8d%ae%e9%80%9a%e4%bf%a1">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204222230071.png"/></p>
+<h3 id="一相关术语">
+  （一）相关术语
+  <a class="heading-link" href="#%e4%b8%80%e7%9b%b8%e5%85%b3%e6%9c%af%e8%af%ad">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>数据：传送信号的实体，通常是有意义的符号序列。</p>
+<p>信号：数据的电气、电磁表现，是数据在传输过程中的存在形式。</p>
+<ul>
+<li>数字信号：代表信息的参数取值是离散的。</li>
+<li>模拟信号：代表信号的参数取值是连续的。</li>
+</ul>
+<p>信源：产生和发送数据的源头。</p>
+<p>信宿：接收数据的终点。</p>
+<p>信道：信号的传输媒介。一般用来表示某一个方向传送信息的介质，因此一条通信线路往往包含一条发送信道和一条接收信道。</p>
+<p>码元（Symbol）：码元是指用一个固定时长的信号波形（数字脉冲），代表离散数值的基本波形。当有多个离散状态时，成为M进制码元。一个码元可以携带多个比特的信息。码元就是在网线上传输的一个个信号段，不同进制用来表示不同的数值。</p>
+<p>波特（Baud）：用来指一秒可以传输多少个码元</p>
+<p>基带信号：将数字信号 1 和 0 直接用两种不同的电压表示，再送到数字信道上去传输（基带传输）。基带信号直接表达了要传输的信息的信号，常用于较近的传输距离，信号内容不发生变化的情况。</p>
+<p>宽带信号：将基带信号进行调制后形成的频分复用模拟信号，再传送到模拟信道上去传输（宽带传输）。宽带信号把信号的频率范围搬移到较高的频段以便在信道中传输，常用于较远的传输距离，即使信号变化大最后也能过滤出基带信号。</p>
+<h3 id="二通讯方式">
+  （二）通讯方式
+  <a class="heading-link" href="#%e4%ba%8c%e9%80%9a%e8%ae%af%e6%96%b9%e5%bc%8f">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">英文</th>
+<th style="text-align:center">定义</th>
+<th style="text-align:center">需要信道条数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">单工通信</td>
+<td style="text-align:center">simplex</td>
+<td style="text-align:center">只能一个发一个收</td>
+<td style="text-align:center">一条</td>
+</tr>
+<tr>
+<td style="text-align:center">半双工通信</td>
+<td style="text-align:center">half-duplex</td>
+<td style="text-align:center">都可以发或者收，但是同一时间只能进行一个</td>
+<td style="text-align:center">两条</td>
+</tr>
+<tr>
+<td style="text-align:center">全双工通信</td>
+<td style="text-align:center">duplex</td>
+<td style="text-align:center">都可以同时收发数据</td>
+<td style="text-align:center">两条</td>
+</tr>
+</tbody>
+</table>
+<h3 id="三数据传输方式">
+  （三）数据传输方式
+  <a class="heading-link" href="#%e4%b8%89%e6%95%b0%e6%8d%ae%e4%bc%a0%e8%be%93%e6%96%b9%e5%bc%8f">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">传输方式</th>
+<th style="text-align:center">特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">串行传输</td>
+<td style="text-align:center">速度慢，省钱，适合远距离</td>
+</tr>
+<tr>
+<td style="text-align:center">并行传输</td>
+<td style="text-align:center">速度快，耗钱，适合近距离</td>
+</tr>
+</tbody>
+</table>
+<h3 id="四奈式准则nyquist">
+  （四）奈式准则(Nyquist)
+  <a class="heading-link" href="#%e5%9b%9b%e5%a5%88%e5%bc%8f%e5%87%86%e5%88%99nyquist">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230010168.png"/></p>
+<h3 id="五香农公式shannon">
+  （五）香农公式(Shannon)
+  <a class="heading-link" href="#%e4%ba%94%e9%a6%99%e5%86%9c%e5%85%ac%e5%bc%8fshannon">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230011367.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230011986.png"/></p>
+<h3 id="六编码">
+  （六）编码
+  <a class="heading-link" href="#%e5%85%ad%e7%bc%96%e7%a0%81">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<ul>
+<li>数字数据(digtal data) 通过 <code>数字发送器(digit emitter)</code> 转化为 数字信号(digtal signal)；</li>
+<li>模拟数据(analog data) 通过 <code>PCM 编码器(PCM coder)</code> 转化为 数字信号(digtal signal)。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">表示方法</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">单极性不归零编码</td>
+<td style="text-align:center">只是用一个电压值，高电平表示 1，低电平表示 0</td>
+<td style="text-align:center">没办法区分是没信号还是有信号但是成为 0</td>
+</tr>
+<tr>
+<td style="text-align:center">双极性不归零编码</td>
+<td style="text-align:center">用幅值相等的正负电平表示 1 和 0</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">单极性归零编码</td>
+<td style="text-align:center">发送码 1 时高电平再整个码元期间只持续一段时间，其余时间返回零电平</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">双极性归零编码</td>
+<td style="text-align:center">正负零三个电平，信号本身携带同步信息</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">曼彻斯特编码</td>
+<td style="text-align:center">一个时钟周期两次采样得到一个 bit，低-高跳转表示 0，高-低跳转表示 1</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">差分曼彻斯特编码</td>
+<td style="text-align:center">bit 与 bit 之间有信号跳变，表示下一个 bit 为 0，没有跳变则为 1</td>
+<td style="text-align:center">抗干扰能力比曼彻斯特编码更强</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230857450.png"/>
+<img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230857905.png"/></p>
+<h3 id="七调制">
+  （七）调制
+  <a class="heading-link" href="#%e4%b8%83%e8%b0%83%e5%88%b6">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>数据通过 <code>调制器(modulaotr)</code> 转化为模拟信号(analog signal)，常用的调制方法：调幅(AM)、调频(FM)、调相(PM)</p>
+<h2 id="三物理层传输介质">
+  三、物理层传输介质
+  <a class="heading-link" href="#%e4%b8%89%e7%89%a9%e7%90%86%e5%b1%82%e4%bc%a0%e8%be%93%e4%bb%8b%e8%b4%a8">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<h3 id="一-导向性传输介质">
+  （一） 导向性传输介质
+  <a class="heading-link" href="#%e4%b8%80-%e5%af%bc%e5%90%91%e6%80%a7%e4%bc%a0%e8%be%93%e4%bb%8b%e8%b4%a8">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>定义：电磁波沿着固定媒介被导向传播</p>
+<ol>
+<li>双绞线</li>
+</ol>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230915171.png"/></p>
+<ol start="2">
+<li>同轴电缆</li>
+</ol>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230914120.png"/></p>
+<ol start="3">
+<li>光纤</li>
+</ol>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230914332.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230915103.png"/></p>
+<h3 id="二非导向型传输介质">
+  （二）非导向型传输介质
+  <a class="heading-link" href="#%e4%ba%8c%e9%9d%9e%e5%af%bc%e5%90%91%e5%9e%8b%e4%bc%a0%e8%be%93%e4%bb%8b%e8%b4%a8">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230916273.png"/></p>
+<h2 id="四物理层设备">
+  四、物理层设备
+  <a class="heading-link" href="#%e5%9b%9b%e7%89%a9%e7%90%86%e5%b1%82%e8%ae%be%e5%a4%87">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<h3 id="一中继器rp-repeater">
+  （一）中继器(RP repeater)
+  <a class="heading-link" href="#%e4%b8%80%e4%b8%ad%e7%bb%a7%e5%99%a8rp-repeater">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>功能：对信号进行再生和还原，对衰减的信号进行放大，保持与原数据相同，以增加信号传输的距离，延长网络的长度。</p>
+<p>中继器两端的网络部分是网段，而不是子网，适用于完全相同的两类网络的互连，且两个网段速、协议率要相同。</p>
+<p>中继器只负责将电缆段上的数据发送到另一段电缆上，不管数据中是否有错误数据或不适于网段的数据。</p>
+<h3 id="二集线器hub">
+  （二）集线器(Hub)
+  <a class="heading-link" href="#%e4%ba%8c%e9%9b%86%e7%ba%bf%e5%99%a8hub">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>功能：对信号进行再生放大转发，对衰减的信号进行放大，接着转发到其他所有（除输入端口外）处于工作状态的端口上，以增加信号传输的距离。</p>
+<p>不具备信号的定向传输能力，是一个贡献式设备，不能分割冲突域，连在集线器上的工作主机平分宽带。</p>
+<h3 id="5-4-3-规则">
+  5-4-3 规则
+  <a class="heading-link" href="#5-4-3-%e8%a7%84%e5%88%99">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>不能超过 5 个网段，这些网段中的物理层网络设备不能超过 4 个，最多只有三个网段挂有计算机。</p>
 </div>
 <footer>
 </footer>

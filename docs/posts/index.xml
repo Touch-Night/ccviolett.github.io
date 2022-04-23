@@ -6,14 +6,58 @@
     <description>Recent content in Posts on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 15 Apr 2022 18:14:58 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Apr 2022 10:31:24 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://ccviolett.github.io/posts/48-teamwebnetwork6/</link>
+      <pubDate>Sat, 23 Apr 2022 10:31:24 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/48-teamwebnetwork6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ccviolett.github.io/posts/47-teamwebnetwork5/</link>
+      <pubDate>Sat, 23 Apr 2022 10:31:06 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/47-teamwebnetwork5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ccviolett.github.io/posts/46-teamwebnetwork4/</link>
+      <pubDate>Sat, 23 Apr 2022 10:31:01 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/46-teamwebnetwork4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ccviolett.github.io/posts/45-teamwebnetwork3/</link>
+      <pubDate>Sat, 23 Apr 2022 10:30:51 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/45-teamwebnetwork3/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>计算机网络 | Part1 物理层</title>
       <link>http://ccviolett.github.io/posts/44-teamwebnetwork2/</link>
       <pubDate>Fri, 15 Apr 2022 18:14:58 +0800</pubDate>
       
       <guid>http://ccviolett.github.io/posts/44-teamwebnetwork2/</guid>
-      <description> </description>
+      <description>一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
+  机械特性：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况。
+  电气特性：规定传输二进制位时，线路上信号的电压范围、阻抗匹配、传输速率和距离限制等。
+  功能特性：指明某条线上出现的某一电平表示何种意义、接口部件的信号线的用途。
+  规格特性：定义各条物理线路的工作规程和时序问题。
+  二、数据通信    （一）相关术语    数据：传送信号的实体，通常是有意义的符号序列。
+信号：数据的电气、电磁表现，是数据在传输过程中的存在形式。
+ 数字信号：代表信息的参数取值是离散的。 模拟信号：代表信号的参数取值是连续的。  信源：产生和发送数据的源头。
+信宿：接收数据的终点。</description>
     </item>
     
     <item>
@@ -135,7 +179,7 @@ D：保守力做功并不会影响系统的机械能，会和保守势能相互�
       <pubDate>Sat, 02 Apr 2022 23:37:23 +0800</pubDate>
       
       <guid>http://ccviolett.github.io/posts/34-howtoprovetobestudent/</guid>
-      <description>学信网在线验证码     首先进入学信网，找到登录界面并登录。  进入 在线验证报告 界面，首先验证自己的身份。  验证完成后，点击“申请”进入申请页面。  确认无误信息后，再次点击“申请”按钮生成在线验证码。  随后会自动返回在线验证报告界面，即可看到自己的在线验证码，可以用来证明自己的学生身份。  </description>
+      <description>学信网在线验证码     首先进入学信网，找到登录界面并登录。  进入 在线验证报告 界面，首先验证自己的身份。  验证完成后，点击“申请”进入申请页面。  确认无误信息后，再次点击“申请”按钮生成在线验证码。  随后会自动返回在线验证报告界面，即可看到自己的在线验证码。  将在线验证码提供给需要验证的地方，即可通过在线验证证明自己的学生身份。  </description>
     </item>
     
     <item>
@@ -149,18 +193,12 @@ D：保守力做功并不会影响系统的机械能，会和保守势能相互�
     </item>
     
     <item>
-      <title>学习机械制图</title>
-      <link>http://ccviolett.github.io/posts/33-learnmechanicaldrawing/</link>
+      <title>机械制图 | 螺纹</title>
+      <link>http://ccviolett.github.io/posts/33-mechanicaldrawingthread/</link>
       <pubDate>Wed, 30 Mar 2022 19:26:48 +0800</pubDate>
       
-      <guid>http://ccviolett.github.io/posts/33-learnmechanicaldrawing/</guid>
-      <description>一、标准件 二、常用件 三、螺纹的要素 四、螺纹的规定画法 五、普通螺纹的标注 六、常用螺纹紧固件     前置知识：画法几何
-一、标准件    定义：在结构、尺寸、画法、标注等各个方面，直到成品质量，都由国家或行业批准发布了标准，按标准由专业厂生产的机件。
-注意点：
- 不单独画出零件图或部件图 标准结构不需按真实投影画出，只要根据标准规定的画法、代号和标记进行绘画和标注，它们的结构和尺寸可查阅相应的国家标准或机械零件手册得出。  例子：
- 螺钉 螺栓 螺母 垫圈 键 销  二、常用件    定义：应用广泛、结构定型、某些部分的结构形状与尺寸已标准化的一般零件。
-例子：
- 齿轮 花键  三、螺纹的要素      牙型
+      <guid>http://ccviolett.github.io/posts/33-mechanicaldrawingthread/</guid>
+      <description>一、螺纹的要素      牙型
 螺纹的轮廓形状
   公称直径
 代表螺纹尺寸的直径，指大径。
@@ -168,7 +206,19 @@ D：保守力做功并不会影响系统的机械能，会和保守势能相互�
 小径：内围圆柱的直径，$d_1$（外螺纹）或 $D_1$（内螺纹） 表示。
    线数 n
 螺旋线数量
-  螺距 P</description>
+  螺距 P
+螺纹相邻两牙在中径线上对应两点间的轴向距离。
+  导程 Ph
+同一条螺纹线上的相邻两牙在中径线上对应两点间的轴向距离。
+$$ Ph = nP $$
+  旋向
+ 顺时针旋转时旋入的螺纹称为右旋螺纹（RH） 逆时针旋转时旋入的螺纹成为左旋螺纹（LH）  省略标注时默认为 RH。
+  二、螺纹的规定画法    外螺纹：大径粗实小径虚
+内螺纹：小径粗实大径虚，不通孔有 120 度钻孔
+小径约为大径 0.85 倍，虚圈只画 3/4 圈
+螺纹副：内、外螺纹旋合到一起后的部件
+螺纹副旋合部分画外螺纹，其余部分各画各。
+三、普通螺纹的标注    (螺纹特征代号)(尺寸代号)-(公差带代号)-(旋合长度代号)-(旋向代号)</description>
     </item>
     
     <item>

@@ -31,21 +31,22 @@ series = []
 
 ### 文恩图
 
+
 1. 留空白：表示区域未知
 
-![](https://s2.loli.net/2022/04/06/RQImfxTrKc7ihAV.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/RQImfxTrKc7ihAV.png)
 
 2. 画阴影：表示区域空缺
 
-![](https://s2.loli.net/2022/04/06/SNobvFM9pBgh5J1.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/SNobvFM9pBgh5J1.png)
 
 3. 画星号“*”：表示区域内存在元素
 
-![](https://s2.loli.net/2022/04/06/6WjpbrAHtnikLUY.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/6WjpbrAHtnikLUY.png)
 
 文恩图表示四种直言命题：
 
-![](https://s2.loli.net/2022/04/06/ITbswrcvK2C36lS.png)
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/ITbswrcvK2C36lS.png)
 
 ### 欧拉图
 
