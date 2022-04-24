@@ -8,47 +8,56 @@
     <language>zh-cn</language>
     <lastBuildDate>Sat, 23 Apr 2022 10:31:24 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>http://ccviolett.github.io/posts/48-teamwebnetwork6/</link>
+      <title>计算机网络 | Part5 应用层(Application Layer)</title>
+      <link>http://ccviolett.github.io/posts/48-teamwebnetwork5/</link>
       <pubDate>Sat, 23 Apr 2022 10:31:24 +0800</pubDate>
       
-      <guid>http://ccviolett.github.io/posts/48-teamwebnetwork6/</guid>
+      <guid>http://ccviolett.github.io/posts/48-teamwebnetwork5/</guid>
       <description></description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://ccviolett.github.io/posts/47-teamwebnetwork5/</link>
+      <title>计算机网络 | Part5 传输层(Transport Layer)</title>
+      <link>http://ccviolett.github.io/posts/47-teamwebnetwork4/</link>
       <pubDate>Sat, 23 Apr 2022 10:31:06 +0800</pubDate>
       
-      <guid>http://ccviolett.github.io/posts/47-teamwebnetwork5/</guid>
+      <guid>http://ccviolett.github.io/posts/47-teamwebnetwork4/</guid>
       <description></description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://ccviolett.github.io/posts/46-teamwebnetwork4/</link>
+      <title>计算机网络 | Part3 网络层(Network Layer)</title>
+      <link>http://ccviolett.github.io/posts/46-teamwebnetwork3/</link>
       <pubDate>Sat, 23 Apr 2022 10:31:01 +0800</pubDate>
       
-      <guid>http://ccviolett.github.io/posts/46-teamwebnetwork4/</guid>
+      <guid>http://ccviolett.github.io/posts/46-teamwebnetwork3/</guid>
       <description></description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://ccviolett.github.io/posts/45-teamwebnetwork3/</link>
+      <title>计算机网络 | Part2 数据链路层(Data Link Layer)</title>
+      <link>http://ccviolett.github.io/posts/45-teamwebnetwork2/</link>
       <pubDate>Sat, 23 Apr 2022 10:30:51 +0800</pubDate>
       
-      <guid>http://ccviolett.github.io/posts/45-teamwebnetwork3/</guid>
-      <description></description>
+      <guid>http://ccviolett.github.io/posts/45-teamwebnetwork2/</guid>
+      <description>一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。
+其最基本的服务是将源自网络层来的数据可靠地传输到相邻节点地目标机网络层。
+其主要作用是加强物理层传输原始比特流的功能，将物理层提供的可能出错的物理连接改造成逻辑上无差错的数据链路，使之对网络层表现为一条无差错的链路。
+ 功能一：为网络层提供服务  无确认无连接服务 有确认无连接服务 有确认面向连接服务   功能二：链路管理，即连接的建立、维持、释放（用于面向连接的服务） 功能三：组帧 功能四：流量控制，限制发送方 功能五：差错控制（帧错/位错）  （零）链路层编码    以太网规定，一组电信号构成一个数据包，叫做“帧”(Frame)。
+每一帧分成两个部分：标头(Head)和数据(Data)
+   部分 内容 长度     标头 数据包的一些说明项，比如发送者、接收者、数据类型等 固定位 18 字节   数据 数据包的具体内容 最短为 46 字节，最长为 1500 字节    整个帧最短为 64 字节，最长为 1518 字节，如果数据很长就必须分割成多个帧发送。
+（一）MAC 地址    以太网规定，连入网络的所有设备，都必须具有“网卡”接口。
+数据包必须是从一块网卡，传送到另一块网卡。
+网卡的地址，就是数据包的发送地址和接收地址，这叫做 MAC 地址。
+长度为 6 字节，共 48 比特，通常用十六进制表示法，地址的每个字节被表示为一对十六进制数。</description>
     </item>
     
     <item>
-      <title>计算机网络 | Part1 物理层</title>
-      <link>http://ccviolett.github.io/posts/44-teamwebnetwork2/</link>
+      <title>计算机网络 | Part1 物理层(Physical Layer)</title>
+      <link>http://ccviolett.github.io/posts/44-teamwebnetwork1/</link>
       <pubDate>Fri, 15 Apr 2022 18:14:58 +0800</pubDate>
       
-      <guid>http://ccviolett.github.io/posts/44-teamwebnetwork2/</guid>
+      <guid>http://ccviolett.github.io/posts/44-teamwebnetwork1/</guid>
       <description>一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
   机械特性：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况。
   电气特性：规定传输二进制位时，线路上信号的电压范围、阻抗匹配、传输速率和距离限制等。
@@ -62,10 +71,10 @@
     
     <item>
       <title>计算机网络 | Part0 概述</title>
-      <link>http://ccviolett.github.io/posts/43-teamwebnetwork1/</link>
+      <link>http://ccviolett.github.io/posts/43-teamwebnetwork0/</link>
       <pubDate>Fri, 15 Apr 2022 15:56:31 +0800</pubDate>
       
-      <guid>http://ccviolett.github.io/posts/43-teamwebnetwork1/</guid>
+      <guid>http://ccviolett.github.io/posts/43-teamwebnetwork0/</guid>
       <description>一、速率相关性能指标  1. 速率 2. 带宽 3. 吞吐量   二、时延相关指标  1. 时延 2. 时延带宽积 3. 往返时延RTT 4. 利用率   三、分层结构  1. 必要性 2. 介绍   四、参考模型  1. OSI 七层模型 2. TCP/IP 四层模型 3. 五层模型     一、速率相关性能指标    1. 速率    连接在计算机网络上的主机在数字信道上传送数据位数的速率
 单位:b/s,Kb/s,Mb/s,Tb/s，如果用字节表示，则是B/s,KB/s,MB/s,TB/s，其中 1Byte=8Bit
 2. 带宽    在计算机网络中，指的是网络设备所支持的最高速度，单位同速率，是理想条件下最高速率

@@ -6,34 +6,63 @@
 <description>Recent content on 罗潇阳的博客</description>
 <generator>Hugo -- gohugo.io</generator>
 <language>zh-cn</language>
-<lastBuildDate>Sat, 23 Apr 2022 10:31:24 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<lastBuildDate>Sun, 24 Apr 2022 11:50:14 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <item>
-<title/>
-<link>http://ccviolett.github.io/posts/48-teamwebnetwork6/</link>
+<title>220424</title>
+<link>http://ccviolett.github.io/todo/220424/</link>
+<pubDate>Sun, 24 Apr 2022 11:50:14 +0800</pubDate>
+<guid>http://ccviolett.github.io/todo/220424/</guid>
+<description>定时任务：
+ ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：
+ ( ) 扇贝英语单词  每周任务：
+ ( ) 工程实训周报  ddl: 4 月 24 日 update: mon   (v) 青年大学习  ddl: 4 月 24 日 update: mon    重要任务：</description>
+</item>
+<item>
+<title>220423</title>
+<link>http://ccviolett.github.io/todo/220423/</link>
+<pubDate>Sat, 23 Apr 2022 23:36:46 +0800</pubDate>
+<guid>http://ccviolett.github.io/todo/220423/</guid>
+<description>定时任务：
+ ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：
+ ( ) 扇贝英语单词  每周任务：
+ ( ) 工程实训周报  ddl: 4 月 24 日 update: mon   (v) 青年大学习  ddl: 4 月 24 日 update: mon    重要任务：</description>
+</item>
+<item>
+<title>计算机网络 | Part5 应用层(Application Layer)</title>
+<link>http://ccviolett.github.io/posts/48-teamwebnetwork5/</link>
 <pubDate>Sat, 23 Apr 2022 10:31:24 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/48-teamwebnetwork6/</guid>
+<guid>http://ccviolett.github.io/posts/48-teamwebnetwork5/</guid>
 <description/>
 </item>
 <item>
-<title/>
-<link>http://ccviolett.github.io/posts/47-teamwebnetwork5/</link>
+<title>计算机网络 | Part5 传输层(Transport Layer)</title>
+<link>http://ccviolett.github.io/posts/47-teamwebnetwork4/</link>
 <pubDate>Sat, 23 Apr 2022 10:31:06 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/47-teamwebnetwork5/</guid>
+<guid>http://ccviolett.github.io/posts/47-teamwebnetwork4/</guid>
 <description/>
 </item>
 <item>
-<title/>
-<link>http://ccviolett.github.io/posts/46-teamwebnetwork4/</link>
+<title>计算机网络 | Part3 网络层(Network Layer)</title>
+<link>http://ccviolett.github.io/posts/46-teamwebnetwork3/</link>
 <pubDate>Sat, 23 Apr 2022 10:31:01 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/46-teamwebnetwork4/</guid>
+<guid>http://ccviolett.github.io/posts/46-teamwebnetwork3/</guid>
 <description/>
 </item>
 <item>
-<title/>
-<link>http://ccviolett.github.io/posts/45-teamwebnetwork3/</link>
+<title>计算机网络 | Part2 数据链路层(Data Link Layer)</title>
+<link>http://ccviolett.github.io/posts/45-teamwebnetwork2/</link>
 <pubDate>Sat, 23 Apr 2022 10:30:51 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/45-teamwebnetwork3/</guid>
-<description/>
+<guid>http://ccviolett.github.io/posts/45-teamwebnetwork2/</guid>
+<description>一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。
+其最基本的服务是将源自网络层来的数据可靠地传输到相邻节点地目标机网络层。
+其主要作用是加强物理层传输原始比特流的功能，将物理层提供的可能出错的物理连接改造成逻辑上无差错的数据链路，使之对网络层表现为一条无差错的链路。
+ 功能一：为网络层提供服务  无确认无连接服务 有确认无连接服务 有确认面向连接服务   功能二：链路管理，即连接的建立、维持、释放（用于面向连接的服务） 功能三：组帧 功能四：流量控制，限制发送方 功能五：差错控制（帧错/位错）  （零）链路层编码    以太网规定，一组电信号构成一个数据包，叫做“帧”(Frame)。
+每一帧分成两个部分：标头(Head)和数据(Data)
+   部分 内容 长度     标头 数据包的一些说明项，比如发送者、接收者、数据类型等 固定位 18 字节   数据 数据包的具体内容 最短为 46 字节，最长为 1500 字节    整个帧最短为 64 字节，最长为 1518 字节，如果数据很长就必须分割成多个帧发送。
+（一）MAC 地址    以太网规定，连入网络的所有设备，都必须具有“网卡”接口。
+数据包必须是从一块网卡，传送到另一块网卡。
+网卡的地址，就是数据包的发送地址和接收地址，这叫做 MAC 地址。
+长度为 6 字节，共 48 比特，通常用十六进制表示法，地址的每个字节被表示为一对十六进制数。</description>
 </item>
 <item>
 <title>告别机械</title>
@@ -76,7 +105,7 @@
  ( ) 机械制图考试考前培训  dur: 4 月 19 日 09:00 - 10:00   ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 团队程序设计天梯赛  dur: 4 月 23 日 13:30 - 16:30 desc: 电脑桌面上尽可能干净   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
 </item>
 <item>
-<title>切掉偏题离金牌很近的一天多多少少有些遗憾</title>
+<title>切掉偏题离金牌很近多多少少有些遗憾</title>
 <link>http://ccviolett.github.io/todo/220417/</link>
 <pubDate>Sun, 17 Apr 2022 09:31:18 +0800</pubDate>
 <guid>http://ccviolett.github.io/todo/220417/</guid>
@@ -84,7 +113,7 @@
  ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 团队程序设计天梯赛  dur: 4 月 23 日 13:30 - 16:30 desc: 电脑桌面上尽可能干净   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
 </item>
 <item>
-<title>220416</title>
+<title>准备 ICPC 昆明站</title>
 <link>http://ccviolett.github.io/todo/220416/</link>
 <pubDate>Sat, 16 Apr 2022 11:48:12 +0800</pubDate>
 <guid>http://ccviolett.github.io/todo/220416/</guid>
@@ -164,10 +193,10 @@
 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int N = 1e4 + 1; const int M = 2e5 + 1; int n, m; int fa[N]; int Find(int t) { if (t != fa[t]) fa[t] = Find(fa[t]); return fa[t]; } int Check(int x, int y) { x = Find(x), y = Find(y); return x == y; } void Link(int x, int y) { x = Find(x), y = Find(y); fa[x] = y; } int main() { scanf(&amp;#34;%d%d&amp;#34;, &amp;amp;n, &amp;amp;m); for (int i = 1; i &amp;lt;= n; ++i) fa[i] = i; for (int i = 1; i &amp;lt;= m; ++i) { int z, x, y; scanf(&amp;#34;%d%d%d&amp;#34;, &amp;amp;z, &amp;amp;x, &amp;amp;y); if (z == 1) { if (!</description>
 </item>
 <item>
-<title>计算机网络 | Part1 物理层</title>
-<link>http://ccviolett.github.io/posts/44-teamwebnetwork2/</link>
+<title>计算机网络 | Part1 物理层(Physical Layer)</title>
+<link>http://ccviolett.github.io/posts/44-teamwebnetwork1/</link>
 <pubDate>Fri, 15 Apr 2022 18:14:58 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/44-teamwebnetwork2/</guid>
+<guid>http://ccviolett.github.io/posts/44-teamwebnetwork1/</guid>
 <description>一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
   机械特性：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况。
   电气特性：规定传输二进制位时，线路上信号的电压范围、阻抗匹配、传输速率和距离限制等。
@@ -180,9 +209,9 @@
 </item>
 <item>
 <title>计算机网络 | Part0 概述</title>
-<link>http://ccviolett.github.io/posts/43-teamwebnetwork1/</link>
+<link>http://ccviolett.github.io/posts/43-teamwebnetwork0/</link>
 <pubDate>Fri, 15 Apr 2022 15:56:31 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/43-teamwebnetwork1/</guid>
+<guid>http://ccviolett.github.io/posts/43-teamwebnetwork0/</guid>
 <description>一、速率相关性能指标  1. 速率 2. 带宽 3. 吞吐量   二、时延相关指标  1. 时延 2. 时延带宽积 3. 往返时延RTT 4. 利用率   三、分层结构  1. 必要性 2. 介绍   四、参考模型  1. OSI 七层模型 2. TCP/IP 四层模型 3. 五层模型     一、速率相关性能指标    1. 速率    连接在计算机网络上的主机在数字信道上传送数据位数的速率
 单位:b/s,Kb/s,Mb/s,Tb/s，如果用字节表示，则是B/s,KB/s,MB/s,TB/s，其中 1Byte=8Bit
 2. 带宽    在计算机网络中，指的是网络设备所支持的最高速度，单位同速率，是理想条件下最高速率
@@ -1042,6 +1071,18 @@ TLDR：将下列设置复制到配置文件中（以 TOML 为例）
 <guid>http://ccviolett.github.io/contact/</guid>
 <description>关注我 @CCViolett。
 QQ: 33405751717</description>
+</item>
+<item>
+<title/>
+<link>http://ccviolett.github.io/problem/1-arpcheat/</link>
+<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+<guid>http://ccviolett.github.io/problem/1-arpcheat/</guid>
+<description>ARP 欺骗攻击
+题目描述    众所周知，计算机网络中，每个设备有一个唯一且固定的 MAC 地址、一个可能动态变化的 IP 地址和一个将 IP 映射为 MAC 地址的 ARP 表。
+当知道某台设备的 MAC 地址时，就可以直接与其通信，否则就需要通过 ARP 协议获取 MAC 地址。
+我们假设主机 A 的 IP 地址为192.168.1.1，MAC 地址为0A-11-22-33-44-01；主机 B 的 IP 地址为192.168.1.2，MAC 地址为0A-11-22-33-44-02。
+当主机 A 要与主机 B 通信时，地址解析协议可以将主机 B 的 IP 地址（192.168.1.2）解析成主机 B 的 MAC 地址，以下为工作流程：
+ 主机 A 在 ARP表中查找主机B的 IP 所匹配 MAC 地址。 如果没有找到映射，主机 A 将向网络中所有主机发送 ARP 请求，数据包中包含 A 的 MAC 地址与询问的 IP(192.168.1.2)。 主机 B 收到请求后发现与询问 IP 与自身 IP 匹配，于是直接向 A 发送 ARP 应答，数据包包含 B 的 MAC 地址。同时将 A 的 MAC 地址添加到自身的 ARP 表中。 主机 A 收到从主机 B 发来的 ARP 应答，更新 ARP 表后，发送要传输的数据。  </description>
 </item>
 </channel>
 </rss>
