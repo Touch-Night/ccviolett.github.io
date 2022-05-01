@@ -245,6 +245,7 @@ Java：
 ## 六、分流
 
 - [王道计算机考研 计算机网络](https://www.bilibili.com/video/BV19E411D78Q)
+- [【实战】基于SpringBoot+Vue开发的前后端分离博客项目完整教学](https://www.bilibili.com/video/BV1PQ4y1P7hZ)
 
 ### 1. 前端
 - [web前端零基础html5+css3+前端项目视频教程](https://www.bilibili.com/video/BV1Kg411T7t9)

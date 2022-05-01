@@ -11,39 +11,6 @@ externalLink = ""
 series = []
 +++
 
-位移：$\Delta \vec{r} = \vec{r}(t + \Delta t) - \vec{r}(t)$
-
-速度：$\vec{v} = \frac{d\vec{r}}{dt} = v_x\vec{i} + v_y\vec{j} + v_z\vec{k}$
-
-加速度：$\vec{a} = \frac{d\vec{v}}{dt} = a_x\vec{i} + a_y\vec{j} + a_z\vec{k}$
-
-用自然坐标表示速度和加速度：
-
-$\vec{v} = \frac{ds}{dt} \vec{\tau}$
-
-$\vec{a} = a_n\vec{n} + a_ \vec{\tau}$
-
-匀加速直线运动：
-
-$v = v_0 + at$
-
-圆周运动：
-
-$\Delta s = r \Delta \theta$
-
-$v = r\frac{d\theta}{dt} = r \omega$
-
-$a_{\tau} = \frac{dv}{dt}r\frac{d\omega}{dt} = r\alpha$
-
-
-$a_n$
-
-伽利略变换：
-
-$\vec{v} = \vec{v'} + \vec{u}$
-
-$\vec{a}_a = \vec{a}_r + \vec{a}_e$
-
 
 - [颜文字JS](https://utf-8.jp/public/aaencode.html)
 - [PDF 提权破解](http://www.pdfwork.cn/)

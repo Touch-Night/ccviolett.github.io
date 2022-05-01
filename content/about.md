@@ -16,6 +16,7 @@ author = [ "ccviolett" ]
 
 获奖经历：
 
+- ICPC2021 昆明站银牌
 - ICPC2021 沈阳站铜牌
 - CCPC2021 桂林站银牌
 - CCPC2021 广州站银牌
@@ -26,6 +27,12 @@ author = [ "ccviolett" ]
 - NOIP2016提高二等奖（176 分，3494名）
 - NOIP2016普及一等奖（350 分，190 名）
 - NOIP2015普及二等奖（110 分，3070名）
+
+相关文件：
+- [ICPC2021 昆明站银牌](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242100486.pdf)
+- [ICPC2021 沈阳站铜牌](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242100482.pdf)
+- [CCPC2021 桂林站银牌](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242100484.jpg)
+- [CCPC2021 广州站银牌](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242100485.jpg)
 
 教育经历：
 
