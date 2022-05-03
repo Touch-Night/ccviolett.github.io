@@ -6,21 +6,41 @@
     <description>Recent content in Todoes on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 01 May 2022 08:30:51 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/todo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 May 2022 08:51:55 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/todo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>220501</title>
+      <title>220503</title>
+      <link>http://ccviolett.github.io/todo/220503/</link>
+      <pubDate>Tue, 03 May 2022 08:51:55 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220503/</guid>
+      <description>定时任务：
+ ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考前测试  dur: 5 月 2 日 21:00 - 21:20   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：</description>
+    </item>
+    
+    <item>
+      <title>220502</title>
+      <link>http://ccviolett.github.io/todo/220502/</link>
+      <pubDate>Mon, 02 May 2022 08:05:25 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220502/</guid>
+      <description>定时任务：
+ ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考前测试  dur: 5 月 2 日 21:00 - 21:20   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：</description>
+    </item>
+    
+    <item>
+      <title>去动物园</title>
       <link>http://ccviolett.github.io/todo/220501/</link>
       <pubDate>Sun, 01 May 2022 08:30:51 +0800</pubDate>
       
       <guid>http://ccviolett.github.io/todo/220501/</guid>
       <description>定时任务：
  ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
- ( ) 扇贝英语单词  每周任务：
- ( ) 工程实训周报  ddl: 5 月 1 日 update: mon   (v) 青年大学习  ddl: 5 月 1 日 update: mon    重要任务：</description>
+ (v) 扇贝英语单词  每周任务：
+ (v) 工程实训周报  ddl: 5 月 1 日 update: mon   (v) 青年大学习  ddl: 5 月 1 日 update: mon    重要任务：</description>
     </item>
     
     <item>
-      <title>220430</title>
+      <title>做笔试题 &amp; 放松</title>
       <link>http://ccviolett.github.io/todo/220430/</link>
       <pubDate>Sat, 30 Apr 2022 12:35:50 +0800</pubDate>
       
@@ -56,15 +76,6 @@
     </item>
     
     <item>
-      <title>220315</title>
-      <link>http://ccviolett.github.io/todo/220315/</link>
-      <pubDate>Wed, 27 Apr 2022 10:18:51 +0800</pubDate>
-      
-      <guid>http://ccviolett.github.io/todo/220315/</guid>
-      <description>给大家见识一下灵魂画手</description>
-    </item>
-    
-    <item>
       <title>投递简历 &amp; 拿到讲课大订单</title>
       <link>http://ccviolett.github.io/todo/220427/</link>
       <pubDate>Wed, 27 Apr 2022 07:22:51 +0800</pubDate>
@@ -77,7 +88,7 @@
     </item>
     
     <item>
-      <title>220426</title>
+      <title>1688 分销 &amp; C&#43;&#43; 小组讲解视频</title>
       <link>http://ccviolett.github.io/todo/220426/</link>
       <pubDate>Tue, 26 Apr 2022 16:55:40 +0800</pubDate>
       
@@ -379,6 +390,15 @@
 更加令人心痛的是，本来可以额外增加了一次退改课的机会：
 但是被我完全忘掉了，直到今天的课程通知下来：
 我就是个纯纯的大冤种。</description>
+    </item>
+    
+    <item>
+      <title>220315</title>
+      <link>http://ccviolett.github.io/todo/220315/</link>
+      <pubDate>Tue, 15 Mar 2022 10:18:51 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220315/</guid>
+      <description>给大家见识一下灵魂画手</description>
     </item>
     
   </channel>
