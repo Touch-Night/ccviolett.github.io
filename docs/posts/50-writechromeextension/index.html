@@ -10,7 +10,7 @@
     
 
     <meta name="author" content="罗潇阳">
-    <meta name="description" content="为了完成稀土掘金编程挑战赛
+    <meta name="description" content="教程    为了完成稀土掘金编程挑战赛
 首先对插件有个简单的印象 10分钟入门chrome(谷歌)浏览器插件开发，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 browser_action。
 大概知道插件的概念后，结合 手把手教你开发chrome扩展 完成自己的第一个插件。
 我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章Chrome Manifest V3 - 披着羊皮的狼？大概了解一切情况。
@@ -19,12 +19,16 @@
 随后可以通过 Chrome插件(扩展)开发全攻略 系统了解 Chrome 的插件开发，更推荐的方法是开始写插件然后去查需要的东西。
 有了这些基础你应该就能够成功的开发一个自己的插件了。
 下面是一些可以遇到的问题：
- 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  ">
+ 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  总结    这次项目中我学到了以下这些东西：
+javascript heredoc多行字符串    参考资料：js与多行字符串
+巧妙利用了 function 的 toString 方法，转为字符串后有换行符 \n
+缺点在于不能使用压缩器与不能插入 js 逻辑
+function heredoc(fn) {  return fn.toString().split(&#39;\n&#39;).slice(1,-1).join(&#39;\n&#39;) &#43; &#39;\n&#39; }  var tmpl = heredoc(function(){/* !">
     <meta name="keywords" content="博客,开发者,个人">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="学习如何写 Chrome 插件"/>
-<meta name="twitter:description" content="为了完成稀土掘金编程挑战赛
+<meta name="twitter:description" content="教程    为了完成稀土掘金编程挑战赛
 首先对插件有个简单的印象 10分钟入门chrome(谷歌)浏览器插件开发，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 browser_action。
 大概知道插件的概念后，结合 手把手教你开发chrome扩展 完成自己的第一个插件。
 我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章Chrome Manifest V3 - 披着羊皮的狼？大概了解一切情况。
@@ -33,10 +37,14 @@
 随后可以通过 Chrome插件(扩展)开发全攻略 系统了解 Chrome 的插件开发，更推荐的方法是开始写插件然后去查需要的东西。
 有了这些基础你应该就能够成功的开发一个自己的插件了。
 下面是一些可以遇到的问题：
- 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  "/>
+ 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  总结    这次项目中我学到了以下这些东西：
+javascript heredoc多行字符串    参考资料：js与多行字符串
+巧妙利用了 function 的 toString 方法，转为字符串后有换行符 \n
+缺点在于不能使用压缩器与不能插入 js 逻辑
+function heredoc(fn) {  return fn.toString().split(&#39;\n&#39;).slice(1,-1).join(&#39;\n&#39;) &#43; &#39;\n&#39; }  var tmpl = heredoc(function(){/* !"/>
 
     <meta property="og:title" content="学习如何写 Chrome 插件" />
-<meta property="og:description" content="为了完成稀土掘金编程挑战赛
+<meta property="og:description" content="教程    为了完成稀土掘金编程挑战赛
 首先对插件有个简单的印象 10分钟入门chrome(谷歌)浏览器插件开发，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 browser_action。
 大概知道插件的概念后，结合 手把手教你开发chrome扩展 完成自己的第一个插件。
 我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章Chrome Manifest V3 - 披着羊皮的狼？大概了解一切情况。
@@ -45,7 +53,11 @@
 随后可以通过 Chrome插件(扩展)开发全攻略 系统了解 Chrome 的插件开发，更推荐的方法是开始写插件然后去查需要的东西。
 有了这些基础你应该就能够成功的开发一个自己的插件了。
 下面是一些可以遇到的问题：
- 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  " />
+ 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  总结    这次项目中我学到了以下这些东西：
+javascript heredoc多行字符串    参考资料：js与多行字符串
+巧妙利用了 function 的 toString 方法，转为字符串后有换行符 \n
+缺点在于不能使用压缩器与不能插入 js 逻辑
+function heredoc(fn) {  return fn.toString().split(&#39;\n&#39;).slice(1,-1).join(&#39;\n&#39;) &#43; &#39;\n&#39; }  var tmpl = heredoc(function(){/* !" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://ccviolett.github.io/posts/50-writechromeextension/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-03T16:40:12+08:00" />
@@ -197,7 +209,7 @@ var _hmt = _hmt || [];
             </span>
             <span class="reading-time">
               <i class="fa fa-clock-o" aria-hidden="true"></i>
-              阅读时间：1 分钟
+              阅读时间：2 分钟
             </span>
           </div>
           
@@ -208,7 +220,13 @@ var _hmt = _hmt || [];
 
       <div>
         
-        <p>为了完成<a href="https://hackathon2022.juejin.cn/">稀土掘金编程挑战赛</a></p>
+        <h2 id="教程">
+  教程
+  <a class="heading-link" href="#%e6%95%99%e7%a8%8b">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>为了完成<a href="https://hackathon2022.juejin.cn/">稀土掘金编程挑战赛</a></p>
 <p>首先对插件有个简单的印象 <a href="https://juejin.cn/post/6904797929056239630">10分钟入门chrome(谷歌)浏览器插件开发</a>，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 <code>browser_action</code>。</p>
 <p>大概知道插件的概念后，结合 <a href="https://www.cnblogs.com/walkingp/archive/2011/03/31/2001628.html">手把手教你开发chrome扩展</a> 完成自己的第一个插件。</p>
 <p>我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章<a href="https://zhuanlan.zhihu.com/p/451197423">Chrome Manifest V3 - 披着羊皮的狼？</a>大概了解一切情况。</p>
@@ -221,7 +239,116 @@ var _hmt = _hmt || [];
 <li>关于如何调试三个部分（<code>content_scripts.js</code>、<code>background.js</code>、<code>popup.js</code>）：<a href="https://blog.csdn.net/zzstack/article/details/62226249">chrome插件开发之调试</a></li>
 <li>background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。</li>
 </ul>
-
+<h2 id="总结">
+  总结
+  <a class="heading-link" href="#%e6%80%bb%e7%bb%93">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>这次项目中我学到了以下这些东西：</p>
+<h3 id="javascript-heredoc多行字符串">
+  javascript heredoc多行字符串
+  <a class="heading-link" href="#javascript-heredoc%e5%a4%9a%e8%a1%8c%e5%ad%97%e7%ac%a6%e4%b8%b2">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>参考资料：<a href="https://www.cnblogs.com/yakun/p/3887591.html">js与多行字符串</a></p>
+<p>巧妙利用了 function 的 toString 方法，转为字符串后有换行符 <code>\n</code></p>
+<p>缺点在于不能使用压缩器与不能插入 js 逻辑</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> heredoc(fn) {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold;text-decoration:underline">return</span> fn.toString().split(<span style="color:#666;font-style:italic">&#39;\n&#39;</span>).slice(1,-1).join(<span style="color:#666;font-style:italic">&#39;\n&#39;</span>) + <span style="color:#666;font-style:italic">&#39;\n&#39;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">var</span> tmpl = heredoc(<span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span>(){<span style="color:#888;font-style:italic">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">    !!! 5
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">    html
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">      include header
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">      body
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">        //if IE 6
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">            .alert.alert-error
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                center 对不起，我们不支持IE6，请升级你的浏览器
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                    a(href=&#34;http://windows.microsoft.com/zh-CN/internet-explorer/download-ie&#34;) | IE8官方下载
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                    a(href=&#34;https://www.google.com/intl/en/chrome/browser/&#34;) | Chrome下载
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">        include head
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">        .container
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">            .row-fluid
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                .span8
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                    block main
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                    include pagerbar
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                .span4
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                    include sidebar
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">        include footer
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">        include script
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"> */</span>});
+</span></span></code></pre></div><h3 id="css-渐变">
+  CSS 渐变
+  <a class="heading-link" href="#css-%e6%b8%90%e5%8f%98">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>一个结合贝塞尔曲线的很舒服的渐变设置：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>transition: all .<span style="color:#666;font-weight:bold;font-style:italic">3s</span> cubic-bezier(.<span style="color:#666;font-weight:bold;font-style:italic">4</span>, 0, .<span style="color:#666;font-weight:bold;font-style:italic">2</span>, 1);
+</span></span></code></pre></div><h3 id="hex-转-rgba">
+  Hex 转 RGBA
+  <a class="heading-link" href="#hex-%e8%bd%ac-rgba">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> htr(hex, opacity) {
+</span></span><span style="display:flex;"><span>  <span style="color:#888;font-style:italic">// Hex to RGBA
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>  red = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">&#34;0x&#34;</span> + hex.slice(1, 3));
+</span></span><span style="display:flex;"><span>  green = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">&#34;0x&#34;</span> + hex.slice(3, 5));
+</span></span><span style="display:flex;"><span>  blue = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">&#34;0x&#34;</span> + hex.slice(5, 7));
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> red + <span style="color:#666;font-style:italic">&#34;, &#34;</span> + green + <span style="color:#666;font-style:italic">&#34;, &#34;</span> + blue;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> htrof(hex, opacity) {
+</span></span><span style="display:flex;"><span>  <span style="color:#888;font-style:italic">// Hex to RGBA with Opacity Full format
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>  red = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">&#34;0x&#34;</span> + hex.slice(1, 3));
+</span></span><span style="display:flex;"><span>  green = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">&#34;0x&#34;</span> + hex.slice(3, 5));
+</span></span><span style="display:flex;"><span>  blue = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">&#34;0x&#34;</span> + hex.slice(5, 7));
+</span></span><span style="display:flex;"><span>  rgba = <span style="color:#666;font-style:italic">&#34;rgba(&#34;</span> + red + <span style="color:#666;font-style:italic">&#34;,&#34;</span> + green + <span style="color:#666;font-style:italic">&#34;,&#34;</span> + blue + <span style="color:#666;font-style:italic">&#34;,&#34;</span> + opacity + <span style="color:#666;font-style:italic">&#34;)&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> rgba;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="通过-js-实现-hover-效果">
+  通过 JS 实现 hover 效果
+  <a class="heading-link" href="#%e9%80%9a%e8%bf%87-js-%e5%ae%9e%e7%8e%b0-hover-%e6%95%88%e6%9e%9c">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>element.onmouseover = function() {
+</span></span><span style="display:flex;"><span>  // set up
+</span></span><span style="display:flex;"><span>  // this.style = ...
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>element.onmouseout = function() {
+</span></span><span style="display:flex;"><span>  // set back
+</span></span><span style="display:flex;"><span>  // this.style = &#34;&#34;;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="aspect-ratio-参数">
+  <code>aspect-ratio</code> 参数
+  <a class="heading-link" href="#aspect-ratio-%e5%8f%82%e6%95%b0">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>可以设置图片的长宽比</p>
+<h3 id="一个还在完善的-js-阴影函数">
+  一个还在完善的 JS 阴影函数
+  <a class="heading-link" href="#%e4%b8%80%e4%b8%aa%e8%bf%98%e5%9c%a8%e5%ae%8c%e5%96%84%e7%9a%84-js-%e9%98%b4%e5%bd%b1%e5%87%bd%e6%95%b0">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>偷的 <code>MDUI</code> 的参数。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> Shadow(color, level) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;font-style:italic;text-decoration:underline">let</span> ag;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 1) ag = [<span style="color:#666;font-style:italic">&#34;0 2px 2px -1px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 1px 1px 0&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 1px 3px 0&#34;</span>];
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 4) ag = [<span style="color:#666;font-style:italic">&#34;0 2px 4px -1px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 4px 5px 0&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 1px 10px 0&#34;</span>];
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 8) ag = [<span style="color:#666;font-style:italic">&#34;0 5px 5px -3px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 8px 10px 1px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 3px 14px 2px&#34;</span>];
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 12) ag = [<span style="color:#666;font-style:italic">&#34;0 7px 8px -4px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 12px 17px 2px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 5px 22px 4px&#34;</span>]; 
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 18) ag = [<span style="color:#666;font-style:italic">&#34;0 9px 11px -5px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 18px 28px 2px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 7px 24px 6px&#34;</span>]; 
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 24) ag = [<span style="color:#666;font-style:italic">&#34;0 11px 15px -7px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 24px 38px 3px&#34;</span>, <span style="color:#666;font-style:italic">&#34;9px 46px 8px&#34;</span>];
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> <span style="color:#666;font-style:italic">&#34;box-shadow: &#34;</span> + ag[0] + <span style="color:#666;font-style:italic">&#34; rgba(&#34;</span> + color + <span style="color:#666;font-style:italic">&#34;,.2),&#34;</span> + ag[1] + <span style="color:#666;font-style:italic">&#34; rgba(&#34;</span> + color + <span style="color:#666;font-style:italic">&#34;,.14),&#34;</span> + ag[2] + <span style="color:#666;font-style:italic">&#34; rgba(&#34;</span> + color + <span style="color:#666;font-style:italic">&#34;,.12)!important;&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
       </div>
 
       <footer>

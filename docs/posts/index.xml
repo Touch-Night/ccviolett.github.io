@@ -13,7 +13,7 @@
       <pubDate>Tue, 03 May 2022 16:40:12 +0800</pubDate>
       
       <guid>http://ccviolett.github.io/posts/50-writechromeextension/</guid>
-      <description>为了完成稀土掘金编程挑战赛
+      <description>教程    为了完成稀土掘金编程挑战赛
 首先对插件有个简单的印象 10分钟入门chrome(谷歌)浏览器插件开发，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 browser_action。
 大概知道插件的概念后，结合 手把手教你开发chrome扩展 完成自己的第一个插件。
 我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章Chrome Manifest V3 - 披着羊皮的狼？大概了解一切情况。
@@ -22,7 +22,11 @@
 随后可以通过 Chrome插件(扩展)开发全攻略 系统了解 Chrome 的插件开发，更推荐的方法是开始写插件然后去查需要的东西。
 有了这些基础你应该就能够成功的开发一个自己的插件了。
 下面是一些可以遇到的问题：
- 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  </description>
+ 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  总结    这次项目中我学到了以下这些东西：
+javascript heredoc多行字符串    参考资料：js与多行字符串
+巧妙利用了 function 的 toString 方法，转为字符串后有换行符 \n
+缺点在于不能使用压缩器与不能插入 js 逻辑
+function heredoc(fn) {  return fn.toString().split(&amp;#39;\n&amp;#39;).slice(1,-1).join(&amp;#39;\n&amp;#39;) + &amp;#39;\n&amp;#39; }  var tmpl = heredoc(function(){/* !</description>
     </item>
     
     <item>
