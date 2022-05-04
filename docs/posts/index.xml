@@ -6,7 +6,25 @@
     <description>Recent content in Posts on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 02 May 2022 14:38:34 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 May 2022 16:40:12 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>学习如何写 Chrome 插件</title>
+      <link>http://ccviolett.github.io/posts/50-writechromeextension/</link>
+      <pubDate>Tue, 03 May 2022 16:40:12 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/50-writechromeextension/</guid>
+      <description>为了完成稀土掘金编程挑战赛
+首先对插件有个简单的印象 10分钟入门chrome(谷歌)浏览器插件开发，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 browser_action。
+大概知道插件的概念后，结合 手把手教你开发chrome扩展 完成自己的第一个插件。
+我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章Chrome Manifest V3 - 披着羊皮的狼？大概了解一切情况。
+选择继续在 MV2 下开发。
+通过 一篇文章教你顺利入门和开发chrome扩展程序（插件） 大概理清整个插件的框架，顺便了解各个部分之间的通信。
+随后可以通过 Chrome插件(扩展)开发全攻略 系统了解 Chrome 的插件开发，更推荐的方法是开始写插件然后去查需要的东西。
+有了这些基础你应该就能够成功的开发一个自己的插件了。
+下面是一些可以遇到的问题：
+ 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  </description>
+    </item>
+    
     <item>
       <title>C&#43;&#43; 后端工程师的养成</title>
       <link>http://ccviolett.github.io/posts/49-cppbackendlearning/</link>
@@ -106,7 +124,7 @@
       <pubDate>Sun, 10 Apr 2022 10:15:53 +0800</pubDate>
       
       <guid>http://ccviolett.github.io/posts/42-teamwebfontend/</guid>
-      <description>相关链接 CSS 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  CSS 知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果</description>
+      <description>关键词 相关链接 CSS 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     关键词     classList dataset  相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  CSS 知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果</description>
     </item>
     
     <item>
@@ -296,7 +314,7 @@ onClick 自动触发  将 onClick = {func()} 改为 onClick = {() =&amp;gt; {fun
       <description>零、前期准备    安装 Android Studio，安装对应版本 SDK Tools，新建项目。
 一、代码修改    修改 app/java/{创建时指定的包名}/MainActivity.java 如下：
  注意！代码第一行要改为你的包名，中间的链接要改为自己的网页链接
- package {创建时指定的包名}; import androidx.appcompat.app.AppCompatActivity; import android.annotation.SuppressLint; import android.os.Bundle; import android.view.View; import android.view.KeyEvent; import android.webkit.WebView; import android.webkit.WebViewClient; public class MainActivity extends AppCompatActivity { @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); setContentView(R.layout.activity_main); this.createWebView(); } @SuppressLint(&amp;#34;SetJavaScriptEnabled&amp;#34;) private void createWebView() { final WebView webView = (WebView) findViewById(R.id.webview); webView.getSettings().setJavaScriptEnabled(true); webView.setWebViewClient(new WebViewClient()); String url = &amp;#34;{你要套壳的网页链接}&amp;#34;; webView.loadUrl(url); webView.</description>
+ package {创建时指定的包名};  import androidx.appcompat.app.AppCompatActivity;  import android.annotation.SuppressLint; import android.os.Bundle; import android.view.View; import android.view.KeyEvent; import android.webkit.WebView; import android.webkit.WebViewClient;  public class MainActivity extends AppCompatActivity {   @Override  protected void onCreate(Bundle savedInstanceState) {  super.onCreate(savedInstanceState);   setContentView(R.layout.activity_main);   this.createWebView();  }   @SuppressLint(&amp;#34;SetJavaScriptEnabled&amp;#34;)  private void createWebView() {  final WebView webView = (WebView) findViewById(R.</description>
     </item>
     
     <item>
@@ -317,7 +335,7 @@ onClick 自动触发  将 onClick = {func()} 改为 onClick = {() =&amp;gt; {fun
       
       <guid>http://ccviolett.github.io/posts/28-lesson-cpp/</guid>
       <description>静态变量    问题：请问下列程序会输出什么？
-#include &amp;lt;iostream&amp;gt; using namespace std; int fun() { static int x = 1; x *= 2; return x; } int main() { int i, s = 1; for (i = 1; i &amp;lt;= 3; ++i) s *= fun(); cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl; } 答案：64</description>
+#include &amp;lt;iostream&amp;gt; using namespace std;  int fun() { 	static int x = 1; 	x *= 2; 	return x; }  int main() { 	int i, s = 1; 	for (i = 1; i &amp;lt;= 3; ++i) 	s *= fun(); 	cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl; } 答案：64</description>
     </item>
     
     <item>
@@ -387,7 +405,7 @@ AllSigned 和 RemoteSigned 执行策略可防止 Windows PowerShell 运行没有
       <pubDate>Wed, 16 Mar 2022 19:45:28 +0800</pubDate>
       
       <guid>http://ccviolett.github.io/posts/21-solvede/</guid>
-      <description>1. $y&#39;= f(x, y)$ 型 2. $y^{(n)} = f(x)$ 型 3. $y&#39;&#39; = f(x, y&#39;)$ 型 4. $y&#39;&#39; = f(y, y&#39;)$ 型 $y&#39;&#39; + py&#39; + qy = 0$ 型 - 二阶常系数齐次线性微分方程 5. $y&#39;&#39; + py&#39; + qy = e^{\lambda x}P_m(x)$ 型   一、解微分方程    1. $y&#39;= f(x, y)$ 型    转化为 $y&#39; + P(x)y = Q(x)$ 的形式，套用公式：
+      <description>1. $y&amp;rsquo;= f(x, y)$ 型 2. $y^{(n)} = f(x)$ 型 3. $y&amp;rsquo;&amp;rsquo; = f(x, y&amp;rsquo;)$ 型 4. $y&amp;rsquo;&amp;rsquo; = f(y, y&amp;rsquo;)$ 型 $y&amp;rsquo;&amp;rsquo; + py&amp;rsquo; + qy = 0$ 型 - 二阶常系数齐次线性微分方程 5. $y&amp;rsquo;&amp;rsquo; + py&amp;rsquo; + qy = e^{\lambda x}P_m(x)$ 型   一、解微分方程    1. $y&amp;rsquo;= f(x, y)$ 型    转化为 $y&amp;rsquo; + P(x)y = Q(x)$ 的形式，套用公式：
 $$ y = e^{-\int P(x) dx} \left(\int Q(x) e^{\int P(x) dx} dx + C \right) $$</description>
     </item>
     
@@ -683,7 +701,7 @@ Free Educational Licenses
 代码高亮配置    官方文档：Syntax Highlighting
 Hugo 中集成了 Chroma 来进行代码高亮。
 TLDR：将下列设置复制到配置文件中（以 TOML 为例）
-[markup] [markup.</description>
+[markup]  [markup.</description>
     </item>
     
     <item>

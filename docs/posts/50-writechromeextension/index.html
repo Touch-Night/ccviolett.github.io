@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="罗潇阳">
+    <meta name="description" content="为了完成稀土掘金编程挑战赛
+首先对插件有个简单的印象 10分钟入门chrome(谷歌)浏览器插件开发，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 browser_action。
+大概知道插件的概念后，结合 手把手教你开发chrome扩展 完成自己的第一个插件。
+我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章Chrome Manifest V3 - 披着羊皮的狼？大概了解一切情况。
+选择继续在 MV2 下开发。
+通过 一篇文章教你顺利入门和开发chrome扩展程序（插件） 大概理清整个插件的框架，顺便了解各个部分之间的通信。
+随后可以通过 Chrome插件(扩展)开发全攻略 系统了解 Chrome 的插件开发，更推荐的方法是开始写插件然后去查需要的东西。
+有了这些基础你应该就能够成功的开发一个自己的插件了。
+下面是一些可以遇到的问题：
+ 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  ">
+    <meta name="keywords" content="博客,开发者,个人">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="学习如何写 Chrome 插件"/>
+<meta name="twitter:description" content="为了完成稀土掘金编程挑战赛
+首先对插件有个简单的印象 10分钟入门chrome(谷歌)浏览器插件开发，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 browser_action。
+大概知道插件的概念后，结合 手把手教你开发chrome扩展 完成自己的第一个插件。
+我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章Chrome Manifest V3 - 披着羊皮的狼？大概了解一切情况。
+选择继续在 MV2 下开发。
+通过 一篇文章教你顺利入门和开发chrome扩展程序（插件） 大概理清整个插件的框架，顺便了解各个部分之间的通信。
+随后可以通过 Chrome插件(扩展)开发全攻略 系统了解 Chrome 的插件开发，更推荐的方法是开始写插件然后去查需要的东西。
+有了这些基础你应该就能够成功的开发一个自己的插件了。
+下面是一些可以遇到的问题：
+ 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  "/>
+
+    <meta property="og:title" content="学习如何写 Chrome 插件" />
+<meta property="og:description" content="为了完成稀土掘金编程挑战赛
+首先对插件有个简单的印象 10分钟入门chrome(谷歌)浏览器插件开发，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 browser_action。
+大概知道插件的概念后，结合 手把手教你开发chrome扩展 完成自己的第一个插件。
+我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章Chrome Manifest V3 - 披着羊皮的狼？大概了解一切情况。
+选择继续在 MV2 下开发。
+通过 一篇文章教你顺利入门和开发chrome扩展程序（插件） 大概理清整个插件的框架，顺便了解各个部分之间的通信。
+随后可以通过 Chrome插件(扩展)开发全攻略 系统了解 Chrome 的插件开发，更推荐的方法是开始写插件然后去查需要的东西。
+有了这些基础你应该就能够成功的开发一个自己的插件了。
+下面是一些可以遇到的问题：
+ 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ccviolett.github.io/posts/50-writechromeextension/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-03T16:40:12+08:00" />
+<meta property="article:modified_time" content="2022-05-03T16:40:12+08:00" />
+
+
+
+    <title>
+  学习如何写 Chrome 插件 · 罗潇阳的博客
+</title>
+
+    
+      <link rel="canonical" href="http://ccviolett.github.io/posts/50-writechromeextension/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.98.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?90bcdb8127c31d4d27ebb95576bc8474";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      罗潇阳的博客
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/">首页</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">文章</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/solution/">题解</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">联系</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">关于</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://ccviolett.github.io/posts/50-writechromeextension/">
+              学习如何写 Chrome 插件
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2022-05-03T16:40:12&#43;08:00'>
+                2022 年 5 月 3 日
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              阅读时间：1 分钟
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>为了完成<a href="https://hackathon2022.juejin.cn/">稀土掘金编程挑战赛</a></p>
+<p>首先对插件有个简单的印象 <a href="https://juejin.cn/post/6904797929056239630">10分钟入门chrome(谷歌)浏览器插件开发</a>，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 <code>browser_action</code>。</p>
+<p>大概知道插件的概念后，结合 <a href="https://www.cnblogs.com/walkingp/archive/2011/03/31/2001628.html">手把手教你开发chrome扩展</a> 完成自己的第一个插件。</p>
+<p>我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章<a href="https://zhuanlan.zhihu.com/p/451197423">Chrome Manifest V3 - 披着羊皮的狼？</a>大概了解一切情况。</p>
+<p>选择继续在 MV2 下开发。</p>
+<p>通过 <a href="https://juejin.cn/post/6844903740646899720">一篇文章教你顺利入门和开发chrome扩展程序（插件）</a> 大概理清整个插件的框架，顺便了解各个部分之间的通信。</p>
+<p>随后可以通过 <a href="https://www.bookstack.cn/read/chrome-plugin-develop/spilt.1.8bdb1aac68bbdc44.md">Chrome插件(扩展)开发全攻略</a> 系统了解  Chrome 的插件开发，更推荐的方法是开始写插件然后去查需要的东西。</p>
+<p>有了这些基础你应该就能够成功的开发一个自己的插件了。</p>
+<p>下面是一些可以遇到的问题：</p>
+<ul>
+<li>关于如何调试三个部分（<code>content_scripts.js</code>、<code>background.js</code>、<code>popup.js</code>）：<a href="https://blog.csdn.net/zzstack/article/details/62226249">chrome插件开发之调试</a></li>
+<li>background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。</li>
+</ul>
+
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
+      
+      
+        ©
+        
+        2022
+         罗潇阳 
+      
+      
+         · 
+        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+        
+      
+    </section>
+  </footer>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+</html>

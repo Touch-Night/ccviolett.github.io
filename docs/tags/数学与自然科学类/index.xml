@@ -14,7 +14,7 @@
       
       <guid>http://ccviolett.github.io/posts/28-lesson-cpp/</guid>
       <description>静态变量    问题：请问下列程序会输出什么？
-#include &amp;lt;iostream&amp;gt; using namespace std; int fun() { static int x = 1; x *= 2; return x; } int main() { int i, s = 1; for (i = 1; i &amp;lt;= 3; ++i) s *= fun(); cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl; } 答案：64</description>
+#include &amp;lt;iostream&amp;gt; using namespace std;  int fun() { 	static int x = 1; 	x *= 2; 	return x; }  int main() { 	int i, s = 1; 	for (i = 1; i &amp;lt;= 3; ++i) 	s *= fun(); 	cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl; } 答案：64</description>
     </item>
     
   </channel>
