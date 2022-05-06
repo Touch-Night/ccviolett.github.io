@@ -35,6 +35,8 @@ series = []
 - 关于如何调试三个部分（`content_scripts.js`、`background.js`、`popup.js`）：[chrome插件开发之调试](https://blog.csdn.net/zzstack/article/details/62226249)
 - background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。
 
+在完成了 Chrome 的插件开发之后，还能很方便地转为 Firefox 插件：[简单将Chrome的crx扩展程序移植到Firefox上](https://blog.csdn.net/FreedomsWings/article/details/81747886)
+
 ## 总结
 
 这次项目中我学到了以下这些东西：

@@ -6,7 +6,18 @@
     <description>Recent content in Posts on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 03 May 2022 16:40:12 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 May 2022 16:18:24 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 语言之旅中的练习</title>
+      <link>http://ccviolett.github.io/posts/51-goexercise/</link>
+      <pubDate>Fri, 06 May 2022 16:18:24 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/51-goexercise/</guid>
+      <description>go 官方的很好的入门教程：Go 语言之旅
+这里是我做的所有的练习
+循环与函数    package main  import (  &amp;#34;fmt&amp;#34;  &amp;#34;math&amp;#34; )  func Sqrt(x float64) float64 {  z := float64(1)  for i := 1; i &amp;lt;= 10; i++ {  change := (z * z - x) / (2 * z)  if math.Abs(change) &amp;lt; 1e-13 {  break  }  z -= change  }  return z }  func main() {  fmt.</description>
+    </item>
+    
     <item>
       <title>学习如何写 Chrome 插件</title>
       <link>http://ccviolett.github.io/posts/50-writechromeextension/</link>
@@ -22,11 +33,12 @@
 随后可以通过 Chrome插件(扩展)开发全攻略 系统了解 Chrome 的插件开发，更推荐的方法是开始写插件然后去查需要的东西。
 有了这些基础你应该就能够成功的开发一个自己的插件了。
 下面是一些可以遇到的问题：
- 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  总结    这次项目中我学到了以下这些东西：
+ 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  在完成了 Chrome 的插件开发之后，还能很方便地转为 Firefox 插件：简单将Chrome的crx扩展程序移植到Firefox上
+总结    这次项目中我学到了以下这些东西：
 javascript heredoc多行字符串    参考资料：js与多行字符串
 巧妙利用了 function 的 toString 方法，转为字符串后有换行符 \n
 缺点在于不能使用压缩器与不能插入 js 逻辑
-function heredoc(fn) {  return fn.toString().split(&amp;#39;\n&amp;#39;).slice(1,-1).join(&amp;#39;\n&amp;#39;) + &amp;#39;\n&amp;#39; }  var tmpl = heredoc(function(){/* !</description>
+function heredoc(fn) {  return fn.</description>
     </item>
     
     <item>

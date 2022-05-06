@@ -6,15 +6,49 @@
     <description>Recent content on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 04 May 2022 17:10:09 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 May 2022 16:18:24 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>220504</title>
+      <title>Go 语言之旅中的练习</title>
+      <link>http://ccviolett.github.io/posts/51-goexercise/</link>
+      <pubDate>Fri, 06 May 2022 16:18:24 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/51-goexercise/</guid>
+      <description>go 官方的很好的入门教程：Go 语言之旅
+这里是我做的所有的练习
+循环与函数    package main  import (  &amp;#34;fmt&amp;#34;  &amp;#34;math&amp;#34; )  func Sqrt(x float64) float64 {  z := float64(1)  for i := 1; i &amp;lt;= 10; i++ {  change := (z * z - x) / (2 * z)  if math.Abs(change) &amp;lt; 1e-13 {  break  }  z -= change  }  return z }  func main() {  fmt.</description>
+    </item>
+    
+    <item>
+      <title>220506</title>
+      <link>http://ccviolett.github.io/todo/220506/</link>
+      <pubDate>Fri, 06 May 2022 16:06:45 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220506/</guid>
+      <description>定时任务：
+ ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
+ ( ) 扇贝英语单词  每周任务：</description>
+    </item>
+    
+    <item>
+      <title>Linux 打印机配置 &amp; 学 Go 的一天</title>
+      <link>http://ccviolett.github.io/todo/220505/</link>
+      <pubDate>Thu, 05 May 2022 16:38:39 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220505/</guid>
+      <description>定时任务：
+ ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
+ (v) 扇贝英语单词  每周任务：</description>
+    </item>
+    
+    <item>
+      <title>开发浏览器插件的一天</title>
       <link>http://ccviolett.github.io/todo/220504/</link>
       <pubDate>Wed, 04 May 2022 17:10:09 +0800</pubDate>
       
       <guid>http://ccviolett.github.io/todo/220504/</guid>
       <description>定时任务：
- ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考前测试  dur: 5 月 2 日 21:00 - 21:20   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：</description>
+ ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
+ (v) 扇贝英语单词  每周任务：</description>
     </item>
     
     <item>
@@ -32,11 +66,12 @@
 随后可以通过 Chrome插件(扩展)开发全攻略 系统了解 Chrome 的插件开发，更推荐的方法是开始写插件然后去查需要的东西。
 有了这些基础你应该就能够成功的开发一个自己的插件了。
 下面是一些可以遇到的问题：
- 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  总结    这次项目中我学到了以下这些东西：
+ 关于如何调试三个部分（content_scripts.js、background.js、popup.js）：chrome插件开发之调试 background 无法与 content_scripts 建立连接可能是页面没刷新或者浏览器没有重启，最大的可能还是 content_scripts 在建立连接前就报错了。  在完成了 Chrome 的插件开发之后，还能很方便地转为 Firefox 插件：简单将Chrome的crx扩展程序移植到Firefox上
+总结    这次项目中我学到了以下这些东西：
 javascript heredoc多行字符串    参考资料：js与多行字符串
 巧妙利用了 function 的 toString 方法，转为字符串后有换行符 \n
 缺点在于不能使用压缩器与不能插入 js 逻辑
-function heredoc(fn) {  return fn.toString().split(&amp;#39;\n&amp;#39;).slice(1,-1).join(&amp;#39;\n&amp;#39;) + &amp;#39;\n&amp;#39; }  var tmpl = heredoc(function(){/* !</description>
+function heredoc(fn) {  return fn.</description>
     </item>
     
     <item>
@@ -46,7 +81,8 @@ function heredoc(fn) {  return fn.toString().split(&amp;#39;\n&amp;#39;).slice(1
       
       <guid>http://ccviolett.github.io/todo/220503/</guid>
       <description>定时任务：
- ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考前测试  dur: 5 月 2 日 21:00 - 21:20   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：</description>
+ ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
+ (v) 扇贝英语单词  每周任务：</description>
     </item>
     
     <item>
@@ -74,7 +110,8 @@ function heredoc(fn) {  return fn.toString().split(&amp;#39;\n&amp;#39;).slice(1
       
       <guid>http://ccviolett.github.io/todo/220502/</guid>
       <description>定时任务：
- ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考前测试  dur: 5 月 2 日 21:00 - 21:20   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：</description>
+ ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
+ (v) 扇贝英语单词  每周任务：</description>
     </item>
     
     <item>
