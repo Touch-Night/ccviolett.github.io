@@ -258,13 +258,12 @@ $$ y = e^{-\int P(x) dx} \left(\int Q(x) e^{\int P(x) dx} dx + C \right) $$</des
     </item>
     
     <item>
-      <title>【大数据-初级】MapReduce: Distributed System 实验报告</title>
-      <link>http://ccviolett.github.io/posts/19-bitedancebigdataa/</link>
+      <title>MIT6.824 学习笔记</title>
+      <link>http://ccviolett.github.io/posts/19-mit6_824/</link>
       <pubDate>Tue, 15 Mar 2022 11:31:59 +0800</pubDate>
       
-      <guid>http://ccviolett.github.io/posts/19-bitedancebigdataa/</guid>
-      <description>2022 年 3 月 15 - 16 日：通读 MapReduce 论文，了解分布式计算的基本思想。
-项目：Lab 1: MapReduce</description>
+      <guid>http://ccviolett.github.io/posts/19-mit6_824/</guid>
+      <description> 通读 MapReduce 论文，了解分布式计算的基本思想。 认真去看 Lecture 1: Introduction，了解整个课程的结构，并完全清楚 MapReduce 框架。 完整地看完 Go 语言之旅 并完成所有练习 了解 Lab 1: MapReduce 的目标，能够按照 Lab 中的提示跑通命令。 利用所学 Go 知识将 mrsequential.go 看懂 通过 golang 中的 rpc 包用法 学习 rpc  </description>
     </item>
     
     <item>
