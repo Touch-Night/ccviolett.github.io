@@ -134,3 +134,23 @@ Cycle.js
 误打误撞触发了装置，知道了回溯的事后，他想着不断触发装置，回到某个时间点前，挽回心爱的人。
 
 但是当回去后，发现人变了。
+
+[自媒体发展事项](https://www.bilibili.com/video/BV1vS4y1a7mf)
+
+CDACB
+DAADA
+AADBC
+DBADC
+BDBBD
+ABBAA
+DDDAB
+ADBDD
+BAAAA
+AAAAB
+CBCDB
+BBDBB
+BCDCD
+CBBDC
+BACBB
+CXABA
+BC

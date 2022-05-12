@@ -6,22 +6,31 @@
 <meta content="zh-cn" http-equiv="Content-Language"/>
 <meta content="light dark" name="color-scheme"/>
 <meta content="罗潇阳" name="author"/>
-<meta content="静态变量    问题：请问下列程序会输出什么？
-#include &lt;iostream&gt; using namespace std; int fun() { static int x = 1; x *= 2; return x; } int main() { int i, s = 1; for (i = 1; i &lt;= 3; ++i) s *= fun(); cout &lt;&lt; s &lt;&lt; endl; } 答案：64" name="description"/>
+<meta content='构造函数与析构函数执行顺序    当一个有成员对象的派生类对象时，各构造函数体的执行次序为 (C)。
+ (A) 派生类、成员对象类、基类； (B) 成员对象类、基类、派生类； (C) 基类、成员对象类、派生类； (D) 基类、派生类、成员对象类  在新建对象时
+ 首先会按照继承顺序（从左到右）执行基类构造函数 然后会按照声明顺序（从上到下）执行成员对象类构造函数 最后执行当前类的构造函数  成员对象构造函数的调用顺序和初始化列表中顺序无关，只和声明顺序有关。
+析构函数执行顺序正好相反，先构造后析构，后构造先析构。
+#include &lt;bits/stdc++.h&gt; using namespace std; class A { public: A() { cout &lt;&lt; "A"; } ~A() { cout &lt;&lt; "a"; } }; class B { public: B() { cout &lt;&lt; "B"; } ~B() { cout &lt;&lt; "b"; } }; class D { public: D() { cout &lt;&lt; "D"; } ~D() { cout &lt;&lt; "d"; } }; class E { public: E() { cout &lt;&lt; "E"; } ~E() { cout &lt;&lt; "e"; } }; class F { public: F() { cout &lt;&lt; "F"; } ~F() { cout &lt;&lt; "f"; } }; class C : public A, public E { D d; B b; public: C(): b(), f(), d() { cout &lt;&lt; "C"; } ~C() { cout &lt;&lt; "c"; } F f; }; int main() { C *c = new C(); delete c; return 0; } 当上述程序运行时，输出的结果为 “AEDBFCcfbdea”' name="description"/>
 <meta content="博客,开发者,个人" name="keywords"/>
 <meta content="summary" name="twitter:card"/>
-<meta content="学习笔记 | C++" name="twitter:title"/>
-<meta content="静态变量    问题：请问下列程序会输出什么？
-#include &lt;iostream&gt; using namespace std; int fun() { static int x = 1; x *= 2; return x; } int main() { int i, s = 1; for (i = 1; i &lt;= 3; ++i) s *= fun(); cout &lt;&lt; s &lt;&lt; endl; } 答案：64" name="twitter:description"/>
-<meta content="学习笔记 | C++" property="og:title"/>
-<meta content="静态变量    问题：请问下列程序会输出什么？
-#include &lt;iostream&gt; using namespace std; int fun() { static int x = 1; x *= 2; return x; } int main() { int i, s = 1; for (i = 1; i &lt;= 3; ++i) s *= fun(); cout &lt;&lt; s &lt;&lt; endl; } 答案：64" property="og:description"/>
+<meta content="学习笔记 | C++ 程序设计" name="twitter:title"/>
+<meta content='构造函数与析构函数执行顺序    当一个有成员对象的派生类对象时，各构造函数体的执行次序为 (C)。
+ (A) 派生类、成员对象类、基类； (B) 成员对象类、基类、派生类； (C) 基类、成员对象类、派生类； (D) 基类、派生类、成员对象类  在新建对象时
+ 首先会按照继承顺序（从左到右）执行基类构造函数 然后会按照声明顺序（从上到下）执行成员对象类构造函数 最后执行当前类的构造函数  成员对象构造函数的调用顺序和初始化列表中顺序无关，只和声明顺序有关。
+析构函数执行顺序正好相反，先构造后析构，后构造先析构。
+#include &lt;bits/stdc++.h&gt; using namespace std; class A { public: A() { cout &lt;&lt; "A"; } ~A() { cout &lt;&lt; "a"; } }; class B { public: B() { cout &lt;&lt; "B"; } ~B() { cout &lt;&lt; "b"; } }; class D { public: D() { cout &lt;&lt; "D"; } ~D() { cout &lt;&lt; "d"; } }; class E { public: E() { cout &lt;&lt; "E"; } ~E() { cout &lt;&lt; "e"; } }; class F { public: F() { cout &lt;&lt; "F"; } ~F() { cout &lt;&lt; "f"; } }; class C : public A, public E { D d; B b; public: C(): b(), f(), d() { cout &lt;&lt; "C"; } ~C() { cout &lt;&lt; "c"; } F f; }; int main() { C *c = new C(); delete c; return 0; } 当上述程序运行时，输出的结果为 “AEDBFCcfbdea”' name="twitter:description"/>
+<meta content="学习笔记 | C++ 程序设计" property="og:title"/>
+<meta content='构造函数与析构函数执行顺序    当一个有成员对象的派生类对象时，各构造函数体的执行次序为 (C)。
+ (A) 派生类、成员对象类、基类； (B) 成员对象类、基类、派生类； (C) 基类、成员对象类、派生类； (D) 基类、派生类、成员对象类  在新建对象时
+ 首先会按照继承顺序（从左到右）执行基类构造函数 然后会按照声明顺序（从上到下）执行成员对象类构造函数 最后执行当前类的构造函数  成员对象构造函数的调用顺序和初始化列表中顺序无关，只和声明顺序有关。
+析构函数执行顺序正好相反，先构造后析构，后构造先析构。
+#include &lt;bits/stdc++.h&gt; using namespace std; class A { public: A() { cout &lt;&lt; "A"; } ~A() { cout &lt;&lt; "a"; } }; class B { public: B() { cout &lt;&lt; "B"; } ~B() { cout &lt;&lt; "b"; } }; class D { public: D() { cout &lt;&lt; "D"; } ~D() { cout &lt;&lt; "d"; } }; class E { public: E() { cout &lt;&lt; "E"; } ~E() { cout &lt;&lt; "e"; } }; class F { public: F() { cout &lt;&lt; "F"; } ~F() { cout &lt;&lt; "f"; } }; class C : public A, public E { D d; B b; public: C(): b(), f(), d() { cout &lt;&lt; "C"; } ~C() { cout &lt;&lt; "c"; } F f; }; int main() { C *c = new C(); delete c; return 0; } 当上述程序运行时，输出的结果为 “AEDBFCcfbdea”' property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="http://ccviolett.github.io/posts/28-lesson-cpp/" property="og:url"/><meta content="posts" property="article:section"/>
 <meta content="2022-03-23T20:46:47+08:00" property="article:published_time"/>
 <meta content="2022-03-23T20:46:47+08:00" property="article:modified_time"/>
 <title>
-  学习笔记 | C++ · 罗潇阳的博客
+  学习笔记 | C++ 程序设计 · 罗潇阳的博客
 </title>
 <link href="http://ccviolett.github.io/posts/28-lesson-cpp/" rel="canonical"/>
 <link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
@@ -90,7 +99,7 @@ var _hmt = _hmt || [];
 <div class="post-title">
 <h1 class="title">
 <a class="title-link" href="http://ccviolett.github.io/posts/28-lesson-cpp/">
-              学习笔记 | C++
+              学习笔记 | C++ 程序设计
             </a>
 </h1>
 </div>
@@ -104,7 +113,7 @@ var _hmt = _hmt || [];
 </span>
 <span class="reading-time">
 <i aria-hidden="true" class="fa fa-clock-o"></i>
-              阅读时间：1 分钟
+              阅读时间：2 分钟
             </span>
 </div>
 <div class="authors">
@@ -125,7 +134,203 @@ var _hmt = _hmt || [];
 </div>
 </header>
 <div>
-<h3 id="静态变量">
+<h3 id="构造函数与析构函数执行顺序">
+  构造函数与析构函数执行顺序
+  <a class="heading-link" href="#%e6%9e%84%e9%80%a0%e5%87%bd%e6%95%b0%e4%b8%8e%e6%9e%90%e6%9e%84%e5%87%bd%e6%95%b0%e6%89%a7%e8%a1%8c%e9%a1%ba%e5%ba%8f">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>当一个有成员对象的派生类对象时，各构造函数体的执行次序为 (C)。</p>
+<ul>
+<li>(A) 派生类、成员对象类、基类；</li>
+<li>(B) 成员对象类、基类、派生类；</li>
+<li>(C) 基类、成员对象类、派生类；</li>
+<li>(D) 基类、派生类、成员对象类</li>
+</ul>
+<p>在新建对象时</p>
+<ul>
+<li>首先会按照继承顺序（从左到右）执行基类构造函数</li>
+<li>然后会按照声明顺序（从上到下）执行成员对象类构造函数</li>
+<li>最后执行当前类的构造函数</li>
+</ul>
+<p>成员对象构造函数的调用顺序和<code>初始化列表</code>中顺序无关，只和声明顺序有关。</p>
+<p>析构函数执行顺序正好相反，先构造后析构，后构造先析构。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-cpp" data-lang="cpp"><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;bits/stdc++.h&gt;</span><span style="color:#888;font-weight:bold">
+</span><span style="color:#888;font-weight:bold"></span>
+<span style="font-weight:bold;text-decoration:underline">using</span> <span style="font-weight:bold;text-decoration:underline">namespace</span> std;
+
+<span style="font-weight:bold;text-decoration:underline">class</span> <span style="color:#666;font-weight:bold;font-style:italic">A</span> { <span style="font-weight:bold;text-decoration:underline">public</span>: A() { cout &lt;&lt; <span style="color:#666;font-style:italic">"A"</span>; } ~A() { cout &lt;&lt; <span style="color:#666;font-style:italic">"a"</span>; } };
+
+<span style="font-weight:bold;text-decoration:underline">class</span> <span style="color:#666;font-weight:bold;font-style:italic">B</span> { <span style="font-weight:bold;text-decoration:underline">public</span>: B() { cout &lt;&lt; <span style="color:#666;font-style:italic">"B"</span>; } ~B() { cout &lt;&lt; <span style="color:#666;font-style:italic">"b"</span>; } };
+
+<span style="font-weight:bold;text-decoration:underline">class</span> <span style="color:#666;font-weight:bold;font-style:italic">D</span> { <span style="font-weight:bold;text-decoration:underline">public</span>: D() { cout &lt;&lt; <span style="color:#666;font-style:italic">"D"</span>; } ~D() { cout &lt;&lt; <span style="color:#666;font-style:italic">"d"</span>; } };
+
+<span style="font-weight:bold;text-decoration:underline">class</span> <span style="color:#666;font-weight:bold;font-style:italic">E</span> { <span style="font-weight:bold;text-decoration:underline">public</span>: E() { cout &lt;&lt; <span style="color:#666;font-style:italic">"E"</span>; } ~E() { cout &lt;&lt; <span style="color:#666;font-style:italic">"e"</span>; } };
+
+<span style="font-weight:bold;text-decoration:underline">class</span> <span style="color:#666;font-weight:bold;font-style:italic">F</span> { <span style="font-weight:bold;text-decoration:underline">public</span>: F() { cout &lt;&lt; <span style="color:#666;font-style:italic">"F"</span>; } ~F() { cout &lt;&lt; <span style="color:#666;font-style:italic">"f"</span>; } };
+
+<span style="font-weight:bold;text-decoration:underline">class</span> <span style="color:#666;font-weight:bold;font-style:italic">C</span> : <span style="font-weight:bold;text-decoration:underline">public</span> A, <span style="font-weight:bold;text-decoration:underline">public</span> E {
+	D d;
+	B b;
+	<span style="font-weight:bold;text-decoration:underline">public</span>:
+	C(): b(), f(), d() { cout &lt;&lt; <span style="color:#666;font-style:italic">"C"</span>; }
+	~C() { cout &lt;&lt; <span style="color:#666;font-style:italic">"c"</span>; }
+	F f;
+};
+
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">main</span>() { 
+	C *c = <span style="font-weight:bold;text-decoration:underline">new</span> C();
+	<span style="font-weight:bold;text-decoration:underline">delete</span> c;
+	<span style="font-weight:bold;text-decoration:underline">return</span> 0; 
+}
+
+</code></pre></div><p>当上述程序运行时，输出的结果为 “AEDBFCcfbdea”</p>
+<h3 id="强制转换">
+  强制转换
+  <a class="heading-link" href="#%e5%bc%ba%e5%88%b6%e8%bd%ac%e6%8d%a2">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>当浮点数类型强制转换为整数类型时，会直接去除小数位（向下取整）。</p>
+<h3 id="友元">
+  友元
+  <a class="heading-link" href="#%e5%8f%8b%e5%85%83">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>C++ 允许使用友元，但是友元会破坏封装性，友元不是类的成员函数。</p>
+<h3 id="缺省构造函数">
+  缺省构造函数
+  <a class="heading-link" href="#%e7%bc%ba%e7%9c%81%e6%9e%84%e9%80%a0%e5%87%bd%e6%95%b0">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>只有在没有定义任何构造函数时，缺省构造函数才会自动生成。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-cpp" data-lang="cpp"><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;bits/stdc++.h&gt;</span><span style="color:#888;font-weight:bold">
+</span><span style="color:#888;font-weight:bold"></span>
+<span style="font-weight:bold;text-decoration:underline">using</span> <span style="font-weight:bold;text-decoration:underline">namespace</span> std;
+
+<span style="font-weight:bold;text-decoration:underline">class</span> <span style="color:#666;font-weight:bold;font-style:italic">A</span> { 
+	<span style="font-weight:bold;text-decoration:underline">public</span>: 
+		A(<span style="font-weight:bold;text-decoration:underline">int</span> a) { cout &lt;&lt; <span style="color:#666;font-style:italic">"A"</span> &lt;&lt; <span style="color:#666;font-style:italic">"a"</span>; } 
+};
+
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">main</span>() {
+	A a(1);
+	<span style="color:#888;font-style:italic">// A b(); // Error!
+</span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">return</span> 0;
+}
+</code></pre></div><h3 id="内存释放">
+  内存释放
+  <a class="heading-link" href="#%e5%86%85%e5%ad%98%e9%87%8a%e6%94%be">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>delete 运算符必须用于 new 返回的指针，适用于空指针。</p>
+<p>但是不能对一个指针多次 delete。</p>
+<p>删除指针数组时，指针名前只用一对方括号符，不管所删除的数组的维数。</p>
+<h3 id="虚类虚函数">
+  虚类&amp;虚函数
+  <a class="heading-link" href="#%e8%99%9a%e7%b1%bb%e8%99%9a%e5%87%bd%e6%95%b0">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>带有虚基类的多层派生类构造函数的成员初始化列表中都要列出虚基类的构造函数，这样将来虚基类的子对象初始化一次。</p>
+<p>虚函数在其类的派生类中的同原型函数都是虚函数。</p>
+<h3 id="外部变量">
+  外部变量
+  <a class="heading-link" href="#%e5%a4%96%e9%83%a8%e5%8f%98%e9%87%8f">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>定义外部变量时，不需要使用存储类说明符 <code>extern</code>，而声明外部变量时则需要使用它。</p>
+<h3 id="动态关联">
+  动态关联
+  <a class="heading-link" href="#%e5%8a%a8%e6%80%81%e5%85%b3%e8%81%94">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>动态关联是在运行时选定调用的成员函数，以虚函数为基础，其调用函数操作是指向对象的指针或对象的引用。</p>
+<h3 id="内联函数">
+  内联函数
+  <a class="heading-link" href="#%e5%86%85%e8%81%94%e5%87%bd%e6%95%b0">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>变量自增自减、条件语句、变量声明可以声明为内联函数，循环不能。</p>
+<h3 id="模板">
+  模板
+  <a class="heading-link" href="#%e6%a8%a1%e6%9d%bf">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>C++ 中的模板包括 <code>函数模板</code> 和 <code>类模板</code>。</p>
+<h3 id="指针指向的内存">
+  指针指向的内存
+  <a class="heading-link" href="#%e6%8c%87%e9%92%88%e6%8c%87%e5%90%91%e7%9a%84%e5%86%85%e5%ad%98">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><code>char *s1 = "hello"</code> 中， <code>s1</code> 指向的是确定的内存单元。</p>
+<h3 id="常量指针与指针常量">
+  常量指针与指针常量
+  <a class="heading-link" href="#%e5%b8%b8%e9%87%8f%e6%8c%87%e9%92%88%e4%b8%8e%e6%8c%87%e9%92%88%e5%b8%b8%e9%87%8f">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<ul>
+<li><code>const char *p</code> 是指向常量字符串的指针，可以改变指针，但是不可以改变字符串。</li>
+<li><code>char const *p</code> 同理</li>
+</ul>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-cpp" data-lang="cpp"><span style="font-weight:bold;text-decoration:underline">char</span> c[10] = <span style="color:#666;font-style:italic">"hello"</span>;
+<span style="font-weight:bold;text-decoration:underline">const</span> <span style="font-weight:bold;text-decoration:underline">char</span> *p = c;
+<span style="color:#888;font-style:italic">// *p = 'b'; // Error!
+</span><span style="color:#888;font-style:italic"></span>p++;
+</code></pre></div><ul>
+<li><code>char * const p</code> 是指向字符串的常量指针</li>
+</ul>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-cpp" data-lang="cpp"><span style="font-weight:bold;text-decoration:underline">char</span> c[10] = <span style="color:#666;font-style:italic">"hello"</span>;
+<span style="font-weight:bold;text-decoration:underline">char</span> * <span style="font-weight:bold;text-decoration:underline">const</span> p = c;
+*p = <span style="color:#666;font-style:italic">'b'</span>;
+<span style="color:#888;font-style:italic">// p++; // Error!
+</span></code></pre></div><h3 id="构造函数调用次数">
+  构造函数调用次数
+  <a class="heading-link" href="#%e6%9e%84%e9%80%a0%e5%87%bd%e6%95%b0%e8%b0%83%e7%94%a8%e6%ac%a1%e6%95%b0">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><code>Sample a[2], *p = new Sample;</code> 调用构造函数 3 次。</p>
+<h3 id="构造函数和析构函数的声明">
+  构造函数和析构函数的声明
+  <a class="heading-link" href="#%e6%9e%84%e9%80%a0%e5%87%bd%e6%95%b0%e5%92%8c%e6%9e%90%e6%9e%84%e5%87%bd%e6%95%b0%e7%9a%84%e5%a3%b0%e6%98%8e">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>构造函数和析构函数在类内进行定义后，可以在类外进行声明。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-cpp" data-lang="cpp"><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;bits/stdc++.h&gt;</span><span style="color:#888;font-weight:bold">
+</span><span style="color:#888;font-weight:bold"></span>
+<span style="font-weight:bold;text-decoration:underline">using</span> <span style="font-weight:bold;text-decoration:underline">namespace</span> std;
+
+<span style="font-weight:bold;text-decoration:underline">class</span> <span style="color:#666;font-weight:bold;font-style:italic">A</span> {
+	<span style="font-weight:bold;text-decoration:underline">public</span>:
+		A();
+		~A();
+};
+
+A::A() {
+	cout &lt;&lt; <span style="color:#666;font-style:italic">"New"</span> &lt;&lt; endl;
+}
+
+A::~A() {
+	cout &lt;&lt; <span style="color:#666;font-style:italic">"Delete"</span> &lt;&lt; endl;
+}
+
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">main</span>() { 
+	A *a = <span style="font-weight:bold;text-decoration:underline">new</span> A();
+	<span style="font-weight:bold;text-decoration:underline">delete</span> a;
+	<span style="font-weight:bold;text-decoration:underline">return</span> 0; 
+}
+</code></pre></div><h3 id="静态变量">
   静态变量
   <a class="heading-link" href="#%e9%9d%99%e6%80%81%e5%8f%98%e9%87%8f">
 <i aria-hidden="true" class="fa fa-link"></i>
