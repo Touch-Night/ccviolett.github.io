@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="zh-cn">
-    <meta name="color-scheme" content="light dark">
-
-    
-
-    <meta name="author" content="罗潇阳">
-    <meta name="description" content="一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="zh-cn" http-equiv="Content-Language"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="罗潇阳" name="author"/>
+<meta content="一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
   机械特性：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况。
   电气特性：规定传输二进制位时，线路上信号的电压范围、阻抗匹配、传输速率和距离限制等。
   功能特性：指明某条线上出现的某一电平表示何种意义、接口部件的信号线的用途。
@@ -18,12 +14,11 @@
   二、数据通信    （一）相关术语    数据：传送信号的实体，通常是有意义的符号序列。
 信号：数据的电气、电磁表现，是数据在传输过程中的存在形式。
  数字信号：代表信息的参数取值是离散的。 模拟信号：代表信号的参数取值是连续的。  信源：产生和发送数据的源头。
-信宿：接收数据的终点。">
-    <meta name="keywords" content="博客,开发者,个人">
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="计算机网络 | Part1 物理层(Physical Layer)"/>
-<meta name="twitter:description" content="一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
+信宿：接收数据的终点。" name="description"/>
+<meta content="博客,开发者,个人" name="keywords"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="计算机网络 | Part1 物理层(Physical Layer)" name="twitter:title"/>
+<meta content="一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
   机械特性：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况。
   电气特性：规定传输二进制位时，线路上信号的电压范围、阻抗匹配、传输速率和距离限制等。
   功能特性：指明某条线上出现的某一电平表示何种意义、接口部件的信号线的用途。
@@ -31,10 +26,9 @@
   二、数据通信    （一）相关术语    数据：传送信号的实体，通常是有意义的符号序列。
 信号：数据的电气、电磁表现，是数据在传输过程中的存在形式。
  数字信号：代表信息的参数取值是离散的。 模拟信号：代表信号的参数取值是连续的。  信源：产生和发送数据的源头。
-信宿：接收数据的终点。"/>
-
-    <meta property="og:title" content="计算机网络 | Part1 物理层(Physical Layer)" />
-<meta property="og:description" content="一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
+信宿：接收数据的终点。" name="twitter:description"/>
+<meta content="计算机网络 | Part1 物理层(Physical Layer)" property="og:title"/>
+<meta content="一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
   机械特性：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况。
   电气特性：规定传输二进制位时，线路上信号的电压范围、阻抗匹配、传输速率和距离限制等。
   功能特性：指明某条线上出现的某一电平表示何种意义、接口部件的信号线的用途。
@@ -42,68 +36,32 @@
   二、数据通信    （一）相关术语    数据：传送信号的实体，通常是有意义的符号序列。
 信号：数据的电气、电磁表现，是数据在传输过程中的存在形式。
  数字信号：代表信息的参数取值是离散的。 模拟信号：代表信号的参数取值是连续的。  信源：产生和发送数据的源头。
-信宿：接收数据的终点。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://ccviolett.github.io/posts/44-teamwebnetwork1/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-04-15T18:14:58+08:00" />
-<meta property="article:modified_time" content="2022-04-15T18:14:58+08:00" />
-
-
-
-    <title>
+信宿：接收数据的终点。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="http://ccviolett.github.io/posts/44-teamwebnetwork1/" property="og:url"/><meta content="posts" property="article:section"/>
+<meta content="2022-04-15T18:14:58+08:00" property="article:published_time"/>
+<meta content="2022-04-15T18:14:58+08:00" property="article:modified_time"/>
+<title>
   计算机网络 | Part1 物理层(Physical Layer) · 罗潇阳的博客
 </title>
-
-    
-      <link rel="canonical" href="http://ccviolett.github.io/posts/44-teamwebnetwork1/">
-    
-
-    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
-
-    
-      
-      
-      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
-    
-
-    
-
-    
-      
-        
-        
-        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
-      
-    
-
-    
-
-    
-
-    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-    <meta name="generator" content="Hugo 0.98.0" />
-  </head>
-
-  
-  
-    
-  
-  <body class="preload-transitions colorscheme-auto">
-    
+<link href="http://ccviolett.github.io/posts/44-teamwebnetwork1/" rel="canonical"/>
+<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
+<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="Hugo 0.92.0" name="generator"/>
+</head>
+<body class="preload-transitions colorscheme-auto">
 <div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
+<a class="colorscheme-toggle" id="dark-mode-toggle">
+<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
+</a>
 </div>
-
-
-    <main class="wrapper">
-      <script>
+<main class="wrapper">
+<script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -112,138 +70,106 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
 <nav class="navigation">
-  <section class="container">
-    <a class="navigation-title" href="/">
+<section class="container">
+<a class="navigation-title" href="/">
       罗潇阳的博客
     </a>
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/">首页</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">文章</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/solution/">题解</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">联系</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/about/">关于</a>
-            </li>
-          
-        
-        
-          
-          
-          
-            
-          
-            
-              
-                <li class="navigation-item menu-separator">
-                  <span>|</span>
-                </li>
-                
-              
-              <li class="navigation-item">
-                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
-              </li>
-            
-          
-        
-      </ul>
-    
-  </section>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button float-right" for="menu-toggle">
+<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
+</label>
+<ul class="navigation-list">
+<li class="navigation-item">
+<a class="navigation-link" href="/">首页</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/posts/">文章</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/solution/">题解</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/contact/">联系</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/about/">关于</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class="navigation-item">
+<a href="http://ccviolett.github.io/en/">🇬🇧</a>
+</li>
+</ul>
+</section>
 </nav>
-
-
-      <div class="content">
-        
-  <section class="container post">
-    <article>
-      <header>
-        <div class="post-title">
-          <h1 class="title">
-            <a class="title-link" href="http://ccviolett.github.io/posts/44-teamwebnetwork1/">
+<div class="content">
+<section class="container post">
+<article>
+<header>
+<div class="post-title">
+<h1 class="title">
+<a class="title-link" href="http://ccviolett.github.io/posts/44-teamwebnetwork1/">
               计算机网络 | Part1 物理层(Physical Layer)
             </a>
-          </h1>
-        </div>
-        <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
-              <time datetime='2022-04-15T18:14:58&#43;08:00'>
+</h1>
+</div>
+<div class="post-meta">
+<div class="date">
+<span class="posted-on">
+<i aria-hidden="true" class="fa fa-calendar"></i>
+<time datetime="2022-04-15T18:14:58+08:00">
                 2022 年 4 月 15 日
               </time>
-            </span>
-            <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
+</span>
+<span class="reading-time">
+<i aria-hidden="true" class="fa fa-clock-o"></i>
               阅读时间：1 分钟
             </span>
-          </div>
-          
-          
-          <div class="tags">
-  <i class="fa fa-tag" aria-hidden="true"></i>
-    <span class="tag">
-      <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-    </span></div>
-
-        </div>
-      </header>
-
-      <div>
-        
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#一基本概念">一、基本概念</a></li>
-    <li><a href="#二数据通信">二、数据通信</a>
-      <ul>
-        <li><a href="#一相关术语">（一）相关术语</a></li>
-        <li><a href="#二通讯方式">（二）通讯方式</a></li>
-        <li><a href="#三数据传输方式">（三）数据传输方式</a></li>
-        <li><a href="#四奈式准则nyquist">（四）奈式准则(Nyquist)</a></li>
-        <li><a href="#五香农公式shannon">（五）香农公式(Shannon)</a></li>
-        <li><a href="#六编码">（六）编码</a></li>
-        <li><a href="#七调制">（七）调制</a></li>
-      </ul>
-    </li>
-    <li><a href="#三物理层传输介质">三、物理层传输介质</a>
-      <ul>
-        <li><a href="#一-导向性传输介质">（一） 导向性传输介质</a></li>
-        <li><a href="#二非导向型传输介质">（二）非导向型传输介质</a></li>
-      </ul>
-    </li>
-    <li><a href="#四物理层设备">四、物理层设备</a>
-      <ul>
-        <li><a href="#一中继器rp-repeater">（一）中继器(RP repeater)</a></li>
-        <li><a href="#二集线器hub">（二）集线器(Hub)</a></li>
-        <li><a href="#5-4-3-规则">5-4-3 规则</a></li>
-      </ul>
-    </li>
-  </ul>
+</div>
+<div class="tags">
+<i aria-hidden="true" class="fa fa-tag"></i>
+<span class="tag">
+<a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+</span></div>
+</div>
+</header>
+<div>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#一基本概念">一、基本概念</a></li>
+<li><a href="#二数据通信">二、数据通信</a>
+<ul>
+<li><a href="#一相关术语">（一）相关术语</a></li>
+<li><a href="#二通讯方式">（二）通讯方式</a></li>
+<li><a href="#三数据传输方式">（三）数据传输方式</a></li>
+<li><a href="#四奈式准则nyquist">（四）奈式准则(Nyquist)</a></li>
+<li><a href="#五香农公式shannon">（五）香农公式(Shannon)</a></li>
+<li><a href="#六编码">（六）编码</a></li>
+<li><a href="#七调制">（七）调制</a></li>
+</ul>
+</li>
+<li><a href="#三物理层传输介质">三、物理层传输介质</a>
+<ul>
+<li><a href="#一-导向性传输介质">（一） 导向性传输介质</a></li>
+<li><a href="#二非导向型传输介质">（二）非导向型传输介质</a></li>
+</ul>
+</li>
+<li><a href="#四物理层设备">四、物理层设备</a>
+<ul>
+<li><a href="#一中继器rp-repeater">（一）中继器(RP repeater)</a></li>
+<li><a href="#二集线器hub">（二）集线器(Hub)</a></li>
+<li><a href="#5-4-3-规则">5-4-3 规则</a></li>
+</ul>
+</li>
+</ul>
 </nav>
 <h2 id="一基本概念">
   一、基本概念
   <a class="heading-link" href="#%e4%b8%80%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
 <p>物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。</p>
 <ol>
@@ -263,15 +189,15 @@ var _hmt = _hmt || [];
 <h2 id="二数据通信">
   二、数据通信
   <a class="heading-link" href="#%e4%ba%8c%e6%95%b0%e6%8d%ae%e9%80%9a%e4%bf%a1">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204222230071.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204222230071.png"/></p>
 <h3 id="一相关术语">
   （一）相关术语
   <a class="heading-link" href="#%e4%b8%80%e7%9b%b8%e5%85%b3%e6%9c%af%e8%af%ad">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>数据：传送信号的实体，通常是有意义的符号序列。</p>
 <p>信号：数据的电气、电磁表现，是数据在传输过程中的存在形式。</p>
@@ -289,8 +215,8 @@ var _hmt = _hmt || [];
 <h3 id="二通讯方式">
   （二）通讯方式
   <a class="heading-link" href="#%e4%ba%8c%e9%80%9a%e8%ae%af%e6%96%b9%e5%bc%8f">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <table>
 <thead>
@@ -325,8 +251,8 @@ var _hmt = _hmt || [];
 <h3 id="三数据传输方式">
   （三）数据传输方式
   <a class="heading-link" href="#%e4%b8%89%e6%95%b0%e6%8d%ae%e4%bc%a0%e8%be%93%e6%96%b9%e5%bc%8f">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <table>
 <thead>
@@ -349,23 +275,23 @@ var _hmt = _hmt || [];
 <h3 id="四奈式准则nyquist">
   （四）奈式准则(Nyquist)
   <a class="heading-link" href="#%e5%9b%9b%e5%a5%88%e5%bc%8f%e5%87%86%e5%88%99nyquist">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230010168.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230010168.png"/></p>
 <h3 id="五香农公式shannon">
   （五）香农公式(Shannon)
   <a class="heading-link" href="#%e4%ba%94%e9%a6%99%e5%86%9c%e5%85%ac%e5%bc%8fshannon">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230011367.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230011986.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230011367.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230011986.png"/></p>
 <h3 id="六编码">
   （六）编码
   <a class="heading-link" href="#%e5%85%ad%e7%bc%96%e7%a0%81">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <ul>
 <li>数字数据(digtal data) 通过 <code>数字发送器(digit emitter)</code> 转化为 数字信号(digtal signal)；</li>
@@ -412,59 +338,59 @@ var _hmt = _hmt || [];
 </tr>
 </tbody>
 </table>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230857450.png" alt="">
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230857905.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230857450.png"/>
+<img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230857905.png"/></p>
 <h3 id="七调制">
   （七）调制
   <a class="heading-link" href="#%e4%b8%83%e8%b0%83%e5%88%b6">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>数据通过 <code>调制器(modulaotr)</code> 转化为模拟信号(analog signal)，常用的调制方法：调幅(AM)、调频(FM)、调相(PM)</p>
 <h2 id="三物理层传输介质">
   三、物理层传输介质
   <a class="heading-link" href="#%e4%b8%89%e7%89%a9%e7%90%86%e5%b1%82%e4%bc%a0%e8%be%93%e4%bb%8b%e8%b4%a8">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
 <h3 id="一-导向性传输介质">
   （一） 导向性传输介质
   <a class="heading-link" href="#%e4%b8%80-%e5%af%bc%e5%90%91%e6%80%a7%e4%bc%a0%e8%be%93%e4%bb%8b%e8%b4%a8">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>定义：电磁波沿着固定媒介被导向传播</p>
 <ol>
 <li>双绞线</li>
 </ol>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230915171.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230915171.png"/></p>
 <ol start="2">
 <li>同轴电缆</li>
 </ol>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230914120.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230914120.png"/></p>
 <ol start="3">
 <li>光纤</li>
 </ol>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230914332.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230915103.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230914332.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230915103.png"/></p>
 <h3 id="二非导向型传输介质">
   （二）非导向型传输介质
   <a class="heading-link" href="#%e4%ba%8c%e9%9d%9e%e5%af%bc%e5%90%91%e5%9e%8b%e4%bc%a0%e8%be%93%e4%bb%8b%e8%b4%a8">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230916273.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204230916273.png"/></p>
 <h2 id="四物理层设备">
   四、物理层设备
   <a class="heading-link" href="#%e5%9b%9b%e7%89%a9%e7%90%86%e5%b1%82%e8%ae%be%e5%a4%87">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
 <h3 id="一中继器rp-repeater">
   （一）中继器(RP repeater)
   <a class="heading-link" href="#%e4%b8%80%e4%b8%ad%e7%bb%a7%e5%99%a8rp-repeater">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>功能：对信号进行再生和还原，对衰减的信号进行放大，保持与原数据相同，以增加信号传输的距离，延长网络的长度。</p>
 <p>中继器两端的网络部分是网段，而不是子网，适用于完全相同的两类网络的互连，且两个网段速、协议率要相同。</p>
@@ -472,41 +398,27 @@ var _hmt = _hmt || [];
 <h3 id="二集线器hub">
   （二）集线器(Hub)
   <a class="heading-link" href="#%e4%ba%8c%e9%9b%86%e7%ba%bf%e5%99%a8hub">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>功能：对信号进行再生放大转发，对衰减的信号进行放大，接着转发到其他所有（除输入端口外）处于工作状态的端口上，以增加信号传输的距离。</p>
 <p>不具备信号的定向传输能力，是一个贡献式设备，不能分割冲突域，连在集线器上的工作主机平分宽带。</p>
 <h3 id="5-4-3-规则">
   5-4-3 规则
   <a class="heading-link" href="#5-4-3-%e8%a7%84%e5%88%99">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>不能超过 5 个网段，这些网段中的物理层网络设备不能超过 4 个，最多只有三个网段挂有计算机。</p>
-
-      </div>
-
-      <footer>
-        
-
-
-        
-        
-        
-      </footer>
-    </article>
-
-    
-  </section>
-
-      </div>
-
-      
-  <footer class="footer">
-    <section class="container">
-      
-        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
+</div>
+<footer>
+</footer>
+</article>
+</section>
+</div>
+<footer class="footer">
+<section class="container">
+<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
       
       
         ©
@@ -516,17 +428,16 @@ var _hmt = _hmt || [];
       
       
          · 
-        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
       
       
         
       
     </section>
-  </footer>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+</footer>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
+<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -543,31 +454,7 @@ var _hmt = _hmt || [];
         });
     });
 </script>
-
-
-
-
-    </main>
-
-    
-      
-      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-  </body>
+</main>
+<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
+</body>
 </html>

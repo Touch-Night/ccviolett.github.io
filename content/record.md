@@ -11,6 +11,8 @@ externalLink = ""
 series = []
 +++
 
+达芬奇记录：
+- 调色时先将一个片段使用 LUT，然后选中其他所有片段，在调色好的片段上按鼠标中键即可批量调色
 
 - [颜文字JS](https://utf-8.jp/public/aaencode.html)
 - [PDF 提权破解](http://www.pdfwork.cn/)

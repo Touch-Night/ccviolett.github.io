@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="zh-cn">
-    <meta name="color-scheme" content="light dark">
-
-    
-
-    <meta name="author" content="罗潇阳">
-    <meta name="description" content="一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="zh-cn" http-equiv="Content-Language"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="罗潇阳" name="author"/>
+<meta content="一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。
 其最基本的服务是将源自网络层来的数据可靠地传输到相邻节点地目标机网络层。
 其主要作用是加强物理层传输原始比特流的功能，将物理层提供的可能出错的物理连接改造成逻辑上无差错的数据链路，使之对网络层表现为一条无差错的链路。
  功能一：为网络层提供服务  无确认无连接服务 有确认无连接服务 有确认面向连接服务   功能二：链路管理，即连接的建立、维持、释放（用于面向连接的服务） 功能三：组帧 功能四：流量控制，限制发送方 功能五：差错控制（帧错/位错）  （零）链路层编码    以太网规定，一组电信号构成一个数据包，叫做“帧”(Frame)。
@@ -19,12 +15,11 @@
 （一）MAC 地址    以太网规定，连入网络的所有设备，都必须具有“网卡”接口。
 数据包必须是从一块网卡，传送到另一块网卡。
 网卡的地址，就是数据包的发送地址和接收地址，这叫做 MAC 地址。
-长度为 6 字节，共 48 比特，通常用十六进制表示法，地址的每个字节被表示为一对十六进制数。">
-    <meta name="keywords" content="博客,开发者,个人">
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="计算机网络 | Part2 数据链路层(Data Link Layer)"/>
-<meta name="twitter:description" content="一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。
+长度为 6 字节，共 48 比特，通常用十六进制表示法，地址的每个字节被表示为一对十六进制数。" name="description"/>
+<meta content="博客,开发者,个人" name="keywords"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="计算机网络 | Part2 数据链路层(Data Link Layer)" name="twitter:title"/>
+<meta content="一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。
 其最基本的服务是将源自网络层来的数据可靠地传输到相邻节点地目标机网络层。
 其主要作用是加强物理层传输原始比特流的功能，将物理层提供的可能出错的物理连接改造成逻辑上无差错的数据链路，使之对网络层表现为一条无差错的链路。
  功能一：为网络层提供服务  无确认无连接服务 有确认无连接服务 有确认面向连接服务   功能二：链路管理，即连接的建立、维持、释放（用于面向连接的服务） 功能三：组帧 功能四：流量控制，限制发送方 功能五：差错控制（帧错/位错）  （零）链路层编码    以太网规定，一组电信号构成一个数据包，叫做“帧”(Frame)。
@@ -33,10 +28,9 @@
 （一）MAC 地址    以太网规定，连入网络的所有设备，都必须具有“网卡”接口。
 数据包必须是从一块网卡，传送到另一块网卡。
 网卡的地址，就是数据包的发送地址和接收地址，这叫做 MAC 地址。
-长度为 6 字节，共 48 比特，通常用十六进制表示法，地址的每个字节被表示为一对十六进制数。"/>
-
-    <meta property="og:title" content="计算机网络 | Part2 数据链路层(Data Link Layer)" />
-<meta property="og:description" content="一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。
+长度为 6 字节，共 48 比特，通常用十六进制表示法，地址的每个字节被表示为一对十六进制数。" name="twitter:description"/>
+<meta content="计算机网络 | Part2 数据链路层(Data Link Layer)" property="og:title"/>
+<meta content="一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。
 其最基本的服务是将源自网络层来的数据可靠地传输到相邻节点地目标机网络层。
 其主要作用是加强物理层传输原始比特流的功能，将物理层提供的可能出错的物理连接改造成逻辑上无差错的数据链路，使之对网络层表现为一条无差错的链路。
  功能一：为网络层提供服务  无确认无连接服务 有确认无连接服务 有确认面向连接服务   功能二：链路管理，即连接的建立、维持、释放（用于面向连接的服务） 功能三：组帧 功能四：流量控制，限制发送方 功能五：差错控制（帧错/位错）  （零）链路层编码    以太网规定，一组电信号构成一个数据包，叫做“帧”(Frame)。
@@ -45,68 +39,32 @@
 （一）MAC 地址    以太网规定，连入网络的所有设备，都必须具有“网卡”接口。
 数据包必须是从一块网卡，传送到另一块网卡。
 网卡的地址，就是数据包的发送地址和接收地址，这叫做 MAC 地址。
-长度为 6 字节，共 48 比特，通常用十六进制表示法，地址的每个字节被表示为一对十六进制数。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://ccviolett.github.io/posts/45-teamwebnetwork2/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-04-23T10:30:51+08:00" />
-<meta property="article:modified_time" content="2022-04-23T10:30:51+08:00" />
-
-
-
-    <title>
+长度为 6 字节，共 48 比特，通常用十六进制表示法，地址的每个字节被表示为一对十六进制数。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="http://ccviolett.github.io/posts/45-teamwebnetwork2/" property="og:url"/><meta content="posts" property="article:section"/>
+<meta content="2022-04-23T10:30:51+08:00" property="article:published_time"/>
+<meta content="2022-04-23T10:30:51+08:00" property="article:modified_time"/>
+<title>
   计算机网络 | Part2 数据链路层(Data Link Layer) · 罗潇阳的博客
 </title>
-
-    
-      <link rel="canonical" href="http://ccviolett.github.io/posts/45-teamwebnetwork2/">
-    
-
-    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
-
-    
-      
-      
-      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
-    
-
-    
-
-    
-      
-        
-        
-        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
-      
-    
-
-    
-
-    
-
-    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-    <meta name="generator" content="Hugo 0.98.0" />
-  </head>
-
-  
-  
-    
-  
-  <body class="preload-transitions colorscheme-auto">
-    
+<link href="http://ccviolett.github.io/posts/45-teamwebnetwork2/" rel="canonical"/>
+<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
+<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="Hugo 0.92.0" name="generator"/>
+</head>
+<body class="preload-transitions colorscheme-auto">
 <div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
+<a class="colorscheme-toggle" id="dark-mode-toggle">
+<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
+</a>
 </div>
-
-
-    <main class="wrapper">
-      <script>
+<main class="wrapper">
+<script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -115,109 +73,77 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
 <nav class="navigation">
-  <section class="container">
-    <a class="navigation-title" href="/">
+<section class="container">
+<a class="navigation-title" href="/">
       罗潇阳的博客
     </a>
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/">首页</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">文章</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/solution/">题解</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">联系</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/about/">关于</a>
-            </li>
-          
-        
-        
-          
-          
-          
-            
-          
-            
-              
-                <li class="navigation-item menu-separator">
-                  <span>|</span>
-                </li>
-                
-              
-              <li class="navigation-item">
-                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
-              </li>
-            
-          
-        
-      </ul>
-    
-  </section>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button float-right" for="menu-toggle">
+<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
+</label>
+<ul class="navigation-list">
+<li class="navigation-item">
+<a class="navigation-link" href="/">首页</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/posts/">文章</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/solution/">题解</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/contact/">联系</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/about/">关于</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class="navigation-item">
+<a href="http://ccviolett.github.io/en/">🇬🇧</a>
+</li>
+</ul>
+</section>
 </nav>
-
-
-      <div class="content">
-        
-  <section class="container post">
-    <article>
-      <header>
-        <div class="post-title">
-          <h1 class="title">
-            <a class="title-link" href="http://ccviolett.github.io/posts/45-teamwebnetwork2/">
+<div class="content">
+<section class="container post">
+<article>
+<header>
+<div class="post-title">
+<h1 class="title">
+<a class="title-link" href="http://ccviolett.github.io/posts/45-teamwebnetwork2/">
               计算机网络 | Part2 数据链路层(Data Link Layer)
             </a>
-          </h1>
-        </div>
-        <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
-              <time datetime='2022-04-23T10:30:51&#43;08:00'>
+</h1>
+</div>
+<div class="post-meta">
+<div class="date">
+<span class="posted-on">
+<i aria-hidden="true" class="fa fa-calendar"></i>
+<time datetime="2022-04-23T10:30:51+08:00">
                 2022 年 4 月 23 日
               </time>
-            </span>
-            <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
+</span>
+<span class="reading-time">
+<i aria-hidden="true" class="fa fa-clock-o"></i>
               阅读时间：1 分钟
             </span>
-          </div>
-          
-          
-          <div class="tags">
-  <i class="fa fa-tag" aria-hidden="true"></i>
-    <span class="tag">
-      <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-    </span></div>
-
-        </div>
-      </header>
-
-      <div>
-        
-        <h2 id="一基础概念">
+</div>
+<div class="tags">
+<i aria-hidden="true" class="fa fa-tag"></i>
+<span class="tag">
+<a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+</span></div>
+</div>
+</header>
+<div>
+<h2 id="一基础概念">
   一、基础概念
   <a class="heading-link" href="#%e4%b8%80%e5%9f%ba%e7%a1%80%e6%a6%82%e5%bf%b5">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
 <p>数据链路层在物理层提供服务的基础上像网络层提供服务。</p>
 <p>其最基本的服务是将源自网络层来的数据可靠地传输到相邻节点地目标机网络层。</p>
@@ -238,8 +164,8 @@ var _hmt = _hmt || [];
 <h3 id="零链路层编码">
   （零）链路层编码
   <a class="heading-link" href="#%e9%9b%b6%e9%93%be%e8%b7%af%e5%b1%82%e7%bc%96%e7%a0%81">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>以太网规定，一组电信号构成一个数据包，叫做“帧”(Frame)。</p>
 <p>每一帧分成两个部分：标头(Head)和数据(Data)</p>
@@ -268,8 +194,8 @@ var _hmt = _hmt || [];
 <h3 id="一mac-地址">
   （一）MAC 地址
   <a class="heading-link" href="#%e4%b8%80mac-%e5%9c%b0%e5%9d%80">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>以太网规定，连入网络的所有设备，都必须具有“网卡”接口。</p>
 <p>数据包必须是从一块网卡，传送到另一块网卡。</p>
@@ -279,89 +205,89 @@ var _hmt = _hmt || [];
 <h3 id="二arp-协议">
   （二）ARP 协议
   <a class="heading-link" href="#%e4%ba%8carp-%e5%8d%8f%e8%ae%ae">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>网卡通过 ARP 协议知道另一块网卡的 MAC 地址。</p>
 <p>每个节点的 ARP 模块会在它的 RAM 中自动创建 ARP 表，包含 IP 地址到 MAC 地址的映射关系，每个表项还包含 TTL 字段，表示表项过期时间。</p>
 <p>ARP 表会定时更新，当某节点与子网断开连接时，会将其从子网的节点的表中删除。</p>
 <p>主机向 ARP 模块提供 IP 地址， ARP 模块返回 IP 地址对应的 MAC 地址。</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241115113.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241115113.png"/></p>
 <h3 id="三广播">
   （三）广播
   <a class="heading-link" href="#%e4%b8%89%e5%b9%bf%e6%92%ad">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>广播(broadcasting)，即发送方通过以太网将数据包向本网络内所有计算机发送，让每台计算机读取数据包的“标头”，将接收方的 MAC 地址与自身的 MAC 地址相比较，判断自身是否为接收方，再进行下一步的处理。</p>
 <h2 id="二传输方式">
   二、传输方式
   <a class="heading-link" href="#%e4%ba%8c%e4%bc%a0%e8%be%93%e6%96%b9%e5%bc%8f">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
 <h3 id="一封装成帧">
   （一）封装成帧
   <a class="heading-link" href="#%e4%b8%80%e5%b0%81%e8%a3%85%e6%88%90%e5%b8%a7">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>在数据前后添加首部和尾部，组成一个帧，起到<code>帧定界</code>、<code>帧同步</code>的作用，使得接收端在收到物理层上交的比特流后，能够识别帧的界限，根据首部和尾部的标记，识别出帧的开始和结束。</p>
 <h3 id="二透明传输">
   （二）透明传输
   <a class="heading-link" href="#%e4%ba%8c%e9%80%8f%e6%98%8e%e4%bc%a0%e8%be%93">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>不管所传输的数据是什么样的比特组合，都能够在链路上传送。</p>
 <p>防止特殊的数据无法正常传输，比如数据中出现与开始/结束标记符恰好重复的情况。</p>
 <h4 id="1-字符计数法">
   1. 字符计数法
   <a class="heading-link" href="#1-%e5%ad%97%e7%ac%a6%e8%ae%a1%e6%95%b0%e6%b3%95">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241208032.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241208032.png"/></p>
 <h4 id="2-字符填充法">
   2. 字符填充法
   <a class="heading-link" href="#2-%e5%ad%97%e7%ac%a6%e5%a1%ab%e5%85%85%e6%b3%95">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>通过添加头部和尾部来标记开始和结束，通过在与标记字符重复的数据流前面添加一段转移字符来解决错误识别的问题。</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241214197.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241214197.png"/></p>
 <h4 id="3-零比特填充法">
   3. 零比特填充法
   <a class="heading-link" href="#3-%e9%9b%b6%e6%af%94%e7%89%b9%e5%a1%ab%e5%85%85%e6%b3%95">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241217016.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241217016.png"/></p>
 <h4 id="4-违规编码法">
   4. 违规编码法
   <a class="heading-link" href="#4-%e8%bf%9d%e8%a7%84%e7%bc%96%e7%a0%81%e6%b3%95">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>因为曼彻斯特编码不使用高-高，低-低来表示，所以可以用其来表示帧起始和终止，就不会发生数据冲突。</p>
 <h2 id="三差错控制">
   三、差错控制
   <a class="heading-link" href="#%e4%b8%89%e5%b7%ae%e9%94%99%e6%8e%a7%e5%88%b6">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
 <p>数据链路层可能会发生比特的错误，我们需要一个方案使得检查出所有错误的可能性最大，使得错误的数据包被尽早发现，减少网络资源的浪费。</p>
 <h3 id="一检错编码">
   （一）检错编码
   <a class="heading-link" href="#%e4%b8%80%e6%a3%80%e9%94%99%e7%bc%96%e7%a0%81">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <h4 id="1-奇偶校验码">
   1. 奇偶校验码
   <a class="heading-link" href="#1-%e5%a5%87%e5%81%b6%e6%a0%a1%e9%aa%8c%e7%a0%81">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>包含 1 个附加比特：</p>
 <ul>
@@ -371,93 +297,79 @@ var _hmt = _hmt || [];
 <h4 id="2-循环冗余码-crc">
   2. 循环冗余码 CRC
   <a class="heading-link" href="#2-%e5%be%aa%e7%8e%af%e5%86%97%e4%bd%99%e7%a0%81-crc">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>发送方和接收方协商一个 r+1 比特的生成多项式(G)，要求其最高比特位为 1。</p>
 <p>发送方通过在 d 比特的数据后附加 r 比特，使得整个 (d+r) 比特的值能够被 G 整除。</p>
 <p>接收方用 G 去除 (d+r) 比特，如果不能整除则出现差错</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242006022.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242006022.png"/></p>
 <h3 id="二纠错编码-海明码">
   （二）纠错编码-海明码
   <a class="heading-link" href="#%e4%ba%8c%e7%ba%a0%e9%94%99%e7%bc%96%e7%a0%81-%e6%b5%b7%e6%98%8e%e7%a0%81">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>海明码能且仅能纠 1 位错，其计算过程如下：</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242014750.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242014110.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242014465.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242014750.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242014110.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242014465.png"/></p>
 <p>第 i 位校验码的值为位置二进制中包含第 i 位的数据值的异或和，纠错时将所有校验码异或起来，得到的值为错误位置（为 0 则无错）</p>
 <p>相关链接：<a href="https://www.cnblogs.com/godoforange/p/12003676.html">海明码一篇文章彻底搞懂</a></p>
 <h2 id="四流量控制与可靠传输">
   四、流量控制与可靠传输
   <a class="heading-link" href="#%e5%9b%9b%e6%b5%81%e9%87%8f%e6%8e%a7%e5%88%b6%e4%b8%8e%e5%8f%af%e9%9d%a0%e4%bc%a0%e8%be%93">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
 <p>流量控制是为了让传输过程中的发送速度和接受速度匹配，减少传输出错与资源浪费。</p>
 <p>可靠传输是发送端发送什么，接收端就要受到什么。</p>
 <h3 id="零信道利用率">
   （零）信道利用率
   <a class="heading-link" href="#%e9%9b%b6%e4%bf%a1%e9%81%93%e5%88%a9%e7%94%a8%e7%8e%87">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242030752.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242030752.png"/></p>
 <h3 id="一停止等待协议stop-and-wait">
   （一）停止等待协议(Stop-and-Wait)
   <a class="heading-link" href="#%e4%b8%80%e5%81%9c%e6%ad%a2%e7%ad%89%e5%be%85%e5%8d%8f%e8%ae%aestop-and-wait">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242027444.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242027299.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242028737.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242028571.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242027444.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242027299.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242028737.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242028571.png"/></p>
 <h4 id="信道利用率分析">
   信道利用率分析
   <a class="heading-link" href="#%e4%bf%a1%e9%81%93%e5%88%a9%e7%94%a8%e7%8e%87%e5%88%86%e6%9e%90">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242032975.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242032616.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242032975.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242032616.png"/></p>
 <h3 id="二后退-n-帧协议gbn">
   （二）后退 N 帧协议(GBN)
   <a class="heading-link" href="#%e4%ba%8c%e5%90%8e%e9%80%80-n-%e5%b8%a7%e5%8d%8f%e8%ae%aegbn">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <h3 id="三选择重传协议sr">
   （三）选择重传协议(SR)
   <a class="heading-link" href="#%e4%b8%89%e9%80%89%e6%8b%a9%e9%87%8d%e4%bc%a0%e5%8d%8f%e8%ae%aesr">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
-
-      </div>
-
-      <footer>
-        
-
-
-        
-        
-        
-      </footer>
-    </article>
-
-    
-  </section>
-
-      </div>
-
-      
-  <footer class="footer">
-    <section class="container">
-      
-        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
+</div>
+<footer>
+</footer>
+</article>
+</section>
+</div>
+<footer class="footer">
+<section class="container">
+<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
       
       
         ©
@@ -467,17 +379,16 @@ var _hmt = _hmt || [];
       
       
          · 
-        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
       
       
         
       
     </section>
-  </footer>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+</footer>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
+<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -494,31 +405,7 @@ var _hmt = _hmt || [];
         });
     });
 </script>
-
-
-
-
-    </main>
-
-    
-      
-      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-  </body>
+</main>
+<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
+</body>
 </html>

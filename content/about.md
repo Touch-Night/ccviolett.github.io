@@ -57,6 +57,11 @@ author = [ "ccviolett" ]
 
 {{< fdlink "Henrik-Yao" "Henrik-Yao的个人博客" "http://henrik-yao.oss-cn-beijing.aliyuncs.com/config/79a2819b852e805a18b1f02a06a56cc5.jpg" "http://www.henrik-yao.cn/">}}
 
+### 网站相关
+
+流量最大的一天：[愚人节](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205121413214.pdf)
+
 ### 一些话
 
 “你们这些孩子哪里是真为了写博客。你们只是想体会换新工具的愉快感觉，顺便体会一下否定掉旧工具，觉得自己特别的小欣喜。”——[dboy](https://www.zhihu.com/people/d-b-o-y)
+

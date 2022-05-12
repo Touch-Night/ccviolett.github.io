@@ -246,16 +246,22 @@ Java：
 
 - [王道计算机考研 计算机网络](https://www.bilibili.com/video/BV19E411D78Q)
 - [【实战】基于SpringBoot+Vue开发的前后端分离博客项目完整教学](https://www.bilibili.com/video/BV1PQ4y1P7hZ)
+- [深入学习 LRU](https://leetcode.cn/problems/lru-cache/)
+- [阅读理解 Linux](https://www.runoob.com/linux/linux-tutorial.html)
 
 ### 1. 前端
 - [web前端零基础html5+css3+前端项目视频教程](https://www.bilibili.com/video/BV1Kg411T7t9)
 - [黑马程序员 Javascript 全套教程](https://www.bilibili.com/video/BV1ux411d75J)
 - [黑马程序员JavaScript核心教程，前端基础教程，JS必会的DOM BOM操作](https://www.bilibili.com/video/BV1k4411w7sV)
 - [黑马程序员AJAX零基础到精通_整合Git核心内容全套教程](https://www.bilibili.com/video/BV1zs411h74a)
+- [黑马程序员Vue全套视频教程，从vue2.0到vue3.0一套全覆盖](https://www.bilibili.com/video/BV1zq4y1p7ga)
+- [了解 Echarts](https://echarts.apache.org/handbook/zh/get-started/)
 
 ### 2. 后端
 - [JavaWeb从入门到项目实战](https://www.bilibili.com/video/BV1qv4y1o79t)
 - [MySQL 数据库简介](http://www.imooc.com/wiki/mysqllesson/mysqlinfo.html)
+- [黑马程序员Maven全套教程，maven项目管理从基础到高级](https://www.bilibili.com/video/BV1Ah411S7ZE)
+- [黑马程序员2022最新SSM框架教程_Spring+SpringMVC+Maven](https://www.bilibili.com/video/BV1Fi4y1S7ix)
 
 ### 3. Android
 - [Android（安卓）开发零基础入门课程](https://www.bilibili.com/video/BV13y4y1E7pF)
@@ -264,6 +270,11 @@ Java：
 ### 4. 产品经理
 - [2022最新版产品经理入门到精通](https://www.bilibili.com/video/BV1hZ4y1A7GG)
 - [产品经理C端内容项目设计实战教程](https://www.bilibili.com/video/BV1i4411Y7H6)
+- [产品经理B端广告投放系统项目实战](https://www.bilibili.com/video/BV1Sb411E79L)
+- [传智教育产品经理实战项目｜全面解析BI数据分析平台](https://www.bilibili.com/video/BV1n64y1s7qD)
 
 ### 5. UI
 - [传智教育墨刀教程全套，高保真交互式原型设计教程](https://www.bilibili.com/video/BV1Q54y1b7DP)
+
+## 七、相关链接
+- [Intellij IDEA 教程 | 博客](http://www.javatiku.cn/)

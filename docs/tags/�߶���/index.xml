@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>线段树 on 罗潇阳的博客</title>
+    <link>http://ccviolett.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
+    <description>Recent content in 线段树 on 罗潇阳的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 06 Mar 2022 13:28:04 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CF380C. Sereja and Brackets</title>
+      <link>http://ccviolett.github.io/solution/cf380c/</link>
+      <pubDate>Sun, 06 Mar 2022 13:28:04 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/cf380c/</guid>
+      <description>一、题意    题目链接：Problem
+给定一个括号序列，每次询问一个区间内合法的括号序列长度。
+二、题解    考虑线段树，每个节点维护区间内向左未匹配的括号数量、向右未匹配的括号数量和合法括号序列的数量，每次合并的时候，将左右区间未匹配的括号匹配即可。
+三、代码    通过链接：Submission
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int N = 1e6 + 10; int n; struct Node { int lhave, rhave, val; friend Node operator + (Node a, Node b) { if (a.rhave &amp;gt;= b.lhave) { return (Node) { a.lhave, b.rhave + (a.rhave - b.lhave), a.val + b.val + b.lhave }; } return (Node) { a.</description>
+    </item>
+    
+  </channel>
+</rss>

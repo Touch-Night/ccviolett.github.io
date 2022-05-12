@@ -1,103 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="zh-cn">
-    <meta name="color-scheme" content="light dark">
-
-    
-
-    <meta name="author" content="罗潇阳">
-    <meta name="description" content="一、题意    题目链接：Problem
-一条路上从左往右有 n 个车站，一辆车从 1 号车站往 n 号车站开，从 $i$ 号车站到 $i &#43; 1$ 号车站需要 $D_i$ 分钟。
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="zh-cn" http-equiv="Content-Language"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="罗潇阳" name="author"/>
+<meta content="一、题意    题目链接：Problem
+一条路上从左往右有 n 个车站，一辆车从 1 号车站往 n 号车站开，从 $i$ 号车站到 $i + 1$ 号车站需要 $D_i$ 分钟。
 给开 m 个人，在 $T_i$ 时刻从 $A_i$ 上车，希望在 $B_i$ 下车，保证 $A_i &lt; B_i$。
 车到了某个车站必须等所有人上车了才能发车。
 现在有 k 次机会选定 $D_i$ 将其减小 1，问如何分配 k 此机会，使得所有人在车上呆的总时间最少。
-二、题解    考虑拆分贡献，要求所有人在车上呆的总时间最少，设下车时间为 $T&rsquo;$，则总时间为 $\sum_{i = 1}^{m} (T&rsquo;_i - T_i)$，拆分为 $\sum T&rsquo;_i - \sum T_i$，其中 $\sum T_i$ 为定值，故我们只需最小化 $\sum T&rsquo;_i$。
-我们设在第 i 站下车的人数为 $cntto_i$，到达第 i 站的时间为 $arrive_i$，则 $\sum\limits_{i = 1}^m T&rsquo;_i = \sum\limits_{i = 1}^n (cntto_i * arrive_i)$，其中 $cntto_i$ 是固定的，所以我们只需要最小化到达每个点的时间。">
-    <meta name="keywords" content="博客,开发者,个人">
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="洛谷 P1315 [NOIP2011 提高组] 观光公交"/>
-<meta name="twitter:description" content="一、题意    题目链接：Problem
-一条路上从左往右有 n 个车站，一辆车从 1 号车站往 n 号车站开，从 $i$ 号车站到 $i &#43; 1$ 号车站需要 $D_i$ 分钟。
+二、题解    考虑拆分贡献，要求所有人在车上呆的总时间最少，设下车时间为 $T'$，则总时间为 $\sum_{i = 1}^{m} (T'_i - T_i)$，拆分为 $\sum T'_i - \sum T_i$，其中 $\sum T_i$ 为定值，故我们只需最小化 $\sum T'_i$。
+我们设在第 i 站下车的人数为 $cntto_i$，到达第 i 站的时间为 $arrive_i$，则 $\sum\limits_{i = 1}^m T'_i = \sum\limits_{i = 1}^n (cntto_i * arrive_i)$，其中 $cntto_i$ 是固定的，所以我们只需要最小化到达每个点的时间。" name="description"/>
+<meta content="博客,开发者,个人" name="keywords"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="洛谷 P1315 [NOIP2011 提高组] 观光公交" name="twitter:title"/>
+<meta content="一、题意    题目链接：Problem
+一条路上从左往右有 n 个车站，一辆车从 1 号车站往 n 号车站开，从 $i$ 号车站到 $i + 1$ 号车站需要 $D_i$ 分钟。
 给开 m 个人，在 $T_i$ 时刻从 $A_i$ 上车，希望在 $B_i$ 下车，保证 $A_i &lt; B_i$。
 车到了某个车站必须等所有人上车了才能发车。
 现在有 k 次机会选定 $D_i$ 将其减小 1，问如何分配 k 此机会，使得所有人在车上呆的总时间最少。
-二、题解    考虑拆分贡献，要求所有人在车上呆的总时间最少，设下车时间为 $T&rsquo;$，则总时间为 $\sum_{i = 1}^{m} (T&rsquo;_i - T_i)$，拆分为 $\sum T&rsquo;_i - \sum T_i$，其中 $\sum T_i$ 为定值，故我们只需最小化 $\sum T&rsquo;_i$。
-我们设在第 i 站下车的人数为 $cntto_i$，到达第 i 站的时间为 $arrive_i$，则 $\sum\limits_{i = 1}^m T&rsquo;_i = \sum\limits_{i = 1}^n (cntto_i * arrive_i)$，其中 $cntto_i$ 是固定的，所以我们只需要最小化到达每个点的时间。"/>
-
-    <meta property="og:title" content="洛谷 P1315 [NOIP2011 提高组] 观光公交" />
-<meta property="og:description" content="一、题意    题目链接：Problem
-一条路上从左往右有 n 个车站，一辆车从 1 号车站往 n 号车站开，从 $i$ 号车站到 $i &#43; 1$ 号车站需要 $D_i$ 分钟。
+二、题解    考虑拆分贡献，要求所有人在车上呆的总时间最少，设下车时间为 $T'$，则总时间为 $\sum_{i = 1}^{m} (T'_i - T_i)$，拆分为 $\sum T'_i - \sum T_i$，其中 $\sum T_i$ 为定值，故我们只需最小化 $\sum T'_i$。
+我们设在第 i 站下车的人数为 $cntto_i$，到达第 i 站的时间为 $arrive_i$，则 $\sum\limits_{i = 1}^m T'_i = \sum\limits_{i = 1}^n (cntto_i * arrive_i)$，其中 $cntto_i$ 是固定的，所以我们只需要最小化到达每个点的时间。" name="twitter:description"/>
+<meta content="洛谷 P1315 [NOIP2011 提高组] 观光公交" property="og:title"/>
+<meta content="一、题意    题目链接：Problem
+一条路上从左往右有 n 个车站，一辆车从 1 号车站往 n 号车站开，从 $i$ 号车站到 $i + 1$ 号车站需要 $D_i$ 分钟。
 给开 m 个人，在 $T_i$ 时刻从 $A_i$ 上车，希望在 $B_i$ 下车，保证 $A_i &lt; B_i$。
 车到了某个车站必须等所有人上车了才能发车。
 现在有 k 次机会选定 $D_i$ 将其减小 1，问如何分配 k 此机会，使得所有人在车上呆的总时间最少。
-二、题解    考虑拆分贡献，要求所有人在车上呆的总时间最少，设下车时间为 $T&rsquo;$，则总时间为 $\sum_{i = 1}^{m} (T&rsquo;_i - T_i)$，拆分为 $\sum T&rsquo;_i - \sum T_i$，其中 $\sum T_i$ 为定值，故我们只需最小化 $\sum T&rsquo;_i$。
-我们设在第 i 站下车的人数为 $cntto_i$，到达第 i 站的时间为 $arrive_i$，则 $\sum\limits_{i = 1}^m T&rsquo;_i = \sum\limits_{i = 1}^n (cntto_i * arrive_i)$，其中 $cntto_i$ 是固定的，所以我们只需要最小化到达每个点的时间。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://ccviolett.github.io/solution/luogup1315/" /><meta property="article:section" content="solution" />
-<meta property="article:published_time" content="2022-04-01T17:37:13+08:00" />
-<meta property="article:modified_time" content="2022-04-01T17:37:13+08:00" />
-
-
-
-    <title>
+二、题解    考虑拆分贡献，要求所有人在车上呆的总时间最少，设下车时间为 $T'$，则总时间为 $\sum_{i = 1}^{m} (T'_i - T_i)$，拆分为 $\sum T'_i - \sum T_i$，其中 $\sum T_i$ 为定值，故我们只需最小化 $\sum T'_i$。
+我们设在第 i 站下车的人数为 $cntto_i$，到达第 i 站的时间为 $arrive_i$，则 $\sum\limits_{i = 1}^m T'_i = \sum\limits_{i = 1}^n (cntto_i * arrive_i)$，其中 $cntto_i$ 是固定的，所以我们只需要最小化到达每个点的时间。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="http://ccviolett.github.io/solution/luogup1315/" property="og:url"/><meta content="solution" property="article:section"/>
+<meta content="2022-04-01T17:37:13+08:00" property="article:published_time"/>
+<meta content="2022-04-01T17:37:13+08:00" property="article:modified_time"/>
+<title>
   洛谷 P1315 [NOIP2011 提高组] 观光公交 · 罗潇阳的博客
 </title>
-
-    
-      <link rel="canonical" href="http://ccviolett.github.io/solution/luogup1315/">
-    
-
-    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
-
-    
-      
-      
-      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
-    
-
-    
-
-    
-      
-        
-        
-        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
-      
-    
-
-    
-
-    
-
-    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-    <meta name="generator" content="Hugo 0.98.0" />
-  </head>
-
-  
-  
-    
-  
-  <body class="preload-transitions colorscheme-auto">
-    
+<link href="http://ccviolett.github.io/solution/luogup1315/" rel="canonical"/>
+<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
+<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="Hugo 0.92.0" name="generator"/>
+</head>
+<body class="preload-transitions colorscheme-auto">
 <div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
+<a class="colorscheme-toggle" id="dark-mode-toggle">
+<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
+</a>
 </div>
-
-
-    <main class="wrapper">
-      <script>
+<main class="wrapper">
+<script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -106,83 +64,55 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
 <nav class="navigation">
-  <section class="container">
-    <a class="navigation-title" href="/">
+<section class="container">
+<a class="navigation-title" href="/">
       罗潇阳的博客
     </a>
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/">首页</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">文章</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/solution/">题解</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">联系</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/about/">关于</a>
-            </li>
-          
-        
-        
-          
-          
-          
-            
-          
-            
-              
-                <li class="navigation-item menu-separator">
-                  <span>|</span>
-                </li>
-                
-              
-              <li class="navigation-item">
-                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
-              </li>
-            
-          
-        
-      </ul>
-    
-  </section>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button float-right" for="menu-toggle">
+<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
+</label>
+<ul class="navigation-list">
+<li class="navigation-item">
+<a class="navigation-link" href="/">首页</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/posts/">文章</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/solution/">题解</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/contact/">联系</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/about/">关于</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class="navigation-item">
+<a href="http://ccviolett.github.io/en/">🇬🇧</a>
+</li>
+</ul>
+</section>
 </nav>
-
-
-      <div class="content">
-        
-  <section class="container page">
-  <article>
-    <header>
-      <h1 class="title">
-        <a class="title-link" href="http://ccviolett.github.io/solution/luogup1315/">
+<div class="content">
+<section class="container page">
+<article>
+<header>
+<h1 class="title">
+<a class="title-link" href="http://ccviolett.github.io/solution/luogup1315/">
           洛谷 P1315 [NOIP2011 提高组] 观光公交
         </a>
-      </h1>
-    </header>
-
-    <h3 id="一题意">
+</h1>
+</header>
+<h3 id="一题意">
   一、题意
   <a class="heading-link" href="#%e4%b8%80%e9%a2%98%e6%84%8f">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>题目链接：<a href="https://www.luogu.com.cn/problem/P1315">Problem</a></p>
 <p>一条路上从左往右有 n 个车站，一辆车从 1 号车站往 n 号车站开，从 $i$ 号车站到 $i + 1$ 号车站需要 $D_i$ 分钟。</p>
@@ -192,92 +122,86 @@ var _hmt = _hmt || [];
 <h3 id="二题解">
   二、题解
   <a class="heading-link" href="#%e4%ba%8c%e9%a2%98%e8%a7%a3">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
-<p>考虑拆分贡献，要求所有人在车上呆的总时间最少，设下车时间为 $T&rsquo;$，则总时间为 $\sum_{i = 1}^{m} (T&rsquo;_i - T_i)$，拆分为 $\sum T&rsquo;_i - \sum T_i$，其中 $\sum T_i$ 为定值，故我们只需最小化 $\sum T&rsquo;_i$。</p>
-<p>我们设在第 i 站下车的人数为 $cntto_i$，到达第 i 站的时间为 $arrive_i$，则 $\sum\limits_{i = 1}^m T&rsquo;_i = \sum\limits_{i = 1}^n (cntto_i * arrive_i)$，其中 $cntto_i$ 是固定的，所以我们只需要最小化到达每个点的时间。</p>
+<p>考虑拆分贡献，要求所有人在车上呆的总时间最少，设下车时间为 $T'$，则总时间为 $\sum_{i = 1}^{m} (T'_i - T_i)$，拆分为 $\sum T'_i - \sum T_i$，其中 $\sum T_i$ 为定值，故我们只需最小化 $\sum T'_i$。</p>
+<p>我们设在第 i 站下车的人数为 $cntto_i$，到达第 i 站的时间为 $arrive_i$，则 $\sum\limits_{i = 1}^m T'_i = \sum\limits_{i = 1}^n (cntto_i * arrive_i)$，其中 $cntto_i$ 是固定的，所以我们只需要最小化到达每个点的时间。</p>
 <p>计算每个车站最早发车时间 $maxt_i$（乘客 $T_i$ 中的最大值），对于 $arrive_i &gt; maxt_i$ 的车站，表示其之前可以加速来使得在该车站的等待时间减少。</p>
 <p>我们遍历每段车程，计算其能够起到加速效果的车站区间，每次取能够包含最多用户的一段，使用掉这次的加速，随后重新计算所有的值，进行下一次加速分配即可。</p>
 <h3 id="三代码">
   三、代码
   <a class="heading-link" href="#%e4%b8%89%e4%bb%a3%e7%a0%81">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>通过链接：<a href="https://www.luogu.com.cn/record/72916273">Submission</a></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;bits/stdc++.h&gt;</span><span style="color:#888;font-weight:bold">
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-weight:bold"></span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">using</span> <span style="font-weight:bold;text-decoration:underline">namespace</span> std;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">const</span> <span style="font-weight:bold;text-decoration:underline">int</span> N = 1e3 + 10;
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">const</span> <span style="font-weight:bold;text-decoration:underline">int</span> M = 1e4 + 10;
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">typedef</span> <span style="font-weight:bold;text-decoration:underline">long</span> <span style="font-weight:bold;text-decoration:underline">long</span> var;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">read</span>() {
-</span></span><span style="display:flex;"><span>	var a = 0, c = getchar(), s = 0;
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">while</span> (!isdigit(c)) s |= c == <span style="color:#666;font-style:italic">&#39;-&#39;</span>, c = getchar();
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">while</span> (isdigit(c)) a = a * 10 + c - <span style="color:#666;font-style:italic">&#39;0&#39;</span>, c = getchar();
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">return</span> s ? -a : a;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> n, m, k;
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> d[N];
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> sumt, maxt[N], cntto[N];
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> arrive[N];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">main</span>() {
-</span></span><span style="display:flex;"><span>	n = read(), m = read(), k = read();
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt; n; ++i) d[i] = read();
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= m; ++i) {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">int</span> t = read(), a = read(), b = read();
-</span></span><span style="display:flex;"><span>		sumt += t;
-</span></span><span style="display:flex;"><span>		maxt[a] = max(maxt[a], t);
-</span></span><span style="display:flex;"><span>		cntto[b]++;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i)
-</span></span><span style="display:flex;"><span>		arrive[i] = max(arrive[i - 1], maxt[i - 1]) + d[i - 1];
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">while</span> (k--) {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">int</span> maxi = -1, maxup = -1;
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i) {
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">if</span> (d[i] &lt;= 0) <span style="font-weight:bold;text-decoration:underline">continue</span>;
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">int</span> canup = cntto[i + 1];
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = i + 1; j &lt; n; ++j) {
-</span></span><span style="display:flex;"><span>				<span style="font-weight:bold;text-decoration:underline">if</span> (arrive[j] &lt;= maxt[j]) <span style="font-weight:bold;text-decoration:underline">break</span>;
-</span></span><span style="display:flex;"><span>				canup += cntto[j + 1];
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">if</span> (canup &gt; maxup) {
-</span></span><span style="display:flex;"><span>				maxup = canup;
-</span></span><span style="display:flex;"><span>				maxi = i;
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>		d[maxi]--;
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i)
-</span></span><span style="display:flex;"><span>			arrive[i] = max(arrive[i - 1], maxt[i - 1]) + d[i - 1];
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#888;font-style:italic">// for (int i = 1; i &lt;= n; ++i)
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="color:#888;font-style:italic">// 	printf(&#34;%d %d\n&#34;, arrive[i], cntto[i]);
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>
-</span></span><span style="display:flex;"><span>	var res = 0;
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i)
-</span></span><span style="display:flex;"><span>		res += arrive[i] * cntto[i];
-</span></span><span style="display:flex;"><span>	printf(<span style="color:#666;font-style:italic">&#34;%lld</span><span style="color:#666;font-style:italic">\n</span><span style="color:#666;font-style:italic">&#34;</span>, res - sumt);
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">return</span> 0;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>
-  </article>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-cpp" data-lang="cpp"><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;bits/stdc++.h&gt;</span><span style="color:#888;font-weight:bold">
+</span><span style="color:#888;font-weight:bold"></span>
+<span style="font-weight:bold;text-decoration:underline">using</span> <span style="font-weight:bold;text-decoration:underline">namespace</span> std;
+
+<span style="font-weight:bold;text-decoration:underline">const</span> <span style="font-weight:bold;text-decoration:underline">int</span> N = 1e3 + 10;
+<span style="font-weight:bold;text-decoration:underline">const</span> <span style="font-weight:bold;text-decoration:underline">int</span> M = 1e4 + 10;
+<span style="font-weight:bold;text-decoration:underline">typedef</span> <span style="font-weight:bold;text-decoration:underline">long</span> <span style="font-weight:bold;text-decoration:underline">long</span> var;
+
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">read</span>() {
+	var a = 0, c = getchar(), s = 0;
+	<span style="font-weight:bold;text-decoration:underline">while</span> (!isdigit(c)) s |= c == <span style="color:#666;font-style:italic">'-'</span>, c = getchar();
+	<span style="font-weight:bold;text-decoration:underline">while</span> (isdigit(c)) a = a * 10 + c - <span style="color:#666;font-style:italic">'0'</span>, c = getchar();
+	<span style="font-weight:bold;text-decoration:underline">return</span> s ? -a : a;
+}
+
+<span style="font-weight:bold;text-decoration:underline">int</span> n, m, k;
+<span style="font-weight:bold;text-decoration:underline">int</span> d[N];
+<span style="font-weight:bold;text-decoration:underline">int</span> sumt, maxt[N], cntto[N];
+<span style="font-weight:bold;text-decoration:underline">int</span> arrive[N];
+
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">main</span>() {
+	n = read(), m = read(), k = read();
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt; n; ++i) d[i] = read();
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= m; ++i) {
+		<span style="font-weight:bold;text-decoration:underline">int</span> t = read(), a = read(), b = read();
+		sumt += t;
+		maxt[a] = max(maxt[a], t);
+		cntto[b]++;
+	}
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i)
+		arrive[i] = max(arrive[i - 1], maxt[i - 1]) + d[i - 1];
+	<span style="font-weight:bold;text-decoration:underline">while</span> (k--) {
+		<span style="font-weight:bold;text-decoration:underline">int</span> maxi = -1, maxup = -1;
+		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i) {
+			<span style="font-weight:bold;text-decoration:underline">if</span> (d[i] &lt;= 0) <span style="font-weight:bold;text-decoration:underline">continue</span>;
+			<span style="font-weight:bold;text-decoration:underline">int</span> canup = cntto[i + 1];
+			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = i + 1; j &lt; n; ++j) {
+				<span style="font-weight:bold;text-decoration:underline">if</span> (arrive[j] &lt;= maxt[j]) <span style="font-weight:bold;text-decoration:underline">break</span>;
+				canup += cntto[j + 1];
+			}
+			<span style="font-weight:bold;text-decoration:underline">if</span> (canup &gt; maxup) {
+				maxup = canup;
+				maxi = i;
+			}
+		}
+		d[maxi]--;
+		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i)
+			arrive[i] = max(arrive[i - 1], maxt[i - 1]) + d[i - 1];
+	}
+
+	<span style="color:#888;font-style:italic">// for (int i = 1; i &lt;= n; ++i)
+</span><span style="color:#888;font-style:italic"></span>	<span style="color:#888;font-style:italic">// 	printf("%d %d\n", arrive[i], cntto[i]);
+</span><span style="color:#888;font-style:italic"></span>
+	var res = 0;
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i)
+		res += arrive[i] * cntto[i];
+	printf(<span style="color:#666;font-style:italic">"%lld</span><span style="color:#666;font-style:italic">\n</span><span style="color:#666;font-style:italic">"</span>, res - sumt);
+	<span style="font-weight:bold;text-decoration:underline">return</span> 0;
+}
+</code></pre></div>
+</article>
 </section>
-
-  
-
-      </div>
-
-      
-  <footer class="footer">
-    <section class="container">
-      
-        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
+</div>
+<footer class="footer">
+<section class="container">
+<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
       
       
         ©
@@ -287,17 +211,16 @@ var _hmt = _hmt || [];
       
       
          · 
-        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
       
       
         
       
     </section>
-  </footer>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+</footer>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
+<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -314,31 +237,7 @@ var _hmt = _hmt || [];
         });
     });
 </script>
-
-
-
-
-    </main>
-
-    
-      
-      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-  </body>
+</main>
+<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
+</body>
 </html>
