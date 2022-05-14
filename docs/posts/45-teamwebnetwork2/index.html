@@ -355,12 +355,87 @@ var _hmt = _hmt || [];
 <i aria-hidden="true" class="fa fa-link"></i>
 </a>
 </h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132244651.png"/></p>
+<p>累计确认：就是收到一个确认帧，那么它和它之前的所有帧都默认已收到，反之，如果某个确认帧没收到，那么它和它之后的所有帧都默认丢失（即使收到了也丢掉），进行重传。</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132244293.png"/></p>
 <h3 id="三选择重传协议sr">
   （三）选择重传协议(SR)
   <a class="heading-link" href="#%e4%b8%89%e9%80%89%e6%8b%a9%e9%87%8d%e4%bc%a0%e5%8d%8f%e8%ae%aesr">
 <i aria-hidden="true" class="fa fa-link"></i>
 </a>
 </h3>
+<p>吸取了GBN协议的教训，我们打算尝试只重传错误的帧，这样的话就不用浪费资源把已经收到的帧再重传一次了。</p>
+<p>在GBN中，仅有接收端有一个窗口来存放数据帧，在SR中，两者都有窗口了。</p>
+<p>和GBN的区别其实就是做了一个数据缓存，已经收到的帧不用扔了，等待之前因意外丢失的帧收到的时候确认即可，但是只能缓存窗口尺寸内的包含的帧（注释：缓存不可能无限大）</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132247550.png"/></p>
+<h2 id="介质访问控制技术">
+  介质访问控制技术
+  <a class="heading-link" href="#%e4%bb%8b%e8%b4%a8%e8%ae%bf%e9%97%ae%e6%8e%a7%e5%88%b6%e6%8a%80%e6%9c%af">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132249178.png"/></p>
+<h3 id="一信道划分协议">
+  （一）信道划分协议
+  <a class="heading-link" href="#%e4%b8%80%e4%bf%a1%e9%81%93%e5%88%92%e5%88%86%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>虽然使用一条共享信道，但是通过多技术组合进行传输，提高了信道的利用率</p>
+<h4 id="1-频分多路复用-fdm">
+  1. 频分多路复用 FDM
+  <a class="heading-link" href="#1-%e9%a2%91%e5%88%86%e5%a4%9a%e8%b7%af%e5%a4%8d%e7%94%a8-fdm">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132256968.png"/></p>
+<h4 id="2-时分多路复用-tdm">
+  2. 时分多路复用 TDM
+  <a class="heading-link" href="#2-%e6%97%b6%e5%88%86%e5%a4%9a%e8%b7%af%e5%a4%8d%e7%94%a8-tdm">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132257084.png"/></p>
+<h4 id="3-统计时分复用-stdm">
+  3. 统计时分复用 STDM
+  <a class="heading-link" href="#3-%e7%bb%9f%e8%ae%a1%e6%97%b6%e5%88%86%e5%a4%8d%e7%94%a8-stdm">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p>TDM 的利用率低，所以衍生出了 STDM，其原则是先到先走，满了就发。</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132259706.png"/></p>
+<h4 id="4-码分多路复用-cdm">
+  4. 码分多路复用 CDM
+  <a class="heading-link" href="#4-%e7%a0%81%e5%88%86%e5%a4%9a%e8%b7%af%e5%a4%8d%e7%94%a8-cdm">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p>每个节点分配一种不同的编码，每个节点使用其唯一的编码来对发送的数据进行编码</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132301554.png"/></p>
+<h3 id="二随机接入协议">
+  （二）随机接入协议
+  <a class="heading-link" href="#%e4%ba%8c%e9%9a%8f%e6%9c%ba%e6%8e%a5%e5%85%a5%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>所有用户都可以随机发送信息，发送时可以占用全部宽带，理论上个人使用时比静态分配信道的速度更快。</p>
+<h4 id="1-aloha-协议">
+  1. ALOHA 协议
+  <a class="heading-link" href="#1-aloha-%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p>帧到达节点时，立刻传输。如果发生碰撞，节点将立即以概率 p 重传（在完全传输碰撞帧后）。否则，等待一个帧传输时间，再以概率 p 重传。</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132310583.png"/></p>
+<p>信道有效传输速率实际不是 R bps，而是时隙 ALOHA 的一半。</p>
+<p>时隙ALOHA协议是指时间被划分为时隙，每个节点的时间同步，帧的传输只在时隙的开始时进行。如果发生碰撞，在下一个时隙开始时以概率p重传，否则等待一个时隙再以概率p重传…（信道有效传输速率实际不是R bps，而是0.37R bps）</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132313882.png"/></p>
+<h4 id="2-csma-协议">
+  2. CSMA 协议
+  <a class="heading-link" href="#2-csma-%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
 </div>
 <footer>
 </footer>

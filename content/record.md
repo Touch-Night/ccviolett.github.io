@@ -137,20 +137,4 @@ Cycle.js
 
 [自媒体发展事项](https://www.bilibili.com/video/BV1vS4y1a7mf)
 
-CDACB
-DAADA
-AADBC
-DBADC
-BDBBD
-ABBAA
-DDDAB
-ADBDD
-BAAAA
-AAAAB
-CBCDB
-BBDBB
-BCDCD
-CBBDC
-BACBB
-CXABA
-BC
+好东西：Firefox relay，可以同时拥有 5 个假邮箱，mozilla 会把这些邮箱里的邮件转发到你的邮箱里，可以用来注册网站，不想要了直接把假邮箱删掉就好了，顺便，mozilla 还提供了配套的插件，可以在注册网站需要填写邮箱的地方直接一键新建假邮箱并填写，配合自动生成密码的功能可以光速注册……
