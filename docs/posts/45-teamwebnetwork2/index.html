@@ -6,40 +6,13 @@
 <meta content="zh-cn" http-equiv="Content-Language"/>
 <meta content="light dark" name="color-scheme"/>
 <meta content="罗潇阳" name="author"/>
-<meta content="一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。
-其最基本的服务是将源自网络层来的数据可靠地传输到相邻节点地目标机网络层。
-其主要作用是加强物理层传输原始比特流的功能，将物理层提供的可能出错的物理连接改造成逻辑上无差错的数据链路，使之对网络层表现为一条无差错的链路。
- 功能一：为网络层提供服务  无确认无连接服务 有确认无连接服务 有确认面向连接服务   功能二：链路管理，即连接的建立、维持、释放（用于面向连接的服务） 功能三：组帧 功能四：流量控制，限制发送方 功能五：差错控制（帧错/位错）  （零）链路层编码    以太网规定，一组电信号构成一个数据包，叫做“帧”(Frame)。
-每一帧分成两个部分：标头(Head)和数据(Data)
-   部分 内容 长度     标头 数据包的一些说明项，比如发送者、接收者、数据类型等 固定位 18 字节   数据 数据包的具体内容 最短为 46 字节，最长为 1500 字节    整个帧最短为 64 字节，最长为 1518 字节，如果数据很长就必须分割成多个帧发送。
-（一）MAC 地址    以太网规定，连入网络的所有设备，都必须具有“网卡”接口。
-数据包必须是从一块网卡，传送到另一块网卡。
-网卡的地址，就是数据包的发送地址和接收地址，这叫做 MAC 地址。
-长度为 6 字节，共 48 比特，通常用十六进制表示法，地址的每个字节被表示为一对十六进制数。" name="description"/>
+<meta content="一、基础概念  （零）链路层编码 （一）MAC 地址 （二）ARP 协议 （三）广播   二、传输方式  （一）封装成帧 （二）透明传输   三、差错控制  （一）检错编码 （二）纠错编码-海明码   四、流量控制与可靠传输  （零）信道利用率 （一）停止等待协议(Stop-and-Wait) （二）后退 N 帧协议(GBN) （三）选择重传协议(SR)   五、介质访问控制技术  （一）信道划分协议 （二）随机接入协议 （三）轮询访问与介质访问控制   六、局域网  （一）以太网 （二）无线局域网   七、广域网  （一）PPP 协议（Point-to-Point Protocol） （二）HDLC 协议（High-Level Data Link Control）   八、链路层设备  （一）网桥 （二）交换机 （三）冲突域和广播域     一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。" name="description"/>
 <meta content="博客,开发者,个人" name="keywords"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="计算机网络 | Part2 数据链路层(Data Link Layer)" name="twitter:title"/>
-<meta content="一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。
-其最基本的服务是将源自网络层来的数据可靠地传输到相邻节点地目标机网络层。
-其主要作用是加强物理层传输原始比特流的功能，将物理层提供的可能出错的物理连接改造成逻辑上无差错的数据链路，使之对网络层表现为一条无差错的链路。
- 功能一：为网络层提供服务  无确认无连接服务 有确认无连接服务 有确认面向连接服务   功能二：链路管理，即连接的建立、维持、释放（用于面向连接的服务） 功能三：组帧 功能四：流量控制，限制发送方 功能五：差错控制（帧错/位错）  （零）链路层编码    以太网规定，一组电信号构成一个数据包，叫做“帧”(Frame)。
-每一帧分成两个部分：标头(Head)和数据(Data)
-   部分 内容 长度     标头 数据包的一些说明项，比如发送者、接收者、数据类型等 固定位 18 字节   数据 数据包的具体内容 最短为 46 字节，最长为 1500 字节    整个帧最短为 64 字节，最长为 1518 字节，如果数据很长就必须分割成多个帧发送。
-（一）MAC 地址    以太网规定，连入网络的所有设备，都必须具有“网卡”接口。
-数据包必须是从一块网卡，传送到另一块网卡。
-网卡的地址，就是数据包的发送地址和接收地址，这叫做 MAC 地址。
-长度为 6 字节，共 48 比特，通常用十六进制表示法，地址的每个字节被表示为一对十六进制数。" name="twitter:description"/>
+<meta content="一、基础概念  （零）链路层编码 （一）MAC 地址 （二）ARP 协议 （三）广播   二、传输方式  （一）封装成帧 （二）透明传输   三、差错控制  （一）检错编码 （二）纠错编码-海明码   四、流量控制与可靠传输  （零）信道利用率 （一）停止等待协议(Stop-and-Wait) （二）后退 N 帧协议(GBN) （三）选择重传协议(SR)   五、介质访问控制技术  （一）信道划分协议 （二）随机接入协议 （三）轮询访问与介质访问控制   六、局域网  （一）以太网 （二）无线局域网   七、广域网  （一）PPP 协议（Point-to-Point Protocol） （二）HDLC 协议（High-Level Data Link Control）   八、链路层设备  （一）网桥 （二）交换机 （三）冲突域和广播域     一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。" name="twitter:description"/>
 <meta content="计算机网络 | Part2 数据链路层(Data Link Layer)" property="og:title"/>
-<meta content="一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。
-其最基本的服务是将源自网络层来的数据可靠地传输到相邻节点地目标机网络层。
-其主要作用是加强物理层传输原始比特流的功能，将物理层提供的可能出错的物理连接改造成逻辑上无差错的数据链路，使之对网络层表现为一条无差错的链路。
- 功能一：为网络层提供服务  无确认无连接服务 有确认无连接服务 有确认面向连接服务   功能二：链路管理，即连接的建立、维持、释放（用于面向连接的服务） 功能三：组帧 功能四：流量控制，限制发送方 功能五：差错控制（帧错/位错）  （零）链路层编码    以太网规定，一组电信号构成一个数据包，叫做“帧”(Frame)。
-每一帧分成两个部分：标头(Head)和数据(Data)
-   部分 内容 长度     标头 数据包的一些说明项，比如发送者、接收者、数据类型等 固定位 18 字节   数据 数据包的具体内容 最短为 46 字节，最长为 1500 字节    整个帧最短为 64 字节，最长为 1518 字节，如果数据很长就必须分割成多个帧发送。
-（一）MAC 地址    以太网规定，连入网络的所有设备，都必须具有“网卡”接口。
-数据包必须是从一块网卡，传送到另一块网卡。
-网卡的地址，就是数据包的发送地址和接收地址，这叫做 MAC 地址。
-长度为 6 字节，共 48 比特，通常用十六进制表示法，地址的每个字节被表示为一对十六进制数。" property="og:description"/>
+<meta content="一、基础概念  （零）链路层编码 （一）MAC 地址 （二）ARP 协议 （三）广播   二、传输方式  （一）封装成帧 （二）透明传输   三、差错控制  （一）检错编码 （二）纠错编码-海明码   四、流量控制与可靠传输  （零）信道利用率 （一）停止等待协议(Stop-and-Wait) （二）后退 N 帧协议(GBN) （三）选择重传协议(SR)   五、介质访问控制技术  （一）信道划分协议 （二）随机接入协议 （三）轮询访问与介质访问控制   六、局域网  （一）以太网 （二）无线局域网   七、广域网  （一）PPP 协议（Point-to-Point Protocol） （二）HDLC 协议（High-Level Data Link Control）   八、链路层设备  （一）网桥 （二）交换机 （三）冲突域和广播域     一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="http://ccviolett.github.io/posts/45-teamwebnetwork2/" property="og:url"/><meta content="posts" property="article:section"/>
 <meta content="2022-04-23T10:30:51+08:00" property="article:published_time"/>
@@ -128,7 +101,7 @@ var _hmt = _hmt || [];
 </span>
 <span class="reading-time">
 <i aria-hidden="true" class="fa fa-clock-o"></i>
-              阅读时间：1 分钟
+              阅读时间：2 分钟
             </span>
 </div>
 <div class="tags">
@@ -139,6 +112,64 @@ var _hmt = _hmt || [];
 </div>
 </header>
 <div>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#一基础概念">一、基础概念</a>
+<ul>
+<li><a href="#零链路层编码">（零）链路层编码</a></li>
+<li><a href="#一mac-地址">（一）MAC 地址</a></li>
+<li><a href="#二arp-协议">（二）ARP 协议</a></li>
+<li><a href="#三广播">（三）广播</a></li>
+</ul>
+</li>
+<li><a href="#二传输方式">二、传输方式</a>
+<ul>
+<li><a href="#一封装成帧">（一）封装成帧</a></li>
+<li><a href="#二透明传输">（二）透明传输</a></li>
+</ul>
+</li>
+<li><a href="#三差错控制">三、差错控制</a>
+<ul>
+<li><a href="#一检错编码">（一）检错编码</a></li>
+<li><a href="#二纠错编码-海明码">（二）纠错编码-海明码</a></li>
+</ul>
+</li>
+<li><a href="#四流量控制与可靠传输">四、流量控制与可靠传输</a>
+<ul>
+<li><a href="#零信道利用率">（零）信道利用率</a></li>
+<li><a href="#一停止等待协议stop-and-wait">（一）停止等待协议(Stop-and-Wait)</a></li>
+<li><a href="#二后退-n-帧协议gbn">（二）后退 N 帧协议(GBN)</a></li>
+<li><a href="#三选择重传协议sr">（三）选择重传协议(SR)</a></li>
+</ul>
+</li>
+<li><a href="#五介质访问控制技术">五、介质访问控制技术</a>
+<ul>
+<li><a href="#一信道划分协议">（一）信道划分协议</a></li>
+<li><a href="#二随机接入协议">（二）随机接入协议</a></li>
+<li><a href="#三轮询访问与介质访问控制">（三）轮询访问与介质访问控制</a></li>
+</ul>
+</li>
+<li><a href="#六局域网">六、局域网</a>
+<ul>
+<li><a href="#一以太网">（一）以太网</a></li>
+<li><a href="#二无线局域网">（二）无线局域网</a></li>
+</ul>
+</li>
+<li><a href="#七广域网">七、广域网</a>
+<ul>
+<li><a href="#一ppp-协议point-to-point-protocol">（一）PPP 协议（Point-to-Point Protocol）</a></li>
+<li><a href="#二hdlc-协议high-level-data-link-control">（二）HDLC 协议（High-Level Data Link Control）</a></li>
+</ul>
+</li>
+<li><a href="#八链路层设备">八、链路层设备</a>
+<ul>
+<li><a href="#一网桥">（一）网桥</a></li>
+<li><a href="#二交换机">（二）交换机</a></li>
+<li><a href="#三冲突域和广播域">（三）冲突域和广播域</a></li>
+</ul>
+</li>
+</ul>
+</nav>
 <h2 id="一基础概念">
   一、基础概念
   <a class="heading-link" href="#%e4%b8%80%e5%9f%ba%e7%a1%80%e6%a6%82%e5%bf%b5">
@@ -368,9 +399,9 @@ var _hmt = _hmt || [];
 <p>在GBN中，仅有接收端有一个窗口来存放数据帧，在SR中，两者都有窗口了。</p>
 <p>和GBN的区别其实就是做了一个数据缓存，已经收到的帧不用扔了，等待之前因意外丢失的帧收到的时候确认即可，但是只能缓存窗口尺寸内的包含的帧（注释：缓存不可能无限大）</p>
 <p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132247550.png"/></p>
-<h2 id="介质访问控制技术">
-  介质访问控制技术
-  <a class="heading-link" href="#%e4%bb%8b%e8%b4%a8%e8%ae%bf%e9%97%ae%e6%8e%a7%e5%88%b6%e6%8a%80%e6%9c%af">
+<h2 id="五介质访问控制技术">
+  五、介质访问控制技术
+  <a class="heading-link" href="#%e4%ba%94%e4%bb%8b%e8%b4%a8%e8%ae%bf%e9%97%ae%e6%8e%a7%e5%88%b6%e6%8a%80%e6%9c%af">
 <i aria-hidden="true" class="fa fa-link"></i>
 </a>
 </h2>
@@ -436,6 +467,204 @@ var _hmt = _hmt || [];
 <i aria-hidden="true" class="fa fa-link"></i>
 </a>
 </h4>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141258220.png"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th>描述</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1-坚持 CSMA</td>
+<td>发送信息时监听信道，如果空闲就立即传输，信道忙也一直监听，如果发送时冲突就等待随机时长之后再监听</td>
+<td>立即发送，利用率高</td>
+<td>如果多台设备同时监听，就会发生冲突</td>
+</tr>
+<tr>
+<td style="text-align:center">非坚持 CSMA</td>
+<td>发送信息时监听信道，如果空闲就立即传输，信道忙就等待随机时间后再监听</td>
+<td>冲突发生的几率小</td>
+<td>因为需要等待，所以利用率不高</td>
+</tr>
+<tr>
+<td style="text-align:center">p-坚持 CSMA</td>
+<td>发送信息时监听信道，空闲时以概率 p 进行传输，概率 1-p 不传输。信道忙就等待随机时间后再监听</td>
+<td>冲突减少的同时效率也比较高</td>
+<td>即使发生冲突也要坚持发送数据，资源被浪费</td>
+</tr>
+</tbody>
+</table>
+<p>相关资料：<a href="https://zhuanlan.zhihu.com/p/375470338">坚持和非坚持型 CSMA</a></p>
+<h4 id="3-csmacd-协议">
+  3. CSMA/CD 协议
+  <a class="heading-link" href="#3-csmacd-%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p>因为链路实际有长短，发送数据需要时间，这个时间内可能就被其他节点当成空闲状态导致发生碰撞。</p>
+<p>先监听信道，如果没有其他节点在使用信道则传输数据。但是存在碰撞检测，如果发生碰撞，就会停止传输剩下的数据，等待一个随机事件后在进行尝试。</p>
+<h4 id="4-csmaca-协议">
+  4. CSMA/CA 协议
+  <a class="heading-link" href="#4-csmaca-%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p>CSMA/CD 与 CSMA/CA 的区别</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141351874.png"/></p>
+<h3 id="三轮询访问与介质访问控制">
+  （三）轮询访问与介质访问控制
+  <a class="heading-link" href="#%e4%b8%89%e8%bd%ae%e8%af%a2%e8%ae%bf%e9%97%ae%e4%b8%8e%e4%bb%8b%e8%b4%a8%e8%ae%bf%e9%97%ae%e6%8e%a7%e5%88%b6">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<h4 id="1-轮询协议">
+  1. 轮询协议
+  <a class="heading-link" href="#1-%e8%bd%ae%e8%af%a2%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p>选出一个主节点，控制所有传输，主节点轮流“邀请”从属节点发送数据。</p>
+<p>但是会有三个问题：</p>
+<ol>
+<li>轮询开销：随着服务器的节点增多，用于查询是否发送数据的数据帧也会增多，造成一定开销。</li>
+<li>等待延迟：节点需要发送数据时需要等待主节点的轮询。</li>
+<li>单点故障：主节点故障会导致整个网络瘫痪，从属节点瘫痪会导致等待延迟增加。</li>
+</ol>
+<h4 id="2-令牌传递协议">
+  2. 令牌传递协议
+  <a class="heading-link" href="#2-%e4%bb%a4%e7%89%8c%e4%bc%a0%e9%80%92%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141720705.png"/></p>
+<p>发送数据的流程：</p>
+<ol>
+<li>当节点之间没有数据收发需求时，令牌状态为空闲，在节点之间循环</li>
+<li>当节点需要发送数据时，获得这个令牌，修改令牌状态为占有</li>
+<li>将令牌和数据帧结合，继续在节点之间循环</li>
+<li>不是目标节点收到令牌直接略过，目标节点则接受信息复制一份到本地</li>
+<li>令牌回到发送节点，检查数据是否出错，出错则重发，不出错则将修改令牌状态为空闲</li>
+</ol>
+<h2 id="六局域网">
+  六、局域网
+  <a class="heading-link" href="#%e5%85%ad%e5%b1%80%e5%9f%9f%e7%bd%91">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141725603.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141725788.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141726014.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141729842.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141730731.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141729653.png"/></p>
+<h3 id="一以太网">
+  （一）以太网
+  <a class="heading-link" href="#%e4%b8%80%e4%bb%a5%e5%a4%aa%e7%bd%91">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>以太网提供无连接、不可靠的服务</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141732063.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141732432.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141732817.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141734175.png"/></p>
+<h3 id="二无线局域网">
+  （二）无线局域网
+  <a class="heading-link" href="#%e4%ba%8c%e6%97%a0%e7%ba%bf%e5%b1%80%e5%9f%9f%e7%bd%91">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141735107.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141735364.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141735886.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141736175.png"/></p>
+<h2 id="七广域网">
+  七、广域网
+  <a class="heading-link" href="#%e4%b8%83%e5%b9%bf%e5%9f%9f%e7%bd%91">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141736915.png"/></p>
+<h3 id="一ppp-协议point-to-point-protocol">
+  （一）PPP 协议（Point-to-Point Protocol）
+  <a class="heading-link" href="#%e4%b8%80ppp-%e5%8d%8f%e8%ae%aepoint-to-point-protocol">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>PPP协议是目前使用最广泛的数据链路层协议，拨号基本都是PPP协议。PPP协议仅支持全双工链路。</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141738324.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141738554.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141738994.png"/></p>
+<h3 id="二hdlc-协议high-level-data-link-control">
+  （二）HDLC 协议（High-Level Data Link Control）
+  <a class="heading-link" href="#%e4%ba%8chdlc-%e5%8d%8f%e8%ae%aehigh-level-data-link-control">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141739269.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141739687.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141740065.png"/></p>
+<h2 id="八链路层设备">
+  八、链路层设备
+  <a class="heading-link" href="#%e5%85%ab%e9%93%be%e8%b7%af%e5%b1%82%e8%ae%be%e5%a4%87">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<h3 id="一网桥">
+  （一）网桥
+  <a class="heading-link" href="#%e4%b8%80%e7%bd%91%e6%a1%a5">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>使用网桥时，由于网桥会根据mac地址进行过滤，所以不会形成冲突域</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141742562.png"/></p>
+<h4 id="1-透明网桥">
+  1. 透明网桥
+  <a class="heading-link" href="#1-%e9%80%8f%e6%98%8e%e7%bd%91%e6%a1%a5">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p>通过自学习来构建转发表。每一个通过网桥的数据包都会被记录下网桥收到数据时数据对应的地址和网桥自己的接口，通过许许多多的数据包的构造的缓存，网桥就可以知道哪个数据包在哪个接口，以后如果要穿数据包就知道要往哪个接口发送数据包了</p>
+<h4 id="2-原路由网桥">
+  2. 原路由网桥
+  <a class="heading-link" href="#2-%e5%8e%9f%e8%b7%af%e7%94%b1%e7%bd%91%e6%a1%a5">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p>在发送时，直接将最佳路径放到帧首部。那么网桥如何获得最佳路径？通过广播方式想目标地址发送广播，此时可能会经过不同路由产生不同的路径，目标地址收到后再将每一条路径都发一个响应帧给网桥，网桥经过对比就知道哪个接口最快了</p>
+<h3 id="二交换机">
+  （二）交换机
+  <a class="heading-link" href="#%e4%ba%8c%e4%ba%a4%e6%8d%a2%e6%9c%ba">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>交换机接收入链路层帧并将它们转发到出链路，其自身对节点透明。</p>
+<h4 id="1-直通式交换机">
+  1. 直通式交换机
+  <a class="heading-link" href="#1-%e7%9b%b4%e9%80%9a%e5%bc%8f%e4%ba%a4%e6%8d%a2%e6%9c%ba">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p>查完目标地址就立刻转发，延迟小，可靠性低，无法支持具有不同速率的端口的交换。</p>
+<h4 id="2-存储转发式交换机">
+  2. 存储转发式交换机
+  <a class="heading-link" href="#2-%e5%ad%98%e5%82%a8%e8%bd%ac%e5%8f%91%e5%bc%8f%e4%ba%a4%e6%8d%a2%e6%9c%ba">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p>将帧放入高速缓存，并检查是否正确，正确则转发，错误则丢弃。</p>
+<p>延迟大，可靠性高，可以支持具有不同速率的端口的交换。</p>
+<h3 id="三冲突域和广播域">
+  （三）冲突域和广播域
+  <a class="heading-link" href="#%e4%b8%89%e5%86%b2%e7%aa%81%e5%9f%9f%e5%92%8c%e5%b9%bf%e6%92%ad%e5%9f%9f">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141747077.png"/></p>
 </div>
 <footer>
 </footer>

@@ -11,6 +11,8 @@ externalLink = ""
 series = []
 +++
 
+{{<toc>}}
+
 ## 一、基础概念
 
 数据链路层在物理层提供服务的基础上像网络层提供服务。
@@ -179,7 +181,7 @@ ARP 表会定时更新，当某节点与子网断开连接时，会将其从子�
 
 ![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132247550.png)
 
-## 介质访问控制技术
+## 五、介质访问控制技术
 
 ![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132249178.png)
 
@@ -225,3 +227,139 @@ TDM 的利用率低，所以衍生出了 STDM，其原则是先到先走，满�
 
 #### 2. CSMA 协议
 
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141258220.png)
+
+| 名称 | 描述 | 优点 | 缺点 |
+| :-: | - | - | - |
+| 1-坚持 CSMA | 发送信息时监听信道，如果空闲就立即传输，信道忙也一直监听，如果发送时冲突就等待随机时长之后再监听 | 立即发送，利用率高 | 如果多台设备同时监听，就会发生冲突 |
+| 非坚持 CSMA | 发送信息时监听信道，如果空闲就立即传输，信道忙就等待随机时间后再监听 | 冲突发生的几率小 | 因为需要等待，所以利用率不高 |
+| p-坚持 CSMA | 发送信息时监听信道，空闲时以概率 p 进行传输，概率 1-p 不传输。信道忙就等待随机时间后再监听 | 冲突减少的同时效率也比较高 | 即使发生冲突也要坚持发送数据，资源被浪费 |
+
+相关资料：[坚持和非坚持型 CSMA](https://zhuanlan.zhihu.com/p/375470338)
+
+#### 3. CSMA/CD 协议
+
+因为链路实际有长短，发送数据需要时间，这个时间内可能就被其他节点当成空闲状态导致发生碰撞。
+
+先监听信道，如果没有其他节点在使用信道则传输数据。但是存在碰撞检测，如果发生碰撞，就会停止传输剩下的数据，等待一个随机事件后在进行尝试。
+
+#### 4. CSMA/CA 协议
+
+CSMA/CD 与 CSMA/CA 的区别
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141351874.png)
+
+### （三）轮询访问与介质访问控制
+
+#### 1. 轮询协议
+
+选出一个主节点，控制所有传输，主节点轮流“邀请”从属节点发送数据。
+
+但是会有三个问题：
+1. 轮询开销：随着服务器的节点增多，用于查询是否发送数据的数据帧也会增多，造成一定开销。
+2. 等待延迟：节点需要发送数据时需要等待主节点的轮询。
+3. 单点故障：主节点故障会导致整个网络瘫痪，从属节点瘫痪会导致等待延迟增加。
+
+#### 2. 令牌传递协议
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141720705.png)
+
+发送数据的流程：
+1. 当节点之间没有数据收发需求时，令牌状态为空闲，在节点之间循环
+2. 当节点需要发送数据时，获得这个令牌，修改令牌状态为占有
+3. 将令牌和数据帧结合，继续在节点之间循环
+4. 不是目标节点收到令牌直接略过，目标节点则接受信息复制一份到本地
+5. 令牌回到发送节点，检查数据是否出错，出错则重发，不出错则将修改令牌状态为空闲
+
+## 六、局域网
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141725603.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141725788.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141726014.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141729842.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141730731.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141729653.png)
+
+### （一）以太网
+
+以太网提供无连接、不可靠的服务
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141732063.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141732432.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141732817.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141734175.png)
+
+### （二）无线局域网
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141735107.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141735364.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141735886.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141736175.png)
+
+## 七、广域网
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141736915.png)
+
+### （一）PPP 协议（Point-to-Point Protocol）
+
+PPP协议是目前使用最广泛的数据链路层协议，拨号基本都是PPP协议。PPP协议仅支持全双工链路。
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141738324.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141738554.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141738994.png)
+
+### （二）HDLC 协议（High-Level Data Link Control）
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141739269.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141739687.png)
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141740065.png)
+
+
+## 八、链路层设备
+
+### （一）网桥
+
+使用网桥时，由于网桥会根据mac地址进行过滤，所以不会形成冲突域
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141742562.png)
+
+#### 1. 透明网桥
+
+通过自学习来构建转发表。每一个通过网桥的数据包都会被记录下网桥收到数据时数据对应的地址和网桥自己的接口，通过许许多多的数据包的构造的缓存，网桥就可以知道哪个数据包在哪个接口，以后如果要穿数据包就知道要往哪个接口发送数据包了
+
+#### 2. 原路由网桥
+
+在发送时，直接将最佳路径放到帧首部。那么网桥如何获得最佳路径？通过广播方式想目标地址发送广播，此时可能会经过不同路由产生不同的路径，目标地址收到后再将每一条路径都发一个响应帧给网桥，网桥经过对比就知道哪个接口最快了
+
+### （二）交换机
+
+交换机接收入链路层帧并将它们转发到出链路，其自身对节点透明。
+
+#### 1. 直通式交换机
+
+查完目标地址就立刻转发，延迟小，可靠性低，无法支持具有不同速率的端口的交换。
+
+#### 2. 存储转发式交换机
+
+将帧放入高速缓存，并检查是否正确，正确则转发，错误则丢弃。
+
+延迟大，可靠性高，可以支持具有不同速率的端口的交换。
+
+### （三）冲突域和广播域
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141747077.png)
