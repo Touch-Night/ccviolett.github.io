@@ -14,15 +14,9 @@ series = []
 达芬奇记录：
 - 调色时先将一个片段使用 LUT，然后选中其他所有片段，在调色好的片段上按鼠标中键即可批量调色
 
-- [颜文字JS](https://utf-8.jp/public/aaencode.html)
-- [PDF 提权破解](http://www.pdfwork.cn/)
-- [Markdown 表格生成](https://www.tablesgenerator.com/markdown_tables)
-
 报错： `Error: Please make sure the libxml2 and libxslt development packages are installed.`
 
 解决方案：安装 `libxml2`、`libxslt` 和 `libxslt-devel`
-
-人脸验证 API：[Face ID](https://faceid.com/)
 
 pip 设置国内源：
 
@@ -41,11 +35,7 @@ pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 
 急救指南：set、env、type
 
-Word 转 Markdown 的网站：[word2md](https://word2md.com/)
-
 Markdown 符号：https://blog.csdn.net/liyuanbhu/article/details/50636416
-
-思维导图软件：[draw.io](https://app.diagrams.net/)
 
 益智小游戏：
 - [数织](https://cn.puzzle-nonograms.com/)
@@ -77,18 +67,12 @@ Markdown 符号：https://blog.csdn.net/liyuanbhu/article/details/50636416
 - 学校邮箱：[东北大学秦皇岛分校邮件系统](https://mail.neuq.edu.cn/)
 - 北森测评：[北森生涯教育一体化平台](https://neu.careersky.cn/)
 
-Youtube 视频下载：[Free YouTube Downloader](https://addoncrop.com/free-youtube-video-downloader)
-
 - MasterClass
 - SkillShare
 
 - 使用服务器：[HostDare](http://www.hostdare.com/)
 - 前端 CSS 大挑战：[CSS Battle](https://cssbattle.dev/)
-- 万能转换网站：[CDKM](https://cdkm.com/)
 - 小游戏网站：[Nitrome](https://www.nitrome.com/)
-
-
-- Hugo 显示 PDF：[Embed PDF Shortcode](https://github.com/anvithks/hugo-embed-pdf-shortcode)
 
 锻炼身体要有连续性和系统性，只有经常参加体育锻炼，安排适合自己兴趣、爱好的运动项目，科学地制定健身计划，才能不断有效地地强体质。科学实验表明，不经常参加体育锻炼的人，会使原有的身体机能、素质和运动技术水平明显的下降。中断锻炼身本时间越长，消失越明显。
 
@@ -138,3 +122,17 @@ Cycle.js
 [自媒体发展事项](https://www.bilibili.com/video/BV1vS4y1a7mf)
 
 好东西：Firefox relay，可以同时拥有 5 个假邮箱，mozilla 会把这些邮箱里的邮件转发到你的邮箱里，可以用来注册网站，不想要了直接把假邮箱删掉就好了，顺便，mozilla 还提供了配套的插件，可以在注册网站需要填写邮箱的地方直接一键新建假邮箱并填写，配合自动生成密码的功能可以光速注册……
+
+### 解决方案
+
+- Serverless 云服务：[LeanCloud](https://www.leancloud.cn/)
+- 静态网站评论：[Valine](https://valine.js.org/)
+- [颜文字JS](https://utf-8.jp/public/aaencode.html)
+- [PDF 提权破解](http://www.pdfwork.cn/)
+- [Markdown 表格生成](https://www.tablesgenerator.com/markdown_tables)
+- 人脸验证 API：[Face ID](https://faceid.com/)
+- Word 转 Markdown 的网站：[word2md](https://word2md.com/)
+- 思维导图软件：[draw.io](https://app.diagrams.net/)
+- Youtube 视频下载：[Free YouTube Downloader](https://addoncrop.com/free-youtube-video-downloader)
+- 万能转换网站：[CDKM](https://cdkm.com/)
+- Hugo 显示 PDF：[Embed PDF Shortcode](https://github.com/anvithks/hugo-embed-pdf-shortcode)

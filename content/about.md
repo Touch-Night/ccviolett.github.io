@@ -64,4 +64,3 @@ author = [ "ccviolett" ]
 ### 一些话
 
 “你们这些孩子哪里是真为了写博客。你们只是想体会换新工具的愉快感觉，顺便体会一下否定掉旧工具，觉得自己特别的小欣喜。”——[dboy](https://www.zhihu.com/people/d-b-o-y)
-
