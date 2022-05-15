@@ -288,7 +288,11 @@ function heredoc(fn) { return fn.</description>
 <link>http://ccviolett.github.io/posts/46-teamwebnetwork3/</link>
 <pubDate>Sat, 23 Apr 2022 10:31:01 +0800</pubDate>
 <guid>http://ccviolett.github.io/posts/46-teamwebnetwork3/</guid>
-<description/>
+<description>一、概述 二、数据交换方式  （一）电路交换 （二）报文交换 （三）分组交换   三、路由算法和路由协议  （一） RIP 协议和距离向量算法 （二）OSPF 协议和链路状态算法 （三）BGP 协议 （四）三种路由协议的比较   四、IP 数据报 五、IP  （一）ipv4 地址 （二）网络地址转接 NAT （三）子网划分和子网掩码 （四）无分类编制 CIDR （五）DHCP 协议 （六）ICMP 协议   六、IPV6 七、IP 组播（多播）  （一）IGMP 协议 （二）路由选择协议   八、移动 IP 九、网络层设备   一、概述    MAC 地址作为设备的唯一的身份编址，技术上可以实现任意设备之间的通信，但是以太网采用广播方式发送数据包，效率低，且要求两台计算机在同一子网络中。
+因此我们通过“网络层”引入一套新的地址，来区分哪些 MAC 地址属于同一个子网络。
+于是每台设备便有了两个独立的地址，一个是绑定在网卡上不变的 MAC 地址，一个是由管理员分配可变的网络地址。
+二、数据交换方式    通过交换设备互联进行数据交换，而不是节点之间互联，以减少成本。
+（一）电路交换    （二）报文交换    （三）分组交换    数据报方式与虚电路方式    三、路由算法和路由协议    路由通过路由算法知道收到报文后下一步该怎么走。</description>
 </item>
 <item>
 <title>计算机网络 | Part2 数据链路层(Data Link Layer)</title>

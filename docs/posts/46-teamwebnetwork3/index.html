@@ -6,13 +6,25 @@
 <meta content="zh-cn" http-equiv="Content-Language"/>
 <meta content="light dark" name="color-scheme"/>
 <meta content="罗潇阳" name="author"/>
-<meta content="罗潇阳的个人网站" name="description"/>
+<meta content="一、概述 二、数据交换方式  （一）电路交换 （二）报文交换 （三）分组交换   三、路由算法和路由协议  （一） RIP 协议和距离向量算法 （二）OSPF 协议和链路状态算法 （三）BGP 协议 （四）三种路由协议的比较   四、IP 数据报 五、IP  （一）ipv4 地址 （二）网络地址转接 NAT （三）子网划分和子网掩码 （四）无分类编制 CIDR （五）DHCP 协议 （六）ICMP 协议   六、IPV6 七、IP 组播（多播）  （一）IGMP 协议 （二）路由选择协议   八、移动 IP 九、网络层设备   一、概述    MAC 地址作为设备的唯一的身份编址，技术上可以实现任意设备之间的通信，但是以太网采用广播方式发送数据包，效率低，且要求两台计算机在同一子网络中。
+因此我们通过“网络层”引入一套新的地址，来区分哪些 MAC 地址属于同一个子网络。
+于是每台设备便有了两个独立的地址，一个是绑定在网卡上不变的 MAC 地址，一个是由管理员分配可变的网络地址。
+二、数据交换方式    通过交换设备互联进行数据交换，而不是节点之间互联，以减少成本。
+（一）电路交换    （二）报文交换    （三）分组交换    数据报方式与虚电路方式    三、路由算法和路由协议    路由通过路由算法知道收到报文后下一步该怎么走。" name="description"/>
 <meta content="博客,开发者,个人" name="keywords"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="计算机网络 | Part3 网络层(Network Layer)" name="twitter:title"/>
-<meta content="" name="twitter:description"/>
+<meta content="一、概述 二、数据交换方式  （一）电路交换 （二）报文交换 （三）分组交换   三、路由算法和路由协议  （一） RIP 协议和距离向量算法 （二）OSPF 协议和链路状态算法 （三）BGP 协议 （四）三种路由协议的比较   四、IP 数据报 五、IP  （一）ipv4 地址 （二）网络地址转接 NAT （三）子网划分和子网掩码 （四）无分类编制 CIDR （五）DHCP 协议 （六）ICMP 协议   六、IPV6 七、IP 组播（多播）  （一）IGMP 协议 （二）路由选择协议   八、移动 IP 九、网络层设备   一、概述    MAC 地址作为设备的唯一的身份编址，技术上可以实现任意设备之间的通信，但是以太网采用广播方式发送数据包，效率低，且要求两台计算机在同一子网络中。
+因此我们通过“网络层”引入一套新的地址，来区分哪些 MAC 地址属于同一个子网络。
+于是每台设备便有了两个独立的地址，一个是绑定在网卡上不变的 MAC 地址，一个是由管理员分配可变的网络地址。
+二、数据交换方式    通过交换设备互联进行数据交换，而不是节点之间互联，以减少成本。
+（一）电路交换    （二）报文交换    （三）分组交换    数据报方式与虚电路方式    三、路由算法和路由协议    路由通过路由算法知道收到报文后下一步该怎么走。" name="twitter:description"/>
 <meta content="计算机网络 | Part3 网络层(Network Layer)" property="og:title"/>
-<meta content="" property="og:description"/>
+<meta content="一、概述 二、数据交换方式  （一）电路交换 （二）报文交换 （三）分组交换   三、路由算法和路由协议  （一） RIP 协议和距离向量算法 （二）OSPF 协议和链路状态算法 （三）BGP 协议 （四）三种路由协议的比较   四、IP 数据报 五、IP  （一）ipv4 地址 （二）网络地址转接 NAT （三）子网划分和子网掩码 （四）无分类编制 CIDR （五）DHCP 协议 （六）ICMP 协议   六、IPV6 七、IP 组播（多播）  （一）IGMP 协议 （二）路由选择协议   八、移动 IP 九、网络层设备   一、概述    MAC 地址作为设备的唯一的身份编址，技术上可以实现任意设备之间的通信，但是以太网采用广播方式发送数据包，效率低，且要求两台计算机在同一子网络中。
+因此我们通过“网络层”引入一套新的地址，来区分哪些 MAC 地址属于同一个子网络。
+于是每台设备便有了两个独立的地址，一个是绑定在网卡上不变的 MAC 地址，一个是由管理员分配可变的网络地址。
+二、数据交换方式    通过交换设备互联进行数据交换，而不是节点之间互联，以减少成本。
+（一）电路交换    （二）报文交换    （三）分组交换    数据报方式与虚电路方式    三、路由算法和路由协议    路由通过路由算法知道收到报文后下一步该怎么走。" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="http://ccviolett.github.io/posts/46-teamwebnetwork3/" property="og:url"/><meta content="posts" property="article:section"/>
 <meta content="2022-04-23T10:31:01+08:00" property="article:published_time"/>
@@ -113,12 +125,453 @@ var _hmt = _hmt || [];
 </span>
 <span class="reading-time">
 <i aria-hidden="true" class="fa fa-clock-o"></i>
-              阅读时间：0 分钟
+              阅读时间：2 分钟
             </span>
 </div>
 </div>
 </header>
 <div>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#一概述">一、概述</a></li>
+<li><a href="#二数据交换方式">二、数据交换方式</a>
+<ul>
+<li><a href="#一电路交换">（一）电路交换</a></li>
+<li><a href="#二报文交换">（二）报文交换</a></li>
+<li><a href="#三分组交换">（三）分组交换</a></li>
+</ul>
+</li>
+<li><a href="#三路由算法和路由协议">三、路由算法和路由协议</a>
+<ul>
+<li><a href="#一-rip-协议和距离向量算法">（一） RIP 协议和距离向量算法</a></li>
+<li><a href="#二ospf-协议和链路状态算法">（二）OSPF 协议和链路状态算法</a></li>
+<li><a href="#三bgp-协议">（三）BGP 协议</a></li>
+<li><a href="#四三种路由协议的比较">（四）三种路由协议的比较</a></li>
+</ul>
+</li>
+<li><a href="#四ip-数据报">四、IP 数据报</a></li>
+<li><a href="#五ip">五、IP</a>
+<ul>
+<li><a href="#一ipv4-地址">（一）ipv4 地址</a></li>
+<li><a href="#二网络地址转接-nat">（二）网络地址转接 NAT</a></li>
+<li><a href="#三子网划分和子网掩码">（三）子网划分和子网掩码</a></li>
+<li><a href="#四无分类编制-cidr">（四）无分类编制 CIDR</a></li>
+<li><a href="#五dhcp-协议">（五）DHCP 协议</a></li>
+<li><a href="#六icmp-协议">（六）ICMP 协议</a></li>
+</ul>
+</li>
+<li><a href="#六ipv6">六、IPV6</a></li>
+<li><a href="#七ip-组播多播">七、IP 组播（多播）</a>
+<ul>
+<li><a href="#一igmp-协议">（一）IGMP 协议</a></li>
+<li><a href="#二路由选择协议">（二）路由选择协议</a></li>
+</ul>
+</li>
+<li><a href="#八移动-ip">八、移动 IP</a></li>
+<li><a href="#九网络层设备">九、网络层设备</a></li>
+</ul>
+</nav>
+<h2 id="一概述">
+  一、概述
+  <a class="heading-link" href="#%e4%b8%80%e6%a6%82%e8%bf%b0">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p>MAC 地址作为设备的唯一的身份编址，技术上可以实现任意设备之间的通信，但是以太网采用广播方式发送数据包，效率低，且要求两台计算机在同一子网络中。</p>
+<p>因此我们通过“网络层”引入一套新的地址，来区分哪些 MAC 地址属于同一个子网络。</p>
+<p>于是每台设备便有了两个独立的地址，一个是绑定在网卡上不变的 MAC 地址，一个是由管理员分配可变的网络地址。</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151153985.png"/></p>
+<h2 id="二数据交换方式">
+  二、数据交换方式
+  <a class="heading-link" href="#%e4%ba%8c%e6%95%b0%e6%8d%ae%e4%ba%a4%e6%8d%a2%e6%96%b9%e5%bc%8f">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p>通过交换设备互联进行数据交换，而不是节点之间互联，以减少成本。</p>
+<h3 id="一电路交换">
+  （一）电路交换
+  <a class="heading-link" href="#%e4%b8%80%e7%94%b5%e8%b7%af%e4%ba%a4%e6%8d%a2">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151155337.png"/></p>
+<h3 id="二报文交换">
+  （二）报文交换
+  <a class="heading-link" href="#%e4%ba%8c%e6%8a%a5%e6%96%87%e4%ba%a4%e6%8d%a2">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151155443.png"/></p>
+<h3 id="三分组交换">
+  （三）分组交换
+  <a class="heading-link" href="#%e4%b8%89%e5%88%86%e7%bb%84%e4%ba%a4%e6%8d%a2">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151155127.png"/></p>
+<h4 id="数据报方式与虚电路方式">
+  数据报方式与虚电路方式
+  <a class="heading-link" href="#%e6%95%b0%e6%8d%ae%e6%8a%a5%e6%96%b9%e5%bc%8f%e4%b8%8e%e8%99%9a%e7%94%b5%e8%b7%af%e6%96%b9%e5%bc%8f">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151157616.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151157114.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151158298.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151158210.png"/></p>
+<h2 id="三路由算法和路由协议">
+  三、路由算法和路由协议
+  <a class="heading-link" href="#%e4%b8%89%e8%b7%af%e7%94%b1%e7%ae%97%e6%b3%95%e5%92%8c%e8%b7%af%e7%94%b1%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p>路由通过路由算法知道收到报文后下一步该怎么走。</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151200854.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151201652.png"/></p>
+<h3 id="一-rip-协议和距离向量算法">
+  （一） RIP 协议和距离向量算法
+  <a class="heading-link" href="#%e4%b8%80-rip-%e5%8d%8f%e8%ae%ae%e5%92%8c%e8%b7%9d%e7%a6%bb%e5%90%91%e9%87%8f%e7%ae%97%e6%b3%95">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<h4 id="1-rip-协议">
+  1. RIP 协议
+  <a class="heading-link" href="#1-rip-%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151204980.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151204867.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151204240.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151204899.png"/></p>
+<h4 id="2-距离向量算法">
+  2. 距离向量算法
+  <a class="heading-link" href="#2-%e8%b7%9d%e7%a6%bb%e5%90%91%e9%87%8f%e7%ae%97%e6%b3%95">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151205921.png"/></p>
+<h3 id="二ospf-协议和链路状态算法">
+  （二）OSPF 协议和链路状态算法
+  <a class="heading-link" href="#%e4%ba%8cospf-%e5%8d%8f%e8%ae%ae%e5%92%8c%e9%93%be%e8%b7%af%e7%8a%b6%e6%80%81%e7%ae%97%e6%b3%95">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<h4 id="1-ospf-协议">
+  1. OSPF 协议
+  <a class="heading-link" href="#1-ospf-%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151207997.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151207556.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151207931.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151207381.png"/></p>
+<h4 id="2-链路状态算法">
+  2. 链路状态算法
+  <a class="heading-link" href="#2-%e9%93%be%e8%b7%af%e7%8a%b6%e6%80%81%e7%ae%97%e6%b3%95">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151207691.png"/></p>
+<h3 id="三bgp-协议">
+  （三）BGP 协议
+  <a class="heading-link" href="#%e4%b8%89bgp-%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151209942.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151209313.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151209447.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151210416.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151210406.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151210020.png"/></p>
+<h3 id="四三种路由协议的比较">
+  （四）三种路由协议的比较
+  <a class="heading-link" href="#%e5%9b%9b%e4%b8%89%e7%a7%8d%e8%b7%af%e7%94%b1%e5%8d%8f%e8%ae%ae%e7%9a%84%e6%af%94%e8%be%83">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p>RIP 是一种分布式的基于距离向量的内部网关路由选择协议，通过广播 UDP 报文来交换路由信息。</p>
+<p>OSPF 是一个内部网关协议，要交换的信息量较大，应使报文的长度尽量短，所以不适用传输层协议（如 UDP 或 TCP），而是直接使用 IP。</p>
+<p>BGP 是一个外部网关协议，在不同的自治系统之间交换路由信息。由于网络环境复杂，需要保证可靠传输，所以采用 TCP。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">协议</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">路由算法</th>
+<th style="text-align:center">传递协议</th>
+<th style="text-align:center">路径选择</th>
+<th style="text-align:center">交换节点</th>
+<th>交换内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">RIP</td>
+<td style="text-align:center">内部</td>
+<td style="text-align:center">距离-向量</td>
+<td style="text-align:center">UDP</td>
+<td style="text-align:center">跳数最少</td>
+<td style="text-align:center">和本节点相邻的路由器</td>
+<td>当前路由器知道的全部信息</td>
+</tr>
+<tr>
+<td style="text-align:center">OSPF</td>
+<td style="text-align:center">内部</td>
+<td style="text-align:center">链路状态</td>
+<td style="text-align:center">IP</td>
+<td style="text-align:center">代价最低</td>
+<td style="text-align:center">网络中的所有路由器</td>
+<td>与本路由器相邻的所有路由器的链路状态</td>
+</tr>
+<tr>
+<td style="text-align:center">BGP</td>
+<td style="text-align:center">外部</td>
+<td style="text-align:center">路径-向量</td>
+<td style="text-align:center">TCP</td>
+<td style="text-align:center">较好，非最佳</td>
+<td style="text-align:center">和本节点相邻的路由器</td>
+<td>首次交换整个路由表，随后交换有变化的部分</td>
+</tr>
+</tbody>
+</table>
+<h2 id="四ip-数据报">
+  四、IP 数据报
+  <a class="heading-link" href="#%e5%9b%9bip-%e6%95%b0%e6%8d%ae%e6%8a%a5">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151535098.png"/></p>
+<h2 id="五ip">
+  五、IP
+  <a class="heading-link" href="#%e4%ba%94ip">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<h3 id="一ipv4-地址">
+  （一）ipv4 地址
+  <a class="heading-link" href="#%e4%b8%80ipv4-%e5%9c%b0%e5%9d%80">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151543175.png"/></p>
+<h4 id="特殊-ip-地址">
+  特殊 IP 地址
+  <a class="heading-link" href="#%e7%89%b9%e6%ae%8a-ip-%e5%9c%b0%e5%9d%80">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">网络号</th>
+<th style="text-align:center">主机号</th>
+<th style="text-align:center">作为 IP 分组源地址</th>
+<th style="text-align:center">作为 IP 分组目的地址</th>
+<th style="text-align:center">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">全 0</td>
+<td style="text-align:center">全 0</td>
+<td style="text-align:center">可以</td>
+<td style="text-align:center">不可以</td>
+<td style="text-align:center">本网范围内表示主机，路由表中用于表示默认路由</td>
+</tr>
+<tr>
+<td style="text-align:center">全 0</td>
+<td style="text-align:center">特定值</td>
+<td style="text-align:center">不可以</td>
+<td style="text-align:center">可以</td>
+<td style="text-align:center">表示本网内某个特定主机</td>
+</tr>
+<tr>
+<td style="text-align:center">全 1</td>
+<td style="text-align:center">全 1</td>
+<td style="text-align:center">不可以</td>
+<td style="text-align:center">可以</td>
+<td style="text-align:center">本网广播地址（路由器不转发）</td>
+</tr>
+<tr>
+<td style="text-align:center">特定值</td>
+<td style="text-align:center">全 0</td>
+<td style="text-align:center">不可以</td>
+<td style="text-align:center">不可以</td>
+<td style="text-align:center">网络地址，表示一个网络</td>
+</tr>
+<tr>
+<td style="text-align:center">特定值</td>
+<td style="text-align:center">全 1</td>
+<td style="text-align:center">不可以</td>
+<td style="text-align:center">可以</td>
+<td style="text-align:center">直接广播地址，对特定网络上的所有主机进行广播</td>
+</tr>
+<tr>
+<td style="text-align:center">127</td>
+<td style="text-align:center">任何数（非全0/1）</td>
+<td style="text-align:center">用于本地软件环回测试，成为环回地址</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="私有-ip-地址">
+  私有 IP 地址
+  <a class="heading-link" href="#%e7%a7%81%e6%9c%89-ip-%e5%9c%b0%e5%9d%80">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">地址类型</th>
+<th style="text-align:center">地址范围</th>
+<th style="text-align:center">网段个数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">A 类</td>
+<td style="text-align:center">10.0.0.0 ~ 10.255.255.255</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">B 类</td>
+<td style="text-align:center">172.16.0.0 ~ 172.31.255.255</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="text-align:center">C 类</td>
+<td style="text-align:center">192.168.0.0 ~ 192.168.255.255</td>
+<td style="text-align:center">256</td>
+</tr>
+</tbody>
+</table>
+<h3 id="二网络地址转接-nat">
+  （二）网络地址转接 NAT
+  <a class="heading-link" href="#%e4%ba%8c%e7%bd%91%e7%bb%9c%e5%9c%b0%e5%9d%80%e8%bd%ac%e6%8e%a5-nat">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151606252.png"/></p>
+<h3 id="三子网划分和子网掩码">
+  （三）子网划分和子网掩码
+  <a class="heading-link" href="#%e4%b8%89%e5%ad%90%e7%bd%91%e5%88%92%e5%88%86%e5%92%8c%e5%ad%90%e7%bd%91%e6%8e%a9%e7%a0%81">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<h4 id="1-子网划分">
+  1. 子网划分
+  <a class="heading-link" href="#1-%e5%ad%90%e7%bd%91%e5%88%92%e5%88%86">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p>分类的 IP 地址又两个很大的缺点：</p>
+<ol>
+<li>IP 地址空间的利用率很低</li>
+<li>两级 IP 地址不够灵活</li>
+</ol>
+<p>可以将 <code>网络号+主机号</code> 的两级 IP 地址扩展为 <code>网络号+子网号+主机号</code> 的三级 IP 地址。</p>
+<p>子网划分对外界透明。</p>
+<h4 id="2-子网掩码">
+  2. 子网掩码
+  <a class="heading-link" href="#2-%e5%ad%90%e7%bd%91%e6%8e%a9%e7%a0%81">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h4>
+<p>子网掩码用来和 IP 地址做与运算，来得到子网的地址。</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151612084.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151612684.png"/></p>
+<h3 id="四无分类编制-cidr">
+  （四）无分类编制 CIDR
+  <a class="heading-link" href="#%e5%9b%9b%e6%97%a0%e5%88%86%e7%b1%bb%e7%bc%96%e5%88%b6-cidr">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151613001.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151614027.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151615953.png"/></p>
+<h3 id="五dhcp-协议">
+  （五）DHCP 协议
+  <a class="heading-link" href="#%e4%ba%94dhcp-%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151617192.png"/></p>
+<h3 id="六icmp-协议">
+  （六）ICMP 协议
+  <a class="heading-link" href="#%e5%85%adicmp-%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151640597.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151640969.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151640312.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151640239.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151640290.png"/></p>
+<h2 id="六ipv6">
+  六、IPV6
+  <a class="heading-link" href="#%e5%85%adipv6">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151643904.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151643157.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151643409.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151643420.png"/></p>
+<h2 id="七ip-组播多播">
+  七、IP 组播（多播）
+  <a class="heading-link" href="#%e4%b8%83ip-%e7%bb%84%e6%92%ad%e5%a4%9a%e6%92%ad">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p>当网络中的某些用户需要特定数据时，组播数据发送者仅发送一次数据，借助组播路由协议为组播数据包建立组播分发树，被传递的数据达到距离用户端尽可能近的节点后才开始复制和分发，是一种点对多点的方式。</p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151646331.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151646589.png"/></p>
+<h3 id="一igmp-协议">
+  （一）IGMP 协议
+  <a class="heading-link" href="#%e4%b8%80igmp-%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151647128.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151647940.png"/></p>
+<h3 id="二路由选择协议">
+  （二）路由选择协议
+  <a class="heading-link" href="#%e4%ba%8c%e8%b7%af%e7%94%b1%e9%80%89%e6%8b%a9%e5%8d%8f%e8%ae%ae">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h3>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151648830.png"/></p>
+<p>通常使用以下三种算法：</p>
+<ul>
+<li>基于链路状态的路由选择</li>
+<li>基于距离-向量的路由选择</li>
+<li>协议无关的组播（稀疏/密集）</li>
+</ul>
+<h2 id="八移动-ip">
+  八、移动 IP
+  <a class="heading-link" href="#%e5%85%ab%e7%a7%bb%e5%8a%a8-ip">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151650226.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151650874.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151659816.png"/></p>
+<h2 id="九网络层设备">
+  九、网络层设备
+  <a class="heading-link" href="#%e4%b9%9d%e7%bd%91%e7%bb%9c%e5%b1%82%e8%ae%be%e5%a4%87">
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
+</h2>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151657939.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151658287.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151658176.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151659963.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205151705992.png"/></p>
 </div>
 <footer>
 </footer>
