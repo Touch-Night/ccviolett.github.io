@@ -136,3 +136,4 @@ Cycle.js
 - Youtube 视频下载：[Free YouTube Downloader](https://addoncrop.com/free-youtube-video-downloader)
 - 万能转换网站：[CDKM](https://cdkm.com/)
 - Hugo 显示 PDF：[Embed PDF Shortcode](https://github.com/anvithks/hugo-embed-pdf-shortcode)
+- 个人接入微信支付：[PAYJS](https://payjs.cn/)
