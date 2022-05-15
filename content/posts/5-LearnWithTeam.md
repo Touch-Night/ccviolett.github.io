@@ -248,6 +248,7 @@ Java：
 - [【实战】基于SpringBoot+Vue开发的前后端分离博客项目完整教学](https://www.bilibili.com/video/BV1PQ4y1P7hZ)
 - [深入学习 LRU](https://leetcode.cn/problems/lru-cache/)
 - [阅读理解 Linux](https://www.runoob.com/linux/linux-tutorial.html)
+- 调研学习总结 http1.0、http2.0、http3.0 的发展和差异并总结成文
 
 ### 1. 前端
 - [web前端零基础html5+css3+前端项目视频教程](https://www.bilibili.com/video/BV1Kg411T7t9)
@@ -272,6 +273,8 @@ Java：
 - [产品经理C端内容项目设计实战教程](https://www.bilibili.com/video/BV1i4411Y7H6)
 - [产品经理B端广告投放系统项目实战](https://www.bilibili.com/video/BV1Sb411E79L)
 - [传智教育产品经理实战项目｜全面解析BI数据分析平台](https://www.bilibili.com/video/BV1n64y1s7qD)
+- [产品经理技能进阶，运营策略与营销实战](https://www.bilibili.com/video/BV1Gb41177hc)
+- [产品经理技能进阶数据分析，含数据埋点、采集清洗、数据分析、数据决策等](https://www.bilibili.com/video/BV16J411W7Vn)
 
 ### 5. UI
 - [传智教育墨刀教程全套，高保真交互式原型设计教程](https://www.bilibili.com/video/BV1Q54y1b7DP)

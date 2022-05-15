@@ -164,6 +164,11 @@ name = "关于"
 weight = 6
 url = "about/"
 
+[[languages.zh-cn.menu.main]]
+name = "赞助"
+weight = 7
+url = "support/"
+
 # For English
 
 [languages.en]
