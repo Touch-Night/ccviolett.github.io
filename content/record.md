@@ -137,3 +137,4 @@ Cycle.js
 - 万能转换网站：[CDKM](https://cdkm.com/)
 - Hugo 显示 PDF：[Embed PDF Shortcode](https://github.com/anvithks/hugo-embed-pdf-shortcode)
 - 个人接入微信支付：[PAYJS](https://payjs.cn/)
+- 轻量级 Vue 开发 IDE：[HBuilderX](https://www.dcloud.io/hbuilderx.html)
