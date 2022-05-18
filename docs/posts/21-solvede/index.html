@@ -1,46 +1,88 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="zh-cn" http-equiv="Content-Language"/>
-<meta content="light dark" name="color-scheme"/>
-<meta content="罗潇阳" name="author"/>
-<meta content="1. $y'= f(x, y)$ 型 2. $y^{(n)} = f(x)$ 型 3. $y'' = f(x, y')$ 型 4. $y'' = f(y, y')$ 型 $y'' + py' + qy = 0$ 型 - 二阶常系数齐次线性微分方程 5. $y'' + py' + qy = e^{\lambda x}P_m(x)$ 型   一、解微分方程    1. $y'= f(x, y)$ 型    转化为 $y' + P(x)y = Q(x)$ 的形式，套用公式：
-$$ y = e^{-\int P(x) dx} \left(\int Q(x) e^{\int P(x) dx} dx + C \right) $$" name="description"/>
-<meta content="博客,开发者,个人" name="keywords"/>
-<meta content="summary" name="twitter:card"/>
-<meta content="如何解决微分方程相关问题？" name="twitter:title"/>
-<meta content="1. $y'= f(x, y)$ 型 2. $y^{(n)} = f(x)$ 型 3. $y'' = f(x, y')$ 型 4. $y'' = f(y, y')$ 型 $y'' + py' + qy = 0$ 型 - 二阶常系数齐次线性微分方程 5. $y'' + py' + qy = e^{\lambda x}P_m(x)$ 型   一、解微分方程    1. $y'= f(x, y)$ 型    转化为 $y' + P(x)y = Q(x)$ 的形式，套用公式：
-$$ y = e^{-\int P(x) dx} \left(\int Q(x) e^{\int P(x) dx} dx + C \right) $$" name="twitter:description"/>
-<meta content="如何解决微分方程相关问题？" property="og:title"/>
-<meta content="1. $y'= f(x, y)$ 型 2. $y^{(n)} = f(x)$ 型 3. $y'' = f(x, y')$ 型 4. $y'' = f(y, y')$ 型 $y'' + py' + qy = 0$ 型 - 二阶常系数齐次线性微分方程 5. $y'' + py' + qy = e^{\lambda x}P_m(x)$ 型   一、解微分方程    1. $y'= f(x, y)$ 型    转化为 $y' + P(x)y = Q(x)$ 的形式，套用公式：
-$$ y = e^{-\int P(x) dx} \left(\int Q(x) e^{\int P(x) dx} dx + C \right) $$" property="og:description"/>
-<meta content="article" property="og:type"/>
-<meta content="http://ccviolett.github.io/posts/21-solvede/" property="og:url"/><meta content="posts" property="article:section"/>
-<meta content="2022-03-16T19:45:28+08:00" property="article:published_time"/>
-<meta content="2022-03-16T19:45:28+08:00" property="article:modified_time"/>
-<title>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="罗潇阳">
+    <meta name="description" content="1. $y&rsquo;= f(x, y)$ 型 2. $y^{(n)} = f(x)$ 型 3. $y&rsquo;&rsquo; = f(x, y&rsquo;)$ 型 4. $y&rsquo;&rsquo; = f(y, y&rsquo;)$ 型 $y&rsquo;&rsquo; &#43; py&rsquo; &#43; qy = 0$ 型 - 二阶常系数齐次线性微分方程 5. $y&rsquo;&rsquo; &#43; py&rsquo; &#43; qy = e^{\lambda x}P_m(x)$ 型   一、解微分方程    1. $y&rsquo;= f(x, y)$ 型    转化为 $y&rsquo; &#43; P(x)y = Q(x)$ 的形式，套用公式：
+$$ y = e^{-\int P(x) dx} \left(\int Q(x) e^{\int P(x) dx} dx &#43; C \right) $$">
+    <meta name="keywords" content="博客,开发者,个人">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何解决微分方程相关问题？"/>
+<meta name="twitter:description" content="1. $y&rsquo;= f(x, y)$ 型 2. $y^{(n)} = f(x)$ 型 3. $y&rsquo;&rsquo; = f(x, y&rsquo;)$ 型 4. $y&rsquo;&rsquo; = f(y, y&rsquo;)$ 型 $y&rsquo;&rsquo; &#43; py&rsquo; &#43; qy = 0$ 型 - 二阶常系数齐次线性微分方程 5. $y&rsquo;&rsquo; &#43; py&rsquo; &#43; qy = e^{\lambda x}P_m(x)$ 型   一、解微分方程    1. $y&rsquo;= f(x, y)$ 型    转化为 $y&rsquo; &#43; P(x)y = Q(x)$ 的形式，套用公式：
+$$ y = e^{-\int P(x) dx} \left(\int Q(x) e^{\int P(x) dx} dx &#43; C \right) $$"/>
+
+    <meta property="og:title" content="如何解决微分方程相关问题？" />
+<meta property="og:description" content="1. $y&rsquo;= f(x, y)$ 型 2. $y^{(n)} = f(x)$ 型 3. $y&rsquo;&rsquo; = f(x, y&rsquo;)$ 型 4. $y&rsquo;&rsquo; = f(y, y&rsquo;)$ 型 $y&rsquo;&rsquo; &#43; py&rsquo; &#43; qy = 0$ 型 - 二阶常系数齐次线性微分方程 5. $y&rsquo;&rsquo; &#43; py&rsquo; &#43; qy = e^{\lambda x}P_m(x)$ 型   一、解微分方程    1. $y&rsquo;= f(x, y)$ 型    转化为 $y&rsquo; &#43; P(x)y = Q(x)$ 的形式，套用公式：
+$$ y = e^{-\int P(x) dx} \left(\int Q(x) e^{\int P(x) dx} dx &#43; C \right) $$" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ccviolett.github.io/posts/21-solvede/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-16T19:45:28+08:00" />
+<meta property="article:modified_time" content="2022-03-16T19:45:28+08:00" />
+
+
+
+    <title>
   如何解决微分方程相关问题？ · 罗潇阳的博客
 </title>
-<link href="http://ccviolett.github.io/posts/21-solvede/" rel="canonical"/>
-<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
-<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
-<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
-<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
-<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<meta content="Hugo 0.92.0" name="generator"/>
-</head>
-<body class="preload-transitions colorscheme-auto">
+
+    
+      <link rel="canonical" href="http://ccviolett.github.io/posts/21-solvede/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.98.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
 <div class="float-container">
-<a class="colorscheme-toggle" id="dark-mode-toggle">
-<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
-</a>
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
 </div>
-<main class="wrapper">
-<script>
+
+
+    <main class="wrapper">
+      <script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -49,7 +91,9 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -58,139 +102,171 @@ var _hmt = _hmt || [];
 
   gtag('config', 'UA-228764760-1');
 </script>
+
 <nav class="navigation">
-<section class="container">
-<a class="navigation-title" href="/">
+  <section class="container">
+    <a class="navigation-title" href="/">
       罗潇阳的博客
     </a>
-<input id="menu-toggle" type="checkbox"/>
-<label class="menu-button float-right" for="menu-toggle">
-<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
-</label>
-<ul class="navigation-list">
-<li class="navigation-item">
-<a class="navigation-link" href="/">首页</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/posts/">文章</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/solution/">题解</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/contact/">联系</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/about/">关于</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/support/">赞助</a>
-</li>
-<li class="navigation-item menu-separator">
-<span>|</span>
-</li>
-<li class="navigation-item">
-<a href="http://ccviolett.github.io/en/">🇬🇧</a>
-</li>
-</ul>
-</section>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/">首页</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">文章</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/solution/">题解</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">联系</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">关于</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/support/">赞助</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
 </nav>
-<div class="content">
-<section class="container post">
-<article>
-<header>
-<div class="post-title">
-<h1 class="title">
-<a class="title-link" href="http://ccviolett.github.io/posts/21-solvede/">
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://ccviolett.github.io/posts/21-solvede/">
               如何解决微分方程相关问题？
             </a>
-</h1>
-</div>
-<div class="post-meta">
-<div class="date">
-<span class="posted-on">
-<i aria-hidden="true" class="fa fa-calendar"></i>
-<time datetime="2022-03-16T19:45:28+08:00">
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2022-03-16T19:45:28&#43;08:00'>
                 2022 年 3 月 16 日
               </time>
-</span>
-<span class="reading-time">
-<i aria-hidden="true" class="fa fa-clock-o"></i>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
               阅读时间：2 分钟
             </span>
-</div>
-<div class="authors">
-<i aria-hidden="true" class="fa fa-user"></i>
-<a href="/authors/ccviolett/">ccviolett</a></div>
-<div class="tags">
-<i aria-hidden="true" class="fa fa-tag"></i>
-<span class="tag">
-<a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/">高等数学</a>
-</span></div>
-</div>
-</header>
-<div>
-<nav id="TableOfContents">
-<ul>
-<li><a href="#1-y-fx-y-型">1. $y'= f(x, y)$ 型</a></li>
-<li><a href="#2-yn--fx-型">2. $y^{(n)} = f(x)$ 型</a></li>
-<li><a href="#3-y--fx-y-型">3. $y'' = f(x, y')$ 型</a></li>
-<li><a href="#4-y--fy-y-型">4. $y'' = f(y, y')$ 型</a></li>
-<li><a href="#y--py--qy--0-型---二阶常系数齐次线性微分方程">$y'' + py' + qy = 0$ 型 - 二阶常系数齐次线性微分方程</a></li>
-<li><a href="#5-y--py--qy--elambda-xp_mx-型">5. $y'' + py' + qy = e^{\lambda x}P_m(x)$ 型</a></li>
-</ul>
+          </div>
+          <div class="authors">
+    <i class="fa fa-user" aria-hidden="true"></i>
+      <a href="/authors/ccviolett/">ccviolett</a></div>
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/">高等数学</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-y-fx-y-型">1. $y&rsquo;= f(x, y)$ 型</a></li>
+    <li><a href="#2-yn--fx-型">2. $y^{(n)} = f(x)$ 型</a></li>
+    <li><a href="#3-y--fx-y-型">3. $y&rsquo;&rsquo; = f(x, y&rsquo;)$ 型</a></li>
+    <li><a href="#4-y--fy-y-型">4. $y&rsquo;&rsquo; = f(y, y&rsquo;)$ 型</a></li>
+    <li><a href="#y--py--qy--0-型---二阶常系数齐次线性微分方程">$y&rsquo;&rsquo; + py&rsquo; + qy = 0$ 型 - 二阶常系数齐次线性微分方程</a></li>
+    <li><a href="#5-y--py--qy--elambda-xp_mx-型">5. $y&rsquo;&rsquo; + py&rsquo; + qy = e^{\lambda x}P_m(x)$ 型</a></li>
+  </ul>
 </nav>
 <h1 id="一解微分方程">
   一、解微分方程
   <a class="heading-link" href="#%e4%b8%80%e8%a7%a3%e5%be%ae%e5%88%86%e6%96%b9%e7%a8%8b">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h1>
 <h2 id="1-y-fx-y-型">
-  1. $y'= f(x, y)$ 型
+  1. $y&rsquo;= f(x, y)$ 型
   <a class="heading-link" href="#1-y-fx-y-%e5%9e%8b">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h2>
-<p>转化为 $y' + P(x)y = Q(x)$ 的形式，套用公式：</p>
+<p>转化为 $y&rsquo; + P(x)y = Q(x)$ 的形式，套用公式：</p>
 <p>$$
 y = e^{-\int P(x) dx} \left(\int Q(x) e^{\int P(x) dx} dx + C \right)
 $$</p>
 <h2 id="2-yn--fx-型">
   2. $y^{(n)} = f(x)$ 型
   <a class="heading-link" href="#2-yn--fx-%e5%9e%8b">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h2>
 <p>两边多次积分</p>
 <h2 id="3-y--fx-y-型">
-  3. $y'' = f(x, y')$ 型
+  3. $y&rsquo;&rsquo; = f(x, y&rsquo;)$ 型
   <a class="heading-link" href="#3-y--fx-y-%e5%9e%8b">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h2>
-<p>设 $y' = p$，则 $y'' = \frac{dp}{dx} = p'$，有 $p' = f(x, p)$，解得通解：</p>
+<p>设 $y&rsquo; = p$，则 $y&rsquo;&rsquo; = \frac{dp}{dx} = p&rsquo;$，有 $p&rsquo; = f(x, p)$，解得通解：</p>
 <p>$$
 p = \varphi(x, C_1)
 $$</p>
-<p>故 $y' = \varphi(x, C_1)$$，积分即可</p>
+<p>故 $y&rsquo; = \varphi(x, C_1)$$，积分即可</p>
 <h2 id="4-y--fy-y-型">
-  4. $y'' = f(y, y')$ 型
+  4. $y&rsquo;&rsquo; = f(y, y&rsquo;)$ 型
   <a class="heading-link" href="#4-y--fy-y-%e5%9e%8b">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h2>
-<p>设 $y' = p$，则 $y'' = \frac{dp}{dx} = \frac{dp}{dy} \cdot \frac{dy}{dx} = p\frac{dp}{dy}$。</p>
+<p>设 $y&rsquo; = p$，则 $y&rsquo;&rsquo; = \frac{dp}{dx} = \frac{dp}{dy} \cdot \frac{dy}{dx} = p\frac{dp}{dy}$。</p>
 <p>有 $p\frac{dp}{dy} = f(y, p)$，解得通解：</p>
 <p>$$
 p = \varphi(y, C_1)
 $$</p>
-<p>故 $y' = \varphi(y, C_1)$ 分离变量积分即可。</p>
+<p>故 $y&rsquo; = \varphi(y, C_1)$ 分离变量积分即可。</p>
 <h2 id="y--py--qy--0-型---二阶常系数齐次线性微分方程">
-  $y'' + py' + qy = 0$ 型 - 二阶常系数齐次线性微分方程
+  $y&rsquo;&rsquo; + py&rsquo; + qy = 0$ 型 - 二阶常系数齐次线性微分方程
   <a class="heading-link" href="#y--py--qy--0-%e5%9e%8b---%e4%ba%8c%e9%98%b6%e5%b8%b8%e7%b3%bb%e6%95%b0%e9%bd%90%e6%ac%a1%e7%ba%bf%e6%80%a7%e5%be%ae%e5%88%86%e6%96%b9%e7%a8%8b">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h2>
 <p>解其特征方程 $r^2 + pr + q = 0$，得到根 $r_1, r_2$：</p>
 <ul>
@@ -206,36 +282,56 @@ $$</p>
 </ul>
 <p>高阶常系数齐次线性微分方程同理</p>
 <h2 id="5-y--py--qy--elambda-xp_mx-型">
-  5. $y'' + py' + qy = e^{\lambda x}P_m(x)$ 型
+  5. $y&rsquo;&rsquo; + py&rsquo; + qy = e^{\lambda x}P_m(x)$ 型
   <a class="heading-link" href="#5-y--py--qy--elambda-xp_mx-%e5%9e%8b">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h2>
-<p>解对应 $y'' + py' + qy = 0$ 的特征方程 $r^2 + pr + q = 0$，得到两根 $r_1, r_2$，进而求出通解。</p>
+<p>解对应 $y&rsquo;&rsquo; + py&rsquo; + qy = 0$ 的特征方程 $r^2 + pr + q = 0$，得到两根 $r_1, r_2$，进而求出通解。</p>
 <p>若 $\lambda$ 不为其中一根，则设 $y^* = [b]P_m(x)$ 带回微分方程，通过比较系数得到 $b_0, b_1$，进而求出特解。</p>
 <p>最终答案为通解+特解。</p>
-</div>
-<footer>
-</footer>
-</article>
-<h1 style="text-align: center;">赞助区</h1>
-<div style="display: flex; flex-wrap: wrap; ">
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210866.png/w200" style="margin: 1rem"/>
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210865.jpg/w200" style="margin: 1rem"/>
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210864.png/w200" style="margin: 1rem"/>
-<p>如果觉得文章对你有帮助，可以给作者买杯咖啡。作者非常感谢你的支持，你的每一点点激励都是作者不断创作的动力。</p>
-<p>所有收到的赞助都将在<a href="/support">收到的赞助</a>里显示，你可以在支付时留下备注。</p>
-</div>
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"></script>
-<ins class="adsbygoogle" data-ad-client="ca-pub-4610306996952179" data-ad-format="auto" data-ad-slot="2405027632" data-full-width-responsive="true" style="display:block"></ins>
-<script>
+
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+
+    <h1 style="text-align: center;">赞助区</h1>
+    <div style="display: flex; flex-wrap: wrap; ">
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210866.png/w200" style="margin: 1rem"/>
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210865.jpg/w200" style="margin: 1rem"/>
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210864.png/w200" style="margin: 1rem"/>
+      <p>如果觉得文章对你有帮助，可以给作者买杯咖啡。作者非常感谢你的支持，你的每一点点激励都是作者不断创作的动力。</p>
+      <p>所有收到的赞助都将在<a href="/support">收到的赞助</a>里显示，你可以在支付时留下备注。</p>
+    </div>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"
+        crossorigin="anonymous"></script>
+    
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4610306996952179"
+        data-ad-slot="2405027632"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-<h1 style="text-align: center;">评论区</h1>
-<p>欢迎大家在下面多多评论：</p>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div id="vcomments"></div>
-<script>
+
+    <h1 style="text-align: center;">评论区</h1>
+    <p>欢迎大家在下面多多评论：</p>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="vcomments"></div>
+    <script>
         new Valine({
             el: '#vcomments',
             appId: 'pKI8zxDMRprnFwEiUfoQF3tV-gzGzoHsz',
@@ -243,11 +339,16 @@ $$</p>
             avatar: 'mp'
         })
     </script>
-</section>
-</div>
-<footer class="footer">
-<section class="container">
-<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
+
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
       
       
         ©
@@ -257,17 +358,19 @@ $$</p>
       
       
          · 
-        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
       
       
         
       
     </section>
-</footer>
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"></script>
-<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
-<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
-<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
+  </footer>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -284,7 +387,30 @@ $$</p>
         });
     });
 </script>
-</main>
-<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
-</body>
+
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
 </html>

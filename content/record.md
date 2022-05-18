@@ -10,6 +10,23 @@ categories = []
 externalLink = ""
 series = []
 +++
+### 一、值得思考的纪录片 《为什么贫穷？ Why Poverty?》
+
+推荐理由：[TODO]
+
+豆瓣链接：[为什么贫穷？ Why Poverty?](https://movie.douban.com/subject/20393972/)
+
+观看地址：https://youtu.be/TxbmjDngois
+
+### 二、空难电影三部曲《迫降航班》《萨利机长》《中国机长》
+
+推荐理由：看了一些讲解，想去看看原片。
+
+豆瓣链接：[迫降航班](https://movie.douban.com/subject/6390832/)、[萨利机长](https://movie.douban.com/subject/26416603/)、[中国机长](https://movie.douban.com/subject/30295905/)
+
+观看地址：在腾讯视频上均能看
+
+
 
 达芬奇记录：
 - 调色时先将一个片段使用 LUT，然后选中其他所有片段，在调色好的片段上按鼠标中键即可批量调色
@@ -22,6 +39,12 @@ pip 设置国内源：
 
 ```shell
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+```
+
+npm/npx 设置国内源：
+
+```shell
+npm config set registry https://registry.npm.taobao.org
 ```
 
 ### 国内读研建议

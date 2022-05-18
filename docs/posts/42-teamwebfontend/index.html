@@ -1,43 +1,85 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="zh-cn" http-equiv="Content-Language"/>
-<meta content="light dark" name="color-scheme"/>
-<meta content="罗潇阳" name="author"/>
-<meta content="关键词 相关链接 CSS 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     关键词     classList dataset  相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  CSS 知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果" name="description"/>
-<meta content="博客,开发者,个人" name="keywords"/>
-<meta content="summary" name="twitter:card"/>
-<meta content="创新实验班 Web 开发 | 前端" name="twitter:title"/>
-<meta content="关键词 相关链接 CSS 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     关键词     classList dataset  相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  CSS 知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果" name="twitter:description"/>
-<meta content="创新实验班 Web 开发 | 前端" property="og:title"/>
-<meta content="关键词 相关链接 CSS 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     关键词     classList dataset  相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  CSS 知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果" property="og:description"/>
-<meta content="article" property="og:type"/>
-<meta content="http://ccviolett.github.io/posts/42-teamwebfontend/" property="og:url"/><meta content="posts" property="article:section"/>
-<meta content="2022-04-10T10:15:53+08:00" property="article:published_time"/>
-<meta content="2022-04-10T10:15:53+08:00" property="article:modified_time"/>
-<title>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="罗潇阳">
+    <meta name="description" content="关键词 相关链接 CSS 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     关键词     classList dataset  相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  CSS 知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果">
+    <meta name="keywords" content="博客,开发者,个人">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="创新实验班 Web 开发 | 前端"/>
+<meta name="twitter:description" content="关键词 相关链接 CSS 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     关键词     classList dataset  相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  CSS 知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果"/>
+
+    <meta property="og:title" content="创新实验班 Web 开发 | 前端" />
+<meta property="og:description" content="关键词 相关链接 CSS 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     关键词     classList dataset  相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  CSS 知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ccviolett.github.io/posts/42-teamwebfontend/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-10T10:15:53+08:00" />
+<meta property="article:modified_time" content="2022-04-10T10:15:53+08:00" />
+
+
+
+    <title>
   创新实验班 Web 开发 | 前端 · 罗潇阳的博客
 </title>
-<link href="http://ccviolett.github.io/posts/42-teamwebfontend/" rel="canonical"/>
-<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
-<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
-<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
-<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
-<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<meta content="Hugo 0.92.0" name="generator"/>
-</head>
-<body class="preload-transitions colorscheme-auto">
+
+    
+      <link rel="canonical" href="http://ccviolett.github.io/posts/42-teamwebfontend/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.98.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
 <div class="float-container">
-<a class="colorscheme-toggle" id="dark-mode-toggle">
-<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
-</a>
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
 </div>
-<main class="wrapper">
-<script>
+
+
+    <main class="wrapper">
+      <script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -46,7 +88,9 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -55,109 +99,141 @@ var _hmt = _hmt || [];
 
   gtag('config', 'UA-228764760-1');
 </script>
+
 <nav class="navigation">
-<section class="container">
-<a class="navigation-title" href="/">
+  <section class="container">
+    <a class="navigation-title" href="/">
       罗潇阳的博客
     </a>
-<input id="menu-toggle" type="checkbox"/>
-<label class="menu-button float-right" for="menu-toggle">
-<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
-</label>
-<ul class="navigation-list">
-<li class="navigation-item">
-<a class="navigation-link" href="/">首页</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/posts/">文章</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/solution/">题解</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/contact/">联系</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/about/">关于</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/support/">赞助</a>
-</li>
-<li class="navigation-item menu-separator">
-<span>|</span>
-</li>
-<li class="navigation-item">
-<a href="http://ccviolett.github.io/en/">🇬🇧</a>
-</li>
-</ul>
-</section>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/">首页</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">文章</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/solution/">题解</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">联系</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">关于</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/support/">赞助</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
 </nav>
-<div class="content">
-<section class="container post">
-<article>
-<header>
-<div class="post-title">
-<h1 class="title">
-<a class="title-link" href="http://ccviolett.github.io/posts/42-teamwebfontend/">
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://ccviolett.github.io/posts/42-teamwebfontend/">
               创新实验班 Web 开发 | 前端
             </a>
-</h1>
-</div>
-<div class="post-meta">
-<div class="date">
-<span class="posted-on">
-<i aria-hidden="true" class="fa fa-calendar"></i>
-<time datetime="2022-04-10T10:15:53+08:00">
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2022-04-10T10:15:53&#43;08:00'>
                 2022 年 4 月 10 日
               </time>
-</span>
-<span class="reading-time">
-<i aria-hidden="true" class="fa fa-clock-o"></i>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
               阅读时间：4 分钟
             </span>
-</div>
-<div class="authors">
-<i aria-hidden="true" class="fa fa-user"></i>
-<a href="/authors/ccviolett/">ccviolett</a></div>
-<div class="categories">
-<i aria-hidden="true" class="fa fa-folder"></i>
-<a href="/categories/%E5%88%9B%E6%96%B0%E5%AE%9E%E9%AA%8C%E7%8F%AD-web-%E5%BC%80%E5%8F%91/">创新实验班 Web 开发</a></div>
-</div>
-</header>
-<div>
-<nav id="TableOfContents">
-<ul>
-<li><a href="#关键词">关键词</a></li>
-<li><a href="#相关链接">相关链接</a></li>
-<li><a href="#css-知识点">CSS 知识点</a>
-<ul>
-<li><a href="#浮动">浮动</a></li>
-<li><a href="#定位">定位</a></li>
-<li><a href="#语义化标签">语义化标签</a></li>
-<li><a href="#bfc">BFC</a></li>
-<li><a href="#扩展-css">扩展 CSS</a></li>
-<li><a href="#伪元素">伪元素</a></li>
-<li><a href="#css-3d-效果">CSS 3D 效果</a></li>
-<li><a href="#dpr">DPR</a></li>
-<li><a href="#rem-单位">REM 单位</a></li>
-<li><a href="#inline-block">inline-block</a></li>
-<li><a href="#flex-布局">flex 布局</a></li>
-</ul>
-</li>
-<li><a href="#案例实现">案例实现</a>
-<ul>
-<li><a href="#一选中框">（一）选中框</a></li>
-<li><a href="#二跳动的心">（二）跳动的心</a></li>
-<li><a href="#三涟漪效果">（三）涟漪效果</a></li>
-</ul>
-</li>
-</ul>
+          </div>
+          <div class="authors">
+    <i class="fa fa-user" aria-hidden="true"></i>
+      <a href="/authors/ccviolett/">ccviolett</a></div>
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/%E5%88%9B%E6%96%B0%E5%AE%9E%E9%AA%8C%E7%8F%AD-web-%E5%BC%80%E5%8F%91/">创新实验班 Web 开发</a></div>
+
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#关键词">关键词</a></li>
+    <li><a href="#相关链接">相关链接</a></li>
+    <li><a href="#css-知识点">CSS 知识点</a>
+      <ul>
+        <li><a href="#浮动">浮动</a></li>
+        <li><a href="#定位">定位</a></li>
+        <li><a href="#语义化标签">语义化标签</a></li>
+        <li><a href="#bfc">BFC</a></li>
+        <li><a href="#扩展-css">扩展 CSS</a></li>
+        <li><a href="#伪元素">伪元素</a></li>
+        <li><a href="#css-3d-效果">CSS 3D 效果</a></li>
+        <li><a href="#dpr">DPR</a></li>
+        <li><a href="#rem-单位">REM 单位</a></li>
+        <li><a href="#inline-block">inline-block</a></li>
+        <li><a href="#flex-布局">flex 布局</a></li>
+      </ul>
+    </li>
+    <li><a href="#案例实现">案例实现</a>
+      <ul>
+        <li><a href="#一选中框">（一）选中框</a></li>
+        <li><a href="#二跳动的心">（二）跳动的心</a></li>
+        <li><a href="#三涟漪效果">（三）涟漪效果</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 <h2 id="关键词">
   关键词
   <a class="heading-link" href="#%e5%85%b3%e9%94%ae%e8%af%8d">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h2>
 <ul>
 <li>classList</li>
@@ -166,8 +242,8 @@ var _hmt = _hmt || [];
 <h2 id="相关链接">
   相关链接
   <a class="heading-link" href="#%e7%9b%b8%e5%85%b3%e9%93%be%e6%8e%a5">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h2>
 <ul>
 <li><a href="https://blog.csdn.net/weixin_43885459/article/details/84671565">HTML智能表单</a></li>
@@ -186,46 +262,46 @@ var _hmt = _hmt || [];
 <h2 id="css-知识点">
   CSS 知识点
   <a class="heading-link" href="#css-%e7%9f%a5%e8%af%86%e7%82%b9">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h2>
 <h3 id="浮动">
   浮动
   <a class="heading-link" href="#%e6%b5%ae%e5%8a%a8">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果</p>
 <p>若干浮动的元素会按照横向排列</p>
 <p>元素只会在父级元素中浮动，但是浮动元素不占据空间，无法撑开父元素。可以通过设置父元素 <code>overflow: auto</code>，使得其自动调整大小以适应溢出元素。还可以设置 <code>clear: left/right/both</code> 来使得当前元素不受到浮动的影响。</p>
 <p>通过清除浮动实现聊天框：</p>
-<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410103535.png"/></p>
+<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410103535.png" alt=""></p>
 <p>浮动元素在排列时，只参考前一个元素的位置</p>
-<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410103938.png"/></p>
-<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410103730.png"/></p>
-<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410103958.png"/></p>
+<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410103938.png" alt=""></p>
+<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410103730.png" alt=""></p>
+<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410103958.png" alt=""></p>
 <p>右浮动顺序问题：最先开始浮动的元素会在最右边</p>
 <h3 id="定位">
   定位
   <a class="heading-link" href="#%e5%ae%9a%e4%bd%8d">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>在子元素设置 <code>position: aboslute</code> 进行绝对定位，参考系为最近一个 <code>position: relative</code> 的父级元素</p>
-<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410111711.png"/></p>
+<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410111711.png" alt=""></p>
 <p>设置 <code>positoin: fixed</code> 进行固定定位，参考系为屏幕。</p>
 <h3 id="语义化标签">
   语义化标签
   <a class="heading-link" href="#%e8%af%ad%e4%b9%89%e5%8c%96%e6%a0%87%e7%ad%be">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
-<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410113338.png"/></p>
+<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410113338.png" alt=""></p>
 <h3 id="bfc">
   BFC
   <a class="heading-link" href="#bfc">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>Formatting context(格式化上下文) 是 W3C CSS2.1 规范中的一个概念。它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。</p>
 <p>BFC 即 Block Formatting Contexts (块级格式化上下文)，具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，以及一些其他特性。</p>
@@ -234,12 +310,12 @@ var _hmt = _hmt || [];
 <li><a href="https://blog.csdn.net/sinat_36422236/article/details/88763187">什么是BFC？看这一篇就够了</a></li>
 <li><a href="https://juejin.cn/post/6950082193632788493">面试官：请说说什么是BFC？大白话讲清楚</a></li>
 </ul>
-<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410114123.png"/></p>
+<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410114123.png" alt=""></p>
 <h3 id="扩展-css">
   扩展 CSS
   <a class="heading-link" href="#%e6%89%a9%e5%b1%95-css">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Webkit_Extensions">WebKit CSS extensions</a></li>
@@ -249,53 +325,53 @@ var _hmt = _hmt || [];
 <h3 id="伪元素">
   伪元素
   <a class="heading-link" href="#%e4%bc%aa%e5%85%83%e7%b4%a0">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>实际上不存在的一类元素，但是可以在 CSS 中使用选择器选中，并且具有和不同元素一样的属性，可以进行调节、设置。</p>
 <h3 id="css-3d-效果">
   CSS 3D 效果
   <a class="heading-link" href="#css-3d-%e6%95%88%e6%9e%9c">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>使用 transform 中的 perspective 属性设置观察距离，再进行动画操作。</p>
-<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410122121.png"/></p>
-<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410122140.png"/></p>
+<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410122121.png" alt=""></p>
+<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410122140.png" alt=""></p>
 <p>给父元素添加观察距离，则会以父元素的中心为基准来产生效果。</p>
-<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410131334.png"/></p>
+<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220410131334.png" alt=""></p>
 <p>设置 <a href="https://www.runoob.com/cssref/css3-pr-perspective-origin.html">perspective-origin</a> 来改变观察视角。</p>
 <h3 id="dpr">
   DPR
   <a class="heading-link" href="#dpr">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>设备像素比：<code>物理像素</code>与<code>设备独立像素</code>的比值，使得元素看起来不那么小。</p>
 <p>通过设置 <code>viewport</code> 来缩放网页，可以消除移动设备上 DPR 的影响。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-html" data-lang="html">&lt;meta name=<span style="color:#666;font-style:italic">"viewport"</span> content=<span style="color:#666;font-style:italic">"width=device-width, initial-scale=1/dpr"</span>&gt;
-</code></pre></div><p>其中的 <code>1/dpr</code> 需要改写成具体的数值。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;meta name=<span style="color:#666;font-style:italic">&#34;viewport&#34;</span> content=<span style="color:#666;font-style:italic">&#34;width=device-width, initial-scale=1/dpr&#34;</span>&gt;
+</span></span></code></pre></div><p>其中的 <code>1/dpr</code> 需要改写成具体的数值。</p>
 <h3 id="rem-单位">
   REM 单位
   <a class="heading-link" href="#rem-%e5%8d%95%e4%bd%8d">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>以根元素（<code>html</code> 标签）的 <code>font-size</code> 属性为基础，假设其值为 <code>a</code>，则 <code>1 rem = a xp</code>。</p>
 <h3 id="inline-block">
   inline-block
   <a class="heading-link" href="#inline-block">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>两个相邻 <code>inline-block</code> 元素若在代码中换行，则会在中间产生一个空隙。</p>
-<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220411101333.png"/></p>
-<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220411101403.png"/></p>
+<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220411101333.png" alt=""></p>
+<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/20220411101403.png" alt=""></p>
 <h3 id="flex-布局">
   flex 布局
   <a class="heading-link" href="#flex-%e5%b8%83%e5%b1%80">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>在 flex 容器中 <code>float</code> 和 <code>vertical-align</code> 属性失效，通过 <code>justify-content</code> 来设置主轴（默认为水平方向）上元素的对齐方式，通过 <code>align-items</code> 来设置交叉轴（默认为竖直方向）上元素的对齐方式。</p>
 <p>可以通过 <code>flex-direction</code> 设置主轴方向</p>
@@ -304,20 +380,20 @@ var _hmt = _hmt || [];
 <h2 id="案例实现">
   案例实现
   <a class="heading-link" href="#%e6%a1%88%e4%be%8b%e5%ae%9e%e7%8e%b0">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h2>
 <h3 id="一选中框">
   （一）选中框
   <a class="heading-link" href="#%e4%b8%80%e9%80%89%e4%b8%ad%e6%a1%86">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <h4 id="1-效果">
   1. 效果
   <a class="heading-link" href="#1-%e6%95%88%e6%9e%9c">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
 <style>
     #checkBoxDiv input[type='checkbox'] {
@@ -350,58 +426,58 @@ var _hmt = _hmt || [];
     }
 </style>
 <div id="checkBoxDiv">
-<input type="checkbox"/>
+    <input type="checkbox">
 </div>
 <h4 id="2-代码">
   2. 代码
   <a class="heading-link" href="#2-%e4%bb%a3%e7%a0%81">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-html" data-lang="html">&lt;style&gt;
-    #<span style="color:#666;font-weight:bold;font-style:italic">checkBoxDiv</span> input[type=<span style="color:#666;font-style:italic">'checkbox'</span>] {
-        <span style="font-weight:bold;text-decoration:underline">-webkit-</span><span style="font-weight:bold;text-decoration:underline">appearance</span>: <span style="font-weight:bold;text-decoration:underline">none</span>;
-        <span style="font-weight:bold;text-decoration:underline">margin</span>: 50<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">border</span>: 10<span style="font-weight:bold;text-decoration:underline">px</span> <span style="font-weight:bold;text-decoration:underline">solid</span> #c1c1c1;
-        <span style="font-weight:bold;text-decoration:underline">border-radius</span>: 50<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">width</span>: 170<span style="font-weight:bold;text-decoration:underline">px</span>; <span style="font-weight:bold;text-decoration:underline">height</span>: 70<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">background</span>: #888;
-        <span style="font-weight:bold;text-decoration:underline">position</span>: <span style="font-weight:bold;text-decoration:underline">relative</span>;
-        <span style="font-weight:bold;text-decoration:underline">box-shadow</span>: 0 0 10<span style="font-weight:bold;text-decoration:underline">px</span> 1<span style="font-weight:bold;text-decoration:underline">px</span> #3f3f3f <span style="font-weight:bold;text-decoration:underline">inset</span>;
-        <span style="font-weight:bold;text-decoration:underline">transition</span>: 0.6<span style="font-weight:bold;text-decoration:underline">s</span>;
-    }
-    #<span style="color:#666;font-weight:bold;font-style:italic">checkBoxDiv</span> input[type=<span style="color:#666;font-style:italic">'checkbox'</span>]:checked {
-        <span style="font-weight:bold;text-decoration:underline">background</span>: #6FB500;
-    }
-    #<span style="color:#666;font-weight:bold;font-style:italic">checkBoxDiv</span> input[type=<span style="color:#666;font-style:italic">'checkbox'</span>]::after {
-        <span style="font-weight:bold;text-decoration:underline">content</span>: <span style="color:#666;font-style:italic">""</span>;
-        <span style="font-weight:bold;text-decoration:underline">display</span>: <span style="font-weight:bold;text-decoration:underline">block</span>;
-        <span style="font-weight:bold;text-decoration:underline">width</span>: 60<span style="font-weight:bold;text-decoration:underline">px</span>; <span style="font-weight:bold;text-decoration:underline">height</span>: 60<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">position</span>: <span style="font-weight:bold;text-decoration:underline">absolute</span>;
-        <span style="font-weight:bold;text-decoration:underline">left</span>: -5<span style="font-weight:bold;text-decoration:underline">px</span>; <span style="font-weight:bold;text-decoration:underline">top</span>: -5<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">border-radius</span>: 30<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">background</span>: <span style="font-weight:bold;font-style:italic">linear-gradient</span>(<span style="font-weight:bold;text-decoration:underline">to</span> <span style="font-weight:bold;text-decoration:underline">bottom</span>, #d3d3d3, #9e9e9e);
-        <span style="font-weight:bold;text-decoration:underline">box-shadow</span>: 0<span style="font-weight:bold;text-decoration:underline">px</span> 2<span style="font-weight:bold;text-decoration:underline">px</span> 2<span style="font-weight:bold;text-decoration:underline">px</span> 0<span style="font-weight:bold;text-decoration:underline">px</span> #eee <span style="font-weight:bold;text-decoration:underline">inset</span>, 2<span style="font-weight:bold;text-decoration:underline">px</span> 1<span style="font-weight:bold;text-decoration:underline">px</span> 2<span style="font-weight:bold;text-decoration:underline">px</span> 0<span style="font-weight:bold;text-decoration:underline">px</span> #333;
-        <span style="font-weight:bold;text-decoration:underline">transition</span>: 0.6<span style="font-weight:bold;text-decoration:underline">s</span>;
-    }
-    #<span style="color:#666;font-weight:bold;font-style:italic">checkBoxDiv</span> input[type=<span style="color:#666;font-style:italic">'checkbox'</span>]:checked::after {
-        <span style="font-weight:bold;text-decoration:underline">left</span>: 95<span style="font-weight:bold;text-decoration:underline">px</span>;
-    }
-&lt;/style&gt;
-&lt;div id=<span style="color:#666;font-style:italic">"checkBoxDiv"</span>&gt;
-    &lt;input type=<span style="color:#666;font-style:italic">"checkbox"</span>&gt;
-&lt;/div&gt;
-</code></pre></div><h3 id="二跳动的心">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;style&gt;
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">checkBoxDiv</span> input[type=<span style="color:#666;font-style:italic">&#39;checkbox&#39;</span>] {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">-webkit-</span><span style="font-weight:bold;text-decoration:underline">appearance</span>: <span style="font-weight:bold;text-decoration:underline">none</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">margin</span>: 50<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">border</span>: 10<span style="font-weight:bold;text-decoration:underline">px</span> <span style="font-weight:bold;text-decoration:underline">solid</span> #c1c1c1;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">border-radius</span>: 50<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">width</span>: 170<span style="font-weight:bold;text-decoration:underline">px</span>; <span style="font-weight:bold;text-decoration:underline">height</span>: 70<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">background</span>: #888;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">position</span>: <span style="font-weight:bold;text-decoration:underline">relative</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">box-shadow</span>: 0 0 10<span style="font-weight:bold;text-decoration:underline">px</span> 1<span style="font-weight:bold;text-decoration:underline">px</span> #3f3f3f <span style="font-weight:bold;text-decoration:underline">inset</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">transition</span>: 0.6<span style="font-weight:bold;text-decoration:underline">s</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">checkBoxDiv</span> input[type=<span style="color:#666;font-style:italic">&#39;checkbox&#39;</span>]:checked {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">background</span>: #6FB500;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">checkBoxDiv</span> input[type=<span style="color:#666;font-style:italic">&#39;checkbox&#39;</span>]::after {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">content</span>: <span style="color:#666;font-style:italic">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">display</span>: <span style="font-weight:bold;text-decoration:underline">block</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">width</span>: 60<span style="font-weight:bold;text-decoration:underline">px</span>; <span style="font-weight:bold;text-decoration:underline">height</span>: 60<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">position</span>: <span style="font-weight:bold;text-decoration:underline">absolute</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">left</span>: -5<span style="font-weight:bold;text-decoration:underline">px</span>; <span style="font-weight:bold;text-decoration:underline">top</span>: -5<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">border-radius</span>: 30<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">background</span>: <span style="font-weight:bold;font-style:italic">linear-gradient</span>(<span style="font-weight:bold;text-decoration:underline">to</span> <span style="font-weight:bold;text-decoration:underline">bottom</span>, #d3d3d3, #9e9e9e);
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">box-shadow</span>: 0<span style="font-weight:bold;text-decoration:underline">px</span> 2<span style="font-weight:bold;text-decoration:underline">px</span> 2<span style="font-weight:bold;text-decoration:underline">px</span> 0<span style="font-weight:bold;text-decoration:underline">px</span> #eee <span style="font-weight:bold;text-decoration:underline">inset</span>, 2<span style="font-weight:bold;text-decoration:underline">px</span> 1<span style="font-weight:bold;text-decoration:underline">px</span> 2<span style="font-weight:bold;text-decoration:underline">px</span> 0<span style="font-weight:bold;text-decoration:underline">px</span> #333;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">transition</span>: 0.6<span style="font-weight:bold;text-decoration:underline">s</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">checkBoxDiv</span> input[type=<span style="color:#666;font-style:italic">&#39;checkbox&#39;</span>]:checked::after {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">left</span>: 95<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>&lt;/style&gt;
+</span></span><span style="display:flex;"><span>&lt;div id=<span style="color:#666;font-style:italic">&#34;checkBoxDiv&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;input type=<span style="color:#666;font-style:italic">&#34;checkbox&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/div&gt;
+</span></span></code></pre></div><h3 id="二跳动的心">
   （二）跳动的心
   <a class="heading-link" href="#%e4%ba%8c%e8%b7%b3%e5%8a%a8%e7%9a%84%e5%bf%83">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <h4 id="1-效果-1">
   1. 效果
   <a class="heading-link" href="#1-%e6%95%88%e6%9e%9c-1">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
 <style>
     #heartDiv span {
@@ -428,50 +504,50 @@ var _hmt = _hmt || [];
     }
 </style>
 <div id="heartDiv">
-<span id="heart">
-<span id="heart-left"></span><span id="heart-right"></span>
-</span>
+    <span id="heart">
+        <span id="heart-left"></span><span id="heart-right"></span>
+    </span>
 </div>
 <h4 id="2-代码-1">
   2. 代码
   <a class="heading-link" href="#2-%e4%bb%a3%e7%a0%81-1">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-html" data-lang="html">&lt;style&gt;
-    #<span style="color:#666;font-weight:bold;font-style:italic">heartDiv</span> span {
-        <span style="font-weight:bold;text-decoration:underline">display</span>: <span style="font-weight:bold;text-decoration:underline">inline-block</span>;
-    }
-    #<span style="color:#666;font-weight:bold;font-style:italic">heartDiv</span> #<span style="color:#666;font-weight:bold;font-style:italic">heart-left</span>, #<span style="color:#666;font-weight:bold;font-style:italic">heart-right</span> {
-        <span style="font-weight:bold;text-decoration:underline">width</span>: 50<span style="font-weight:bold;text-decoration:underline">px</span>; <span style="font-weight:bold;text-decoration:underline">height</span>: 80<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">background-color</span>: <span style="font-weight:bold;text-decoration:underline">red</span>;
-        <span style="font-weight:bold;text-decoration:underline">border-top-left-radius</span>: 25<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">border-top-right-radius</span>: 25<span style="font-weight:bold;text-decoration:underline">px</span>;
-    }
-    #<span style="color:#666;font-weight:bold;font-style:italic">heartDiv</span> #<span style="color:#666;font-weight:bold;font-style:italic">heart-left</span> {
-        <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">rotateZ</span>(-45<span style="font-weight:bold;text-decoration:underline">deg</span>);
-    }
-    #<span style="color:#666;font-weight:bold;font-style:italic">heartDiv</span> #<span style="color:#666;font-weight:bold;font-style:italic">heart-right</span> {
-        <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">translateX</span>(-28<span style="font-weight:bold;text-decoration:underline">px</span>) <span style="font-weight:bold;font-style:italic">rotateZ</span>(45<span style="font-weight:bold;text-decoration:underline">deg</span>);
-    }
-    #<span style="color:#666;font-weight:bold;font-style:italic">heart</span> {
-        <span style="font-weight:bold;text-decoration:underline">animation</span>: heartBeats 1.5<span style="font-weight:bold;text-decoration:underline">s</span> <span style="font-weight:bold;text-decoration:underline">infinite</span>;
-    }
-    @<span style="font-weight:bold;text-decoration:underline">keyframes</span> heartBeats {
-        30% { <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(1.3); }
-        100% { <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(1); }
-    }
-&lt;/style&gt;
-&lt;div id=<span style="color:#666;font-style:italic">"heartDiv"</span>&gt;
-    &lt;span id=<span style="color:#666;font-style:italic">"heart"</span>&gt;
-        &lt;span id=<span style="color:#666;font-style:italic">"heart-left"</span>&gt;&lt;/span&gt;&lt;span id=<span style="color:#666;font-style:italic">"heart-right"</span>&gt;&lt;/span&gt;
-    &lt;/span&gt;
-&lt;/div&gt;
-</code></pre></div><h4 id="3-问题">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;style&gt;
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">heartDiv</span> span {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">display</span>: <span style="font-weight:bold;text-decoration:underline">inline-block</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">heartDiv</span> #<span style="color:#666;font-weight:bold;font-style:italic">heart-left</span>, #<span style="color:#666;font-weight:bold;font-style:italic">heart-right</span> {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">width</span>: 50<span style="font-weight:bold;text-decoration:underline">px</span>; <span style="font-weight:bold;text-decoration:underline">height</span>: 80<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">background-color</span>: <span style="font-weight:bold;text-decoration:underline">red</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">border-top-left-radius</span>: 25<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">border-top-right-radius</span>: 25<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">heartDiv</span> #<span style="color:#666;font-weight:bold;font-style:italic">heart-left</span> {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">rotateZ</span>(-45<span style="font-weight:bold;text-decoration:underline">deg</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">heartDiv</span> #<span style="color:#666;font-weight:bold;font-style:italic">heart-right</span> {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">translateX</span>(-28<span style="font-weight:bold;text-decoration:underline">px</span>) <span style="font-weight:bold;font-style:italic">rotateZ</span>(45<span style="font-weight:bold;text-decoration:underline">deg</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">heart</span> {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">animation</span>: heartBeats 1.5<span style="font-weight:bold;text-decoration:underline">s</span> <span style="font-weight:bold;text-decoration:underline">infinite</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    @<span style="font-weight:bold;text-decoration:underline">keyframes</span> heartBeats {
+</span></span><span style="display:flex;"><span>        30% { <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(1.3); }
+</span></span><span style="display:flex;"><span>        100% { <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(1); }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>&lt;/style&gt;
+</span></span><span style="display:flex;"><span>&lt;div id=<span style="color:#666;font-style:italic">&#34;heartDiv&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;span id=<span style="color:#666;font-style:italic">&#34;heart&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;span id=<span style="color:#666;font-style:italic">&#34;heart-left&#34;</span>&gt;&lt;/span&gt;&lt;span id=<span style="color:#666;font-style:italic">&#34;heart-right&#34;</span>&gt;&lt;/span&gt;
+</span></span><span style="display:flex;"><span>    &lt;/span&gt;
+</span></span><span style="display:flex;"><span>&lt;/div&gt;
+</span></span></code></pre></div><h4 id="3-问题">
   3. 问题
   <a class="heading-link" href="#3-%e9%97%ae%e9%a2%98">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
 <p>当<code>block</code>元素中内包含<code>inline-block</code>时，进行缩放（<code>scale</code>）会使得整体位移。</p>
 <style>
@@ -493,46 +569,46 @@ var _hmt = _hmt || [];
     }
 </style>
 <div id="outer">
-<div id="inner"></div>
+    <div id="inner"></div>
 </div>
 <p>问题原因：由上述示例可知（外层元素边框被标出），<code>block</code>元素宽度默认为一行，故进行缩放会使得整个页面被撑开，使得内部元素相对发生了位移。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-html" data-lang="html">&lt;style&gt;
-    #<span style="color:#666;font-weight:bold;font-style:italic">inner</span> {
-        <span style="font-weight:bold;text-decoration:underline">width</span>: 50<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">height</span>: 50<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">background-color</span>: <span style="font-weight:bold;text-decoration:underline">black</span>;
-        <span style="font-weight:bold;text-decoration:underline">display</span>: <span style="font-weight:bold;text-decoration:underline">inline-block</span>;
-    }
-    #<span style="color:#666;font-weight:bold;font-style:italic">outer</span> {
-        <span style="font-weight:bold;text-decoration:underline">margin</span>: 4<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">padding</span>: 4<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">border</span>: 1<span style="font-weight:bold;text-decoration:underline">px</span> <span style="font-weight:bold;text-decoration:underline">dotted</span> <span style="font-weight:bold;text-decoration:underline">black</span>;
-        <span style="font-weight:bold;text-decoration:underline">animation</span>: Scale 1.5<span style="font-weight:bold;text-decoration:underline">s</span> <span style="font-weight:bold;text-decoration:underline">infinite</span>;
-    }
-    @<span style="font-weight:bold;text-decoration:underline">keyframes</span> Scale {
-        30% { <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(1.3); }
-        100% { <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(1);}
-    }
-&lt;/style&gt;
-
-&lt;div id=<span style="color:#666;font-style:italic">"outer"</span>&gt;
-    &lt;div id=<span style="color:#666;font-style:italic">"inner"</span>&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre></div><p>解决方法：将要进行缩放的 <code>block</code> 元素改为 <code>inline-block</code>。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;style&gt;
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">inner</span> {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">width</span>: 50<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">height</span>: 50<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">background-color</span>: <span style="font-weight:bold;text-decoration:underline">black</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">display</span>: <span style="font-weight:bold;text-decoration:underline">inline-block</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">outer</span> {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">margin</span>: 4<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">padding</span>: 4<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">border</span>: 1<span style="font-weight:bold;text-decoration:underline">px</span> <span style="font-weight:bold;text-decoration:underline">dotted</span> <span style="font-weight:bold;text-decoration:underline">black</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">animation</span>: Scale 1.5<span style="font-weight:bold;text-decoration:underline">s</span> <span style="font-weight:bold;text-decoration:underline">infinite</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    @<span style="font-weight:bold;text-decoration:underline">keyframes</span> Scale {
+</span></span><span style="display:flex;"><span>        30% { <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(1.3); }
+</span></span><span style="display:flex;"><span>        100% { <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(1);}
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>&lt;/style&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;div id=<span style="color:#666;font-style:italic">&#34;outer&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;div id=<span style="color:#666;font-style:italic">&#34;inner&#34;</span>&gt;&lt;/div&gt;
+</span></span><span style="display:flex;"><span>&lt;/div&gt;
+</span></span></code></pre></div><p>解决方法：将要进行缩放的 <code>block</code> 元素改为 <code>inline-block</code>。</p>
 <div id="outer" style="display: inline-block;">
-<div id="inner"></div>
+    <div id="inner"></div>
 </div>
 <h3 id="三涟漪效果">
   （三）涟漪效果
   <a class="heading-link" href="#%e4%b8%89%e6%b6%9f%e6%bc%aa%e6%95%88%e6%9e%9c">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <h4 id="1-效果-2">
   1. 效果
   <a class="heading-link" href="#1-%e6%95%88%e6%9e%9c-2">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
 <style>
     #rippleDiv {
@@ -569,83 +645,102 @@ var _hmt = _hmt || [];
     }
 </style>
 <div id="rippleDiv">
-<div class="point">
-<div class="ripple-base" id="ripple1"></div>
-<div class="ripple-base" id="ripple2"></div>
-<div class="ripple-base" id="ripple3"></div>
-</div>
+    <div class="point">
+        <div class="ripple-base" id="ripple1"></div>
+        <div class="ripple-base" id="ripple2"></div>
+        <div class="ripple-base" id="ripple3"></div>
+    </div>
 </div>
 <h4 id="2-代码-2">
   2. 代码
   <a class="heading-link" href="#2-%e4%bb%a3%e7%a0%81-2">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-html" data-lang="html">&lt;style&gt;
-    #<span style="color:#666;font-weight:bold;font-style:italic">rippleDiv</span> {
-        <span style="font-weight:bold;text-decoration:underline">margin</span>: 80<span style="font-weight:bold;text-decoration:underline">px</span>;
-    }
-    .<span style="color:#666;font-weight:bold;font-style:italic">point</span> {
-        <span style="font-weight:bold;text-decoration:underline">width</span>: 10<span style="font-weight:bold;text-decoration:underline">px</span>; <span style="font-weight:bold;text-decoration:underline">height</span>: 10<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">background</span>: #6AD7E9;
-        <span style="font-weight:bold;text-decoration:underline">border-radius</span>: 50<span style="font-weight:bold;text-decoration:underline">%</span>;
-        <span style="font-weight:bold;text-decoration:underline">position</span>: <span style="font-weight:bold;text-decoration:underline">relative</span>;
-    }
-    .<span style="color:#666;font-weight:bold;font-style:italic">ripple-base</span> {
-        <span style="font-weight:bold;text-decoration:underline">width</span>: 120<span style="font-weight:bold;text-decoration:underline">px</span>; <span style="font-weight:bold;text-decoration:underline">height</span>: 120<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">border</span>: 2<span style="font-weight:bold;text-decoration:underline">px</span> <span style="font-weight:bold;text-decoration:underline">solid</span> #00cfec;
-        <span style="font-weight:bold;text-decoration:underline">border-radius</span>: 50<span style="font-weight:bold;text-decoration:underline">%</span>;
-        <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(0.01);
-        <span style="font-weight:bold;text-decoration:underline">position</span>: <span style="font-weight:bold;text-decoration:underline">absolute</span>;
-        <span style="font-weight:bold;text-decoration:underline">left</span>: -55<span style="font-weight:bold;text-decoration:underline">px</span>;
-        <span style="font-weight:bold;text-decoration:underline">top</span>: -55<span style="font-weight:bold;text-decoration:underline">px</span>;
-    }
-    #<span style="color:#666;font-weight:bold;font-style:italic">ripple1</span> {
-        <span style="font-weight:bold;text-decoration:underline">animation</span>: Ripple 4500<span style="font-weight:bold;text-decoration:underline">ms</span> 225<span style="font-weight:bold;text-decoration:underline">ms</span> <span style="font-weight:bold;text-decoration:underline">infinite</span>;
-    }
-    #<span style="color:#666;font-weight:bold;font-style:italic">ripple2</span> {
-        <span style="font-weight:bold;text-decoration:underline">animation</span>: Ripple 4500<span style="font-weight:bold;text-decoration:underline">ms</span> 1075<span style="font-weight:bold;text-decoration:underline">ms</span> <span style="font-weight:bold;text-decoration:underline">infinite</span>;
-    }
-    #<span style="color:#666;font-weight:bold;font-style:italic">ripple3</span> {
-        <span style="font-weight:bold;text-decoration:underline">animation</span>: Ripple 4500<span style="font-weight:bold;text-decoration:underline">ms</span> 1925<span style="font-weight:bold;text-decoration:underline">ms</span> <span style="font-weight:bold;text-decoration:underline">infinite</span>;
-    }
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;style&gt;
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">rippleDiv</span> {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">margin</span>: 80<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .<span style="color:#666;font-weight:bold;font-style:italic">point</span> {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">width</span>: 10<span style="font-weight:bold;text-decoration:underline">px</span>; <span style="font-weight:bold;text-decoration:underline">height</span>: 10<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">background</span>: #6AD7E9;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">border-radius</span>: 50<span style="font-weight:bold;text-decoration:underline">%</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">position</span>: <span style="font-weight:bold;text-decoration:underline">relative</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .<span style="color:#666;font-weight:bold;font-style:italic">ripple-base</span> {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">width</span>: 120<span style="font-weight:bold;text-decoration:underline">px</span>; <span style="font-weight:bold;text-decoration:underline">height</span>: 120<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">border</span>: 2<span style="font-weight:bold;text-decoration:underline">px</span> <span style="font-weight:bold;text-decoration:underline">solid</span> #00cfec;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">border-radius</span>: 50<span style="font-weight:bold;text-decoration:underline">%</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(0.01);
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">position</span>: <span style="font-weight:bold;text-decoration:underline">absolute</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">left</span>: -55<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">top</span>: -55<span style="font-weight:bold;text-decoration:underline">px</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">ripple1</span> {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">animation</span>: Ripple 4500<span style="font-weight:bold;text-decoration:underline">ms</span> 225<span style="font-weight:bold;text-decoration:underline">ms</span> <span style="font-weight:bold;text-decoration:underline">infinite</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">ripple2</span> {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">animation</span>: Ripple 4500<span style="font-weight:bold;text-decoration:underline">ms</span> 1075<span style="font-weight:bold;text-decoration:underline">ms</span> <span style="font-weight:bold;text-decoration:underline">infinite</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    #<span style="color:#666;font-weight:bold;font-style:italic">ripple3</span> {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold;text-decoration:underline">animation</span>: Ripple 4500<span style="font-weight:bold;text-decoration:underline">ms</span> 1925<span style="font-weight:bold;text-decoration:underline">ms</span> <span style="font-weight:bold;text-decoration:underline">infinite</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    @<span style="font-weight:bold;text-decoration:underline">keyframes</span> Ripple {
+</span></span><span style="display:flex;"><span>        80% { <span style="font-weight:bold;text-decoration:underline">opacity</span>: 0.2; <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(0.7);}
+</span></span><span style="display:flex;"><span>        100% { <span style="font-weight:bold;text-decoration:underline">opacity</span>: 0; <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(1);}
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>&lt;/style&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;div id=<span style="color:#666;font-style:italic">&#34;rippleDiv&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;div class=<span style="color:#666;font-style:italic">&#34;point&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;div class=<span style="color:#666;font-style:italic">&#34;ripple-base&#34;</span> id=<span style="color:#666;font-style:italic">&#34;ripple1&#34;</span>&gt;&lt;/div&gt;
+</span></span><span style="display:flex;"><span>        &lt;div class=<span style="color:#666;font-style:italic">&#34;ripple-base&#34;</span> id=<span style="color:#666;font-style:italic">&#34;ripple2&#34;</span>&gt;&lt;/div&gt;
+</span></span><span style="display:flex;"><span>        &lt;div class=<span style="color:#666;font-style:italic">&#34;ripple-base&#34;</span> id=<span style="color:#666;font-style:italic">&#34;ripple3&#34;</span>&gt;&lt;/div&gt;
+</span></span><span style="display:flex;"><span>    &lt;/div&gt;
+</span></span><span style="display:flex;"><span>&lt;/div&gt;
+</span></span></code></pre></div>
+      </div>
 
-    @<span style="font-weight:bold;text-decoration:underline">keyframes</span> Ripple {
-        80% { <span style="font-weight:bold;text-decoration:underline">opacity</span>: 0.2; <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(0.7);}
-        100% { <span style="font-weight:bold;text-decoration:underline">opacity</span>: 0; <span style="font-weight:bold;text-decoration:underline">transform</span>: <span style="font-weight:bold;font-style:italic">scale</span>(1);}
-    }
-&lt;/style&gt;
+      <footer>
+        
 
-&lt;div id=<span style="color:#666;font-style:italic">"rippleDiv"</span>&gt;
-    &lt;div class=<span style="color:#666;font-style:italic">"point"</span>&gt;
-        &lt;div class=<span style="color:#666;font-style:italic">"ripple-base"</span> id=<span style="color:#666;font-style:italic">"ripple1"</span>&gt;&lt;/div&gt;
-        &lt;div class=<span style="color:#666;font-style:italic">"ripple-base"</span> id=<span style="color:#666;font-style:italic">"ripple2"</span>&gt;&lt;/div&gt;
-        &lt;div class=<span style="color:#666;font-style:italic">"ripple-base"</span> id=<span style="color:#666;font-style:italic">"ripple3"</span>&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre></div>
-</div>
-<footer>
-</footer>
-</article>
-<h1 style="text-align: center;">赞助区</h1>
-<div style="display: flex; flex-wrap: wrap; ">
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210866.png/w200" style="margin: 1rem"/>
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210865.jpg/w200" style="margin: 1rem"/>
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210864.png/w200" style="margin: 1rem"/>
-<p>如果觉得文章对你有帮助，可以给作者买杯咖啡。作者非常感谢你的支持，你的每一点点激励都是作者不断创作的动力。</p>
-<p>所有收到的赞助都将在<a href="/support">收到的赞助</a>里显示，你可以在支付时留下备注。</p>
-</div>
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"></script>
-<ins class="adsbygoogle" data-ad-client="ca-pub-4610306996952179" data-ad-format="auto" data-ad-slot="2405027632" data-full-width-responsive="true" style="display:block"></ins>
-<script>
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+
+    <h1 style="text-align: center;">赞助区</h1>
+    <div style="display: flex; flex-wrap: wrap; ">
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210866.png/w200" style="margin: 1rem"/>
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210865.jpg/w200" style="margin: 1rem"/>
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210864.png/w200" style="margin: 1rem"/>
+      <p>如果觉得文章对你有帮助，可以给作者买杯咖啡。作者非常感谢你的支持，你的每一点点激励都是作者不断创作的动力。</p>
+      <p>所有收到的赞助都将在<a href="/support">收到的赞助</a>里显示，你可以在支付时留下备注。</p>
+    </div>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"
+        crossorigin="anonymous"></script>
+    
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4610306996952179"
+        data-ad-slot="2405027632"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-<h1 style="text-align: center;">评论区</h1>
-<p>欢迎大家在下面多多评论：</p>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div id="vcomments"></div>
-<script>
+
+    <h1 style="text-align: center;">评论区</h1>
+    <p>欢迎大家在下面多多评论：</p>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="vcomments"></div>
+    <script>
         new Valine({
             el: '#vcomments',
             appId: 'pKI8zxDMRprnFwEiUfoQF3tV-gzGzoHsz',
@@ -653,11 +748,16 @@ var _hmt = _hmt || [];
             avatar: 'mp'
         })
     </script>
-</section>
-</div>
-<footer class="footer">
-<section class="container">
-<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
+
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
       
       
         ©
@@ -667,17 +767,19 @@ var _hmt = _hmt || [];
       
       
          · 
-        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
       
       
         
       
     </section>
-</footer>
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"></script>
-<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
-<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
-<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
+  </footer>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -694,7 +796,30 @@ var _hmt = _hmt || [];
         });
     });
 </script>
-</main>
-<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
-</body>
+
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
 </html>

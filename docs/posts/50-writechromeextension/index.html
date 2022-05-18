@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="zh-cn" http-equiv="Content-Language"/>
-<meta content="light dark" name="color-scheme"/>
-<meta content="罗潇阳" name="author"/>
-<meta content="教程    为了完成稀土掘金编程挑战赛
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="罗潇阳">
+    <meta name="description" content="教程    为了完成稀土掘金编程挑战赛
 首先对插件有个简单的印象 10分钟入门chrome(谷歌)浏览器插件开发，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 browser_action。
 大概知道插件的概念后，结合 手把手教你开发chrome扩展 完成自己的第一个插件。
 我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章Chrome Manifest V3 - 披着羊皮的狼？大概了解一切情况。
@@ -20,11 +24,12 @@
 javascript heredoc多行字符串    参考资料：js与多行字符串
 巧妙利用了 function 的 toString 方法，转为字符串后有换行符 \n
 缺点在于不能使用压缩器与不能插入 js 逻辑
-function heredoc(fn) { return fn." name="description"/>
-<meta content="博客,开发者,个人" name="keywords"/>
-<meta content="summary" name="twitter:card"/>
-<meta content="学习如何写 Chrome 插件" name="twitter:title"/>
-<meta content="教程    为了完成稀土掘金编程挑战赛
+function heredoc(fn) {  return fn.">
+    <meta name="keywords" content="博客,开发者,个人">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="学习如何写 Chrome 插件"/>
+<meta name="twitter:description" content="教程    为了完成稀土掘金编程挑战赛
 首先对插件有个简单的印象 10分钟入门chrome(谷歌)浏览器插件开发，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 browser_action。
 大概知道插件的概念后，结合 手把手教你开发chrome扩展 完成自己的第一个插件。
 我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章Chrome Manifest V3 - 披着羊皮的狼？大概了解一切情况。
@@ -38,9 +43,10 @@ function heredoc(fn) { return fn." name="description"/>
 javascript heredoc多行字符串    参考资料：js与多行字符串
 巧妙利用了 function 的 toString 方法，转为字符串后有换行符 \n
 缺点在于不能使用压缩器与不能插入 js 逻辑
-function heredoc(fn) { return fn." name="twitter:description"/>
-<meta content="学习如何写 Chrome 插件" property="og:title"/>
-<meta content="教程    为了完成稀土掘金编程挑战赛
+function heredoc(fn) {  return fn."/>
+
+    <meta property="og:title" content="学习如何写 Chrome 插件" />
+<meta property="og:description" content="教程    为了完成稀土掘金编程挑战赛
 首先对插件有个简单的印象 10分钟入门chrome(谷歌)浏览器插件开发，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 browser_action。
 大概知道插件的概念后，结合 手把手教你开发chrome扩展 完成自己的第一个插件。
 我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章Chrome Manifest V3 - 披着羊皮的狼？大概了解一切情况。
@@ -54,32 +60,68 @@ function heredoc(fn) { return fn." name="twitter:description"/>
 javascript heredoc多行字符串    参考资料：js与多行字符串
 巧妙利用了 function 的 toString 方法，转为字符串后有换行符 \n
 缺点在于不能使用压缩器与不能插入 js 逻辑
-function heredoc(fn) { return fn." property="og:description"/>
-<meta content="article" property="og:type"/>
-<meta content="http://ccviolett.github.io/posts/50-writechromeextension/" property="og:url"/><meta content="posts" property="article:section"/>
-<meta content="2022-05-03T16:40:12+08:00" property="article:published_time"/>
-<meta content="2022-05-03T16:40:12+08:00" property="article:modified_time"/>
-<title>
+function heredoc(fn) {  return fn." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ccviolett.github.io/posts/50-writechromeextension/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-03T16:40:12+08:00" />
+<meta property="article:modified_time" content="2022-05-03T16:40:12+08:00" />
+
+
+
+    <title>
   学习如何写 Chrome 插件 · 罗潇阳的博客
 </title>
-<link href="http://ccviolett.github.io/posts/50-writechromeextension/" rel="canonical"/>
-<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
-<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
-<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
-<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
-<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<meta content="Hugo 0.92.0" name="generator"/>
-</head>
-<body class="preload-transitions colorscheme-auto">
+
+    
+      <link rel="canonical" href="http://ccviolett.github.io/posts/50-writechromeextension/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.98.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
 <div class="float-container">
-<a class="colorscheme-toggle" id="dark-mode-toggle">
-<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
-</a>
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
 </div>
-<main class="wrapper">
-<script>
+
+
+    <main class="wrapper">
+      <script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -88,7 +130,9 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -97,75 +141,108 @@ var _hmt = _hmt || [];
 
   gtag('config', 'UA-228764760-1');
 </script>
+
 <nav class="navigation">
-<section class="container">
-<a class="navigation-title" href="/">
+  <section class="container">
+    <a class="navigation-title" href="/">
       罗潇阳的博客
     </a>
-<input id="menu-toggle" type="checkbox"/>
-<label class="menu-button float-right" for="menu-toggle">
-<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
-</label>
-<ul class="navigation-list">
-<li class="navigation-item">
-<a class="navigation-link" href="/">首页</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/posts/">文章</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/solution/">题解</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/contact/">联系</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/about/">关于</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/support/">赞助</a>
-</li>
-<li class="navigation-item menu-separator">
-<span>|</span>
-</li>
-<li class="navigation-item">
-<a href="http://ccviolett.github.io/en/">🇬🇧</a>
-</li>
-</ul>
-</section>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/">首页</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">文章</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/solution/">题解</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">联系</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">关于</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/support/">赞助</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
 </nav>
-<div class="content">
-<section class="container post">
-<article>
-<header>
-<div class="post-title">
-<h1 class="title">
-<a class="title-link" href="http://ccviolett.github.io/posts/50-writechromeextension/">
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://ccviolett.github.io/posts/50-writechromeextension/">
               学习如何写 Chrome 插件
             </a>
-</h1>
-</div>
-<div class="post-meta">
-<div class="date">
-<span class="posted-on">
-<i aria-hidden="true" class="fa fa-calendar"></i>
-<time datetime="2022-05-03T16:40:12+08:00">
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2022-05-03T16:40:12&#43;08:00'>
                 2022 年 5 月 3 日
               </time>
-</span>
-<span class="reading-time">
-<i aria-hidden="true" class="fa fa-clock-o"></i>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
               阅读时间：2 分钟
             </span>
-</div>
-</div>
-</header>
-<div>
-<h2 id="教程">
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <h2 id="教程">
   教程
   <a class="heading-link" href="#%e6%95%99%e7%a8%8b">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h2>
 <p>为了完成<a href="https://hackathon2022.juejin.cn/">稀土掘金编程挑战赛</a></p>
 <p>首先对插件有个简单的印象 <a href="https://juejin.cn/post/6904797929056239630">10分钟入门chrome(谷歌)浏览器插件开发</a>，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 <code>browser_action</code>。</p>
@@ -184,135 +261,154 @@ var _hmt = _hmt || [];
 <h2 id="总结">
   总结
   <a class="heading-link" href="#%e6%80%bb%e7%bb%93">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h2>
 <p>这次项目中我学到了以下这些东西：</p>
 <h3 id="javascript-heredoc多行字符串">
   javascript heredoc多行字符串
   <a class="heading-link" href="#javascript-heredoc%e5%a4%9a%e8%a1%8c%e5%ad%97%e7%ac%a6%e4%b8%b2">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>参考资料：<a href="https://www.cnblogs.com/yakun/p/3887591.html">js与多行字符串</a></p>
 <p>巧妙利用了 function 的 toString 方法，转为字符串后有换行符 <code>\n</code></p>
 <p>缺点在于不能使用压缩器与不能插入 js 逻辑</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-javascript" data-lang="javascript"><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> heredoc(fn) {
-    <span style="font-weight:bold;text-decoration:underline">return</span> fn.toString().split(<span style="color:#666;font-style:italic">'\n'</span>).slice(1,-1).join(<span style="color:#666;font-style:italic">'\n'</span>) + <span style="color:#666;font-style:italic">'\n'</span>
-}
-
-<span style="font-weight:bold;font-style:italic;text-decoration:underline">var</span> tmpl = heredoc(<span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span>(){<span style="color:#888;font-style:italic">/*
-</span><span style="color:#888;font-style:italic">    !!! 5
-</span><span style="color:#888;font-style:italic">    html
-</span><span style="color:#888;font-style:italic">      include header
-</span><span style="color:#888;font-style:italic">      body
-</span><span style="color:#888;font-style:italic">        //if IE 6
-</span><span style="color:#888;font-style:italic">            .alert.alert-error
-</span><span style="color:#888;font-style:italic">                center 对不起，我们不支持IE6，请升级你的浏览器
-</span><span style="color:#888;font-style:italic">                    a(href="http://windows.microsoft.com/zh-CN/internet-explorer/download-ie") | IE8官方下载
-</span><span style="color:#888;font-style:italic">                    a(href="https://www.google.com/intl/en/chrome/browser/") | Chrome下载
-</span><span style="color:#888;font-style:italic">        include head
-</span><span style="color:#888;font-style:italic">        .container
-</span><span style="color:#888;font-style:italic">            .row-fluid
-</span><span style="color:#888;font-style:italic">                .span8
-</span><span style="color:#888;font-style:italic">                    block main
-</span><span style="color:#888;font-style:italic">                    include pagerbar
-</span><span style="color:#888;font-style:italic">                .span4
-</span><span style="color:#888;font-style:italic">                    include sidebar
-</span><span style="color:#888;font-style:italic">        include footer
-</span><span style="color:#888;font-style:italic">        include script
-</span><span style="color:#888;font-style:italic"> */</span>});
-</code></pre></div><h3 id="css-渐变">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> heredoc(fn) {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold;text-decoration:underline">return</span> fn.toString().split(<span style="color:#666;font-style:italic">&#39;\n&#39;</span>).slice(1,-1).join(<span style="color:#666;font-style:italic">&#39;\n&#39;</span>) + <span style="color:#666;font-style:italic">&#39;\n&#39;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">var</span> tmpl = heredoc(<span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span>(){<span style="color:#888;font-style:italic">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">    !!! 5
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">    html
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">      include header
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">      body
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">        //if IE 6
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">            .alert.alert-error
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                center 对不起，我们不支持IE6，请升级你的浏览器
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                    a(href=&#34;http://windows.microsoft.com/zh-CN/internet-explorer/download-ie&#34;) | IE8官方下载
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                    a(href=&#34;https://www.google.com/intl/en/chrome/browser/&#34;) | Chrome下载
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">        include head
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">        .container
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">            .row-fluid
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                .span8
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                    block main
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                    include pagerbar
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                .span4
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">                    include sidebar
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">        include footer
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">        include script
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"> */</span>});
+</span></span></code></pre></div><h3 id="css-渐变">
   CSS 渐变
   <a class="heading-link" href="#css-%e6%b8%90%e5%8f%98">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>一个结合贝塞尔曲线的很舒服的渐变设置：</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-css" data-lang="css">transition: all .<span style="color:#666;font-weight:bold;font-style:italic">3s</span> cubic-bezier(.<span style="color:#666;font-weight:bold;font-style:italic">4</span>, 0, .<span style="color:#666;font-weight:bold;font-style:italic">2</span>, 1);
-</code></pre></div><h3 id="hex-转-rgba">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>transition: all .<span style="color:#666;font-weight:bold;font-style:italic">3s</span> cubic-bezier(.<span style="color:#666;font-weight:bold;font-style:italic">4</span>, 0, .<span style="color:#666;font-weight:bold;font-style:italic">2</span>, 1);
+</span></span></code></pre></div><h3 id="hex-转-rgba">
   Hex 转 RGBA
   <a class="heading-link" href="#hex-%e8%bd%ac-rgba">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-javascript" data-lang="javascript"><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> htr(hex, opacity) {
-  <span style="color:#888;font-style:italic">// Hex to RGBA
-</span><span style="color:#888;font-style:italic"></span>  red = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">"0x"</span> + hex.slice(1, 3));
-  green = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">"0x"</span> + hex.slice(3, 5));
-  blue = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">"0x"</span> + hex.slice(5, 7));
-  <span style="font-weight:bold;text-decoration:underline">return</span> red + <span style="color:#666;font-style:italic">", "</span> + green + <span style="color:#666;font-style:italic">", "</span> + blue;
-}
-
-<span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> htrof(hex, opacity) {
-  <span style="color:#888;font-style:italic">// Hex to RGBA with Opacity Full format
-</span><span style="color:#888;font-style:italic"></span>  red = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">"0x"</span> + hex.slice(1, 3));
-  green = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">"0x"</span> + hex.slice(3, 5));
-  blue = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">"0x"</span> + hex.slice(5, 7));
-  rgba = <span style="color:#666;font-style:italic">"rgba("</span> + red + <span style="color:#666;font-style:italic">","</span> + green + <span style="color:#666;font-style:italic">","</span> + blue + <span style="color:#666;font-style:italic">","</span> + opacity + <span style="color:#666;font-style:italic">")"</span>;
-  <span style="font-weight:bold;text-decoration:underline">return</span> rgba;
-}
-</code></pre></div><h3 id="通过-js-实现-hover-效果">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> htr(hex, opacity) {
+</span></span><span style="display:flex;"><span>  <span style="color:#888;font-style:italic">// Hex to RGBA
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>  red = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">&#34;0x&#34;</span> + hex.slice(1, 3));
+</span></span><span style="display:flex;"><span>  green = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">&#34;0x&#34;</span> + hex.slice(3, 5));
+</span></span><span style="display:flex;"><span>  blue = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">&#34;0x&#34;</span> + hex.slice(5, 7));
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> red + <span style="color:#666;font-style:italic">&#34;, &#34;</span> + green + <span style="color:#666;font-style:italic">&#34;, &#34;</span> + blue;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> htrof(hex, opacity) {
+</span></span><span style="display:flex;"><span>  <span style="color:#888;font-style:italic">// Hex to RGBA with Opacity Full format
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>  red = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">&#34;0x&#34;</span> + hex.slice(1, 3));
+</span></span><span style="display:flex;"><span>  green = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">&#34;0x&#34;</span> + hex.slice(3, 5));
+</span></span><span style="display:flex;"><span>  blue = <span style="font-weight:bold;font-style:italic">parseInt</span>(<span style="color:#666;font-style:italic">&#34;0x&#34;</span> + hex.slice(5, 7));
+</span></span><span style="display:flex;"><span>  rgba = <span style="color:#666;font-style:italic">&#34;rgba(&#34;</span> + red + <span style="color:#666;font-style:italic">&#34;,&#34;</span> + green + <span style="color:#666;font-style:italic">&#34;,&#34;</span> + blue + <span style="color:#666;font-style:italic">&#34;,&#34;</span> + opacity + <span style="color:#666;font-style:italic">&#34;)&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> rgba;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="通过-js-实现-hover-效果">
   通过 JS 实现 hover 效果
   <a class="heading-link" href="#%e9%80%9a%e8%bf%87-js-%e5%ae%9e%e7%8e%b0-hover-%e6%95%88%e6%9e%9c">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-fallback" data-lang="fallback">element.onmouseover = function() {
-  // set up
-  // this.style = ...
-}
-element.onmouseout = function() {
-  // set back
-  // this.style = "";
-}
-</code></pre></div><h3 id="aspect-ratio-参数">
-<code>aspect-ratio</code> 参数
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>element.onmouseover = function() {
+</span></span><span style="display:flex;"><span>  // set up
+</span></span><span style="display:flex;"><span>  // this.style = ...
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>element.onmouseout = function() {
+</span></span><span style="display:flex;"><span>  // set back
+</span></span><span style="display:flex;"><span>  // this.style = &#34;&#34;;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="aspect-ratio-参数">
+  <code>aspect-ratio</code> 参数
   <a class="heading-link" href="#aspect-ratio-%e5%8f%82%e6%95%b0">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>可以设置图片的长宽比</p>
 <h3 id="一个还在完善的-js-阴影函数">
   一个还在完善的 JS 阴影函数
   <a class="heading-link" href="#%e4%b8%80%e4%b8%aa%e8%bf%98%e5%9c%a8%e5%ae%8c%e5%96%84%e7%9a%84-js-%e9%98%b4%e5%bd%b1%e5%87%bd%e6%95%b0">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>偷的 <code>MDUI</code> 的参数。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-javascript" data-lang="javascript"><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> Shadow(color, level) {
-  <span style="font-weight:bold;font-style:italic;text-decoration:underline">let</span> ag;
-  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 1) ag = [<span style="color:#666;font-style:italic">"0 2px 2px -1px"</span>, <span style="color:#666;font-style:italic">"0 1px 1px 0"</span>, <span style="color:#666;font-style:italic">"0 1px 3px 0"</span>];
-  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 4) ag = [<span style="color:#666;font-style:italic">"0 2px 4px -1px"</span>, <span style="color:#666;font-style:italic">"0 4px 5px 0"</span>, <span style="color:#666;font-style:italic">"0 1px 10px 0"</span>];
-  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 8) ag = [<span style="color:#666;font-style:italic">"0 5px 5px -3px"</span>, <span style="color:#666;font-style:italic">"0 8px 10px 1px"</span>, <span style="color:#666;font-style:italic">"0 3px 14px 2px"</span>];
-  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 12) ag = [<span style="color:#666;font-style:italic">"0 7px 8px -4px"</span>, <span style="color:#666;font-style:italic">"0 12px 17px 2px"</span>, <span style="color:#666;font-style:italic">"0 5px 22px 4px"</span>]; 
-  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 18) ag = [<span style="color:#666;font-style:italic">"0 9px 11px -5px"</span>, <span style="color:#666;font-style:italic">"0 18px 28px 2px"</span>, <span style="color:#666;font-style:italic">"0 7px 24px 6px"</span>]; 
-  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 24) ag = [<span style="color:#666;font-style:italic">"0 11px 15px -7px"</span>, <span style="color:#666;font-style:italic">"0 24px 38px 3px"</span>, <span style="color:#666;font-style:italic">"9px 46px 8px"</span>];
-  <span style="font-weight:bold;text-decoration:underline">return</span> <span style="color:#666;font-style:italic">"box-shadow: "</span> + ag[0] + <span style="color:#666;font-style:italic">" rgba("</span> + color + <span style="color:#666;font-style:italic">",.2),"</span> + ag[1] + <span style="color:#666;font-style:italic">" rgba("</span> + color + <span style="color:#666;font-style:italic">",.14),"</span> + ag[2] + <span style="color:#666;font-style:italic">" rgba("</span> + color + <span style="color:#666;font-style:italic">",.12)!important;"</span>;
-}
-</code></pre></div>
-</div>
-<footer>
-</footer>
-</article>
-<h1 style="text-align: center;">赞助区</h1>
-<div style="display: flex; flex-wrap: wrap; ">
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210866.png/w200" style="margin: 1rem"/>
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210865.jpg/w200" style="margin: 1rem"/>
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210864.png/w200" style="margin: 1rem"/>
-<p>如果觉得文章对你有帮助，可以给作者买杯咖啡。作者非常感谢你的支持，你的每一点点激励都是作者不断创作的动力。</p>
-<p>所有收到的赞助都将在<a href="/support">收到的赞助</a>里显示，你可以在支付时留下备注。</p>
-</div>
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"></script>
-<ins class="adsbygoogle" data-ad-client="ca-pub-4610306996952179" data-ad-format="auto" data-ad-slot="2405027632" data-full-width-responsive="true" style="display:block"></ins>
-<script>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic;text-decoration:underline">function</span> Shadow(color, level) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;font-style:italic;text-decoration:underline">let</span> ag;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 1) ag = [<span style="color:#666;font-style:italic">&#34;0 2px 2px -1px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 1px 1px 0&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 1px 3px 0&#34;</span>];
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 4) ag = [<span style="color:#666;font-style:italic">&#34;0 2px 4px -1px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 4px 5px 0&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 1px 10px 0&#34;</span>];
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 8) ag = [<span style="color:#666;font-style:italic">&#34;0 5px 5px -3px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 8px 10px 1px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 3px 14px 2px&#34;</span>];
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 12) ag = [<span style="color:#666;font-style:italic">&#34;0 7px 8px -4px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 12px 17px 2px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 5px 22px 4px&#34;</span>]; 
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 18) ag = [<span style="color:#666;font-style:italic">&#34;0 9px 11px -5px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 18px 28px 2px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 7px 24px 6px&#34;</span>]; 
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">if</span> (level == 24) ag = [<span style="color:#666;font-style:italic">&#34;0 11px 15px -7px&#34;</span>, <span style="color:#666;font-style:italic">&#34;0 24px 38px 3px&#34;</span>, <span style="color:#666;font-style:italic">&#34;9px 46px 8px&#34;</span>];
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold;text-decoration:underline">return</span> <span style="color:#666;font-style:italic">&#34;box-shadow: &#34;</span> + ag[0] + <span style="color:#666;font-style:italic">&#34; rgba(&#34;</span> + color + <span style="color:#666;font-style:italic">&#34;,.2),&#34;</span> + ag[1] + <span style="color:#666;font-style:italic">&#34; rgba(&#34;</span> + color + <span style="color:#666;font-style:italic">&#34;,.14),&#34;</span> + ag[2] + <span style="color:#666;font-style:italic">&#34; rgba(&#34;</span> + color + <span style="color:#666;font-style:italic">&#34;,.12)!important;&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+
+    <h1 style="text-align: center;">赞助区</h1>
+    <div style="display: flex; flex-wrap: wrap; ">
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210866.png/w200" style="margin: 1rem"/>
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210865.jpg/w200" style="margin: 1rem"/>
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210864.png/w200" style="margin: 1rem"/>
+      <p>如果觉得文章对你有帮助，可以给作者买杯咖啡。作者非常感谢你的支持，你的每一点点激励都是作者不断创作的动力。</p>
+      <p>所有收到的赞助都将在<a href="/support">收到的赞助</a>里显示，你可以在支付时留下备注。</p>
+    </div>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"
+        crossorigin="anonymous"></script>
+    
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4610306996952179"
+        data-ad-slot="2405027632"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-<h1 style="text-align: center;">评论区</h1>
-<p>欢迎大家在下面多多评论：</p>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div id="vcomments"></div>
-<script>
+
+    <h1 style="text-align: center;">评论区</h1>
+    <p>欢迎大家在下面多多评论：</p>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="vcomments"></div>
+    <script>
         new Valine({
             el: '#vcomments',
             appId: 'pKI8zxDMRprnFwEiUfoQF3tV-gzGzoHsz',
@@ -320,11 +416,16 @@ element.onmouseout = function() {
             avatar: 'mp'
         })
     </script>
-</section>
-</div>
-<footer class="footer">
-<section class="container">
-<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
+
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
       
       
         ©
@@ -334,17 +435,19 @@ element.onmouseout = function() {
       
       
          · 
-        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
       
       
         
       
     </section>
-</footer>
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"></script>
-<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
-<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
-<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
+  </footer>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -361,7 +464,30 @@ element.onmouseout = function() {
         });
     });
 </script>
-</main>
-<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
-</body>
+
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
 </html>
