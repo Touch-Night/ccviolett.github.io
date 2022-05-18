@@ -6,7 +6,26 @@
     <description>Recent content on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 May 2022 09:04:11 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 May 2022 15:48:31 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>零基础如何用 React 写一个稀土掘金？</title>
+      <link>http://ccviolett.github.io/posts/52-reacth5juejin/</link>
+      <pubDate>Wed, 18 May 2022 15:48:31 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/52-reacth5juejin/</guid>
+      <description>知识    前端入门的定义
+ 实现核心功能：能够运用知识实现前端中的核心功能  前端的发展
+ Web 1.0: 网站（document） Web 2.0: APP（Gmail、WordPress、Jquery） Web 3.0: 视图模型（React、Vue、小程序）  两代技术的区别
+ Jquery 通过原生 JS 操作 DOM，考虑节点的渲染、操作 React/Vue/小程序通过 JSX 操作 virtual DOM，不考虑具体的节点如何操作，只考虑改变状态（数据）  两代技术在概念上有了核心的区别，产生了抽象（模型）
+PC 端的交互要远复杂于移动端
+状态(State) + 模板(Template) = 视图(View)
+组件    作用：
+ 将复杂问题转换为简单问题的集合（分治） 避免重复构建相同的代码（复用）  状态    找变化，将可变与不可变的分开。
+将变化的东西通过状态表示，实际上不需要使用路由实现，路由其实也只是储存一个状态，将 URL 解析之后复原到组件中。
+状态分为两种：
+ State 组件内部的状态，维持当前组件的状态 Props 组件外部的状态，实现一个组件的复用  实现    function Component(props: {}) {  // 1.</description>
+    </item>
+    
     <item>
       <title>220517</title>
       <link>http://ccviolett.github.io/todo/220517/</link>
