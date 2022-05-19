@@ -1,97 +1,55 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="zh-cn">
-    <meta name="color-scheme" content="light dark">
-
-    
-
-    <meta name="author" content="罗潇阳">
-    <meta name="description" content="一、题意    题目链接：Problem
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="zh-cn" http-equiv="Content-Language"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="罗潇阳" name="author"/>
+<meta content='一、题意    题目链接：Problem
 二、题解    首先是一个最大生成树，随后是一个树上路径最小值查询。
-是一个锻炼 Kruskal/Prim &#43; 树剖/倍增 的板子。
+是一个锻炼 Kruskal/Prim + 树剖/倍增 的板子。
 三、代码    通过链接：Submission
-#include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std;  int read() { 	int a; 	scanf(&#34;%d&#34;, &amp;a); 	return a; }  struct Edge { 	int u, v, w; };  const int N = 1e5 &#43; 100; const int M = 1e5 &#43; 100;  int n, m; Edge edge[M]; int fa[N]; int top, fi[N], ne[M &lt;&lt; 1], to[M &lt;&lt; 1], co[M &lt;&lt; 1];  int Find(int t) { 	if (fa[t] !">
-    <meta name="keywords" content="博客,开发者,个人">
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="LuoguP1967 [NOIP2013 提高组] 货车运输"/>
-<meta name="twitter:description" content="一、题意    题目链接：Problem
+#include &lt;bits/stdc++.h&gt; using namespace std; int read() { int a; scanf("%d", &amp;a); return a; } struct Edge { int u, v, w; }; const int N = 1e5 + 100; const int M = 1e5 + 100; int n, m; Edge edge[M]; int fa[N]; int top, fi[N], ne[M &lt;&lt; 1], to[M &lt;&lt; 1], co[M &lt;&lt; 1]; int Find(int t) { if (fa[t] !' name="description"/>
+<meta content="博客,开发者,个人" name="keywords"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="LuoguP1967 [NOIP2013 提高组] 货车运输" name="twitter:title"/>
+<meta content='一、题意    题目链接：Problem
 二、题解    首先是一个最大生成树，随后是一个树上路径最小值查询。
-是一个锻炼 Kruskal/Prim &#43; 树剖/倍增 的板子。
+是一个锻炼 Kruskal/Prim + 树剖/倍增 的板子。
 三、代码    通过链接：Submission
-#include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std;  int read() { 	int a; 	scanf(&#34;%d&#34;, &amp;a); 	return a; }  struct Edge { 	int u, v, w; };  const int N = 1e5 &#43; 100; const int M = 1e5 &#43; 100;  int n, m; Edge edge[M]; int fa[N]; int top, fi[N], ne[M &lt;&lt; 1], to[M &lt;&lt; 1], co[M &lt;&lt; 1];  int Find(int t) { 	if (fa[t] !"/>
-
-    <meta property="og:title" content="LuoguP1967 [NOIP2013 提高组] 货车运输" />
-<meta property="og:description" content="一、题意    题目链接：Problem
+#include &lt;bits/stdc++.h&gt; using namespace std; int read() { int a; scanf("%d", &amp;a); return a; } struct Edge { int u, v, w; }; const int N = 1e5 + 100; const int M = 1e5 + 100; int n, m; Edge edge[M]; int fa[N]; int top, fi[N], ne[M &lt;&lt; 1], to[M &lt;&lt; 1], co[M &lt;&lt; 1]; int Find(int t) { if (fa[t] !' name="twitter:description"/>
+<meta content="LuoguP1967 [NOIP2013 提高组] 货车运输" property="og:title"/>
+<meta content='一、题意    题目链接：Problem
 二、题解    首先是一个最大生成树，随后是一个树上路径最小值查询。
-是一个锻炼 Kruskal/Prim &#43; 树剖/倍增 的板子。
+是一个锻炼 Kruskal/Prim + 树剖/倍增 的板子。
 三、代码    通过链接：Submission
-#include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std;  int read() { 	int a; 	scanf(&#34;%d&#34;, &amp;a); 	return a; }  struct Edge { 	int u, v, w; };  const int N = 1e5 &#43; 100; const int M = 1e5 &#43; 100;  int n, m; Edge edge[M]; int fa[N]; int top, fi[N], ne[M &lt;&lt; 1], to[M &lt;&lt; 1], co[M &lt;&lt; 1];  int Find(int t) { 	if (fa[t] !" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://ccviolett.github.io/solution/luogup1967/" /><meta property="article:section" content="solution" />
-<meta property="article:published_time" content="2022-04-12T18:48:16+08:00" />
-<meta property="article:modified_time" content="2022-04-12T18:48:16+08:00" />
-
-
-
-    <title>
+#include &lt;bits/stdc++.h&gt; using namespace std; int read() { int a; scanf("%d", &amp;a); return a; } struct Edge { int u, v, w; }; const int N = 1e5 + 100; const int M = 1e5 + 100; int n, m; Edge edge[M]; int fa[N]; int top, fi[N], ne[M &lt;&lt; 1], to[M &lt;&lt; 1], co[M &lt;&lt; 1]; int Find(int t) { if (fa[t] !' property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="http://ccviolett.github.io/solution/luogup1967/" property="og:url"/><meta content="solution" property="article:section"/>
+<meta content="2022-04-12T18:48:16+08:00" property="article:published_time"/>
+<meta content="2022-04-12T18:48:16+08:00" property="article:modified_time"/>
+<title>
   LuoguP1967 [NOIP2013 提高组] 货车运输 · 罗潇阳的博客
 </title>
-
-    
-      <link rel="canonical" href="http://ccviolett.github.io/solution/luogup1967/">
-    
-
-    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
-
-    
-      
-      
-      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
-    
-
-    
-
-    
-      
-        
-        
-        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
-      
-    
-
-    
-
-    
-
-    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-    <meta name="generator" content="Hugo 0.98.0" />
-  </head>
-
-  
-  
-    
-  
-  <body class="preload-transitions colorscheme-auto">
-    
+<link href="http://ccviolett.github.io/solution/luogup1967/" rel="canonical"/>
+<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
+<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="Hugo 0.92.0" name="generator"/>
+</head>
+<body class="preload-transitions colorscheme-auto">
 <div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
+<a class="colorscheme-toggle" id="dark-mode-toggle">
+<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
+</a>
 </div>
-
-
-    <main class="wrapper">
-      <script>
+<main class="wrapper">
+<script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -100,9 +58,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -111,246 +67,212 @@ var _hmt = _hmt || [];
 
   gtag('config', 'UA-228764760-1');
 </script>
-
 <nav class="navigation">
-  <section class="container">
-    <a class="navigation-title" href="/">
+<section class="container">
+<a class="navigation-title" href="/">
       罗潇阳的博客
     </a>
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/">首页</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">文章</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/solution/">题解</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">联系</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/about/">关于</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/support/">赞助</a>
-            </li>
-          
-        
-        
-          
-          
-          
-            
-          
-            
-              
-                <li class="navigation-item menu-separator">
-                  <span>|</span>
-                </li>
-                
-              
-              <li class="navigation-item">
-                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
-              </li>
-            
-          
-        
-      </ul>
-    
-  </section>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button float-right" for="menu-toggle">
+<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
+</label>
+<ul class="navigation-list">
+<li class="navigation-item">
+<a class="navigation-link" href="/">首页</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/posts/">文章</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/solution/">题解</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/contact/">联系</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/about/">关于</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/support/">赞助</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class="navigation-item">
+<a href="http://ccviolett.github.io/en/">🇬🇧</a>
+</li>
+</ul>
+</section>
 </nav>
-
-
-      <div class="content">
-        
-  <section class="container page">
-  <article>
-    <header>
-      <h1 class="title">
-        <a class="title-link" href="http://ccviolett.github.io/solution/luogup1967/">
+<div class="content">
+<section class="container page">
+<article>
+<header>
+<h1 class="title">
+<a class="title-link" href="http://ccviolett.github.io/solution/luogup1967/">
           LuoguP1967 [NOIP2013 提高组] 货车运输
         </a>
-      </h1>
-    </header>
-
-    <h3 id="一题意">
+</h1>
+</header>
+<h3 id="一题意">
   一、题意
   <a class="heading-link" href="#%e4%b8%80%e9%a2%98%e6%84%8f">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>题目链接：<a href="https://www.luogu.com.cn/problem/P1967">Problem</a></p>
 <h3 id="二题解">
   二、题解
   <a class="heading-link" href="#%e4%ba%8c%e9%a2%98%e8%a7%a3">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>首先是一个最大生成树，随后是一个树上路径最小值查询。</p>
 <p>是一个锻炼 Kruskal/Prim + 树剖/倍增 的板子。</p>
 <h3 id="三代码">
   三、代码
   <a class="heading-link" href="#%e4%b8%89%e4%bb%a3%e7%a0%81">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>通过链接：<a href="https://www.luogu.com.cn/record/73791244">Submission</a></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;bits/stdc++.h&gt;</span><span style="color:#888;font-weight:bold">
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-weight:bold"></span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">using</span> <span style="font-weight:bold;text-decoration:underline">namespace</span> std;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">read</span>() {
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">int</span> a;
-</span></span><span style="display:flex;"><span>	scanf(<span style="color:#666;font-style:italic">&#34;%d&#34;</span>, &amp;a);
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">return</span> a;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">struct</span> <span style="color:#666;font-weight:bold;font-style:italic">Edge</span> {
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">int</span> u, v, w;
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">const</span> <span style="font-weight:bold;text-decoration:underline">int</span> N = 1e5 + 100;
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">const</span> <span style="font-weight:bold;text-decoration:underline">int</span> M = 1e5 + 100;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> n, m;
-</span></span><span style="display:flex;"><span>Edge edge[M];
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> fa[N];
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> top, fi[N], ne[M &lt;&lt; 1], to[M &lt;&lt; 1], co[M &lt;&lt; 1];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">Find</span>(<span style="font-weight:bold;text-decoration:underline">int</span> t) {
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">if</span> (fa[t] != t)
-</span></span><span style="display:flex;"><span>		fa[t] = Find(fa[t]);
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">return</span> fa[t];
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">Check</span>(<span style="font-weight:bold;text-decoration:underline">int</span> x, <span style="font-weight:bold;text-decoration:underline">int</span> y) {
-</span></span><span style="display:flex;"><span>	x = Find(x), y = Find(y);
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">return</span> x == y;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">Link</span>(<span style="font-weight:bold;text-decoration:underline">int</span> x, <span style="font-weight:bold;text-decoration:underline">int</span> y) {
-</span></span><span style="display:flex;"><span>	x = Find(x), y = Find(y);
-</span></span><span style="display:flex;"><span>	fa[x] = y;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">bool</span> <span style="color:#666;font-weight:bold;font-style:italic">camp</span>(Edge a, Edge b) {
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">return</span> a.w &gt; b.w;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">add</span>(<span style="font-weight:bold;text-decoration:underline">int</span> u, <span style="font-weight:bold;text-decoration:underline">int</span> v, <span style="font-weight:bold;text-decoration:underline">int</span> w) {
-</span></span><span style="display:flex;"><span>	ne[++top] = fi[u], fi[u] = top, to[top] = v, co[top] = w;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">bool</span> arrive[N];
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> deep[N];
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> up[N][21], val[N][21];
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> minv;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">Jump</span>(<span style="font-weight:bold;text-decoration:underline">int</span> t, <span style="font-weight:bold;text-decoration:underline">int</span> v) {
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt;= 20; ++i) {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">if</span> (v &amp; (1 &lt;&lt; i)) {
-</span></span><span style="display:flex;"><span>			minv = min(minv, val[t][i]);
-</span></span><span style="display:flex;"><span>			t = up[t][i];
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">return</span> t;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">Lca</span>(<span style="font-weight:bold;text-decoration:underline">int</span> x, <span style="font-weight:bold;text-decoration:underline">int</span> y) {
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">if</span> (deep[x] &lt; deep[y])
-</span></span><span style="display:flex;"><span>		swap(x, y);
-</span></span><span style="display:flex;"><span>	x = Jump(x, deep[x] - deep[y]);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">if</span> (x == y) <span style="font-weight:bold;text-decoration:underline">return</span> x;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 20; i &gt;= 0; --i) {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">if</span> (up[x][i] == up[y][i]) <span style="font-weight:bold;text-decoration:underline">continue</span>;
-</span></span><span style="display:flex;"><span>		minv = min(minv, val[x][i]);
-</span></span><span style="display:flex;"><span>		minv = min(minv, val[y][i]);
-</span></span><span style="display:flex;"><span>		x = up[x][i], y = up[y][i];
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	minv = min(minv, val[x][0]);
-</span></span><span style="display:flex;"><span>	minv = min(minv, val[y][0]);
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">return</span> up[x][0];
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">DFS</span>(<span style="font-weight:bold;text-decoration:underline">int</span> t) {
-</span></span><span style="display:flex;"><span>	arrive[t] = <span style="font-weight:bold;font-style:italic">true</span>;
-</span></span><span style="display:flex;"><span>	deep[t] = deep[up[t][0]] + 1;
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= 20; ++i) {
-</span></span><span style="display:flex;"><span>		up[t][i] = up[ up[t][i - 1] ][i - 1];
-</span></span><span style="display:flex;"><span>		val[t][i] = min(val[t][i - 1], val[ up[t][i - 1] ][i - 1]);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = fi[t]; i; i = ne[i]) {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">if</span> (to[i] == up[t][0]) <span style="font-weight:bold;text-decoration:underline">continue</span>;
-</span></span><span style="display:flex;"><span>		up[to[i]][0] = t;
-</span></span><span style="display:flex;"><span>		val[to[i]][0] = co[i];
-</span></span><span style="display:flex;"><span>		DFS(to[i]);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">main</span>() {
-</span></span><span style="display:flex;"><span>	n = read(), m = read();
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= m; ++i) {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">int</span> u = read(), v = read(), w = read();
-</span></span><span style="display:flex;"><span>		edge[i] = (Edge) {u, v, w};
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	sort(edge + 1, edge + m + 1, camp);
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i) fa[i] = i;
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= m; ++i) {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">int</span> u = edge[i].u, v = edge[i].v;
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">if</span> (Check(u, v)) <span style="font-weight:bold;text-decoration:underline">continue</span>;
-</span></span><span style="display:flex;"><span>		Link(u, v);
-</span></span><span style="display:flex;"><span>		add(u, v, edge[i].w), add(v, u, edge[i].w);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	memset(val, 0x3f, <span style="font-weight:bold;text-decoration:underline">sizeof</span>(val));
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i) {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">if</span> (!arrive[i]) DFS(i);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">int</span> q = read();
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= q; ++i) {
-</span></span><span style="display:flex;"><span>		minv = 0x3f3f3f3f;
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">int</span> x = read(), y = read();
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">if</span> (!Check(x, y)) puts(<span style="color:#666;font-style:italic">&#34;-1&#34;</span>);
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">else</span> {
-</span></span><span style="display:flex;"><span>			Lca(x, y);
-</span></span><span style="display:flex;"><span>			printf(<span style="color:#666;font-style:italic">&#34;%d</span><span style="color:#666;font-style:italic">\n</span><span style="color:#666;font-style:italic">&#34;</span>, minv);
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">return</span> 0;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>
-  </article>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-cpp" data-lang="cpp"><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;bits/stdc++.h&gt;</span><span style="color:#888;font-weight:bold">
+</span><span style="color:#888;font-weight:bold"></span>
+<span style="font-weight:bold;text-decoration:underline">using</span> <span style="font-weight:bold;text-decoration:underline">namespace</span> std;
 
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">read</span>() {
+	<span style="font-weight:bold;text-decoration:underline">int</span> a;
+	scanf(<span style="color:#666;font-style:italic">"%d"</span>, &amp;a);
+	<span style="font-weight:bold;text-decoration:underline">return</span> a;
+}
+
+<span style="font-weight:bold;text-decoration:underline">struct</span> <span style="color:#666;font-weight:bold;font-style:italic">Edge</span> {
+	<span style="font-weight:bold;text-decoration:underline">int</span> u, v, w;
+};
+
+<span style="font-weight:bold;text-decoration:underline">const</span> <span style="font-weight:bold;text-decoration:underline">int</span> N = 1e5 + 100;
+<span style="font-weight:bold;text-decoration:underline">const</span> <span style="font-weight:bold;text-decoration:underline">int</span> M = 1e5 + 100;
+
+<span style="font-weight:bold;text-decoration:underline">int</span> n, m;
+Edge edge[M];
+<span style="font-weight:bold;text-decoration:underline">int</span> fa[N];
+<span style="font-weight:bold;text-decoration:underline">int</span> top, fi[N], ne[M &lt;&lt; 1], to[M &lt;&lt; 1], co[M &lt;&lt; 1];
+
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">Find</span>(<span style="font-weight:bold;text-decoration:underline">int</span> t) {
+	<span style="font-weight:bold;text-decoration:underline">if</span> (fa[t] != t)
+		fa[t] = Find(fa[t]);
+	<span style="font-weight:bold;text-decoration:underline">return</span> fa[t];
+}
+
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">Check</span>(<span style="font-weight:bold;text-decoration:underline">int</span> x, <span style="font-weight:bold;text-decoration:underline">int</span> y) {
+	x = Find(x), y = Find(y);
+	<span style="font-weight:bold;text-decoration:underline">return</span> x == y;
+}
+
+<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">Link</span>(<span style="font-weight:bold;text-decoration:underline">int</span> x, <span style="font-weight:bold;text-decoration:underline">int</span> y) {
+	x = Find(x), y = Find(y);
+	fa[x] = y;
+}
+
+<span style="font-weight:bold;text-decoration:underline">bool</span> <span style="color:#666;font-weight:bold;font-style:italic">camp</span>(Edge a, Edge b) {
+	<span style="font-weight:bold;text-decoration:underline">return</span> a.w &gt; b.w;
+}
+
+<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">add</span>(<span style="font-weight:bold;text-decoration:underline">int</span> u, <span style="font-weight:bold;text-decoration:underline">int</span> v, <span style="font-weight:bold;text-decoration:underline">int</span> w) {
+	ne[++top] = fi[u], fi[u] = top, to[top] = v, co[top] = w;
+}
+
+<span style="font-weight:bold;text-decoration:underline">bool</span> arrive[N];
+<span style="font-weight:bold;text-decoration:underline">int</span> deep[N];
+<span style="font-weight:bold;text-decoration:underline">int</span> up[N][21], val[N][21];
+<span style="font-weight:bold;text-decoration:underline">int</span> minv;
+
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">Jump</span>(<span style="font-weight:bold;text-decoration:underline">int</span> t, <span style="font-weight:bold;text-decoration:underline">int</span> v) {
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt;= 20; ++i) {
+		<span style="font-weight:bold;text-decoration:underline">if</span> (v &amp; (1 &lt;&lt; i)) {
+			minv = min(minv, val[t][i]);
+			t = up[t][i];
+		}
+	}
+	<span style="font-weight:bold;text-decoration:underline">return</span> t;
+}
+
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">Lca</span>(<span style="font-weight:bold;text-decoration:underline">int</span> x, <span style="font-weight:bold;text-decoration:underline">int</span> y) {
+	<span style="font-weight:bold;text-decoration:underline">if</span> (deep[x] &lt; deep[y])
+		swap(x, y);
+	x = Jump(x, deep[x] - deep[y]);
+
+	<span style="font-weight:bold;text-decoration:underline">if</span> (x == y) <span style="font-weight:bold;text-decoration:underline">return</span> x;
+
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 20; i &gt;= 0; --i) {
+		<span style="font-weight:bold;text-decoration:underline">if</span> (up[x][i] == up[y][i]) <span style="font-weight:bold;text-decoration:underline">continue</span>;
+		minv = min(minv, val[x][i]);
+		minv = min(minv, val[y][i]);
+		x = up[x][i], y = up[y][i];
+	}
+
+	minv = min(minv, val[x][0]);
+	minv = min(minv, val[y][0]);
+	<span style="font-weight:bold;text-decoration:underline">return</span> up[x][0];
+}
+
+<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">DFS</span>(<span style="font-weight:bold;text-decoration:underline">int</span> t) {
+	arrive[t] = <span style="font-weight:bold;font-style:italic">true</span>;
+	deep[t] = deep[up[t][0]] + 1;
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= 20; ++i) {
+		up[t][i] = up[ up[t][i - 1] ][i - 1];
+		val[t][i] = min(val[t][i - 1], val[ up[t][i - 1] ][i - 1]);
+	}
+
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = fi[t]; i; i = ne[i]) {
+		<span style="font-weight:bold;text-decoration:underline">if</span> (to[i] == up[t][0]) <span style="font-weight:bold;text-decoration:underline">continue</span>;
+		up[to[i]][0] = t;
+		val[to[i]][0] = co[i];
+		DFS(to[i]);
+	}
+}
+
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">main</span>() {
+	n = read(), m = read();
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= m; ++i) {
+		<span style="font-weight:bold;text-decoration:underline">int</span> u = read(), v = read(), w = read();
+		edge[i] = (Edge) {u, v, w};
+	}
+
+	sort(edge + 1, edge + m + 1, camp);
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i) fa[i] = i;
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= m; ++i) {
+		<span style="font-weight:bold;text-decoration:underline">int</span> u = edge[i].u, v = edge[i].v;
+		<span style="font-weight:bold;text-decoration:underline">if</span> (Check(u, v)) <span style="font-weight:bold;text-decoration:underline">continue</span>;
+		Link(u, v);
+		add(u, v, edge[i].w), add(v, u, edge[i].w);
+	}
+
+	memset(val, 0x3f, <span style="font-weight:bold;text-decoration:underline">sizeof</span>(val));
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i) {
+		<span style="font-weight:bold;text-decoration:underline">if</span> (!arrive[i]) DFS(i);
+	}
+
+	<span style="font-weight:bold;text-decoration:underline">int</span> q = read();
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= q; ++i) {
+		minv = 0x3f3f3f3f;
+		<span style="font-weight:bold;text-decoration:underline">int</span> x = read(), y = read();
+		<span style="font-weight:bold;text-decoration:underline">if</span> (!Check(x, y)) puts(<span style="color:#666;font-style:italic">"-1"</span>);
+		<span style="font-weight:bold;text-decoration:underline">else</span> {
+			Lca(x, y);
+			printf(<span style="color:#666;font-style:italic">"%d</span><span style="color:#666;font-style:italic">\n</span><span style="color:#666;font-style:italic">"</span>, minv);
+		}
+	}
+	<span style="font-weight:bold;text-decoration:underline">return</span> 0;
+}
+
+</code></pre></div>
+</article>
 </section>
-  
-
-      </div>
-
-      
-  <footer class="footer">
-    <section class="container">
-      
-        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
+</div>
+<footer class="footer">
+<section class="container">
+<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
       
       
         ©
@@ -360,19 +282,17 @@ var _hmt = _hmt || [];
       
       
          · 
-        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
       
       
         
       
     </section>
-  </footer>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+</footer>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
+<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -389,30 +309,7 @@ var _hmt = _hmt || [];
         });
     });
 </script>
-
-
-
-    </main>
-
-    
-      
-      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-  </body>
+</main>
+<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
+</body>
 </html>

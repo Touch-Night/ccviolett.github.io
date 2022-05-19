@@ -6,7 +6,17 @@
     <description>Recent content in Posts on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 May 2022 15:48:31 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 May 2022 16:14:03 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么要做一个 CSDN 作者？</title>
+      <link>http://ccviolett.github.io/posts/53-beacsdnuploder/</link>
+      <pubDate>Thu, 19 May 2022 16:14:03 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/53-beacsdnuploder/</guid>
+      <description>CSDN 活动： 奖励每天最佳新人
+CSDN每天最佳新人&amp;ndash;2022-05-18</description>
+    </item>
+    
     <item>
       <title>零基础如何用 React 写一个稀土掘金？</title>
       <link>http://ccviolett.github.io/posts/52-reacth5juejin/</link>
@@ -23,7 +33,7 @@ PC 端的交互要远复杂于移动端
  将复杂问题转换为简单问题的集合（分治） 避免重复构建相同的代码（复用）  状态    找变化，将可变与不可变的分开。
 将变化的东西通过状态表示，实际上不需要使用路由实现，路由其实也只是储存一个状态，将 URL 解析之后复原到组件中。
 状态分为两种：
- State 组件内部的状态，维持当前组件的状态 Props 组件外部的状态，实现一个组件的复用  实现    function Component(props: {}) {  // 1.</description>
+ State 组件内部的状态，维持当前组件的状态 Props 组件外部的状态，实现一个组件的复用  实现    function Component(props: {}) { // 1.</description>
     </item>
     
     <item>
@@ -34,7 +44,7 @@ PC 端的交互要远复杂于移动端
       <guid>http://ccviolett.github.io/posts/51-goexercise/</guid>
       <description>go 官方的很好的入门教程：Go 语言之旅
 这里是我做的所有的练习
-循环与函数    package main  import (  &amp;#34;fmt&amp;#34;  &amp;#34;math&amp;#34; )  func Sqrt(x float64) float64 {  z := float64(1)  for i := 1; i &amp;lt;= 10; i++ {  change := (z * z - x) / (2 * z)  if math.Abs(change) &amp;lt; 1e-13 {  break  }  z -= change  }  return z }  func main() {  fmt.</description>
+循环与函数    package main import ( &amp;#34;fmt&amp;#34; &amp;#34;math&amp;#34; ) func Sqrt(x float64) float64 { z := float64(1) for i := 1; i &amp;lt;= 10; i++ { change := (z * z - x) / (2 * z) if math.Abs(change) &amp;lt; 1e-13 { break } z -= change } return z } func main() { fmt.Println(Sqrt(2)) fmt.Println(math.Sqrt(2)) } 切片    package main import &amp;#34;golang.</description>
     </item>
     
     <item>
@@ -57,7 +67,7 @@ PC 端的交互要远复杂于移动端
 javascript heredoc多行字符串    参考资料：js与多行字符串
 巧妙利用了 function 的 toString 方法，转为字符串后有换行符 \n
 缺点在于不能使用压缩器与不能插入 js 逻辑
-function heredoc(fn) {  return fn.</description>
+function heredoc(fn) { return fn.</description>
     </item>
     
     <item>
@@ -360,7 +370,7 @@ onClick 自动触发  将 onClick = {func()} 改为 onClick = {() =&amp;gt; {fun
       <description>零、前期准备    安装 Android Studio，安装对应版本 SDK Tools，新建项目。
 一、代码修改    修改 app/java/{创建时指定的包名}/MainActivity.java 如下：
  注意！代码第一行要改为你的包名，中间的链接要改为自己的网页链接
- package {创建时指定的包名};  import androidx.appcompat.app.AppCompatActivity;  import android.annotation.SuppressLint; import android.os.Bundle; import android.view.View; import android.view.KeyEvent; import android.webkit.WebView; import android.webkit.WebViewClient;  public class MainActivity extends AppCompatActivity {   @Override  protected void onCreate(Bundle savedInstanceState) {  super.onCreate(savedInstanceState);   setContentView(R.layout.activity_main);   this.createWebView();  }   @SuppressLint(&amp;#34;SetJavaScriptEnabled&amp;#34;)  private void createWebView() {  final WebView webView = (WebView) findViewById(R.</description>
+ package {创建时指定的包名}; import androidx.appcompat.app.AppCompatActivity; import android.annotation.SuppressLint; import android.os.Bundle; import android.view.View; import android.view.KeyEvent; import android.webkit.WebView; import android.webkit.WebViewClient; public class MainActivity extends AppCompatActivity { @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); setContentView(R.layout.activity_main); this.createWebView(); } @SuppressLint(&amp;#34;SetJavaScriptEnabled&amp;#34;) private void createWebView() { final WebView webView = (WebView) findViewById(R.id.webview); webView.getSettings().setJavaScriptEnabled(true); webView.setWebViewClient(new WebViewClient()); String url = &amp;#34;{你要套壳的网页链接}&amp;#34;; webView.loadUrl(url); webView.</description>
     </item>
     
     <item>
@@ -389,7 +399,7 @@ onClick 自动触发  将 onClick = {func()} 改为 onClick = {() =&amp;gt; {fun
 静态成员函数不能是静态函数，不能直接访问非静态成员。
 访问共有静态成员的方式有以下三种：
  类名::静态成员名 对象名.静态成员名 对象指针-&amp;gt;静态成员名  问题：请问下列程序会输出什么？
-#include &amp;lt;iostream&amp;gt; using namespace std;  int fun() { 	static int x = 1; 	x *= 2; 	return x; }  int main() { 	int i, s = 1; 	for (i = 1; i &amp;lt;= 3; ++i) 	s *= fun(); 	cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl; } 答案：64</description>
+#include &amp;lt;iostream&amp;gt; using namespace std; int fun() { static int x = 1; x *= 2; return x; } int main() { int i, s = 1; for (i = 1; i &amp;lt;= 3; ++i) s *= fun(); cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl; } 答案：64</description>
     </item>
     
     <item>
@@ -459,7 +469,7 @@ AllSigned 和 RemoteSigned 执行策略可防止 Windows PowerShell 运行没有
       <pubDate>Wed, 16 Mar 2022 19:45:28 +0800</pubDate>
       
       <guid>http://ccviolett.github.io/posts/21-solvede/</guid>
-      <description>1. $y&amp;rsquo;= f(x, y)$ 型 2. $y^{(n)} = f(x)$ 型 3. $y&amp;rsquo;&amp;rsquo; = f(x, y&amp;rsquo;)$ 型 4. $y&amp;rsquo;&amp;rsquo; = f(y, y&amp;rsquo;)$ 型 $y&amp;rsquo;&amp;rsquo; + py&amp;rsquo; + qy = 0$ 型 - 二阶常系数齐次线性微分方程 5. $y&amp;rsquo;&amp;rsquo; + py&amp;rsquo; + qy = e^{\lambda x}P_m(x)$ 型   一、解微分方程    1. $y&amp;rsquo;= f(x, y)$ 型    转化为 $y&amp;rsquo; + P(x)y = Q(x)$ 的形式，套用公式：
+      <description>1. $y&#39;= f(x, y)$ 型 2. $y^{(n)} = f(x)$ 型 3. $y&#39;&#39; = f(x, y&#39;)$ 型 4. $y&#39;&#39; = f(y, y&#39;)$ 型 $y&#39;&#39; + py&#39; + qy = 0$ 型 - 二阶常系数齐次线性微分方程 5. $y&#39;&#39; + py&#39; + qy = e^{\lambda x}P_m(x)$ 型   一、解微分方程    1. $y&#39;= f(x, y)$ 型    转化为 $y&#39; + P(x)y = Q(x)$ 的形式，套用公式：
 $$ y = e^{-\int P(x) dx} \left(\int Q(x) e^{\int P(x) dx} dx + C \right) $$</description>
     </item>
     
@@ -749,7 +759,7 @@ Free Educational Licenses
 代码高亮配置    官方文档：Syntax Highlighting
 Hugo 中集成了 Chroma 来进行代码高亮。
 TLDR：将下列设置复制到配置文件中（以 TOML 为例）
-[markup]  [markup.</description>
+[markup] [markup.</description>
     </item>
     
     <item>

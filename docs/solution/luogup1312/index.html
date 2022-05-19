@@ -1,97 +1,55 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="zh-cn">
-    <meta name="color-scheme" content="light dark">
-
-    
-
-    <meta name="author" content="罗潇阳">
-    <meta name="description" content="一、题意    题目链接：Problem
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="zh-cn" http-equiv="Content-Language"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="罗潇阳" name="author"/>
+<meta content='一、题意    题目链接：Problem
 二、题解    大模拟，记忆化搜索。
 坑点：局面相同时，可能因为层数不同而导致结果不同，记忆化搜索时，不要剪掉了答案的枝。
 三、代码    通过链接：Submission
-#include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std;  // 对于代码量偏大的程序，尽可能将功能拆分  // 整体思路： // 拖动 // 掉落 // while(检查) //	消除 //	掉落  struct State {  	// 在不同层的状态，即使局面相同，也可能有不同的结果 	// 因为有时候需要浪费步数 	int level;  	int color[10][10]; 	bool mark[10][10];  	// 说明：输入数据 	void read() { 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; true; &#43;&#43;j) { 	scanf(&#34;%d&#34;, &amp;color[i][j]); 	if (color[i][j] == 0) 	break; 	} 	} 	}  	// 说明：输出数据 	void print() { 	for (int j = 6; j &gt;= 0; --j) { 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	printf(&#34;%d &#34;, color[i][j]); 	} 	puts(&#34;&#34;); 	} 	puts(&#34;&#34;); 	}  	// 说明：将 (x, y) 往方向 d 拖动 	// 问题：我们需要知道，某一次拖动是否可行，以此来判断是否能够做这一步 	// 方法：给这个函数一个返回值，表示是否能拖动 	bool drag(int x, int y, int d) { 	if (d == 1) { 	if (x == 4) return false; 	swap(color[x][y], color[x &#43; 1][y]); 	} 	if (d == -1) { 	if (x == 0) return false; 	swap(color[x][y], color[x - 1][y]); 	}  	all_fall();  	while (check()) { 	clean(); 	all_fall();  	// print(); 	}  	return true; 	}  	// 说明：位置 (x, y) 向下掉落 	void single_fall(int x, int y) { 	while (y &gt; 0 &amp;&amp; color[x][y - 1] == 0) { 	swap(color[x][y], color[x][y - 1]); 	// 这种写法也行 	// color[x][y - 1] = color[x][y]; 	// color[x][y] = 0;  	y--; 	} 	}  	// 说明：检查当前状态中，是否有能够消除的 	// 问题：我们需要知道还有没有能够消除的，以便进入下一次拖动 	// 方法：函数返回一个值，表示是否存在 	bool check() { 	// 清空标记 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) mark[i][j] = false; 	}  	// 记录有没有能够消除的 	bool have = false;  	// 枚举每个格子 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) { 	if (color[i][j] == 0) continue;  	// printf(&#34;(%d, %d)%d &#34;, i, j, color[i][j]);  	// 计算向右有 t 个相连的 	int t = 1; 	while (i &#43; t &lt; 5 &amp;&amp; color[i][j] == color[i &#43; t][j]) t&#43;&#43;; 	t--;  	// printf(&#34;t_right: %d &#34;, t);  	// 如果大于 3 个相连即可标记为消除 	if (t &gt;= 2) { 	for (int k = 0; k &lt;= t; &#43;&#43;k) { 	mark[i &#43; k][j] = true; 	}  	have = true; 	}  	// =============================  	// 计算向上有 t 个相连的 	t = 1; 	while (j &#43; t &lt; 5 &amp;&amp; color[i][j] == color[i][j &#43; t]) t&#43;&#43;; 	t--;  	// printf(&#34;t_up: %d\n&#34;, t);  	// 如果大于 3 个相连即可标记为消除 	if (t &gt;= 2) { 	for (int k = 0; k &lt;= t; &#43;&#43;k) { 	mark[i][j &#43; k] = true; 	}  	have = true; 	}  	} 	} 	return have; 	}  	// 说明：清除被标记的连续的块 	void clean() { 	// for (int j = 6; j &gt;= 0; --j) { 	// for (int i = 0; i &lt; 5; &#43;&#43;i) { 	// printf(&#34;%d &#34;, mark[i][j]); 	// } 	// puts(&#34;&#34;); 	// } 	// puts(&#34;&#34;);  	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) { 	if (mark[i][j]) { 	color[i][j] = 0; 	} 	} 	} 	}  	// 说明：让整个图下落到不需要下落为止 	void all_fall() { 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) { 	// 如果是空格子就不用下落 	if (color[i][j] == 0) continue; 	single_fall(i, j); 	} 	} 	}  	// 说明：查询图的结果 	bool result() { 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) { 	if (color[i][j] !">
-    <meta name="keywords" content="博客,开发者,个人">
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="洛谷 P1312 [NOIP2011 提高组] Mayan 游戏"/>
-<meta name="twitter:description" content="一、题意    题目链接：Problem
+#include &lt;bits/stdc++.h&gt; using namespace std; // 对于代码量偏大的程序，尽可能将功能拆分  // 整体思路： // 拖动 // 掉落 // while(检查) //	消除 //	掉落  struct State { // 在不同层的状态，即使局面相同，也可能有不同的结果 	// 因为有时候需要浪费步数 	int level; int color[10][10]; bool mark[10][10]; // 说明：输入数据 	void read() { for (int i = 0; i &lt; 5; ++i) { for (int j = 0; true; ++j) { scanf("%d", &amp;color[i][j]); if (color[i][j] == 0) break; } } } // 说明：输出数据 	void print() { for (int j = 6; j &gt;= 0; --j) { for (int i = 0; i &lt; 5; ++i) { printf("%d ", color[i][j]); } puts(""); } puts(""); } // 说明：将 (x, y) 往方向 d 拖动 	// 问题：我们需要知道，某一次拖动是否可行，以此来判断是否能够做这一步 	// 方法：给这个函数一个返回值，表示是否能拖动 	bool drag(int x, int y, int d) { if (d == 1) { if (x == 4) return false; swap(color[x][y], color[x + 1][y]); } if (d == -1) { if (x == 0) return false; swap(color[x][y], color[x - 1][y]); } all_fall(); while (check()) { clean(); all_fall(); // print(); 	} return true; } // 说明：位置 (x, y) 向下掉落 	void single_fall(int x, int y) { while (y &gt; 0 &amp;&amp; color[x][y - 1] == 0) { swap(color[x][y], color[x][y - 1]); // 这种写法也行 	// color[x][y - 1] = color[x][y]; 	// color[x][y] = 0;  y--; } } // 说明：检查当前状态中，是否有能够消除的 	// 问题：我们需要知道还有没有能够消除的，以便进入下一次拖动 	// 方法：函数返回一个值，表示是否存在 	bool check() { // 清空标记 	for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) mark[i][j] = false; } // 记录有没有能够消除的 	bool have = false; // 枚举每个格子 	for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) { if (color[i][j] == 0) continue; // printf("(%d, %d)%d ", i, j, color[i][j]);  // 计算向右有 t 个相连的 	int t = 1; while (i + t &lt; 5 &amp;&amp; color[i][j] == color[i + t][j]) t++; t--; // printf("t_right: %d ", t);  // 如果大于 3 个相连即可标记为消除 	if (t &gt;= 2) { for (int k = 0; k &lt;= t; ++k) { mark[i + k][j] = true; } have = true; } // =============================  // 计算向上有 t 个相连的 	t = 1; while (j + t &lt; 5 &amp;&amp; color[i][j] == color[i][j + t]) t++; t--; // printf("t_up: %d\n", t);  // 如果大于 3 个相连即可标记为消除 	if (t &gt;= 2) { for (int k = 0; k &lt;= t; ++k) { mark[i][j + k] = true; } have = true; } } } return have; } // 说明：清除被标记的连续的块 	void clean() { // for (int j = 6; j &gt;= 0; --j) { 	// for (int i = 0; i &lt; 5; ++i) { 	// printf("%d ", mark[i][j]); 	// } 	// puts(""); 	// } 	// puts("");  for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) { if (mark[i][j]) { color[i][j] = 0; } } } } // 说明：让整个图下落到不需要下落为止 	void all_fall() { for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) { // 如果是空格子就不用下落 	if (color[i][j] == 0) continue; single_fall(i, j); } } } // 说明：查询图的结果 	bool result() { for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) { if (color[i][j] !' name="description"/>
+<meta content="博客,开发者,个人" name="keywords"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="洛谷 P1312 [NOIP2011 提高组] Mayan 游戏" name="twitter:title"/>
+<meta content='一、题意    题目链接：Problem
 二、题解    大模拟，记忆化搜索。
 坑点：局面相同时，可能因为层数不同而导致结果不同，记忆化搜索时，不要剪掉了答案的枝。
 三、代码    通过链接：Submission
-#include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std;  // 对于代码量偏大的程序，尽可能将功能拆分  // 整体思路： // 拖动 // 掉落 // while(检查) //	消除 //	掉落  struct State {  	// 在不同层的状态，即使局面相同，也可能有不同的结果 	// 因为有时候需要浪费步数 	int level;  	int color[10][10]; 	bool mark[10][10];  	// 说明：输入数据 	void read() { 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; true; &#43;&#43;j) { 	scanf(&#34;%d&#34;, &amp;color[i][j]); 	if (color[i][j] == 0) 	break; 	} 	} 	}  	// 说明：输出数据 	void print() { 	for (int j = 6; j &gt;= 0; --j) { 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	printf(&#34;%d &#34;, color[i][j]); 	} 	puts(&#34;&#34;); 	} 	puts(&#34;&#34;); 	}  	// 说明：将 (x, y) 往方向 d 拖动 	// 问题：我们需要知道，某一次拖动是否可行，以此来判断是否能够做这一步 	// 方法：给这个函数一个返回值，表示是否能拖动 	bool drag(int x, int y, int d) { 	if (d == 1) { 	if (x == 4) return false; 	swap(color[x][y], color[x &#43; 1][y]); 	} 	if (d == -1) { 	if (x == 0) return false; 	swap(color[x][y], color[x - 1][y]); 	}  	all_fall();  	while (check()) { 	clean(); 	all_fall();  	// print(); 	}  	return true; 	}  	// 说明：位置 (x, y) 向下掉落 	void single_fall(int x, int y) { 	while (y &gt; 0 &amp;&amp; color[x][y - 1] == 0) { 	swap(color[x][y], color[x][y - 1]); 	// 这种写法也行 	// color[x][y - 1] = color[x][y]; 	// color[x][y] = 0;  	y--; 	} 	}  	// 说明：检查当前状态中，是否有能够消除的 	// 问题：我们需要知道还有没有能够消除的，以便进入下一次拖动 	// 方法：函数返回一个值，表示是否存在 	bool check() { 	// 清空标记 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) mark[i][j] = false; 	}  	// 记录有没有能够消除的 	bool have = false;  	// 枚举每个格子 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) { 	if (color[i][j] == 0) continue;  	// printf(&#34;(%d, %d)%d &#34;, i, j, color[i][j]);  	// 计算向右有 t 个相连的 	int t = 1; 	while (i &#43; t &lt; 5 &amp;&amp; color[i][j] == color[i &#43; t][j]) t&#43;&#43;; 	t--;  	// printf(&#34;t_right: %d &#34;, t);  	// 如果大于 3 个相连即可标记为消除 	if (t &gt;= 2) { 	for (int k = 0; k &lt;= t; &#43;&#43;k) { 	mark[i &#43; k][j] = true; 	}  	have = true; 	}  	// =============================  	// 计算向上有 t 个相连的 	t = 1; 	while (j &#43; t &lt; 5 &amp;&amp; color[i][j] == color[i][j &#43; t]) t&#43;&#43;; 	t--;  	// printf(&#34;t_up: %d\n&#34;, t);  	// 如果大于 3 个相连即可标记为消除 	if (t &gt;= 2) { 	for (int k = 0; k &lt;= t; &#43;&#43;k) { 	mark[i][j &#43; k] = true; 	}  	have = true; 	}  	} 	} 	return have; 	}  	// 说明：清除被标记的连续的块 	void clean() { 	// for (int j = 6; j &gt;= 0; --j) { 	// for (int i = 0; i &lt; 5; &#43;&#43;i) { 	// printf(&#34;%d &#34;, mark[i][j]); 	// } 	// puts(&#34;&#34;); 	// } 	// puts(&#34;&#34;);  	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) { 	if (mark[i][j]) { 	color[i][j] = 0; 	} 	} 	} 	}  	// 说明：让整个图下落到不需要下落为止 	void all_fall() { 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) { 	// 如果是空格子就不用下落 	if (color[i][j] == 0) continue; 	single_fall(i, j); 	} 	} 	}  	// 说明：查询图的结果 	bool result() { 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) { 	if (color[i][j] !"/>
-
-    <meta property="og:title" content="洛谷 P1312 [NOIP2011 提高组] Mayan 游戏" />
-<meta property="og:description" content="一、题意    题目链接：Problem
+#include &lt;bits/stdc++.h&gt; using namespace std; // 对于代码量偏大的程序，尽可能将功能拆分  // 整体思路： // 拖动 // 掉落 // while(检查) //	消除 //	掉落  struct State { // 在不同层的状态，即使局面相同，也可能有不同的结果 	// 因为有时候需要浪费步数 	int level; int color[10][10]; bool mark[10][10]; // 说明：输入数据 	void read() { for (int i = 0; i &lt; 5; ++i) { for (int j = 0; true; ++j) { scanf("%d", &amp;color[i][j]); if (color[i][j] == 0) break; } } } // 说明：输出数据 	void print() { for (int j = 6; j &gt;= 0; --j) { for (int i = 0; i &lt; 5; ++i) { printf("%d ", color[i][j]); } puts(""); } puts(""); } // 说明：将 (x, y) 往方向 d 拖动 	// 问题：我们需要知道，某一次拖动是否可行，以此来判断是否能够做这一步 	// 方法：给这个函数一个返回值，表示是否能拖动 	bool drag(int x, int y, int d) { if (d == 1) { if (x == 4) return false; swap(color[x][y], color[x + 1][y]); } if (d == -1) { if (x == 0) return false; swap(color[x][y], color[x - 1][y]); } all_fall(); while (check()) { clean(); all_fall(); // print(); 	} return true; } // 说明：位置 (x, y) 向下掉落 	void single_fall(int x, int y) { while (y &gt; 0 &amp;&amp; color[x][y - 1] == 0) { swap(color[x][y], color[x][y - 1]); // 这种写法也行 	// color[x][y - 1] = color[x][y]; 	// color[x][y] = 0;  y--; } } // 说明：检查当前状态中，是否有能够消除的 	// 问题：我们需要知道还有没有能够消除的，以便进入下一次拖动 	// 方法：函数返回一个值，表示是否存在 	bool check() { // 清空标记 	for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) mark[i][j] = false; } // 记录有没有能够消除的 	bool have = false; // 枚举每个格子 	for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) { if (color[i][j] == 0) continue; // printf("(%d, %d)%d ", i, j, color[i][j]);  // 计算向右有 t 个相连的 	int t = 1; while (i + t &lt; 5 &amp;&amp; color[i][j] == color[i + t][j]) t++; t--; // printf("t_right: %d ", t);  // 如果大于 3 个相连即可标记为消除 	if (t &gt;= 2) { for (int k = 0; k &lt;= t; ++k) { mark[i + k][j] = true; } have = true; } // =============================  // 计算向上有 t 个相连的 	t = 1; while (j + t &lt; 5 &amp;&amp; color[i][j] == color[i][j + t]) t++; t--; // printf("t_up: %d\n", t);  // 如果大于 3 个相连即可标记为消除 	if (t &gt;= 2) { for (int k = 0; k &lt;= t; ++k) { mark[i][j + k] = true; } have = true; } } } return have; } // 说明：清除被标记的连续的块 	void clean() { // for (int j = 6; j &gt;= 0; --j) { 	// for (int i = 0; i &lt; 5; ++i) { 	// printf("%d ", mark[i][j]); 	// } 	// puts(""); 	// } 	// puts("");  for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) { if (mark[i][j]) { color[i][j] = 0; } } } } // 说明：让整个图下落到不需要下落为止 	void all_fall() { for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) { // 如果是空格子就不用下落 	if (color[i][j] == 0) continue; single_fall(i, j); } } } // 说明：查询图的结果 	bool result() { for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) { if (color[i][j] !' name="twitter:description"/>
+<meta content="洛谷 P1312 [NOIP2011 提高组] Mayan 游戏" property="og:title"/>
+<meta content='一、题意    题目链接：Problem
 二、题解    大模拟，记忆化搜索。
 坑点：局面相同时，可能因为层数不同而导致结果不同，记忆化搜索时，不要剪掉了答案的枝。
 三、代码    通过链接：Submission
-#include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std;  // 对于代码量偏大的程序，尽可能将功能拆分  // 整体思路： // 拖动 // 掉落 // while(检查) //	消除 //	掉落  struct State {  	// 在不同层的状态，即使局面相同，也可能有不同的结果 	// 因为有时候需要浪费步数 	int level;  	int color[10][10]; 	bool mark[10][10];  	// 说明：输入数据 	void read() { 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; true; &#43;&#43;j) { 	scanf(&#34;%d&#34;, &amp;color[i][j]); 	if (color[i][j] == 0) 	break; 	} 	} 	}  	// 说明：输出数据 	void print() { 	for (int j = 6; j &gt;= 0; --j) { 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	printf(&#34;%d &#34;, color[i][j]); 	} 	puts(&#34;&#34;); 	} 	puts(&#34;&#34;); 	}  	// 说明：将 (x, y) 往方向 d 拖动 	// 问题：我们需要知道，某一次拖动是否可行，以此来判断是否能够做这一步 	// 方法：给这个函数一个返回值，表示是否能拖动 	bool drag(int x, int y, int d) { 	if (d == 1) { 	if (x == 4) return false; 	swap(color[x][y], color[x &#43; 1][y]); 	} 	if (d == -1) { 	if (x == 0) return false; 	swap(color[x][y], color[x - 1][y]); 	}  	all_fall();  	while (check()) { 	clean(); 	all_fall();  	// print(); 	}  	return true; 	}  	// 说明：位置 (x, y) 向下掉落 	void single_fall(int x, int y) { 	while (y &gt; 0 &amp;&amp; color[x][y - 1] == 0) { 	swap(color[x][y], color[x][y - 1]); 	// 这种写法也行 	// color[x][y - 1] = color[x][y]; 	// color[x][y] = 0;  	y--; 	} 	}  	// 说明：检查当前状态中，是否有能够消除的 	// 问题：我们需要知道还有没有能够消除的，以便进入下一次拖动 	// 方法：函数返回一个值，表示是否存在 	bool check() { 	// 清空标记 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) mark[i][j] = false; 	}  	// 记录有没有能够消除的 	bool have = false;  	// 枚举每个格子 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) { 	if (color[i][j] == 0) continue;  	// printf(&#34;(%d, %d)%d &#34;, i, j, color[i][j]);  	// 计算向右有 t 个相连的 	int t = 1; 	while (i &#43; t &lt; 5 &amp;&amp; color[i][j] == color[i &#43; t][j]) t&#43;&#43;; 	t--;  	// printf(&#34;t_right: %d &#34;, t);  	// 如果大于 3 个相连即可标记为消除 	if (t &gt;= 2) { 	for (int k = 0; k &lt;= t; &#43;&#43;k) { 	mark[i &#43; k][j] = true; 	}  	have = true; 	}  	// =============================  	// 计算向上有 t 个相连的 	t = 1; 	while (j &#43; t &lt; 5 &amp;&amp; color[i][j] == color[i][j &#43; t]) t&#43;&#43;; 	t--;  	// printf(&#34;t_up: %d\n&#34;, t);  	// 如果大于 3 个相连即可标记为消除 	if (t &gt;= 2) { 	for (int k = 0; k &lt;= t; &#43;&#43;k) { 	mark[i][j &#43; k] = true; 	}  	have = true; 	}  	} 	} 	return have; 	}  	// 说明：清除被标记的连续的块 	void clean() { 	// for (int j = 6; j &gt;= 0; --j) { 	// for (int i = 0; i &lt; 5; &#43;&#43;i) { 	// printf(&#34;%d &#34;, mark[i][j]); 	// } 	// puts(&#34;&#34;); 	// } 	// puts(&#34;&#34;);  	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) { 	if (mark[i][j]) { 	color[i][j] = 0; 	} 	} 	} 	}  	// 说明：让整个图下落到不需要下落为止 	void all_fall() { 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) { 	// 如果是空格子就不用下落 	if (color[i][j] == 0) continue; 	single_fall(i, j); 	} 	} 	}  	// 说明：查询图的结果 	bool result() { 	for (int i = 0; i &lt; 5; &#43;&#43;i) { 	for (int j = 0; j &lt; 7; &#43;&#43;j) { 	if (color[i][j] !" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://ccviolett.github.io/solution/luogup1312/" /><meta property="article:section" content="solution" />
-<meta property="article:published_time" content="2022-04-04T15:35:31+08:00" />
-<meta property="article:modified_time" content="2022-04-04T15:35:31+08:00" />
-
-
-
-    <title>
+#include &lt;bits/stdc++.h&gt; using namespace std; // 对于代码量偏大的程序，尽可能将功能拆分  // 整体思路： // 拖动 // 掉落 // while(检查) //	消除 //	掉落  struct State { // 在不同层的状态，即使局面相同，也可能有不同的结果 	// 因为有时候需要浪费步数 	int level; int color[10][10]; bool mark[10][10]; // 说明：输入数据 	void read() { for (int i = 0; i &lt; 5; ++i) { for (int j = 0; true; ++j) { scanf("%d", &amp;color[i][j]); if (color[i][j] == 0) break; } } } // 说明：输出数据 	void print() { for (int j = 6; j &gt;= 0; --j) { for (int i = 0; i &lt; 5; ++i) { printf("%d ", color[i][j]); } puts(""); } puts(""); } // 说明：将 (x, y) 往方向 d 拖动 	// 问题：我们需要知道，某一次拖动是否可行，以此来判断是否能够做这一步 	// 方法：给这个函数一个返回值，表示是否能拖动 	bool drag(int x, int y, int d) { if (d == 1) { if (x == 4) return false; swap(color[x][y], color[x + 1][y]); } if (d == -1) { if (x == 0) return false; swap(color[x][y], color[x - 1][y]); } all_fall(); while (check()) { clean(); all_fall(); // print(); 	} return true; } // 说明：位置 (x, y) 向下掉落 	void single_fall(int x, int y) { while (y &gt; 0 &amp;&amp; color[x][y - 1] == 0) { swap(color[x][y], color[x][y - 1]); // 这种写法也行 	// color[x][y - 1] = color[x][y]; 	// color[x][y] = 0;  y--; } } // 说明：检查当前状态中，是否有能够消除的 	// 问题：我们需要知道还有没有能够消除的，以便进入下一次拖动 	// 方法：函数返回一个值，表示是否存在 	bool check() { // 清空标记 	for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) mark[i][j] = false; } // 记录有没有能够消除的 	bool have = false; // 枚举每个格子 	for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) { if (color[i][j] == 0) continue; // printf("(%d, %d)%d ", i, j, color[i][j]);  // 计算向右有 t 个相连的 	int t = 1; while (i + t &lt; 5 &amp;&amp; color[i][j] == color[i + t][j]) t++; t--; // printf("t_right: %d ", t);  // 如果大于 3 个相连即可标记为消除 	if (t &gt;= 2) { for (int k = 0; k &lt;= t; ++k) { mark[i + k][j] = true; } have = true; } // =============================  // 计算向上有 t 个相连的 	t = 1; while (j + t &lt; 5 &amp;&amp; color[i][j] == color[i][j + t]) t++; t--; // printf("t_up: %d\n", t);  // 如果大于 3 个相连即可标记为消除 	if (t &gt;= 2) { for (int k = 0; k &lt;= t; ++k) { mark[i][j + k] = true; } have = true; } } } return have; } // 说明：清除被标记的连续的块 	void clean() { // for (int j = 6; j &gt;= 0; --j) { 	// for (int i = 0; i &lt; 5; ++i) { 	// printf("%d ", mark[i][j]); 	// } 	// puts(""); 	// } 	// puts("");  for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) { if (mark[i][j]) { color[i][j] = 0; } } } } // 说明：让整个图下落到不需要下落为止 	void all_fall() { for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) { // 如果是空格子就不用下落 	if (color[i][j] == 0) continue; single_fall(i, j); } } } // 说明：查询图的结果 	bool result() { for (int i = 0; i &lt; 5; ++i) { for (int j = 0; j &lt; 7; ++j) { if (color[i][j] !' property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="http://ccviolett.github.io/solution/luogup1312/" property="og:url"/><meta content="solution" property="article:section"/>
+<meta content="2022-04-04T15:35:31+08:00" property="article:published_time"/>
+<meta content="2022-04-04T15:35:31+08:00" property="article:modified_time"/>
+<title>
   洛谷 P1312 [NOIP2011 提高组] Mayan 游戏 · 罗潇阳的博客
 </title>
-
-    
-      <link rel="canonical" href="http://ccviolett.github.io/solution/luogup1312/">
-    
-
-    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
-
-    
-      
-      
-      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
-    
-
-    
-
-    
-      
-        
-        
-        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
-      
-    
-
-    
-
-    
-
-    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-    <meta name="generator" content="Hugo 0.98.0" />
-  </head>
-
-  
-  
-    
-  
-  <body class="preload-transitions colorscheme-auto">
-    
+<link href="http://ccviolett.github.io/solution/luogup1312/" rel="canonical"/>
+<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
+<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="Hugo 0.92.0" name="generator"/>
+</head>
+<body class="preload-transitions colorscheme-auto">
 <div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
+<a class="colorscheme-toggle" id="dark-mode-toggle">
+<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
+</a>
 </div>
-
-
-    <main class="wrapper">
-      <script>
+<main class="wrapper">
+<script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -100,9 +58,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -111,370 +67,336 @@ var _hmt = _hmt || [];
 
   gtag('config', 'UA-228764760-1');
 </script>
-
 <nav class="navigation">
-  <section class="container">
-    <a class="navigation-title" href="/">
+<section class="container">
+<a class="navigation-title" href="/">
       罗潇阳的博客
     </a>
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/">首页</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">文章</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/solution/">题解</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">联系</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/about/">关于</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/support/">赞助</a>
-            </li>
-          
-        
-        
-          
-          
-          
-            
-          
-            
-              
-                <li class="navigation-item menu-separator">
-                  <span>|</span>
-                </li>
-                
-              
-              <li class="navigation-item">
-                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
-              </li>
-            
-          
-        
-      </ul>
-    
-  </section>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button float-right" for="menu-toggle">
+<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
+</label>
+<ul class="navigation-list">
+<li class="navigation-item">
+<a class="navigation-link" href="/">首页</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/posts/">文章</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/solution/">题解</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/contact/">联系</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/about/">关于</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/support/">赞助</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class="navigation-item">
+<a href="http://ccviolett.github.io/en/">🇬🇧</a>
+</li>
+</ul>
+</section>
 </nav>
-
-
-      <div class="content">
-        
-  <section class="container page">
-  <article>
-    <header>
-      <h1 class="title">
-        <a class="title-link" href="http://ccviolett.github.io/solution/luogup1312/">
+<div class="content">
+<section class="container page">
+<article>
+<header>
+<h1 class="title">
+<a class="title-link" href="http://ccviolett.github.io/solution/luogup1312/">
           洛谷 P1312 [NOIP2011 提高组] Mayan 游戏
         </a>
-      </h1>
-    </header>
-
-    <h3 id="一题意">
+</h1>
+</header>
+<h3 id="一题意">
   一、题意
   <a class="heading-link" href="#%e4%b8%80%e9%a2%98%e6%84%8f">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>题目链接：<a href="https://www.luogu.com.cn/problem/P1312">Problem</a></p>
 <h3 id="二题解">
   二、题解
   <a class="heading-link" href="#%e4%ba%8c%e9%a2%98%e8%a7%a3">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>大模拟，记忆化搜索。</p>
 <p>坑点：局面相同时，可能因为层数不同而导致结果不同，记忆化搜索时，不要剪掉了答案的枝。</p>
 <h3 id="三代码">
   三、代码
   <a class="heading-link" href="#%e4%b8%89%e4%bb%a3%e7%a0%81">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>通过链接：<a href="https://www.luogu.com.cn/record/73146916">Submission</a></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;bits/stdc++.h&gt;</span><span style="color:#888;font-weight:bold">
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-weight:bold"></span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">using</span> <span style="font-weight:bold;text-decoration:underline">namespace</span> std;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">// 对于代码量偏大的程序，尽可能将功能拆分
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>
-</span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">// 整体思路：
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">// 拖动
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">// 掉落
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">// while(检查)
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">//	消除
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic">//	掉落
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">struct</span> <span style="color:#666;font-weight:bold;font-style:italic">State</span> {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#888;font-style:italic">// 在不同层的状态，即使局面相同，也可能有不同的结果
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="color:#888;font-style:italic">// 因为有时候需要浪费步数
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">int</span> level;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">int</span> color[10][10];
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">bool</span> mark[10][10];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#888;font-style:italic">// 说明：输入数据
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">read</span>() {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; <span style="font-weight:bold;font-style:italic">true</span>; ++j) {
-</span></span><span style="display:flex;"><span>				scanf(<span style="color:#666;font-style:italic">&#34;%d&#34;</span>, &amp;color[i][j]);
-</span></span><span style="display:flex;"><span>				<span style="font-weight:bold;text-decoration:underline">if</span> (color[i][j] == 0) 
-</span></span><span style="display:flex;"><span>					<span style="font-weight:bold;text-decoration:underline">break</span>;
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#888;font-style:italic">// 说明：输出数据
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">print</span>() {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 6; j &gt;= 0; --j) {
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
-</span></span><span style="display:flex;"><span>				printf(<span style="color:#666;font-style:italic">&#34;%d &#34;</span>, color[i][j]);
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>			puts(<span style="color:#666;font-style:italic">&#34;&#34;</span>);
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>		puts(<span style="color:#666;font-style:italic">&#34;&#34;</span>);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#888;font-style:italic">// 说明：将 (x, y) 往方向 d 拖动
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="color:#888;font-style:italic">// 问题：我们需要知道，某一次拖动是否可行，以此来判断是否能够做这一步
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="color:#888;font-style:italic">// 方法：给这个函数一个返回值，表示是否能拖动 
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">bool</span> <span style="color:#666;font-weight:bold;font-style:italic">drag</span>(<span style="font-weight:bold;text-decoration:underline">int</span> x, <span style="font-weight:bold;text-decoration:underline">int</span> y, <span style="font-weight:bold;text-decoration:underline">int</span> d) {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">if</span> (d == 1) {
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">if</span> (x == 4) <span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;font-style:italic">false</span>;
-</span></span><span style="display:flex;"><span>			swap(color[x][y], color[x + 1][y]);
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">if</span> (d == -1) {
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">if</span> (x == 0) <span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;font-style:italic">false</span>;
-</span></span><span style="display:flex;"><span>			swap(color[x][y], color[x - 1][y]);
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		all_fall();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">while</span> (check()) {
-</span></span><span style="display:flex;"><span>			clean();
-</span></span><span style="display:flex;"><span>			all_fall();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>			<span style="color:#888;font-style:italic">// print();
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>		}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;font-style:italic">true</span>;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#888;font-style:italic">// 说明：位置 (x, y) 向下掉落
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">single_fall</span>(<span style="font-weight:bold;text-decoration:underline">int</span> x, <span style="font-weight:bold;text-decoration:underline">int</span> y) {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">while</span> (y &gt; 0 &amp;&amp; color[x][y - 1] == 0) {
-</span></span><span style="display:flex;"><span>			swap(color[x][y], color[x][y - 1]);
-</span></span><span style="display:flex;"><span>			<span style="color:#888;font-style:italic">// 这种写法也行
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>			<span style="color:#888;font-style:italic">// color[x][y - 1] = color[x][y];
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>			<span style="color:#888;font-style:italic">// color[x][y] = 0;
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>
-</span></span><span style="display:flex;"><span>			y--;
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#888;font-style:italic">// 说明：检查当前状态中，是否有能够消除的
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="color:#888;font-style:italic">// 问题：我们需要知道还有没有能够消除的，以便进入下一次拖动
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="color:#888;font-style:italic">// 方法：函数返回一个值，表示是否存在
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">bool</span> <span style="color:#666;font-weight:bold;font-style:italic">check</span>() {
-</span></span><span style="display:flex;"><span>		<span style="color:#888;font-style:italic">// 清空标记
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) mark[i][j] = <span style="font-weight:bold;font-style:italic">false</span>;
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		<span style="color:#888;font-style:italic">// 记录有没有能够消除的
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>		<span style="font-weight:bold;text-decoration:underline">bool</span> have = <span style="font-weight:bold;font-style:italic">false</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>		<span style="color:#888;font-style:italic">// 枚举每个格子
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) {
-</span></span><span style="display:flex;"><span>				<span style="font-weight:bold;text-decoration:underline">if</span> (color[i][j] == 0) <span style="font-weight:bold;text-decoration:underline">continue</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>				<span style="color:#888;font-style:italic">// printf(&#34;(%d, %d)%d &#34;, i, j, color[i][j]);
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>
-</span></span><span style="display:flex;"><span>				<span style="color:#888;font-style:italic">// 计算向右有 t 个相连的
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>				<span style="font-weight:bold;text-decoration:underline">int</span> t = 1;
-</span></span><span style="display:flex;"><span>				<span style="font-weight:bold;text-decoration:underline">while</span> (i + t &lt; 5 &amp;&amp; color[i][j] == color[i + t][j]) t++;
-</span></span><span style="display:flex;"><span>				t--;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>				<span style="color:#888;font-style:italic">// printf(&#34;t_right: %d &#34;, t);
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>
-</span></span><span style="display:flex;"><span>				<span style="color:#888;font-style:italic">// 如果大于 3 个相连即可标记为消除
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>				<span style="font-weight:bold;text-decoration:underline">if</span> (t &gt;= 2) {
-</span></span><span style="display:flex;"><span>					<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> k = 0; k &lt;= t; ++k) {
-</span></span><span style="display:flex;"><span>						mark[i + k][j] = <span style="font-weight:bold;font-style:italic">true</span>;
-</span></span><span style="display:flex;"><span>					}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>					have = <span style="font-weight:bold;font-style:italic">true</span>;
-</span></span><span style="display:flex;"><span>				}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>				<span style="color:#888;font-style:italic">// =============================
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>
-</span></span><span style="display:flex;"><span>				<span style="color:#888;font-style:italic">// 计算向上有 t 个相连的
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>				t = 1;
-</span></span><span style="display:flex;"><span>				<span style="font-weight:bold;text-decoration:underline">while</span> (j + t &lt; 5 &amp;&amp; color[i][j] == color[i][j + t]) t++;
-</span></span><span style="display:flex;"><span>				t--;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>				<span style="color:#888;font-style:italic">// printf(&#34;t_up: %d\n&#34;, t);
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>
-</span></span><span style="display:flex;"><span>				<span style="color:#888;font-style:italic">// 如果大于 3 个相连即可标记为消除
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>				<span style="font-weight:bold;text-decoration:underline">if</span> (t &gt;= 2) {
-</span></span><span style="display:flex;"><span>					<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> k = 0; k &lt;= t; ++k) {
-</span></span><span style="display:flex;"><span>						mark[i][j + k] = <span style="font-weight:bold;font-style:italic">true</span>;
-</span></span><span style="display:flex;"><span>					}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>					have = <span style="font-weight:bold;font-style:italic">true</span>;
-</span></span><span style="display:flex;"><span>				}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">return</span> have;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#888;font-style:italic">// 说明：清除被标记的连续的块
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">clean</span>() {
-</span></span><span style="display:flex;"><span>		<span style="color:#888;font-style:italic">// for (int j = 6; j &gt;= 0; --j) {
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>		<span style="color:#888;font-style:italic">// 	for (int i = 0; i &lt; 5; ++i) {
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>		<span style="color:#888;font-style:italic">// 		printf(&#34;%d &#34;, mark[i][j]);
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>		<span style="color:#888;font-style:italic">// 	}
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>		<span style="color:#888;font-style:italic">// 	puts(&#34;&#34;);
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>		<span style="color:#888;font-style:italic">// }
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>		<span style="color:#888;font-style:italic">// puts(&#34;&#34;);
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) {
-</span></span><span style="display:flex;"><span>				<span style="font-weight:bold;text-decoration:underline">if</span> (mark[i][j]) {
-</span></span><span style="display:flex;"><span>					color[i][j] = 0;
-</span></span><span style="display:flex;"><span>				}
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#888;font-style:italic">// 说明：让整个图下落到不需要下落为止
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">all_fall</span>() {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) {
-</span></span><span style="display:flex;"><span>				<span style="color:#888;font-style:italic">// 如果是空格子就不用下落
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>				<span style="font-weight:bold;text-decoration:underline">if</span> (color[i][j] == 0) <span style="font-weight:bold;text-decoration:underline">continue</span>;
-</span></span><span style="display:flex;"><span>				single_fall(i, j);
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#888;font-style:italic">// 说明：查询图的结果
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">bool</span> <span style="color:#666;font-weight:bold;font-style:italic">result</span>() {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) {
-</span></span><span style="display:flex;"><span>				<span style="font-weight:bold;text-decoration:underline">if</span> (color[i][j] != 0) <span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;font-style:italic">false</span>;
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;font-style:italic">true</span>;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">bool</span> <span style="font-weight:bold;text-decoration:underline">operator</span> &lt; (<span style="font-weight:bold;text-decoration:underline">const</span> State a, <span style="font-weight:bold;text-decoration:underline">const</span> State b) {
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">if</span> (a.level != b.level) <span style="font-weight:bold;text-decoration:underline">return</span> a.level &lt; b.level;
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) {
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">if</span> (a.color[i][j] != b.color[i][j]) {
-</span></span><span style="display:flex;"><span>				<span style="font-weight:bold;text-decoration:underline">return</span> a.color[i][j] &lt; b.color[i][j];
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;font-style:italic">false</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>State s;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">const</span> <span style="font-weight:bold;text-decoration:underline">int</span> N = 10;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> n;
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> x[N], y[N], d[N];
-</span></span><span style="display:flex;"><span>State sta[N];
-</span></span><span style="display:flex;"><span>map&lt;State, <span style="font-weight:bold;text-decoration:underline">bool</span>&gt; have;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">DFS</span>(<span style="font-weight:bold;text-decoration:underline">int</span> t) {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">if</span> (have[sta[t]]) <span style="font-weight:bold;text-decoration:underline">return</span> ;
-</span></span><span style="display:flex;"><span>	have[sta[t]] = <span style="font-weight:bold;font-style:italic">true</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">if</span> (t &gt; n) {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">if</span> (sta[t].result()) {
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i) {
-</span></span><span style="display:flex;"><span>				printf(<span style="color:#666;font-style:italic">&#34;%d %d %d</span><span style="color:#666;font-style:italic">\n</span><span style="color:#666;font-style:italic">&#34;</span>, x[i], y[i], d[i]);
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>			<span style="color:#888;font-style:italic">// 暴力退出整个程序
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>			exit(0);
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">return</span> ;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#888;font-style:italic">// 通过每一层的 sta[t]，来计算下一层 sta[t + 1] 的状态
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
-</span></span><span style="display:flex;"><span>		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) {
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">if</span> (sta[t].color[i][j] == 0) <span style="font-weight:bold;text-decoration:underline">continue</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>			<span style="color:#888;font-style:italic">// 如果能拖动，进行 DFS 往下搜
-</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>
-</span></span><span style="display:flex;"><span>			sta[t + 1] = sta[t];
-</span></span><span style="display:flex;"><span>			sta[t + 1].level = sta[t].level + 1;
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">if</span> (sta[t + 1].drag(i, j, 1)) {
-</span></span><span style="display:flex;"><span>				x[t] = i, y[t] = j, d[t] = 1;
-</span></span><span style="display:flex;"><span>				DFS(t + 1);
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>			sta[t + 1] = sta[t];
-</span></span><span style="display:flex;"><span>			sta[t + 1].level = sta[t].level + 1;
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold;text-decoration:underline">if</span> (sta[t + 1].drag(i, j, -1)) {
-</span></span><span style="display:flex;"><span>				x[t] = i, y[t] = j, d[t] = -1;
-</span></span><span style="display:flex;"><span>				DFS(t + 1);
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">main</span>() {
-</span></span><span style="display:flex;"><span>	scanf(<span style="color:#666;font-style:italic">&#34;%d&#34;</span>, &amp;n);
-</span></span><span style="display:flex;"><span>	s.read();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	sta[1] = s;
-</span></span><span style="display:flex;"><span>	sta[1].level = 1;
-</span></span><span style="display:flex;"><span>	DFS(1);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	puts(<span style="color:#666;font-style:italic">&#34;-1&#34;</span>);
-</span></span><span style="display:flex;"><span>	<span style="font-weight:bold;text-decoration:underline">return</span> 0;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>
-  </article>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4" tabindex="0"><code class="language-cpp" data-lang="cpp"><span style="color:#888;font-weight:bold">#include</span> <span style="color:#888;font-weight:bold">&lt;bits/stdc++.h&gt;</span><span style="color:#888;font-weight:bold">
+</span><span style="color:#888;font-weight:bold"></span>
+<span style="font-weight:bold;text-decoration:underline">using</span> <span style="font-weight:bold;text-decoration:underline">namespace</span> std;
 
+<span style="color:#888;font-style:italic">// 对于代码量偏大的程序，尽可能将功能拆分
+</span><span style="color:#888;font-style:italic"></span>
+<span style="color:#888;font-style:italic">// 整体思路：
+</span><span style="color:#888;font-style:italic">// 拖动
+</span><span style="color:#888;font-style:italic">// 掉落
+</span><span style="color:#888;font-style:italic">// while(检查)
+</span><span style="color:#888;font-style:italic">//	消除
+</span><span style="color:#888;font-style:italic">//	掉落
+</span><span style="color:#888;font-style:italic"></span>
+<span style="font-weight:bold;text-decoration:underline">struct</span> <span style="color:#666;font-weight:bold;font-style:italic">State</span> {
+
+	<span style="color:#888;font-style:italic">// 在不同层的状态，即使局面相同，也可能有不同的结果
+</span><span style="color:#888;font-style:italic"></span>	<span style="color:#888;font-style:italic">// 因为有时候需要浪费步数
+</span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">int</span> level;
+
+	<span style="font-weight:bold;text-decoration:underline">int</span> color[10][10];
+	<span style="font-weight:bold;text-decoration:underline">bool</span> mark[10][10];
+
+	<span style="color:#888;font-style:italic">// 说明：输入数据
+</span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">read</span>() {
+		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
+			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; <span style="font-weight:bold;font-style:italic">true</span>; ++j) {
+				scanf(<span style="color:#666;font-style:italic">"%d"</span>, &amp;color[i][j]);
+				<span style="font-weight:bold;text-decoration:underline">if</span> (color[i][j] == 0) 
+					<span style="font-weight:bold;text-decoration:underline">break</span>;
+			}
+		}
+	}
+
+	<span style="color:#888;font-style:italic">// 说明：输出数据
+</span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">print</span>() {
+		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 6; j &gt;= 0; --j) {
+			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
+				printf(<span style="color:#666;font-style:italic">"%d "</span>, color[i][j]);
+			}
+			puts(<span style="color:#666;font-style:italic">""</span>);
+		}
+		puts(<span style="color:#666;font-style:italic">""</span>);
+	}
+
+	<span style="color:#888;font-style:italic">// 说明：将 (x, y) 往方向 d 拖动
+</span><span style="color:#888;font-style:italic"></span>	<span style="color:#888;font-style:italic">// 问题：我们需要知道，某一次拖动是否可行，以此来判断是否能够做这一步
+</span><span style="color:#888;font-style:italic"></span>	<span style="color:#888;font-style:italic">// 方法：给这个函数一个返回值，表示是否能拖动 
+</span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">bool</span> <span style="color:#666;font-weight:bold;font-style:italic">drag</span>(<span style="font-weight:bold;text-decoration:underline">int</span> x, <span style="font-weight:bold;text-decoration:underline">int</span> y, <span style="font-weight:bold;text-decoration:underline">int</span> d) {
+		<span style="font-weight:bold;text-decoration:underline">if</span> (d == 1) {
+			<span style="font-weight:bold;text-decoration:underline">if</span> (x == 4) <span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;font-style:italic">false</span>;
+			swap(color[x][y], color[x + 1][y]);
+		}
+		<span style="font-weight:bold;text-decoration:underline">if</span> (d == -1) {
+			<span style="font-weight:bold;text-decoration:underline">if</span> (x == 0) <span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;font-style:italic">false</span>;
+			swap(color[x][y], color[x - 1][y]);
+		}
+
+		all_fall();
+
+		<span style="font-weight:bold;text-decoration:underline">while</span> (check()) {
+			clean();
+			all_fall();
+
+			<span style="color:#888;font-style:italic">// print();
+</span><span style="color:#888;font-style:italic"></span>		}
+
+		<span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;font-style:italic">true</span>;
+	}
+
+	<span style="color:#888;font-style:italic">// 说明：位置 (x, y) 向下掉落
+</span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">single_fall</span>(<span style="font-weight:bold;text-decoration:underline">int</span> x, <span style="font-weight:bold;text-decoration:underline">int</span> y) {
+		<span style="font-weight:bold;text-decoration:underline">while</span> (y &gt; 0 &amp;&amp; color[x][y - 1] == 0) {
+			swap(color[x][y], color[x][y - 1]);
+			<span style="color:#888;font-style:italic">// 这种写法也行
+</span><span style="color:#888;font-style:italic"></span>			<span style="color:#888;font-style:italic">// color[x][y - 1] = color[x][y];
+</span><span style="color:#888;font-style:italic"></span>			<span style="color:#888;font-style:italic">// color[x][y] = 0;
+</span><span style="color:#888;font-style:italic"></span>
+			y--;
+		}
+	}
+
+	<span style="color:#888;font-style:italic">// 说明：检查当前状态中，是否有能够消除的
+</span><span style="color:#888;font-style:italic"></span>	<span style="color:#888;font-style:italic">// 问题：我们需要知道还有没有能够消除的，以便进入下一次拖动
+</span><span style="color:#888;font-style:italic"></span>	<span style="color:#888;font-style:italic">// 方法：函数返回一个值，表示是否存在
+</span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">bool</span> <span style="color:#666;font-weight:bold;font-style:italic">check</span>() {
+		<span style="color:#888;font-style:italic">// 清空标记
+</span><span style="color:#888;font-style:italic"></span>		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
+			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) mark[i][j] = <span style="font-weight:bold;font-style:italic">false</span>;
+		}
+
+		<span style="color:#888;font-style:italic">// 记录有没有能够消除的
+</span><span style="color:#888;font-style:italic"></span>		<span style="font-weight:bold;text-decoration:underline">bool</span> have = <span style="font-weight:bold;font-style:italic">false</span>;
+
+		<span style="color:#888;font-style:italic">// 枚举每个格子
+</span><span style="color:#888;font-style:italic"></span>		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
+			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) {
+				<span style="font-weight:bold;text-decoration:underline">if</span> (color[i][j] == 0) <span style="font-weight:bold;text-decoration:underline">continue</span>;
+
+				<span style="color:#888;font-style:italic">// printf("(%d, %d)%d ", i, j, color[i][j]);
+</span><span style="color:#888;font-style:italic"></span>
+				<span style="color:#888;font-style:italic">// 计算向右有 t 个相连的
+</span><span style="color:#888;font-style:italic"></span>				<span style="font-weight:bold;text-decoration:underline">int</span> t = 1;
+				<span style="font-weight:bold;text-decoration:underline">while</span> (i + t &lt; 5 &amp;&amp; color[i][j] == color[i + t][j]) t++;
+				t--;
+
+				<span style="color:#888;font-style:italic">// printf("t_right: %d ", t);
+</span><span style="color:#888;font-style:italic"></span>
+				<span style="color:#888;font-style:italic">// 如果大于 3 个相连即可标记为消除
+</span><span style="color:#888;font-style:italic"></span>				<span style="font-weight:bold;text-decoration:underline">if</span> (t &gt;= 2) {
+					<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> k = 0; k &lt;= t; ++k) {
+						mark[i + k][j] = <span style="font-weight:bold;font-style:italic">true</span>;
+					}
+
+					have = <span style="font-weight:bold;font-style:italic">true</span>;
+				}
+
+				<span style="color:#888;font-style:italic">// =============================
+</span><span style="color:#888;font-style:italic"></span>
+				<span style="color:#888;font-style:italic">// 计算向上有 t 个相连的
+</span><span style="color:#888;font-style:italic"></span>				t = 1;
+				<span style="font-weight:bold;text-decoration:underline">while</span> (j + t &lt; 5 &amp;&amp; color[i][j] == color[i][j + t]) t++;
+				t--;
+
+				<span style="color:#888;font-style:italic">// printf("t_up: %d\n", t);
+</span><span style="color:#888;font-style:italic"></span>
+				<span style="color:#888;font-style:italic">// 如果大于 3 个相连即可标记为消除
+</span><span style="color:#888;font-style:italic"></span>				<span style="font-weight:bold;text-decoration:underline">if</span> (t &gt;= 2) {
+					<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> k = 0; k &lt;= t; ++k) {
+						mark[i][j + k] = <span style="font-weight:bold;font-style:italic">true</span>;
+					}
+
+					have = <span style="font-weight:bold;font-style:italic">true</span>;
+				}
+
+			}
+		}
+		<span style="font-weight:bold;text-decoration:underline">return</span> have;
+	}
+
+	<span style="color:#888;font-style:italic">// 说明：清除被标记的连续的块
+</span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">clean</span>() {
+		<span style="color:#888;font-style:italic">// for (int j = 6; j &gt;= 0; --j) {
+</span><span style="color:#888;font-style:italic"></span>		<span style="color:#888;font-style:italic">// 	for (int i = 0; i &lt; 5; ++i) {
+</span><span style="color:#888;font-style:italic"></span>		<span style="color:#888;font-style:italic">// 		printf("%d ", mark[i][j]);
+</span><span style="color:#888;font-style:italic"></span>		<span style="color:#888;font-style:italic">// 	}
+</span><span style="color:#888;font-style:italic"></span>		<span style="color:#888;font-style:italic">// 	puts("");
+</span><span style="color:#888;font-style:italic"></span>		<span style="color:#888;font-style:italic">// }
+</span><span style="color:#888;font-style:italic"></span>		<span style="color:#888;font-style:italic">// puts("");
+</span><span style="color:#888;font-style:italic"></span>
+		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
+			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) {
+				<span style="font-weight:bold;text-decoration:underline">if</span> (mark[i][j]) {
+					color[i][j] = 0;
+				}
+			}
+		}
+	}
+
+	<span style="color:#888;font-style:italic">// 说明：让整个图下落到不需要下落为止
+</span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">all_fall</span>() {
+		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
+			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) {
+				<span style="color:#888;font-style:italic">// 如果是空格子就不用下落
+</span><span style="color:#888;font-style:italic"></span>				<span style="font-weight:bold;text-decoration:underline">if</span> (color[i][j] == 0) <span style="font-weight:bold;text-decoration:underline">continue</span>;
+				single_fall(i, j);
+			}
+		}
+	}
+
+	<span style="color:#888;font-style:italic">// 说明：查询图的结果
+</span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">bool</span> <span style="color:#666;font-weight:bold;font-style:italic">result</span>() {
+		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
+			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) {
+				<span style="font-weight:bold;text-decoration:underline">if</span> (color[i][j] != 0) <span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;font-style:italic">false</span>;
+			}
+		}
+		<span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;font-style:italic">true</span>;
+	}
+};
+
+<span style="font-weight:bold;text-decoration:underline">bool</span> <span style="font-weight:bold;text-decoration:underline">operator</span> &lt; (<span style="font-weight:bold;text-decoration:underline">const</span> State a, <span style="font-weight:bold;text-decoration:underline">const</span> State b) {
+	<span style="font-weight:bold;text-decoration:underline">if</span> (a.level != b.level) <span style="font-weight:bold;text-decoration:underline">return</span> a.level &lt; b.level;
+	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
+		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) {
+			<span style="font-weight:bold;text-decoration:underline">if</span> (a.color[i][j] != b.color[i][j]) {
+				<span style="font-weight:bold;text-decoration:underline">return</span> a.color[i][j] &lt; b.color[i][j];
+			}
+		}
+	}
+	<span style="font-weight:bold;text-decoration:underline">return</span> <span style="font-weight:bold;font-style:italic">false</span>;
+}
+
+
+State s;
+
+<span style="font-weight:bold;text-decoration:underline">const</span> <span style="font-weight:bold;text-decoration:underline">int</span> N = 10;
+
+<span style="font-weight:bold;text-decoration:underline">int</span> n;
+<span style="font-weight:bold;text-decoration:underline">int</span> x[N], y[N], d[N];
+State sta[N];
+map&lt;State, <span style="font-weight:bold;text-decoration:underline">bool</span>&gt; have;
+
+<span style="font-weight:bold;text-decoration:underline">void</span> <span style="color:#666;font-weight:bold;font-style:italic">DFS</span>(<span style="font-weight:bold;text-decoration:underline">int</span> t) {
+
+	<span style="font-weight:bold;text-decoration:underline">if</span> (have[sta[t]]) <span style="font-weight:bold;text-decoration:underline">return</span> ;
+	have[sta[t]] = <span style="font-weight:bold;font-style:italic">true</span>;
+
+	<span style="font-weight:bold;text-decoration:underline">if</span> (t &gt; n) {
+		<span style="font-weight:bold;text-decoration:underline">if</span> (sta[t].result()) {
+			<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 1; i &lt;= n; ++i) {
+				printf(<span style="color:#666;font-style:italic">"%d %d %d</span><span style="color:#666;font-style:italic">\n</span><span style="color:#666;font-style:italic">"</span>, x[i], y[i], d[i]);
+			}
+			<span style="color:#888;font-style:italic">// 暴力退出整个程序
+</span><span style="color:#888;font-style:italic"></span>			exit(0);
+		}
+		<span style="font-weight:bold;text-decoration:underline">return</span> ;
+	}
+
+	<span style="color:#888;font-style:italic">// 通过每一层的 sta[t]，来计算下一层 sta[t + 1] 的状态
+</span><span style="color:#888;font-style:italic"></span>	<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> i = 0; i &lt; 5; ++i) {
+		<span style="font-weight:bold;text-decoration:underline">for</span> (<span style="font-weight:bold;text-decoration:underline">int</span> j = 0; j &lt; 7; ++j) {
+			<span style="font-weight:bold;text-decoration:underline">if</span> (sta[t].color[i][j] == 0) <span style="font-weight:bold;text-decoration:underline">continue</span>;
+
+			<span style="color:#888;font-style:italic">// 如果能拖动，进行 DFS 往下搜
+</span><span style="color:#888;font-style:italic"></span>
+			sta[t + 1] = sta[t];
+			sta[t + 1].level = sta[t].level + 1;
+			<span style="font-weight:bold;text-decoration:underline">if</span> (sta[t + 1].drag(i, j, 1)) {
+				x[t] = i, y[t] = j, d[t] = 1;
+				DFS(t + 1);
+			}
+
+			sta[t + 1] = sta[t];
+			sta[t + 1].level = sta[t].level + 1;
+			<span style="font-weight:bold;text-decoration:underline">if</span> (sta[t + 1].drag(i, j, -1)) {
+				x[t] = i, y[t] = j, d[t] = -1;
+				DFS(t + 1);
+			}
+		}
+	}
+}
+
+<span style="font-weight:bold;text-decoration:underline">int</span> <span style="color:#666;font-weight:bold;font-style:italic">main</span>() {
+	scanf(<span style="color:#666;font-style:italic">"%d"</span>, &amp;n);
+	s.read();
+
+	sta[1] = s;
+	sta[1].level = 1;
+	DFS(1);
+
+	puts(<span style="color:#666;font-style:italic">"-1"</span>);
+	<span style="font-weight:bold;text-decoration:underline">return</span> 0;
+}
+
+</code></pre></div>
+</article>
 </section>
-  
-
-      </div>
-
-      
-  <footer class="footer">
-    <section class="container">
-      
-        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
+</div>
+<footer class="footer">
+<section class="container">
+<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
       
       
         ©
@@ -484,19 +406,17 @@ var _hmt = _hmt || [];
       
       
          · 
-        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
       
       
         
       
     </section>
-  </footer>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+</footer>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
+<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -513,30 +433,7 @@ var _hmt = _hmt || [];
         });
     });
 </script>
-
-
-
-    </main>
-
-    
-      
-      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-  </body>
+</main>
+<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
+</body>
 </html>

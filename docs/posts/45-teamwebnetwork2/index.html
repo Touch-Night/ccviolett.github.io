@@ -1,85 +1,43 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="zh-cn">
-    <meta name="color-scheme" content="light dark">
-
-    
-
-    <meta name="author" content="罗潇阳">
-    <meta name="description" content="一、基础概念  （零）链路层编码 （一）MAC 地址 （二）ARP 协议 （三）广播   二、传输方式  （一）封装成帧 （二）透明传输   三、差错控制  （一）检错编码 （二）纠错编码-海明码   四、流量控制与可靠传输  （零）信道利用率 （一）停止等待协议(Stop-and-Wait) （二）后退 N 帧协议(GBN) （三）选择重传协议(SR)   五、介质访问控制技术  （一）信道划分协议 （二）随机接入协议 （三）轮询访问与介质访问控制   六、局域网  （一）以太网 （二）无线局域网   七、广域网  （一）PPP 协议（Point-to-Point Protocol） （二）HDLC 协议（High-Level Data Link Control）   八、链路层设备  （一）网桥 （二）交换机 （三）冲突域和广播域     一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。">
-    <meta name="keywords" content="博客,开发者,个人">
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="计算机网络 | Part2 数据链路层(Data Link Layer)"/>
-<meta name="twitter:description" content="一、基础概念  （零）链路层编码 （一）MAC 地址 （二）ARP 协议 （三）广播   二、传输方式  （一）封装成帧 （二）透明传输   三、差错控制  （一）检错编码 （二）纠错编码-海明码   四、流量控制与可靠传输  （零）信道利用率 （一）停止等待协议(Stop-and-Wait) （二）后退 N 帧协议(GBN) （三）选择重传协议(SR)   五、介质访问控制技术  （一）信道划分协议 （二）随机接入协议 （三）轮询访问与介质访问控制   六、局域网  （一）以太网 （二）无线局域网   七、广域网  （一）PPP 协议（Point-to-Point Protocol） （二）HDLC 协议（High-Level Data Link Control）   八、链路层设备  （一）网桥 （二）交换机 （三）冲突域和广播域     一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。"/>
-
-    <meta property="og:title" content="计算机网络 | Part2 数据链路层(Data Link Layer)" />
-<meta property="og:description" content="一、基础概念  （零）链路层编码 （一）MAC 地址 （二）ARP 协议 （三）广播   二、传输方式  （一）封装成帧 （二）透明传输   三、差错控制  （一）检错编码 （二）纠错编码-海明码   四、流量控制与可靠传输  （零）信道利用率 （一）停止等待协议(Stop-and-Wait) （二）后退 N 帧协议(GBN) （三）选择重传协议(SR)   五、介质访问控制技术  （一）信道划分协议 （二）随机接入协议 （三）轮询访问与介质访问控制   六、局域网  （一）以太网 （二）无线局域网   七、广域网  （一）PPP 协议（Point-to-Point Protocol） （二）HDLC 协议（High-Level Data Link Control）   八、链路层设备  （一）网桥 （二）交换机 （三）冲突域和广播域     一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://ccviolett.github.io/posts/45-teamwebnetwork2/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-04-23T10:30:51+08:00" />
-<meta property="article:modified_time" content="2022-04-23T10:30:51+08:00" />
-
-
-
-    <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="zh-cn" http-equiv="Content-Language"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="罗潇阳" name="author"/>
+<meta content="一、基础概念  （零）链路层编码 （一）MAC 地址 （二）ARP 协议 （三）广播   二、传输方式  （一）封装成帧 （二）透明传输   三、差错控制  （一）检错编码 （二）纠错编码-海明码   四、流量控制与可靠传输  （零）信道利用率 （一）停止等待协议(Stop-and-Wait) （二）后退 N 帧协议(GBN) （三）选择重传协议(SR)   五、介质访问控制技术  （一）信道划分协议 （二）随机接入协议 （三）轮询访问与介质访问控制   六、局域网  （一）以太网 （二）无线局域网   七、广域网  （一）PPP 协议（Point-to-Point Protocol） （二）HDLC 协议（High-Level Data Link Control）   八、链路层设备  （一）网桥 （二）交换机 （三）冲突域和广播域     一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。" name="description"/>
+<meta content="博客,开发者,个人" name="keywords"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="计算机网络 | Part2 数据链路层(Data Link Layer)" name="twitter:title"/>
+<meta content="一、基础概念  （零）链路层编码 （一）MAC 地址 （二）ARP 协议 （三）广播   二、传输方式  （一）封装成帧 （二）透明传输   三、差错控制  （一）检错编码 （二）纠错编码-海明码   四、流量控制与可靠传输  （零）信道利用率 （一）停止等待协议(Stop-and-Wait) （二）后退 N 帧协议(GBN) （三）选择重传协议(SR)   五、介质访问控制技术  （一）信道划分协议 （二）随机接入协议 （三）轮询访问与介质访问控制   六、局域网  （一）以太网 （二）无线局域网   七、广域网  （一）PPP 协议（Point-to-Point Protocol） （二）HDLC 协议（High-Level Data Link Control）   八、链路层设备  （一）网桥 （二）交换机 （三）冲突域和广播域     一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。" name="twitter:description"/>
+<meta content="计算机网络 | Part2 数据链路层(Data Link Layer)" property="og:title"/>
+<meta content="一、基础概念  （零）链路层编码 （一）MAC 地址 （二）ARP 协议 （三）广播   二、传输方式  （一）封装成帧 （二）透明传输   三、差错控制  （一）检错编码 （二）纠错编码-海明码   四、流量控制与可靠传输  （零）信道利用率 （一）停止等待协议(Stop-and-Wait) （二）后退 N 帧协议(GBN) （三）选择重传协议(SR)   五、介质访问控制技术  （一）信道划分协议 （二）随机接入协议 （三）轮询访问与介质访问控制   六、局域网  （一）以太网 （二）无线局域网   七、广域网  （一）PPP 协议（Point-to-Point Protocol） （二）HDLC 协议（High-Level Data Link Control）   八、链路层设备  （一）网桥 （二）交换机 （三）冲突域和广播域     一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="http://ccviolett.github.io/posts/45-teamwebnetwork2/" property="og:url"/><meta content="posts" property="article:section"/>
+<meta content="2022-04-23T10:30:51+08:00" property="article:published_time"/>
+<meta content="2022-04-23T10:30:51+08:00" property="article:modified_time"/>
+<title>
   计算机网络 | Part2 数据链路层(Data Link Layer) · 罗潇阳的博客
 </title>
-
-    
-      <link rel="canonical" href="http://ccviolett.github.io/posts/45-teamwebnetwork2/">
-    
-
-    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
-
-    
-      
-      
-      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
-    
-
-    
-
-    
-      
-        
-        
-        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
-      
-    
-
-    
-
-    
-
-    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-    <meta name="generator" content="Hugo 0.98.0" />
-  </head>
-
-  
-  
-    
-  
-  <body class="preload-transitions colorscheme-auto">
-    
+<link href="http://ccviolett.github.io/posts/45-teamwebnetwork2/" rel="canonical"/>
+<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
+<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="Hugo 0.92.0" name="generator"/>
+</head>
+<body class="preload-transitions colorscheme-auto">
 <div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
+<a class="colorscheme-toggle" id="dark-mode-toggle">
+<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
+</a>
 </div>
-
-
-    <main class="wrapper">
-      <script>
+<main class="wrapper">
+<script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -88,9 +46,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -99,171 +55,138 @@ var _hmt = _hmt || [];
 
   gtag('config', 'UA-228764760-1');
 </script>
-
 <nav class="navigation">
-  <section class="container">
-    <a class="navigation-title" href="/">
+<section class="container">
+<a class="navigation-title" href="/">
       罗潇阳的博客
     </a>
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/">首页</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">文章</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/solution/">题解</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">联系</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/about/">关于</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/support/">赞助</a>
-            </li>
-          
-        
-        
-          
-          
-          
-            
-          
-            
-              
-                <li class="navigation-item menu-separator">
-                  <span>|</span>
-                </li>
-                
-              
-              <li class="navigation-item">
-                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
-              </li>
-            
-          
-        
-      </ul>
-    
-  </section>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button float-right" for="menu-toggle">
+<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
+</label>
+<ul class="navigation-list">
+<li class="navigation-item">
+<a class="navigation-link" href="/">首页</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/posts/">文章</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/solution/">题解</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/contact/">联系</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/about/">关于</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/support/">赞助</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class="navigation-item">
+<a href="http://ccviolett.github.io/en/">🇬🇧</a>
+</li>
+</ul>
+</section>
 </nav>
-
-
-      <div class="content">
-        
-  <section class="container post">
-    <article>
-      <header>
-        <div class="post-title">
-          <h1 class="title">
-            <a class="title-link" href="http://ccviolett.github.io/posts/45-teamwebnetwork2/">
+<div class="content">
+<section class="container post">
+<article>
+<header>
+<div class="post-title">
+<h1 class="title">
+<a class="title-link" href="http://ccviolett.github.io/posts/45-teamwebnetwork2/">
               计算机网络 | Part2 数据链路层(Data Link Layer)
             </a>
-          </h1>
-        </div>
-        <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
-              <time datetime='2022-04-23T10:30:51&#43;08:00'>
+</h1>
+</div>
+<div class="post-meta">
+<div class="date">
+<span class="posted-on">
+<i aria-hidden="true" class="fa fa-calendar"></i>
+<time datetime="2022-04-23T10:30:51+08:00">
                 2022 年 4 月 23 日
               </time>
-            </span>
-            <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
+</span>
+<span class="reading-time">
+<i aria-hidden="true" class="fa fa-clock-o"></i>
               阅读时间：2 分钟
             </span>
-          </div>
-          
-          
-          <div class="tags">
-  <i class="fa fa-tag" aria-hidden="true"></i>
-    <span class="tag">
-      <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-    </span></div>
-
-        </div>
-      </header>
-
-      <div>
-        
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#一基础概念">一、基础概念</a>
-      <ul>
-        <li><a href="#零链路层编码">（零）链路层编码</a></li>
-        <li><a href="#一mac-地址">（一）MAC 地址</a></li>
-        <li><a href="#二arp-协议">（二）ARP 协议</a></li>
-        <li><a href="#三广播">（三）广播</a></li>
-      </ul>
-    </li>
-    <li><a href="#二传输方式">二、传输方式</a>
-      <ul>
-        <li><a href="#一封装成帧">（一）封装成帧</a></li>
-        <li><a href="#二透明传输">（二）透明传输</a></li>
-      </ul>
-    </li>
-    <li><a href="#三差错控制">三、差错控制</a>
-      <ul>
-        <li><a href="#一检错编码">（一）检错编码</a></li>
-        <li><a href="#二纠错编码-海明码">（二）纠错编码-海明码</a></li>
-      </ul>
-    </li>
-    <li><a href="#四流量控制与可靠传输">四、流量控制与可靠传输</a>
-      <ul>
-        <li><a href="#零信道利用率">（零）信道利用率</a></li>
-        <li><a href="#一停止等待协议stop-and-wait">（一）停止等待协议(Stop-and-Wait)</a></li>
-        <li><a href="#二后退-n-帧协议gbn">（二）后退 N 帧协议(GBN)</a></li>
-        <li><a href="#三选择重传协议sr">（三）选择重传协议(SR)</a></li>
-      </ul>
-    </li>
-    <li><a href="#五介质访问控制技术">五、介质访问控制技术</a>
-      <ul>
-        <li><a href="#一信道划分协议">（一）信道划分协议</a></li>
-        <li><a href="#二随机接入协议">（二）随机接入协议</a></li>
-        <li><a href="#三轮询访问与介质访问控制">（三）轮询访问与介质访问控制</a></li>
-      </ul>
-    </li>
-    <li><a href="#六局域网">六、局域网</a>
-      <ul>
-        <li><a href="#一以太网">（一）以太网</a></li>
-        <li><a href="#二无线局域网">（二）无线局域网</a></li>
-      </ul>
-    </li>
-    <li><a href="#七广域网">七、广域网</a>
-      <ul>
-        <li><a href="#一ppp-协议point-to-point-protocol">（一）PPP 协议（Point-to-Point Protocol）</a></li>
-        <li><a href="#二hdlc-协议high-level-data-link-control">（二）HDLC 协议（High-Level Data Link Control）</a></li>
-      </ul>
-    </li>
-    <li><a href="#八链路层设备">八、链路层设备</a>
-      <ul>
-        <li><a href="#一网桥">（一）网桥</a></li>
-        <li><a href="#二交换机">（二）交换机</a></li>
-        <li><a href="#三冲突域和广播域">（三）冲突域和广播域</a></li>
-      </ul>
-    </li>
-  </ul>
+</div>
+<div class="tags">
+<i aria-hidden="true" class="fa fa-tag"></i>
+<span class="tag">
+<a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+</span></div>
+</div>
+</header>
+<div>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#一基础概念">一、基础概念</a>
+<ul>
+<li><a href="#零链路层编码">（零）链路层编码</a></li>
+<li><a href="#一mac-地址">（一）MAC 地址</a></li>
+<li><a href="#二arp-协议">（二）ARP 协议</a></li>
+<li><a href="#三广播">（三）广播</a></li>
+</ul>
+</li>
+<li><a href="#二传输方式">二、传输方式</a>
+<ul>
+<li><a href="#一封装成帧">（一）封装成帧</a></li>
+<li><a href="#二透明传输">（二）透明传输</a></li>
+</ul>
+</li>
+<li><a href="#三差错控制">三、差错控制</a>
+<ul>
+<li><a href="#一检错编码">（一）检错编码</a></li>
+<li><a href="#二纠错编码-海明码">（二）纠错编码-海明码</a></li>
+</ul>
+</li>
+<li><a href="#四流量控制与可靠传输">四、流量控制与可靠传输</a>
+<ul>
+<li><a href="#零信道利用率">（零）信道利用率</a></li>
+<li><a href="#一停止等待协议stop-and-wait">（一）停止等待协议(Stop-and-Wait)</a></li>
+<li><a href="#二后退-n-帧协议gbn">（二）后退 N 帧协议(GBN)</a></li>
+<li><a href="#三选择重传协议sr">（三）选择重传协议(SR)</a></li>
+</ul>
+</li>
+<li><a href="#五介质访问控制技术">五、介质访问控制技术</a>
+<ul>
+<li><a href="#一信道划分协议">（一）信道划分协议</a></li>
+<li><a href="#二随机接入协议">（二）随机接入协议</a></li>
+<li><a href="#三轮询访问与介质访问控制">（三）轮询访问与介质访问控制</a></li>
+</ul>
+</li>
+<li><a href="#六局域网">六、局域网</a>
+<ul>
+<li><a href="#一以太网">（一）以太网</a></li>
+<li><a href="#二无线局域网">（二）无线局域网</a></li>
+</ul>
+</li>
+<li><a href="#七广域网">七、广域网</a>
+<ul>
+<li><a href="#一ppp-协议point-to-point-protocol">（一）PPP 协议（Point-to-Point Protocol）</a></li>
+<li><a href="#二hdlc-协议high-level-data-link-control">（二）HDLC 协议（High-Level Data Link Control）</a></li>
+</ul>
+</li>
+<li><a href="#八链路层设备">八、链路层设备</a>
+<ul>
+<li><a href="#一网桥">（一）网桥</a></li>
+<li><a href="#二交换机">（二）交换机</a></li>
+<li><a href="#三冲突域和广播域">（三）冲突域和广播域</a></li>
+</ul>
+</li>
+</ul>
 </nav>
 <h2 id="一基础概念">
   一、基础概念
   <a class="heading-link" href="#%e4%b8%80%e5%9f%ba%e7%a1%80%e6%a6%82%e5%bf%b5">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
 <p>数据链路层在物理层提供服务的基础上像网络层提供服务。</p>
 <p>其最基本的服务是将源自网络层来的数据可靠地传输到相邻节点地目标机网络层。</p>
@@ -284,8 +207,8 @@ var _hmt = _hmt || [];
 <h3 id="零链路层编码">
   （零）链路层编码
   <a class="heading-link" href="#%e9%9b%b6%e9%93%be%e8%b7%af%e5%b1%82%e7%bc%96%e7%a0%81">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>以太网规定，一组电信号构成一个数据包，叫做“帧”(Frame)。</p>
 <p>每一帧分成两个部分：标头(Head)和数据(Data)</p>
@@ -314,8 +237,8 @@ var _hmt = _hmt || [];
 <h3 id="一mac-地址">
   （一）MAC 地址
   <a class="heading-link" href="#%e4%b8%80mac-%e5%9c%b0%e5%9d%80">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>以太网规定，连入网络的所有设备，都必须具有“网卡”接口。</p>
 <p>数据包必须是从一块网卡，传送到另一块网卡。</p>
@@ -325,89 +248,89 @@ var _hmt = _hmt || [];
 <h3 id="二arp-协议">
   （二）ARP 协议
   <a class="heading-link" href="#%e4%ba%8carp-%e5%8d%8f%e8%ae%ae">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>网卡通过 ARP 协议知道另一块网卡的 MAC 地址。</p>
 <p>每个节点的 ARP 模块会在它的 RAM 中自动创建 ARP 表，包含 IP 地址到 MAC 地址的映射关系，每个表项还包含 TTL 字段，表示表项过期时间。</p>
 <p>ARP 表会定时更新，当某节点与子网断开连接时，会将其从子网的节点的表中删除。</p>
 <p>主机向 ARP 模块提供 IP 地址， ARP 模块返回 IP 地址对应的 MAC 地址。</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241115113.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241115113.png"/></p>
 <h3 id="三广播">
   （三）广播
   <a class="heading-link" href="#%e4%b8%89%e5%b9%bf%e6%92%ad">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>广播(broadcasting)，即发送方通过以太网将数据包向本网络内所有计算机发送，让每台计算机读取数据包的“标头”，将接收方的 MAC 地址与自身的 MAC 地址相比较，判断自身是否为接收方，再进行下一步的处理。</p>
 <h2 id="二传输方式">
   二、传输方式
   <a class="heading-link" href="#%e4%ba%8c%e4%bc%a0%e8%be%93%e6%96%b9%e5%bc%8f">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
 <h3 id="一封装成帧">
   （一）封装成帧
   <a class="heading-link" href="#%e4%b8%80%e5%b0%81%e8%a3%85%e6%88%90%e5%b8%a7">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>在数据前后添加首部和尾部，组成一个帧，起到<code>帧定界</code>、<code>帧同步</code>的作用，使得接收端在收到物理层上交的比特流后，能够识别帧的界限，根据首部和尾部的标记，识别出帧的开始和结束。</p>
 <h3 id="二透明传输">
   （二）透明传输
   <a class="heading-link" href="#%e4%ba%8c%e9%80%8f%e6%98%8e%e4%bc%a0%e8%be%93">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>不管所传输的数据是什么样的比特组合，都能够在链路上传送。</p>
 <p>防止特殊的数据无法正常传输，比如数据中出现与开始/结束标记符恰好重复的情况。</p>
 <h4 id="1-字符计数法">
   1. 字符计数法
   <a class="heading-link" href="#1-%e5%ad%97%e7%ac%a6%e8%ae%a1%e6%95%b0%e6%b3%95">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241208032.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241208032.png"/></p>
 <h4 id="2-字符填充法">
   2. 字符填充法
   <a class="heading-link" href="#2-%e5%ad%97%e7%ac%a6%e5%a1%ab%e5%85%85%e6%b3%95">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>通过添加头部和尾部来标记开始和结束，通过在与标记字符重复的数据流前面添加一段转移字符来解决错误识别的问题。</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241214197.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241214197.png"/></p>
 <h4 id="3-零比特填充法">
   3. 零比特填充法
   <a class="heading-link" href="#3-%e9%9b%b6%e6%af%94%e7%89%b9%e5%a1%ab%e5%85%85%e6%b3%95">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241217016.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204241217016.png"/></p>
 <h4 id="4-违规编码法">
   4. 违规编码法
   <a class="heading-link" href="#4-%e8%bf%9d%e8%a7%84%e7%bc%96%e7%a0%81%e6%b3%95">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>因为曼彻斯特编码不使用高-高，低-低来表示，所以可以用其来表示帧起始和终止，就不会发生数据冲突。</p>
 <h2 id="三差错控制">
   三、差错控制
   <a class="heading-link" href="#%e4%b8%89%e5%b7%ae%e9%94%99%e6%8e%a7%e5%88%b6">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
 <p>数据链路层可能会发生比特的错误，我们需要一个方案使得检查出所有错误的可能性最大，使得错误的数据包被尽早发现，减少网络资源的浪费。</p>
 <h3 id="一检错编码">
   （一）检错编码
   <a class="heading-link" href="#%e4%b8%80%e6%a3%80%e9%94%99%e7%bc%96%e7%a0%81">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <h4 id="1-奇偶校验码">
   1. 奇偶校验码
   <a class="heading-link" href="#1-%e5%a5%87%e5%81%b6%e6%a0%a1%e9%aa%8c%e7%a0%81">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>包含 1 个附加比特：</p>
 <ul>
@@ -417,146 +340,146 @@ var _hmt = _hmt || [];
 <h4 id="2-循环冗余码-crc">
   2. 循环冗余码 CRC
   <a class="heading-link" href="#2-%e5%be%aa%e7%8e%af%e5%86%97%e4%bd%99%e7%a0%81-crc">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>发送方和接收方协商一个 r+1 比特的生成多项式(G)，要求其最高比特位为 1。</p>
 <p>发送方通过在 d 比特的数据后附加 r 比特，使得整个 (d+r) 比特的值能够被 G 整除。</p>
 <p>接收方用 G 去除 (d+r) 比特，如果不能整除则出现差错</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242006022.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242006022.png"/></p>
 <h3 id="二纠错编码-海明码">
   （二）纠错编码-海明码
   <a class="heading-link" href="#%e4%ba%8c%e7%ba%a0%e9%94%99%e7%bc%96%e7%a0%81-%e6%b5%b7%e6%98%8e%e7%a0%81">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>海明码能且仅能纠 1 位错，其计算过程如下：</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242014750.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242014110.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242014465.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242014750.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242014110.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242014465.png"/></p>
 <p>第 i 位校验码的值为位置二进制中包含第 i 位的数据值的异或和，纠错时将所有校验码异或起来，得到的值为错误位置（为 0 则无错）</p>
 <p>相关链接：<a href="https://www.cnblogs.com/godoforange/p/12003676.html">海明码一篇文章彻底搞懂</a></p>
 <h2 id="四流量控制与可靠传输">
   四、流量控制与可靠传输
   <a class="heading-link" href="#%e5%9b%9b%e6%b5%81%e9%87%8f%e6%8e%a7%e5%88%b6%e4%b8%8e%e5%8f%af%e9%9d%a0%e4%bc%a0%e8%be%93">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
 <p>流量控制是为了让传输过程中的发送速度和接受速度匹配，减少传输出错与资源浪费。</p>
 <p>可靠传输是发送端发送什么，接收端就要受到什么。</p>
 <h3 id="零信道利用率">
   （零）信道利用率
   <a class="heading-link" href="#%e9%9b%b6%e4%bf%a1%e9%81%93%e5%88%a9%e7%94%a8%e7%8e%87">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242030752.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242030752.png"/></p>
 <h3 id="一停止等待协议stop-and-wait">
   （一）停止等待协议(Stop-and-Wait)
   <a class="heading-link" href="#%e4%b8%80%e5%81%9c%e6%ad%a2%e7%ad%89%e5%be%85%e5%8d%8f%e8%ae%aestop-and-wait">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242027444.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242027299.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242028737.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242028571.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242027444.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242027299.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242028737.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242028571.png"/></p>
 <h4 id="信道利用率分析">
   信道利用率分析
   <a class="heading-link" href="#%e4%bf%a1%e9%81%93%e5%88%a9%e7%94%a8%e7%8e%87%e5%88%86%e6%9e%90">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242032975.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242032616.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242032975.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242032616.png"/></p>
 <h3 id="二后退-n-帧协议gbn">
   （二）后退 N 帧协议(GBN)
   <a class="heading-link" href="#%e4%ba%8c%e5%90%8e%e9%80%80-n-%e5%b8%a7%e5%8d%8f%e8%ae%aegbn">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132244651.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132244651.png"/></p>
 <p>累计确认：就是收到一个确认帧，那么它和它之前的所有帧都默认已收到，反之，如果某个确认帧没收到，那么它和它之后的所有帧都默认丢失（即使收到了也丢掉），进行重传。</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132244293.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132244293.png"/></p>
 <h3 id="三选择重传协议sr">
   （三）选择重传协议(SR)
   <a class="heading-link" href="#%e4%b8%89%e9%80%89%e6%8b%a9%e9%87%8d%e4%bc%a0%e5%8d%8f%e8%ae%aesr">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>吸取了GBN协议的教训，我们打算尝试只重传错误的帧，这样的话就不用浪费资源把已经收到的帧再重传一次了。</p>
 <p>在GBN中，仅有接收端有一个窗口来存放数据帧，在SR中，两者都有窗口了。</p>
 <p>和GBN的区别其实就是做了一个数据缓存，已经收到的帧不用扔了，等待之前因意外丢失的帧收到的时候确认即可，但是只能缓存窗口尺寸内的包含的帧（注释：缓存不可能无限大）</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132247550.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132247550.png"/></p>
 <h2 id="五介质访问控制技术">
   五、介质访问控制技术
   <a class="heading-link" href="#%e4%ba%94%e4%bb%8b%e8%b4%a8%e8%ae%bf%e9%97%ae%e6%8e%a7%e5%88%b6%e6%8a%80%e6%9c%af">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132249178.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132249178.png"/></p>
 <h3 id="一信道划分协议">
   （一）信道划分协议
   <a class="heading-link" href="#%e4%b8%80%e4%bf%a1%e9%81%93%e5%88%92%e5%88%86%e5%8d%8f%e8%ae%ae">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>虽然使用一条共享信道，但是通过多技术组合进行传输，提高了信道的利用率</p>
 <h4 id="1-频分多路复用-fdm">
   1. 频分多路复用 FDM
   <a class="heading-link" href="#1-%e9%a2%91%e5%88%86%e5%a4%9a%e8%b7%af%e5%a4%8d%e7%94%a8-fdm">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132256968.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132256968.png"/></p>
 <h4 id="2-时分多路复用-tdm">
   2. 时分多路复用 TDM
   <a class="heading-link" href="#2-%e6%97%b6%e5%88%86%e5%a4%9a%e8%b7%af%e5%a4%8d%e7%94%a8-tdm">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132257084.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132257084.png"/></p>
 <h4 id="3-统计时分复用-stdm">
   3. 统计时分复用 STDM
   <a class="heading-link" href="#3-%e7%bb%9f%e8%ae%a1%e6%97%b6%e5%88%86%e5%a4%8d%e7%94%a8-stdm">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>TDM 的利用率低，所以衍生出了 STDM，其原则是先到先走，满了就发。</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132259706.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132259706.png"/></p>
 <h4 id="4-码分多路复用-cdm">
   4. 码分多路复用 CDM
   <a class="heading-link" href="#4-%e7%a0%81%e5%88%86%e5%a4%9a%e8%b7%af%e5%a4%8d%e7%94%a8-cdm">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>每个节点分配一种不同的编码，每个节点使用其唯一的编码来对发送的数据进行编码</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132301554.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132301554.png"/></p>
 <h3 id="二随机接入协议">
   （二）随机接入协议
   <a class="heading-link" href="#%e4%ba%8c%e9%9a%8f%e6%9c%ba%e6%8e%a5%e5%85%a5%e5%8d%8f%e8%ae%ae">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>所有用户都可以随机发送信息，发送时可以占用全部宽带，理论上个人使用时比静态分配信道的速度更快。</p>
 <h4 id="1-aloha-协议">
   1. ALOHA 协议
   <a class="heading-link" href="#1-aloha-%e5%8d%8f%e8%ae%ae">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>帧到达节点时，立刻传输。如果发生碰撞，节点将立即以概率 p 重传（在完全传输碰撞帧后）。否则，等待一个帧传输时间，再以概率 p 重传。</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132310583.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132310583.png"/></p>
 <p>信道有效传输速率实际不是 R bps，而是时隙 ALOHA 的一半。</p>
 <p>时隙ALOHA协议是指时间被划分为时隙，每个节点的时间同步，帧的传输只在时隙的开始时进行。如果发生碰撞，在下一个时隙开始时以概率p重传，否则等待一个时隙再以概率p重传…（信道有效传输速率实际不是R bps，而是0.37R bps）</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132313882.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205132313882.png"/></p>
 <h4 id="2-csma-协议">
   2. CSMA 协议
   <a class="heading-link" href="#2-csma-%e5%8d%8f%e8%ae%ae">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141258220.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141258220.png"/></p>
 <table>
 <thead>
 <tr>
@@ -591,30 +514,30 @@ var _hmt = _hmt || [];
 <h4 id="3-csmacd-协议">
   3. CSMA/CD 协议
   <a class="heading-link" href="#3-csmacd-%e5%8d%8f%e8%ae%ae">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>因为链路实际有长短，发送数据需要时间，这个时间内可能就被其他节点当成空闲状态导致发生碰撞。</p>
 <p>先监听信道，如果没有其他节点在使用信道则传输数据。但是存在碰撞检测，如果发生碰撞，就会停止传输剩下的数据，等待一个随机事件后在进行尝试。</p>
 <h4 id="4-csmaca-协议">
   4. CSMA/CA 协议
   <a class="heading-link" href="#4-csmaca-%e5%8d%8f%e8%ae%ae">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>CSMA/CD 与 CSMA/CA 的区别</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141351874.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141351874.png"/></p>
 <h3 id="三轮询访问与介质访问控制">
   （三）轮询访问与介质访问控制
   <a class="heading-link" href="#%e4%b8%89%e8%bd%ae%e8%af%a2%e8%ae%bf%e9%97%ae%e4%b8%8e%e4%bb%8b%e8%b4%a8%e8%ae%bf%e9%97%ae%e6%8e%a7%e5%88%b6">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <h4 id="1-轮询协议">
   1. 轮询协议
   <a class="heading-link" href="#1-%e8%bd%ae%e8%af%a2%e5%8d%8f%e8%ae%ae">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>选出一个主节点，控制所有传输，主节点轮流“邀请”从属节点发送数据。</p>
 <p>但是会有三个问题：</p>
@@ -626,10 +549,10 @@ var _hmt = _hmt || [];
 <h4 id="2-令牌传递协议">
   2. 令牌传递协议
   <a class="heading-link" href="#2-%e4%bb%a4%e7%89%8c%e4%bc%a0%e9%80%92%e5%8d%8f%e8%ae%ae">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141720705.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141720705.png"/></p>
 <p>发送数据的流程：</p>
 <ol>
 <li>当节点之间没有数据收发需求时，令牌状态为空闲，在节点之间循环</li>
@@ -641,161 +564,136 @@ var _hmt = _hmt || [];
 <h2 id="六局域网">
   六、局域网
   <a class="heading-link" href="#%e5%85%ad%e5%b1%80%e5%9f%9f%e7%bd%91">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141725603.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141725788.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141726014.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141729842.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141730731.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141729653.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141725603.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141725788.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141726014.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141729842.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141730731.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141729653.png"/></p>
 <h3 id="一以太网">
   （一）以太网
   <a class="heading-link" href="#%e4%b8%80%e4%bb%a5%e5%a4%aa%e7%bd%91">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>以太网提供无连接、不可靠的服务</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141732063.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141732432.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141732817.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141734175.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141732063.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141732432.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141732817.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141734175.png"/></p>
 <h3 id="二无线局域网">
   （二）无线局域网
   <a class="heading-link" href="#%e4%ba%8c%e6%97%a0%e7%ba%bf%e5%b1%80%e5%9f%9f%e7%bd%91">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141735107.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141735364.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141735886.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141736175.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141735107.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141735364.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141735886.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141736175.png"/></p>
 <h2 id="七广域网">
   七、广域网
   <a class="heading-link" href="#%e4%b8%83%e5%b9%bf%e5%9f%9f%e7%bd%91">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141736915.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141736915.png"/></p>
 <h3 id="一ppp-协议point-to-point-protocol">
   （一）PPP 协议（Point-to-Point Protocol）
   <a class="heading-link" href="#%e4%b8%80ppp-%e5%8d%8f%e8%ae%aepoint-to-point-protocol">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>PPP协议是目前使用最广泛的数据链路层协议，拨号基本都是PPP协议。PPP协议仅支持全双工链路。</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141738324.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141738554.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141738994.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141738324.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141738554.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141738994.png"/></p>
 <h3 id="二hdlc-协议high-level-data-link-control">
   （二）HDLC 协议（High-Level Data Link Control）
   <a class="heading-link" href="#%e4%ba%8chdlc-%e5%8d%8f%e8%ae%aehigh-level-data-link-control">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141739269.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141739687.png" alt=""></p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141740065.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141739269.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141739687.png"/></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141740065.png"/></p>
 <h2 id="八链路层设备">
   八、链路层设备
   <a class="heading-link" href="#%e5%85%ab%e9%93%be%e8%b7%af%e5%b1%82%e8%ae%be%e5%a4%87">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h2>
 <h3 id="一网桥">
   （一）网桥
   <a class="heading-link" href="#%e4%b8%80%e7%bd%91%e6%a1%a5">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>使用网桥时，由于网桥会根据mac地址进行过滤，所以不会形成冲突域</p>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141742562.png" alt=""></p>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141742562.png"/></p>
 <h4 id="1-透明网桥">
   1. 透明网桥
   <a class="heading-link" href="#1-%e9%80%8f%e6%98%8e%e7%bd%91%e6%a1%a5">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>通过自学习来构建转发表。每一个通过网桥的数据包都会被记录下网桥收到数据时数据对应的地址和网桥自己的接口，通过许许多多的数据包的构造的缓存，网桥就可以知道哪个数据包在哪个接口，以后如果要穿数据包就知道要往哪个接口发送数据包了</p>
 <h4 id="2-原路由网桥">
   2. 原路由网桥
   <a class="heading-link" href="#2-%e5%8e%9f%e8%b7%af%e7%94%b1%e7%bd%91%e6%a1%a5">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>在发送时，直接将最佳路径放到帧首部。那么网桥如何获得最佳路径？通过广播方式想目标地址发送广播，此时可能会经过不同路由产生不同的路径，目标地址收到后再将每一条路径都发一个响应帧给网桥，网桥经过对比就知道哪个接口最快了</p>
 <h3 id="二交换机">
   （二）交换机
   <a class="heading-link" href="#%e4%ba%8c%e4%ba%a4%e6%8d%a2%e6%9c%ba">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>交换机接收入链路层帧并将它们转发到出链路，其自身对节点透明。</p>
 <h4 id="1-直通式交换机">
   1. 直通式交换机
   <a class="heading-link" href="#1-%e7%9b%b4%e9%80%9a%e5%bc%8f%e4%ba%a4%e6%8d%a2%e6%9c%ba">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>查完目标地址就立刻转发，延迟小，可靠性低，无法支持具有不同速率的端口的交换。</p>
 <h4 id="2-存储转发式交换机">
   2. 存储转发式交换机
   <a class="heading-link" href="#2-%e5%ad%98%e5%82%a8%e8%bd%ac%e5%8f%91%e5%bc%8f%e4%ba%a4%e6%8d%a2%e6%9c%ba">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h4>
 <p>将帧放入高速缓存，并检查是否正确，正确则转发，错误则丢弃。</p>
 <p>延迟大，可靠性高，可以支持具有不同速率的端口的交换。</p>
 <h3 id="三冲突域和广播域">
   （三）冲突域和广播域
   <a class="heading-link" href="#%e4%b8%89%e5%86%b2%e7%aa%81%e5%9f%9f%e5%92%8c%e5%b9%bf%e6%92%ad%e5%9f%9f">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
-<p><img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141747077.png" alt=""></p>
-
-      </div>
-
-      <footer>
-        
-
-
-        
-        
-        
-      </footer>
-    </article>
-
-    
-
-    <h1 style="text-align: center;">赞助区</h1>
-    <div style="display: flex; flex-wrap: wrap; ">
-      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210866.png/w200" style="margin: 1rem"/>
-      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210865.jpg/w200" style="margin: 1rem"/>
-      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210864.png/w200" style="margin: 1rem"/>
-      <p>如果觉得文章对你有帮助，可以给作者买杯咖啡。作者非常感谢你的支持，你的每一点点激励都是作者不断创作的动力。</p>
-      <p>所有收到的赞助都将在<a href="/support">收到的赞助</a>里显示，你可以在支付时留下备注。</p>
-    </div>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"
-        crossorigin="anonymous"></script>
-    
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4610306996952179"
-        data-ad-slot="2405027632"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <h1 style="text-align: center;">评论区</h1>
-    <p>欢迎大家在下面多多评论：</p>
-    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-    <div id="vcomments"></div>
-    <script>
+<p><img alt="" src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205141747077.png"/></p>
+</div>
+<footer>
+</footer>
+</article>
+<h1 style="text-align: center;">赞助区</h1>
+<div style="display: flex; flex-wrap: wrap; ">
+<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210866.png/w200" style="margin: 1rem"/>
+<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210865.jpg/w200" style="margin: 1rem"/>
+<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210864.png/w200" style="margin: 1rem"/>
+<p>如果觉得文章对你有帮助，可以给作者买杯咖啡。作者非常感谢你的支持，你的每一点点激励都是作者不断创作的动力。</p>
+<p>所有收到的赞助都将在<a href="/support">收到的赞助</a>里显示，你可以在支付时留下备注。</p>
+</div>
+<h1 style="text-align: center;">评论区</h1>
+<p>欢迎大家在下面多多评论：</p>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<div id="vcomments"></div>
+<script>
         new Valine({
             el: '#vcomments',
             appId: 'pKI8zxDMRprnFwEiUfoQF3tV-gzGzoHsz',
@@ -803,16 +701,11 @@ var _hmt = _hmt || [];
             avatar: 'mp'
         })
     </script>
-
-  </section>
-
-      </div>
-
-      
-  <footer class="footer">
-    <section class="container">
-      
-        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
+</section>
+</div>
+<footer class="footer">
+<section class="container">
+<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
       
       
         ©
@@ -822,19 +715,17 @@ var _hmt = _hmt || [];
       
       
          · 
-        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
       
       
         
       
     </section>
-  </footer>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+</footer>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
+<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -851,30 +742,7 @@ var _hmt = _hmt || [];
         });
     });
 </script>
-
-
-
-    </main>
-
-    
-      
-      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-  </body>
+</main>
+<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
+</body>
 </html>

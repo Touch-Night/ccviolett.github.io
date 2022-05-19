@@ -1,100 +1,56 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="zh-cn">
-    <meta name="color-scheme" content="light dark">
-
-    
-
-    <meta name="author" content="罗潇阳">
-    <meta name="description" content="ARP 欺骗攻击
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="zh-cn" http-equiv="Content-Language"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="罗潇阳" name="author"/>
+<meta content="ARP 欺骗攻击
 题目描述    众所周知，计算机网络中，每个设备有一个唯一且固定的 MAC 地址、一个可能动态变化的 IP 地址和一个将 IP 映射为 MAC 地址的 ARP 表。
 当知道某台设备的 MAC 地址时，就可以直接与其通信，否则就需要通过 ARP 协议获取 MAC 地址。
 我们假设主机 A 的 IP 地址为192.168.1.1，MAC 地址为0A-11-22-33-44-01；主机 B 的 IP 地址为192.168.1.2，MAC 地址为0A-11-22-33-44-02。
 当主机 A 要与主机 B 通信时，地址解析协议可以将主机 B 的 IP 地址（192.168.1.2）解析成主机 B 的 MAC 地址，以下为工作流程：
- 主机 A 在 ARP表中查找主机B的 IP 所匹配 MAC 地址。 如果没有找到映射，主机 A 将向网络中所有主机发送 ARP 请求，数据包中包含 A 的 MAC 地址与询问的 IP(192.168.1.2)。 主机 B 收到请求后发现与询问 IP 与自身 IP 匹配，于是直接向 A 发送 ARP 应答，数据包包含 B 的 MAC 地址。同时将 A 的 MAC 地址添加到自身的 ARP 表中。 主机 A 收到从主机 B 发来的 ARP 应答，更新 ARP 表后，发送要传输的数据。  ">
-    <meta name="keywords" content="博客,开发者,个人">
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="ARP 欺骗攻击
+ 主机 A 在 ARP表中查找主机B的 IP 所匹配 MAC 地址。 如果没有找到映射，主机 A 将向网络中所有主机发送 ARP 请求，数据包中包含 A 的 MAC 地址与询问的 IP(192.168.1.2)。 主机 B 收到请求后发现与询问 IP 与自身 IP 匹配，于是直接向 A 发送 ARP 应答，数据包包含 B 的 MAC 地址。同时将 A 的 MAC 地址添加到自身的 ARP 表中。 主机 A 收到从主机 B 发来的 ARP 应答，更新 ARP 表后，发送要传输的数据。  " name="description"/>
+<meta content="博客,开发者,个人" name="keywords"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="" name="twitter:title"/>
+<meta content="ARP 欺骗攻击
 题目描述    众所周知，计算机网络中，每个设备有一个唯一且固定的 MAC 地址、一个可能动态变化的 IP 地址和一个将 IP 映射为 MAC 地址的 ARP 表。
 当知道某台设备的 MAC 地址时，就可以直接与其通信，否则就需要通过 ARP 协议获取 MAC 地址。
 我们假设主机 A 的 IP 地址为192.168.1.1，MAC 地址为0A-11-22-33-44-01；主机 B 的 IP 地址为192.168.1.2，MAC 地址为0A-11-22-33-44-02。
 当主机 A 要与主机 B 通信时，地址解析协议可以将主机 B 的 IP 地址（192.168.1.2）解析成主机 B 的 MAC 地址，以下为工作流程：
- 主机 A 在 ARP表中查找主机B的 IP 所匹配 MAC 地址。 如果没有找到映射，主机 A 将向网络中所有主机发送 ARP 请求，数据包中包含 A 的 MAC 地址与询问的 IP(192.168.1.2)。 主机 B 收到请求后发现与询问 IP 与自身 IP 匹配，于是直接向 A 发送 ARP 应答，数据包包含 B 的 MAC 地址。同时将 A 的 MAC 地址添加到自身的 ARP 表中。 主机 A 收到从主机 B 发来的 ARP 应答，更新 ARP 表后，发送要传输的数据。  "/>
-
-    <meta property="og:title" content="" />
-<meta property="og:description" content="ARP 欺骗攻击
+ 主机 A 在 ARP表中查找主机B的 IP 所匹配 MAC 地址。 如果没有找到映射，主机 A 将向网络中所有主机发送 ARP 请求，数据包中包含 A 的 MAC 地址与询问的 IP(192.168.1.2)。 主机 B 收到请求后发现与询问 IP 与自身 IP 匹配，于是直接向 A 发送 ARP 应答，数据包包含 B 的 MAC 地址。同时将 A 的 MAC 地址添加到自身的 ARP 表中。 主机 A 收到从主机 B 发来的 ARP 应答，更新 ARP 表后，发送要传输的数据。  " name="twitter:description"/>
+<meta content="" property="og:title"/>
+<meta content="ARP 欺骗攻击
 题目描述    众所周知，计算机网络中，每个设备有一个唯一且固定的 MAC 地址、一个可能动态变化的 IP 地址和一个将 IP 映射为 MAC 地址的 ARP 表。
 当知道某台设备的 MAC 地址时，就可以直接与其通信，否则就需要通过 ARP 协议获取 MAC 地址。
 我们假设主机 A 的 IP 地址为192.168.1.1，MAC 地址为0A-11-22-33-44-01；主机 B 的 IP 地址为192.168.1.2，MAC 地址为0A-11-22-33-44-02。
 当主机 A 要与主机 B 通信时，地址解析协议可以将主机 B 的 IP 地址（192.168.1.2）解析成主机 B 的 MAC 地址，以下为工作流程：
- 主机 A 在 ARP表中查找主机B的 IP 所匹配 MAC 地址。 如果没有找到映射，主机 A 将向网络中所有主机发送 ARP 请求，数据包中包含 A 的 MAC 地址与询问的 IP(192.168.1.2)。 主机 B 收到请求后发现与询问 IP 与自身 IP 匹配，于是直接向 A 发送 ARP 应答，数据包包含 B 的 MAC 地址。同时将 A 的 MAC 地址添加到自身的 ARP 表中。 主机 A 收到从主机 B 发来的 ARP 应答，更新 ARP 表后，发送要传输的数据。  " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://ccviolett.github.io/problem/1-arpcheat/" /><meta property="article:section" content="problem" />
-
-
-
-
-
-    <title>
+ 主机 A 在 ARP表中查找主机B的 IP 所匹配 MAC 地址。 如果没有找到映射，主机 A 将向网络中所有主机发送 ARP 请求，数据包中包含 A 的 MAC 地址与询问的 IP(192.168.1.2)。 主机 B 收到请求后发现与询问 IP 与自身 IP 匹配，于是直接向 A 发送 ARP 应答，数据包包含 B 的 MAC 地址。同时将 A 的 MAC 地址添加到自身的 ARP 表中。 主机 A 收到从主机 B 发来的 ARP 应答，更新 ARP 表后，发送要传输的数据。  " property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="http://ccviolett.github.io/problem/1-arpcheat/" property="og:url"/><meta content="problem" property="article:section"/>
+<title>
    · 罗潇阳的博客
 </title>
-
-    
-      <link rel="canonical" href="http://ccviolett.github.io/problem/1-arpcheat/">
-    
-
-    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
-
-    
-      
-      
-      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
-    
-
-    
-
-    
-      
-        
-        
-        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
-      
-    
-
-    
-
-    
-
-    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-    <meta name="generator" content="Hugo 0.98.0" />
-  </head>
-
-  
-  
-    
-  
-  <body class="preload-transitions colorscheme-auto">
-    
+<link href="http://ccviolett.github.io/problem/1-arpcheat/" rel="canonical"/>
+<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
+<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="Hugo 0.92.0" name="generator"/>
+</head>
+<body class="preload-transitions colorscheme-auto">
 <div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
+<a class="colorscheme-toggle" id="dark-mode-toggle">
+<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
+</a>
 </div>
-
-
-    <main class="wrapper">
-      <script>
+<main class="wrapper">
+<script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -103,9 +59,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -114,88 +68,58 @@ var _hmt = _hmt || [];
 
   gtag('config', 'UA-228764760-1');
 </script>
-
 <nav class="navigation">
-  <section class="container">
-    <a class="navigation-title" href="/">
+<section class="container">
+<a class="navigation-title" href="/">
       罗潇阳的博客
     </a>
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/">首页</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/posts/">文章</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/solution/">题解</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/contact/">联系</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/about/">关于</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link" href="/support/">赞助</a>
-            </li>
-          
-        
-        
-          
-          
-          
-            
-          
-            
-              
-                <li class="navigation-item menu-separator">
-                  <span>|</span>
-                </li>
-                
-              
-              <li class="navigation-item">
-                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
-              </li>
-            
-          
-        
-      </ul>
-    
-  </section>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button float-right" for="menu-toggle">
+<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
+</label>
+<ul class="navigation-list">
+<li class="navigation-item">
+<a class="navigation-link" href="/">首页</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/posts/">文章</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/solution/">题解</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/contact/">联系</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/about/">关于</a>
+</li>
+<li class="navigation-item">
+<a class="navigation-link" href="/support/">赞助</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class="navigation-item">
+<a href="http://ccviolett.github.io/en/">🇬🇧</a>
+</li>
+</ul>
+</section>
 </nav>
-
-
-      <div class="content">
-        
-  <section class="container page">
-  <article>
-    <header>
-      <h1 class="title">
-        <a class="title-link" href="http://ccviolett.github.io/problem/1-arpcheat/">
-          
-        </a>
-      </h1>
-    </header>
-
-    <p>ARP 欺骗攻击</p>
+<div class="content">
+<section class="container page">
+<article>
+<header>
+<h1 class="title">
+<a class="title-link" href="http://ccviolett.github.io/problem/1-arpcheat/">
+</a>
+</h1>
+</header>
+<p>ARP 欺骗攻击</p>
 <h3 id="题目描述">
   题目描述
   <a class="heading-link" href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0">
-    <i class="fa fa-link" aria-hidden="true"></i>
-  </a>
+<i aria-hidden="true" class="fa fa-link"></i>
+</a>
 </h3>
 <p>众所周知，计算机网络中，每个设备有一个唯一且固定的 MAC 地址、一个可能动态变化的 IP 地址和一个将 IP 映射为 MAC 地址的 ARP 表。</p>
 <p>当知道某台设备的 MAC 地址时，就可以直接与其通信，否则就需要通过 ARP 协议获取 MAC 地址。</p>
@@ -207,19 +131,12 @@ var _hmt = _hmt || [];
 <li>主机 B 收到请求后发现与询问 IP 与自身 IP 匹配，于是直接向 A 发送 ARP 应答，数据包包含 B 的 MAC 地址。同时将 A 的 MAC 地址添加到自身的 ARP 表中。</li>
 <li>主机 A 收到从主机 B 发来的 ARP 应答，更新 ARP 表后，发送要传输的数据。</li>
 </ol>
-
-  </article>
-
+</article>
 </section>
-  
-
-      </div>
-
-      
-  <footer class="footer">
-    <section class="container">
-      
-        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
+</div>
+<footer class="footer">
+<section class="container">
+<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
       
       
         ©
@@ -229,19 +146,17 @@ var _hmt = _hmt || [];
       
       
          · 
-        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
       
       
         
       
     </section>
-  </footer>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+</footer>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
+<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -258,30 +173,7 @@ var _hmt = _hmt || [];
         });
     });
 </script>
-
-
-
-    </main>
-
-    
-      
-      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-  </body>
+</main>
+<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
+</body>
 </html>

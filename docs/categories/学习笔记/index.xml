@@ -85,7 +85,7 @@
 静态成员函数不能是静态函数，不能直接访问非静态成员。
 访问共有静态成员的方式有以下三种：
  类名::静态成员名 对象名.静态成员名 对象指针-&amp;gt;静态成员名  问题：请问下列程序会输出什么？
-#include &amp;lt;iostream&amp;gt; using namespace std;  int fun() { 	static int x = 1; 	x *= 2; 	return x; }  int main() { 	int i, s = 1; 	for (i = 1; i &amp;lt;= 3; ++i) 	s *= fun(); 	cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl; } 答案：64</description>
+#include &amp;lt;iostream&amp;gt; using namespace std; int fun() { static int x = 1; x *= 2; return x; } int main() { int i, s = 1; for (i = 1; i &amp;lt;= 3; ++i) s *= fun(); cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl; } 答案：64</description>
     </item>
     
   </channel>

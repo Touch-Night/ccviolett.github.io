@@ -23,7 +23,7 @@
 代码高亮配置    官方文档：Syntax Highlighting
 Hugo 中集成了 Chroma 来进行代码高亮。
 TLDR：将下列设置复制到配置文件中（以 TOML 为例）
-[markup]  [markup.</description>
+[markup] [markup.</description>
     </item>
     
   </channel>

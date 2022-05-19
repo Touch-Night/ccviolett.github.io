@@ -6,9 +6,31 @@
     <description>Recent content in Todoes on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 May 2022 09:04:11 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/todo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 May 2022 11:41:16 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/todo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>220517</title>
+      <title>字节跳动前端面试</title>
+      <link>http://ccviolett.github.io/todo/220518/</link>
+      <pubDate>Thu, 19 May 2022 11:41:16 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220518/</guid>
+      <description>定时任务：
+ ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：
+ ( ) 每日一题打卡截图发群 ( ) 每日 10 点之前定时 16:30 发布 CSDN  每周任务：</description>
+    </item>
+    
+    <item>
+      <title>220519</title>
+      <link>http://ccviolett.github.io/todo/220519/</link>
+      <pubDate>Thu, 19 May 2022 11:40:52 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220519/</guid>
+      <description>定时任务：
+ ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：
+ ( ) 每日一题打卡截图发群 ( ) 每日 10 点之前定时 16:30 发布 CSDN  每周任务：</description>
+    </item>
+    
+    <item>
+      <title>学 React &amp; 写掘金的第二天</title>
       <link>http://ccviolett.github.io/todo/220517/</link>
       <pubDate>Tue, 17 May 2022 09:04:11 +0800</pubDate>
       
@@ -18,7 +40,7 @@
     </item>
     
     <item>
-      <title>220516</title>
+      <title>学 React &amp; 写掘金的第一天</title>
       <link>http://ccviolett.github.io/todo/220516/</link>
       <pubDate>Mon, 16 May 2022 09:32:22 +0800</pubDate>
       
@@ -29,7 +51,7 @@
     </item>
     
     <item>
-      <title>220515</title>
+      <title>研究 Google Ads &amp; 备考马原</title>
       <link>http://ccviolett.github.io/todo/220515/</link>
       <pubDate>Sun, 15 May 2022 09:18:15 +0800</pubDate>
       

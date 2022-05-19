@@ -10,6 +10,10 @@ categories = []
 externalLink = ""
 series = []
 +++
+
+
+DJI Pocket2 旋转 90 度即可进入竖屏拍摄模式。
+
 ### 一、值得思考的纪录片 《为什么贫穷？ Why Poverty?》
 
 推荐理由：[TODO]

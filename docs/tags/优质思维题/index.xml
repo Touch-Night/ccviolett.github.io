@@ -16,7 +16,7 @@
       <description>一、题意    题目链接：Problem
 二、题解    网上一个很妙的做法，水的面积=蓝色框面积+红色框面积-黑色面积-整个矩形面积
 三、代码    通过链接：Submission
-from pydoc import getpager  class Solution:  def trap(self, height: List[int]) -&amp;gt; int:  n = len(height)  res = 0  maxhl = 0  maxhr = 0  for i in range(n):  maxhl = max(maxhl, height[i])  maxhr = max(maxhr, height[n - i - 1])  res += maxhl + maxhr - height[i]  res -= len(height) * maxhl  return res </description>
+from pydoc import getpager class Solution: def trap(self, height: List[int]) -&amp;gt; int: n = len(height) res = 0 maxhl = 0 maxhr = 0 for i in range(n): maxhl = max(maxhl, height[i]) maxhr = max(maxhr, height[n - i - 1]) res += maxhl + maxhr - height[i] res -= len(height) * maxhl return res </description>
     </item>
     
   </channel>
