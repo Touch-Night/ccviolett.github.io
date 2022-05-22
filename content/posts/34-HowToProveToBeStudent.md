@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2022-04-02T23:37:23+08:00
-title = "如何证明自己的学生身份？"
+title = "网上怎么证明学生身份？"
 description = ""
 slug = ""
 authors = ["ccviolett"]

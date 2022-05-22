@@ -11,6 +11,22 @@ externalLink = ""
 series = []
 +++
 
+做一个扫码自动可视化显示、统计、累计摄入量和食品添加剂的软件
+
+- Aegisub
+- Audacity
+- FanselineVisualizer
+- 7-Zip
+- DaVinci
+- Feishu
+- msys2
+- git
+- OBS
+- PicGo
+- Pentablet
+- Snipaste
+- v2rayN
+- vlc
 
 DJI Pocket2 旋转 90 度即可进入竖屏拍摄模式。
 

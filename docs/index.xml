@@ -6,7 +6,16 @@
 <description>Recent content on 罗潇阳的博客</description>
 <generator>Hugo -- gohugo.io</generator>
 <language>zh-cn</language>
-<lastBuildDate>Thu, 19 May 2022 16:14:03 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<lastBuildDate>Fri, 20 May 2022 08:52:49 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>220520</title>
+<link>http://ccviolett.github.io/todo/220520/</link>
+<pubDate>Fri, 20 May 2022 08:52:49 +0800</pubDate>
+<guid>http://ccviolett.github.io/todo/220520/</guid>
+<description>定时任务：
+ ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：
+ (v) 每日一题打卡截图发群 (v) 每日 10 点之前定时 16:30 发布 CSDN  每周任务：</description>
+</item>
 <item>
 <title>为什么要做一个 CSDN 作者？</title>
 <link>http://ccviolett.github.io/posts/53-beacsdnuploder/</link>
@@ -33,13 +42,13 @@ In case you don&amp;rsquo;t know me, let me introduce myself briefly. I am a Upl
  ( ) 每日一题打卡截图发群 ( ) 每日 10 点之前定时 16:30 发布 CSDN  每周任务：</description>
 </item>
 <item>
-<title>220519</title>
+<title>买新电脑但是发错地址 &amp; CSDN 每日最佳新人</title>
 <link>http://ccviolett.github.io/todo/220519/</link>
 <pubDate>Thu, 19 May 2022 11:40:52 +0800</pubDate>
 <guid>http://ccviolett.github.io/todo/220519/</guid>
 <description>定时任务：
  ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：
- ( ) 每日一题打卡截图发群 ( ) 每日 10 点之前定时 16:30 发布 CSDN  每周任务：</description>
+ ( ) 每日一题打卡截图发群 (v) 每日 10 点之前定时 16:30 发布 CSDN  每周任务：</description>
 </item>
 <item>
 <title>零基础如何用 React 写一个稀土掘金？</title>
@@ -835,7 +844,7 @@ $a_n = \frac{v^2}{R} = \frac{(\omega R)^2}{R} = R\omega^2$</description>
  D [完成] C++ 程序设计实验 实验三 数组 D [完成] 机械类导论结课报告  ddl: 4 月 3 日   D [完成] 挑战杯小组开会分配任务  ddl: 4 月 3 日   A [添加] 挑战杯策划案撰写  ddl: 4 月 6 日    </description>
 </item>
 <item>
-<title>如何证明自己的学生身份？</title>
+<title>网上怎么证明学生身份？</title>
 <link>http://ccviolett.github.io/posts/34-howtoprovetobestudent/</link>
 <pubDate>Sat, 02 Apr 2022 23:37:23 +0800</pubDate>
 <guid>http://ccviolett.github.io/posts/34-howtoprovetobestudent/</guid>
@@ -1255,7 +1264,8 @@ Free Educational Licenses
 <link>http://ccviolett.github.io/record/</link>
 <pubDate>Mon, 28 Feb 2022 21:19:44 +0800</pubDate>
 <guid>http://ccviolett.github.io/record/</guid>
-<description>DJI Pocket2 旋转 90 度即可进入竖屏拍摄模式。
+<description>做一个扫码自动可视化显示、统计、累计摄入量和食品添加剂的软件
+ Aegisub Audacity FanselineVisualizer 7-Zip DaVinci Feishu msys2 git OBS PicGo Pentablet Snipaste v2rayN vlc  DJI Pocket2 旋转 90 度即可进入竖屏拍摄模式。
 一、值得思考的纪录片 《为什么贫穷？ Why Poverty?》    推荐理由：[TODO]
 豆瓣链接：为什么贫穷？ Why Poverty?
 观看地址：https://youtu.be/TxbmjDngois
@@ -1266,9 +1276,7 @@ Free Educational Licenses
  调色时先将一个片段使用 LUT，然后选中其他所有片段，在调色好的片段上按鼠标中键即可批量调色  报错： Error: Please make sure the libxml2 and libxslt development packages are installed.
 解决方案：安装 libxml2、libxslt 和 libxslt-devel
 pip 设置国内源：
-pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ npm/npx 设置国内源：
-npm config set registry https://registry.npm.taobao.org 国内读研建议    留在国内读研，最好能走这样一条路，本科选个好专业（感兴趣的），考研考个好学校，面试通过能找到个好导师，导师手上正好有个非常不错的项目（科研类或者工程类），项目中能担任不错的角色，最后项目出了成果能分到一杯羹，项目中能在行业中小试牛刀，初露锋芒，认识一些行业大佬或者职能部门领导，这个是工程类，考虑进入职场的路线。如果是科研类，就继续读博，博导是行业领军人物，协助博导完成几项国家级以上项目，在博士期间就能半工半读，积累大量人脉资源和项目经验。博士期间发表高水平（SCI 二类以上）论文，毕业后能够在行业独当一面。当然也存在这样一条路，在国内读研主要目的是为了拿到学历学位证，其他时间可以考虑创业等事宜，利用自己和父母的人脉资源，做出一番事业。另外，也已考公务员，在行政系统大展才华。这些就是出国留学所不能及，如果有这样的想法和目的的，就不建议出国了，因为会走很多弯路，错过很多机会。
-安迪-比尔定律    “安迪-比尔定律”，&amp;ldquo;Andy gives, Bill takes away.</description>
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ npm/npx 设置国内源：</description>
 </item>
 <item>
 <title>创新实验班 Web 开发教学计划</title>
