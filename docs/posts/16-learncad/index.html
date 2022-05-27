@@ -1,46 +1,88 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="zh-cn" http-equiv="Content-Language"/>
-<meta content="light dark" name="color-scheme"/>
-<meta content="罗潇阳" name="author"/>
-<meta content="快捷键     单击左键：矩形选择 长按左键：套索选择 鼠标中键：拖拽 F8：正交  命令集     多段线（PL）：选择起始点，输入 W 设置线宽，分别输入起始宽度和端点宽度（宽度不同则可绘制梯形或三角形），输入长度 线段（L）：带角度的线段：输入 @ 指定线段长度，再输入 &lt; 指定角度，随后空格确认 圆（C) 偏移（O） 旋转（RO）：选择要旋转的对象，空格确认，再选择基准点，输入角度 倒角（F）：直接连接：R -&gt; 0 -&gt; 选择两个对象 移除（TR）：先选择用来限制的边界，空格确认后，单击需要移除的部分，即可去掉限制边界内或外部分的线条 正方形（POL）：选择中心 弧（ARC）：先选择弧的一个点，输入 E，选择另一个端点，随后继续操作，会在逆时针方向生成弧，按 Ctrl 可切换方向 复制（CO） 等分（DIV） 对齐（AL）：可以将做好的部分缩放对接到其他部分去 曲线（SPL）：多点拟合曲线，可用于作局部剖视图 打断（BR） 填充（HAT） 倒角（CHA） 圆角（FIL） 镜像（MI） 阵列（AR） 箭头（LE）：可以输入 S 来设置箭头类型 公差（TOL） 缩放（SC) 块（B）与分解（X）：打包成块方便多次重复使用、分解便于根据情况修改细节 坐标系（UCS） 编辑文本（ED）  标注上下误差    输入 上标^下标，然后键入回车
-参数化    （一）绘制特定长度三角形     绘制任意三角形，并将其框选中 点击 自动约束，三角的顶点将变成约束点 点击 标注 中的 对其，选择要规范的线段的两个端点，单击确认尺寸线位置 在尺寸线的标注中输入指定的长度  （二）绘制带角度的直线     绘制一条任意直线，随后绘制一条水平线作为基准线 将其框选并点击 自动约束，端点将变成约束点 点击 标注 中的 角度，先选择基准线，然后选择要调整的直线，单击确认尺寸线位置 在尺寸线的标注中输入指定的角度  操作    绘制表面粗糙度     将“极轴追踪（F10）”打开，并在“草图设置”（可以从“对象捕捉”设置中进入）中将极轴角的增量设度为 30。 绘制两条直线。 绘制圆，输入 c，随后光标移至折处，向上出现延长线追踪，输入需要向上的高度即可确定圆心，随后通过垂足追踪与直线切即可。  绘制两圆的公切线     输入 L，输入 tan 后选择第一个圆圆弧，再输入 tan 后选择第二个圆圆弧。  标注非圆视图直径    选择标注命令，输入 M 或 T，输入 %%C尺寸 得到带直接符号的尺寸标注" name="description"/>
-<meta content="博客,开发者,个人" name="keywords"/>
-<meta content="summary" name="twitter:card"/>
-<meta content="如何快速掌握 CAD？" name="twitter:title"/>
-<meta content="快捷键     单击左键：矩形选择 长按左键：套索选择 鼠标中键：拖拽 F8：正交  命令集     多段线（PL）：选择起始点，输入 W 设置线宽，分别输入起始宽度和端点宽度（宽度不同则可绘制梯形或三角形），输入长度 线段（L）：带角度的线段：输入 @ 指定线段长度，再输入 &lt; 指定角度，随后空格确认 圆（C) 偏移（O） 旋转（RO）：选择要旋转的对象，空格确认，再选择基准点，输入角度 倒角（F）：直接连接：R -&gt; 0 -&gt; 选择两个对象 移除（TR）：先选择用来限制的边界，空格确认后，单击需要移除的部分，即可去掉限制边界内或外部分的线条 正方形（POL）：选择中心 弧（ARC）：先选择弧的一个点，输入 E，选择另一个端点，随后继续操作，会在逆时针方向生成弧，按 Ctrl 可切换方向 复制（CO） 等分（DIV） 对齐（AL）：可以将做好的部分缩放对接到其他部分去 曲线（SPL）：多点拟合曲线，可用于作局部剖视图 打断（BR） 填充（HAT） 倒角（CHA） 圆角（FIL） 镜像（MI） 阵列（AR） 箭头（LE）：可以输入 S 来设置箭头类型 公差（TOL） 缩放（SC) 块（B）与分解（X）：打包成块方便多次重复使用、分解便于根据情况修改细节 坐标系（UCS） 编辑文本（ED）  标注上下误差    输入 上标^下标，然后键入回车
-参数化    （一）绘制特定长度三角形     绘制任意三角形，并将其框选中 点击 自动约束，三角的顶点将变成约束点 点击 标注 中的 对其，选择要规范的线段的两个端点，单击确认尺寸线位置 在尺寸线的标注中输入指定的长度  （二）绘制带角度的直线     绘制一条任意直线，随后绘制一条水平线作为基准线 将其框选并点击 自动约束，端点将变成约束点 点击 标注 中的 角度，先选择基准线，然后选择要调整的直线，单击确认尺寸线位置 在尺寸线的标注中输入指定的角度  操作    绘制表面粗糙度     将“极轴追踪（F10）”打开，并在“草图设置”（可以从“对象捕捉”设置中进入）中将极轴角的增量设度为 30。 绘制两条直线。 绘制圆，输入 c，随后光标移至折处，向上出现延长线追踪，输入需要向上的高度即可确定圆心，随后通过垂足追踪与直线切即可。  绘制两圆的公切线     输入 L，输入 tan 后选择第一个圆圆弧，再输入 tan 后选择第二个圆圆弧。  标注非圆视图直径    选择标注命令，输入 M 或 T，输入 %%C尺寸 得到带直接符号的尺寸标注" name="twitter:description"/>
-<meta content="如何快速掌握 CAD？" property="og:title"/>
-<meta content="快捷键     单击左键：矩形选择 长按左键：套索选择 鼠标中键：拖拽 F8：正交  命令集     多段线（PL）：选择起始点，输入 W 设置线宽，分别输入起始宽度和端点宽度（宽度不同则可绘制梯形或三角形），输入长度 线段（L）：带角度的线段：输入 @ 指定线段长度，再输入 &lt; 指定角度，随后空格确认 圆（C) 偏移（O） 旋转（RO）：选择要旋转的对象，空格确认，再选择基准点，输入角度 倒角（F）：直接连接：R -&gt; 0 -&gt; 选择两个对象 移除（TR）：先选择用来限制的边界，空格确认后，单击需要移除的部分，即可去掉限制边界内或外部分的线条 正方形（POL）：选择中心 弧（ARC）：先选择弧的一个点，输入 E，选择另一个端点，随后继续操作，会在逆时针方向生成弧，按 Ctrl 可切换方向 复制（CO） 等分（DIV） 对齐（AL）：可以将做好的部分缩放对接到其他部分去 曲线（SPL）：多点拟合曲线，可用于作局部剖视图 打断（BR） 填充（HAT） 倒角（CHA） 圆角（FIL） 镜像（MI） 阵列（AR） 箭头（LE）：可以输入 S 来设置箭头类型 公差（TOL） 缩放（SC) 块（B）与分解（X）：打包成块方便多次重复使用、分解便于根据情况修改细节 坐标系（UCS） 编辑文本（ED）  标注上下误差    输入 上标^下标，然后键入回车
-参数化    （一）绘制特定长度三角形     绘制任意三角形，并将其框选中 点击 自动约束，三角的顶点将变成约束点 点击 标注 中的 对其，选择要规范的线段的两个端点，单击确认尺寸线位置 在尺寸线的标注中输入指定的长度  （二）绘制带角度的直线     绘制一条任意直线，随后绘制一条水平线作为基准线 将其框选并点击 自动约束，端点将变成约束点 点击 标注 中的 角度，先选择基准线，然后选择要调整的直线，单击确认尺寸线位置 在尺寸线的标注中输入指定的角度  操作    绘制表面粗糙度     将“极轴追踪（F10）”打开，并在“草图设置”（可以从“对象捕捉”设置中进入）中将极轴角的增量设度为 30。 绘制两条直线。 绘制圆，输入 c，随后光标移至折处，向上出现延长线追踪，输入需要向上的高度即可确定圆心，随后通过垂足追踪与直线切即可。  绘制两圆的公切线     输入 L，输入 tan 后选择第一个圆圆弧，再输入 tan 后选择第二个圆圆弧。  标注非圆视图直径    选择标注命令，输入 M 或 T，输入 %%C尺寸 得到带直接符号的尺寸标注" property="og:description"/>
-<meta content="article" property="og:type"/>
-<meta content="http://ccviolett.github.io/posts/16-learncad/" property="og:url"/><meta content="posts" property="article:section"/>
-<meta content="2022-03-09T09:05:25+08:00" property="article:published_time"/>
-<meta content="2022-03-09T09:05:25+08:00" property="article:modified_time"/>
-<title>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="罗潇阳">
+    <meta name="description" content="快捷键     单击左键：矩形选择 长按左键：套索选择 鼠标中键：拖拽 F8：正交  命令集     多段线（PL）：选择起始点，输入 W 设置线宽，分别输入起始宽度和端点宽度（宽度不同则可绘制梯形或三角形），输入长度 线段（L）：带角度的线段：输入 @ 指定线段长度，再输入 &lt; 指定角度，随后空格确认 圆（C) 偏移（O） 旋转（RO）：选择要旋转的对象，空格确认，再选择基准点，输入角度 倒角（F）：直接连接：R -&gt; 0 -&gt; 选择两个对象 移除（TR）：先选择用来限制的边界，空格确认后，单击需要移除的部分，即可去掉限制边界内或外部分的线条 正方形（POL）：选择中心 弧（ARC）：先选择弧的一个点，输入 E，选择另一个端点，随后继续操作，会在逆时针方向生成弧，按 Ctrl 可切换方向 复制（CO） 等分（DIV） 对齐（AL）：可以将做好的部分缩放对接到其他部分去 曲线（SPL）：多点拟合曲线，可用于作局部剖视图 打断（BR） 填充（HAT） 倒角（CHA） 圆角（FIL） 镜像（MI） 阵列（AR） 箭头（LE）：可以输入 S 来设置箭头类型 公差（TOL） 缩放（SC) 块（B）与分解（X）：打包成块方便多次重复使用、分解便于根据情况修改细节 坐标系（UCS） 编辑文本（ED）  标注上下误差    输入 上标^下标，然后键入回车
+参数化    （一）绘制特定长度三角形     绘制任意三角形，并将其框选中 点击 自动约束，三角的顶点将变成约束点 点击 标注 中的 对其，选择要规范的线段的两个端点，单击确认尺寸线位置 在尺寸线的标注中输入指定的长度  （二）绘制带角度的直线     绘制一条任意直线，随后绘制一条水平线作为基准线 将其框选并点击 自动约束，端点将变成约束点 点击 标注 中的 角度，先选择基准线，然后选择要调整的直线，单击确认尺寸线位置 在尺寸线的标注中输入指定的角度  操作    绘制表面粗糙度     将“极轴追踪（F10）”打开，并在“草图设置”（可以从“对象捕捉”设置中进入）中将极轴角的增量设度为 30。 绘制两条直线。 绘制圆，输入 c，随后光标移至折处，向上出现延长线追踪，输入需要向上的高度即可确定圆心，随后通过垂足追踪与直线切即可。  绘制两圆的公切线     输入 L，输入 tan 后选择第一个圆圆弧，再输入 tan 后选择第二个圆圆弧。  标注非圆视图直径    选择标注命令，输入 M 或 T，输入 %%C尺寸 得到带直接符号的尺寸标注">
+    <meta name="keywords" content="博客,开发者,个人">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何快速掌握 CAD？"/>
+<meta name="twitter:description" content="快捷键     单击左键：矩形选择 长按左键：套索选择 鼠标中键：拖拽 F8：正交  命令集     多段线（PL）：选择起始点，输入 W 设置线宽，分别输入起始宽度和端点宽度（宽度不同则可绘制梯形或三角形），输入长度 线段（L）：带角度的线段：输入 @ 指定线段长度，再输入 &lt; 指定角度，随后空格确认 圆（C) 偏移（O） 旋转（RO）：选择要旋转的对象，空格确认，再选择基准点，输入角度 倒角（F）：直接连接：R -&gt; 0 -&gt; 选择两个对象 移除（TR）：先选择用来限制的边界，空格确认后，单击需要移除的部分，即可去掉限制边界内或外部分的线条 正方形（POL）：选择中心 弧（ARC）：先选择弧的一个点，输入 E，选择另一个端点，随后继续操作，会在逆时针方向生成弧，按 Ctrl 可切换方向 复制（CO） 等分（DIV） 对齐（AL）：可以将做好的部分缩放对接到其他部分去 曲线（SPL）：多点拟合曲线，可用于作局部剖视图 打断（BR） 填充（HAT） 倒角（CHA） 圆角（FIL） 镜像（MI） 阵列（AR） 箭头（LE）：可以输入 S 来设置箭头类型 公差（TOL） 缩放（SC) 块（B）与分解（X）：打包成块方便多次重复使用、分解便于根据情况修改细节 坐标系（UCS） 编辑文本（ED）  标注上下误差    输入 上标^下标，然后键入回车
+参数化    （一）绘制特定长度三角形     绘制任意三角形，并将其框选中 点击 自动约束，三角的顶点将变成约束点 点击 标注 中的 对其，选择要规范的线段的两个端点，单击确认尺寸线位置 在尺寸线的标注中输入指定的长度  （二）绘制带角度的直线     绘制一条任意直线，随后绘制一条水平线作为基准线 将其框选并点击 自动约束，端点将变成约束点 点击 标注 中的 角度，先选择基准线，然后选择要调整的直线，单击确认尺寸线位置 在尺寸线的标注中输入指定的角度  操作    绘制表面粗糙度     将“极轴追踪（F10）”打开，并在“草图设置”（可以从“对象捕捉”设置中进入）中将极轴角的增量设度为 30。 绘制两条直线。 绘制圆，输入 c，随后光标移至折处，向上出现延长线追踪，输入需要向上的高度即可确定圆心，随后通过垂足追踪与直线切即可。  绘制两圆的公切线     输入 L，输入 tan 后选择第一个圆圆弧，再输入 tan 后选择第二个圆圆弧。  标注非圆视图直径    选择标注命令，输入 M 或 T，输入 %%C尺寸 得到带直接符号的尺寸标注"/>
+
+    <meta property="og:title" content="如何快速掌握 CAD？" />
+<meta property="og:description" content="快捷键     单击左键：矩形选择 长按左键：套索选择 鼠标中键：拖拽 F8：正交  命令集     多段线（PL）：选择起始点，输入 W 设置线宽，分别输入起始宽度和端点宽度（宽度不同则可绘制梯形或三角形），输入长度 线段（L）：带角度的线段：输入 @ 指定线段长度，再输入 &lt; 指定角度，随后空格确认 圆（C) 偏移（O） 旋转（RO）：选择要旋转的对象，空格确认，再选择基准点，输入角度 倒角（F）：直接连接：R -&gt; 0 -&gt; 选择两个对象 移除（TR）：先选择用来限制的边界，空格确认后，单击需要移除的部分，即可去掉限制边界内或外部分的线条 正方形（POL）：选择中心 弧（ARC）：先选择弧的一个点，输入 E，选择另一个端点，随后继续操作，会在逆时针方向生成弧，按 Ctrl 可切换方向 复制（CO） 等分（DIV） 对齐（AL）：可以将做好的部分缩放对接到其他部分去 曲线（SPL）：多点拟合曲线，可用于作局部剖视图 打断（BR） 填充（HAT） 倒角（CHA） 圆角（FIL） 镜像（MI） 阵列（AR） 箭头（LE）：可以输入 S 来设置箭头类型 公差（TOL） 缩放（SC) 块（B）与分解（X）：打包成块方便多次重复使用、分解便于根据情况修改细节 坐标系（UCS） 编辑文本（ED）  标注上下误差    输入 上标^下标，然后键入回车
+参数化    （一）绘制特定长度三角形     绘制任意三角形，并将其框选中 点击 自动约束，三角的顶点将变成约束点 点击 标注 中的 对其，选择要规范的线段的两个端点，单击确认尺寸线位置 在尺寸线的标注中输入指定的长度  （二）绘制带角度的直线     绘制一条任意直线，随后绘制一条水平线作为基准线 将其框选并点击 自动约束，端点将变成约束点 点击 标注 中的 角度，先选择基准线，然后选择要调整的直线，单击确认尺寸线位置 在尺寸线的标注中输入指定的角度  操作    绘制表面粗糙度     将“极轴追踪（F10）”打开，并在“草图设置”（可以从“对象捕捉”设置中进入）中将极轴角的增量设度为 30。 绘制两条直线。 绘制圆，输入 c，随后光标移至折处，向上出现延长线追踪，输入需要向上的高度即可确定圆心，随后通过垂足追踪与直线切即可。  绘制两圆的公切线     输入 L，输入 tan 后选择第一个圆圆弧，再输入 tan 后选择第二个圆圆弧。  标注非圆视图直径    选择标注命令，输入 M 或 T，输入 %%C尺寸 得到带直接符号的尺寸标注" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ccviolett.github.io/posts/16-learncad/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-09T09:05:25+08:00" />
+<meta property="article:modified_time" content="2022-03-09T09:05:25+08:00" />
+
+
+
+    <title>
   如何快速掌握 CAD？ · 罗潇阳的博客
 </title>
-<link href="http://ccviolett.github.io/posts/16-learncad/" rel="canonical"/>
-<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
-<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
-<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
-<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
-<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<meta content="Hugo 0.92.0" name="generator"/>
-</head>
-<body class="preload-transitions colorscheme-auto">
+
+    
+      <link rel="canonical" href="http://ccviolett.github.io/posts/16-learncad/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.99.1" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
 <div class="float-container">
-<a class="colorscheme-toggle" id="dark-mode-toggle">
-<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
-</a>
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
 </div>
-<main class="wrapper">
-<script>
+
+
+    <main class="wrapper">
+      <script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -49,7 +91,9 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -58,83 +102,115 @@ var _hmt = _hmt || [];
 
   gtag('config', 'UA-228764760-1');
 </script>
+
 <nav class="navigation">
-<section class="container">
-<a class="navigation-title" href="/">
+  <section class="container">
+    <a class="navigation-title" href="/">
       罗潇阳的博客
     </a>
-<input id="menu-toggle" type="checkbox"/>
-<label class="menu-button float-right" for="menu-toggle">
-<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
-</label>
-<ul class="navigation-list">
-<li class="navigation-item">
-<a class="navigation-link" href="/">首页</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/posts/">文章</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/solution/">题解</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/contact/">联系</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/about/">关于</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/support/">赞助</a>
-</li>
-<li class="navigation-item menu-separator">
-<span>|</span>
-</li>
-<li class="navigation-item">
-<a href="http://ccviolett.github.io/en/">🇬🇧</a>
-</li>
-</ul>
-</section>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/">首页</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">文章</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/solution/">题解</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">联系</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">关于</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/support/">赞助</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
 </nav>
-<div class="content">
-<section class="container post">
-<article>
-<header>
-<div class="post-title">
-<h1 class="title">
-<a class="title-link" href="http://ccviolett.github.io/posts/16-learncad/">
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://ccviolett.github.io/posts/16-learncad/">
               如何快速掌握 CAD？
             </a>
-</h1>
-</div>
-<div class="post-meta">
-<div class="date">
-<span class="posted-on">
-<i aria-hidden="true" class="fa fa-calendar"></i>
-<time datetime="2022-03-09T09:05:25+08:00">
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2022-03-09T09:05:25&#43;08:00'>
                 2022 年 3 月 9 日
               </time>
-</span>
-<span class="reading-time">
-<i aria-hidden="true" class="fa fa-clock-o"></i>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
               阅读时间：1 分钟
             </span>
-</div>
-<div class="authors">
-<i aria-hidden="true" class="fa fa-user"></i>
-<a href="/authors/ccviolett/">ccviolett</a></div>
-<div class="tags">
-<i aria-hidden="true" class="fa fa-tag"></i>
-<span class="tag">
-<a href="/tags/%E6%9C%BA%E6%A2%B0/">机械</a>
-</span></div>
-</div>
-</header>
-<div>
-<h3 id="快捷键">
+          </div>
+          <div class="authors">
+    <i class="fa fa-user" aria-hidden="true"></i>
+      <a href="/authors/ccviolett/">ccviolett</a></div>
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/%E6%9C%BA%E6%A2%B0/">机械</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <h3 id="快捷键">
   快捷键
   <a class="heading-link" href="#%e5%bf%ab%e6%8d%b7%e9%94%ae">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <ul>
 <li>单击左键：矩形选择</li>
@@ -145,8 +221,8 @@ var _hmt = _hmt || [];
 <h3 id="命令集">
   命令集
   <a class="heading-link" href="#%e5%91%bd%e4%bb%a4%e9%9b%86">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <ul>
 <li>多段线（PL）：选择起始点，输入 W 设置线宽，分别输入起始宽度和端点宽度（宽度不同则可绘制梯形或三角形），输入长度</li>
@@ -178,21 +254,21 @@ var _hmt = _hmt || [];
 <h4 id="标注上下误差">
   标注上下误差
   <a class="heading-link" href="#%e6%a0%87%e6%b3%a8%e4%b8%8a%e4%b8%8b%e8%af%af%e5%b7%ae">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
 <p>输入 <code>上标^下标</code>，然后键入回车</p>
 <h3 id="参数化">
   参数化
   <a class="heading-link" href="#%e5%8f%82%e6%95%b0%e5%8c%96">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <h4 id="一绘制特定长度三角形">
   （一）绘制特定长度三角形
   <a class="heading-link" href="#%e4%b8%80%e7%bb%98%e5%88%b6%e7%89%b9%e5%ae%9a%e9%95%bf%e5%ba%a6%e4%b8%89%e8%a7%92%e5%bd%a2">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
 <ol>
 <li>绘制任意三角形，并将其框选中</li>
@@ -203,8 +279,8 @@ var _hmt = _hmt || [];
 <h4 id="二绘制带角度的直线">
   （二）绘制带角度的直线
   <a class="heading-link" href="#%e4%ba%8c%e7%bb%98%e5%88%b6%e5%b8%a6%e8%a7%92%e5%ba%a6%e7%9a%84%e7%9b%b4%e7%ba%bf">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
 <ol>
 <li>绘制一条任意直线，随后绘制一条水平线作为基准线</li>
@@ -215,14 +291,14 @@ var _hmt = _hmt || [];
 <h3 id="操作">
   操作
   <a class="heading-link" href="#%e6%93%8d%e4%bd%9c">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <h4 id="绘制表面粗糙度">
   绘制表面粗糙度
   <a class="heading-link" href="#%e7%bb%98%e5%88%b6%e8%a1%a8%e9%9d%a2%e7%b2%97%e7%b3%99%e5%ba%a6">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
 <ol>
 <li>将“极轴追踪（F10）”打开，并在“草图设置”（可以从“对象捕捉”设置中进入）中将极轴角的增量设度为 30。</li>
@@ -232,8 +308,8 @@ var _hmt = _hmt || [];
 <h4 id="绘制两圆的公切线">
   绘制两圆的公切线
   <a class="heading-link" href="#%e7%bb%98%e5%88%b6%e4%b8%a4%e5%9c%86%e7%9a%84%e5%85%ac%e5%88%87%e7%ba%bf">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
 <ol>
 <li>输入 L，输入 tan 后选择第一个圆圆弧，再输入 tan 后选择第二个圆圆弧。</li>
@@ -241,42 +317,58 @@ var _hmt = _hmt || [];
 <h4 id="标注非圆视图直径">
   标注非圆视图直径
   <a class="heading-link" href="#%e6%a0%87%e6%b3%a8%e9%9d%9e%e5%9c%86%e8%a7%86%e5%9b%be%e7%9b%b4%e5%be%84">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
 <p>选择标注命令，输入 M 或 T，输入 <code>%%C尺寸</code> 得到带直接符号的尺寸标注</p>
 <h4 id="标注度数">
   标注度数
   <a class="heading-link" href="#%e6%a0%87%e6%b3%a8%e5%ba%a6%e6%95%b0">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
 <p>输入 `%%D``</p>
 <h4 id="设置标注精度">
   设置标注精度
   <a class="heading-link" href="#%e8%ae%be%e7%bd%ae%e6%a0%87%e6%b3%a8%e7%b2%be%e5%ba%a6">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h4>
 <p>1、在命令行中输入“D”，弹出标注样式管理器。
 2、点击【修改】，在【主单位】的【精度】下，选取0.0。</p>
-</div>
-<footer>
-</footer>
-</article>
-<h1 style="text-align: center;">赞助区</h1>
-<div style="display: flex; flex-wrap: wrap; ">
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210866.png/w200" style="margin: 1rem"/>
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210865.jpg/w200" style="margin: 1rem"/>
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210864.png/w200" style="margin: 1rem"/>
-<p>如果觉得文章对你有帮助，可以给作者买杯咖啡。作者非常感谢你的支持，你的每一点点激励都是作者不断创作的动力。</p>
-<p>所有收到的赞助都将在<a href="/support">收到的赞助</a>里显示，你可以在支付时留下备注。</p>
-</div>
-<h1 style="text-align: center;">评论区</h1>
-<p>欢迎大家在下面多多评论：</p>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div id="vcomments"></div>
-<script>
+
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+
+    <h1 style="text-align: center;">赞助区</h1>
+    <div style="display: flex; flex-wrap: wrap; ">
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210866.png/w200" style="margin: 1rem"/>
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210865.jpg/w200" style="margin: 1rem"/>
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210864.png/w200" style="margin: 1rem"/>
+      <p>如果觉得文章对你有帮助，可以给作者买杯咖啡。作者非常感谢你的支持，你的每一点点激励都是作者不断创作的动力。</p>
+      <p>所有收到的赞助都将在<a href="/support">收到的赞助</a>里显示，你可以在支付时留下备注。</p>
+    </div>
+
+    
+    
+    
+
+    <h1 style="text-align: center;">评论区</h1>
+    <p>欢迎大家在下面多多评论：</p>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="vcomments"></div>
+    <script>
         new Valine({
             el: '#vcomments',
             appId: 'pKI8zxDMRprnFwEiUfoQF3tV-gzGzoHsz',
@@ -284,11 +376,16 @@ var _hmt = _hmt || [];
             avatar: 'mp'
         })
     </script>
-</section>
-</div>
-<footer class="footer">
-<section class="container">
-<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
+
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
       
       
         ©
@@ -298,17 +395,19 @@ var _hmt = _hmt || [];
       
       
          · 
-        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
       
       
         
       
     </section>
-</footer>
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"></script>
-<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
-<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
-<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
+  </footer>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -325,7 +424,30 @@ var _hmt = _hmt || [];
         });
     });
 </script>
-</main>
-<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
-</body>
+
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
 </html>

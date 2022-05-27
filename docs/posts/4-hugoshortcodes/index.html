@@ -1,70 +1,112 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="zh-cn" http-equiv="Content-Language"/>
-<meta content="light dark" name="color-scheme"/>
-<meta content="罗潇阳" name="author"/>
-<meta content='官方学习链接：https://gohugo.io/templates/shortcode-templates/
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="罗潇阳">
+    <meta name="description" content="官方学习链接：https://gohugo.io/templates/shortcode-templates/
 一、新建 Shortcode    假设要新建的 Shortcode 名称为 test。
 在博客文件夹下的 layouts/shortcodes/ 文件夹（不存在则新建）中创建文件 test.html，在文件中写入 Shortcode 片段即可。
 二、调用与传参    由于渲染的原因，无法在文章里完整演示，需要自行在以下标签之外添加两层大括号，
   单标签调用：&lt;test&gt;。
-  变量名传参调用：&lt;test name1="arg1" name2="arg2"&gt;；引用参数： .Get "name1" 得到 arg1， .Get "name2" 得到 arg2。
+  变量名传参调用：&lt;test name1=&quot;arg1&quot; name2=&quot;arg2&quot;&gt;；引用参数： .Get &quot;name1&quot; 得到 arg1， .Get &quot;name2&quot; 得到 arg2。
   顺序传参调用：&lt;test arg1 arg2&gt;；引用参数：.Get 0 得到 arg1，.Get 1 得到 arg2。
   双标签内部文本调用：&lt;test&gt; xxxxx &lt;/test&gt;；引用参数：.Inner 得到纯文本 xxxxx。
   双标签内部渲染调用：%test% xxxxx %/test%；引用参数：.Inner 得到经过 Markdown 渲染后的 xxxxx。
-  ' name="description"/>
-<meta content="博客,开发者,个人" name="keywords"/>
-<meta content="summary" name="twitter:card"/>
-<meta content="如何使用 Hugo Shortcodes 来复用代码或嵌入 HTML？" name="twitter:title"/>
-<meta content='官方学习链接：https://gohugo.io/templates/shortcode-templates/
+  ">
+    <meta name="keywords" content="博客,开发者,个人">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何使用 Hugo Shortcodes 来复用代码或嵌入 HTML？"/>
+<meta name="twitter:description" content="官方学习链接：https://gohugo.io/templates/shortcode-templates/
 一、新建 Shortcode    假设要新建的 Shortcode 名称为 test。
 在博客文件夹下的 layouts/shortcodes/ 文件夹（不存在则新建）中创建文件 test.html，在文件中写入 Shortcode 片段即可。
 二、调用与传参    由于渲染的原因，无法在文章里完整演示，需要自行在以下标签之外添加两层大括号，
   单标签调用：&lt;test&gt;。
-  变量名传参调用：&lt;test name1="arg1" name2="arg2"&gt;；引用参数： .Get "name1" 得到 arg1， .Get "name2" 得到 arg2。
+  变量名传参调用：&lt;test name1=&quot;arg1&quot; name2=&quot;arg2&quot;&gt;；引用参数： .Get &quot;name1&quot; 得到 arg1， .Get &quot;name2&quot; 得到 arg2。
   顺序传参调用：&lt;test arg1 arg2&gt;；引用参数：.Get 0 得到 arg1，.Get 1 得到 arg2。
   双标签内部文本调用：&lt;test&gt; xxxxx &lt;/test&gt;；引用参数：.Inner 得到纯文本 xxxxx。
   双标签内部渲染调用：%test% xxxxx %/test%；引用参数：.Inner 得到经过 Markdown 渲染后的 xxxxx。
-  ' name="twitter:description"/>
-<meta content="如何使用 Hugo Shortcodes 来复用代码或嵌入 HTML？" property="og:title"/>
-<meta content='官方学习链接：https://gohugo.io/templates/shortcode-templates/
+  "/>
+
+    <meta property="og:title" content="如何使用 Hugo Shortcodes 来复用代码或嵌入 HTML？" />
+<meta property="og:description" content="官方学习链接：https://gohugo.io/templates/shortcode-templates/
 一、新建 Shortcode    假设要新建的 Shortcode 名称为 test。
 在博客文件夹下的 layouts/shortcodes/ 文件夹（不存在则新建）中创建文件 test.html，在文件中写入 Shortcode 片段即可。
 二、调用与传参    由于渲染的原因，无法在文章里完整演示，需要自行在以下标签之外添加两层大括号，
   单标签调用：&lt;test&gt;。
-  变量名传参调用：&lt;test name1="arg1" name2="arg2"&gt;；引用参数： .Get "name1" 得到 arg1， .Get "name2" 得到 arg2。
+  变量名传参调用：&lt;test name1=&quot;arg1&quot; name2=&quot;arg2&quot;&gt;；引用参数： .Get &quot;name1&quot; 得到 arg1， .Get &quot;name2&quot; 得到 arg2。
   顺序传参调用：&lt;test arg1 arg2&gt;；引用参数：.Get 0 得到 arg1，.Get 1 得到 arg2。
   双标签内部文本调用：&lt;test&gt; xxxxx &lt;/test&gt;；引用参数：.Inner 得到纯文本 xxxxx。
   双标签内部渲染调用：%test% xxxxx %/test%；引用参数：.Inner 得到经过 Markdown 渲染后的 xxxxx。
-  ' property="og:description"/>
-<meta content="article" property="og:type"/>
-<meta content="http://ccviolett.github.io/posts/4-hugoshortcodes/" property="og:url"/><meta content="posts" property="article:section"/>
-<meta content="2022-02-26T21:46:10+08:00" property="article:published_time"/>
-<meta content="2022-02-26T21:46:10+08:00" property="article:modified_time"/>
-<title>
+  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ccviolett.github.io/posts/4-hugoshortcodes/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-26T21:46:10+08:00" />
+<meta property="article:modified_time" content="2022-02-26T21:46:10+08:00" />
+
+
+
+    <title>
   如何使用 Hugo Shortcodes 来复用代码或嵌入 HTML？ · 罗潇阳的博客
 </title>
-<link href="http://ccviolett.github.io/posts/4-hugoshortcodes/" rel="canonical"/>
-<link as="font" crossorigin="" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" rel="preload" type="font/woff2"/>
-<link crossorigin="anonymous" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" media="screen" rel="stylesheet"/>
-<link crossorigin="anonymous" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" media="screen" rel="stylesheet"/>
-<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
-<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<meta content="Hugo 0.92.0" name="generator"/>
-</head>
-<body class="preload-transitions colorscheme-auto">
+
+    
+      <link rel="canonical" href="http://ccviolett.github.io/posts/4-hugoshortcodes/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.99.1" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
 <div class="float-container">
-<a class="colorscheme-toggle" id="dark-mode-toggle">
-<i aria-hidden="true" class="fa fa-adjust fa-fw"></i>
-</a>
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
 </div>
-<main class="wrapper">
-<script>
+
+
+    <main class="wrapper">
+      <script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -73,7 +115,9 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -82,87 +126,119 @@ var _hmt = _hmt || [];
 
   gtag('config', 'UA-228764760-1');
 </script>
+
 <nav class="navigation">
-<section class="container">
-<a class="navigation-title" href="/">
+  <section class="container">
+    <a class="navigation-title" href="/">
       罗潇阳的博客
     </a>
-<input id="menu-toggle" type="checkbox"/>
-<label class="menu-button float-right" for="menu-toggle">
-<i aria-hidden="true" class="fa fa-bars fa-fw"></i>
-</label>
-<ul class="navigation-list">
-<li class="navigation-item">
-<a class="navigation-link" href="/">首页</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/posts/">文章</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/solution/">题解</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/contact/">联系</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/about/">关于</a>
-</li>
-<li class="navigation-item">
-<a class="navigation-link" href="/support/">赞助</a>
-</li>
-<li class="navigation-item menu-separator">
-<span>|</span>
-</li>
-<li class="navigation-item">
-<a href="http://ccviolett.github.io/en/">🇬🇧</a>
-</li>
-</ul>
-</section>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/">首页</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">文章</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/solution/">题解</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">联系</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">关于</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/support/">赞助</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
 </nav>
-<div class="content">
-<section class="container post">
-<article>
-<header>
-<div class="post-title">
-<h1 class="title">
-<a class="title-link" href="http://ccviolett.github.io/posts/4-hugoshortcodes/">
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://ccviolett.github.io/posts/4-hugoshortcodes/">
               如何使用 Hugo Shortcodes 来复用代码或嵌入 HTML？
             </a>
-</h1>
-</div>
-<div class="post-meta">
-<div class="date">
-<span class="posted-on">
-<i aria-hidden="true" class="fa fa-calendar"></i>
-<time datetime="2022-02-26T21:46:10+08:00">
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2022-02-26T21:46:10&#43;08:00'>
                 2022 年 2 月 26 日
               </time>
-</span>
-<span class="reading-time">
-<i aria-hidden="true" class="fa fa-clock-o"></i>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
               阅读时间：1 分钟
             </span>
-</div>
-<div class="authors">
-<i aria-hidden="true" class="fa fa-user"></i>
-<a href="/authors/ccviolett/">ccviolett</a></div>
-</div>
-</header>
-<div>
-<p>官方学习链接：https://gohugo.io/templates/shortcode-templates/</p>
+          </div>
+          <div class="authors">
+    <i class="fa fa-user" aria-hidden="true"></i>
+      <a href="/authors/ccviolett/">ccviolett</a></div>
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>官方学习链接：https://gohugo.io/templates/shortcode-templates/</p>
 <h3 id="一新建-shortcode">
   一、新建 Shortcode
   <a class="heading-link" href="#%e4%b8%80%e6%96%b0%e5%bb%ba-shortcode">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>假设要新建的 Shortcode 名称为 <code>test</code>。</p>
 <p>在博客文件夹下的 <code>layouts/shortcodes/</code> 文件夹（不存在则新建）中创建文件 <code>test.html</code>，在文件中写入 Shortcode 片段即可。</p>
 <h3 id="二调用与传参">
   二、调用与传参
   <a class="heading-link" href="#%e4%ba%8c%e8%b0%83%e7%94%a8%e4%b8%8e%e4%bc%a0%e5%8f%82">
-<i aria-hidden="true" class="fa fa-link"></i>
-</a>
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
 </h3>
 <p>由于渲染的原因，无法在文章里完整演示，需要自行在以下标签之外添加两层大括号，</p>
 <ul>
@@ -170,7 +246,7 @@ var _hmt = _hmt || [];
 <p>单标签调用：<code>&lt;test&gt;</code>。</p>
 </li>
 <li>
-<p>变量名传参调用：<code>&lt;test name1="arg1" name2="arg2"&gt;</code>；引用参数：<code> .Get "name1"</code> 得到 <code>arg1</code>，<code> .Get "name2"</code> 得到 <code>arg2</code>。</p>
+<p>变量名传参调用：<code>&lt;test name1=&quot;arg1&quot; name2=&quot;arg2&quot;&gt;</code>；引用参数：<code> .Get &quot;name1&quot;</code> 得到 <code>arg1</code>，<code> .Get &quot;name2&quot;</code> 得到 <code>arg2</code>。</p>
 </li>
 <li>
 <p>顺序传参调用：<code>&lt;test arg1 arg2&gt;</code>；引用参数：<code>.Get 0</code> 得到 <code>arg1</code>，<code>.Get 1</code> 得到 <code>arg2</code>。</p>
@@ -182,23 +258,39 @@ var _hmt = _hmt || [];
 <p>双标签内部渲染调用：<code>%test% xxxxx %/test%</code>；引用参数：<code>.Inner</code> 得到经过 Markdown 渲染后的 <code>xxxxx</code>。</p>
 </li>
 </ul>
-</div>
-<footer>
-</footer>
-</article>
-<h1 style="text-align: center;">赞助区</h1>
-<div style="display: flex; flex-wrap: wrap; ">
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210866.png/w200" style="margin: 1rem"/>
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210865.jpg/w200" style="margin: 1rem"/>
-<img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210864.png/w200" style="margin: 1rem"/>
-<p>如果觉得文章对你有帮助，可以给作者买杯咖啡。作者非常感谢你的支持，你的每一点点激励都是作者不断创作的动力。</p>
-<p>所有收到的赞助都将在<a href="/support">收到的赞助</a>里显示，你可以在支付时留下备注。</p>
-</div>
-<h1 style="text-align: center;">评论区</h1>
-<p>欢迎大家在下面多多评论：</p>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<div id="vcomments"></div>
-<script>
+
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+
+    <h1 style="text-align: center;">赞助区</h1>
+    <div style="display: flex; flex-wrap: wrap; ">
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210866.png/w200" style="margin: 1rem"/>
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210865.jpg/w200" style="margin: 1rem"/>
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210864.png/w200" style="margin: 1rem"/>
+      <p>如果觉得文章对你有帮助，可以给作者买杯咖啡。作者非常感谢你的支持，你的每一点点激励都是作者不断创作的动力。</p>
+      <p>所有收到的赞助都将在<a href="/support">收到的赞助</a>里显示，你可以在支付时留下备注。</p>
+    </div>
+
+    
+    
+    
+
+    <h1 style="text-align: center;">评论区</h1>
+    <p>欢迎大家在下面多多评论：</p>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="vcomments"></div>
+    <script>
         new Valine({
             el: '#vcomments',
             appId: 'pKI8zxDMRprnFwEiUfoQF3tV-gzGzoHsz',
@@ -206,11 +298,16 @@ var _hmt = _hmt || [];
             avatar: 'mp'
         })
     </script>
-</section>
-</div>
-<footer class="footer">
-<section class="container">
-<p>愿你成为自己的太阳，无需借助别人的光。博客接受大众投稿，联系QQ 3340751717。</p>
+
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
       
       
         ©
@@ -220,17 +317,19 @@ var _hmt = _hmt || [];
       
       
          · 
-        技术支持 <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
       
       
         
       
     </section>
-</footer>
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179"></script>
-<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" rel="stylesheet"/>
-<script crossorigin="anonymous" defer="" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
-<script crossorigin="anonymous" defer="" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
+  </footer>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
@@ -247,7 +346,30 @@ var _hmt = _hmt || [];
         });
     });
 </script>
-</main>
-<script integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU=" src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js"></script>
-</body>
+
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
 </html>

@@ -1,61 +1,165 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
-<title>罗潇阳的博客</title>
-<link>http://ccviolett.github.io/</link>
-<description>Recent content on 罗潇阳的博客</description>
-<generator>Hugo -- gohugo.io</generator>
-<language>zh-cn</language>
-<lastBuildDate>Fri, 20 May 2022 08:52:49 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml"/>
-<item>
-<title>220520</title>
-<link>http://ccviolett.github.io/todo/220520/</link>
-<pubDate>Fri, 20 May 2022 08:52:49 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220520/</guid>
-<description>定时任务：
+  <channel>
+    <title>罗潇阳的博客</title>
+    <link>http://ccviolett.github.io/</link>
+    <description>Recent content on 罗潇阳的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 May 2022 13:48:17 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我发现了百度翻译的一个 BUG！</title>
+      <link>http://ccviolett.github.io/posts/54-baidutranslatebug/</link>
+      <pubDate>Fri, 27 May 2022 13:48:17 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/54-baidutranslatebug/</guid>
+      <description>我们来只是想正常地查一下这道题：
+结果发现出现了乱码：
+随后我又在其他的几个翻译软件中尝试了一下，发现都没有问题，又在手机上试了一下、请几个朋友试了一下，都出现了一样的乱码。
+基本可以断定是百度翻译出了 BUG。
+经过实验，以下的内容都能够触发 BUG：
+Certain types of birds often develop the skill of ____ and sound like they can speak. develop the skill of ____ and sound like kill of ____ and sound like 我发现是 ____ 的问题，于是我又以此为基础构建了一些小一点的串，比如 a ____ b，就能够简单地看到这个 BUG 的效果。
+不知道什么时候会修复。</description>
+    </item>
+    
+    <item>
+      <title>220527</title>
+      <link>http://ccviolett.github.io/todo/220527/</link>
+      <pubDate>Fri, 27 May 2022 10:49:31 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220527/</guid>
+      <description>定时任务：
+ ( ) 双语演讲彩排  dur: 5 月 28 日 19:00 - 21:00   ( ) 近代史纲要考试模拟  dur: 5 月 29 日 12:00 - 13:00 desc: 准备相关证件   ( ) 双语演讲比赛  dur: 5 月 29 日 9:00 - 11:00   命题演讲：题目“青春心向党，建功新时代”。演讲时间四分钟，三分半一声铃音提示，四分钟两声铃音提示，选手停止演讲。 即兴演讲：每位选手即兴演讲时间把握在1分30秒（思考时间30秒），思考时间结束后有一声铃音提示，选手也可举手示意提前停止思考，在时间结束时有两声铃音提示，选手停止演讲。 参赛须开启摄像头、麦克风。要求摄像环境光照清晰、无杂音。要求演讲者衣着整洁（最好着正装），精神饱满。 演讲须脱稿、且主题清晰。   ( ) 近代史纲要期末考试  dur: 6 月 5 日 desc: 准备相关证件。题型单选 64 分，多选 10 分，判断 22 分，填空 4 分。   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：</description>
+    </item>
+    
+    <item>
+      <title>做 APEX 视频的一天</title>
+      <link>http://ccviolett.github.io/todo/220526/</link>
+      <pubDate>Thu, 26 May 2022 11:03:05 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220526/</guid>
+      <description>定时任务：
+ ( ) 近代史纲要考试模拟  dur: 5 月 29 日 12:00 - 13:00 desc: 准备相关证件   ( ) 双语演讲彩排  dur: 5 月 28 日 19:00 - 21:00   ( ) 双语演讲比赛  dur: 5 月 29 日 9:00 - 11:00   命题演讲：题目“青春心向党，建功新时代”。演讲时间四分钟，三分半一声铃音提示，四分钟两声铃音提示，选手停止演讲。 即兴演讲：每位选手即兴演讲时间把握在1分30秒（思考时间30秒），思考时间结束后有一声铃音提示，选手也可举手示意提前停止思考，在时间结束时有两声铃音提示，选手停止演讲。 参赛须开启摄像头、麦克风。要求摄像环境光照清晰、无杂音。要求演讲者衣着整洁（最好着正装），精神饱满。 演讲须脱稿、且主题清晰。   ( ) 近代史纲要期末考试  dur: 6 月 5 日 desc: 准备相关证件。题型单选 64 分，多选 10 分，判断 22 分，填空 4 分。   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：</description>
+    </item>
+    
+    <item>
+      <title>什么都没做的一天</title>
+      <link>http://ccviolett.github.io/todo/220525/</link>
+      <pubDate>Wed, 25 May 2022 12:11:21 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220525/</guid>
+      <description>定时任务：
+ ( ) 近代史纲要考试模拟  dur: 5 月 29 日 12:00 - 13:00 desc: 准备相关证件   ( ) 近代史纲要期末考试  dur: 6 月 5 日 desc: 准备相关证件。题型单选 64 分，多选 10 分，判断 22 分，填空 4 分。   ( ) 双语演讲彩排  dur: 5 月 28 日 19:00 - 21:00   ( ) 双语演讲比赛  dur: 5 月 29 日 9:00 - 11:00   命题演讲：命题演讲题目：青春心向党，建功新时代。演讲时间四分钟，三分半一声铃音提示，四分钟两声铃音提示，选手停止演讲。 即兴演讲：每位选手即兴演讲时间把握在1分30秒（思考时间30秒），思考时间结束后有一声铃音提示，选手也可举手示意提前停止思考，在时间结束时有两声铃音提示，选手停止演讲。 参赛须开启摄像头、麦克风。要求摄像环境光照清晰、无杂音。要求演讲者衣着整洁（最好着正装），精神饱满。 演讲须脱稿、且主题清晰。   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：</description>
+    </item>
+    
+    <item>
+      <title>重新开始准备做视频 &amp; 乐刻私教课</title>
+      <link>http://ccviolett.github.io/todo/220524/</link>
+      <pubDate>Tue, 24 May 2022 15:20:27 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220524/</guid>
+      <description>定时任务：
+ ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：
+ ( ) 每日一题打卡截图发群 ( ) 每日 10 点之前定时 16:30 发布 CSDN  每周任务：
+ ( ) 工程实训周报  ddl: 5 月 29 日 update: mon   ( ) 青年大学习  ddl: 5 月 29 日 update: mon    重要任务：
+ ( ) 无诈校园 ( ) 英语作业 U3 language in use  ddl: 5 月 25 日 16:00   ( ) 英语作业 U 校园前两单元  dll: 5 月 27 日   ( ) 公共基础课-逻辑学导论  ddl: 5 月 30 日   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   ( ) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日   ( ) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日   ( ) 写开源之夏项目书  ddl: 6 月 4 日   ( ) 大学物理作业-电磁学第一章静电场-1  ddl: 7 月 05 日   ( ) 大学物理作业-电磁学第一章静电场-2  ddl: 7 月 05 日    空闲任务：</description>
+    </item>
+    
+    <item>
+      <title>不要靠近出选择题，会变得不幸</title>
+      <link>http://ccviolett.github.io/todo/220523/</link>
+      <pubDate>Mon, 23 May 2022 07:33:43 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220523/</guid>
+      <description>定时任务：
+ ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：
+ ( ) 每日一题打卡截图发群 ( ) 每日 10 点之前定时 16:30 发布 CSDN  每周任务：
+ ( ) 工程实训周报  ddl: 5 月 29 日 update: mon   (v) 青年大学习  ddl: 5 月 29 日 update: mon    重要任务：</description>
+    </item>
+    
+    <item>
+      <title>新电脑到了！</title>
+      <link>http://ccviolett.github.io/todo/220522/</link>
+      <pubDate>Mon, 23 May 2022 07:33:40 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220522/</guid>
+      <description>定时任务：
+ ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：
+ ( ) 每日一题打卡截图发群 ( ) 每日 10 点之前定时 16:30 发布 CSDN  每周任务：
+ (v) 工程实训周报  ddl: 5 月 22 日 update: mon   (v) 青年大学习  ddl: 5 月 22 日 update: mon    重要任务：</description>
+    </item>
+    
+    <item>
+      <title>和家人一起出去玩</title>
+      <link>http://ccviolett.github.io/todo/220521/</link>
+      <pubDate>Mon, 23 May 2022 07:33:38 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220521/</guid>
+      <description>定时任务：
  ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：
  (v) 每日一题打卡截图发群 (v) 每日 10 点之前定时 16:30 发布 CSDN  每周任务：</description>
-</item>
-<item>
-<title>为什么要做一个 CSDN 作者？</title>
-<link>http://ccviolett.github.io/posts/53-beacsdnuploder/</link>
-<pubDate>Thu, 19 May 2022 16:14:03 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/53-beacsdnuploder/</guid>
-<description>CSDN 活动： 奖励每天最佳新人
+    </item>
+    
+    <item>
+      <title>写了很多的英语作业</title>
+      <link>http://ccviolett.github.io/todo/220520/</link>
+      <pubDate>Fri, 20 May 2022 08:52:49 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220520/</guid>
+      <description>定时任务：
+ ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：
+ (v) 每日一题打卡截图发群 (v) 每日 10 点之前定时 16:30 发布 CSDN  每周任务：</description>
+    </item>
+    
+    <item>
+      <title>为什么要做一个 CSDN 作者？</title>
+      <link>http://ccviolett.github.io/posts/53-beacsdnuploder/</link>
+      <pubDate>Thu, 19 May 2022 16:14:03 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/53-beacsdnuploder/</guid>
+      <description>CSDN 活动： 奖励每天最佳新人
 CSDN每天最佳新人&amp;ndash;2022-05-18</description>
-</item>
-<item>
-<title>Tiktok</title>
-<link>http://ccviolett.github.io/tiktok/</link>
-<pubDate>Thu, 19 May 2022 14:02:12 +0800</pubDate>
-<guid>http://ccviolett.github.io/tiktok/</guid>
-<description>1. Self Introduction    Hello everyone guys in TikTok! I am CC underline violett. You can call me CC. From now, I am officially settled in TikTok, being a part of this huge family.
+    </item>
+    
+    <item>
+      <title>Tiktok</title>
+      <link>http://ccviolett.github.io/tiktok/</link>
+      <pubDate>Thu, 19 May 2022 14:02:12 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/tiktok/</guid>
+      <description>1. Self Introduction    Hello everyone guys in TikTok! I am CC underline violett. You can call me CC. From now, I am officially settled in TikTok, being a part of this huge family.
 In case you don&amp;rsquo;t know me, let me introduce myself briefly. I am a Uploader in Bilibili and also a Youtuber. I have tons of interesting ideas and amazing views to share with you. I am sure about that you will enjoy watching my Tiktok clip.</description>
-</item>
-<item>
-<title>字节跳动前端面试</title>
-<link>http://ccviolett.github.io/todo/220518/</link>
-<pubDate>Thu, 19 May 2022 11:41:16 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220518/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>字节跳动前端面试</title>
+      <link>http://ccviolett.github.io/todo/220518/</link>
+      <pubDate>Thu, 19 May 2022 11:41:16 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220518/</guid>
+      <description>定时任务：
  ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：
  ( ) 每日一题打卡截图发群 ( ) 每日 10 点之前定时 16:30 发布 CSDN  每周任务：</description>
-</item>
-<item>
-<title>买新电脑但是发错地址 &amp; CSDN 每日最佳新人</title>
-<link>http://ccviolett.github.io/todo/220519/</link>
-<pubDate>Thu, 19 May 2022 11:40:52 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220519/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>买新电脑但是发错地址 &amp; CSDN 每日最佳新人</title>
+      <link>http://ccviolett.github.io/todo/220519/</link>
+      <pubDate>Thu, 19 May 2022 11:40:52 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220519/</guid>
+      <description>定时任务：
  ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：
  ( ) 每日一题打卡截图发群 (v) 每日 10 点之前定时 16:30 发布 CSDN  每周任务：</description>
-</item>
-<item>
-<title>零基础如何用 React 写一个稀土掘金？</title>
-<link>http://ccviolett.github.io/posts/52-reacth5juejin/</link>
-<pubDate>Wed, 18 May 2022 15:48:31 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/52-reacth5juejin/</guid>
-<description>知识    前端入门的定义
+    </item>
+    
+    <item>
+      <title>零基础如何用 React 写一个稀土掘金？</title>
+      <link>http://ccviolett.github.io/posts/52-reacth5juejin/</link>
+      <pubDate>Wed, 18 May 2022 15:48:31 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/52-reacth5juejin/</guid>
+      <description>知识    前端入门的定义
  实现核心功能：能够运用知识实现前端中的核心功能  前端的发展
  Web 1.0: 网站（document） Web 2.0: APP（Gmail、WordPress、Jquery） Web 3.0: 视图模型（React、Vue、小程序）  两代技术的区别
  Jquery 通过原生 JS 操作 DOM，考虑节点的渲染、操作 React/Vue/小程序通过 JSX 操作 virtual DOM，不考虑具体的节点如何操作，只考虑改变状态（数据）  两代技术在概念上有了核心的区别，产生了抽象（模型）
@@ -65,149 +169,183 @@ PC 端的交互要远复杂于移动端
  将复杂问题转换为简单问题的集合（分治） 避免重复构建相同的代码（复用）  状态    找变化，将可变与不可变的分开。
 将变化的东西通过状态表示，实际上不需要使用路由实现，路由其实也只是储存一个状态，将 URL 解析之后复原到组件中。
 状态分为两种：
- State 组件内部的状态，维持当前组件的状态 Props 组件外部的状态，实现一个组件的复用  实现    function Component(props: {}) { // 1.</description>
-</item>
-<item>
-<title>学 React &amp; 写掘金的第二天</title>
-<link>http://ccviolett.github.io/todo/220517/</link>
-<pubDate>Tue, 17 May 2022 09:04:11 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220517/</guid>
-<description>定时任务：
+ State 组件内部的状态，维持当前组件的状态 Props 组件外部的状态，实现一个组件的复用  实现    function Component(props: {}) {  // 1.</description>
+    </item>
+    
+    <item>
+      <title>学 React &amp; 写掘金的第二天</title>
+      <link>http://ccviolett.github.io/todo/220517/</link>
+      <pubDate>Tue, 17 May 2022 09:04:11 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220517/</guid>
+      <description>定时任务：
  ( ) 字节跳动前端开发实习生-抖音支付职位面试  dur: 5 月 18 日 17:00   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00 desc: 会议链接见邮件    每日任务：</description>
-</item>
-<item>
-<title>学 React &amp; 写掘金的第一天</title>
-<link>http://ccviolett.github.io/todo/220516/</link>
-<pubDate>Mon, 16 May 2022 09:32:22 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220516/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>学 React &amp; 写掘金的第一天</title>
+      <link>http://ccviolett.github.io/todo/220516/</link>
+      <pubDate>Mon, 16 May 2022 09:32:22 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220516/</guid>
+      <description>定时任务：
  ( ) 字节跳动前端开发实习生-抖音支付职位面试  dur: 5 月 18 日 17:00   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00    每日任务：
  ( ) 每日一题打卡截图发群  每周任务：</description>
-</item>
-<item>
-<title>研究 Google Ads &amp; 备考马原</title>
-<link>http://ccviolett.github.io/todo/220515/</link>
-<pubDate>Sun, 15 May 2022 09:18:15 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220515/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>研究 Google Ads &amp; 备考马原</title>
+      <link>http://ccviolett.github.io/todo/220515/</link>
+      <pubDate>Sun, 15 May 2022 09:18:15 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220515/</guid>
+      <description>定时任务：
  ( ) 字节跳动前端开发实习生-抖音支付职位面试  dur: 5 月 18 日 17:00   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00    每日任务：
  ( ) 每日一题打卡截图发群  每周任务：</description>
-</item>
-<item>
-<title>收到的赞助</title>
-<link>http://ccviolett.github.io/support/</link>
-<pubDate>Sun, 15 May 2022 09:17:33 +0800</pubDate>
-<guid>http://ccviolett.github.io/support/</guid>
-<description>   时间 赞助者 金额 备注     2022 年 05 月 15 日 09:10:07 *鑫 5 元 谢谢分享，希望以后创作出更多的内容    </description>
-</item>
-<item>
-<title>备考 C++ &amp; 加评论和打赏</title>
-<link>http://ccviolett.github.io/todo/220514/</link>
-<pubDate>Sat, 14 May 2022 17:51:27 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220514/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>收到的赞助</title>
+      <link>http://ccviolett.github.io/support/</link>
+      <pubDate>Sun, 15 May 2022 09:17:33 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/support/</guid>
+      <description>   时间 赞助者 金额 备注     2022 年 05 月 15 日 09:10:07 *鑫 5 元 谢谢分享，希望以后创作出更多的内容    </description>
+    </item>
+    
+    <item>
+      <title>备考 C&#43;&#43; &amp; 加评论和打赏</title>
+      <link>http://ccviolett.github.io/todo/220514/</link>
+      <pubDate>Sat, 14 May 2022 17:51:27 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220514/</guid>
+      <description>定时任务：
  ( ) 马克思原理考试  dur: 5 月 15 日 18:55 - 21:00   ( ) 字节跳动前端开发实习生-抖音支付职位面试  dur: 5 月 18 日 17:00   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00    每日任务：</description>
-</item>
-<item>
-<title>健身房初探 &amp; 刷课</title>
-<link>http://ccviolett.github.io/todo/220513/</link>
-<pubDate>Fri, 13 May 2022 09:09:09 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220513/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>健身房初探 &amp; 刷课</title>
+      <link>http://ccviolett.github.io/todo/220513/</link>
+      <pubDate>Fri, 13 May 2022 09:09:09 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220513/</guid>
+      <description>定时任务：
  ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 马克思原理考试  dur: 5 月 15 日 18:55 - 21:00   ( ) 字节跳动前端开发实习生-抖音支付职位面试  dur: 5 月 18 日 17:00   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00    每日任务：</description>
-</item>
-<item>
-<title>整理素材 &amp; 备考 C++</title>
-<link>http://ccviolett.github.io/todo/220512/</link>
-<pubDate>Thu, 12 May 2022 10:14:47 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220512/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>整理素材 &amp; 备考 C&#43;&#43;</title>
+      <link>http://ccviolett.github.io/todo/220512/</link>
+      <pubDate>Thu, 12 May 2022 10:14:47 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220512/</guid>
+      <description>定时任务：
  ( ) 牛客挑战赛60  dur: 5 月 13 日 19:00 - 22:00   ( ) Google Code Jam 2022 题目讲解  dur: 5 月 14 日   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 马克思原理考试  dur: 5 月 15 日 18:55 - 21:00   ( ) 字节跳动前端开发实习生-抖音支付职位面试  dur: 5 月 18 日 17:00   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00    每日任务：</description>
-</item>
-<item>
-<title>完成 KEEP 单车挑战</title>
-<link>http://ccviolett.github.io/todo/220511/</link>
-<pubDate>Wed, 11 May 2022 20:24:11 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220511/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>完成 KEEP 单车挑战</title>
+      <link>http://ccviolett.github.io/todo/220511/</link>
+      <pubDate>Wed, 11 May 2022 20:24:11 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220511/</guid>
+      <description>定时任务：
  ( ) 牛客挑战赛60  dur: 5 月 13 日 19:00 - 22:00   ( ) Google Code Jam 2022 题目讲解  dur: 5 月 14 日   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 马克思原理考试  dur: 5 月 15 日 18:55 - 21:00   ( ) 字节跳动前端开发实习生-抖音支付职位面试  dur: 5 月 18 日 17:00   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00    每日任务：</description>
-</item>
-<item>
-<title>做玲珑骰子</title>
-<link>http://ccviolett.github.io/todo/220510/</link>
-<pubDate>Tue, 10 May 2022 11:10:49 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220510/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>做玲珑骰子</title>
+      <link>http://ccviolett.github.io/todo/220510/</link>
+      <pubDate>Tue, 10 May 2022 11:10:49 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220510/</guid>
+      <description>定时任务：
  ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 马克思原理考试  dur: 5 月 15 日 18:55 - 21:00   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接   ( ) ACM 俱乐部面试  dur: 6 月 8 日 19:00 - 21:00    每日任务：</description>
-</item>
-<item>
-<title>什么都没做的一天</title>
-<link>http://ccviolett.github.io/todo/220509/</link>
-<pubDate>Mon, 09 May 2022 16:37:09 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220509/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>什么都没做的一天</title>
+      <link>http://ccviolett.github.io/todo/220509/</link>
+      <pubDate>Mon, 09 May 2022 16:37:09 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220509/</guid>
+      <description>定时任务：
  ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 马克思原理考试  dur: 5 月 15 日 18:55 - 21:00   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：</description>
-</item>
-<item>
-<title>做高数作业的一天</title>
-<link>http://ccviolett.github.io/todo/220508/</link>
-<pubDate>Sun, 08 May 2022 09:33:03 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220508/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>做高数作业的一天</title>
+      <link>http://ccviolett.github.io/todo/220508/</link>
+      <pubDate>Sun, 08 May 2022 09:33:03 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220508/</guid>
+      <description>定时任务：
  ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 马克思原理考试  dur: 5 月 15 日 18:55 - 21:00   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：</description>
-</item>
-<item>
-<title>岗位饱和笔试被刷 &amp; 拍祝寿视频</title>
-<link>http://ccviolett.github.io/todo/220507/</link>
-<pubDate>Sat, 07 May 2022 21:02:32 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220507/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>岗位饱和笔试被刷 &amp; 拍祝寿视频</title>
+      <link>http://ccviolett.github.io/todo/220507/</link>
+      <pubDate>Sat, 07 May 2022 21:02:32 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220507/</guid>
+      <description>定时任务：
  ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
  (x) 扇贝英语单词  每周任务：
  ( ) 工程实训周报  ddl: 5 月 8 日 update: mon   (v) 青年大学习  ddl: 5 月 8 日 update: mon    重要任务：</description>
-</item>
-<item>
-<title>Go 语言之旅中的练习</title>
-<link>http://ccviolett.github.io/posts/51-goexercise/</link>
-<pubDate>Fri, 06 May 2022 16:18:24 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/51-goexercise/</guid>
-<description>go 官方的很好的入门教程：Go 语言之旅
+    </item>
+    
+    <item>
+      <title>Go 语言之旅中的练习</title>
+      <link>http://ccviolett.github.io/posts/51-goexercise/</link>
+      <pubDate>Fri, 06 May 2022 16:18:24 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/51-goexercise/</guid>
+      <description>go 官方的很好的入门教程：Go 语言之旅
 这里是我做的所有的练习
-循环与函数    package main import ( &amp;#34;fmt&amp;#34; &amp;#34;math&amp;#34; ) func Sqrt(x float64) float64 { z := float64(1) for i := 1; i &amp;lt;= 10; i++ { change := (z * z - x) / (2 * z) if math.Abs(change) &amp;lt; 1e-13 { break } z -= change } return z } func main() { fmt.Println(Sqrt(2)) fmt.Println(math.Sqrt(2)) } 切片    package main import &amp;#34;golang.</description>
-</item>
-<item>
-<title>学完 Go 开肝 Lab</title>
-<link>http://ccviolett.github.io/todo/220506/</link>
-<pubDate>Fri, 06 May 2022 16:06:45 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220506/</guid>
-<description>定时任务：
+循环与函数    package main  import (  &amp;#34;fmt&amp;#34;  &amp;#34;math&amp;#34; )  func Sqrt(x float64) float64 {  z := float64(1)  for i := 1; i &amp;lt;= 10; i++ {  change := (z * z - x) / (2 * z)  if math.Abs(change) &amp;lt; 1e-13 {  break  }  z -= change  }  return z }  func main() {  fmt.</description>
+    </item>
+    
+    <item>
+      <title>学完 Go 开肝 Lab</title>
+      <link>http://ccviolett.github.io/todo/220506/</link>
+      <pubDate>Fri, 06 May 2022 16:06:45 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220506/</guid>
+      <description>定时任务：
  ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
  ( ) 扇贝英语单词  每周任务：</description>
-</item>
-<item>
-<title>Linux 打印机配置 &amp; 学 Go 的一天</title>
-<link>http://ccviolett.github.io/todo/220505/</link>
-<pubDate>Thu, 05 May 2022 16:38:39 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220505/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>Linux 打印机配置 &amp; 学 Go 的一天</title>
+      <link>http://ccviolett.github.io/todo/220505/</link>
+      <pubDate>Thu, 05 May 2022 16:38:39 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220505/</guid>
+      <description>定时任务：
  ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
  (v) 扇贝英语单词  每周任务：</description>
-</item>
-<item>
-<title>开发浏览器插件的一天</title>
-<link>http://ccviolett.github.io/todo/220504/</link>
-<pubDate>Wed, 04 May 2022 17:10:09 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220504/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>开发浏览器插件的一天</title>
+      <link>http://ccviolett.github.io/todo/220504/</link>
+      <pubDate>Wed, 04 May 2022 17:10:09 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220504/</guid>
+      <description>定时任务：
  ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
  (v) 扇贝英语单词  每周任务：</description>
-</item>
-<item>
-<title>学习如何写 Chrome 插件</title>
-<link>http://ccviolett.github.io/posts/50-writechromeextension/</link>
-<pubDate>Tue, 03 May 2022 16:40:12 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/50-writechromeextension/</guid>
-<description>教程    为了完成稀土掘金编程挑战赛
+    </item>
+    
+    <item>
+      <title>学习如何写 Chrome 插件</title>
+      <link>http://ccviolett.github.io/posts/50-writechromeextension/</link>
+      <pubDate>Tue, 03 May 2022 16:40:12 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/50-writechromeextension/</guid>
+      <description>教程    为了完成稀土掘金编程挑战赛
 首先对插件有个简单的印象 10分钟入门chrome(谷歌)浏览器插件开发，但是完全按照这个来并不能写出一个能运行的插件，因为其并没有配置 browser_action。
 大概知道插件的概念后，结合 手把手教你开发chrome扩展 完成自己的第一个插件。
 我们发现上述插件都是在 MV2（Manifest V2) 下开发的，而目前 Google 正在全力推行 MV3，我们可以通过这篇文章Chrome Manifest V3 - 披着羊皮的狼？大概了解一切情况。
@@ -221,23 +359,27 @@ PC 端的交互要远复杂于移动端
 javascript heredoc多行字符串    参考资料：js与多行字符串
 巧妙利用了 function 的 toString 方法，转为字符串后有换行符 \n
 缺点在于不能使用压缩器与不能插入 js 逻辑
-function heredoc(fn) { return fn.</description>
-</item>
-<item>
-<title>换回 Linux &amp; 学习操作系统</title>
-<link>http://ccviolett.github.io/todo/220503/</link>
-<pubDate>Tue, 03 May 2022 08:51:55 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220503/</guid>
-<description>定时任务：
+function heredoc(fn) {  return fn.</description>
+    </item>
+    
+    <item>
+      <title>换回 Linux &amp; 学习操作系统</title>
+      <link>http://ccviolett.github.io/todo/220503/</link>
+      <pubDate>Tue, 03 May 2022 08:51:55 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220503/</guid>
+      <description>定时任务：
  ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
  (v) 扇贝英语单词  每周任务：</description>
-</item>
-<item>
-<title>C++ 后端工程师的养成</title>
-<link>http://ccviolett.github.io/posts/49-cppbackendlearning/</link>
-<pubDate>Mon, 02 May 2022 14:38:34 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/49-cppbackendlearning/</guid>
-<description>我们以智臾科技 C++ 后端开发实习生的 JD 为标准，来培养一个后端工程师。
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 后端工程师的养成</title>
+      <link>http://ccviolett.github.io/posts/49-cppbackendlearning/</link>
+      <pubDate>Mon, 02 May 2022 14:38:34 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/49-cppbackendlearning/</guid>
+      <description>我们以智臾科技 C++ 后端开发实习生的 JD 为标准，来培养一个后端工程师。
 综述    岗位要求：
  985/211 本科及以上学历优先，计算机、软件工程或相关专业； 深入理解操作系统的文件管理、内存管理、进程/线程机制、网络协议等，能利用系统工具诊断死锁和内存泄漏等问题、分析性能瓶颈； 具备扎实的数据结构和算法基础。对排序、哈希、树、队列等基础的数据结构和算法有深入的理解，能根据特定的应用场景进行改造和优化； 熟悉C++编程，有模板、STL、多线程、网络编程方面的经验，熟悉Linux环境下的C++编译、链接和调试； 熟练阅读英文计算机文献和技术文档； 强烈的上进心和求知欲；优秀的发现问题，分析问题和解决问题的能力；热衷于追求技术极致与创新； 对数据库存储引擎、计算机编译原理和分布式计算中的一项或多项有经验者优先考虑。  加分项：
  学习过MIT 6.824, 6.828/6.S081,CMU 15-445/15-721等相关课程   【计算机科学速成课】[40集全/精校] - Crash Course Computer Science  学历要求    这个只能靠你的高考和大学的转专业了。
@@ -247,272 +389,332 @@ function heredoc(fn) { return fn.</description>
   最具影响力的论文：SIGOPS Hall-of-Fame Awards
   分层结构、微内核、外核（libOS）、虚拟机
   MIT: xv6 和 JOS</description>
-</item>
-<item>
-<title>写 C++ 作业 &amp; 跳绳 4000 个</title>
-<link>http://ccviolett.github.io/todo/220502/</link>
-<pubDate>Mon, 02 May 2022 08:05:25 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220502/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>写 C&#43;&#43; 作业 &amp; 跳绳 4000 个</title>
+      <link>http://ccviolett.github.io/todo/220502/</link>
+      <pubDate>Mon, 02 May 2022 08:05:25 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220502/</guid>
+      <description>定时任务：
  ( ) 查看稀土掘金是否中奖  dur: 5 月 5 日 17:00   ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30   ( ) 形式与政策考试  dur: 5 月 24 日 16:15 - 18:05 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
  (v) 扇贝英语单词  每周任务：</description>
-</item>
-<item>
-<title>去动物园</title>
-<link>http://ccviolett.github.io/todo/220501/</link>
-<pubDate>Sun, 01 May 2022 08:30:51 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220501/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>去动物园</title>
+      <link>http://ccviolett.github.io/todo/220501/</link>
+      <pubDate>Sun, 01 May 2022 08:30:51 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220501/</guid>
+      <description>定时任务：
  ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
  (v) 扇贝英语单词  每周任务：
  (v) 工程实训周报  ddl: 5 月 1 日 update: mon   (v) 青年大学习  ddl: 5 月 1 日 update: mon    重要任务：</description>
-</item>
-<item>
-<title>做笔试题 &amp; 放松</title>
-<link>http://ccviolett.github.io/todo/220430/</link>
-<pubDate>Sat, 30 Apr 2022 12:35:50 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220430/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>做笔试题 &amp; 放松</title>
+      <link>http://ccviolett.github.io/todo/220430/</link>
+      <pubDate>Sat, 30 Apr 2022 12:35:50 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220430/</guid>
+      <description>定时任务：
  ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
  (v) 扇贝英语单词  每周任务：
  ( ) 工程实训周报  ddl: 5 月 1 日 update: mon   (v) 青年大学习  ddl: 5 月 1 日 update: mon    重要任务：</description>
-</item>
-<item>
-<title>物理考试 &amp; 做笔试题</title>
-<link>http://ccviolett.github.io/todo/220429/</link>
-<pubDate>Fri, 29 Apr 2022 09:05:05 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220429/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>物理考试 &amp; 做笔试题</title>
+      <link>http://ccviolett.github.io/todo/220429/</link>
+      <pubDate>Fri, 29 Apr 2022 09:05:05 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220429/</guid>
+      <description>定时任务：
  ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试   ( ) Google Kick Start Round C 2022  dur: 5 月 22 日 19:00 - 22:00 desc: 链接    每日任务：
  (v) 扇贝英语单词  每周任务：
  ( ) 工程实训周报  ddl: 5 月 1 日 update: mon   (v) 青年大学习  ddl: 5 月 1 日 update: mon    重要任务：</description>
-</item>
-<item>
-<title>复习物理 &amp; 第一次接到 hr 电话</title>
-<link>http://ccviolett.github.io/todo/220428/</link>
-<pubDate>Thu, 28 Apr 2022 08:27:33 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220428/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>复习物理 &amp; 第一次接到 hr 电话</title>
+      <link>http://ccviolett.github.io/todo/220428/</link>
+      <pubDate>Thu, 28 Apr 2022 08:27:33 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220428/</guid>
+      <description>定时任务：
  ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：
  ( ) 扇贝英语单词  每周任务：
  ( ) 工程实训周报  ddl: 4 月 24 日 update: mon   (v) 青年大学习  ddl: 4 月 24 日 update: mon    重要任务：</description>
-</item>
-<item>
-<title>投递简历 &amp; 拿到讲课大订单</title>
-<link>http://ccviolett.github.io/todo/220427/</link>
-<pubDate>Wed, 27 Apr 2022 07:22:51 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220427/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>投递简历 &amp; 拿到讲课大订单</title>
+      <link>http://ccviolett.github.io/todo/220427/</link>
+      <pubDate>Wed, 27 Apr 2022 07:22:51 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220427/</guid>
+      <description>定时任务：
  ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：
  (v) 扇贝英语单词  每周任务：
  ( ) 工程实训周报  ddl: 4 月 24 日 update: mon   (v) 青年大学习  ddl: 4 月 24 日 update: mon    重要任务：</description>
-</item>
-<item>
-<title>1688 分销 &amp; C++ 小组讲解视频</title>
-<link>http://ccviolett.github.io/todo/220426/</link>
-<pubDate>Tue, 26 Apr 2022 16:55:40 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220426/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>1688 分销 &amp; C&#43;&#43; 小组讲解视频</title>
+      <link>http://ccviolett.github.io/todo/220426/</link>
+      <pubDate>Tue, 26 Apr 2022 16:55:40 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220426/</guid>
+      <description>定时任务：
  ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：
  (v) 扇贝英语单词  每周任务：
  ( ) 工程实训周报  ddl: 4 月 24 日 update: mon   ( ) 青年大学习  ddl: 4 月 24 日 update: mon    重要任务：</description>
-</item>
-<item>
-<title>复习大物 &amp; 看《猫鼠游戏》</title>
-<link>http://ccviolett.github.io/todo/220425/</link>
-<pubDate>Mon, 25 Apr 2022 08:44:13 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220425/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>复习大物 &amp; 看《猫鼠游戏》</title>
+      <link>http://ccviolett.github.io/todo/220425/</link>
+      <pubDate>Mon, 25 Apr 2022 08:44:13 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220425/</guid>
+      <description>定时任务：
  ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：
  ( ) 扇贝英语单词  每周任务：
  ( ) 工程实训周报  ddl: 4 月 24 日 update: mon   ( ) 青年大学习  ddl: 4 月 24 日 update: mon    重要任务：</description>
-</item>
-<item>
-<title>暴肝计网链路层</title>
-<link>http://ccviolett.github.io/todo/220424/</link>
-<pubDate>Sun, 24 Apr 2022 11:50:14 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220424/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>暴肝计网链路层</title>
+      <link>http://ccviolett.github.io/todo/220424/</link>
+      <pubDate>Sun, 24 Apr 2022 11:50:14 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220424/</guid>
+      <description>定时任务：
  ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：
  (v) 扇贝英语单词  每周任务：
  (v) 工程实训周报  ddl: 4 月 24 日 update: mon   (v) 青年大学习  ddl: 4 月 24 日 update: mon    重要任务：</description>
-</item>
-<item>
-<title>天梯赛划水打铜&amp;物理模拟测试</title>
-<link>http://ccviolett.github.io/todo/220423/</link>
-<pubDate>Sat, 23 Apr 2022 23:36:46 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220423/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>天梯赛划水打铜&amp;物理模拟测试</title>
+      <link>http://ccviolett.github.io/todo/220423/</link>
+      <pubDate>Sat, 23 Apr 2022 23:36:46 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220423/</guid>
+      <description>定时任务：
  ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：
  ( ) 扇贝英语单词  每周任务：
  ( ) 工程实训周报  ddl: 4 月 24 日 update: mon   (v) 青年大学习  ddl: 4 月 24 日 update: mon    重要任务：</description>
-</item>
-<item>
-<title>计算机网络 | Part5 应用层(Application Layer)</title>
-<link>http://ccviolett.github.io/posts/48-teamwebnetwork5/</link>
-<pubDate>Sat, 23 Apr 2022 10:31:24 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/48-teamwebnetwork5/</guid>
-<description/>
-</item>
-<item>
-<title>计算机网络 | Part5 传输层(Transport Layer)</title>
-<link>http://ccviolett.github.io/posts/47-teamwebnetwork4/</link>
-<pubDate>Sat, 23 Apr 2022 10:31:06 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/47-teamwebnetwork4/</guid>
-<description/>
-</item>
-<item>
-<title>计算机网络 | Part3 网络层(Network Layer)</title>
-<link>http://ccviolett.github.io/posts/46-teamwebnetwork3/</link>
-<pubDate>Sat, 23 Apr 2022 10:31:01 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/46-teamwebnetwork3/</guid>
-<description>一、概述 二、数据交换方式  （一）电路交换 （二）报文交换 （三）分组交换   三、路由算法和路由协议  （一） RIP 协议和距离向量算法 （二）OSPF 协议和链路状态算法 （三）BGP 协议 （四）三种路由协议的比较   四、IP 数据报 五、IP  （一）ipv4 地址 （二）网络地址转接 NAT （三）子网划分和子网掩码 （四）无分类编制 CIDR （五）DHCP 协议 （六）ICMP 协议   六、IPV6 七、IP 组播（多播）  （一）IGMP 协议 （二）路由选择协议   八、移动 IP 九、网络层设备   一、概述    MAC 地址作为设备的唯一的身份编址，技术上可以实现任意设备之间的通信，但是以太网采用广播方式发送数据包，效率低，且要求两台计算机在同一子网络中。
+    </item>
+    
+    <item>
+      <title>计算机网络 | Part5 应用层(Application Layer)</title>
+      <link>http://ccviolett.github.io/posts/48-teamwebnetwork5/</link>
+      <pubDate>Sat, 23 Apr 2022 10:31:24 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/48-teamwebnetwork5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>计算机网络 | Part5 传输层(Transport Layer)</title>
+      <link>http://ccviolett.github.io/posts/47-teamwebnetwork4/</link>
+      <pubDate>Sat, 23 Apr 2022 10:31:06 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/47-teamwebnetwork4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>计算机网络 | Part3 网络层(Network Layer)</title>
+      <link>http://ccviolett.github.io/posts/46-teamwebnetwork3/</link>
+      <pubDate>Sat, 23 Apr 2022 10:31:01 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/46-teamwebnetwork3/</guid>
+      <description>一、概述 二、数据交换方式  （一）电路交换 （二）报文交换 （三）分组交换   三、路由算法和路由协议  （一） RIP 协议和距离向量算法 （二）OSPF 协议和链路状态算法 （三）BGP 协议 （四）三种路由协议的比较   四、IP 数据报 五、IP  （一）ipv4 地址 （二）网络地址转接 NAT （三）子网划分和子网掩码 （四）无分类编制 CIDR （五）DHCP 协议 （六）ICMP 协议   六、IPV6 七、IP 组播（多播）  （一）IGMP 协议 （二）路由选择协议   八、移动 IP 九、网络层设备   一、概述    MAC 地址作为设备的唯一的身份编址，技术上可以实现任意设备之间的通信，但是以太网采用广播方式发送数据包，效率低，且要求两台计算机在同一子网络中。
 因此我们通过“网络层”引入一套新的地址，来区分哪些 MAC 地址属于同一个子网络。
 于是每台设备便有了两个独立的地址，一个是绑定在网卡上不变的 MAC 地址，一个是由管理员分配可变的网络地址。
 二、数据交换方式    通过交换设备互联进行数据交换，而不是节点之间互联，以减少成本。
 （一）电路交换    （二）报文交换    （三）分组交换    数据报方式与虚电路方式    三、路由算法和路由协议    路由通过路由算法知道收到报文后下一步该怎么走。</description>
-</item>
-<item>
-<title>计算机网络 | Part2 数据链路层(Data Link Layer)</title>
-<link>http://ccviolett.github.io/posts/45-teamwebnetwork2/</link>
-<pubDate>Sat, 23 Apr 2022 10:30:51 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/45-teamwebnetwork2/</guid>
-<description>一、基础概念  （零）链路层编码 （一）MAC 地址 （二）ARP 协议 （三）广播   二、传输方式  （一）封装成帧 （二）透明传输   三、差错控制  （一）检错编码 （二）纠错编码-海明码   四、流量控制与可靠传输  （零）信道利用率 （一）停止等待协议(Stop-and-Wait) （二）后退 N 帧协议(GBN) （三）选择重传协议(SR)   五、介质访问控制技术  （一）信道划分协议 （二）随机接入协议 （三）轮询访问与介质访问控制   六、局域网  （一）以太网 （二）无线局域网   七、广域网  （一）PPP 协议（Point-to-Point Protocol） （二）HDLC 协议（High-Level Data Link Control）   八、链路层设备  （一）网桥 （二）交换机 （三）冲突域和广播域     一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。</description>
-</item>
-<item>
-<title>告别机械</title>
-<link>http://ccviolett.github.io/todo/220422/</link>
-<pubDate>Fri, 22 Apr 2022 17:02:35 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220422/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>计算机网络 | Part2 数据链路层(Data Link Layer)</title>
+      <link>http://ccviolett.github.io/posts/45-teamwebnetwork2/</link>
+      <pubDate>Sat, 23 Apr 2022 10:30:51 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/45-teamwebnetwork2/</guid>
+      <description>一、基础概念  （零）链路层编码 （一）MAC 地址 （二）ARP 协议 （三）广播   二、传输方式  （一）封装成帧 （二）透明传输   三、差错控制  （一）检错编码 （二）纠错编码-海明码   四、流量控制与可靠传输  （零）信道利用率 （一）停止等待协议(Stop-and-Wait) （二）后退 N 帧协议(GBN) （三）选择重传协议(SR)   五、介质访问控制技术  （一）信道划分协议 （二）随机接入协议 （三）轮询访问与介质访问控制   六、局域网  （一）以太网 （二）无线局域网   七、广域网  （一）PPP 协议（Point-to-Point Protocol） （二）HDLC 协议（High-Level Data Link Control）   八、链路层设备  （一）网桥 （二）交换机 （三）冲突域和广播域     一、基础概念    数据链路层在物理层提供服务的基础上像网络层提供服务。</description>
+    </item>
+    
+    <item>
+      <title>告别机械</title>
+      <link>http://ccviolett.github.io/todo/220422/</link>
+      <pubDate>Fri, 22 Apr 2022 17:02:35 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220422/</guid>
+      <description>定时任务：
  ( ) 物理模拟测试  dur: 4 月 23 日 19:00 - 20:00   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 团队程序设计天梯赛  dur: 4 月 23 日 13:30 - 16:30 desc: 电脑桌面上尽可能干净   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
-</item>
-<item>
-<title>复习机械制图第二天</title>
-<link>http://ccviolett.github.io/todo/220421/</link>
-<pubDate>Thu, 21 Apr 2022 09:50:16 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220421/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>复习机械制图第二天</title>
+      <link>http://ccviolett.github.io/todo/220421/</link>
+      <pubDate>Thu, 21 Apr 2022 09:50:16 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220421/</guid>
+      <description>定时任务：
  ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 团队程序设计天梯赛  dur: 4 月 23 日 13:30 - 16:30 desc: 电脑桌面上尽可能干净   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
-</item>
-<item>
-<title>复习机械制图第一天</title>
-<link>http://ccviolett.github.io/todo/220420/</link>
-<pubDate>Wed, 20 Apr 2022 08:23:15 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220420/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>复习机械制图第一天</title>
+      <link>http://ccviolett.github.io/todo/220420/</link>
+      <pubDate>Wed, 20 Apr 2022 08:23:15 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220420/</guid>
+      <description>定时任务：
  ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 团队程序设计天梯赛  dur: 4 月 23 日 13:30 - 16:30 desc: 电脑桌面上尽可能干净   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
-</item>
-<item>
-<title>入手 pocket2 的一天</title>
-<link>http://ccviolett.github.io/todo/220419/</link>
-<pubDate>Tue, 19 Apr 2022 10:36:10 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220419/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>入手 pocket2 的一天</title>
+      <link>http://ccviolett.github.io/todo/220419/</link>
+      <pubDate>Tue, 19 Apr 2022 10:36:10 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220419/</guid>
+      <description>定时任务：
  ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 团队程序设计天梯赛  dur: 4 月 23 日 13:30 - 16:30 desc: 电脑桌面上尽可能干净   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
-</item>
-<item>
-<title>转专业不是一件容易事&amp;肝近代史作业</title>
-<link>http://ccviolett.github.io/todo/220418/</link>
-<pubDate>Mon, 18 Apr 2022 11:36:49 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220418/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>转专业不是一件容易事&amp;肝近代史作业</title>
+      <link>http://ccviolett.github.io/todo/220418/</link>
+      <pubDate>Mon, 18 Apr 2022 11:36:49 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220418/</guid>
+      <description>定时任务：
  ( ) 机械制图考试考前培训  dur: 4 月 19 日 09:00 - 10:00   ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 团队程序设计天梯赛  dur: 4 月 23 日 13:30 - 16:30 desc: 电脑桌面上尽可能干净   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
-</item>
-<item>
-<title>切掉偏题离金牌很近多多少少有些遗憾</title>
-<link>http://ccviolett.github.io/todo/220417/</link>
-<pubDate>Sun, 17 Apr 2022 09:31:18 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220417/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>切掉偏题离金牌很近多多少少有些遗憾</title>
+      <link>http://ccviolett.github.io/todo/220417/</link>
+      <pubDate>Sun, 17 Apr 2022 09:31:18 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220417/</guid>
+      <description>定时任务：
  ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 团队程序设计天梯赛  dur: 4 月 23 日 13:30 - 16:30 desc: 电脑桌面上尽可能干净   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
-</item>
-<item>
-<title>准备 ICPC 昆明站</title>
-<link>http://ccviolett.github.io/todo/220416/</link>
-<pubDate>Sat, 16 Apr 2022 11:48:12 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220416/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>准备 ICPC 昆明站</title>
+      <link>http://ccviolett.github.io/todo/220416/</link>
+      <pubDate>Sat, 16 Apr 2022 11:48:12 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220416/</guid>
+      <description>定时任务：
  ( ) ICPC2021 昆明站正式赛  dur: 4 月 17 日 11:30 - 16:30   ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 团队程序设计天梯赛  dur: 4 月 23 日 13:30 - 16:30 desc: 电脑桌面上尽可能干净   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
-</item>
-<item>
-<title>LuoguP3373 【模板】线段树 2</title>
-<link>http://ccviolett.github.io/solution/luogup3373/</link>
-<pubDate>Fri, 15 Apr 2022 23:04:36 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/luogup3373/</guid>
-<description>一、题意    题目链接：Problem
+    </item>
+    
+    <item>
+      <title>LuoguP3373 【模板】线段树 2</title>
+      <link>http://ccviolett.github.io/solution/luogup3373/</link>
+      <pubDate>Fri, 15 Apr 2022 23:04:36 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup3373/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    三、代码    通过链接：Submission
-#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long var; const int N = 5e5 + 100; const int MOD = 571373; var read() { var s = 0, a = 0, c = getchar(); while (!isdigit(c)) s |= c == &amp;#39;-&amp;#39;, c = getchar(); while (isdigit(c)) a = a * 10 + c - &amp;#39;0&amp;#39;, c = getchar(); return s ?</description>
-</item>
-<item>
-<title>LuoguP3379 【模板】最近公共祖先（LCA）</title>
-<link>http://ccviolett.github.io/solution/luogup3379/</link>
-<pubDate>Fri, 15 Apr 2022 23:03:48 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/luogup3379/</guid>
-<description>一、题意    题目链接：Problem
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std;  typedef long long var;  const int N = 5e5 + 100; const int MOD = 571373;  var read() { 	var s = 0, a = 0, c = getchar(); 	while (!isdigit(c)) s |= c == &amp;#39;-&amp;#39;, c = getchar(); 	while (isdigit(c)) a = a * 10 + c - &amp;#39;0&amp;#39;, c = getchar(); 	return s ?</description>
+    </item>
+    
+    <item>
+      <title>LuoguP3379 【模板】最近公共祖先（LCA）</title>
+      <link>http://ccviolett.github.io/solution/luogup3379/</link>
+      <pubDate>Fri, 15 Apr 2022 23:03:48 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup3379/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    三、代码    通过链接：Submission
-#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long var; const int N = 5e5 + 10; const int M = 5e5 + 10; var read() { var s = 0, a = 0, c = getchar(); while (!isdigit(c)) s |= c == &amp;#39;-&amp;#39;, c = getchar(); while (isdigit(c)) a = a * 10 + c - &amp;#39;0&amp;#39;, c = getchar(); return s ?</description>
-</item>
-<item>
-<title>LuoguP3382 【模板】三分法</title>
-<link>http://ccviolett.github.io/solution/luogup3382/</link>
-<pubDate>Fri, 15 Apr 2022 23:02:20 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/luogup3382/</guid>
-<description>一、题意    题目链接：Problem
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std;  typedef long long var;  const int N = 5e5 + 10; const int M = 5e5 + 10;  var read() { 	var s = 0, a = 0, c = getchar(); 	while (!isdigit(c)) s |= c == &amp;#39;-&amp;#39;, c = getchar(); 	while (isdigit(c)) a = a * 10 + c - &amp;#39;0&amp;#39;, c = getchar(); 	return s ?</description>
+    </item>
+    
+    <item>
+      <title>LuoguP3382 【模板】三分法</title>
+      <link>http://ccviolett.github.io/solution/luogup3382/</link>
+      <pubDate>Fri, 15 Apr 2022 23:02:20 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup3382/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    三、代码    通过链接：Submission
-#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long var; typedef long double let; const int N = 20; const let eps = 1e-8; int n; double a[N]; let Calc(let x) { let res = 0, tx = 1; for (int i = n; i &amp;gt;= 0; --i) { res += tx * a[i]; tx *= x; } return res; } int main() { let l, r; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; l &amp;gt;&amp;gt; r; for (int i = 0; i &amp;lt;= n; ++i) cin &amp;gt;&amp;gt; a[i]; while (l + eps &amp;lt; r) { let lp = l + (r - l) / 3, rp = r - (r - l) / 3; let lv = Calc(lp), rv = Calc(rp); if (lv &amp;lt; rv) l = lp; else r = rp; } cout &amp;lt;&amp;lt; setprecision(5) &amp;lt;&amp;lt; fixed &amp;lt;&amp;lt; l &amp;lt;&amp;lt; endl; return 0; } </description>
-</item>
-<item>
-<title>LuoguP3370 【模板】字符串哈希</title>
-<link>http://ccviolett.github.io/solution/luogup3370/</link>
-<pubDate>Fri, 15 Apr 2022 23:01:13 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/luogup3370/</guid>
-<description>一、题意    题目链接：Problem
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std;  typedef long long var; typedef long double let;  const int N = 20; const let eps = 1e-8;  int n; double a[N];  let Calc(let x) { 	let res = 0, tx = 1; 	for (int i = n; i &amp;gt;= 0; --i) { 	res += tx * a[i]; 	tx *= x; 	} 	return res; }  int main() { 	let l, r; 	cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; l &amp;gt;&amp;gt; r; 	for (int i = 0; i &amp;lt;= n; ++i) cin &amp;gt;&amp;gt; a[i]; 	while (l + eps &amp;lt; r) { 	let lp = l + (r - l) / 3, 	rp = r - (r - l) / 3; 	let lv = Calc(lp), rv = Calc(rp); 	if (lv &amp;lt; rv) l = lp; 	else r = rp; 	} 	cout &amp;lt;&amp;lt; setprecision(5) &amp;lt;&amp;lt; fixed &amp;lt;&amp;lt; l &amp;lt;&amp;lt; endl; 	return 0; } </description>
+    </item>
+    
+    <item>
+      <title>LuoguP3370 【模板】字符串哈希</title>
+      <link>http://ccviolett.github.io/solution/luogup3370/</link>
+      <pubDate>Fri, 15 Apr 2022 23:01:13 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup3370/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    三、代码    通过链接：Submission
-#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long var; struct SHash { const int BASE = 107; const int MOD = 1e9 + 7; var val; SHash() { val = 0; } void add(int v) { ((val *= BASE) += v) %= MOD; } }; struct DHash { const int BASE1 = 107; const int MOD1 = 1e9 + 7; const int BASE2 = 109; const int MOD2 = 1e9 + 9; var val1, val2; DHash() { val1 = 0, val2 = 0; } void add(int v) { ((val1 *= BASE1) += v) %= MOD1; ((val2 *= BASE2) += v) %= MOD2; } var val() { return val1 * MOD2 + val2; } }; const int N = 1e4 + 1; const int M = 1501; char s[M]; map&amp;lt;var, bool&amp;gt; have; int main() { int n; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); int res = 0; for (int i = 1; i &amp;lt;= n; ++i) { scanf(&amp;#34;%s&amp;#34;, s); int len = strlen(s); DHash h; for (int j = 0; j &amp;lt; len; ++j) h.</description>
-</item>
-<item>
-<title>LuoguP3366 【模板】最小生成树</title>
-<link>http://ccviolett.github.io/solution/luogup3366/</link>
-<pubDate>Fri, 15 Apr 2022 23:00:14 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/luogup3366/</guid>
-<description>一、题意    题目链接：Problem
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std;  typedef long long var;  struct SHash { 	const int BASE = 107; 	const int MOD = 1e9 + 7;  	var val; 	SHash() { 	val = 0; 	}  	void add(int v) { 	((val *= BASE) += v) %= MOD; 	} };  struct DHash { 	const int BASE1 = 107; 	const int MOD1 = 1e9 + 7; 	const int BASE2 = 109; 	const int MOD2 = 1e9 + 9;  	var val1, val2; 	DHash() { 	val1 = 0, val2 = 0; 	}  	void add(int v) { 	((val1 *= BASE1) += v) %= MOD1; 	((val2 *= BASE2) += v) %= MOD2; 	}  	var val() { 	return val1 * MOD2 + val2; 	} };  const int N = 1e4 + 1; const int M = 1501;  char s[M]; map&amp;lt;var, bool&amp;gt; have;  int main() { 	int n; 	scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); 	int res = 0; 	for (int i = 1; i &amp;lt;= n; ++i) { 	scanf(&amp;#34;%s&amp;#34;, s); 	int len = strlen(s); 	DHash h; 	for (int j = 0; j &amp;lt; len; ++j) h.</description>
+    </item>
+    
+    <item>
+      <title>LuoguP3366 【模板】最小生成树</title>
+      <link>http://ccviolett.github.io/solution/luogup3366/</link>
+      <pubDate>Fri, 15 Apr 2022 23:00:14 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup3366/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    三、代码    通过链接：Submission
-#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int N = 5e3 + 100; const int M = 2e5 + 100; struct Edge { int u, v, w; }; int n, m; int fa[N]; Edge edge[M]; int Find(int t) { if (fa[t] != t) fa[t] = Find(fa[t]); return fa[t]; } bool Check(int x, int y) { return Find(x) == Find(y); } int Link(int x, int y) { fa[Find(x)] = Find(y); } int main() { scanf(&amp;#34;%d%d&amp;#34;, &amp;amp;n, &amp;amp;m); for (int i = 1; i &amp;lt;= n; ++i) fa[i] = i; for (int i = 1; i &amp;lt;= m; ++i) { int x, y, z; scanf(&amp;#34;%d%d%d&amp;#34;, &amp;amp;x, &amp;amp;y, &amp;amp;z); edge[i] = (Edge) {x, y, z}; } sort(edge + 1, edge + m + 1, [=] (Edge a, Edge b) { return a.</description>
-</item>
-<item>
-<title>LuoguP3383 【模板】线性筛素数</title>
-<link>http://ccviolett.github.io/solution/luogup3383/</link>
-<pubDate>Fri, 15 Apr 2022 22:58:49 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/luogup3383/</guid>
-<description>一、题意    题目链接：Problem
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std;  const int N = 5e3 + 100; const int M = 2e5 + 100;  struct Edge { 	int u, v, w; };  int n, m; int fa[N]; Edge edge[M];  int Find(int t) { 	if (fa[t] != t) fa[t] = Find(fa[t]); 	return fa[t]; }  bool Check(int x, int y) { 	return Find(x) == Find(y); }  int Link(int x, int y) { 	fa[Find(x)] = Find(y); }  int main() { 	scanf(&amp;#34;%d%d&amp;#34;, &amp;amp;n, &amp;amp;m); 	for (int i = 1; i &amp;lt;= n; ++i) fa[i] = i; 	for (int i = 1; i &amp;lt;= m; ++i) { 	int x, y, z; 	scanf(&amp;#34;%d%d%d&amp;#34;, &amp;amp;x, &amp;amp;y, &amp;amp;z); 	edge[i] = (Edge) {x, y, z}; 	} 	sort(edge + 1, edge + m + 1, [=] (Edge a, Edge b) { 	return a.</description>
+    </item>
+    
+    <item>
+      <title>LuoguP3383 【模板】线性筛素数</title>
+      <link>http://ccviolett.github.io/solution/luogup3383/</link>
+      <pubDate>Fri, 15 Apr 2022 22:58:49 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup3383/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    三、代码    通过链接：Submission
-#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long var; const int N = 1e8 + 1; bool notprime[N]; int cnt, prime[N]; int main() { int n, q; scanf(&amp;#34;%d%d&amp;#34;, &amp;amp;n, &amp;amp;q); for (int i = 2; i &amp;lt;= n; ++i) { if (!notprime[i]) prime[++cnt] = i; for (int j = 1; j &amp;lt;= cnt; ++j) { if (1ll * i * prime[j] &amp;gt; n) break; notprime[i * prime[j]] = true; if (!</description>
-</item>
-<item>
-<title>LuoguP1226 【模板】快速幂||取余运算</title>
-<link>http://ccviolett.github.io/solution/luogup1226/</link>
-<pubDate>Fri, 15 Apr 2022 22:56:13 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/luogup1226/</guid>
-<description>一、题意    题目链接：Problem
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std;  typedef long long var;  const int N = 1e8 + 1;  bool notprime[N]; int cnt, prime[N];  int main() { 	int n, q; 	scanf(&amp;#34;%d%d&amp;#34;, &amp;amp;n, &amp;amp;q); 	for (int i = 2; i &amp;lt;= n; ++i) { 	if (!notprime[i]) prime[++cnt] = i;  	for (int j = 1; j &amp;lt;= cnt; ++j) { 	if (1ll * i * prime[j] &amp;gt; n) break; 	notprime[i * prime[j]] = true; 	if (!</description>
+    </item>
+    
+    <item>
+      <title>LuoguP1226 【模板】快速幂||取余运算</title>
+      <link>http://ccviolett.github.io/solution/luogup1226/</link>
+      <pubDate>Fri, 15 Apr 2022 22:56:13 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup1226/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    三、代码    通过链接：Submission
-#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long var; var qpow(var x, var y, var p) { var res = 1; while (y) { if (y &amp;amp; 1) (res *= x) %= p; (x *= x) %= p; y &amp;gt;&amp;gt;= 1; } return res; } int main() { int a, b, p; scanf(&amp;#34;%d%d%d&amp;#34;, &amp;amp;a, &amp;amp;b, &amp;amp;p); printf(&amp;#34;%d^%d mod %d=%lld\n&amp;#34;, a, b, p, qpow(a, b, p)); return 0; } </description>
-</item>
-<item>
-<title>LuoguP3367 【模板】并查集</title>
-<link>http://ccviolett.github.io/solution/luogup3367/</link>
-<pubDate>Fri, 15 Apr 2022 21:33:24 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/luogup3367/</guid>
-<description>一、题意    题目链接：Problem
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std;  typedef long long var;  var qpow(var x, var y, var p) { 	var res = 1; 	while (y) { 	if (y &amp;amp; 1) (res *= x) %= p; 	(x *= x) %= p; 	y &amp;gt;&amp;gt;= 1; 	} 	return res; }  int main() { 	int a, b, p; 	scanf(&amp;#34;%d%d%d&amp;#34;, &amp;amp;a, &amp;amp;b, &amp;amp;p); 	printf(&amp;#34;%d^%d mod %d=%lld\n&amp;#34;, a, b, p, qpow(a, b, p)); 	return 0; } </description>
+    </item>
+    
+    <item>
+      <title>LuoguP3367 【模板】并查集</title>
+      <link>http://ccviolett.github.io/solution/luogup3367/</link>
+      <pubDate>Fri, 15 Apr 2022 21:33:24 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup3367/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    三、代码    通过链接：Submission
-#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int N = 1e4 + 1; const int M = 2e5 + 1; int n, m; int fa[N]; int Find(int t) { if (t != fa[t]) fa[t] = Find(fa[t]); return fa[t]; } int Check(int x, int y) { x = Find(x), y = Find(y); return x == y; } void Link(int x, int y) { x = Find(x), y = Find(y); fa[x] = y; } int main() { scanf(&amp;#34;%d%d&amp;#34;, &amp;amp;n, &amp;amp;m); for (int i = 1; i &amp;lt;= n; ++i) fa[i] = i; for (int i = 1; i &amp;lt;= m; ++i) { int z, x, y; scanf(&amp;#34;%d%d%d&amp;#34;, &amp;amp;z, &amp;amp;x, &amp;amp;y); if (z == 1) { if (!</description>
-</item>
-<item>
-<title>计算机网络 | Part1 物理层(Physical Layer)</title>
-<link>http://ccviolett.github.io/posts/44-teamwebnetwork1/</link>
-<pubDate>Fri, 15 Apr 2022 18:14:58 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/44-teamwebnetwork1/</guid>
-<description>一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std;  const int N = 1e4 + 1; const int M = 2e5 + 1;  int n, m; int fa[N];  int Find(int t) { 	if (t != fa[t]) 	fa[t] = Find(fa[t]); 	return fa[t]; }  int Check(int x, int y) { 	x = Find(x), y = Find(y); 	return x == y; }  void Link(int x, int y) { 	x = Find(x), y = Find(y); 	fa[x] = y; }  int main() { 	scanf(&amp;#34;%d%d&amp;#34;, &amp;amp;n, &amp;amp;m); 	for (int i = 1; i &amp;lt;= n; ++i) fa[i] = i; 	for (int i = 1; i &amp;lt;= m; ++i) { 	int z, x, y; 	scanf(&amp;#34;%d%d%d&amp;#34;, &amp;amp;z, &amp;amp;x, &amp;amp;y); 	if (z == 1) { 	if (!</description>
+    </item>
+    
+    <item>
+      <title>计算机网络 | Part1 物理层(Physical Layer)</title>
+      <link>http://ccviolett.github.io/posts/44-teamwebnetwork1/</link>
+      <pubDate>Fri, 15 Apr 2022 18:14:58 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/44-teamwebnetwork1/</guid>
+      <description>一、基本概念 二、数据通信  （一）相关术语 （二）通讯方式 （三）数据传输方式 （四）奈式准则(Nyquist) （五）香农公式(Shannon) （六）编码 （七）调制   三、物理层传输介质  （一） 导向性传输介质 （二）非导向型传输介质   四、物理层设备  （一）中继器(RP repeater) （二）集线器(Hub) 5-4-3 规则     一、基本概念    物理层规定了网络的电气特性，负责传输 0 和 1 的电信号，确定与传输媒体接口有关的特性。
   机械特性：定义物理连接的特性，规定物理连接时所采用的规格、接口形状、引线数目、引脚数量和排列情况。
   电气特性：规定传输二进制位时，线路上信号的电压范围、阻抗匹配、传输速率和距离限制等。
   功能特性：指明某条线上出现的某一电平表示何种意义、接口部件的信号线的用途。
@@ -521,192 +723,230 @@ function heredoc(fn) { return fn.</description>
 信号：数据的电气、电磁表现，是数据在传输过程中的存在形式。
  数字信号：代表信息的参数取值是离散的。 模拟信号：代表信号的参数取值是连续的。  信源：产生和发送数据的源头。
 信宿：接收数据的终点。</description>
-</item>
-<item>
-<title>计算机网络 | Part0 概述</title>
-<link>http://ccviolett.github.io/posts/43-teamwebnetwork0/</link>
-<pubDate>Fri, 15 Apr 2022 15:56:31 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/43-teamwebnetwork0/</guid>
-<description>一、速率相关性能指标  1. 速率 2. 带宽 3. 吞吐量   二、时延相关指标  1. 时延 2. 时延带宽积 3. 往返时延RTT 4. 利用率   三、分层结构  1. 必要性 2. 介绍   四、参考模型  1. OSI 七层模型 2. TCP/IP 四层模型 3. 五层模型     一、速率相关性能指标    1. 速率    连接在计算机网络上的主机在数字信道上传送数据位数的速率
+    </item>
+    
+    <item>
+      <title>计算机网络 | Part0 概述</title>
+      <link>http://ccviolett.github.io/posts/43-teamwebnetwork0/</link>
+      <pubDate>Fri, 15 Apr 2022 15:56:31 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/43-teamwebnetwork0/</guid>
+      <description>一、速率相关性能指标  1. 速率 2. 带宽 3. 吞吐量   二、时延相关指标  1. 时延 2. 时延带宽积 3. 往返时延RTT 4. 利用率   三、分层结构  1. 必要性 2. 介绍   四、参考模型  1. OSI 七层模型 2. TCP/IP 四层模型 3. 五层模型     一、速率相关性能指标    1. 速率    连接在计算机网络上的主机在数字信道上传送数据位数的速率
 单位:b/s,Kb/s,Mb/s,Tb/s，如果用字节表示，则是B/s,KB/s,MB/s,TB/s，其中 1Byte=8Bit
 2. 带宽    在计算机网络中，指的是网络设备所支持的最高速度，单位同速率，是理想条件下最高速率
 3. 吞吐量    单位时间内通过某个网络的数据总量
 二、时延相关指标    1.</description>
-</item>
-<item>
-<title>结束新疆省选讲课 &amp; 打印机来咯</title>
-<link>http://ccviolett.github.io/todo/220415/</link>
-<pubDate>Fri, 15 Apr 2022 09:10:39 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220415/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>结束新疆省选讲课 &amp; 打印机来咯</title>
+      <link>http://ccviolett.github.io/todo/220415/</link>
+      <pubDate>Fri, 15 Apr 2022 09:10:39 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220415/</guid>
+      <description>定时任务：
  ( ) “力扣杯”春季编程大赛-个人赛  dur: 4 月 16 日 15:00 - 17:30   ( ) ICPC2021 昆明站热身赛  dur: 4 月 16 日 18:30 - 21:00   ( ) ICPC2021 昆明站正式赛  dur: 4 月 17 日 11:30 - 16:30   ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 团队程序设计天梯赛  dur: 4 月 23 日 13:30 - 16:30 desc: 电脑桌面上尽可能干净   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
-</item>
-<item>
-<title>初探计算机网络</title>
-<link>http://ccviolett.github.io/todo/220414/</link>
-<pubDate>Thu, 14 Apr 2022 07:38:29 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220414/</guid>
-<description>定时任务：
+    </item>
+    
+    <item>
+      <title>初探计算机网络</title>
+      <link>http://ccviolett.github.io/todo/220414/</link>
+      <pubDate>Thu, 14 Apr 2022 07:38:29 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220414/</guid>
+      <description>定时任务：
  ( ) “力扣杯”春季编程大赛-个人赛  dur: 4 月 16 日 15:00 - 17:30   ( ) ICPC2021 昆明站热身赛  dur: 4 月 16 日 18:30 - 21:00   ( ) ICPC2021 昆明站正式赛  dur: 4 月 17 日 11:30 - 16:30   ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
-</item>
-<item>
-<title>Leetcode41. 缺失的第一个正数</title>
-<link>http://ccviolett.github.io/solution/leetcode41/</link>
-<pubDate>Thu, 14 Apr 2022 00:01:07 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/leetcode41/</guid>
-<description>一、题意    题目链接：Problem
+    </item>
+    
+    <item>
+      <title>Leetcode41. 缺失的第一个正数</title>
+      <link>http://ccviolett.github.io/solution/leetcode41/</link>
+      <pubDate>Thu, 14 Apr 2022 00:01:07 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/leetcode41/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    题目限制线性时间与常数级别空间，我们需要考虑原地做法。
 有两种方式，一种是负号占位，一种是置换归位。
 负号占位是指将数组中负数都清楚之后，将每个值对应下标位置上的数取反，随后再遍历一次得到第一个未取反的数，即为最小未出现数。
 置换归位是指将数组中能够对应的值放到其值对应的下标上，排除掉无限循环的情况，通过每个元素是否等于其下标即可判断。
 三、代码    通过链接：Submission
-class Solution: def firstMissingPositive(self, nums: List[int]) -&amp;gt; int: for i in range(len(nums)): v = nums[i] while v &amp;gt; 0 and v &amp;lt;= len(nums) and (v - 1) != i and v != nums[v - 1]: nums[i] = nums[v - 1] nums[v - 1] = v v = nums[i] print(len(nums)) for i in range(len(nums)): print(nums[i], end=&amp;#34; &amp;#34;) for i in range(len(nums)): if nums[i] !</description>
-</item>
-<item>
-<title>又忘记交 C++ 实验作业</title>
-<link>http://ccviolett.github.io/todo/220413/</link>
-<pubDate>Wed, 13 Apr 2022 08:27:50 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220413/</guid>
-<description>定时任务：
+class Solution:  def firstMissingPositive(self, nums: List[int]) -&amp;gt; int:  for i in range(len(nums)):  v = nums[i]  while v &amp;gt; 0 and v &amp;lt;= len(nums) and (v - 1) != i and v != nums[v - 1]:  nums[i] = nums[v - 1]  nums[v - 1] = v  v = nums[i]   print(len(nums))  for i in range(len(nums)):  print(nums[i], end=&amp;#34; &amp;#34;)   for i in range(len(nums)):  if nums[i] !</description>
+    </item>
+    
+    <item>
+      <title>又忘记交 C&#43;&#43; 实验作业</title>
+      <link>http://ccviolett.github.io/todo/220413/</link>
+      <pubDate>Wed, 13 Apr 2022 08:27:50 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220413/</guid>
+      <description>定时任务：
  ( ) “力扣杯”春季编程大赛-个人赛  dur: 4 月 16 日 15:00 - 17:30   ( ) ICPC2021 昆明站热身赛  dur: 4 月 16 日 18:30 - 21:00   ( ) ICPC2021 昆明站正式赛  dur: 4 月 17 日 11:30 - 16:30   ( ) 机械制图考试  dur: 4 月 22 日 10:10 - 12:10   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机     ( ) C++ 考试  dur: 5 月 14 日 19:00 - 20:30 desc: 学习通平台考试    每日任务：</description>
-</item>
-<item>
-<title>LuoguP1967 [NOIP2013 提高组] 货车运输</title>
-<link>http://ccviolett.github.io/solution/luogup1967/</link>
-<pubDate>Tue, 12 Apr 2022 18:48:16 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/luogup1967/</guid>
-<description>一、题意    题目链接：Problem
+    </item>
+    
+    <item>
+      <title>LuoguP1967 [NOIP2013 提高组] 货车运输</title>
+      <link>http://ccviolett.github.io/solution/luogup1967/</link>
+      <pubDate>Tue, 12 Apr 2022 18:48:16 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup1967/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    首先是一个最大生成树，随后是一个树上路径最小值查询。
 是一个锻炼 Kruskal/Prim + 树剖/倍增 的板子。
 三、代码    通过链接：Submission
-#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; int read() { int a; scanf(&amp;#34;%d&amp;#34;, &amp;amp;a); return a; } struct Edge { int u, v, w; }; const int N = 1e5 + 100; const int M = 1e5 + 100; int n, m; Edge edge[M]; int fa[N]; int top, fi[N], ne[M &amp;lt;&amp;lt; 1], to[M &amp;lt;&amp;lt; 1], co[M &amp;lt;&amp;lt; 1]; int Find(int t) { if (fa[t] !</description>
-</item>
-<item>
-<title>第一次手磨咖啡</title>
-<link>http://ccviolett.github.io/todo/220412/</link>
-<pubDate>Tue, 12 Apr 2022 08:40:38 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220412/</guid>
-<description>定时任务：
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std;  int read() { 	int a; 	scanf(&amp;#34;%d&amp;#34;, &amp;amp;a); 	return a; }  struct Edge { 	int u, v, w; };  const int N = 1e5 + 100; const int M = 1e5 + 100;  int n, m; Edge edge[M]; int fa[N]; int top, fi[N], ne[M &amp;lt;&amp;lt; 1], to[M &amp;lt;&amp;lt; 1], co[M &amp;lt;&amp;lt; 1];  int Find(int t) { 	if (fa[t] !</description>
+    </item>
+    
+    <item>
+      <title>第一次手磨咖啡</title>
+      <link>http://ccviolett.github.io/todo/220412/</link>
+      <pubDate>Tue, 12 Apr 2022 08:40:38 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220412/</guid>
+      <description>定时任务：
  ( ) “力扣杯”春季编程大赛-个人赛  dur: 4 月 16 日 15:00 - 17:30   ( ) ICPC2021 昆明站热身赛  dur: 4 月 16 日 18:30 - 21:00   ( ) ICPC2021 昆明站正式赛  dur: 4 月 17 日 11:30 - 16:30   ( ) 机械制图考试  dur: 4 月 19 日   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) 物理力学测试  dur: 4 月 29 日 desc:  确保手机或者电脑终端摄像头可正常的打开。 准备A4纸张若干，考试后需将写大题处的纸张留存 准备一个带第二功能键的计算机      每日任务：</description>
-</item>
-<item>
-<title>恍恍惚惚过掉的一天</title>
-<link>http://ccviolett.github.io/todo/220411/</link>
-<pubDate>Mon, 11 Apr 2022 08:33:33 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220411/</guid>
-<description>每日任务：
+    </item>
+    
+    <item>
+      <title>恍恍惚惚过掉的一天</title>
+      <link>http://ccviolett.github.io/todo/220411/</link>
+      <pubDate>Mon, 11 Apr 2022 08:33:33 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220411/</guid>
+      <description>每日任务：
  (v) 扇贝英语单词 (v) 新疆省选备课讲课  每周任务：
  ( ) 工程实训周报  ddl: 4 月 17 日 update: mon   ( ) 青年大学习  ddl: 4 月 17 日 update: mon    定时任务：
  ( ) “力扣杯”春季编程大赛-个人赛  dur: 4 月 16 日 15:00 - 17:30   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00   ( ) ICPC2021 昆明站热身赛  dur: 4 月 16 日 18:30 - 21:00   ( ) ICPC2021 昆明站正式赛  dur: 4 月 17 日 11:30 - 16:30    重要任务：</description>
-</item>
-<item>
-<title>Leetcode31. 下一个排列</title>
-<link>http://ccviolett.github.io/solution/leetcode31/</link>
-<pubDate>Sun, 10 Apr 2022 16:40:28 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/leetcode31/</guid>
-<description>一、题意    题目链接：Problem
+    </item>
+    
+    <item>
+      <title>Leetcode31. 下一个排列</title>
+      <link>http://ccviolett.github.io/solution/leetcode31/</link>
+      <pubDate>Sun, 10 Apr 2022 16:40:28 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/leetcode31/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    虽然无耻，但是能过，C++ 可以直接用 STL 里面写好的 next_permutation
 真要写的话，看官方题解，Python 不太好写。
 三、代码    通过链接：Submission
-class Solution { public: void nextPermutation(vector&amp;lt;int&amp;gt;&amp;amp; nums) { next_permutation(nums.begin(), nums.end()); } }; </description>
-</item>
-<item>
-<title>Leetcode42. 接雨水</title>
-<link>http://ccviolett.github.io/solution/leetcode42/</link>
-<pubDate>Sun, 10 Apr 2022 16:33:03 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/leetcode42/</guid>
-<description>一、题意    题目链接：Problem
+class Solution { public:  void nextPermutation(vector&amp;lt;int&amp;gt;&amp;amp; nums) {  next_permutation(nums.begin(), nums.end());  } }; </description>
+    </item>
+    
+    <item>
+      <title>Leetcode42. 接雨水</title>
+      <link>http://ccviolett.github.io/solution/leetcode42/</link>
+      <pubDate>Sun, 10 Apr 2022 16:33:03 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/leetcode42/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    网上一个很妙的做法，水的面积=蓝色框面积+红色框面积-黑色面积-整个矩形面积
 三、代码    通过链接：Submission
-from pydoc import getpager class Solution: def trap(self, height: List[int]) -&amp;gt; int: n = len(height) res = 0 maxhl = 0 maxhr = 0 for i in range(n): maxhl = max(maxhl, height[i]) maxhr = max(maxhr, height[n - i - 1]) res += maxhl + maxhr - height[i] res -= len(height) * maxhl return res </description>
-</item>
-<item>
-<title>Leetcode53. 最大子数组和</title>
-<link>http://ccviolett.github.io/solution/leetcode53/</link>
-<pubDate>Sun, 10 Apr 2022 15:23:17 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/leetcode53/</guid>
-<description>一、题意    题目链接：Problem
+from pydoc import getpager  class Solution:  def trap(self, height: List[int]) -&amp;gt; int:  n = len(height)  res = 0  maxhl = 0  maxhr = 0  for i in range(n):  maxhl = max(maxhl, height[i])  maxhr = max(maxhr, height[n - i - 1])  res += maxhl + maxhr - height[i]  res -= len(height) * maxhl  return res </description>
+    </item>
+    
+    <item>
+      <title>Leetcode53. 最大子数组和</title>
+      <link>http://ccviolett.github.io/solution/leetcode53/</link>
+      <pubDate>Sun, 10 Apr 2022 15:23:17 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/leetcode53/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    累加，但值小于零时舍弃，取过程最大值
 三、代码    通过链接：Submission
-class Solution: def maxSubArray(self, nums: List[int]) -&amp;gt; int: sum = 0 res = nums[0] for v in nums: sum += v if sum &amp;gt; res: res = sum if sum &amp;lt; 0: sum = 0 return res </description>
-</item>
-<item>
-<title>Leetcode33. 搜索旋转排序数组</title>
-<link>http://ccviolett.github.io/solution/leetcode33/</link>
-<pubDate>Sun, 10 Apr 2022 15:16:34 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/leetcode33/</guid>
-<description>一、题意    题目链接：Problem
+class Solution:  def maxSubArray(self, nums: List[int]) -&amp;gt; int:  sum = 0  res = nums[0]  for v in nums:  sum += v  if sum &amp;gt; res:  res = sum  if sum &amp;lt; 0:  sum = 0  return res </description>
+    </item>
+    
+    <item>
+      <title>Leetcode33. 搜索旋转排序数组</title>
+      <link>http://ccviolett.github.io/solution/leetcode33/</link>
+      <pubDate>Sun, 10 Apr 2022 15:16:34 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/leetcode33/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    因为原来是升序的，可以二分找到分段点，随后在两段内再二分一次即可。
 三、代码    通过链接：Submission
-class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: l = 0 r = len(nums) - 1 while l &amp;lt; r: mid = (l + r + 1) &amp;gt;&amp;gt; 1 if nums[mid] &amp;lt; nums[0]: r = mid - 1 else: l = mid p = l l = p + 1 r = len(nums) - 1 while l &amp;lt;= r: mid = (l + r) &amp;gt;&amp;gt; 1 if nums[mid] &amp;lt; target: l = mid + 1 if nums[mid] &amp;gt; target: r = mid - 1 if nums[mid] == target: return mid l = 0 r = p while l &amp;lt;= r: mid = (l + r) &amp;gt;&amp;gt; 1 if nums[mid] &amp;lt; target: l = mid + 1 if nums[mid] &amp;gt; target: r = mid - 1 if nums[mid] == target: return mid return -1 </description>
-</item>
-<item>
-<title>创新实验班 Web 开发 | 前端</title>
-<link>http://ccviolett.github.io/posts/42-teamwebfontend/</link>
-<pubDate>Sun, 10 Apr 2022 10:15:53 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/42-teamwebfontend/</guid>
-<description>关键词 相关链接 CSS 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     关键词     classList dataset  相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  CSS 知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果</description>
-</item>
-<item>
-<title>CSS 还不够熟练 &amp; 好久没写算法题了</title>
-<link>http://ccviolett.github.io/todo/220410/</link>
-<pubDate>Sun, 10 Apr 2022 09:07:47 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220410/</guid>
-<description>每日任务：
+class Solution:  def search(self, nums: List[int], target: int) -&amp;gt; int:  l = 0  r = len(nums) - 1  while l &amp;lt; r:  mid = (l + r + 1) &amp;gt;&amp;gt; 1  if nums[mid] &amp;lt; nums[0]:  r = mid - 1  else:  l = mid  p = l   l = p + 1  r = len(nums) - 1  while l &amp;lt;= r:  mid = (l + r) &amp;gt;&amp;gt; 1  if nums[mid] &amp;lt; target:  l = mid + 1  if nums[mid] &amp;gt; target:  r = mid - 1  if nums[mid] == target:  return mid  l = 0  r = p  while l &amp;lt;= r:  mid = (l + r) &amp;gt;&amp;gt; 1  if nums[mid] &amp;lt; target:  l = mid + 1  if nums[mid] &amp;gt; target:  r = mid - 1  if nums[mid] == target:  return mid  return -1 </description>
+    </item>
+    
+    <item>
+      <title>创新实验班 Web 开发 | 前端</title>
+      <link>http://ccviolett.github.io/posts/42-teamwebfontend/</link>
+      <pubDate>Sun, 10 Apr 2022 10:15:53 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/42-teamwebfontend/</guid>
+      <description>关键词 相关链接 CSS 知识点  浮动 定位 语义化标签 BFC 扩展 CSS 伪元素 CSS 3D 效果 DPR REM 单位 inline-block flex 布局   案例实现  （一）选中框 （二）跳动的心 （三）涟漪效果     关键词     classList dataset  相关链接     HTML智能表单 CSS 选择器 CSS选择器的优先级（精讲版） CSS 简写属性 CSS 精灵图：合并小图片得到精灵图，传输加快加载速度，通过 CSS 切割 CSS outline：轮廓 CSS resize：可调整大小 CSS linear-gradient()：设置渐变 CSS transition：样式过渡动画设置 CSS transform：制作简单动画 CSS 媒体查询 CSS 关键帧  CSS 知识点    浮动    浮动元素会脱离网页文档，与其他元素发生重叠，但是不会与文字内容、图片内容、表单元素发生重叠，用来实现文字环绕效果</description>
+    </item>
+    
+    <item>
+      <title>CSS 还不够熟练 &amp; 好久没写算法题了</title>
+      <link>http://ccviolett.github.io/todo/220410/</link>
+      <pubDate>Sun, 10 Apr 2022 09:07:47 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220410/</guid>
+      <description>每日任务：
  (v) 扇贝英语单词 (&amp;gt;) 新疆省选备课讲课  每周任务：
  (v) 工程实训周报  ddl: 4 月 10 日 update: mon   (v) 青年大学习  ddl: 4 月 10 日 update: mon    定时任务：
  ( ) “力扣杯”春季编程大赛-个人赛  dur: 4 月 16 日 15:00 - 17:30   ( ) “力扣杯”春季编程大赛-战队赛  dur: 4 月 23 日 15:00 - 18:00    重要任务：
  ( ) 更正机械制图作业 (-) 公共基础课-逻辑学导论  ddl: 5 月 30 日 prog: 61/89   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   (-) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日 prg: 14/111   (-) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日 prg: 4/109   ( ) 大学物理作业 第三章 刚体定轴转动作业  ddl: 4 月 30 日 17:00    空闲任务：</description>
-</item>
-<item>
-<title>答辩考试连轴转 &amp; 咖啡好像很有意思</title>
-<link>http://ccviolett.github.io/todo/220409/</link>
-<pubDate>Sat, 09 Apr 2022 16:24:05 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220409/</guid>
-<description>每日任务：
+    </item>
+    
+    <item>
+      <title>答辩考试连轴转 &amp; 咖啡好像很有意思</title>
+      <link>http://ccviolett.github.io/todo/220409/</link>
+      <pubDate>Sat, 09 Apr 2022 16:24:05 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220409/</guid>
+      <description>每日任务：
  (v) 扇贝英语单词 (&amp;gt;) 新疆省选备课讲课  每周任务：
  ( ) 工程实训周报  ddl: 4 月 10 日 update: mon   (v) 青年大学习  ddl: 4 月 10 日 update: mon    定时任务：无
 重要任务：
  ( ) 更正机械制图作业 (-) 公共基础课-逻辑学导论  ddl: 5 月 30 日 prog: 61/89   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   ( ) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日   ( ) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日   ( ) 大学物理作业 第三章 刚体定轴转动作业  ddl: 4 月 30 日 17:00   ( ) 安徽集训-省选模拟题题解理解  ddl: 4 月 9 日 18:00 prog: 0/6    空闲任务：</description>
-</item>
-<item>
-<title>机械制图生死时速 &amp; UI 设计真好玩</title>
-<link>http://ccviolett.github.io/todo/220408/</link>
-<pubDate>Fri, 08 Apr 2022 09:08:49 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220408/</guid>
-<description>每日任务：
+    </item>
+    
+    <item>
+      <title>机械制图生死时速 &amp; UI 设计真好玩</title>
+      <link>http://ccviolett.github.io/todo/220408/</link>
+      <pubDate>Fri, 08 Apr 2022 09:08:49 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220408/</guid>
+      <description>每日任务：
  (v) 扇贝英语单词 (&amp;gt;) 新疆省选备课讲课  每周任务：
  ( ) 工程实训周报  ddl: 4 月 10 日 update: Mon   (v) 青年大学习  ddl: 4 月 10 日 update: Mon    定时任务：
  ( ) 蓝桥杯 Python 程序设计大赛  dur: 4 月 9 日 08:30 - 13:00    重要任务：
  (-) 公共基础课-逻辑学导论  ddl: 5 月 30 日 prog: 61/89   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   ( ) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日   ( ) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日   ( ) 大学物理作业 第三章 刚体定轴转动作业  ddl: 4 月 30 日 17:00   ( ) 安徽集训-省选模拟题题解理解  ddl: 4 月 9 日 18:00 prog: 0/6    空闲任务：</description>
-</item>
-<item>
-<title>刷课第一天 &amp; 初探 UI 设计的世界</title>
-<link>http://ccviolett.github.io/todo/220407/</link>
-<pubDate>Thu, 07 Apr 2022 07:20:57 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220407/</guid>
-<description>每日任务：
+    </item>
+    
+    <item>
+      <title>刷课第一天 &amp; 初探 UI 设计的世界</title>
+      <link>http://ccviolett.github.io/todo/220407/</link>
+      <pubDate>Thu, 07 Apr 2022 07:20:57 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220407/</guid>
+      <description>每日任务：
  (v) 扇贝英语单词 (&amp;gt;) 新疆省选备课讲课  每周任务：
  ( ) 工程实训周报  ddl: 4 月 10 日 update: Mon   (v) 青年大学习  ddl: 4 月 10 日 update: Mon    定时任务：
  ( ) 蓝桥杯 Python 程序设计大赛  dur: 4 月 9 日 08:30 - 13:00    重要任务：
  (-) 公共基础课-逻辑学导论  ddl: 5 月 30 日 prog: 61/89   ( ) 机械制图作业  ddl: 4 月 8 日   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   ( ) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日   ( ) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日   ( ) 大学物理作业 第三章 刚体定轴转动作业  ddl: 4 月 30 日 17:00   ( ) 安徽集训-省选模拟题题解理解  ddl: 4 月 9 日 18:00 prog: 0/6    空闲任务：</description>
-</item>
-<item>
-<title>折腾博客真的是费心费力</title>
-<link>http://ccviolett.github.io/todo/220406/</link>
-<pubDate>Wed, 06 Apr 2022 09:09:23 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220406/</guid>
-<description>每日任务：
+    </item>
+    
+    <item>
+      <title>折腾博客真的是费心费力</title>
+      <link>http://ccviolett.github.io/todo/220406/</link>
+      <pubDate>Wed, 06 Apr 2022 09:09:23 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220406/</guid>
+      <description>每日任务：
  (v) 扇贝英语单词 (&amp;gt;) 新疆省选备课讲课  每周任务：
  ( ) 工程实训周报  ddl: 4 月 10 日 update: Mon   (v) 青年大学习  ddl: 4 月 10 日 update: Mon    重要任务：
  (-) 公共基础课-逻辑学导论  ddl: 5 月 30 日 prog: 47/89   (-) 挑战杯策划案撰写  ddl: 4 月 6 日   ( ) 机械制图作业  ddl: 4 月 8 日   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   ( ) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日   ( ) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日   ( ) 大学物理作业 第三章 刚体定轴转动作业  ddl: 4 月 30 日 17:00   ( ) 安徽集训-省选模拟题题解理解  ddl: 4 月 9 日 18:00 prog: 0/6    空闲任务：</description>
-</item>
-<item>
-<title>大学物理分析</title>
-<link>http://ccviolett.github.io/posts/41-learnphysics/</link>
-<pubDate>Tue, 05 Apr 2022 17:06:04 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/41-learnphysics/</guid>
-<description>相关连接     这是你理解相对论的另一种方法 幼儿园毕业就能推导出的相对论宇宙！听不懂打我！ 简单明了，广义相对论的新可视化解释方法 如何证明广义相对论是对的？这三个实验神助攻！【宇宙峥相】  知识点    自然坐标系下的速度：$v = \frac{ds}{dt}$
+    </item>
+    
+    <item>
+      <title>大学物理分析</title>
+      <link>http://ccviolett.github.io/posts/41-learnphysics/</link>
+      <pubDate>Tue, 05 Apr 2022 17:06:04 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/41-learnphysics/</guid>
+      <description>相关连接     这是你理解相对论的另一种方法 幼儿园毕业就能推导出的相对论宇宙！听不懂打我！ 简单明了，广义相对论的新可视化解释方法 如何证明广义相对论是对的？这三个实验神助攻！【宇宙峥相】  知识点    自然坐标系下的速度：$v = \frac{ds}{dt}$
 切向加速度：$a_{\tau} = \frac{dv}{dt}$
 法向加速度：$a_{n} = \frac{v^2}{\rho}$
 自然坐标系下的加速度 $\vec{a} = \vec{a_{\tau}} + \vec{a_{n}} = a_{\tau}\vec{\tau_0} + a_{n}\vec{n_0}$
@@ -719,34 +959,40 @@ $v = \omega r$
 线加速度和角加速度的关系：
 $a_{\tau} = \frac{dv}{dt} = \frac{d(\omega R)}{dt} = R\frac{d\omega}{dt} = R\alpha$
 $a_n = \frac{v^2}{R} = \frac{(\omega R)^2}{R} = R\omega^2$</description>
-</item>
-<item>
-<title>我好想要运动相机QAQ &amp; 大物也没这么难</title>
-<link>http://ccviolett.github.io/todo/220405/</link>
-<pubDate>Tue, 05 Apr 2022 12:00:33 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220405/</guid>
-<description>每日任务：
+    </item>
+    
+    <item>
+      <title>我好想要运动相机QAQ &amp; 大物也没这么难</title>
+      <link>http://ccviolett.github.io/todo/220405/</link>
+      <pubDate>Tue, 05 Apr 2022 12:00:33 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220405/</guid>
+      <description>每日任务：
  (v) 扇贝单词 (&amp;gt;) 新疆省选备课讲课  每周任务：
  ( ) 工程实训周报  ddl: 4 月 10 日 update: Mon   (v) 青年大学习  ddl: 4 月 10 日 update: Mon    重要任务：
  (-) 公共基础课-逻辑学导论  ddl: 5 月 30 日 prog: 46/89   (-) 挑战杯策划案撰写  ddl: 4 月 6 日   ( ) 机械制图作业  ddl: 4 月 8 日   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   ( ) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日   ( ) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日   ( ) 大学物理作业 第三章 刚体定轴转动作业  ddl: 4 月 30 日 17:00   ( ) 安徽集训-省选模拟题题解理解  ddl: 4 月 9 日 18:00 prog: 0/6    空闲任务：</description>
-</item>
-<item>
-<title>洛谷 P1312 [NOIP2011 提高组] Mayan 游戏</title>
-<link>http://ccviolett.github.io/solution/luogup1312/</link>
-<pubDate>Mon, 04 Apr 2022 15:35:31 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/luogup1312/</guid>
-<description>一、题意    题目链接：Problem
+    </item>
+    
+    <item>
+      <title>洛谷 P1312 [NOIP2011 提高组] Mayan 游戏</title>
+      <link>http://ccviolett.github.io/solution/luogup1312/</link>
+      <pubDate>Mon, 04 Apr 2022 15:35:31 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup1312/</guid>
+      <description>一、题意    题目链接：Problem
 二、题解    大模拟，记忆化搜索。
 坑点：局面相同时，可能因为层数不同而导致结果不同，记忆化搜索时，不要剪掉了答案的枝。
 三、代码    通过链接：Submission
-#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; // 对于代码量偏大的程序，尽可能将功能拆分  // 整体思路： // 拖动 // 掉落 // while(检查) //	消除 //	掉落  struct State { // 在不同层的状态，即使局面相同，也可能有不同的结果 	// 因为有时候需要浪费步数 	int level; int color[10][10]; bool mark[10][10]; // 说明：输入数据 	void read() { for (int i = 0; i &amp;lt; 5; ++i) { for (int j = 0; true; ++j) { scanf(&amp;#34;%d&amp;#34;, &amp;amp;color[i][j]); if (color[i][j] == 0) break; } } } // 说明：输出数据 	void print() { for (int j = 6; j &amp;gt;= 0; --j) { for (int i = 0; i &amp;lt; 5; ++i) { printf(&amp;#34;%d &amp;#34;, color[i][j]); } puts(&amp;#34;&amp;#34;); } puts(&amp;#34;&amp;#34;); } // 说明：将 (x, y) 往方向 d 拖动 	// 问题：我们需要知道，某一次拖动是否可行，以此来判断是否能够做这一步 	// 方法：给这个函数一个返回值，表示是否能拖动 	bool drag(int x, int y, int d) { if (d == 1) { if (x == 4) return false; swap(color[x][y], color[x + 1][y]); } if (d == -1) { if (x == 0) return false; swap(color[x][y], color[x - 1][y]); } all_fall(); while (check()) { clean(); all_fall(); // print(); 	} return true; } // 说明：位置 (x, y) 向下掉落 	void single_fall(int x, int y) { while (y &amp;gt; 0 &amp;amp;&amp;amp; color[x][y - 1] == 0) { swap(color[x][y], color[x][y - 1]); // 这种写法也行 	// color[x][y - 1] = color[x][y]; 	// color[x][y] = 0;  y--; } } // 说明：检查当前状态中，是否有能够消除的 	// 问题：我们需要知道还有没有能够消除的，以便进入下一次拖动 	// 方法：函数返回一个值，表示是否存在 	bool check() { // 清空标记 	for (int i = 0; i &amp;lt; 5; ++i) { for (int j = 0; j &amp;lt; 7; ++j) mark[i][j] = false; } // 记录有没有能够消除的 	bool have = false; // 枚举每个格子 	for (int i = 0; i &amp;lt; 5; ++i) { for (int j = 0; j &amp;lt; 7; ++j) { if (color[i][j] == 0) continue; // printf(&amp;#34;(%d, %d)%d &amp;#34;, i, j, color[i][j]);  // 计算向右有 t 个相连的 	int t = 1; while (i + t &amp;lt; 5 &amp;amp;&amp;amp; color[i][j] == color[i + t][j]) t++; t--; // printf(&amp;#34;t_right: %d &amp;#34;, t);  // 如果大于 3 个相连即可标记为消除 	if (t &amp;gt;= 2) { for (int k = 0; k &amp;lt;= t; ++k) { mark[i + k][j] = true; } have = true; } // =============================  // 计算向上有 t 个相连的 	t = 1; while (j + t &amp;lt; 5 &amp;amp;&amp;amp; color[i][j] == color[i][j + t]) t++; t--; // printf(&amp;#34;t_up: %d\n&amp;#34;, t);  // 如果大于 3 个相连即可标记为消除 	if (t &amp;gt;= 2) { for (int k = 0; k &amp;lt;= t; ++k) { mark[i][j + k] = true; } have = true; } } } return have; } // 说明：清除被标记的连续的块 	void clean() { // for (int j = 6; j &amp;gt;= 0; --j) { 	// for (int i = 0; i &amp;lt; 5; ++i) { 	// printf(&amp;#34;%d &amp;#34;, mark[i][j]); 	// } 	// puts(&amp;#34;&amp;#34;); 	// } 	// puts(&amp;#34;&amp;#34;);  for (int i = 0; i &amp;lt; 5; ++i) { for (int j = 0; j &amp;lt; 7; ++j) { if (mark[i][j]) { color[i][j] = 0; } } } } // 说明：让整个图下落到不需要下落为止 	void all_fall() { for (int i = 0; i &amp;lt; 5; ++i) { for (int j = 0; j &amp;lt; 7; ++j) { // 如果是空格子就不用下落 	if (color[i][j] == 0) continue; single_fall(i, j); } } } // 说明：查询图的结果 	bool result() { for (int i = 0; i &amp;lt; 5; ++i) { for (int j = 0; j &amp;lt; 7; ++j) { if (color[i][j] !</description>
-</item>
-<item>
-<title>如何加工一个螺丝？</title>
-<link>http://ccviolett.github.io/posts/40-mechanicalpartsscrew/</link>
-<pubDate>Mon, 04 Apr 2022 12:09:50 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/40-mechanicalpartsscrew/</guid>
-<description>一、认识零件    二维模型（带螺帽）
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std;  // 对于代码量偏大的程序，尽可能将功能拆分  // 整体思路： // 拖动 // 掉落 // while(检查) //	消除 //	掉落  struct State {  	// 在不同层的状态，即使局面相同，也可能有不同的结果 	// 因为有时候需要浪费步数 	int level;  	int color[10][10]; 	bool mark[10][10];  	// 说明：输入数据 	void read() { 	for (int i = 0; i &amp;lt; 5; ++i) { 	for (int j = 0; true; ++j) { 	scanf(&amp;#34;%d&amp;#34;, &amp;amp;color[i][j]); 	if (color[i][j] == 0) 	break; 	} 	} 	}  	// 说明：输出数据 	void print() { 	for (int j = 6; j &amp;gt;= 0; --j) { 	for (int i = 0; i &amp;lt; 5; ++i) { 	printf(&amp;#34;%d &amp;#34;, color[i][j]); 	} 	puts(&amp;#34;&amp;#34;); 	} 	puts(&amp;#34;&amp;#34;); 	}  	// 说明：将 (x, y) 往方向 d 拖动 	// 问题：我们需要知道，某一次拖动是否可行，以此来判断是否能够做这一步 	// 方法：给这个函数一个返回值，表示是否能拖动 	bool drag(int x, int y, int d) { 	if (d == 1) { 	if (x == 4) return false; 	swap(color[x][y], color[x + 1][y]); 	} 	if (d == -1) { 	if (x == 0) return false; 	swap(color[x][y], color[x - 1][y]); 	}  	all_fall();  	while (check()) { 	clean(); 	all_fall();  	// print(); 	}  	return true; 	}  	// 说明：位置 (x, y) 向下掉落 	void single_fall(int x, int y) { 	while (y &amp;gt; 0 &amp;amp;&amp;amp; color[x][y - 1] == 0) { 	swap(color[x][y], color[x][y - 1]); 	// 这种写法也行 	// color[x][y - 1] = color[x][y]; 	// color[x][y] = 0;  	y--; 	} 	}  	// 说明：检查当前状态中，是否有能够消除的 	// 问题：我们需要知道还有没有能够消除的，以便进入下一次拖动 	// 方法：函数返回一个值，表示是否存在 	bool check() { 	// 清空标记 	for (int i = 0; i &amp;lt; 5; ++i) { 	for (int j = 0; j &amp;lt; 7; ++j) mark[i][j] = false; 	}  	// 记录有没有能够消除的 	bool have = false;  	// 枚举每个格子 	for (int i = 0; i &amp;lt; 5; ++i) { 	for (int j = 0; j &amp;lt; 7; ++j) { 	if (color[i][j] == 0) continue;  	// printf(&amp;#34;(%d, %d)%d &amp;#34;, i, j, color[i][j]);  	// 计算向右有 t 个相连的 	int t = 1; 	while (i + t &amp;lt; 5 &amp;amp;&amp;amp; color[i][j] == color[i + t][j]) t++; 	t--;  	// printf(&amp;#34;t_right: %d &amp;#34;, t);  	// 如果大于 3 个相连即可标记为消除 	if (t &amp;gt;= 2) { 	for (int k = 0; k &amp;lt;= t; ++k) { 	mark[i + k][j] = true; 	}  	have = true; 	}  	// =============================  	// 计算向上有 t 个相连的 	t = 1; 	while (j + t &amp;lt; 5 &amp;amp;&amp;amp; color[i][j] == color[i][j + t]) t++; 	t--;  	// printf(&amp;#34;t_up: %d\n&amp;#34;, t);  	// 如果大于 3 个相连即可标记为消除 	if (t &amp;gt;= 2) { 	for (int k = 0; k &amp;lt;= t; ++k) { 	mark[i][j + k] = true; 	}  	have = true; 	}  	} 	} 	return have; 	}  	// 说明：清除被标记的连续的块 	void clean() { 	// for (int j = 6; j &amp;gt;= 0; --j) { 	// for (int i = 0; i &amp;lt; 5; ++i) { 	// printf(&amp;#34;%d &amp;#34;, mark[i][j]); 	// } 	// puts(&amp;#34;&amp;#34;); 	// } 	// puts(&amp;#34;&amp;#34;);  	for (int i = 0; i &amp;lt; 5; ++i) { 	for (int j = 0; j &amp;lt; 7; ++j) { 	if (mark[i][j]) { 	color[i][j] = 0; 	} 	} 	} 	}  	// 说明：让整个图下落到不需要下落为止 	void all_fall() { 	for (int i = 0; i &amp;lt; 5; ++i) { 	for (int j = 0; j &amp;lt; 7; ++j) { 	// 如果是空格子就不用下落 	if (color[i][j] == 0) continue; 	single_fall(i, j); 	} 	} 	}  	// 说明：查询图的结果 	bool result() { 	for (int i = 0; i &amp;lt; 5; ++i) { 	for (int j = 0; j &amp;lt; 7; ++j) { 	if (color[i][j] !</description>
+    </item>
+    
+    <item>
+      <title>如何加工一个螺丝？</title>
+      <link>http://ccviolett.github.io/posts/40-mechanicalpartsscrew/</link>
+      <pubDate>Mon, 04 Apr 2022 12:09:50 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/40-mechanicalpartsscrew/</guid>
+      <description>一、认识零件    二维模型（带螺帽）
 三维模型
 实物模型
 二、分析零件    螺栓是和螺母配合使用的一类机械零件，可以用来紧固连接两个带有通孔的零件，因为将螺母从螺栓上旋下后，能够重新使得两个零件分开，所以螺栓连接属于可拆卸连接。
@@ -754,49 +1000,59 @@ $a_n = \frac{v^2}{R} = \frac{(\omega R)^2}{R} = R\omega^2$</description>
 三、加工工艺规程    （一）退火工艺     将原材料放入炉内，用炉盖封闭 缓慢升温至规定温度，约3-4个小时 将温度缓慢将至550度，约3-4个小时 让产品自然冷却到常温得到盘元。  （二）酸洗工艺     将盘元浸入常温、浓度为20~25%的三个盐酸槽中数分钟，除去线材的氧化膜， 清水洗去表面的盐酸。 浸入草酸中，增加金属活性，使得皮膜更加致密。 浸入磷酸盐中在表面形成皮膜。 清水洗去表面残留物 增加润滑剂，便于加工  （三）抽线工艺    进行精抽和粗抽将圆盘冷拉至所需线径粗度，得到线材。
 （四）成型工艺     冷镦：通过冷镦机将线材裁切成所需程度，同时打出螺帽和标识 通过四模四冲、三模三冲或一模二冲的方式得到胚料 对胚料进行热打，包括加热、成型和束杆三个步骤  （五）碾牙工艺    通过碾制或者攻丝将已经成型的半成品达到所需要的螺纹。
 （六）热处理工艺     高温渗碳，增加硬度 淬火后低温或高温回火， 根据对象和目的的不同而选择不同的具体温度与方式。  （七）表面处理工艺    电镀或热侵镀锌，在产品表面形成覆盖层，使产品表面美观，达到防腐的效果。</description>
-</item>
-<item>
-<title>关于机械工程机械结构设计的论述</title>
-<link>http://ccviolett.github.io/posts/39-machineryreport-structuredesign/</link>
-<pubDate>Mon, 04 Apr 2022 09:56:35 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/39-machineryreport-structuredesign/</guid>
-<description>一、概述  （一）什么是机械结构设计？ （二）机械结构设计有什么用？ （三）机械结构设计有什么特点？   二、技术简述——机械结构设计的工作步骤 三、技术组成  （一）自由度分析——满足运动要求的结构设计准则 （二）结构方案设计——尽可能多种结构方案实现 （三）最优方案选择——准确选出最优的结构设计方案   四、技术原理——机械结构设计的准则  （一）提高强度、刚度和延长疲劳寿命的设计准则 （二）提高耐磨性的结构设计准则 （三）提高抗腐蚀性的结构设计 （四）提高精度的结构设计准则 （五）符合人机工程学的设计准则 （六）避免或减少对人损害的结构设计准则   五、技术要点  （一）结构方案的选择和评价 （二）结构件设计的注意点   六、发展历史  （一）阶段划分 （二）特点论证   七、外来展望  （一）虚拟化发展趋势 （二）集成化发展趋势 （三）环境友好型发展趋势 （四）智能化发展     一、概述    （一）什么是机械结构设计？    机械结构设计是机械设计中重要的一步，是机械设计实际落地的重要步骤。
+    </item>
+    
+    <item>
+      <title>关于机械工程机械结构设计的论述</title>
+      <link>http://ccviolett.github.io/posts/39-machineryreport-structuredesign/</link>
+      <pubDate>Mon, 04 Apr 2022 09:56:35 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/39-machineryreport-structuredesign/</guid>
+      <description>一、概述  （一）什么是机械结构设计？ （二）机械结构设计有什么用？ （三）机械结构设计有什么特点？   二、技术简述——机械结构设计的工作步骤 三、技术组成  （一）自由度分析——满足运动要求的结构设计准则 （二）结构方案设计——尽可能多种结构方案实现 （三）最优方案选择——准确选出最优的结构设计方案   四、技术原理——机械结构设计的准则  （一）提高强度、刚度和延长疲劳寿命的设计准则 （二）提高耐磨性的结构设计准则 （三）提高抗腐蚀性的结构设计 （四）提高精度的结构设计准则 （五）符合人机工程学的设计准则 （六）避免或减少对人损害的结构设计准则   五、技术要点  （一）结构方案的选择和评价 （二）结构件设计的注意点   六、发展历史  （一）阶段划分 （二）特点论证   七、外来展望  （一）虚拟化发展趋势 （二）集成化发展趋势 （三）环境友好型发展趋势 （四）智能化发展     一、概述    （一）什么是机械结构设计？    机械结构设计是机械设计中重要的一步，是机械设计实际落地的重要步骤。
 机械设计是根据使用要求，对机械的工作原理、结构、力的传递、材料等进行构思、分析和计算，并将其转化为具体的描述，以辅助制造。
 在机械设计过程中，完成机械原理方案设计以后，就要进行机械结构设计，得出全部结构设计图，作为生产的依据。
 （二）机械结构设计有什么用？    机械结构设计的任务是在总体设计的基础上，根据所确定的原理方案，确定并绘出具体的结构图，以体现所要求的功能。
 机械结构设计将抽象的工作原理具体化为某类构件或零部件，确定结构件的材料、形状、尺寸、公差、精度、毛胚及其制作、热处理方式和表面状况，同时还考虑其加工工艺、强度、刚度、精度以及与其它零件相互之间关系等问题。
 （三）机械结构设计有什么特点？    （1）机械结构设计是集思考、绘图、计算（有时进行必要的实验）于一体的设计过程，是机械设计中涉及的问题最多、最具体、工作量最大的工作阶段，在整个机械设计过程中，平均约80%的时间用于结构设计，对机械设计的成败起着举足轻重的作用。</description>
-</item>
-<item>
-<title>学习笔记 | 逻辑学导论</title>
-<link>http://ccviolett.github.io/posts/38-lesson-logic/</link>
-<pubDate>Mon, 04 Apr 2022 07:56:27 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/38-lesson-logic/</guid>
-<description>直言命题 文恩图 欧拉图 周延性 对当方阵（逻辑方阵） 对当关系论证   1. 引论：走进逻辑学  1.1 逻辑学是什么 1.2 逻辑与法律：普罗泰戈拉悖论 1.3 逻辑学的功能和研究范围 1.4 认识“非西方逻辑”   2. 论证  2.1 论证的关键概念 2.2 命题、陈述与语句 2.3 经验命题与必然命题 2.4 论证的含义与类型     直言命题    每一个直言命题都由四个要素构成：量项-主项-联项-谓项
+    </item>
+    
+    <item>
+      <title>学习笔记 | 逻辑学导论</title>
+      <link>http://ccviolett.github.io/posts/38-lesson-logic/</link>
+      <pubDate>Mon, 04 Apr 2022 07:56:27 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/38-lesson-logic/</guid>
+      <description>直言命题 文恩图 欧拉图 周延性 对当方阵（逻辑方阵） 对当关系论证   1. 引论：走进逻辑学  1.1 逻辑学是什么 1.2 逻辑与法律：普罗泰戈拉悖论 1.3 逻辑学的功能和研究范围 1.4 认识“非西方逻辑”   2. 论证  2.1 论证的关键概念 2.2 命题、陈述与语句 2.3 经验命题与必然命题 2.4 论证的含义与类型     直言命题    每一个直言命题都由四个要素构成：量项-主项-联项-谓项
 如：量项(所有) 主项(艺术家) 联项(都是) 谓项(人)
 直言命题的四种形式：
  A：所有 S 都是 P E：所有 S 都不是 P I：有些 S 是 P O：有些 S 不是 P  直言命题的量：根据直言命题的量项，分为 全称命题 与 特称命题。</description>
-</item>
-<item>
-<title>学习笔记 | 知识论导论：我们能知道什么？</title>
-<link>http://ccviolett.github.io/posts/37-lesson-epistemology/</link>
-<pubDate>Mon, 04 Apr 2022 07:55:58 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/37-lesson-epistemology/</guid>
-<description/>
-</item>
-<item>
-<title>学习笔记 | 意义生活：符号学导论</title>
-<link>http://ccviolett.github.io/posts/36-lesson-semiotics/</link>
-<pubDate>Mon, 04 Apr 2022 07:54:42 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/36-lesson-semiotics/</guid>
-<description/>
-</item>
-<item>
-<title>学习笔记 | 宋崇导演教你拍摄微电影</title>
-<link>http://ccviolett.github.io/posts/35-lesson-microfilm/</link>
-<pubDate>Mon, 04 Apr 2022 07:54:06 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/35-lesson-microfilm/</guid>
-<description>顾长卫《龙头》    模糊的语言拥有丰富的外延，精确的语言只有简单的内涵。
+    </item>
+    
+    <item>
+      <title>学习笔记 | 知识论导论：我们能知道什么？</title>
+      <link>http://ccviolett.github.io/posts/37-lesson-epistemology/</link>
+      <pubDate>Mon, 04 Apr 2022 07:55:58 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/37-lesson-epistemology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>学习笔记 | 意义生活：符号学导论</title>
+      <link>http://ccviolett.github.io/posts/36-lesson-semiotics/</link>
+      <pubDate>Mon, 04 Apr 2022 07:54:42 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/36-lesson-semiotics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>学习笔记 | 宋崇导演教你拍摄微电影</title>
+      <link>http://ccviolett.github.io/posts/35-lesson-microfilm/</link>
+      <pubDate>Mon, 04 Apr 2022 07:54:06 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/35-lesson-microfilm/</guid>
+      <description>顾长卫《龙头》    模糊的语言拥有丰富的外延，精确的语言只有简单的内涵。
 作家电影：不是用来讲故事的，有许多的符号，许多的象征、对比
 白猫、黑猫的对比
 捡破烂的老人穿过城市形成鲜明的反差
@@ -821,79 +1077,95 @@ $a_n = \frac{v^2}{R} = \frac{(\omega R)^2}{R} = R\omega^2$</description>
 问问题的人不一定要出镜。
 关于被采访者    尊重被拍摄者，他们是片子的合作方，共同创作，我们要尽量缩短和被拍摄者之间的距离。
 尽量避免被采访者惧怕摄像机镜头或者有意识地美化和包装自己，可以通过隐藏摄影机和主动沟通来解决这个问题。</description>
-</item>
-<item>
-<title>我是选了四门公共基础课得小丑</title>
-<link>http://ccviolett.github.io/todo/220404/</link>
-<pubDate>Mon, 04 Apr 2022 07:39:36 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220404/</guid>
-<description>每日任务：
+    </item>
+    
+    <item>
+      <title>我是选了四门公共基础课得小丑</title>
+      <link>http://ccviolett.github.io/todo/220404/</link>
+      <pubDate>Mon, 04 Apr 2022 07:39:36 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220404/</guid>
+      <description>每日任务：
  (v) 扇贝单词 (v) 新疆省选备课讲课  每周任务：
  ( ) 工程实训周报  ddl: 4 月 10 日 update: Mon   ( ) 青年大学习  ddl: 4 月 10 日 update: Mon    一次性任务：
  ( ) 大学物理作业  ddl: 4 月 8 日   ( ) 完成字节大数据项目 ( ) 学习 Flutter 开发 ( ) 挑战杯策划案撰写  ddl: 4 月 6 日   ( ) 公共基础课-宋崇导演教你拍摄微电影  ddl: 5 月 30 日   ( ) 公共基础课-意义生活：符号学导论  ddl: 5 月 30 日   ( ) 公共基础课-知识论导论：我们能知道什么  ddl: 5 月 30 日   (-) 公共基础课-逻辑学导论  ddl: 5 月 30 日 prog: 27/89   ( ) 高数第四次作业  ddl: 4 月 8 日 22:00    日志：</description>
-</item>
-<item>
-<title>机械类导论结课报告写得肝疼</title>
-<link>http://ccviolett.github.io/todo/220403/</link>
-<pubDate>Sun, 03 Apr 2022 08:02:31 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220403/</guid>
-<description>每日任务：
+    </item>
+    
+    <item>
+      <title>机械类导论结课报告写得肝疼</title>
+      <link>http://ccviolett.github.io/todo/220403/</link>
+      <pubDate>Sun, 03 Apr 2022 08:02:31 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220403/</guid>
+      <description>每日任务：
  (v) 扇贝单词  每周任务：
  (v) 工程实训周报  ddl: 4 月 3 日 update: Mon   (v) 青年大学习  ddl: 4 月 3 日 update: Mon    一次性任务：
  ( ) 大学物理作业  ddl: 4 月 8 日   ( ) 完成字节大数据项目 ( ) 学习 Flutter 开发 ( ) 挑战杯策划案撰写  ddl: 4 月 6 日    日志：
  D [完成] C++ 程序设计实验 实验三 数组 D [完成] 机械类导论结课报告  ddl: 4 月 3 日   D [完成] 挑战杯小组开会分配任务  ddl: 4 月 3 日   A [添加] 挑战杯策划案撰写  ddl: 4 月 6 日    </description>
-</item>
-<item>
-<title>网上怎么证明学生身份？</title>
-<link>http://ccviolett.github.io/posts/34-howtoprovetobestudent/</link>
-<pubDate>Sat, 02 Apr 2022 23:37:23 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/34-howtoprovetobestudent/</guid>
-<description>学信网在线验证码     首先进入学信网，找到登录界面并登录。  进入 在线验证报告 界面，首先验证自己的身份。  验证完成后，点击“申请”进入申请页面。  确认无误信息后，再次点击“申请”按钮生成在线验证码。  随后会自动返回在线验证报告界面，即可看到自己的在线验证码。  将在线验证码提供给需要验证的地方，即可通过在线验证证明自己的学生身份。  </description>
-</item>
-<item>
-<title>画完第一幅装配图的自豪</title>
-<link>http://ccviolett.github.io/todo/220402/</link>
-<pubDate>Sat, 02 Apr 2022 18:30:20 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220402/</guid>
-<description>也算是人生中第一次画出看起来这么“专业”（其实并没有）的图，勉勉强强能够抄一些别人画好的简单的机械图纸了吧。
+    </item>
+    
+    <item>
+      <title>网上怎么证明学生身份？</title>
+      <link>http://ccviolett.github.io/posts/34-howtoprovetobestudent/</link>
+      <pubDate>Sat, 02 Apr 2022 23:37:23 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/34-howtoprovetobestudent/</guid>
+      <description>学信网在线验证码     首先进入学信网，找到登录界面并登录。  进入 在线验证报告 界面，首先验证自己的身份。  验证完成后，点击“申请”进入申请页面。  确认无误信息后，再次点击“申请”按钮生成在线验证码。  随后会自动返回在线验证报告界面，即可看到自己的在线验证码。  将在线验证码提供给需要验证的地方，即可通过在线验证证明自己的学生身份。  </description>
+    </item>
+    
+    <item>
+      <title>画完第一幅装配图的自豪</title>
+      <link>http://ccviolett.github.io/todo/220402/</link>
+      <pubDate>Sat, 02 Apr 2022 18:30:20 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220402/</guid>
+      <description>也算是人生中第一次画出看起来这么“专业”（其实并没有）的图，勉勉强强能够抄一些别人画好的简单的机械图纸了吧。
 当装配完成的那一刻，还是很有成就感的。
 就像一个作品的诞生。
 要交上去的作业里面不用画零件的具体尺寸，但是我总不能白标了是不（doge），在这里展示展示。</description>
-</item>
-<item>
-<title>我爱愚人节带来的流量</title>
-<link>http://ccviolett.github.io/todo/220401/</link>
-<pubDate>Fri, 01 Apr 2022 18:37:45 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220401/</guid>
-<description>不多说，直接上图，我希望天天都是愚人节，能够多多整活。</description>
-</item>
-<item>
-<title>洛谷 P1315 [NOIP2011 提高组] 观光公交</title>
-<link>http://ccviolett.github.io/solution/luogup1315/</link>
-<pubDate>Fri, 01 Apr 2022 17:37:13 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/luogup1315/</guid>
-<description>一、题意    题目链接：Problem
+    </item>
+    
+    <item>
+      <title>我爱愚人节带来的流量</title>
+      <link>http://ccviolett.github.io/todo/220401/</link>
+      <pubDate>Fri, 01 Apr 2022 18:37:45 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220401/</guid>
+      <description>不多说，直接上图，我希望天天都是愚人节，能够多多整活。</description>
+    </item>
+    
+    <item>
+      <title>洛谷 P1315 [NOIP2011 提高组] 观光公交</title>
+      <link>http://ccviolett.github.io/solution/luogup1315/</link>
+      <pubDate>Fri, 01 Apr 2022 17:37:13 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/luogup1315/</guid>
+      <description>一、题意    题目链接：Problem
 一条路上从左往右有 n 个车站，一辆车从 1 号车站往 n 号车站开，从 $i$ 号车站到 $i + 1$ 号车站需要 $D_i$ 分钟。
 给开 m 个人，在 $T_i$ 时刻从 $A_i$ 上车，希望在 $B_i$ 下车，保证 $A_i &amp;lt; B_i$。
 车到了某个车站必须等所有人上车了才能发车。
 现在有 k 次机会选定 $D_i$ 将其减小 1，问如何分配 k 此机会，使得所有人在车上呆的总时间最少。
-二、题解    考虑拆分贡献，要求所有人在车上呆的总时间最少，设下车时间为 $T'$，则总时间为 $\sum_{i = 1}^{m} (T'_i - T_i)$，拆分为 $\sum T'_i - \sum T_i$，其中 $\sum T_i$ 为定值，故我们只需最小化 $\sum T'_i$。
-我们设在第 i 站下车的人数为 $cntto_i$，到达第 i 站的时间为 $arrive_i$，则 $\sum\limits_{i = 1}^m T'_i = \sum\limits_{i = 1}^n (cntto_i * arrive_i)$，其中 $cntto_i$ 是固定的，所以我们只需要最小化到达每个点的时间。</description>
-</item>
-<item>
-<title>如何在愚人节这天防止被骗？</title>
-<link>http://ccviolett.github.io/posts/howtopreventtobefool/</link>
-<pubDate>Fri, 01 Apr 2022 12:08:53 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/howtopreventtobefool/</guid>
-<description>正在加载中……
- setTimeout(() = { window.location.href="https://www.bilibili.com/video/BV1GJ411x7h7" }, 800);  </description>
-</item>
-<item>
-<title>机械制图 | 螺纹</title>
-<link>http://ccviolett.github.io/posts/33-mechanicaldrawingthread/</link>
-<pubDate>Wed, 30 Mar 2022 19:26:48 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/33-mechanicaldrawingthread/</guid>
-<description>一、螺纹的要素      牙型
+二、题解    考虑拆分贡献，要求所有人在车上呆的总时间最少，设下车时间为 $T&amp;rsquo;$，则总时间为 $\sum_{i = 1}^{m} (T&amp;rsquo;_i - T_i)$，拆分为 $\sum T&amp;rsquo;_i - \sum T_i$，其中 $\sum T_i$ 为定值，故我们只需最小化 $\sum T&amp;rsquo;_i$。
+我们设在第 i 站下车的人数为 $cntto_i$，到达第 i 站的时间为 $arrive_i$，则 $\sum\limits_{i = 1}^m T&amp;rsquo;_i = \sum\limits_{i = 1}^n (cntto_i * arrive_i)$，其中 $cntto_i$ 是固定的，所以我们只需要最小化到达每个点的时间。</description>
+    </item>
+    
+    <item>
+      <title>如何在愚人节这天防止被骗？</title>
+      <link>http://ccviolett.github.io/posts/howtopreventtobefool/</link>
+      <pubDate>Fri, 01 Apr 2022 12:08:53 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/howtopreventtobefool/</guid>
+      <description>正在加载中……
+ setTimeout(() = { window.location.href=&#34;https://www.bilibili.com/video/BV1GJ411x7h7&#34; }, 800);  </description>
+    </item>
+    
+    <item>
+      <title>机械制图 | 螺纹</title>
+      <link>http://ccviolett.github.io/posts/33-mechanicaldrawingthread/</link>
+      <pubDate>Wed, 30 Mar 2022 19:26:48 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/33-mechanicaldrawingthread/</guid>
+      <description>一、螺纹的要素      牙型
 螺纹的轮廓形状
   公称直径
 代表螺纹尺寸的直径，指大径。
@@ -914,24 +1186,28 @@ $$ Ph = nP $$
 螺纹副：内、外螺纹旋合到一起后的部件
 螺纹副旋合部分画外螺纹，其余部分各画各。
 三、普通螺纹的标注    (螺纹特征代号)(尺寸代号)-(公差带代号)-(旋合长度代号)-(旋向代号)</description>
-</item>
-<item>
-<title>公共基础课程之我是大冤种</title>
-<link>http://ccviolett.github.io/todo/220330/</link>
-<pubDate>Wed, 30 Mar 2022 18:36:59 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220330/</guid>
-<description>公共基础课程之我是大冤种
+    </item>
+    
+    <item>
+      <title>公共基础课程之我是大冤种</title>
+      <link>http://ccviolett.github.io/todo/220330/</link>
+      <pubDate>Wed, 30 Mar 2022 18:36:59 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220330/</guid>
+      <description>公共基础课程之我是大冤种
 我承认我是冲动了，当我看到四门 公共基础课程 出现在我的课程表中，而且我还得为每一学分支付 100 元的费用时，我知道我不仅仅挥霍了时间，我还挥霍了金钱。
 更加令人心痛的是，本来可以额外增加了一次退改课的机会：
 但是被我完全忘掉了，直到今天的课程通知下来：
 我就是个纯纯的大冤种。</description>
-</item>
-<item>
-<title>如何用 JS 写一个 JS 解释器？</title>
-<link>http://ccviolett.github.io/posts/32-usejstobuildjs/</link>
-<pubDate>Mon, 28 Mar 2022 22:57:37 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/32-usejstobuildjs/</guid>
-<description>为什么在程序中可以修改变量名而不能修改关键字？    因为变量名定义在程序内，而关键字定义在编译器解释器内。
+    </item>
+    
+    <item>
+      <title>如何用 JS 写一个 JS 解释器？</title>
+      <link>http://ccviolett.github.io/posts/32-usejstobuildjs/</link>
+      <pubDate>Mon, 28 Mar 2022 22:57:37 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/32-usejstobuildjs/</guid>
+      <description>为什么在程序中可以修改变量名而不能修改关键字？    因为变量名定义在程序内，而关键字定义在编译器解释器内。
 我们无法在程序中去维护关键字的相同、不同关系。
  AST 简介    AST 和代码是同一种东西的两种不同表示方式，代码方便人看的，AST 方便电脑看的。所以两个东西相互转换的时候不会丢失信息，会一一对应。
 AST 实际存在于内存之中，但是为了方便人们理解，常常使用 JSON 格式来表示。
@@ -944,41 +1220,49 @@ JS AST 在线浏览工具：https://astexplorer.net/ JS 语法树标准 ESTree�
 而深入理解编程语言又需要有足够的编译原理知识。
 推荐书籍《计算的本质》《计算机程序的构造和解释》，属于偏理论方面的书籍，而不是像其他编译原理的书籍偏向于工程。
 可以去尝试写写 lisp 解释器，lisp 作为一门语法极其简单的早期编程语言，很好实现。</description>
-</item>
-<item>
-<title>学习 React</title>
-<link>http://ccviolett.github.io/posts/31-learnreact/</link>
-<pubDate>Fri, 25 Mar 2022 19:48:19 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/31-learnreact/</guid>
-<description>一些问题     无法使用 JSX，报错 Unexpected token '&amp;lt;'  https://react.docschina.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
+    </item>
+    
+    <item>
+      <title>学习 React</title>
+      <link>http://ccviolett.github.io/posts/31-learnreact/</link>
+      <pubDate>Fri, 25 Mar 2022 19:48:19 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/31-learnreact/</guid>
+      <description>一些问题     无法使用 JSX，报错 Unexpected token &#39;&amp;lt;&#39;  https://react.docschina.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
 将 HTML 代码复制到 JSX 中报错  记得删掉 style 属性，并将 HTML 代码中标签的 class 改为 className。
 onClick 自动触发  将 onClick = {func()} 改为 onClick = {() =&amp;gt; {func()}} 即可。</description>
-</item>
-<item>
-<title>如何使用 WebView 来制作 Web 套壳 APP？</title>
-<link>http://ccviolett.github.io/posts/30-usewebviewtobuildapp/</link>
-<pubDate>Fri, 25 Mar 2022 17:56:46 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/30-usewebviewtobuildapp/</guid>
-<description>零、前期准备    安装 Android Studio，安装对应版本 SDK Tools，新建项目。
+    </item>
+    
+    <item>
+      <title>如何使用 WebView 来制作 Web 套壳 APP？</title>
+      <link>http://ccviolett.github.io/posts/30-usewebviewtobuildapp/</link>
+      <pubDate>Fri, 25 Mar 2022 17:56:46 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/30-usewebviewtobuildapp/</guid>
+      <description>零、前期准备    安装 Android Studio，安装对应版本 SDK Tools，新建项目。
 一、代码修改    修改 app/java/{创建时指定的包名}/MainActivity.java 如下：
  注意！代码第一行要改为你的包名，中间的链接要改为自己的网页链接
- package {创建时指定的包名}; import androidx.appcompat.app.AppCompatActivity; import android.annotation.SuppressLint; import android.os.Bundle; import android.view.View; import android.view.KeyEvent; import android.webkit.WebView; import android.webkit.WebViewClient; public class MainActivity extends AppCompatActivity { @Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); setContentView(R.layout.activity_main); this.createWebView(); } @SuppressLint(&amp;#34;SetJavaScriptEnabled&amp;#34;) private void createWebView() { final WebView webView = (WebView) findViewById(R.id.webview); webView.getSettings().setJavaScriptEnabled(true); webView.setWebViewClient(new WebViewClient()); String url = &amp;#34;{你要套壳的网页链接}&amp;#34;; webView.loadUrl(url); webView.</description>
-</item>
-<item>
-<title>算法中有那种容易写错但是不易发现的 BUG？</title>
-<link>http://ccviolett.github.io/posts/29-myalgorithmbug/</link>
-<pubDate>Thu, 24 Mar 2022 22:07:50 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/29-myalgorithmbug/</guid>
-<description>1. 默认 $t * 2$ 和 $t * 2 + 1$ 建二叉树    在链的情况下，空间会被卡到 $2^n$。
+ package {创建时指定的包名};  import androidx.appcompat.app.AppCompatActivity;  import android.annotation.SuppressLint; import android.os.Bundle; import android.view.View; import android.view.KeyEvent; import android.webkit.WebView; import android.webkit.WebViewClient;  public class MainActivity extends AppCompatActivity {   @Override  protected void onCreate(Bundle savedInstanceState) {  super.onCreate(savedInstanceState);   setContentView(R.layout.activity_main);   this.createWebView();  }   @SuppressLint(&amp;#34;SetJavaScriptEnabled&amp;#34;)  private void createWebView() {  final WebView webView = (WebView) findViewById(R.</description>
+    </item>
+    
+    <item>
+      <title>算法中有那种容易写错但是不易发现的 BUG？</title>
+      <link>http://ccviolett.github.io/posts/29-myalgorithmbug/</link>
+      <pubDate>Thu, 24 Mar 2022 22:07:50 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/29-myalgorithmbug/</guid>
+      <description>1. 默认 $t * 2$ 和 $t * 2 + 1$ 建二叉树    在链的情况下，空间会被卡到 $2^n$。
 解决方法：使用 lson 和 rson 来存储
 例题：通过先序遍历和中序遍历，输出层序遍历。</description>
-</item>
-<item>
-<title>学习笔记 | C++ 程序设计</title>
-<link>http://ccviolett.github.io/posts/28-lesson-cpp/</link>
-<pubDate>Wed, 23 Mar 2022 20:46:47 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/28-lesson-cpp/</guid>
-<description>实参的数量    函数调用 func((exp1, exp2), (exp3, exp4, exp5)) 中所含 2 个实参。
+    </item>
+    
+    <item>
+      <title>学习笔记 | C&#43;&#43; 程序设计</title>
+      <link>http://ccviolett.github.io/posts/28-lesson-cpp/</link>
+      <pubDate>Wed, 23 Mar 2022 20:46:47 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/28-lesson-cpp/</guid>
+      <description>实参的数量    函数调用 func((exp1, exp2), (exp3, exp4, exp5)) 中所含 2 个实参。
 抽象类    抽象类是包含纯虚函数的类，即包含 virtual void Func(void) = 0;。
 多继承与二义性    一个派生类的两个基类中都有某个同名成员，在派生类中对这个成员的访问可能出现二义性。
 解决二义性的最常用的方法是对成员名的限定。
@@ -987,34 +1271,40 @@ onClick 自动触发  将 onClick = {func()} 改为 onClick = {() =&amp;gt; {fun
 静态成员函数不能是静态函数，不能直接访问非静态成员。
 访问共有静态成员的方式有以下三种：
  类名::静态成员名 对象名.静态成员名 对象指针-&amp;gt;静态成员名  问题：请问下列程序会输出什么？
-#include &amp;lt;iostream&amp;gt; using namespace std; int fun() { static int x = 1; x *= 2; return x; } int main() { int i, s = 1; for (i = 1; i &amp;lt;= 3; ++i) s *= fun(); cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl; } 答案：64</description>
-</item>
-<item>
-<title>Powershell 中会遇到的一些问题</title>
-<link>http://ccviolett.github.io/posts/27-probleminpowershell/</link>
-<pubDate>Tue, 22 Mar 2022 19:01:42 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/27-probleminpowershell/</guid>
-<description>无法加载文件 XXX，因为在此系统上禁止运行脚本。    在计算机上启动 Windows PowerShell 时，执行策略很可能是 Restricted（默认设置）。
+#include &amp;lt;iostream&amp;gt; using namespace std;  int fun() { 	static int x = 1; 	x *= 2; 	return x; }  int main() { 	int i, s = 1; 	for (i = 1; i &amp;lt;= 3; ++i) 	s *= fun(); 	cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl; } 答案：64</description>
+    </item>
+    
+    <item>
+      <title>Powershell 中会遇到的一些问题</title>
+      <link>http://ccviolett.github.io/posts/27-probleminpowershell/</link>
+      <pubDate>Tue, 22 Mar 2022 19:01:42 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/27-probleminpowershell/</guid>
+      <description>无法加载文件 XXX，因为在此系统上禁止运行脚本。    在计算机上启动 Windows PowerShell 时，执行策略很可能是 Restricted（默认设置）。
  Restricted 执行策略不允许任何脚本运行。
 AllSigned 和 RemoteSigned 执行策略可防止 Windows PowerShell 运行没有数字签名的脚本。
 本主题说明如何运行所选未签名脚本（即使在执行策略为 RemoteSigned 的情况下），还说明如何对 脚本进行签名以便您自己使用。
 有关 Windows PowerShell 执行策略的详细信息，请参阅 about_Execution_Policy。
  以管理员身份打开PowerShell 输入 set-executionpolicy remotesigned</description>
-</item>
-<item>
-<title>学习 Electron</title>
-<link>http://ccviolett.github.io/posts/26-learnelectron/</link>
-<pubDate>Tue, 22 Mar 2022 17:49:02 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/26-learnelectron/</guid>
-<description>Electron 可以理解为一个被 Javascript 控制的精简版的 Chromium 浏览器
+    </item>
+    
+    <item>
+      <title>学习 Electron</title>
+      <link>http://ccviolett.github.io/posts/26-learnelectron/</link>
+      <pubDate>Tue, 22 Mar 2022 17:49:02 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/26-learnelectron/</guid>
+      <description>Electron 可以理解为一个被 Javascript 控制的精简版的 Chromium 浏览器
 安装 cnmp 加速：npmmirror 中国镜像站</description>
-</item>
-<item>
-<title>如何写诗？</title>
-<link>http://ccviolett.github.io/posts/25-learnpome/</link>
-<pubDate>Fri, 18 Mar 2022 20:37:48 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/25-learnpome/</guid>
-<description>我的作品    例题     题：红叶增秋色 答：黄花落晚霞  作业      题：遥看星在水
+    </item>
+    
+    <item>
+      <title>如何写诗？</title>
+      <link>http://ccviolett.github.io/posts/25-learnpome/</link>
+      <pubDate>Fri, 18 Mar 2022 20:37:48 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/25-learnpome/</guid>
+      <description>我的作品    例题     题：红叶增秋色 答：黄花落晚霞  作业      题：遥看星在水
   答：近听柳摇风
   题：身闲偏羡侣
   答：叶落不愁人
@@ -1034,51 +1324,63 @@ AllSigned 和 RemoteSigned 执行策略可防止 Windows PowerShell 运行没有
 抑：不平（仄） -&amp;gt; 平水韵：上去入声 -&amp;gt; 现代汉语：三四声
 扬：平 -&amp;gt; 平水韵：平声 -&amp;gt; 现代汉语：一二声
 笠翁对韵</description>
-</item>
-<item>
-<title>2022 新疆省选训练记录</title>
-<link>http://ccviolett.github.io/posts/24-xjelectiontraining/</link>
-<pubDate>Thu, 17 Mar 2022 20:55:55 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/24-xjelectiontraining/</guid>
-<description>零、基本信息 一、竞争分析 二、契机与心态 三、考场策略  整体策略   四、课程安排  快速幂 矩阵乘法 矩阵快速幂 矩阵快速幂优化 DP 逆元 gcd 重载运算直接访问结构体内部数组 区间 DP 树型 DP DAG（有向无环图）DP 线段树 hash 算法 回文串 KMP 三分 树 倍增求 LCA Kruskal 求最小生成树 DAG 拓扑排序 组合数学八题 树链剖分   五、考场须知  1. 技巧 2. 警告 3. 注意   六、考前准备 七、每日记录  2022 年 3 月 17 日 第 1 节课总结 2022 年 3 月 18 日 第 2 节课总结 2022 年 3 月 21 日 第 3 节课总结 2022 年 3 月 21 日 第 4 节课总结 2022 年 3 月 24 日 第 5 节课总结 2022 年 3 月 25 日 第 6 节课总结 2022 年 3 月 28 日 第 7 节课总结 2022 年 3 月 30 日 第 8 节课总结 2022 年 4 月 1 日 第 9 节课总结 2022 年 4 月 4 日 第 10 节课总结 2022 年 4 月 11 日 第 11 节课总结 2022 年 4 月 12 日 第 12 节课总结 2022 年 4 月 13 日 第 13 节课总结 2022 年 4 月 14 日 第 14 节课总结 2022 年 4 月 15 日 第 15 节课总结     零、基本信息    学员姓名：王梓沣</description>
-</item>
-<item>
-<title>如何解决微分方程相关问题？</title>
-<link>http://ccviolett.github.io/posts/21-solvede/</link>
-<pubDate>Wed, 16 Mar 2022 19:45:28 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/21-solvede/</guid>
-<description>1. $y'= f(x, y)$ 型 2. $y^{(n)} = f(x)$ 型 3. $y'' = f(x, y')$ 型 4. $y'' = f(y, y')$ 型 $y'' + py' + qy = 0$ 型 - 二阶常系数齐次线性微分方程 5. $y'' + py' + qy = e^{\lambda x}P_m(x)$ 型   一、解微分方程    1. $y'= f(x, y)$ 型    转化为 $y' + P(x)y = Q(x)$ 的形式，套用公式：
+    </item>
+    
+    <item>
+      <title>2022 新疆省选训练记录</title>
+      <link>http://ccviolett.github.io/posts/24-xjelectiontraining/</link>
+      <pubDate>Thu, 17 Mar 2022 20:55:55 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/24-xjelectiontraining/</guid>
+      <description>零、基本信息 一、竞争分析 二、契机与心态 三、考场策略  整体策略   四、课程安排  快速幂 矩阵乘法 矩阵快速幂 矩阵快速幂优化 DP 逆元 gcd 重载运算直接访问结构体内部数组 区间 DP 树型 DP DAG（有向无环图）DP 线段树 hash 算法 回文串 KMP 三分 树 倍增求 LCA Kruskal 求最小生成树 DAG 拓扑排序 组合数学八题 树链剖分   五、考场须知  1. 技巧 2. 警告 3. 注意   六、考前准备 七、每日记录  2022 年 3 月 17 日 第 1 节课总结 2022 年 3 月 18 日 第 2 节课总结 2022 年 3 月 21 日 第 3 节课总结 2022 年 3 月 21 日 第 4 节课总结 2022 年 3 月 24 日 第 5 节课总结 2022 年 3 月 25 日 第 6 节课总结 2022 年 3 月 28 日 第 7 节课总结 2022 年 3 月 30 日 第 8 节课总结 2022 年 4 月 1 日 第 9 节课总结 2022 年 4 月 4 日 第 10 节课总结 2022 年 4 月 11 日 第 11 节课总结 2022 年 4 月 12 日 第 12 节课总结 2022 年 4 月 13 日 第 13 节课总结 2022 年 4 月 14 日 第 14 节课总结 2022 年 4 月 15 日 第 15 节课总结     零、基本信息    学员姓名：王梓沣</description>
+    </item>
+    
+    <item>
+      <title>如何解决微分方程相关问题？</title>
+      <link>http://ccviolett.github.io/posts/21-solvede/</link>
+      <pubDate>Wed, 16 Mar 2022 19:45:28 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/21-solvede/</guid>
+      <description>1. $y&amp;rsquo;= f(x, y)$ 型 2. $y^{(n)} = f(x)$ 型 3. $y&amp;rsquo;&amp;rsquo; = f(x, y&amp;rsquo;)$ 型 4. $y&amp;rsquo;&amp;rsquo; = f(y, y&amp;rsquo;)$ 型 $y&amp;rsquo;&amp;rsquo; + py&amp;rsquo; + qy = 0$ 型 - 二阶常系数齐次线性微分方程 5. $y&amp;rsquo;&amp;rsquo; + py&amp;rsquo; + qy = e^{\lambda x}P_m(x)$ 型   一、解微分方程    1. $y&amp;rsquo;= f(x, y)$ 型    转化为 $y&amp;rsquo; + P(x)y = Q(x)$ 的形式，套用公式：
 $$ y = e^{-\int P(x) dx} \left(\int Q(x) e^{\int P(x) dx} dx + C \right) $$</description>
-</item>
-<item>
-<title>迅速掌握 MapReduce</title>
-<link>http://ccviolett.github.io/posts/20-learnmapreduce/</link>
-<pubDate>Wed, 16 Mar 2022 12:01:51 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/20-learnmapreduce/</guid>
-<description>为什么 MapReduce 的思想朴素，而意义重大？
+    </item>
+    
+    <item>
+      <title>迅速掌握 MapReduce</title>
+      <link>http://ccviolett.github.io/posts/20-learnmapreduce/</link>
+      <pubDate>Wed, 16 Mar 2022 12:01:51 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/20-learnmapreduce/</guid>
+      <description>为什么 MapReduce 的思想朴素，而意义重大？
 MapReduce 为分布式计算解决了以下几个问题：
  如何解决单个计算机计算失败或系统异常，导致结果不准确？ 如何解决同步问题，不让单个计算机拖慢整个计算过程？ 如何解决分布式内存不共享的问题？  MapReduce 的设计，从一开始就是要让其可以运行在 Commodity Server 上面，允许程序运行时出现单点任务错误并且能够自动重启相应的任务。合理定义了各细小任务之间的同步或者称作数据交互的时点。抽象出来的 mapper 和 reducer 足够简单（起码在 Spark 出来之前如此），让分布式计算的门槛被大大降低。这才是整个 MapReduce 框架重要的意义所在。</description>
-</item>
-<item>
-<title>MIT6.824 学习笔记</title>
-<link>http://ccviolett.github.io/posts/19-mit6_824/</link>
-<pubDate>Tue, 15 Mar 2022 11:31:59 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/19-mit6_824/</guid>
-<description> 通读 MapReduce 论文，了解分布式计算的基本思想。 认真去看 Lecture 1: Introduction，了解整个课程的结构，并完全清楚 MapReduce 框架。 完整地看完 Go 语言之旅 并完成所有练习 了解 Lab 1: MapReduce 的目标，能够按照 Lab 中的提示跑通命令。 利用所学 Go 知识将 mrsequential.go 看懂 通过 golang 中的 rpc 包用法 学习 rpc  </description>
-</item>
-<item>
-<title>220315</title>
-<link>http://ccviolett.github.io/todo/220315/</link>
-<pubDate>Tue, 15 Mar 2022 10:18:51 +0800</pubDate>
-<guid>http://ccviolett.github.io/todo/220315/</guid>
-<description>给大家见识一下灵魂画手</description>
-</item>
-<item>
-<title>如何制作一份好的简历？</title>
-<link>http://ccviolett.github.io/posts/18-howtomakeresume/</link>
-<pubDate>Sat, 12 Mar 2022 13:09:48 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/18-howtomakeresume/</guid>
-<description>一、基本原则  （一）篇幅 （二）排版 倒 L 布局（慎用） 什么是 ATS 系统？   二、表述方法——STAR法则 三、具体写法  （一）工作经历 （二）专业技能 （三）个人简介   四、相关链接 附件1：什么是ATS？如何写一个简历打败机器人   一、基本原则    海选阶段，大部分简历都只会扫上一眼，所以我们需要让 HR 在一眼之内尽可能看到更多的内容。
+    </item>
+    
+    <item>
+      <title>MIT6.824 学习笔记</title>
+      <link>http://ccviolett.github.io/posts/19-mit6_824/</link>
+      <pubDate>Tue, 15 Mar 2022 11:31:59 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/19-mit6_824/</guid>
+      <description> 通读 MapReduce 论文，了解分布式计算的基本思想。 认真去看 Lecture 1: Introduction，了解整个课程的结构，并完全清楚 MapReduce 框架。 完整地看完 Go 语言之旅 并完成所有练习 了解 Lab 1: MapReduce 的目标，能够按照 Lab 中的提示跑通命令。 利用所学 Go 知识将 mrsequential.go 看懂 通过 golang 中的 rpc 包用法 学习 rpc  </description>
+    </item>
+    
+    <item>
+      <title>220315</title>
+      <link>http://ccviolett.github.io/todo/220315/</link>
+      <pubDate>Tue, 15 Mar 2022 10:18:51 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220315/</guid>
+      <description>给大家见识一下灵魂画手</description>
+    </item>
+    
+    <item>
+      <title>如何制作一份好的简历？</title>
+      <link>http://ccviolett.github.io/posts/18-howtomakeresume/</link>
+      <pubDate>Sat, 12 Mar 2022 13:09:48 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/18-howtomakeresume/</guid>
+      <description>一、基本原则  （一）篇幅 （二）排版 倒 L 布局（慎用） 什么是 ATS 系统？   二、表述方法——STAR法则 三、具体写法  （一）工作经历 （二）专业技能 （三）个人简介   四、相关链接 附件1：什么是ATS？如何写一个简历打败机器人   一、基本原则    海选阶段，大部分简历都只会扫上一眼，所以我们需要让 HR 在一眼之内尽可能看到更多的内容。
 各种花里胡哨的排版或是视觉效果，只会干扰 HR 迅速在简历上筛选有用信息，HR 不会在意你的简历用了什么模板，只会在意你的简历是否易读。
 所以我们要尽可能站在 HR 的角度去写简历，多多换位思考。
  零经验同学常见的误区：
@@ -1094,13 +1396,15 @@ MapReduce 为分布式计算解决了以下几个问题：
 （二）排版    尽量简洁，做减法而不是加法。
 不要五颜六色的图标和分界线，不要有大块大块地留白去展示排版艺术，不要乱使用可视化去展示模糊、主管的信息。
 那些花花绿绿的布局只会分散掉简历内容的重点，格式统一、规范、白纸黑字、重点清晰的模板就是好模板。</description>
-</item>
-<item>
-<title>【持续更新】如何通过问题学习系统论？</title>
-<link>http://ccviolett.github.io/posts/17-learnsystemstheory/</link>
-<pubDate>Fri, 11 Mar 2022 09:50:49 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/17-learnsystemstheory/</guid>
-<description>一、系统的组成 二、环境与信息 三、结构与功能 四、属性和形态 五、东方系统思想溯源 六、西方系统思想溯源 七、社会系统观 八、生态系统观   一、系统的组成    问：请找一个系统，区分出其中的构材件与连接件，并说明在该系统中，哪一部分起到的作用更大，为什么？
+    </item>
+    
+    <item>
+      <title>【持续更新】如何通过问题学习系统论？</title>
+      <link>http://ccviolett.github.io/posts/17-learnsystemstheory/</link>
+      <pubDate>Fri, 11 Mar 2022 09:50:49 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/17-learnsystemstheory/</guid>
+      <description>一、系统的组成 二、环境与信息 三、结构与功能 四、属性和形态 五、东方系统思想溯源 六、西方系统思想溯源 七、社会系统观 八、生态系统观   一、系统的组成    问：请找一个系统，区分出其中的构材件与连接件，并说明在该系统中，哪一部分起到的作用更大，为什么？
 答：以煤气罐这个系统为例，构材件就是大大的罐子，而连接件就是瓶口那个小小的阀门。一说到煤气罐，大家脑海里第一出现的就是那个蓝色的大刚瓶，之后才会考虑到大刚瓶上的阀门。我认为，在煤气罐这个系统中，连接件是更重要的。如果构材件〔罐子〕没有了连接件〔阀门〕，那它根本不可能锁住气体。而且，如果罐子完整，阀门出问题的话，同样不能锁住气体。就算大罐子坏了，只要阀门还能用，用个小罐子，多装几次，同样可以装满一个大罐子的量。但如果阀门坏了，不管大罐子还是小罐子，都装不了气体了。
 二、环境与信息    问：
 一派意见认为，宇宙没有环境，因为这就是一切事物的总和或全体。
@@ -1122,21 +1426,25 @@ MapReduce 为分布式计算解决了以下几个问题：
 答：
 “大连”蒋文强的事迹是一个典型的自组织。他本想去长沙，却误入了回武汉的专门车厢，然后在武汉下车，发现高铁站不再售票了，被迫滞留武汉。没有住的地方，没有车，他就只能在网上搜索。无意间搜到了志愿者，就看到招聘的信息，映入眼帘“包吃包住”的信息成功引起了他的注意。他就这样进入到武汉的医院当起了一名志愿者，并一不小心成为了网红。他在武汉下车后就不得不改变原有的目标——长沙，他没有提前的准备，也没有外界的援助，只能自己去应对所有问题，这就是典型的自组织。当今疫情之下，个人也是一种自组织。就像大学生，开学了的要频繁地做核酸检测，线下课程也变成了线上，老师和学生都要改变原来的计划去更好的教和学。还没开学的甚至是快要开学的，都要退票，回家，在家里上网课。我认为社会有的自组织和预组织，因为这场突然爆发的疫情，虽然已经没有疫情初期那样令人恐慌，但是人们的生活还是受到了很大的影响。社会各界必须联结起来，积极应对疫情给我们带来的挑战，灵活应对各种突发情况。这时候，就难免要改变我们原来的目标了，就是自组织了；有时候甚至要目标，信息，行动一起改变，那就是预组织过程了。国家的话，就更接近于他组织和自组织了，因为，国家的一些策略一般都是不会轻易改变的，只是会对近期的突发情况作出重要指示。国家策略指示社会和个人的行动，个人和社会的行为也会对国家产生影响。
 八、生态系统观    问：</description>
-</item>
-<item>
-<title>如何快速掌握 CAD？</title>
-<link>http://ccviolett.github.io/posts/16-learncad/</link>
-<pubDate>Wed, 09 Mar 2022 09:05:25 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/16-learncad/</guid>
-<description>快捷键     单击左键：矩形选择 长按左键：套索选择 鼠标中键：拖拽 F8：正交  命令集     多段线（PL）：选择起始点，输入 W 设置线宽，分别输入起始宽度和端点宽度（宽度不同则可绘制梯形或三角形），输入长度 线段（L）：带角度的线段：输入 @ 指定线段长度，再输入 &amp;lt; 指定角度，随后空格确认 圆（C) 偏移（O） 旋转（RO）：选择要旋转的对象，空格确认，再选择基准点，输入角度 倒角（F）：直接连接：R -&amp;gt; 0 -&amp;gt; 选择两个对象 移除（TR）：先选择用来限制的边界，空格确认后，单击需要移除的部分，即可去掉限制边界内或外部分的线条 正方形（POL）：选择中心 弧（ARC）：先选择弧的一个点，输入 E，选择另一个端点，随后继续操作，会在逆时针方向生成弧，按 Ctrl 可切换方向 复制（CO） 等分（DIV） 对齐（AL）：可以将做好的部分缩放对接到其他部分去 曲线（SPL）：多点拟合曲线，可用于作局部剖视图 打断（BR） 填充（HAT） 倒角（CHA） 圆角（FIL） 镜像（MI） 阵列（AR） 箭头（LE）：可以输入 S 来设置箭头类型 公差（TOL） 缩放（SC) 块（B）与分解（X）：打包成块方便多次重复使用、分解便于根据情况修改细节 坐标系（UCS） 编辑文本（ED）  标注上下误差    输入 上标^下标，然后键入回车
+    </item>
+    
+    <item>
+      <title>如何快速掌握 CAD？</title>
+      <link>http://ccviolett.github.io/posts/16-learncad/</link>
+      <pubDate>Wed, 09 Mar 2022 09:05:25 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/16-learncad/</guid>
+      <description>快捷键     单击左键：矩形选择 长按左键：套索选择 鼠标中键：拖拽 F8：正交  命令集     多段线（PL）：选择起始点，输入 W 设置线宽，分别输入起始宽度和端点宽度（宽度不同则可绘制梯形或三角形），输入长度 线段（L）：带角度的线段：输入 @ 指定线段长度，再输入 &amp;lt; 指定角度，随后空格确认 圆（C) 偏移（O） 旋转（RO）：选择要旋转的对象，空格确认，再选择基准点，输入角度 倒角（F）：直接连接：R -&amp;gt; 0 -&amp;gt; 选择两个对象 移除（TR）：先选择用来限制的边界，空格确认后，单击需要移除的部分，即可去掉限制边界内或外部分的线条 正方形（POL）：选择中心 弧（ARC）：先选择弧的一个点，输入 E，选择另一个端点，随后继续操作，会在逆时针方向生成弧，按 Ctrl 可切换方向 复制（CO） 等分（DIV） 对齐（AL）：可以将做好的部分缩放对接到其他部分去 曲线（SPL）：多点拟合曲线，可用于作局部剖视图 打断（BR） 填充（HAT） 倒角（CHA） 圆角（FIL） 镜像（MI） 阵列（AR） 箭头（LE）：可以输入 S 来设置箭头类型 公差（TOL） 缩放（SC) 块（B）与分解（X）：打包成块方便多次重复使用、分解便于根据情况修改细节 坐标系（UCS） 编辑文本（ED）  标注上下误差    输入 上标^下标，然后键入回车
 参数化    （一）绘制特定长度三角形     绘制任意三角形，并将其框选中 点击 自动约束，三角的顶点将变成约束点 点击 标注 中的 对其，选择要规范的线段的两个端点，单击确认尺寸线位置 在尺寸线的标注中输入指定的长度  （二）绘制带角度的直线     绘制一条任意直线，随后绘制一条水平线作为基准线 将其框选并点击 自动约束，端点将变成约束点 点击 标注 中的 角度，先选择基准线，然后选择要调整的直线，单击确认尺寸线位置 在尺寸线的标注中输入指定的角度  操作    绘制表面粗糙度     将“极轴追踪（F10）”打开，并在“草图设置”（可以从“对象捕捉”设置中进入）中将极轴角的增量设度为 30。 绘制两条直线。 绘制圆，输入 c，随后光标移至折处，向上出现延长线追踪，输入需要向上的高度即可确定圆心，随后通过垂足追踪与直线切即可。  绘制两圆的公切线     输入 L，输入 tan 后选择第一个圆圆弧，再输入 tan 后选择第二个圆圆弧。  标注非圆视图直径    选择标注命令，输入 M 或 T，输入 %%C尺寸 得到带直接符号的尺寸标注</description>
-</item>
-<item>
-<title>跟着 JetBrains Academy 学习 Java</title>
-<link>http://ccviolett.github.io/posts/15-learnjavawithjba/</link>
-<pubDate>Wed, 09 Mar 2022 08:31:03 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/15-learnjavawithjba/</guid>
-<description>学习地址：JetBrains Academy，通过 edu 邮箱验证后，可获得 3 个月免费使用时间，通过第一个项目后可额外获得 2 个月免费使用时间。
+    </item>
+    
+    <item>
+      <title>跟着 JetBrains Academy 学习 Java</title>
+      <link>http://ccviolett.github.io/posts/15-learnjavawithjba/</link>
+      <pubDate>Wed, 09 Mar 2022 08:31:03 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/15-learnjavawithjba/</guid>
+      <description>学习地址：JetBrains Academy，通过 edu 邮箱验证后，可获得 3 个月免费使用时间，通过第一个项目后可额外获得 2 个月免费使用时间。
 一个好用的在线 Java 编辑器：Json.cn 在线运行 Java
 一、命令行输入输出    输入：创建 Scanner 对象，接受从控制台的输入，通过 next() 获取下一个字符串（由空格或回车隔开），通过 nextLine() 读入一行数据。
 Scanner input = new Scanner(System.in); String str1 = input.next(); String str2 = input.nextLine(); int val1 = input.nextInt(); int val2 = Interger.parseInt(input.next()); 输出：
@@ -1144,80 +1452,96 @@ System.out.println(str); System.out.println(val); System.out.printf(&amp;#34;%d&
 字符串长度：int length()
 字符串匹配：
   int indexOf(String str, int startIndex = 0)：从指定的索引处开始，返回第一次出现的指定子字符串在此字符串中的索引。   int lastIndexOf(String str, int startIndex = 0) ：从指定的索引处开始向后搜索，返回在此字符串中最后一次出现的指定子字符串的索引。</description>
-</item>
-<item>
-<title>HP 笔记本突然黑屏无法充电无法启动怎么解决？</title>
-<link>http://ccviolett.github.io/posts/14-howtofixhp/</link>
-<pubDate>Tue, 08 Mar 2022 10:01:47 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/14-howtofixhp/</guid>
-<description>笔记本突然无法启动、无法启动，除去收到了严重外界损坏的情况，大概率是因为换季时空气干燥引起的静电堆积，导致笔记本启动的电源锁。
+    </item>
+    
+    <item>
+      <title>HP 笔记本突然黑屏无法充电无法启动怎么解决？</title>
+      <link>http://ccviolett.github.io/posts/14-howtofixhp/</link>
+      <pubDate>Tue, 08 Mar 2022 10:01:47 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/14-howtofixhp/</guid>
+      <description>笔记本突然无法启动、无法启动，除去收到了严重外界损坏的情况，大概率是因为换季时空气干燥引起的静电堆积，导致笔记本启动的电源锁。
 所以我们需要做的就是除去静电。
 而 HP 电脑除静电的方式比较奇葩，同时按下 Win + v + 电源键 一分钟左右，即可清理完毕，能正常开机。</description>
-</item>
-<item>
-<title>CF380C. Sereja and Brackets</title>
-<link>http://ccviolett.github.io/solution/cf380c/</link>
-<pubDate>Sun, 06 Mar 2022 13:28:04 +0800</pubDate>
-<guid>http://ccviolett.github.io/solution/cf380c/</guid>
-<description>一、题意    题目链接：Problem
+    </item>
+    
+    <item>
+      <title>CF380C. Sereja and Brackets</title>
+      <link>http://ccviolett.github.io/solution/cf380c/</link>
+      <pubDate>Sun, 06 Mar 2022 13:28:04 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/solution/cf380c/</guid>
+      <description>一、题意    题目链接：Problem
 给定一个括号序列，每次询问一个区间内合法的括号序列长度。
 二、题解    考虑线段树，每个节点维护区间内向左未匹配的括号数量、向右未匹配的括号数量和合法括号序列的数量，每次合并的时候，将左右区间未匹配的括号匹配即可。
 三、代码    通过链接：Submission
-#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; const int N = 1e6 + 10; int n; struct Node { int lhave, rhave, val; friend Node operator + (Node a, Node b) { if (a.rhave &amp;gt;= b.lhave) { return (Node) { a.lhave, b.rhave + (a.rhave - b.lhave), a.val + b.val + b.lhave }; } return (Node) { a.</description>
-</item>
-<item>
-<title>如何利用好 edu 邮箱？</title>
-<link>http://ccviolett.github.io/posts/13-makegooduseofedu/</link>
-<pubDate>Fri, 04 Mar 2022 08:16:29 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/13-makegooduseofedu/</guid>
-<description>一、JetBrains 全家桶    价值：上千美元
+#include &amp;lt;bits/stdc++.h&amp;gt; using namespace std;  const int N = 1e6 + 10;  int n;  struct Node { 	int lhave, rhave, val; 	friend Node operator + (Node a, Node b) { 	if (a.rhave &amp;gt;= b.lhave) { 	return (Node) { 	a.lhave, b.rhave + (a.rhave - b.lhave), a.val + b.</description>
+    </item>
+    
+    <item>
+      <title>如何利用好 edu 邮箱？</title>
+      <link>http://ccviolett.github.io/posts/13-makegooduseofedu/</link>
+      <pubDate>Fri, 04 Mar 2022 08:16:29 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/13-makegooduseofedu/</guid>
+      <description>一、JetBrains 全家桶    价值：上千美元
 Free Educational Licenses
 附赠 JetBrains Academy for Students 以学习各种课程。</description>
-</item>
-<item>
-<title>我的未来该去向何方？（二）——职业兴趣报告</title>
-<link>http://ccviolett.github.io/posts/11-myfuturecareer2/</link>
-<pubDate>Thu, 03 Mar 2022 16:05:14 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/11-myfuturecareer2/</guid>
-<description>本文摘自我的“北森生涯一体化平台”职业兴趣报告。
+    </item>
+    
+    <item>
+      <title>我的未来该去向何方？（二）——职业兴趣报告</title>
+      <link>http://ccviolett.github.io/posts/11-myfuturecareer2/</link>
+      <pubDate>Thu, 03 Mar 2022 16:05:14 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/11-myfuturecareer2/</guid>
+      <description>本文摘自我的“北森生涯一体化平台”职业兴趣报告。
    零、总论 一、我的特点 二、我的状况 三、不怎么感兴趣的事      零、总论    你最强的两类兴趣为：现实型、艺术型，你最弱的兴趣为：企业型。
 这三个兴趣的含义分别如下：
   兴趣类型：现实型 特点：手脚灵活，擅操作，爱运动 最热衷的事：摆弄机器或工具 最讨厌的事：大型社交活动     兴趣类型：艺术型 特点：理想化，崇尚美、个性、创新、激情 最热衷的事：创造有美感的新事物 最讨厌的事：单调重复，按部就班     兴趣类型：企业型 特点：喜欢竞争，追求掌控感 最热衷的事：在辩论中获胜，或组织、指导 最讨厌的事：复杂深奥的纯理论研究   一、我的特点    你很喜欢动手从事某些艺术创作，习惯于用电脑、机械、仪器、多媒体、网页、美工素材等来展示你的创意才华。你虽然喜欢艺术性的工作，但不喜欢把美感停留在理念中，而是希望实现在具体的事务和过程中，特别是在具体的材料对象的操作中体现自己的创造性，把丰富的想象力和眼前的事物或活动联系起来。你爱好各种实实在在的操作类工具，乐于动手使用工具或者机器设备，你的想法不受传统的限制，喜欢琢磨和观察，善于积累经验，习惯于思考和开发物品的更多用途，对具体的结构之美特别有兴趣。
 你做事认真执着，注重结果和个人标准，常为一个细节而百折不挠，但并不过于追求长远期望；你喜欢独立工作，希望将来从事能够体现一技之长的实在的职业。
 你是一个务实、谦逊、朴素、真诚的人。你的生活品味和行为举止很有个性，生活随意而不注重规范。你不太喜欢交际，与朋友的来往话也不多，更喜欢言简意赅的表达和坦率直言。
 二、我的状况     使你如鱼得水的环境：操作性强并能发挥创造性能力的环境，与人打交道不多的工作 你乐衷的活动或课程：美术、雕塑、模型、手工艺、电脑绘图等 你特别钟爱的专业有：美术、设计、建筑等。 你可能喜欢的职业有：建筑师、土木工程师、城市规划、工业设计师、工艺或者美术设计师等。  三、不怎么感兴趣的事    你对经济性事务不感兴趣，不好说服、影响和领导他人，因此，在职业生涯规划过程中，你可能要避免一些对领导力要求较高的发展方向，如经营管理、政府官员、外事外交等。</description>
-</item>
-<item>
-<title>我的未来该去向何方？（一）——职业性格报告</title>
-<link>http://ccviolett.github.io/posts/10-myfuturecareer1/</link>
-<pubDate>Thu, 03 Mar 2022 16:04:14 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/10-myfuturecareer1/</guid>
-<description>本文摘自我的“北森生涯一体化平台”职业性格报告。
+    </item>
+    
+    <item>
+      <title>我的未来该去向何方？（一）——职业性格报告</title>
+      <link>http://ccviolett.github.io/posts/10-myfuturecareer1/</link>
+      <pubDate>Thu, 03 Mar 2022 16:04:14 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/10-myfuturecareer1/</guid>
+      <description>本文摘自我的“北森生涯一体化平台”职业性格报告。
    零、总论 一、你的特点 二、生活中的你 三、优势 四、岗位特质 五、不足和改进 六、成功秘诀      零、总论    你的类型是公关型——天下没有不可能的事情。
 一、你的特点     你对周围的人和事物观察得相当透彻，能够洞察现在和未来。随时可以发现事物的深层含义和意义，并能看到他人看不到的事物内在的抽象联系。 你崇尚和谐善意、情感丰富、热情、友好、体贴、情绪强烈，需要他人的肯定，也乐于称赞和帮助他人。总是避免矛盾，更在意维护人际关系，愿意花费很多心思，结交各种各样的人，而不是做事。 你富有活力，待人宽厚，有同情心，有风度，喜欢让人高兴。只要可能，你就会使自己适应他人的需要和期望。你倾向于运用情感作出判断，决策时通常考虑他人的感受。 你有丰富的想象力，善于创新，自信，富有灵感和新思想，善于寻找新方法，更注重理解，而不是判断。你喜欢提出计划，并大力将其付诸实践。你特别善于替别人发现机会，并有能力且愿意帮助他们采取行动抓住机会。  二、生活中的你     重视个人价值，崇尚理想 不遵守传统，甚至对之毫无敬意，也不尊重权威和规则 穿着打扮显得非常有创意，有一副艺术家的派头，不在乎别人的意见 爱好广泛，外向，友好，喜欢置身于人群当中，善于用话语抓住人们的注意力 言谈时语言辛辣，同时又充满幽默和比喻  三、优势     能统观全局，能看出行为和思想之间的潜在含义；能够打破常规思考，考虑事情发展可能出现的新情况 敢于冒险、敢于尝试新事物，能克服障碍，能够在任何你真正感兴趣的领域中成功 适应能力强，能迅速改变自己的行事速度及目标，兴趣广泛、对自己感兴趣的东西接受能力强 对收集自己所需信息有一种天然的求知欲和技能 交际能力强，能以有感染力的热诚和精力激励他人 能洞察别人，能理解他们的需要和动机 能够把自己的天赋与别人的兴趣和能力结合起来，善于赋予合适的人以合适的职位/任务 富于创造，是相当棒的问题解决者  四、岗位特质     工作环境轻松，人际友好，能与不同特点的人一起工作，避免冲突和矛盾 工作充满乐趣，富于挑战，允许你自由发挥灵感和创造力，参与冒险 可以创造新的想法、产品、服务或帮助别人，然后看到计划变为现实 工作环境与你的理念、个人价值观一致 规则和限制少，能够自己安排工作的进程和节奏 工作不要求处理太多重复性、程序性、常规性、琐碎的事物  五、不足和改进     你过分关注事物之间的联系、可能性，忽视当下事物的具体细节、过程，因此建议你关注重要的细节，避免总是丢三落四 你非常理想化，容易忽略现实和事物的逻辑，只要感兴趣，什么都去做。你常常喜欢着手许多事情，无法专注于一件事情，对事情步入正轨后的常规部分不感兴趣，也不喜欢重复和例行的事物，很少能把事情“从头做到尾”。你总能看到太多的可能性，因此无法确定哪些事情是自己真正追求的。建议你认真选择一个目标，善始善终，以免浪费时间和挥霍自己的天赋。 你喜欢即兴发挥，不愿意筹备和计划，做事没有条理，或不善于分清主次顺序，独自工作时经常效率较低。如果你要有所作为，应尽量使自己的新思路现实，可操作。与更实际的人一起工作会对你很有帮助，这也符合你的特点，因为你不喜欢独自工作。因此，还建议你提升时间管理能力。 你组织纪律性比较弱，不肯服从，不能容忍过于严谨的机构或个人。因此，倘若你在制度比较完善的企事业单位工作或遇到要求严格的上级，建议你尽可能地规范自己的工作态度。  六、成功秘诀     判断和把握事情轻重，优先处理重要的事情 集中精力于某一目标，尽量将事情和计划落实 减少外界无关因素的干扰，对自己接受的事情坚持到底，不要轻易妥协  </description>
-</item>
-<item>
-<title>有那些常用的 PS 操作？</title>
-<link>http://ccviolett.github.io/posts/9-howtouseps/</link>
-<pubDate>Thu, 03 Mar 2022 14:24:34 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/9-howtouseps/</guid>
-<description>一、将照片适当裁剪缩放成指定像素    选择 顶栏-&amp;gt;图像-&amp;gt;图像大小，先在锁定长宽比的情况下，使其中一个符合指定像素，将图像缩放到指定大小。
+    </item>
+    
+    <item>
+      <title>有那些常用的 PS 操作？</title>
+      <link>http://ccviolett.github.io/posts/9-howtouseps/</link>
+      <pubDate>Thu, 03 Mar 2022 14:24:34 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/9-howtouseps/</guid>
+      <description>一、将照片适当裁剪缩放成指定像素    选择 顶栏-&amp;gt;图像-&amp;gt;图像大小，先在锁定长宽比的情况下，使其中一个符合指定像素，将图像缩放到指定大小。
 随后选择 左栏-&amp;gt;裁剪工具，在上边栏中，选择 宽 x 高 x 分辨率，在随后的第一个空中输入宽，第二个空中输入高，第三个空中输入分辨率，拖动图像至合适位置按 Enter 键裁剪即可。
 注意：关于这里的分辨率，可以通过底栏查看原分辨率，推荐不要降低分辨率，直接填上原来的数字即可。</description>
-</item>
-<item>
-<title>Git 进阶使用技巧：从上手到熟练</title>
-<link>http://ccviolett.github.io/posts/8-howtousegit/</link>
-<pubDate>Tue, 01 Mar 2022 19:20:44 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/8-howtousegit/</guid>
-<description>git pull 时提示需要 merge     将本地文件暂存 git stash 查看暂存的版本号 git stash list，stash@{XXX} 即为版本号 拉取远程仓库 git pull 还原暂存 git stash pop stash@{XXX}，会提示冲突的部分如下  Auto-merging XXX CONFLICT (content): Merge conflict in XXX 处理文件 XXX 中冲突的部分，会有 Updated upstream 和 Stashed changes 两部分，处理好冲突之后删除标识。 删除最新暂存 git stash drop  </description>
-</item>
-<item>
-<title>怎么成为一个牛客网出题人？</title>
-<link>http://ccviolett.github.io/posts/7-nowcoderup/</link>
-<pubDate>Tue, 01 Mar 2022 11:18:17 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/7-nowcoderup/</guid>
-<description>首先看到牛客网发布的招募文档原创编程题出题官招募，了解出题流程、出题人要求、出题要求以及薪资。
+    </item>
+    
+    <item>
+      <title>Git 进阶使用技巧：从上手到熟练</title>
+      <link>http://ccviolett.github.io/posts/8-howtousegit/</link>
+      <pubDate>Tue, 01 Mar 2022 19:20:44 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/8-howtousegit/</guid>
+      <description>git pull 时提示需要 merge     将本地文件暂存 git stash 查看暂存的版本号 git stash list，stash@{XXX} 即为版本号 拉取远程仓库 git pull 还原暂存 git stash pop stash@{XXX}，会提示冲突的部分如下  Auto-merging XXX CONFLICT (content): Merge conflict in XXX 处理文件 XXX 中冲突的部分，会有 Updated upstream 和 Stashed changes 两部分，处理好冲突之后删除标识。 删除最新暂存 git stash drop  </description>
+    </item>
+    
+    <item>
+      <title>怎么成为一个牛客网出题人？</title>
+      <link>http://ccviolett.github.io/posts/7-nowcoderup/</link>
+      <pubDate>Tue, 01 Mar 2022 11:18:17 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/7-nowcoderup/</guid>
+      <description>首先看到牛客网发布的招募文档原创编程题出题官招募，了解出题流程、出题人要求、出题要求以及薪资。
   关于报酬结算的独立文档：兼职人员劳务报酬结算规则
   关于出题要求的独立文档：编程题出题流程与要求，包含了对知识点、原创性、出题模式、题目描述、样例和数据要求的简要说明。
   关于出题要求的完整博客：牛客出题文档须知
@@ -1235,13 +1559,15 @@ Free Educational Licenses
 官方人员会将你拉进牛客出题人的群。
 在几小时之后，就会收到提醒签署电子协议的短信，根据短信中的链接，在线签署协议。注意：此步需要提供本人身份证正反面照片，用于身份确认。
 二、系列赛出题人    系列赛出题文档：牛客系列赛难度参考</description>
-</item>
-<item>
-<title>如何运用群论计算本质不同的方案数？</title>
-<link>http://ccviolett.github.io/posts/6-grouptheoryinoi/</link>
-<pubDate>Tue, 01 Mar 2022 10:22:18 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/6-grouptheoryinoi/</guid>
-<description>零、群    定义：$(S, .)$ 由集合 S 和操作 . 构成群。
+    </item>
+    
+    <item>
+      <title>如何运用群论计算本质不同的方案数？</title>
+      <link>http://ccviolett.github.io/posts/6-grouptheoryinoi/</link>
+      <pubDate>Tue, 01 Mar 2022 10:22:18 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/6-grouptheoryinoi/</guid>
+      <description>零、群    定义：$(S, .)$ 由集合 S 和操作 . 构成群。
 一个群需要满足以下的四个性质：
   封闭性
 群中的任意两个元素进行运算之后得到的结果，还是群中的元素。
@@ -1258,13 +1584,15 @@ Free Educational Licenses
 难点在于求每种置换中环的数量，以及化简式子。
  Tips: 环
  一个置换中环的数量，就是将置换进行无数次也不会互相影响的部分数量。 如 (1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 1) 是一个环，(1 -&amp;gt; 3 -&amp;gt; 1)(2 -&amp;gt; 4 -&amp;gt; 2) 是两个环，(1 -&amp;gt; 1)(2 -&amp;gt; 3 -&amp;gt; 2)(4 -&amp;gt; 4) 是三个环。   三、例题      给一个 n 个点的环染 m 种颜色，问有多少种本质不同的染色方案。定义本质相同的方案可以通过旋转得到。</description>
-</item>
-<item>
-<title>杂碎记录</title>
-<link>http://ccviolett.github.io/record/</link>
-<pubDate>Mon, 28 Feb 2022 21:19:44 +0800</pubDate>
-<guid>http://ccviolett.github.io/record/</guid>
-<description>做一个扫码自动可视化显示、统计、累计摄入量和食品添加剂的软件
+    </item>
+    
+    <item>
+      <title>杂碎记录</title>
+      <link>http://ccviolett.github.io/record/</link>
+      <pubDate>Mon, 28 Feb 2022 21:19:44 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/record/</guid>
+      <description>做一个扫码自动可视化显示、统计、累计摄入量和食品添加剂的软件
  Aegisub Audacity FanselineVisualizer 7-Zip DaVinci Feishu msys2 git OBS PicGo Pentablet Snipaste v2rayN vlc  DJI Pocket2 旋转 90 度即可进入竖屏拍摄模式。
 一、值得思考的纪录片 《为什么贫穷？ Why Poverty?》    推荐理由：[TODO]
 豆瓣链接：为什么贫穷？ Why Poverty?
@@ -1277,29 +1605,35 @@ Free Educational Licenses
 解决方案：安装 libxml2、libxslt 和 libxslt-devel
 pip 设置国内源：
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ npm/npx 设置国内源：</description>
-</item>
-<item>
-<title>创新实验班 Web 开发教学计划</title>
-<link>http://ccviolett.github.io/posts/5-learnwithteam/</link>
-<pubDate>Sun, 27 Feb 2022 22:38:37 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/5-learnwithteam/</guid>
-<description>一、Git入门 二、HCJ（HTML + CSS + Javascript) 快速入门  （一）HTML （二）CSS （三）JavaScript   三、安装mysql和php 四、岗位了解 五、前期知识 六、分流  1. 前端 2. 后端 3. Android 4. 产品经理 5. UI   七、相关链接   一、Git入门    视频教程：Git + GitHub 10分钟完全入门
+    </item>
+    
+    <item>
+      <title>创新实验班 Web 开发教学计划</title>
+      <link>http://ccviolett.github.io/posts/5-learnwithteam/</link>
+      <pubDate>Sun, 27 Feb 2022 22:38:37 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/5-learnwithteam/</guid>
+      <description>一、Git入门 二、HCJ（HTML + CSS + Javascript) 快速入门  （一）HTML （二）CSS （三）JavaScript   三、安装mysql和php 四、岗位了解 五、前期知识 六、分流  1. 前端 2. 后端 3. Android 4. 产品经理 5. UI   七、相关链接   一、Git入门    视频教程：Git + GitHub 10分钟完全入门
  配置基本用户信息  git config --global user.name &amp;lt;你的用户名&amp;gt; git config --global user.email &amp;lt;你的邮箱地址&amp;gt; 初始化本地仓库 git init 关联远程仓库 git remote add &amp;lt;自定义仓库名&amp;gt; &amp;lt;远程仓库地址&amp;gt; 从远程服务器克隆一个仓库 git clone &amp;lt;远程仓库的url&amp;gt; 显示当前工作目录下的提交状态 git status 将指定文件Stage（标记为将要被提交的文件） git add &amp;lt;文件路径&amp;gt; 将指定文件Unstage（取消标记） git reset &amp;lt;文件路径&amp;gt; 创建一个提交并附上提交信息 git commit -m &amp;quot;提交信息&amp;quot; 显示提交历史 git log 向远程仓库推送（Push） git push 从远程仓库拉取（Pull） git pull 分支（branch）  master是主分支（默认），分支在不合并的情况下是相互独立的 git branch 查看所有分支 git branch &amp;lt;分支名字&amp;gt; 新建分支 git checkout &amp;lt;分支名字&amp;gt; 切换分支 git branch -m &amp;lt;旧名字&amp;gt; &amp;lt;新名字&amp;gt; 修改分支名 git branch -d &amp;lt;分支名字&amp;gt; 删除分支   签出（check out） git checkout &amp;lt;提交的hash&amp;gt;  如果一开始不太熟悉命令行操作，建议使用 GitKraken，第一次启动会提示登录，然后填写签名信息（随便填，不一定要真实），就可以点左上角的文件夹-&amp;gt;Init创建代码仓库（Repository）了。</description>
-</item>
-<item>
-<title>张紫琪的博客</title>
-<link>http://ccviolett.github.io/her/</link>
-<pubDate>Sun, 27 Feb 2022 09:54:51 +0800</pubDate>
-<guid>http://ccviolett.github.io/her/</guid>
-<description>她还没有自己的博客！那就和我在一起吧……
+    </item>
+    
+    <item>
+      <title>张紫琪的博客</title>
+      <link>http://ccviolett.github.io/her/</link>
+      <pubDate>Sun, 27 Feb 2022 09:54:51 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/her/</guid>
+      <description>她还没有自己的博客！那就和我在一起吧……
 期待她的文章。</description>
-</item>
-<item>
-<title>如何使用 Hugo Shortcodes 来复用代码或嵌入 HTML？</title>
-<link>http://ccviolett.github.io/posts/4-hugoshortcodes/</link>
-<pubDate>Sat, 26 Feb 2022 21:46:10 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/4-hugoshortcodes/</guid>
-<description>官方学习链接：https://gohugo.io/templates/shortcode-templates/
+    </item>
+    
+    <item>
+      <title>如何使用 Hugo Shortcodes 来复用代码或嵌入 HTML？</title>
+      <link>http://ccviolett.github.io/posts/4-hugoshortcodes/</link>
+      <pubDate>Sat, 26 Feb 2022 21:46:10 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/4-hugoshortcodes/</guid>
+      <description>官方学习链接：https://gohugo.io/templates/shortcode-templates/
 一、新建 Shortcode    假设要新建的 Shortcode 名称为 test。
 在博客文件夹下的 layouts/shortcodes/ 文件夹（不存在则新建）中创建文件 test.html，在文件中写入 Shortcode 片段即可。
 二、调用与传参    由于渲染的原因，无法在文章里完整演示，需要自行在以下标签之外添加两层大括号，
@@ -1309,45 +1643,53 @@ pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ npm/npx 
   双标签内部文本调用：&amp;lt;test&amp;gt; xxxxx &amp;lt;/test&amp;gt;；引用参数：.Inner 得到纯文本 xxxxx。
   双标签内部渲染调用：%test% xxxxx %/test%；引用参数：.Inner 得到经过 Markdown 渲染后的 xxxxx。
   </description>
-</item>
-<item>
-<title>关于</title>
-<link>http://ccviolett.github.io/about/</link>
-<pubDate>Sat, 26 Feb 2022 20:48:46 +0800</pubDate>
-<guid>http://ccviolett.github.io/about/</guid>
-<description>我的简历    姓名：罗潇阳
+    </item>
+    
+    <item>
+      <title>关于</title>
+      <link>http://ccviolett.github.io/about/</link>
+      <pubDate>Sat, 26 Feb 2022 20:48:46 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/about/</guid>
+      <description>我的简历    姓名：罗潇阳
 性别：男
 生日：2003 年 11 月 25 日
 获奖经历：
  ICPC2021 昆明站银牌 ICPC2021 沈阳站铜牌 CCPC2021 桂林站银牌 CCPC2021 广州站银牌 NOI2020 铜牌（255 分, 215 名） CSP2019提高一等奖（356 分, 867 名） NOIP2018提高一等奖（378 分，1630 名） NOIP2017提高一等奖（315 分，1836名） NOIP2016提高二等奖（176 分，3494名） NOIP2016普及一等奖（350 分，190 名） NOIP2015普及二等奖（110 分，3070名）  相关文件：
  ICPC2021 昆明站银牌 ICPC2021 沈阳站铜牌 CCPC2021 桂林站银牌 CCPC2021 广州站银牌  教育经历：
  大学就读于 东北大学秦皇岛分校 控制工程学院机械专业 高中就读于 长沙市第一中学 初中就读于 长沙市一中岳麓中学 小学就读于 小榄广源实验小学  技术支持    数据分析：百度统计</description>
-</item>
-<item>
-<title>如何解决 Github Page 仓库更新后页面无变化的问题？</title>
-<link>http://ccviolett.github.io/posts/3-nojekyll/</link>
-<pubDate>Sat, 26 Feb 2022 20:05:05 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/3-nojekyll/</guid>
-<description>我们可以在仓库页面上看见最近一次地 push 左边有个红叉，右侧边栏 Environments 中显示 github-pages (Failure)。
+    </item>
+    
+    <item>
+      <title>如何解决 Github Page 仓库更新后页面无变化的问题？</title>
+      <link>http://ccviolett.github.io/posts/3-nojekyll/</link>
+      <pubDate>Sat, 26 Feb 2022 20:05:05 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/3-nojekyll/</guid>
+      <description>我们可以在仓库页面上看见最近一次地 push 左边有个红叉，右侧边栏 Environments 中显示 github-pages (Failure)。
 这是因为 Github Page 不会直接展示上传的裸的静态文件，而会默认使用 Jekyll 渲染一次，这样在 Build 环节就会出现问题，后续的 Deploy 环节也就会出问题，于是无论怎么往仓库 Push 都不能改变页面。
 需要在仓库中新建一个 .nojekyll 的空文件来指明不需要 Github 自作主张地用 Jekyll 渲染。
 相关链接：Static site generators</description>
-</item>
-<item>
-<title>Windows 有哪些好用的隐藏功能？</title>
-<link>http://ccviolett.github.io/posts/2-windowshidefun/</link>
-<pubDate>Fri, 25 Feb 2022 17:56:43 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/2-windowshidefun/</guid>
-<description>一、自带截图    Win + Shift + S 即可唤出自带的截图软件。
+    </item>
+    
+    <item>
+      <title>Windows 有哪些好用的隐藏功能？</title>
+      <link>http://ccviolett.github.io/posts/2-windowshidefun/</link>
+      <pubDate>Fri, 25 Feb 2022 17:56:43 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/2-windowshidefun/</guid>
+      <description>一、自带截图    Win + Shift + S 即可唤出自带的截图软件。
 二、自带 Linux 子系统    依次打开控制面板 -&amp;gt; Windows 功能 -&amp;gt; 适用于 Linux 的 Windows 子系统，勾选上，重启电脑。
 随后在 Microsoft Store 中搜索想要安装的 Linux 子系统，如 Ubuntu，点击 获取，随后跟随指示完成即可。</description>
-</item>
-<item>
-<title>Hugo 的使用&amp;配置中有那些技巧与坑？</title>
-<link>http://ccviolett.github.io/posts/1-hugousage/</link>
-<pubDate>Mon, 17 Jan 2022 11:24:56 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/1-hugousage/</guid>
-<description>零、安装 一、使用 二、配置 三、踩坑 四、技巧     零、安装    这里以 Windows 下安装为例。
+    </item>
+    
+    <item>
+      <title>Hugo 的使用&amp;配置中有那些技巧与坑？</title>
+      <link>http://ccviolett.github.io/posts/1-hugousage/</link>
+      <pubDate>Mon, 17 Jan 2022 11:24:56 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/1-hugousage/</guid>
+      <description>零、安装 一、使用 二、配置 三、踩坑 四、技巧     零、安装    这里以 Windows 下安装为例。
 直接在 Release 页面 下载对应平台压缩包，解压后将路径添加到系统 PATH 中，或者直接将 hugo.exe 扔进 C:\Windows\System 中。
 一、使用    新建网站：hugo new site myblog
 新建文章：hugo new posts/xxxx.md
@@ -1357,14 +1699,28 @@ pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ npm/npx 
 代码高亮配置    官方文档：Syntax Highlighting
 Hugo 中集成了 Chroma 来进行代码高亮。
 TLDR：将下列设置复制到配置文件中（以 TOML 为例）
-[markup] [markup.</description>
-</item>
-<item>
-<title>为什么我要重新开始写博客？</title>
-<link>http://ccviolett.github.io/posts/0-resume/</link>
-<pubDate>Mon, 17 Jan 2022 08:05:59 +0800</pubDate>
-<guid>http://ccviolett.github.io/posts/0-resume/</guid>
-<description>一切都应该重新开始了……
+[markup]  [markup.</description>
+    </item>
+    
+    <item>
+      <title>联系</title>
+      <link>http://ccviolett.github.io/contact/</link>
+      <pubDate>Mon, 17 Jan 2022 08:05:59 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/contact/</guid>
+      <description>关注我 @CCViolett。
+QQ: 33405751717
+邮箱：
+ 3340751717@qq.com a1592710567@126.com 202113143@stu.neu.edu.cn 202113143@stu.neuq.edu.cn  或者直接在下方留言。</description>
+    </item>
+    
+    <item>
+      <title>为什么我要重新开始写博客？</title>
+      <link>http://ccviolett.github.io/posts/0-resume/</link>
+      <pubDate>Mon, 17 Jan 2022 08:05:59 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/0-resume/</guid>
+      <description>一切都应该重新开始了……
 一、从前    我叫罗潇阳，曾就读于长沙市第一中学，是一个普通的 OIer，现就读于东北大学秦皇岛分校，是一个普通的 ACMer，也是一名普通的机械类学生。
 我在高中时，对写博客很是痴迷，或者说是对折腾博客很痴迷。那时零零散散写了很多博客，每每学到什么就一定要写出来，长短不一，质量参差，花掉了数倍于学习的时间。
 后来写博客疲乏了，就去折腾折腾主题、往博客上加小功能。虽说这间接地为我打开了前端的大门，可又是耗掉数倍于学习的时间，至于博客也没怎么写了。
@@ -1398,28 +1754,21 @@ TLDR：将下列设置复制到配置文件中（以 TOML 为例）
 四、自我介绍    以前的英文名不再使用，现在改为了 Carmine Carlo，这是搭建博客的时候，临时在一个国外的宝宝起名网站上找的。
 其中，Carmine 是上帝后花园的意思，Carlo 是自由人的意思，选这两个词，主要是为了凑齐 CC （笑）。
 我的全称是 ccviolett，前面的 cc 是我为了方便注册域名随便加的，然后去凑了英文名 Carmine Carlo，所以里面的 Violett 才是关键。至于 Violett 是什么嘛……我从我的女朋友名字中取了一个“紫”字，然后翻译为了德语，便有了 Violett。</description>
-</item>
-<item>
-<title>联系</title>
-<link>http://ccviolett.github.io/contact/</link>
-<pubDate>Mon, 17 Jan 2022 08:05:59 +0800</pubDate>
-<guid>http://ccviolett.github.io/contact/</guid>
-<description>关注我 @CCViolett。
-QQ: 33405751717
-邮箱：
- 3340751717@qq.com a1592710567@126.com 202113143@stu.neu.edu.cn 202113143@stu.neuq.edu.cn  或者直接在下方留言。</description>
-</item>
-<item>
-<title/>
-<link>http://ccviolett.github.io/problem/1-arpcheat/</link>
-<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-<guid>http://ccviolett.github.io/problem/1-arpcheat/</guid>
-<description>ARP 欺骗攻击
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ccviolett.github.io/problem/1-arpcheat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ccviolett.github.io/problem/1-arpcheat/</guid>
+      <description>ARP 欺骗攻击
 题目描述    众所周知，计算机网络中，每个设备有一个唯一且固定的 MAC 地址、一个可能动态变化的 IP 地址和一个将 IP 映射为 MAC 地址的 ARP 表。
 当知道某台设备的 MAC 地址时，就可以直接与其通信，否则就需要通过 ARP 协议获取 MAC 地址。
 我们假设主机 A 的 IP 地址为192.168.1.1，MAC 地址为0A-11-22-33-44-01；主机 B 的 IP 地址为192.168.1.2，MAC 地址为0A-11-22-33-44-02。
 当主机 A 要与主机 B 通信时，地址解析协议可以将主机 B 的 IP 地址（192.168.1.2）解析成主机 B 的 MAC 地址，以下为工作流程：
  主机 A 在 ARP表中查找主机B的 IP 所匹配 MAC 地址。 如果没有找到映射，主机 A 将向网络中所有主机发送 ARP 请求，数据包中包含 A 的 MAC 地址与询问的 IP(192.168.1.2)。 主机 B 收到请求后发现与询问 IP 与自身 IP 匹配，于是直接向 A 发送 ARP 应答，数据包包含 B 的 MAC 地址。同时将 A 的 MAC 地址添加到自身的 ARP 表中。 主机 A 收到从主机 B 发来的 ARP 应答，更新 ARP 表后，发送要传输的数据。  </description>
-</item>
-</channel>
+    </item>
+    
+  </channel>
 </rss>
