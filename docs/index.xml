@@ -19,7 +19,7 @@
 基本可以断定是百度翻译出了 BUG。
 经过实验，以下的内容都能够触发 BUG：
 Certain types of birds often develop the skill of ____ and sound like they can speak. develop the skill of ____ and sound like kill of ____ and sound like 我发现是 ____ 的问题，于是我又以此为基础构建了一些小一点的串，比如 a ____ b，就能够简单地看到这个 BUG 的效果。
-不知道什么时候会修复。</description>
+我已经于北京时间 2022 年 5 月 27 日 14 时向百度翻译发送邮件反馈，不知道什么时候会修复。</description>
     </item>
     
     <item>
