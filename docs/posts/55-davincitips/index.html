@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="罗潇阳">
+    <meta name="description" content="小技巧    打开 DaVinci Resove 偏好设置-&gt;用户-&gt;项目保存和加载，激活“实时保存”和“项目备份”，记得修改备份保存位置
+打开 DaVinci Resove 偏好设置-&gt;用户-&gt;编辑，勾选自动智能媒体夹中的智能媒体夹 - 时间线启用
+打开 文件-&gt;项目设置-&gt;主设置-&gt;工作文件夹，修改其中的文件位置
+打开 文件-&gt;项目设置-&gt;图像缩放调整-&gt;输入缩放调整，调整缩放模式，统一素材比例
+打开 检查器-&gt;动态缩放，就能够自动进行素材从头到尾的缩放。可以在时间线监视器中，点击左下角按钮切换到动态缩放，调整始末位置。
+在“剪辑”模式下，推荐先在媒体池右键新建时间线（Ctrl&#43;N)，再进行素材的拖入，以保证时间线的干净。
+生成优化媒体文件前，打开 文件-&gt;项目设置-&gt;主设置-&gt;优化的媒体和渲染缓存，分辨率修改为 1/4，媒体格式修改为 DNxHR SQ，能够极大减小优化媒体文件。
+选择 编辑-&gt;删除空隙，即可删除时间线片段之间的空隙
+打开 文件-&gt;项目设置-&gt;主设置-&gt;帧内插，背景纯净时修改变速处理为“光流”，可得到最优的升格效果。
+每做好一版后，选择 编辑-&gt;复制当前时间线 保留时间线备份。
+时间线-&gt;选区跟随播放头
+导出时，选择 字幕设置-&gt;导出字幕，格式选择“烧录到视频内”
+快编界面“特写插入”可以减少因跳切引起的画面割裂感
+快编界面监看器下方的“工具”按钮可以进行基础的片段设置
+快编界面右上角的“快速导出”可以绕过交付面板
+快编界面在变速之前，先右键片段“新建复合片段”，防止因为变速导致的关键帧效果混乱。
+快编界面在媒体池选中想要慢放的素材，右键-&gt;片段属性，选择视频需要的帧率即可避免跳帧实现回放。
+快捷键       功能 快捷键     快退 j   停止 k   快进 l   设置入点 i   设置出点 o   片段不可视 d   插入片段 F9   寻找片段对应素材 f   跳跃剪辑点 上下键   多帧跳跃 Shift&#43;左右键   添加剪辑点 Ctrl&#43;\   选中片段 Shift&#43;v   修剪素材 Shift&#43;[]   波纹修剪 Ctrl&#43;Shift&#43;[]   波纹删除 Shitf&#43;Delete   移动轨道 Alt&#43;上下键   自动调色 Alt&#43;Shift&#43;c   添加转场 Ctrl&#43;t   精细调整数值 Alt&#43;拖动   时间线缩放 Ctrl&#43;加号/减号   轨道链接 Ctrl&#43;Atl&#43;l   媒体池中寻找片段对应素材 Alt&#43;f   向后选择所有片段 Alt&#43;y   向前选择所有片段 Shift&#43;Alt&#43;y   时间线总览 Shift&#43;Z   将一个片段效果应用到多个片段上 选中做好的片段 Ctrl&#43;c，选中应用到的片段 Alt&#43;v    ">
+    <meta name="keywords" content="博客,开发者,个人">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="达芬奇使用小技巧"/>
+<meta name="twitter:description" content="小技巧    打开 DaVinci Resove 偏好设置-&gt;用户-&gt;项目保存和加载，激活“实时保存”和“项目备份”，记得修改备份保存位置
+打开 DaVinci Resove 偏好设置-&gt;用户-&gt;编辑，勾选自动智能媒体夹中的智能媒体夹 - 时间线启用
+打开 文件-&gt;项目设置-&gt;主设置-&gt;工作文件夹，修改其中的文件位置
+打开 文件-&gt;项目设置-&gt;图像缩放调整-&gt;输入缩放调整，调整缩放模式，统一素材比例
+打开 检查器-&gt;动态缩放，就能够自动进行素材从头到尾的缩放。可以在时间线监视器中，点击左下角按钮切换到动态缩放，调整始末位置。
+在“剪辑”模式下，推荐先在媒体池右键新建时间线（Ctrl&#43;N)，再进行素材的拖入，以保证时间线的干净。
+生成优化媒体文件前，打开 文件-&gt;项目设置-&gt;主设置-&gt;优化的媒体和渲染缓存，分辨率修改为 1/4，媒体格式修改为 DNxHR SQ，能够极大减小优化媒体文件。
+选择 编辑-&gt;删除空隙，即可删除时间线片段之间的空隙
+打开 文件-&gt;项目设置-&gt;主设置-&gt;帧内插，背景纯净时修改变速处理为“光流”，可得到最优的升格效果。
+每做好一版后，选择 编辑-&gt;复制当前时间线 保留时间线备份。
+时间线-&gt;选区跟随播放头
+导出时，选择 字幕设置-&gt;导出字幕，格式选择“烧录到视频内”
+快编界面“特写插入”可以减少因跳切引起的画面割裂感
+快编界面监看器下方的“工具”按钮可以进行基础的片段设置
+快编界面右上角的“快速导出”可以绕过交付面板
+快编界面在变速之前，先右键片段“新建复合片段”，防止因为变速导致的关键帧效果混乱。
+快编界面在媒体池选中想要慢放的素材，右键-&gt;片段属性，选择视频需要的帧率即可避免跳帧实现回放。
+快捷键       功能 快捷键     快退 j   停止 k   快进 l   设置入点 i   设置出点 o   片段不可视 d   插入片段 F9   寻找片段对应素材 f   跳跃剪辑点 上下键   多帧跳跃 Shift&#43;左右键   添加剪辑点 Ctrl&#43;\   选中片段 Shift&#43;v   修剪素材 Shift&#43;[]   波纹修剪 Ctrl&#43;Shift&#43;[]   波纹删除 Shitf&#43;Delete   移动轨道 Alt&#43;上下键   自动调色 Alt&#43;Shift&#43;c   添加转场 Ctrl&#43;t   精细调整数值 Alt&#43;拖动   时间线缩放 Ctrl&#43;加号/减号   轨道链接 Ctrl&#43;Atl&#43;l   媒体池中寻找片段对应素材 Alt&#43;f   向后选择所有片段 Alt&#43;y   向前选择所有片段 Shift&#43;Alt&#43;y   时间线总览 Shift&#43;Z   将一个片段效果应用到多个片段上 选中做好的片段 Ctrl&#43;c，选中应用到的片段 Alt&#43;v    "/>
+
+    <meta property="og:title" content="达芬奇使用小技巧" />
+<meta property="og:description" content="小技巧    打开 DaVinci Resove 偏好设置-&gt;用户-&gt;项目保存和加载，激活“实时保存”和“项目备份”，记得修改备份保存位置
+打开 DaVinci Resove 偏好设置-&gt;用户-&gt;编辑，勾选自动智能媒体夹中的智能媒体夹 - 时间线启用
+打开 文件-&gt;项目设置-&gt;主设置-&gt;工作文件夹，修改其中的文件位置
+打开 文件-&gt;项目设置-&gt;图像缩放调整-&gt;输入缩放调整，调整缩放模式，统一素材比例
+打开 检查器-&gt;动态缩放，就能够自动进行素材从头到尾的缩放。可以在时间线监视器中，点击左下角按钮切换到动态缩放，调整始末位置。
+在“剪辑”模式下，推荐先在媒体池右键新建时间线（Ctrl&#43;N)，再进行素材的拖入，以保证时间线的干净。
+生成优化媒体文件前，打开 文件-&gt;项目设置-&gt;主设置-&gt;优化的媒体和渲染缓存，分辨率修改为 1/4，媒体格式修改为 DNxHR SQ，能够极大减小优化媒体文件。
+选择 编辑-&gt;删除空隙，即可删除时间线片段之间的空隙
+打开 文件-&gt;项目设置-&gt;主设置-&gt;帧内插，背景纯净时修改变速处理为“光流”，可得到最优的升格效果。
+每做好一版后，选择 编辑-&gt;复制当前时间线 保留时间线备份。
+时间线-&gt;选区跟随播放头
+导出时，选择 字幕设置-&gt;导出字幕，格式选择“烧录到视频内”
+快编界面“特写插入”可以减少因跳切引起的画面割裂感
+快编界面监看器下方的“工具”按钮可以进行基础的片段设置
+快编界面右上角的“快速导出”可以绕过交付面板
+快编界面在变速之前，先右键片段“新建复合片段”，防止因为变速导致的关键帧效果混乱。
+快编界面在媒体池选中想要慢放的素材，右键-&gt;片段属性，选择视频需要的帧率即可避免跳帧实现回放。
+快捷键       功能 快捷键     快退 j   停止 k   快进 l   设置入点 i   设置出点 o   片段不可视 d   插入片段 F9   寻找片段对应素材 f   跳跃剪辑点 上下键   多帧跳跃 Shift&#43;左右键   添加剪辑点 Ctrl&#43;\   选中片段 Shift&#43;v   修剪素材 Shift&#43;[]   波纹修剪 Ctrl&#43;Shift&#43;[]   波纹删除 Shitf&#43;Delete   移动轨道 Alt&#43;上下键   自动调色 Alt&#43;Shift&#43;c   添加转场 Ctrl&#43;t   精细调整数值 Alt&#43;拖动   时间线缩放 Ctrl&#43;加号/减号   轨道链接 Ctrl&#43;Atl&#43;l   媒体池中寻找片段对应素材 Alt&#43;f   向后选择所有片段 Alt&#43;y   向前选择所有片段 Shift&#43;Alt&#43;y   时间线总览 Shift&#43;Z   将一个片段效果应用到多个片段上 选中做好的片段 Ctrl&#43;c，选中应用到的片段 Alt&#43;v    " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ccviolett.github.io/posts/55-davincitips/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-10T14:32:31+08:00" />
+<meta property="article:modified_time" content="2022-06-10T14:32:31+08:00" />
+
+
+
+    <title>
+  达芬奇使用小技巧 · 罗潇阳的博客
+</title>
+
+    
+      <link rel="canonical" href="http://ccviolett.github.io/posts/55-davincitips/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.99.1" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?90bcdb8127c31d4d27ebb95576bc8474";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-228764760-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-228764760-1');
+</script>
+
+<nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      罗潇阳的博客
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/">首页</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">文章</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/solution/">题解</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">联系</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">关于</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/support/">赞助</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://ccviolett.github.io/en/">🇬🇧</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://ccviolett.github.io/posts/55-davincitips/">
+              达芬奇使用小技巧
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2022-06-10T14:32:31&#43;08:00'>
+                2022 年 6 月 10 日
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              阅读时间：1 分钟
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <h3 id="小技巧">
+  小技巧
+  <a class="heading-link" href="#%e5%b0%8f%e6%8a%80%e5%b7%a7">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>打开 <code>DaVinci Resove</code> <code>偏好设置</code>-&gt;<code>用户</code>-&gt;<code>项目保存和加载</code>，激活“实时保存”和“项目备份”，记得修改备份保存位置</p>
+<p>打开 <code>DaVinci Resove</code> <code>偏好设置</code>-&gt;<code>用户</code>-&gt;<code>编辑</code>，勾选<code>自动智能媒体夹</code>中的<code>智能媒体夹 - 时间线</code>启用</p>
+<p>打开 <code>文件</code>-&gt;<code>项目设置</code>-&gt;<code>主设置</code>-&gt;<code>工作文件夹</code>，修改其中的文件位置</p>
+<p>打开 <code>文件</code>-&gt;<code>项目设置</code>-&gt;<code>图像缩放调整</code>-&gt;<code>输入缩放调整</code>，调整缩放模式，统一素材比例</p>
+<p>打开 <code>检查器</code>-&gt;<code>动态缩放</code>，就能够自动进行素材从头到尾的缩放。可以在时间线监视器中，点击左下角按钮切换到动态缩放，调整始末位置。</p>
+<p>在“剪辑”模式下，推荐先在媒体池右键新建时间线（Ctrl+N)，再进行素材的拖入，以保证时间线的干净。</p>
+<p>生成优化媒体文件前，打开 <code>文件</code>-&gt;<code>项目设置</code>-&gt;<code>主设置</code>-&gt;<code>优化的媒体和渲染缓存</code>，分辨率修改为 <code>1/4</code>，媒体格式修改为 <code>DNxHR SQ</code>，能够极大减小优化媒体文件。</p>
+<p>选择 <code>编辑</code>-&gt;<code>删除空隙</code>，即可删除时间线片段之间的空隙</p>
+<p>打开 <code>文件</code>-&gt;<code>项目设置</code>-&gt;<code>主设置</code>-&gt;<code>帧内插</code>，背景纯净时修改<code>变速处理</code>为“光流”，可得到最优的升格效果。</p>
+<p>每做好一版后，选择 <code>编辑</code>-&gt;<code>复制当前时间线</code> 保留时间线备份。</p>
+<p><code>时间线</code>-&gt;<code>选区跟随播放头</code></p>
+<p>导出时，选择 <code>字幕设置</code>-&gt;<code>导出字幕</code>，格式选择“烧录到视频内”</p>
+<p>快编界面“特写插入”可以减少因跳切引起的画面割裂感</p>
+<p>快编界面监看器下方的“工具”按钮可以进行基础的片段设置</p>
+<p>快编界面右上角的“快速导出”可以绕过交付面板</p>
+<p>快编界面在变速之前，先右键片段“新建复合片段”，防止因为变速导致的关键帧效果混乱。</p>
+<p>快编界面在媒体池选中想要慢放的素材，右键-&gt;片段属性，选择视频需要的帧率即可避免跳帧实现回放。</p>
+<h3 id="快捷键">
+  快捷键
+  <a class="heading-link" href="#%e5%bf%ab%e6%8d%b7%e9%94%ae">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">功能</th>
+<th style="text-align:center">快捷键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">快退</td>
+<td style="text-align:center">j</td>
+</tr>
+<tr>
+<td style="text-align:center">停止</td>
+<td style="text-align:center">k</td>
+</tr>
+<tr>
+<td style="text-align:center">快进</td>
+<td style="text-align:center">l</td>
+</tr>
+<tr>
+<td style="text-align:center">设置入点</td>
+<td style="text-align:center">i</td>
+</tr>
+<tr>
+<td style="text-align:center">设置出点</td>
+<td style="text-align:center">o</td>
+</tr>
+<tr>
+<td style="text-align:center">片段不可视</td>
+<td style="text-align:center">d</td>
+</tr>
+<tr>
+<td style="text-align:center">插入片段</td>
+<td style="text-align:center">F9</td>
+</tr>
+<tr>
+<td style="text-align:center">寻找片段对应素材</td>
+<td style="text-align:center">f</td>
+</tr>
+<tr>
+<td style="text-align:center">跳跃剪辑点</td>
+<td style="text-align:center">上下键</td>
+</tr>
+<tr>
+<td style="text-align:center">多帧跳跃</td>
+<td style="text-align:center">Shift+左右键</td>
+</tr>
+<tr>
+<td style="text-align:center">添加剪辑点</td>
+<td style="text-align:center">Ctrl+\</td>
+</tr>
+<tr>
+<td style="text-align:center">选中片段</td>
+<td style="text-align:center">Shift+v</td>
+</tr>
+<tr>
+<td style="text-align:center">修剪素材</td>
+<td style="text-align:center">Shift+[]</td>
+</tr>
+<tr>
+<td style="text-align:center">波纹修剪</td>
+<td style="text-align:center">Ctrl+Shift+[]</td>
+</tr>
+<tr>
+<td style="text-align:center">波纹删除</td>
+<td style="text-align:center">Shitf+Delete</td>
+</tr>
+<tr>
+<td style="text-align:center">移动轨道</td>
+<td style="text-align:center">Alt+上下键</td>
+</tr>
+<tr>
+<td style="text-align:center">自动调色</td>
+<td style="text-align:center">Alt+Shift+c</td>
+</tr>
+<tr>
+<td style="text-align:center">添加转场</td>
+<td style="text-align:center">Ctrl+t</td>
+</tr>
+<tr>
+<td style="text-align:center">精细调整数值</td>
+<td style="text-align:center">Alt+拖动</td>
+</tr>
+<tr>
+<td style="text-align:center">时间线缩放</td>
+<td style="text-align:center">Ctrl+加号/减号</td>
+</tr>
+<tr>
+<td style="text-align:center">轨道链接</td>
+<td style="text-align:center">Ctrl+Atl+l</td>
+</tr>
+<tr>
+<td style="text-align:center">媒体池中寻找片段对应素材</td>
+<td style="text-align:center">Alt+f</td>
+</tr>
+<tr>
+<td style="text-align:center">向后选择所有片段</td>
+<td style="text-align:center">Alt+y</td>
+</tr>
+<tr>
+<td style="text-align:center">向前选择所有片段</td>
+<td style="text-align:center">Shift+Alt+y</td>
+</tr>
+<tr>
+<td style="text-align:center">时间线总览</td>
+<td style="text-align:center">Shift+Z</td>
+</tr>
+<tr>
+<td style="text-align:center">将一个片段效果应用到多个片段上</td>
+<td style="text-align:center">选中做好的片段 Ctrl+c，选中应用到的片段 Alt+v</td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+
+    <h1 style="text-align: center;">赞助区</h1>
+    <div style="display: flex; flex-wrap: wrap; ">
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210866.png/w200" style="margin: 1rem"/>
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210865.jpg/w200" style="margin: 1rem"/>
+      <img src="https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205142210864.png/w200" style="margin: 1rem"/>
+      <p>如果觉得文章对你有帮助，可以给作者买杯咖啡。作者非常感谢你的支持，你的每一点点激励都是作者不断创作的动力。</p>
+      <p>所有收到的赞助都将在<a href="/support">收到的赞助</a>里显示，你可以在支付时留下备注。</p>
+    </div>
+
+    
+    
+    
+
+    <h1 style="text-align: center;">评论区</h1>
+    <p>欢迎大家在下面多多评论：</p>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'pKI8zxDMRprnFwEiUfoQF3tV-gzGzoHsz',
+            appKey: 'xy8f32RhY529hvUDA8Ih165N',
+            avatar: 'mp'
+        })
+    </script>
+
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>愿你成为自己的太阳，无需借助别人的光。</br>博客接受大众投稿，联系QQ 3340751717。</p>
+      
+      
+        ©
+        
+        2022
+         罗潇阳 
+      
+      
+         · 
+        技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+        
+      
+    </section>
+  </footer>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4610306996952179" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.f453d26c79f010446cf0d9770197f77de32c07b7a5512d141a286247fe154a22.js" integrity="sha256-9FPSbHnwEERs8Nl3AZf3feMsB7elUS0UGihiR/4VSiI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+</html>

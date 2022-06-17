@@ -3,10 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://ccviolett.github.io/posts/</loc>
-    <lastmod>2022-05-27T13:48:17+08:00</lastmod>
+    <lastmod>2022-06-17T10:25:41+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/posts/math2/</loc>
+    <lastmod>2022-06-17T10:25:41+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/</loc>
-    <lastmod>2022-05-27T13:48:17+08:00</lastmod>
+    <lastmod>2022-06-17T10:25:41+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,13 +21,79 @@
                 href="http://ccviolett.github.io/"
                 />
   </url><url>
+    <loc>http://ccviolett.github.io/todo/</loc>
+    <lastmod>2022-06-16T14:38:42+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220616/</loc>
+    <lastmod>2022-06-16T14:38:42+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/posts/dp/</loc>
+    <lastmod>2022-06-15T22:20:18+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220615/</loc>
+    <lastmod>2022-06-15T20:00:05+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220614/</loc>
+    <lastmod>2022-06-14T09:27:06+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220612/</loc>
+    <lastmod>2022-06-13T17:50:16+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220613/</loc>
+    <lastmod>2022-06-13T17:50:06+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220611/</loc>
+    <lastmod>2022-06-11T17:55:48+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/posts/55-davincitips/</loc>
+    <lastmod>2022-06-10T14:32:31+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220610/</loc>
+    <lastmod>2022-06-10T13:55:28+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220609/</loc>
+    <lastmod>2022-06-09T16:36:13+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220607/</loc>
+    <lastmod>2022-06-08T08:39:32+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220606/</loc>
+    <lastmod>2022-06-08T08:38:46+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220608/</loc>
+    <lastmod>2022-06-08T08:38:26+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220605/</loc>
+    <lastmod>2022-06-05T15:23:03+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220604/</loc>
+    <lastmod>2022-06-04T11:11:53+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220602/</loc>
+    <lastmod>2022-06-03T11:48:38+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220603/</loc>
+    <lastmod>2022-06-03T11:48:24+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220601/</loc>
+    <lastmod>2022-06-02T07:24:00+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220531/</loc>
+    <lastmod>2022-05-31T09:46:34+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220530/</loc>
+    <lastmod>2022-05-30T16:02:05+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220529/</loc>
+    <lastmod>2022-05-29T18:04:13+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220528/</loc>
+    <lastmod>2022-05-28T09:10:51+08:00</lastmod>
+  </url><url>
     <loc>http://ccviolett.github.io/posts/54-baidutranslatebug/</loc>
     <lastmod>2022-05-27T13:48:17+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/todo/220527/</loc>
-    <lastmod>2022-05-27T10:49:31+08:00</lastmod>
-  </url><url>
-    <loc>http://ccviolett.github.io/todo/</loc>
     <lastmod>2022-05-27T10:49:31+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/todo/220526/</loc>
@@ -149,12 +218,6 @@
   </url><url>
     <loc>http://ccviolett.github.io/todo/220423/</loc>
     <lastmod>2022-04-23T23:36:46+08:00</lastmod>
-  </url><url>
-    <loc>http://ccviolett.github.io/posts/48-teamwebnetwork5/</loc>
-    <lastmod>2022-04-23T10:31:24+08:00</lastmod>
-  </url><url>
-    <loc>http://ccviolett.github.io/posts/47-teamwebnetwork4/</loc>
-    <lastmod>2022-04-23T10:31:06+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/posts/46-teamwebnetwork3/</loc>
     <lastmod>2022-04-23T10:31:01+08:00</lastmod>
@@ -419,6 +482,9 @@
   </url><url>
     <loc>http://ccviolett.github.io/posts/24-xjelectiontraining/</loc>
     <lastmod>2022-03-17T20:55:55+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/posts/22-usepythonforalgo/</loc>
+    <lastmod>2022-03-16T23:04:04+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/</loc>
     <lastmod>2022-03-16T19:45:28+08:00</lastmod>

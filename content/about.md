@@ -6,7 +6,7 @@ aliases = ["about-us", "about-hugo", "contact"]
 author = [ "ccviolett" ]
 +++
 
-### 我的简历
+## 我的简历
 
 姓名：罗潇阳
 
@@ -41,13 +41,35 @@ author = [ "ccviolett" ]
 - 初中就读于 **长沙市一中岳麓中学**
 - 小学就读于 **小榄广源实验小学**
 
-### 技术支持
+## 我的项目
+
+### 一、前端
+
+#### （一）React H5 稀土掘金单页应用
+
+技术栈：Nodejs+React+SASS
+
+解决问题：使用 React 仿写一个单页应用稀土掘金客户端，完成文章列表与文章两个模块，实现基础交互逻辑并完成 API 对接
+
+项目难点：单页应用、无限滚动、历史页面
+
+博客地址：[零基础如何用 React 写一个稀土掘金？](https://ccviolett.github.io/posts/52-reacth5juejin/)
+
+演示地址：[H5 稀土掘金](https://ccviolett.github.io/H5-juejin/)
+
+代码仓库：[Github](https://github.com/ccviolett/H5-juejin)
+
+讲解视频：[Bilibili](https://www.bilibili.com/video/BV1LT41157VK)
+
+npm 仓库：[NPM](https://www.npmjs.com/package/h5-juejin)
+
+## 技术支持
 
 数据分析：[百度统计](https://tongji.baidu.com/)
 
 数学公式渲染：[Katex](https://katex.org/)
 
-### 一级友链 
+## 一级友链 
 
 {{< fdlink "张紫琪" "我的女朋友" "/images/gf_avatar.jpg" "/her">}}
 
@@ -57,10 +79,10 @@ author = [ "ccviolett" ]
 
 {{< fdlink "Henrik-Yao" "Henrik-Yao的个人博客" "http://henrik-yao.oss-cn-beijing.aliyuncs.com/config/79a2819b852e805a18b1f02a06a56cc5.jpg" "http://www.henrik-yao.cn/">}}
 
-### 网站相关
+## 网站相关
 
 流量最大的一天：[愚人节](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202205121413214.pdf)
 
-### 一些话
+## 一些话
 
 “你们这些孩子哪里是真为了写博客。你们只是想体会换新工具的愉快感觉，顺便体会一下否定掉旧工具，觉得自己特别的小欣喜。”——[dboy](https://www.zhihu.com/people/d-b-o-y)

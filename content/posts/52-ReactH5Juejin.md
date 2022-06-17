@@ -81,3 +81,25 @@ function Component(props: {}) {
 因为组件是写死的，所以只需要缓存状态即可实现页面的 keep-alive。
 
 可以选择全局变量 / localstorage / Redux 储存。
+
+## 相关资料
+
+[React 获取 Api 数据并渲染](https://blog.csdn.net/qq_34227291/article/details/94454115)
+
+调用 API：[async函数的返回值](https://segmentfault.com/a/1190000020782681)
+
+箭头函数对于 this 指针的影响：[箭头函数()=>{}与function的区别](https://blog.csdn.net/qq_30068487/article/details/82752466)
+
+unsift 函数在数组开头添加元素
+
+一个很常见的错误：[React报错TypeError: Cannot read property ‘XX‘ of undefined，问题的解决](https://blog.csdn.net/weixin_43863710/article/details/108726776)
+
+打包发布：[create-react-app打包发布](https://blog.csdn.net/qq_35089721/article/details/80996042)
+
+通过 html-react-parser 将 HTML 文本转化为 React 组件
+
+[React 无限滚动](https://www.gingerdoc.com/tutorials/react-react-infinite-scroll)
+
+[你所不知道的scroll事件：为什么scroll事件会失效？](https://ayase.moe/2018/11/20/scroll-event/)
+
+[一分钟教你发布npm包](https://segmentfault.com/a/1190000023075167)

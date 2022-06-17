@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2022-03-16T23:04:04+08:00
 title = "如何用 Python 做算法题？"
 description = ""
@@ -10,6 +10,30 @@ categories = []
 externalLink = ""
 series = []
 +++
+
+“衣冠重整旧家风。道是无穹却有功。扫却当途荆棘刺。三人约议再和同。”
+
+### 输入
+
+```python
+def readlien():
+    return [int(_) for _ in input.strip().split(" ")]
+def read():
+    return int(input())
+```
+
+### 遍历字符串
+
+```python
+for i in range(len(s)):
+    print(s[i])
+```
+
+### 数组末尾追加元素
+
+```python
+have.append(v)
+```
 
 
 ### 不换行输出

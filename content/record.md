@@ -11,6 +11,12 @@ externalLink = ""
 series = []
 +++
 
+[cnpm](https://npmmirror.com/)
+
+Windows 通过 `\\wsl$` 来访问 WSL 下的文件。
+
+删除软件：(nodejs) rimraf
+
 做一个扫码自动可视化显示、统计、累计摄入量和食品添加剂的软件
 
 - Aegisub
