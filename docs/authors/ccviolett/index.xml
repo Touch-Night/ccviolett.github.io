@@ -278,7 +278,7 @@ AllSigned 和 RemoteSigned 执行策略可防止 Windows PowerShell 运行没有
       
       <guid>http://ccviolett.github.io/posts/22-usepythonforalgo/</guid>
       <description>“衣冠重整旧家风。道是无穹却有功。扫却当途荆棘刺。三人约议再和同。”
-输入    def readlien():  return [int(_) for _ in input.strip().split(&amp;#34; &amp;#34;)] def read():  return int(input()) 遍历字符串    for i in range(len(s)):  print(s[i]) 数组末尾追加元素    have.append(v) 不换行输出    在 print() 函数中加上 end=&amp;quot;&amp;quot; 参数来指定末尾字符串。
+输入    def readline():  return [int(_) for _ in input.strip().split(&amp;#34; &amp;#34;)] def read():  return int(input()) 遍历字符串    for i in range(len(s)):  print(s[i]) 数组末尾追加元素    have.append(v)    不换行输出    在 print() 函数中加上 end=&amp;quot;&amp;quot; 参数来指定末尾字符串。
 列表生成法创建二维数组    test = [[0 for j in range(m)] for i in range(n)] 创建了一个 n 行 m 列的二位数组
 创建函数    def functionname( parameters ):  &amp;#34;函数_文档字符串&amp;#34;  function_suite  return [expression] 因为 Python 为解释型语言，所以在函数未实际被调用之前，即为从入口执行时，函数之间怎么调用都可以。</description>
     </item>

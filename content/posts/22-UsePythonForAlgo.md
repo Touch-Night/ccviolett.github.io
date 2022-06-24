@@ -16,7 +16,7 @@ series = []
 ### 输入
 
 ```python
-def readlien():
+def readline():
     return [int(_) for _ in input.strip().split(" ")]
 def read():
     return int(input())
@@ -35,6 +35,7 @@ for i in range(len(s)):
 have.append(v)
 ```
 
+### 
 
 ### 不换行输出
 

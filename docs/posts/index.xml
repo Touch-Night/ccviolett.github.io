@@ -52,6 +52,7 @@ $$ \int_{\Gamma} P dx + Q dy + R dz = \int_{\Gamma} (P \cos \alpha + Q \cos \bet
 快编界面右上角的“快速导出”可以绕过交付面板
 快编界面在变速之前，先右键片段“新建复合片段”，防止因为变速导致的关键帧效果混乱。
 快编界面在媒体池选中想要慢放的素材，右键-&amp;gt;片段属性，选择视频需要的帧率即可避免跳帧实现回放。
+Ctrl+N 新建时间线，取消勾选“使用项目设置”，随后在“项目”选项卡中更改“帧率”，随后将内容全部复制到新时间线上即可实现项目帧率的修改。
 快捷键       功能 快捷键     快退 j   停止 k   快进 l   设置入点 i   设置出点 o   片段不可视 d   插入片段 F9   寻找片段对应素材 f   跳跃剪辑点 上下键   多帧跳跃 Shift+左右键   添加剪辑点 Ctrl+\   选中片段 Shift+v   修剪素材 Shift+[]   波纹修剪 Ctrl+Shift+[]   波纹删除 Shitf+Delete   移动轨道 Alt+上下键   自动调色 Alt+Shift+c   添加转场 Ctrl+t   精细调整数值 Alt+拖动   时间线缩放 Ctrl+加号/减号   轨道链接 Ctrl+Atl+l   媒体池中寻找片段对应素材 Alt+f   向后选择所有片段 Alt+y   向前选择所有片段 Shift+Alt+y   时间线总览 Shift+Z   将一个片段效果应用到多个片段上 选中做好的片段 Ctrl+c，选中应用到的片段 Alt+v    </description>
     </item>
     
@@ -67,7 +68,11 @@ $$ \int_{\Gamma} P dx + Q dy + R dz = \int_{\Gamma} (P \cos \alpha + Q \cos \bet
 基本可以断定是百度翻译出了 BUG。
 经过实验，以下的内容都能够触发 BUG：
 Certain types of birds often develop the skill of ____ and sound like they can speak. develop the skill of ____ and sound like kill of ____ and sound like 我发现是 ____ 的问题，于是我又以此为基础构建了一些小一点的串，比如 a ____ b，就能够简单地看到这个 BUG 的效果。
-我已经于北京时间 2022 年 5 月 27 日 14 时向百度翻译发送邮件反馈，不知道什么时候会修复。</description>
+我已经于北京时间 2022 年 5 月 27 日 14 时向百度翻译发送邮件反馈，不知道什么时候会修复。
+在北京时间 2022 年 5 月 30 日，我们收到了百度翻译的来信，回信内容如下：
+不知道百度的程序员老哥花费了多少时间进行修复，目前百度翻译已经修复好了这个问题。
+邮件中提到的百度翻译官方 QQ 群 289656304，我加入进去看了以下，简而言之就是百度建立的一个白嫖 QA 的群，群里也没什么资源，使用者可以在群里提出问题给官方人员解决。
+事情大概就是这样结束了。</description>
     </item>
     
     <item>
@@ -515,7 +520,7 @@ AllSigned 和 RemoteSigned 执行策略可防止 Windows PowerShell 运行没有
       
       <guid>http://ccviolett.github.io/posts/22-usepythonforalgo/</guid>
       <description>“衣冠重整旧家风。道是无穹却有功。扫却当途荆棘刺。三人约议再和同。”
-输入    def readlien():  return [int(_) for _ in input.strip().split(&amp;#34; &amp;#34;)] def read():  return int(input()) 遍历字符串    for i in range(len(s)):  print(s[i]) 数组末尾追加元素    have.append(v) 不换行输出    在 print() 函数中加上 end=&amp;quot;&amp;quot; 参数来指定末尾字符串。
+输入    def readline():  return [int(_) for _ in input.strip().split(&amp;#34; &amp;#34;)] def read():  return int(input()) 遍历字符串    for i in range(len(s)):  print(s[i]) 数组末尾追加元素    have.append(v)    不换行输出    在 print() 函数中加上 end=&amp;quot;&amp;quot; 参数来指定末尾字符串。
 列表生成法创建二维数组    test = [[0 for j in range(m)] for i in range(n)] 创建了一个 n 行 m 列的二位数组
 创建函数    def functionname( parameters ):  &amp;#34;函数_文档字符串&amp;#34;  function_suite  return [expression] 因为 Python 为解释型语言，所以在函数未实际被调用之前，即为从入口执行时，函数之间怎么调用都可以。</description>
     </item>

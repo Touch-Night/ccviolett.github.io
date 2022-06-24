@@ -155,6 +155,11 @@ weight = 3
 url = "solution/"
 
 [[languages.zh-cn.menu.main]]
+name = "视频"
+weight = 4
+url = "videos/"
+
+[[languages.zh-cn.menu.main]]
 name = "联系"
 weight = 5
 url = "contact/"
