@@ -6,7 +6,23 @@
     <description>Recent content in Posts on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 17 Jun 2022 10:25:41 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jun 2022 17:41:41 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>大学物理电磁学分析</title>
+      <link>http://ccviolett.github.io/posts/56-learnphysicselectro/</link>
+      <pubDate>Mon, 27 Jun 2022 17:41:41 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/56-learnphysicselectro/</guid>
+      <description>判断
+(x) 若高斯面上的电场强度处处为零，则该面内必定没有电荷
+解：净电荷为零即可，可以存在等量的正电荷和负电荷。
+(x) 若高斯面内没有电荷，则该面上的电场强度必定处处为零
+解：高斯面外的电荷也会影响高斯面上的电场强度。高斯面内没有电荷只是电场强度的积分为零，不一定处处为零。
+(x) 若高斯面上的电场强度处处不为零，则该面内必定有电荷
+解：高斯面外的电荷也会影响高斯面上的电场强度，高斯面内可以没有电荷。
+(v) 若高斯面内有电荷，则该面上的电场强度必定处处不为零</description>
+    </item>
+    
     <item>
       <title>高数下</title>
       <link>http://ccviolett.github.io/posts/math2/</link>
@@ -218,11 +234,11 @@ function heredoc(fn) {  return fn.</description>
     </item>
     
     <item>
-      <title>大学物理分析</title>
-      <link>http://ccviolett.github.io/posts/41-learnphysics/</link>
+      <title>大学物理力学分析</title>
+      <link>http://ccviolett.github.io/posts/41-learnphysicsdynamics/</link>
       <pubDate>Tue, 05 Apr 2022 17:06:04 +0800</pubDate>
       
-      <guid>http://ccviolett.github.io/posts/41-learnphysics/</guid>
+      <guid>http://ccviolett.github.io/posts/41-learnphysicsdynamics/</guid>
       <description>相关连接     这是你理解相对论的另一种方法 幼儿园毕业就能推导出的相对论宇宙！听不懂打我！ 简单明了，广义相对论的新可视化解释方法 如何证明广义相对论是对的？这三个实验神助攻！【宇宙峥相】  知识点    自然坐标系下的速度：$v = \frac{ds}{dt}$
 切向加速度：$a_{\tau} = \frac{dv}{dt}$
 法向加速度：$a_{n} = \frac{v^2}{\rho}$

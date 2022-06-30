@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2022-04-05T17:06:04+08:00
-title = "大学物理分析"
+title = "大学物理力学分析"
 description = ""
 slug = ""
 authors = []
