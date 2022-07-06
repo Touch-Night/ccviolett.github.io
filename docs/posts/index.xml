@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 27 Jun 2022 17:41:41 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jul 2022 19:39:15 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何举办一场 Apex 比赛？</title>
+      <link>http://ccviolett.github.io/posts/howtoholdapexcompetition/</link>
+      <pubDate>Fri, 01 Jul 2022 19:39:15 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/howtoholdapexcompetition/</guid>
+      <description>OB 关闭 Origin 或 Steam 的信息提示，防止出现弹窗。 使用 TeamSpeak 进行内部交流，用于分离音轨。 OB 统一使用中文界面英文语音，在启动属性中加入 +miles_language english。 准备两幅耳机或者使用 OBS 虚拟声卡插件，保证 TeamSpeak 和游戏内声音分离。 当某一队进入大残局时，不切队伍，等待这场打完。 FOV 拉到最大，使得观众观战更加舒服。 “音乐音量”和“大厅音量” 开到 10%，避免音量过大，且确认音量存在 “视野技能缩放”关闭，便于切换时确保观感。 OBS 导播常常会出现音轨错误  OB 键位图    参加导播截图    :</description>
+    </item>
+    
     <item>
       <title>大学物理电磁学分析</title>
       <link>http://ccviolett.github.io/posts/56-learnphysicselectro/</link>

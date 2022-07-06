@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://ccviolett.github.io/todo/220630/</loc>
-    <lastmod>2022-06-30T13:01:01+08:00</lastmod>
+    <loc>http://ccviolett.github.io/todo/220706/</loc>
+    <lastmod>2022-07-06T09:05:49+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/todo/</loc>
-    <lastmod>2022-06-30T13:01:01+08:00</lastmod>
+    <lastmod>2022-07-06T09:05:49+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/</loc>
-    <lastmod>2022-06-30T13:01:01+08:00</lastmod>
+    <lastmod>2022-07-06T09:05:49+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -21,14 +21,35 @@
                 href="http://ccviolett.github.io/"
                 />
   </url><url>
+    <loc>http://ccviolett.github.io/todo/220705/</loc>
+    <lastmod>2022-07-05T10:45:29+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220704/</loc>
+    <lastmod>2022-07-04T12:49:51+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220703/</loc>
+    <lastmod>2022-07-03T10:55:10+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220702/</loc>
+    <lastmod>2022-07-02T23:40:00+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220701/</loc>
+    <lastmod>2022-07-01T23:40:10+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/posts/</loc>
+    <lastmod>2022-07-01T19:39:15+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/posts/howtoholdapexcompetition/</loc>
+    <lastmod>2022-07-01T19:39:15+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220630/</loc>
+    <lastmod>2022-06-30T13:01:01+08:00</lastmod>
+  </url><url>
     <loc>http://ccviolett.github.io/todo/220629/</loc>
     <lastmod>2022-06-29T13:02:07+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/todo/220628/</loc>
     <lastmod>2022-06-28T23:33:03+08:00</lastmod>
-  </url><url>
-    <loc>http://ccviolett.github.io/posts/</loc>
-    <lastmod>2022-06-27T17:41:41+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/posts/56-learnphysicselectro/</loc>
     <lastmod>2022-06-27T17:41:41+08:00</lastmod>
@@ -650,16 +671,6 @@
   </url><url>
     <loc>http://ccviolett.github.io/about/</loc>
     <lastmod>2022-02-26T20:48:46+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://ccviolett.github.io/en/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="http://ccviolett.github.io/about/"
-                />
   </url><url>
     <loc>http://ccviolett.github.io/tags/solution/</loc>
     <lastmod>2022-02-26T20:05:05+08:00</lastmod>
@@ -687,16 +698,6 @@
   </url><url>
     <loc>http://ccviolett.github.io/contact/</loc>
     <lastmod>2022-01-17T08:05:59+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://ccviolett.github.io/en/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="http://ccviolett.github.io/contact/"
-                />
   </url><url>
     <loc>http://ccviolett.github.io/posts/0-resume/</loc>
     <lastmod>2022-01-17T08:05:59+08:00</lastmod>
