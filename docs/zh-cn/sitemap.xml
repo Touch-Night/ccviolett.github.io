@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://ccviolett.github.io/todo/220706/</loc>
-    <lastmod>2022-07-06T09:05:49+08:00</lastmod>
-  </url><url>
     <loc>http://ccviolett.github.io/todo/</loc>
-    <lastmod>2022-07-06T09:05:49+08:00</lastmod>
+    <lastmod>2022-07-07T22:52:24+08:00</lastmod>
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220707/</loc>
+    <lastmod>2022-07-07T22:52:24+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/</loc>
-    <lastmod>2022-07-06T09:05:49+08:00</lastmod>
+    <lastmod>2022-07-07T22:52:24+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -20,6 +20,9 @@
                 hreflang="zh-cn"
                 href="http://ccviolett.github.io/"
                 />
+  </url><url>
+    <loc>http://ccviolett.github.io/todo/220706/</loc>
+    <lastmod>2022-07-06T09:05:49+08:00</lastmod>
   </url><url>
     <loc>http://ccviolett.github.io/todo/220705/</loc>
     <lastmod>2022-07-05T10:45:29+08:00</lastmod>
