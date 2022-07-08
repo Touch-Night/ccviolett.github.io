@@ -8,6 +8,8 @@ author = [ "ccviolett" ]
 
 ## 我的简历
 
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202207080835639.jpg)
+
 姓名：罗潇阳
 
 性别：男
@@ -44,6 +46,7 @@ author = [ "ccviolett" ]
 - [ICPC2021 沈阳站铜牌](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242100482.pdf)
 - [CCPC2021 桂林站银牌](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242100484.jpg)
 - [CCPC2021 广州站银牌](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202204242100485.jpg)
+- [Topcode Open 中国赛区邀请函](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202207080009042.pdf)
 - [CCF 系列奖项（NOI、CSP、NOIP）](https//ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202207052030259.png):
 
 
