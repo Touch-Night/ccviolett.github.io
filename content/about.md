@@ -8,7 +8,13 @@ author = [ "ccviolett" ]
 
 ## 我的简历
 
+大头照
+
 ![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202207080835639.jpg)
+
+半身照
+
+![](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202207121940819.png)
 
 姓名：罗潇阳
 
@@ -62,6 +68,8 @@ author = [ "ccviolett" ]
 ### 一、前端
 
 #### （一）React H5 稀土掘金单页应用
+
+项目来源：字节跳动字学计划v2.0
 
 技术栈：Nodejs+React+SASS
 
