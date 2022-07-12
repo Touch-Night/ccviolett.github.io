@@ -6,7 +6,69 @@
     <description>Recent content on 罗潇阳的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 07 Jul 2022 22:52:24 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Jul 2022 11:52:38 +0800</lastBuildDate><atom:link href="http://ccviolett.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>220711</title>
+      <link>http://ccviolett.github.io/todo/220711/</link>
+      <pubDate>Mon, 11 Jul 2022 11:52:38 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220711/</guid>
+      <description>重要任务：
+ ( ) USACO 备课上课  dur: 7 月 14/17/21/24/28 日 14:00 - 16:00 desc: USACO2018-2022   ( ) ACM 俱乐部个人能力测试考试  dur: 7 月 13/15 日 14:00 - 16:00    每日任务：
+每周任务：
+ ( ) 青年大学习  ddl: 7 月 17 日 update: mon    空闲任务：
+ ( ) Apex 高校联赛海选赛  dur: 7 月 2 日 - 6 日, 14:00 - 16:00, 19:00 - 21:00 desc: 无限延期中……   ( ) 写一个 12KM 网站 ( ) 2022 中国高校计算机大赛——人工智能创意赛  desc: 官网 ddl: 7 月 15 日   ( ) 学习清华大学操作系统课程 ( ) 字节大数据项目 ( ) 学习 flutter 开发 ( ) B站-计算机组成原理课程 ( ) 东秦百度飞桨 ( ) Apache 顶级项目开源经历 ( ) 后端：熟练使用 java，理解 springboot 的 aop 与 ioc 原理，阅读过 spingboot 源码，理解 mysql 的 innodb 引擎、索引、锁、事务等原理，了解分布式相关理念  可选话题：</description>
+    </item>
+    
+    <item>
+      <title>220710</title>
+      <link>http://ccviolett.github.io/todo/220710/</link>
+      <pubDate>Sun, 10 Jul 2022 20:52:11 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220710/</guid>
+      <description>重要任务：
+ ( ) USACO 备课上课  dur: 7 月 14/17/21/24/28 日 14:00 - 16:00 desc: USACO2018-2022   ( ) ACM 俱乐部个人能力测试考试  dur: 7 月 11/13/15 日 14:00 - 16:00    每日任务：
+每周任务：
+ (D) 青年大学习  ddl: 7 月 10 日 update: mon    空闲任务：
+ ( ) Apex 高校联赛海选赛  dur: 7 月 2 日 - 6 日, 14:00 - 16:00, 19:00 - 21:00 desc: 无限延期中……   ( ) 写一个 12KM 网站 ( ) 2022 中国高校计算机大赛——人工智能创意赛  desc: 官网 ddl: 7 月 15 日   ( ) 学习清华大学操作系统课程 ( ) 字节大数据项目 ( ) 学习 flutter 开发 ( ) B站-计算机组成原理课程 ( ) 东秦百度飞桨 ( ) Apache 顶级项目开源经历 ( ) 后端：熟练使用 java，理解 springboot 的 aop 与 ioc 原理，阅读过 spingboot 源码，理解 mysql 的 innodb 引擎、索引、锁、事务等原理，了解分布式相关理念  可选话题：</description>
+    </item>
+    
+    <item>
+      <title>220709</title>
+      <link>http://ccviolett.github.io/todo/220709/</link>
+      <pubDate>Sat, 09 Jul 2022 23:15:45 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220709/</guid>
+      <description>重要任务：
+ ( ) USACO 备课上课  dur: 7 月 10/14/17/21/24/28 日 14:00 - 16:00 desc: USACO2018-2022   ( ) ACM 俱乐部个人能力测试考试  dur: 7 月 11/13/15 日 14:00 - 16:00    每日任务：
+每周任务：
+ (D) 青年大学习  ddl: 7 月 10 日 update: mon    空闲任务：
+ ( ) Apex 高校联赛海选赛  dur: 7 月 2 日 - 6 日, 14:00 - 16:00, 19:00 - 21:00 desc: 无限延期中……   ( ) 写一个 12KM 网站 ( ) 2022 中国高校计算机大赛——人工智能创意赛  desc: 官网 ddl: 7 月 15 日   ( ) 学习清华大学操作系统课程 ( ) 字节大数据项目 ( ) 学习 flutter 开发 ( ) B站-计算机组成原理课程 ( ) 东秦百度飞桨  可选话题：</description>
+    </item>
+    
+    <item>
+      <title>我的 ACM 模板</title>
+      <link>http://ccviolett.github.io/posts/acmtemplate/</link>
+      <pubDate>Sat, 09 Jul 2022 11:30:03 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/posts/acmtemplate/</guid>
+      <description>大杂烩    包含
+ ST表 树状数组 线段树 LCT 按秩压缩并查集 路径压缩并查集 Dijsktra 单源最短路 Kruskal 最小生成树 Tarjan 缩点 点分治 树链剖分 平衡树 可持久化数组 可持久化线段树 线性基 矩阵 字符串哈希 Manacher KMP  typedef int readtype;  /* Header {{{ */ #include &amp;lt;bits/stdc++.h&amp;gt;using namespace std;  template&amp;lt;typename type&amp;gt; type beMin(type &amp;amp;a, type b) { return a = (a &amp;lt; b ? a : b); } template&amp;lt;typename type&amp;gt; type beMax(type &amp;amp;a, type b) { return a = (a &amp;gt; b ?</description>
+    </item>
+    
+    <item>
+      <title>220708</title>
+      <link>http://ccviolett.github.io/todo/220708/</link>
+      <pubDate>Fri, 08 Jul 2022 12:28:39 +0800</pubDate>
+      
+      <guid>http://ccviolett.github.io/todo/220708/</guid>
+      <description>重要任务：
+ ( ) USACO 备课上课  dur: 7 月 3/10/14/17/21/24/28 日 14:00 - 16:00 desc: USACO2018-2022   ( ) ACM 俱乐部个人能力测试考试  dur: 7 月 9/11/13/15 日 14:00 - 16:00    每日任务：
+每周任务：
+ (D) 青年大学习  ddl: 7 月 10 日 update: mon    空闲任务：
+ ( ) Apex 高校联赛海选赛  dur: 7 月 2 日 - 6 日, 14:00 - 16:00, 19:00 - 21:00 desc: 无限延期中……   ( ) 写一个 12KM 网站 ( ) 2022 中国高校计算机大赛——人工智能创意赛  desc: 官网 ddl: 7 月 15 日   ( ) 学习清华大学操作系统课程 ( ) 字节大数据项目 ( ) 学习 flutter 开发 ( ) B站-计算机组成原理课程 ( ) 东秦百度飞桨  可选话题：</description>
+    </item>
+    
     <item>
       <title>肝完数模论文</title>
       <link>http://ccviolett.github.io/todo/220707/</link>
@@ -759,16 +821,6 @@ Certain types of birds often develop the skill of ____ and sound like they can s
       <guid>http://ccviolett.github.io/posts/53-beacsdnuploder/</guid>
       <description>CSDN 活动： 奖励每天最佳新人
 CSDN每天最佳新人&amp;ndash;2022-05-18</description>
-    </item>
-    
-    <item>
-      <title>Tiktok</title>
-      <link>http://ccviolett.github.io/tiktok/</link>
-      <pubDate>Thu, 19 May 2022 14:02:12 +0800</pubDate>
-      
-      <guid>http://ccviolett.github.io/tiktok/</guid>
-      <description>1. Self Introduction    Hello everyone guys in TikTok! I am CC underline violett. You can call me CC. From now, I am officially settled in TikTok, being a part of this huge family.
-In case you don&amp;rsquo;t know me, let me introduce myself briefly. I am a Uploader in Bilibili and also a Youtuber. I have tons of interesting ideas and amazing views to share with you. I am sure about that you will enjoy watching my Tiktok clip.</description>
     </item>
     
     <item>
