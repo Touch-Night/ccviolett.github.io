@@ -43,6 +43,7 @@ author = [ "ccviolett" ]
 | 2015 年 11 月 | NOIP2015普及二等奖（110 分，3070名）| 省级 |
 
 相关文件：
+- [第七届CCPC总决赛邀请函](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202207122147320.pdf)
 - [字学镜像计划2.0前端中级项目实践证明](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202207072323721.pdf)
 - [第十三届“挑战杯”中国大学生创业计划竞赛校赛获奖名单公示](https://ccvioett-1307804825.cos.ap-shanghai.myqcloud.com/img/202207061215426.pdf)
 - [第十三届蓝桥杯全国总决赛Python大学A组二等奖](https://ccviolett-1307804825.cos.ap-shanghai.myqcloud.com/img/202207052025209.jpg)
